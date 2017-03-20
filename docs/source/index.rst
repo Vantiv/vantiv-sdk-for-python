@@ -136,7 +136,7 @@ accountUpdate
 .............
     .. py:class:: vantivsdk.fields.accountUpdate
 
-        :var cardOrToken: instance of :py:class:`vantivsdk.fields.card`,  :py:class:`vantivsdk.fields.token`, 
+        :var cardOrToken: instance of :py:class:`vantivsdk.fields.token`,  :py:class:`vantivsdk.fields.card`, 
         :var customerId: String or Number
         :var id: String or Number
         :var orderId: String or Number
