@@ -31,48 +31,11 @@ import paramiko
 import six
 import xmltodict
 
-from . import (fields, utils)
+from . import (fields, utils, batch_txns)
 
 # Key: transaction name
 # Value: array of batchRequest attributes according to transactions
-_supported_transaction_types = {
-    # '': ['numExtCaptures', 'extCaptureAmount'],
-    'accountUpdate': ['numAccountUpdates', ''],
-    'activate': ['numActivates', 'activateAmount'],
-    'authorization': ['numAuths', 'authAmount'],
-    'authReversal': ['numAuthReversals', 'authReversalAmount'],
-    'balanceInquiry': ['numBalanceInquirys', ''],
-    'cancelSubscription': ['numCancelSubscriptions', ''],
-    'capture': ['numCaptures', 'captureAmount'],
-    'captureGivenAuth': ['numCaptureGivenAuths', 'captureGivenAuthAmount'],
-    'createPlan': ['numCreatePlans', ''],
-    'credit': ['numCredits', 'creditAmount'],
-    'deactivate': ['numDeactivates', ''],
-    'echeckCredit': ['numEcheckCredit', 'echeckCreditAmount'],
-    'echeckPreNoteCredit': ['numEcheckPreNoteCredit', ''],
-    'echeckPreNoteSale': ['numEcheckPreNoteSale', ''],
-    'echeckRedeposit': ['numEcheckRedeposit', ''],
-    'echeckSale': ['numEcheckSales', 'echeckSalesAmount'],
-    'echeckVerification': ['numEcheckVerification', 'echeckVerificationAmount'],
-    'forceCapture': ['numForceCaptures', 'forceCaptureAmount'],
-    'load': ['numLoads', 'loadAmount'],
-    'payFacCredit': ['numPayFacCredit', 'payFacCreditAmount'],
-    'payFacDebit': ['numPayFacDebit', 'payFacDebitAmount'],
-    'physicalCheckCredit': ['numPhysicalCheckCredit', 'physicalCheckCreditAmount'],
-    'physicalCheckDebit': ['numPhysicalCheckDebit', 'physicalCheckDebitAmount'],
-    'registerTokenRequest': ['numTokenRegistrations', ''],
-    'reserveCredit': ['numReserveCredit', 'reserveCreditAmount'],
-    'reserveDebit': ['numReserveDebit', 'reserveDebitAmount'],
-    'sale': ['numSales', 'saleAmount'],
-    'submerchantCredit': ['numSubmerchantCredit', 'submerchantCreditAmount'],
-    'submerchantDebit': ['numSubmerchantDebit', 'submerchantDebitAmount'],
-    'unload': ['numUnloads', 'unloadAmount'],
-    'updateCardValidationNumOnToken': ['numUpdateCardValidationNumOnTokens', ''],
-    'updatePlan': ['numUpdatePlans', ''],
-    'updateSubscription': ['numUpdateSubscriptions', ''],
-    'vendorCredit': ['numVendorCredit', 'vendorCreditAmount'],
-    'vendorDebit': ['numVendorDebit', 'vendorDebitAmount'],
-}
+_supported_transaction_types = batch_txns.supported_transaction_types
 
 _batch_attributes_num_dict = dict()
 _batch_attributes_amount_dict = dict()
