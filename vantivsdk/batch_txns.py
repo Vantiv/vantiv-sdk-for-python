@@ -22,9 +22,9 @@
 # FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 # OTHER DEALINGS IN THE SOFTWARE.
 #
-from __future__ import absolute_import, unicode_literals
+from __future__ import unicode_literals
 
-
+# Batch supported transactions dict
 # Key: transaction name
 # Value: array of batchRequest attributes according to transactions
 supported_transaction_types = {
