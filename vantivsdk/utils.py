@@ -30,6 +30,7 @@ import tempfile
 
 import pyxb
 
+from . import version
 
 class Configuration(object):
     """Setup Configuration variables.
@@ -50,8 +51,8 @@ class Configuration(object):
         fast_port (Str): Fast port, using for batch stream
         print_xml (Str): Whether print request and response xml
     """
-    VERSION = '9.12'
-    RELEASE = '9.12.0'
+    VERSION = version.VERSION
+    RELEASE = version.RELEASE
     MERCHANTSDK = 'Python SDKv2 ' + RELEASE
     _CONFIG_FILE_PATH = os.path.join(os.environ['VANTIV_SDK_CONFIG'], ".vantiv_python_sdk.conf") \
         if 'VANTIV_SDK_CONFIG' in os.environ else os.path.join(os.path.expanduser("~"), ".vantiv_python_sdk.conf")
