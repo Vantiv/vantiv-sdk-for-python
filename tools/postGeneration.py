@@ -223,7 +223,7 @@ Transactions
         # element_head = re.compile('<xs:element name="(\w+)">')
         element_head = re.compile('<xs:element\s*name=\"(\w+)\".*>')
         complex_type_head = re.compile('<xs:complexType>')
-        txns_head = re.compile('<xs:element name=\"(\w+)\"\s*substitutionGroup=\"(xp:transaction|xp:recurringTransaction)\"\s*>')
+        txns_head = re.compile('<xs:element name=\"(\w+)\"\s*substitutionGroup=\"(xp:transaction|xp:recurringTransaction)\".*>')
         abstract_class = re.compile('<xs:element\s*name=\"(\w+)\".*?abstract=\"true\".*?/>')
         elem_complex = re.compile('<xs:element\s*name=\"(\w+)\"\s*type=\"xp:(\w+)\"\s*\/>')
         lines_index = -1
