@@ -372,5 +372,6 @@ Transactions
         index_rst_file_w.write(index_rst_base)
 
 if __name__ == '__main__':
+    remove_absolute_path(package_root)
     dict_list = get_class_dict(package_root)
     generate_index_rst(package_root, dict_list)
