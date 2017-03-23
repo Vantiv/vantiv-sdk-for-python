@@ -38,7 +38,7 @@ if (sys.version_info[:3] < (2, 7, 9)) or ((sys.version_info[0] == 3) and sys.ver
 package_root = os.path.dirname(os.path.abspath(os.path.dirname(__file__)))
 
 sys.path.insert(0, package_root)
-from vantivsdk import (fields, utils)
+from vantivsdk import (fields, version)
 
 
 def remove_absolute_path(_package_root):
@@ -68,10 +68,114 @@ def remove_absolute_path(_package_root):
             ori_xsd_w.writelines(lines)
 
 
-def generate_index_rst(_package_root):
-    conf = utils.Configuration()
-    _version = conf.VERSION
+def get_class_dict(_package_root):
+    _version = version.VERSION
     _path_to_edited_xsd = os.path.join(_package_root, 'SchemaCombined_v%s.xsd' % _version)
+
+    # build txns dict
+    txns_dict = dict()
+    abs_class_dict = dict()
+    elem_complex_dict = dict()
+    elem_ref_set = set()
+    anonymous_type_dict = dict()
+    with open(_path_to_edited_xsd, 'r') as xsd_file:
+        lines = xsd_file.readlines()
+        txns_head = re.compile('<xs:element name=\"(\w+)\"\s*substitutionGroup=\"xp:(\w+)\".*>')
+        elem_complex = re.compile('<xs:element\s*name=\"(\w+)\"\s*type=\"xp:(\w+)\".*\/>')
+        elem_ref = re.compile('<xs:element.*ref="xp:(\w+)".*/>')
+        element_head = re.compile('<xs:element\s*name=\"(\w+)\".*>')
+        lines_index = -1
+        for line in lines:
+            lines_index += 1
+            found_txns_head = txns_head.search(line)
+            if found_txns_head:
+                _name = found_txns_head.group(1).strip()
+                _type = found_txns_head.group(2).strip()
+                if _type == 'transaction' or _type == 'recurringTransaction':
+                    txns_dict[_name] = dict()
+                elif 'Response' not in _type:
+                    if _type not in abs_class_dict:
+                        abs_class_dict[_type] = []
+                    abs_class_dict[_type].append(_name)
+            found_elem_complex = elem_complex.search(line)
+            if found_elem_complex:
+                elem_complex_dict[found_elem_complex.group(1).strip()] = found_elem_complex.group(2).strip()
+            found_elem_ref = elem_ref.search(line)
+            if found_elem_ref:
+                elem_ref_set.add(found_elem_ref.group(1).strip())
+            found_element_head = element_head.search(line)
+            if found_element_head and re.search('<xs:complexType>',lines[lines_index + 1]):
+                _name = found_element_head.group(1).strip()
+                try:
+                    obj = getattr(fields, _name)()
+                    type_name = type(obj).__name__
+                    anonymous_type_dict[type_name] = _name
+                except:
+                    pass
+
+    # dir() not attributes
+    no_attr_list = ['Factory', 'append', 'content', 'extend', 'orderedContent', 'reset', 'toDOM', 'toxml',
+                    'validateBinding', 'value', 'wildcardAttributeMap', 'wildcardElements', 'xsdConstraintsOK']
+    used_types = set()
+    for k in txns_dict:
+        obj = getattr(fields, k)()
+        attrs = dir(obj)
+        for attr_name in attrs:
+            if attr_name[0] != '_' and attr_name not in no_attr_list:
+                if attr_name in elem_ref_set:
+                    txns_dict[k][attr_name] = attr_name
+                    used_types.add(attr_name)
+                    continue
+                elif attr_name in elem_complex_dict:
+                    txns_dict[k][attr_name] = elem_complex_dict[attr_name]
+                    used_types.add(elem_complex_dict[attr_name])
+                    continue
+                try:
+                    type_obj = getattr(fields, attr_name)()
+                    type_name = type(type_obj).__name__
+                    if type_name in anonymous_type_dict:
+                        type_name = anonymous_type_dict[type_name]
+                    txns_dict[k][attr_name] = type_name
+                    used_types.add(attr_name)
+                except:
+                    txns_dict[k][attr_name] = ''
+
+    for k in abs_class_dict:
+        for _name in abs_class_dict[k]:
+            used_types.add(_name)
+
+    used_type_dict = dict()
+    while used_types:
+        k = used_types.pop()
+        if k not in used_type_dict and k not in abs_class_dict:
+            used_type_dict[k] = dict()
+            obj = getattr(fields, k)()
+            attrs = dir(obj)
+            for attr_name in attrs:
+                if attr_name[0] != '_' and attr_name not in no_attr_list:
+                    if attr_name in elem_ref_set:
+                        used_type_dict[k][attr_name] = attr_name
+                        used_types.add(attr_name)
+                        continue
+                    elif attr_name in elem_complex_dict:
+                        used_type_dict[k][attr_name] = elem_complex_dict[attr_name]
+                        used_types.add(elem_complex_dict[attr_name])
+                        continue
+                    try:
+                        type_obj = getattr(fields, attr_name)()
+                        type_name = type(type_obj).__name__
+                        if type_name in anonymous_type_dict:
+                            type_name = anonymous_type_dict[type_name]
+                            used_type_dict[k][attr_name] = type_name
+                        used_types.add(attr_name)
+                    except:
+                        used_type_dict[k][attr_name] = ''
+
+    return [txns_dict, used_type_dict, abs_class_dict]
+
+
+def generate_index_rst(_package_root, _dict_list):
+    _version = version.VERSION
     _index_rst_path = os.path.join(_package_root, 'docs/source/index.rst')
     # base string for index.rst
     index_rst_base = "Vantiv eCommerce Python SDKv2 documentation %s!\n" % _version
@@ -88,7 +192,7 @@ EXAMPLE
    :linenos:
 
     #Example for SDKv2
-    from __future__ import print_function
+    from __future__ import print_function, unicode_literals
 
     from vantivsdk import *
 
@@ -211,144 +315,62 @@ Transactions
 ------------
 """
 
-    # Get all class
-    clsmembers = dict()
-    for x in inspect.getmembers(fields, inspect.isclass):
-        clsmembers[x[0]] = x[0]
-    txns_list = []
-    abstract_class_dict = dict()
-    elem_complex_dict = dict()
-    with open(_path_to_edited_xsd, 'r') as xsd_file:
-        lines = xsd_file.readlines()
-        # element_head = re.compile('<xs:element name="(\w+)">')
-        element_head = re.compile('<xs:element\s*name=\"(\w+)\".*>')
-        complex_type_head = re.compile('<xs:complexType>')
-        txns_head = re.compile('<xs:element name=\"(\w+)\"\s*substitutionGroup=\"(xp:transaction|xp:recurringTransaction)\".*>')
-        abstract_class = re.compile('<xs:element\s*name=\"(\w+)\".*?abstract=\"true\".*?/>')
-        elem_complex = re.compile('<xs:element\s*name=\"(\w+)\"\s*type=\"xp:(\w+)\"\s*\/>')
-        lines_index = -1
-        for line in lines:
-            lines_index += 1
-            element_find = element_head.search(line)
-            if element_find and complex_type_head.search(lines[lines_index + 1]):
-                try:
-                    readable_name = element_find.group(1).strip()
-                    obj = getattr(fields, readable_name)()
-                    typename = type(obj).__name__
-                    clsmembers[typename] = readable_name
-                    # if 'Response' in readable_name:
-                    #     clsmembers.remove(typename)
-                    # else:
-                    #     clsmembers[typename] = readable_name
-                    #     # obj = getattr(fields, readable_name)()
-                    #     attrs = dir(obj)
-                    #     for x in dir(obj):
-                    #         if x[0] == '_':
-                    #             attrs.remove(x)
-                    #     for x in no_attr_list:
-                    #         attrs.remove(x)
-                    #     attrs.sort()
-                    #     clsmembers_attr[typename] = attrs
-                except:
-                    pass
+    txns_dict = _dict_list[0].copy()
+    used_type_dict = _dict_list[1].copy()
+    abs_class_dict = _dict_list[2].copy()
 
-            abstract_class_find = abstract_class.search(line)
-            if abstract_class_find:
-                abstract_class_dict[abstract_class_find.group(1).strip()] = set()
+    # Sort class by name
+    txns_list = list(txns_dict.keys())
+    txns_list.sort()
 
-            elem_complex_find = elem_complex.search(line)
-            if elem_complex_find:
-                elem_complex_dict[elem_complex_find.group(1).strip()] = elem_complex_find.group(2).strip()
+    for txns in txns_list:
+        index_rst_base += '%s\n%s\n' % (txns, '.' * len(txns))
+        index_rst_base += '    .. py:class:: vantivsdk.fields.%s\n\n' % txns
+        attr_list = list(txns_dict[txns].keys())
+        attr_list.sort()
 
-            txn_found = txns_head.search(line)
-            if txn_found:
-                txns_list.append(txn_found.group(1).strip())
-
-        for line in lines:
-            for k in abstract_class_dict:
-                sub_class = re.search('<xs:element name="(\w+)" substitutionGroup="xp:%s".*?type=.*?/>' % k, line)
-                if sub_class:
-                    abstract_class_dict[k].add(sub_class.group(1).strip())
-
-        # class readable name and attributes dict
-        clsmembers_attr = dict()
-
-        # dir() not attributes
-        no_attr_list = ['Factory', 'append', 'content', 'extend', 'orderedContent', 'reset', 'toDOM', 'toxml',
-                        'validateBinding', 'value', 'wildcardAttributeMap', 'wildcardElements', 'xsdConstraintsOK']
-        skip_class_name =['authentication','baseRequest','batchRequest','recurringTransactionType','transactionType',
-                          'transactionTypeOptionReportGroup','transactionTypeWithReportGroup',
-                          'transactionTypeWithReportGroupAndPartial']
-        for k in clsmembers:
-            if 'Response' not in clsmembers[k] and clsmembers[k] not in skip_class_name:
-                obj = getattr(fields, clsmembers[k])()
-                attrs = dir(obj)
-                for x in dir(obj):
-                    if x[0] == '_':
-                        attrs.remove(x)
-                for x in no_attr_list:
-                    attrs.remove(x)
-                attrs.sort()
-                clsmembers_attr[clsmembers[k]] = attrs
-
-        # Sort class by name
-        class_list = list(clsmembers_attr.copy().keys())
-        class_list.sort()
-
-        txns_list.sort()
-
-        for class_name in txns_list:
-            index_rst_base += '%s\n%s\n' % (class_name, '.' * len(class_name))
-            index_rst_base += '    .. py:class:: vantivsdk.fields.%s\n\n' % class_name
-            for attr_name in clsmembers_attr[class_name]:
-                try:
-                    obj = getattr(fields, attr_name)()
-                    typename = type(obj).__name__
+        for attr_name in attr_list:
+            attr_tpye = txns_dict[txns][attr_name]
+            if attr_tpye:
+                if attr_tpye in abs_class_dict:
+                    index_rst_base += '        :var %s: instance of ' % attr_name
+                    for e in abs_class_dict[attr_tpye]:
+                        index_rst_base += ':py:class:`vantivsdk.fields.%s`, ' % e
+                    index_rst_base += '\n'
+                else:
                     index_rst_base += '        :var %s: instance of :py:class:`vantivsdk.fields.%s`\n' \
-                                      % (attr_name, clsmembers[typename])
-                except:
-                    if attr_name in abstract_class_dict:
-                        index_rst_base += '        :var %s: instance of' % attr_name
-                        for e in abstract_class_dict[attr_name]:
-                            index_rst_base += ' :py:class:`vantivsdk.fields.%s`, ' % e
-                        index_rst_base += '\n'
-                        continue
-                    elif attr_name in elem_complex_dict:
-                        index_rst_base += '        :var %s: instance of :py:class:`vantivsdk.fields.%s`\n' \
-                                          % (attr_name, elem_complex_dict[attr_name])
-                    else:
-                        index_rst_base += '        :var %s: String or Number\n' % attr_name
-            index_rst_base += '\n'
-        index_rst_base += 'Complex Types\n-------------\n'
-        for class_name in class_list:
-            if class_name in txns_list:
-                continue
-            index_rst_base += '%s\n%s\n' % (class_name, '.' * len(class_name))
-            index_rst_base += '    .. py:class:: vantivsdk.fields.%s\n\n' % class_name
-            for attr_name in clsmembers_attr[class_name]:
-                try:
-                    obj = getattr(fields, attr_name)()
-                    typename = type(obj).__name__
+                                      % (attr_name, attr_tpye)
+            else:
+                index_rst_base += '        :var %s: String or Number\n' % attr_name
+        index_rst_base += '\n'
+    index_rst_base += 'Complex Types\n-------------\n'
+
+    used_type_list = list(used_type_dict.keys())
+    used_type_list.sort()
+    for used_type in used_type_list:
+        index_rst_base += '%s\n%s\n' % (used_type, '.' * len(used_type))
+        index_rst_base += '    .. py:class:: vantivsdk.fields.%s\n\n' % used_type
+        attr_list = list(used_type_dict[used_type].keys())
+        attr_list.sort()
+
+        for attr_name in attr_list:
+            attr_tpye = used_type_dict[used_type][attr_name]
+            if attr_tpye:
+                if attr_tpye in abs_class_dict:
+                    index_rst_base += '        :var %s: instance of ' % attr_name
+                    for e in abs_class_dict[attr_tpye]:
+                        index_rst_base += ':py:class:`vantivsdk.fields.%s`, ' % e
+                    index_rst_base += '\n'
+                else:
                     index_rst_base += '        :var %s: instance of :py:class:`vantivsdk.fields.%s`\n' \
-                                      % (attr_name, clsmembers[typename])
-                except:
-                    if attr_name in abstract_class_dict:
-                        index_rst_base += '        :var %s: instance of' % attr_name
-                        for e in abstract_class_dict[attr_name]:
-                            index_rst_base += ' :py:class:`vantivsdk.fields.%s`, ' % e
-                        index_rst_base += '\n'
-                        continue
-                    elif attr_name in elem_complex_dict:
-                        index_rst_base += '        :var %s: instance of :py:class:`vantivsdk.fields.%s`\n' \
-                                          % (attr_name, elem_complex_dict[attr_name])
-                    else:
-                        index_rst_base += '        :var %s: String or Number\n' % attr_name
-            index_rst_base += '\n'
+                                      % (attr_name, attr_tpye)
+            else:
+                index_rst_base += '        :var %s: String or Number\n' % attr_name
+        index_rst_base += '\n'
 
-        with open(_index_rst_path, 'w') as index_rst_file_w:
-            index_rst_file_w.write(index_rst_base)
-
+    with open(_index_rst_path, 'w') as index_rst_file_w:
+        index_rst_file_w.write(index_rst_base)
 
 if __name__ == '__main__':
-    remove_absolute_path(package_root)
-    generate_index_rst(package_root)
+    dict_list = get_class_dict(package_root)
+    generate_index_rst(package_root, dict_list)
