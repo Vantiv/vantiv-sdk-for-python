@@ -29,7 +29,7 @@ import sys
 
 package_root = os.path.dirname(os.path.abspath(os.path.dirname(__file__)))
 sys.path.insert(0, package_root)
-from vantivsdk import utils
+from vantivsdk import version
 
 # Require Python 2.7.9 or higher or Python 3.4 or higher
 if (sys.version_info[:3] < (2, 7 ,9)) or ((sys.version_info[0] == 3) and sys.version_info[:2] < (3, 4)):
@@ -363,12 +363,9 @@ def set_min_occurs_0(_path_to_edited_xsd):
         with open(_path_to_edited_xsd, 'w') as xsd_file_w:
             xsd_file_w.writelines(lines)
 
-
-
 if __name__ == '__main__':
 
-    conf = utils.Configuration()
-    version = conf.VERSION
+    version = version.VERSION
 
     path_to_edited_xsd = combine_xsd(version, package_root)
 
