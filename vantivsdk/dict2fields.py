@@ -33,7 +33,10 @@ def dict2obj(txn_dict):
     if len(txn_dict) != 1:
         raise utils.VantivException('Dict must contain one and only one transaction.')
 
-    txn_name =  txn_dict.keys()[0]
+    txn_name = ''
+    for k in txn_dict:
+        txn_name = k
+        break
     txn_attrs = txn_dict[txn_name]
 
     if txn_name not in dictmap.txns_dict:
@@ -83,7 +86,9 @@ def _obj_map_attributes(obj, obj_name, obj_attrs_type_dict, obj_attrs_values_dic
                 # when attr_type is in abs_class_dict
                 if len(attr_value) == 1:
                     # Must have and only have one sub group.
-                    _abs_sub_classname = attr_value.keys()[0]
+                    _abs_sub_classname = ''
+                    for k in attr_value:
+                        _abs_sub_classname = k
                     if _abs_sub_classname in dictmap.abs_class_dict[attr_type]:
                         # Check if the sub class belongs to the absolute elements
                         _obj_tmp = getattr(fields, _abs_sub_classname)()
