@@ -189,6 +189,92 @@ def generate_index_rst(_package_root, _dict_list):
 
 EXAMPLE
 -------
+Using dict
+..........
+.. code-block:: python
+   :linenos:
+
+    #Example for SDKv2
+    from __future__ import print_function, unicode_literals
+
+    from vantivsdk import *
+
+    # Initial Configuration object. If you have saved configuration in '.vantiv_python_sdk.conf' at system environment
+    # variable: VANTIV_SDK_CONFIG or user home directory, the saved configuration will be automatically load.
+    conf = utils.Configuration()
+
+    # Configuration need following attributes for online request:
+    # attributes = default value
+    # user = ''
+    # password = ''
+    # merchantId = ''
+    # reportGroup = 'Default Report Group'
+    # url = 'https://www.testlitle.com/sandbox/communicator/online'
+    # proxy = ''
+    # print_xml = False
+
+    # Transaction presented by dict
+    txn_dict ={
+        'authorization':{
+            'orderId': '1',
+            'amount': 10010,
+            'orderSource': 'ecommerce',
+            'id': 'ThisIsRequiredby11',
+            'billToAddress': {
+                'name': 'John & Mary Smith',
+                'addressLine1': '1 Main St.',
+                'city': 'Burlington',
+                'state': 'MA',
+                'zip': '01803-3747',
+                'country': 'USA'
+            },
+            'card': {
+                'number': '4100000000000000',
+                'expDate': '1215',
+                'cardValidationNum' : '349',
+                'type': 'VI'
+            },
+            'enhancedData':{
+                'detailTax': [
+                    {'taxAmount':100},
+                    {'taxAmount':200},
+                ],
+            }
+        }
+    }
+
+    # Send request to server and get response as dict
+    response = online.request(txn_dict, conf)
+
+    print('Message: %s' % response['authorizationResponse']['message'])
+    print('LitleTransaction ID: %s' % response['authorizationResponse']['litleTxnId'])
+
+    # Configuration need following attributes for batch request:
+    # attributes = default value
+    # sftp_username = ''
+    # sftp_password = ''
+    # sftp_url = ''
+    # batch_requests_path = '/tmp/vantiv_sdk_batch_request'
+    # batch_response_path = '/tmp/vantiv_sdk_batch_response'
+    # fast_url = ''
+    # fast_ssl = True
+    # fast_port = ''
+    # id = ''
+
+    # Initial batch transactions container class
+    transactions = batch.Transactions()
+
+    # Add transaction to batch transactions container
+    transactions.add(txn_dict)
+
+    # Sent batch to server via socket and get response as dict
+    response = batch.stream(transactions, conf)
+
+    print('Message: %s' % response['batchResponse']['authorizationResponse']['message'])
+    print('LitleTransaction ID: %s' % response['batchResponse']['authorizationResponse']['litleTxnId'])
+
+Using object
+............
 .. code-block:: python
    :linenos:
 
@@ -239,16 +325,18 @@ EXAMPLE
     transaction.card = card
 
     # detail tax
-    enhancedData = fields.enhancedData()
-    enhancedData.customerReference = 'Litle'
-    enhancedData.deliveryType = 'TBD'
+    detailTaxList = list()
+
     detailTax = fields.detailTax()
     detailTax.taxAmount = 100
+    detailTaxList.append(detailTax)
+
     detailTax2 = fields.detailTax()
     detailTax2.taxAmount = 200
-    # pyxb cannot bind multi occurs item, have to use pyxb.BIND
-    enhancedData = pyxb.BIND(enhancedData.customerReference, enhancedData.deliveryType, detailTax, detailTax2)
-    transaction.enhancedData = enhancedData
+    detailTaxList.append(detailTax2)
+
+    enhancedData = fields.enhancedData()
+    enhancedData.detailTax = detailTaxList
 
     # Send request to server and get response as dict
     response = online.request(transaction, conf)
