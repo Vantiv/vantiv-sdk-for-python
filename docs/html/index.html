@@ -136,7 +136,7 @@
 85
 86
 87</pre></div></td><td class="code"><div class="highlight"><pre><span></span> <span class="c1">#Example for SDKv2</span>
- <span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">print_function</span>
+ <span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">print_function</span><span class="p">,</span> <span class="n">unicode_literals</span>
 
  <span class="kn">from</span> <span class="nn">vantivsdk</span> <span class="kn">import</span> <span class="o">*</span>
 
@@ -578,7 +578,7 @@ RFRRequest cannot exist in the same instance with any other transactions.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><ul class="first last simple">
-<li><strong>cardOrToken</strong> &#8211; instance of <a class="reference internal" href="#vantivsdk.fields.card" title="vantivsdk.fields.card"><code class="xref py py-class docutils literal"><span class="pre">vantivsdk.fields.card</span></code></a>, <a class="reference internal" href="#vantivsdk.fields.token" title="vantivsdk.fields.token"><code class="xref py py-class docutils literal"><span class="pre">vantivsdk.fields.token</span></code></a></li>
+<li><strong>cardOrToken</strong> &#8211; instance of <a class="reference internal" href="#vantivsdk.fields.card" title="vantivsdk.fields.card"><code class="xref py py-class docutils literal"><span class="pre">vantivsdk.fields.card</span></code></a>, <a class="reference internal" href="#vantivsdk.fields.token" title="vantivsdk.fields.token"><code class="xref py py-class docutils literal"><span class="pre">vantivsdk.fields.token</span></code></a>,</li>
 <li><strong>customerId</strong> &#8211; String or Number</li>
 <li><strong>id</strong> &#8211; String or Number</li>
 <li><strong>orderId</strong> &#8211; String or Number</li>
@@ -2119,66 +2119,7 @@ RFRRequest cannot exist in the same instance with any other transactions.</p>
 <div><dl class="class">
 <dt id="vantivsdk.fields.bmlProductType">
 <em class="property">class </em><code class="descclassname">vantivsdk.fields.</code><code class="descname">bmlProductType</code><a class="headerlink" href="#vantivsdk.fields.bmlProductType" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><ul class="first last simple">
-<li><strong>PythonLiteral</strong> &#8211; String or Number</li>
-<li><strong>SimpleTypeDefinition</strong> &#8211; String or Number</li>
-<li><strong>XsdConstraintsOK</strong> &#8211; String or Number</li>
-<li><strong>XsdLiteral</strong> &#8211; String or Number</li>
-<li><strong>XsdSuperType</strong> &#8211; String or Number</li>
-<li><strong>XsdValueLength</strong> &#8211; String or Number</li>
-<li><strong>capitalize</strong> &#8211; String or Number</li>
-<li><strong>center</strong> &#8211; String or Number</li>
-<li><strong>count</strong> &#8211; String or Number</li>
-<li><strong>decode</strong> &#8211; String or Number</li>
-<li><strong>encode</strong> &#8211; String or Number</li>
-<li><strong>endswith</strong> &#8211; String or Number</li>
-<li><strong>expandtabs</strong> &#8211; String or Number</li>
-<li><strong>find</strong> &#8211; String or Number</li>
-<li><strong>format</strong> &#8211; String or Number</li>
-<li><strong>index</strong> &#8211; String or Number</li>
-<li><strong>isalnum</strong> &#8211; String or Number</li>
-<li><strong>isalpha</strong> &#8211; String or Number</li>
-<li><strong>isdecimal</strong> &#8211; String or Number</li>
-<li><strong>isdigit</strong> &#8211; String or Number</li>
-<li><strong>islower</strong> &#8211; String or Number</li>
-<li><strong>isnumeric</strong> &#8211; String or Number</li>
-<li><strong>isspace</strong> &#8211; String or Number</li>
-<li><strong>istitle</strong> &#8211; String or Number</li>
-<li><strong>isupper</strong> &#8211; String or Number</li>
-<li><strong>join</strong> &#8211; String or Number</li>
-<li><strong>ljust</strong> &#8211; String or Number</li>
-<li><strong>lower</strong> &#8211; String or Number</li>
-<li><strong>lstrip</strong> &#8211; String or Number</li>
-<li><strong>partition</strong> &#8211; String or Number</li>
-<li><strong>pythonLiteral</strong> &#8211; String or Number</li>
-<li><strong>replace</strong> &#8211; String or Number</li>
-<li><strong>rfind</strong> &#8211; String or Number</li>
-<li><strong>rindex</strong> &#8211; String or Number</li>
-<li><strong>rjust</strong> &#8211; String or Number</li>
-<li><strong>rpartition</strong> &#8211; String or Number</li>
-<li><strong>rsplit</strong> &#8211; String or Number</li>
-<li><strong>rstrip</strong> &#8211; String or Number</li>
-<li><strong>split</strong> &#8211; String or Number</li>
-<li><strong>splitlines</strong> &#8211; String or Number</li>
-<li><strong>startswith</strong> &#8211; String or Number</li>
-<li><strong>strip</strong> &#8211; String or Number</li>
-<li><strong>swapcase</strong> &#8211; String or Number</li>
-<li><strong>title</strong> &#8211; String or Number</li>
-<li><strong>translate</strong> &#8211; String or Number</li>
-<li><strong>upper</strong> &#8211; String or Number</li>
-<li><strong>xsdLiteral</strong> &#8211; String or Number</li>
-<li><strong>xsdValueLength</strong> &#8211; String or Number</li>
-<li><strong>zfill</strong> &#8211; String or Number</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
+<dd></dd></dl>
 
 </div></blockquote>
 </div>

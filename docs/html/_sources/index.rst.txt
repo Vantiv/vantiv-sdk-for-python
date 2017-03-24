@@ -11,7 +11,7 @@ EXAMPLE
    :linenos:
 
     #Example for SDKv2
-    from __future__ import print_function
+    from __future__ import print_function, unicode_literals
 
     from vantivsdk import *
 
@@ -136,7 +136,7 @@ accountUpdate
 .............
     .. py:class:: vantivsdk.fields.accountUpdate
 
-        :var cardOrToken: instance of :py:class:`vantivsdk.fields.card`, :py:class:`vantivsdk.fields.token`
+        :var cardOrToken: instance of :py:class:`vantivsdk.fields.card`, :py:class:`vantivsdk.fields.token`, 
         :var customerId: String or Number
         :var id: String or Number
         :var orderId: String or Number
@@ -889,55 +889,6 @@ bmlProductType
 ..............
     .. py:class:: vantivsdk.fields.bmlProductType
 
-        :var PythonLiteral: String or Number
-        :var SimpleTypeDefinition: String or Number
-        :var XsdConstraintsOK: String or Number
-        :var XsdLiteral: String or Number
-        :var XsdSuperType: String or Number
-        :var XsdValueLength: String or Number
-        :var capitalize: String or Number
-        :var center: String or Number
-        :var count: String or Number
-        :var decode: String or Number
-        :var encode: String or Number
-        :var endswith: String or Number
-        :var expandtabs: String or Number
-        :var find: String or Number
-        :var format: String or Number
-        :var index: String or Number
-        :var isalnum: String or Number
-        :var isalpha: String or Number
-        :var isdecimal: String or Number
-        :var isdigit: String or Number
-        :var islower: String or Number
-        :var isnumeric: String or Number
-        :var isspace: String or Number
-        :var istitle: String or Number
-        :var isupper: String or Number
-        :var join: String or Number
-        :var ljust: String or Number
-        :var lower: String or Number
-        :var lstrip: String or Number
-        :var partition: String or Number
-        :var pythonLiteral: String or Number
-        :var replace: String or Number
-        :var rfind: String or Number
-        :var rindex: String or Number
-        :var rjust: String or Number
-        :var rpartition: String or Number
-        :var rsplit: String or Number
-        :var rstrip: String or Number
-        :var split: String or Number
-        :var splitlines: String or Number
-        :var startswith: String or Number
-        :var strip: String or Number
-        :var swapcase: String or Number
-        :var title: String or Number
-        :var translate: String or Number
-        :var upper: String or Number
-        :var xsdLiteral: String or Number
-        :var xsdValueLength: String or Number
-        :var zfill: String or Number
 
 card
 ....
