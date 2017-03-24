@@ -7,6 +7,92 @@ Vantiv eCommerce Python SDKv2 documentation 11.0!
 
 EXAMPLE
 -------
+Using dict
+..........
+.. code-block:: python
+   :linenos:
+
+    #Example for SDKv2
+    from __future__ import print_function, unicode_literals
+
+    from vantivsdk import *
+
+    # Initial Configuration object. If you have saved configuration in '.vantiv_python_sdk.conf' at system environment
+    # variable: VANTIV_SDK_CONFIG or user home directory, the saved configuration will be automatically load.
+    conf = utils.Configuration()
+
+    # Configuration need following attributes for online request:
+    # attributes = default value
+    # user = ''
+    # password = ''
+    # merchantId = ''
+    # reportGroup = 'Default Report Group'
+    # url = 'https://www.testlitle.com/sandbox/communicator/online'
+    # proxy = ''
+    # print_xml = False
+
+    # Transaction presented by dict
+    txn_dict ={
+        'authorization':{
+            'orderId': '1',
+            'amount': 10010,
+            'orderSource': 'ecommerce',
+            'id': 'ThisIsRequiredby11',
+            'billToAddress': {
+                'name': 'John & Mary Smith',
+                'addressLine1': '1 Main St.',
+                'city': 'Burlington',
+                'state': 'MA',
+                'zip': '01803-3747',
+                'country': 'USA'
+            },
+            'card': {
+                'number': '4100000000000000',
+                'expDate': '1215',
+                'cardValidationNum' : '349',
+                'type': 'VI'
+            },
+            'enhancedData':{
+                'detailTax': [
+                    {'taxAmount':100},
+                    {'taxAmount':200},
+                ],
+            }
+        }
+    }
+
+    # Send request to server and get response as dict
+    response = online.request(txn_dict, conf)
+
+    print('Message: %s' % response['authorizationResponse']['message'])
+    print('LitleTransaction ID: %s' % response['authorizationResponse']['litleTxnId'])
+
+    # Configuration need following attributes for batch request:
+    # attributes = default value
+    # sftp_username = ''
+    # sftp_password = ''
+    # sftp_url = ''
+    # batch_requests_path = '/tmp/vantiv_sdk_batch_request'
+    # batch_response_path = '/tmp/vantiv_sdk_batch_response'
+    # fast_url = ''
+    # fast_ssl = True
+    # fast_port = ''
+    # id = ''
+
+    # Initial batch transactions container class
+    transactions = batch.Transactions()
+
+    # Add transaction to batch transactions container
+    transactions.add(txn_dict)
+
+    # Sent batch to server via socket and get response as dict
+    response = batch.stream(transactions, conf)
+
+    print('Message: %s' % response['batchResponse']['authorizationResponse']['message'])
+    print('LitleTransaction ID: %s' % response['batchResponse']['authorizationResponse']['litleTxnId'])
+
+Using object
+............
 .. code-block:: python
    :linenos:
 
@@ -57,16 +143,18 @@ EXAMPLE
     transaction.card = card
 
     # detail tax
-    enhancedData = fields.enhancedData()
-    enhancedData.customerReference = 'Litle'
-    enhancedData.deliveryType = 'TBD'
+    detailTaxList = list()
+
     detailTax = fields.detailTax()
     detailTax.taxAmount = 100
+    detailTaxList.append(detailTax)
+
     detailTax2 = fields.detailTax()
     detailTax2.taxAmount = 200
-    # pyxb cannot bind multi occurs item, have to use pyxb.BIND
-    enhancedData = pyxb.BIND(enhancedData.customerReference, enhancedData.deliveryType, detailTax, detailTax2)
-    transaction.enhancedData = enhancedData
+    detailTaxList.append(detailTax2)
+
+    enhancedData = fields.enhancedData()
+    enhancedData.detailTax = detailTaxList
 
     # Send request to server and get response as dict
     response = online.request(transaction, conf)
@@ -991,55 +1079,6 @@ bmlProductType
 ..............
     .. py:class:: vantivsdk.fields.bmlProductType
 
-        :var PythonLiteral: String or Number
-        :var SimpleTypeDefinition: String or Number
-        :var XsdConstraintsOK: String or Number
-        :var XsdLiteral: String or Number
-        :var XsdSuperType: String or Number
-        :var XsdValueLength: String or Number
-        :var capitalize: String or Number
-        :var center: String or Number
-        :var count: String or Number
-        :var decode: String or Number
-        :var encode: String or Number
-        :var endswith: String or Number
-        :var expandtabs: String or Number
-        :var find: String or Number
-        :var format: String or Number
-        :var index: String or Number
-        :var isalnum: String or Number
-        :var isalpha: String or Number
-        :var isdecimal: String or Number
-        :var isdigit: String or Number
-        :var islower: String or Number
-        :var isnumeric: String or Number
-        :var isspace: String or Number
-        :var istitle: String or Number
-        :var isupper: String or Number
-        :var join: String or Number
-        :var ljust: String or Number
-        :var lower: String or Number
-        :var lstrip: String or Number
-        :var partition: String or Number
-        :var pythonLiteral: String or Number
-        :var replace: String or Number
-        :var rfind: String or Number
-        :var rindex: String or Number
-        :var rjust: String or Number
-        :var rpartition: String or Number
-        :var rsplit: String or Number
-        :var rstrip: String or Number
-        :var split: String or Number
-        :var splitlines: String or Number
-        :var startswith: String or Number
-        :var strip: String or Number
-        :var swapcase: String or Number
-        :var title: String or Number
-        :var translate: String or Number
-        :var upper: String or Number
-        :var xsdLiteral: String or Number
-        :var xsdValueLength: String or Number
-        :var zfill: String or Number
 
 card
 ....

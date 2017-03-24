@@ -49,6 +49,168 @@
 </div>
 <div class="section" id="example">
 <h2>EXAMPLE<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="using-dict">
+<h3>Using dict<a class="headerlink" href="#using-dict" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78</pre></div></td><td class="code"><div class="highlight"><pre><span></span> <span class="c1">#Example for SDKv2</span>
+ <span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">print_function</span><span class="p">,</span> <span class="n">unicode_literals</span>
+
+ <span class="kn">from</span> <span class="nn">vantivsdk</span> <span class="kn">import</span> <span class="o">*</span>
+
+ <span class="c1"># Initial Configuration object. If you have saved configuration in &#39;.vantiv_python_sdk.conf&#39; at system environment</span>
+ <span class="c1"># variable: VANTIV_SDK_CONFIG or user home directory, the saved configuration will be automatically load.</span>
+ <span class="n">conf</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">Configuration</span><span class="p">()</span>
+
+ <span class="c1"># Configuration need following attributes for online request:</span>
+ <span class="c1"># attributes = default value</span>
+ <span class="c1"># user = &#39;&#39;</span>
+ <span class="c1"># password = &#39;&#39;</span>
+ <span class="c1"># merchantId = &#39;&#39;</span>
+ <span class="c1"># reportGroup = &#39;Default Report Group&#39;</span>
+ <span class="c1"># url = &#39;https://www.testlitle.com/sandbox/communicator/online&#39;</span>
+ <span class="c1"># proxy = &#39;&#39;</span>
+ <span class="c1"># print_xml = False</span>
+
+ <span class="c1"># Transaction presented by dict</span>
+ <span class="n">txn_dict</span> <span class="o">=</span><span class="p">{</span>
+     <span class="s1">&#39;authorization&#39;</span><span class="p">:{</span>
+         <span class="s1">&#39;orderId&#39;</span><span class="p">:</span> <span class="s1">&#39;1&#39;</span><span class="p">,</span>
+         <span class="s1">&#39;amount&#39;</span><span class="p">:</span> <span class="mi">10010</span><span class="p">,</span>
+         <span class="s1">&#39;orderSource&#39;</span><span class="p">:</span> <span class="s1">&#39;ecommerce&#39;</span><span class="p">,</span>
+         <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="s1">&#39;ThisIsRequiredby11&#39;</span><span class="p">,</span>
+         <span class="s1">&#39;billToAddress&#39;</span><span class="p">:</span> <span class="p">{</span>
+             <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;John &amp; Mary Smith&#39;</span><span class="p">,</span>
+             <span class="s1">&#39;addressLine1&#39;</span><span class="p">:</span> <span class="s1">&#39;1 Main St.&#39;</span><span class="p">,</span>
+             <span class="s1">&#39;city&#39;</span><span class="p">:</span> <span class="s1">&#39;Burlington&#39;</span><span class="p">,</span>
+             <span class="s1">&#39;state&#39;</span><span class="p">:</span> <span class="s1">&#39;MA&#39;</span><span class="p">,</span>
+             <span class="s1">&#39;zip&#39;</span><span class="p">:</span> <span class="s1">&#39;01803-3747&#39;</span><span class="p">,</span>
+             <span class="s1">&#39;country&#39;</span><span class="p">:</span> <span class="s1">&#39;USA&#39;</span>
+         <span class="p">},</span>
+         <span class="s1">&#39;card&#39;</span><span class="p">:</span> <span class="p">{</span>
+             <span class="s1">&#39;number&#39;</span><span class="p">:</span> <span class="s1">&#39;4100000000000000&#39;</span><span class="p">,</span>
+             <span class="s1">&#39;expDate&#39;</span><span class="p">:</span> <span class="s1">&#39;1215&#39;</span><span class="p">,</span>
+             <span class="s1">&#39;cardValidationNum&#39;</span> <span class="p">:</span> <span class="s1">&#39;349&#39;</span><span class="p">,</span>
+             <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;VI&#39;</span>
+         <span class="p">},</span>
+         <span class="s1">&#39;enhancedData&#39;</span><span class="p">:{</span>
+             <span class="s1">&#39;detailTax&#39;</span><span class="p">:</span> <span class="p">[</span>
+                 <span class="p">{</span><span class="s1">&#39;taxAmount&#39;</span><span class="p">:</span><span class="mi">100</span><span class="p">},</span>
+                 <span class="p">{</span><span class="s1">&#39;taxAmount&#39;</span><span class="p">:</span><span class="mi">200</span><span class="p">},</span>
+             <span class="p">],</span>
+         <span class="p">}</span>
+     <span class="p">}</span>
+ <span class="p">}</span>
+
+ <span class="c1"># Send request to server and get response as dict</span>
+ <span class="n">response</span> <span class="o">=</span> <span class="n">online</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="n">txn_dict</span><span class="p">,</span> <span class="n">conf</span><span class="p">)</span>
+
+ <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Message: </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">response</span><span class="p">[</span><span class="s1">&#39;authorizationResponse&#39;</span><span class="p">][</span><span class="s1">&#39;message&#39;</span><span class="p">])</span>
+ <span class="k">print</span><span class="p">(</span><span class="s1">&#39;LitleTransaction ID: </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">response</span><span class="p">[</span><span class="s1">&#39;authorizationResponse&#39;</span><span class="p">][</span><span class="s1">&#39;litleTxnId&#39;</span><span class="p">])</span>
+
+ <span class="c1"># Configuration need following attributes for batch request:</span>
+ <span class="c1"># attributes = default value</span>
+ <span class="c1"># sftp_username = &#39;&#39;</span>
+ <span class="c1"># sftp_password = &#39;&#39;</span>
+ <span class="c1"># sftp_url = &#39;&#39;</span>
+ <span class="c1"># batch_requests_path = &#39;/tmp/vantiv_sdk_batch_request&#39;</span>
+ <span class="c1"># batch_response_path = &#39;/tmp/vantiv_sdk_batch_response&#39;</span>
+ <span class="c1"># fast_url = &#39;&#39;</span>
+ <span class="c1"># fast_ssl = True</span>
+ <span class="c1"># fast_port = &#39;&#39;</span>
+ <span class="c1"># id = &#39;&#39;</span>
+
+ <span class="c1"># Initial batch transactions container class</span>
+ <span class="n">transactions</span> <span class="o">=</span> <span class="n">batch</span><span class="o">.</span><span class="n">Transactions</span><span class="p">()</span>
+
+ <span class="c1"># Add transaction to batch transactions container</span>
+ <span class="n">transactions</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">txn_dict</span><span class="p">)</span>
+
+ <span class="c1"># Sent batch to server via socket and get response as dict</span>
+ <span class="n">response</span> <span class="o">=</span> <span class="n">batch</span><span class="o">.</span><span class="n">stream</span><span class="p">(</span><span class="n">transactions</span><span class="p">,</span> <span class="n">conf</span><span class="p">)</span>
+
+ <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Message: </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">response</span><span class="p">[</span><span class="s1">&#39;batchResponse&#39;</span><span class="p">][</span><span class="s1">&#39;authorizationResponse&#39;</span><span class="p">][</span><span class="s1">&#39;message&#39;</span><span class="p">])</span>
+ <span class="k">print</span><span class="p">(</span><span class="s1">&#39;LitleTransaction ID: </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">response</span><span class="p">[</span><span class="s1">&#39;batchResponse&#39;</span><span class="p">][</span><span class="s1">&#39;authorizationResponse&#39;</span><span class="p">][</span><span class="s1">&#39;litleTxnId&#39;</span><span class="p">])</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="using-object">
+<h3>Using object<a class="headerlink" href="#using-object" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-python"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -135,7 +297,9 @@
 84
 85
 86
-87</pre></div></td><td class="code"><div class="highlight"><pre><span></span> <span class="c1">#Example for SDKv2</span>
+87
+88
+89</pre></div></td><td class="code"><div class="highlight"><pre><span></span> <span class="c1">#Example for SDKv2</span>
  <span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">print_function</span><span class="p">,</span> <span class="n">unicode_literals</span>
 
  <span class="kn">from</span> <span class="nn">vantivsdk</span> <span class="kn">import</span> <span class="o">*</span>
@@ -182,16 +346,18 @@
  <span class="n">transaction</span><span class="o">.</span><span class="n">card</span> <span class="o">=</span> <span class="n">card</span>
 
  <span class="c1"># detail tax</span>
- <span class="n">enhancedData</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">enhancedData</span><span class="p">()</span>
- <span class="n">enhancedData</span><span class="o">.</span><span class="n">customerReference</span> <span class="o">=</span> <span class="s1">&#39;Litle&#39;</span>
- <span class="n">enhancedData</span><span class="o">.</span><span class="n">deliveryType</span> <span class="o">=</span> <span class="s1">&#39;TBD&#39;</span>
+ <span class="n">detailTaxList</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+
  <span class="n">detailTax</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">detailTax</span><span class="p">()</span>
  <span class="n">detailTax</span><span class="o">.</span><span class="n">taxAmount</span> <span class="o">=</span> <span class="mi">100</span>
+ <span class="n">detailTaxList</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">detailTax</span><span class="p">)</span>
+
  <span class="n">detailTax2</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">detailTax</span><span class="p">()</span>
  <span class="n">detailTax2</span><span class="o">.</span><span class="n">taxAmount</span> <span class="o">=</span> <span class="mi">200</span>
- <span class="c1"># pyxb cannot bind multi occurs item, have to use pyxb.BIND</span>
- <span class="n">enhancedData</span> <span class="o">=</span> <span class="n">pyxb</span><span class="o">.</span><span class="n">BIND</span><span class="p">(</span><span class="n">enhancedData</span><span class="o">.</span><span class="n">customerReference</span><span class="p">,</span> <span class="n">enhancedData</span><span class="o">.</span><span class="n">deliveryType</span><span class="p">,</span> <span class="n">detailTax</span><span class="p">,</span> <span class="n">detailTax2</span><span class="p">)</span>
- <span class="n">transaction</span><span class="o">.</span><span class="n">enhancedData</span> <span class="o">=</span> <span class="n">enhancedData</span>
+ <span class="n">detailTaxList</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">detailTax2</span><span class="p">)</span>
+
+ <span class="n">enhancedData</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">enhancedData</span><span class="p">()</span>
+ <span class="n">enhancedData</span><span class="o">.</span><span class="n">detailTax</span> <span class="o">=</span> <span class="n">detailTaxList</span>
 
  <span class="c1"># Send request to server and get response as dict</span>
  <span class="n">response</span> <span class="o">=</span> <span class="n">online</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="n">transaction</span><span class="p">,</span> <span class="n">conf</span><span class="p">)</span>
@@ -225,6 +391,7 @@
 </pre></div>
 </td></tr></table></div>
 </div>
+</div>
 <div class="section" id="api">
 <h2>API<a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="batch-stream">
@@ -232,7 +399,7 @@
 <blockquote>
 <div><dl class="function">
 <dt id="vantivsdk.batch.stream">
-<code class="descclassname">vantivsdk.batch.</code><code class="descname">stream</code><span class="sig-paren">(</span><em>transactions</em>, <em>conf</em>, <em>return_format=u'dict'</em>, <em>timeout_send=60</em>, <em>timeout_rev=2</em><span class="sig-paren">)</span><a class="headerlink" href="#vantivsdk.batch.stream" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">vantivsdk.batch.</code><code class="descname">stream</code><span class="sig-paren">(</span><em>transactions</em>, <em>conf</em>, <em>return_format='dict'</em>, <em>timeout_send=60</em>, <em>timeout_rev=2</em><span class="sig-paren">)</span><a class="headerlink" href="#vantivsdk.batch.stream" title="Permalink to this definition">¶</a></dt>
 <dd><p>stream batch request to IBC (inbound batch communicator) via socket and get return object</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -293,7 +460,7 @@
 <blockquote>
 <div><dl class="function">
 <dt id="vantivsdk.batch.submit">
-<code class="descclassname">vantivsdk.batch.</code><code class="descname">submit</code><span class="sig-paren">(</span><em>transactions</em>, <em>conf</em>, <em>filename=u''</em>, <em>timeout=60</em><span class="sig-paren">)</span><a class="headerlink" href="#vantivsdk.batch.submit" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">vantivsdk.batch.</code><code class="descname">submit</code><span class="sig-paren">(</span><em>transactions</em>, <em>conf</em>, <em>filename=''</em>, <em>timeout=60</em><span class="sig-paren">)</span><a class="headerlink" href="#vantivsdk.batch.submit" title="Permalink to this definition">¶</a></dt>
 <dd><p>Submitting a Session File for Processing to server via sFTP</p>
 <ol class="arabic simple">
 <li>Generate litleRequest xml.</li>
@@ -329,7 +496,7 @@
 <blockquote>
 <div><dl class="function">
 <dt id="vantivsdk.batch.retrieve">
-<code class="descclassname">vantivsdk.batch.</code><code class="descname">retrieve</code><span class="sig-paren">(</span><em>filename</em>, <em>conf</em>, <em>return_format=u'dict'</em>, <em>save_to_local=False</em>, <em>delete_remote=False</em>, <em>timeout=60</em><span class="sig-paren">)</span><a class="headerlink" href="#vantivsdk.batch.retrieve" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">vantivsdk.batch.</code><code class="descname">retrieve</code><span class="sig-paren">(</span><em>filename</em>, <em>conf</em>, <em>return_format='dict'</em>, <em>save_to_local=False</em>, <em>delete_remote=False</em>, <em>timeout=60</em><span class="sig-paren">)</span><a class="headerlink" href="#vantivsdk.batch.retrieve" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieving Processed Session File from server via sFTP</p>
 <ol class="arabic simple">
 <li>Get xml file string from server and return object</li>
@@ -426,7 +593,7 @@ RFRRequest cannot exist in the same instance with any other transactions.</p>
 <blockquote>
 <div><dl class="function">
 <dt id="vantivsdk.online.request">
-<code class="descclassname">vantivsdk.online.</code><code class="descname">request</code><span class="sig-paren">(</span><em>transaction</em>, <em>conf</em>, <em>return_format=u'dict'</em>, <em>timeout=30</em><span class="sig-paren">)</span><a class="headerlink" href="#vantivsdk.online.request" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">vantivsdk.online.</code><code class="descname">request</code><span class="sig-paren">(</span><em>transaction</em>, <em>conf</em>, <em>return_format='dict'</em>, <em>timeout=30</em><span class="sig-paren">)</span><a class="headerlink" href="#vantivsdk.online.request" title="Permalink to this definition">¶</a></dt>
 <dd><p>Send request to server.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -2296,66 +2463,7 @@ RFRRequest cannot exist in the same instance with any other transactions.</p>
 <div><dl class="class">
 <dt id="vantivsdk.fields.bmlProductType">
 <em class="property">class </em><code class="descclassname">vantivsdk.fields.</code><code class="descname">bmlProductType</code><a class="headerlink" href="#vantivsdk.fields.bmlProductType" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><ul class="first last simple">
-<li><strong>PythonLiteral</strong> &#8211; String or Number</li>
-<li><strong>SimpleTypeDefinition</strong> &#8211; String or Number</li>
-<li><strong>XsdConstraintsOK</strong> &#8211; String or Number</li>
-<li><strong>XsdLiteral</strong> &#8211; String or Number</li>
-<li><strong>XsdSuperType</strong> &#8211; String or Number</li>
-<li><strong>XsdValueLength</strong> &#8211; String or Number</li>
-<li><strong>capitalize</strong> &#8211; String or Number</li>
-<li><strong>center</strong> &#8211; String or Number</li>
-<li><strong>count</strong> &#8211; String or Number</li>
-<li><strong>decode</strong> &#8211; String or Number</li>
-<li><strong>encode</strong> &#8211; String or Number</li>
-<li><strong>endswith</strong> &#8211; String or Number</li>
-<li><strong>expandtabs</strong> &#8211; String or Number</li>
-<li><strong>find</strong> &#8211; String or Number</li>
-<li><strong>format</strong> &#8211; String or Number</li>
-<li><strong>index</strong> &#8211; String or Number</li>
-<li><strong>isalnum</strong> &#8211; String or Number</li>
-<li><strong>isalpha</strong> &#8211; String or Number</li>
-<li><strong>isdecimal</strong> &#8211; String or Number</li>
-<li><strong>isdigit</strong> &#8211; String or Number</li>
-<li><strong>islower</strong> &#8211; String or Number</li>
-<li><strong>isnumeric</strong> &#8211; String or Number</li>
-<li><strong>isspace</strong> &#8211; String or Number</li>
-<li><strong>istitle</strong> &#8211; String or Number</li>
-<li><strong>isupper</strong> &#8211; String or Number</li>
-<li><strong>join</strong> &#8211; String or Number</li>
-<li><strong>ljust</strong> &#8211; String or Number</li>
-<li><strong>lower</strong> &#8211; String or Number</li>
-<li><strong>lstrip</strong> &#8211; String or Number</li>
-<li><strong>partition</strong> &#8211; String or Number</li>
-<li><strong>pythonLiteral</strong> &#8211; String or Number</li>
-<li><strong>replace</strong> &#8211; String or Number</li>
-<li><strong>rfind</strong> &#8211; String or Number</li>
-<li><strong>rindex</strong> &#8211; String or Number</li>
-<li><strong>rjust</strong> &#8211; String or Number</li>
-<li><strong>rpartition</strong> &#8211; String or Number</li>
-<li><strong>rsplit</strong> &#8211; String or Number</li>
-<li><strong>rstrip</strong> &#8211; String or Number</li>
-<li><strong>split</strong> &#8211; String or Number</li>
-<li><strong>splitlines</strong> &#8211; String or Number</li>
-<li><strong>startswith</strong> &#8211; String or Number</li>
-<li><strong>strip</strong> &#8211; String or Number</li>
-<li><strong>swapcase</strong> &#8211; String or Number</li>
-<li><strong>title</strong> &#8211; String or Number</li>
-<li><strong>translate</strong> &#8211; String or Number</li>
-<li><strong>upper</strong> &#8211; String or Number</li>
-<li><strong>xsdLiteral</strong> &#8211; String or Number</li>
-<li><strong>xsdValueLength</strong> &#8211; String or Number</li>
-<li><strong>zfill</strong> &#8211; String or Number</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
+<dd></dd></dl>
 
 </div></blockquote>
 </div>
@@ -3357,7 +3465,11 @@ RFRRequest cannot exist in the same instance with any other transactions.</p>
   <h3><a href="#">Table Of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Vantiv eCommerce Python SDKv2 documentation 11.0!</a><ul>
-<li><a class="reference internal" href="#example">EXAMPLE</a></li>
+<li><a class="reference internal" href="#example">EXAMPLE</a><ul>
+<li><a class="reference internal" href="#using-dict">Using dict</a></li>
+<li><a class="reference internal" href="#using-object">Using object</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#api">API</a><ul>
 <li><a class="reference internal" href="#batch-stream">batch.stream</a></li>
 <li><a class="reference internal" href="#batch-download">batch.download</a></li>
