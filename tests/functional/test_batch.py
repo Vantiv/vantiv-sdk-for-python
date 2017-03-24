@@ -121,7 +121,7 @@ class TestBatch(unittest.TestCase):
         with open(os.path.join(conf.batch_requests_path, '%s.xml' % filename), 'r') as xml_file:
             obj = fields.CreateFromDocument(xml_file.read())
             self.assertEquals(1, obj.numBatchRequests)
-            self.assertEquals(11011, obj.batchRequest[0].authAmount)
+            self.assertEquals(11117, obj.batchRequest[0].authAmount)
 
         self.assertEquals('%s.xml.asc' % filename, response)
 
