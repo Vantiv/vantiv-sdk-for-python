@@ -30,7 +30,6 @@ package_root = os.path.dirname(os.path.dirname(os.path.abspath(os.path.dirname(_
 sys.path.insert(0, package_root)
 
 from vantivsdk import *
-import pyxb
 
 # Initial Configuration object. If you have saved configuration in '.vantiv_python_sdk.conf' at system environment
 # variable: VANTIV_SDK_CONFIG or user home directory, the saved configuration will be automatically load.
@@ -100,6 +99,43 @@ transaction.enhancedData = enhancedData
 
 # Send request to server and get response as object
 response = online.request(transaction, conf)
+
+# Print results
+print('Message: %s' % response['authorizationResponse']['message'])
+print('LitleTransaction ID: %s' % response['authorizationResponse']['litleTxnId'])
+
+# Transaction presented by dict
+txn_dict ={
+    'authorization':{
+        'orderId': '1',
+        'amount': 10010,
+        'orderSource': 'ecommerce',
+        'id': 'ThisIsRequiredby11',
+        'billToAddress': {
+            'name': 'John & Mary Smith',
+            'addressLine1': '1 Main St.',
+            'city': 'Burlington',
+            'state': 'MA',
+            'zip': '01803-3747',
+            'country': 'USA'
+        },
+        'card': {
+            'number': '4100000000000000',
+            'expDate': '1215',
+            'cardValidationNum' : '349',
+            'type': 'VI'
+        },
+        'enhancedData':{
+            'detailTax': [
+                {'taxAmount':100},
+                {'taxAmount':200},
+            ],
+        }
+    }
+}
+
+# Send request to server and get response as object
+response = online.request(txn_dict, conf)
 
 # Print results
 print('Message: %s' % response['authorizationResponse']['message'])
