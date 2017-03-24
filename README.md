@@ -42,8 +42,8 @@ Without Pip
 
 >cd vantiv-sdkv2-for-python
 
-# checkout version
->git checkout 9.0
+checkout master for xml v9.x
+>git checkout master
 
 >python setup.py install
 
