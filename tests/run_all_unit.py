@@ -28,7 +28,7 @@ import sys
 
 import run_test_utils
 
-if (sys.version_info[0] == 3) and sys.version_info[:2] < (3, 4):
+if (sys.version_info[0] == 3) and sys.version_info[:2] >= (3, 4):
     tests_dir = ['unit']
     run_test_utils.run_tests(tests_dir)
 else:
