@@ -31,7 +31,7 @@ import paramiko
 import six
 import xmltodict
 
-from . import (fields, utils, batch_txns)
+from . import (fields, utils, batch_txns, dict2fields)
 
 # Key: transaction name
 # Value: array of batchRequest attributes according to transactions
@@ -583,7 +583,11 @@ class Transactions(object):
         if len(self._transactions) > 1000000:
             raise utils.VantivException('A session should not exceed 1,000,000 transactions.')
 
+        if isinstance(transaction, dict):
+            transaction = dict2fields.dict2obj(transaction)
+
         type_name = type(transaction).__name__
+
         if self._RFRRequest_cls_name == type_name:
             if self._RFRRequest:
                 raise utils.VantivException('only can add one RFRRequest')

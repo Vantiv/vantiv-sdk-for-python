@@ -54,6 +54,25 @@ class TestAuth(unittest.TestCase):
         response = online.request(authorization, conf)
         self.assertEquals('000', response['authorizationResponse']['response'])
 
+    def test_simple_auth_with_card_dict(self):
+        # Transactions presented by dict
+        txn_dict = {
+            'authorization':{
+                'reportGroup': 'Planets',
+                'orderId': '12344',
+                'amount': '106',
+                'orderSource': 'ecommerce',
+                'id': 'thisisid',
+                'card': {
+                    'expDate': '1210',
+                    'number': '4100000000000000',
+                    'type': 'VI',
+                }
+            }
+        }
+        response = online.request(txn_dict, conf)
+        self.assertEquals('000', response['authorizationResponse']['response'])
+
     def test_simple_auth_with_android_pay(self):
         authorization = fields.authorization()
         authorization.reportGroup = 'Planets'
@@ -188,12 +207,17 @@ class TestAuth(unittest.TestCase):
         authorization.amount = 10000
         authorization.orderSource = 'ecommerce'
 
+        detailTaxList = list()
         detailTax = fields.detailTax()
         detailTax.taxAmount = 100
         detailTax2 = fields.detailTax()
         detailTax2.taxAmount = 200
-        # pyxb cannot bind multi occurs item, have to use pyxb.BIND
-        enhancedData = pyxb.BIND(detailTax, detailTax2)
+        detailTaxList.append(detailTax)
+        detailTaxList.append(detailTax2)
+
+        enhancedData = fields.enhancedData()
+        enhancedData.detailTax = detailTaxList
+
         authorization.enhancedData = enhancedData
 
         card = fields.cardType()

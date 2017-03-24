@@ -28,7 +28,7 @@ import requests
 import xmltodict
 import six
 
-from . import (fields, utils)
+from . import (fields, utils, dict2fields)
 
 
 def request(transaction, conf, return_format='dict', timeout=30):
@@ -47,6 +47,9 @@ def request(transaction, conf, return_format='dict', timeout=30):
     Raises:
         VantivExceptions.
     """
+    if isinstance(transaction, dict):
+        transaction = dict2fields.dict2obj(transaction)
+
     if not (isinstance(transaction, fields.recurringTransactionType)
             or isinstance(transaction, fields.transactionType)):
         raise utils.VantivException(
