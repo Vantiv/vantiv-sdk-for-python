@@ -40,6 +40,22 @@ class TestBatch(unittest.TestCase):
     def test_batch_submit(self):
         # Initial Transactions container
         transactions = batch.Transactions()
+        # Transactions presented by dict
+        txn_dict = {
+            'authorization':{
+                'reportGroup': 'Planets',
+                'orderId': '12344',
+                'amount': '106',
+                'orderSource': 'ecommerce',
+                'id': 'thisisid',
+                'card': {
+                    'expDate': '1210',
+                    'number': '4100000000000000',
+                    'type': 'VI',
+                }
+            }
+        }
+        transactions.add(txn_dict)
 
         # Card
         card = fields.cardType()
