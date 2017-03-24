@@ -101,15 +101,19 @@ card.type = 'VI'
 transaction.card = card
 
 # detail tax
-enhancedData = fields.enhancedData()
-enhancedData.customerReference = 'Litle'
-enhancedData.deliveryType = 'TBD'
+detailTaxList = list()
+
 detailTax = fields.detailTax()
 detailTax.taxAmount = 100
+detailTaxList.append(detailTax)
+
 detailTax2 = fields.detailTax()
 detailTax2.taxAmount = 200
-# pyxb cannot bind multi occurs item, have to use pyxb.BIND
-enhancedData = pyxb.BIND(enhancedData.customerReference, enhancedData.deliveryType, detailTax, detailTax2)
+detailTaxList.append(detailTax2)
+
+enhancedData = fields.enhancedData()
+enhancedData.detailTax = detailTaxList
+
 transaction.enhancedData = enhancedData
 
 # Send request to server and get response as dict
