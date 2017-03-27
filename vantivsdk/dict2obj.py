@@ -26,7 +26,7 @@ from __future__ import unicode_literals
 
 from . import dictmap,utils,fields
 
-def dict2obj(txn_dict):
+def tofileds(txn_dict):
     if not isinstance(txn_dict, dict):
         raise utils.VantivException('"%s" is not a dict' % txn_dict)
 
@@ -118,5 +118,3 @@ def _obj_map_attributes(obj, obj_name, obj_attrs_type_dict, obj_attrs_values_dic
             else:
                 setattr(obj, attr_name, attr_value)
     return obj
-
-
