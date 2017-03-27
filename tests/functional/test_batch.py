@@ -205,5 +205,78 @@ class TestBatch(unittest.TestCase):
                           response['batchResponse']['authorizationResponse'][0]['litleTxnId'])
 
 
+    def test_batch_stream_dict(self):
+        txn_dict = {
+            'authorization':[
+                {
+                    'reportGroup': 'Planets',
+                    'orderId': '12344',
+                    'amount': '100',
+                    'orderSource': 'ecommerce',
+                    'id': 'thisisid',
+                    'card': {
+                        'expDate': '1210',
+                        'number': '4100000000000000',
+                        'type': 'VI',
+                    }
+                },
+                {
+                    'reportGroup': 'Planets',
+                    'orderId': '12345',
+                    'amount': '200',
+                    'orderSource': 'ecommerce',
+                    'id': 'thisisid',
+                    'card': {
+                        'expDate': '1210',
+                        'number': '4100000000000000',
+                        'type': 'VI',
+                    }
+                },
+                {
+                    'reportGroup': 'Planets',
+                    'orderId': '12346',
+                    'amount': '300',
+                    'orderSource': 'ecommerce',
+                    'id': 'thisisid',
+                    'card': {
+                        'expDate': '1210',
+                        'number': '4100000000000000',
+                        'type': 'VI',
+                    }
+                }
+            ],
+            'sale': {
+                'reportGroup': 'Planets',
+                'orderId': '12344',
+                'amount': '106',
+                'orderSource': 'ecommerce',
+                'id': 'thisisid',
+                'card': {
+                    'expDate': '1210',
+                    'number': '4100000000000000',
+                    'type': 'VI',
+                }
+            }
+        }
+
+        # stream to Vaitiv eCommerce and get object as response
+        response = batch.stream(txn_dict, conf)
+
+        self.assertIn('batchResponse', response)
+
+        # Example for RFRRequest
+        RFRRequest = fields.RFRRequest()
+        RFRRequest.litleSessionId = response['@litleSessionId']
+
+        transactions = batch.Transactions()
+        transactions.add(RFRRequest)
+
+        # stream to Vaitiv eCommerce and get object as response
+        response_rfr = batch.stream(transactions, conf)
+
+        self.assertIn('batchResponse', response_rfr)
+        self.assertEquals(response_rfr['batchResponse']['authorizationResponse'][0]['litleTxnId'],
+                          response['batchResponse']['authorizationResponse'][0]['litleTxnId'])
+
 if __name__ == '__main__':
     unittest.main()

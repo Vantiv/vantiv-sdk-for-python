@@ -57,50 +57,50 @@ class Configuration(object):
     _CONFIG_FILE_PATH = os.path.join(os.environ['VANTIV_SDK_CONFIG'], ".vantiv_python_sdk.conf") \
         if 'VANTIV_SDK_CONFIG' in os.environ else os.path.join(os.path.expanduser("~"), ".vantiv_python_sdk.conf")
 
-    def __init__(self):
+    def __init__(self, conf_dict = dict()):
+        attr_dict = {
+            'user':'',
+            'password':'',
+            'merchantId':'',
+            'reportGroup':'Default Report Group',
+            'url':'https://www.testlitle.com/sandbox/communicator/online',
+            'proxy':'',
+            'sftp_username':'',
+            'sftp_password':'',
+            'sftp_url':'',
+            'batch_requests_path':os.path.join(tempfile.gettempdir(), 'vantiv_sdk_batch_request'),
+            'batch_response_path':os.path.join(tempfile.gettempdir(), 'vantiv_sdk_batch_response'),
+            'fast_url':'',
+            'fast_ssl':True,
+            'fast_port':'',
+            'print_xml':False,
+            'id':'',
+        }
 
-        self.user = ''
-        self.password = ''
-        self.merchantId = ''
-        self.reportGroup = 'Default Report Group'
-        self.url = 'https://www.testlitle.com/sandbox/communicator/online'
-        self.proxy = ''
-        self.sftp_username = ''
-        self.sftp_password = ''
-        self.sftp_url = ''
-        self.batch_requests_path = os.path.join(tempfile.gettempdir(), 'vantiv_sdk_batch_request')
-        self.batch_response_path = os.path.join(tempfile.gettempdir(), 'vantiv_sdk_batch_response')
-        self.fast_url = ''
-        self.fast_ssl = True
-        self.fast_port = ''
-        self.print_xml = False
-        self.id = ''
-        # Load Configuration from local file system.
-        # noinspection PyBroadException
+        # set default values
+        for k in attr_dict:
+            setattr(self, k , attr_dict[k])
+
+        # override valuse by loading saved conf
         try:
             with open(self._CONFIG_FILE_PATH, 'r') as config_file:
                 config_json = json.load(config_file)
-                self.user = config_json["user"] if "user" in config_json else ""
-                self.password = config_json["password"] if "password" in config_json else ""
-                self.merchantId = config_json["merchantId"] if "merchantId" in config_json else ""
-                self.reportGroup = config_json["reportGroup"] if "reportGroup" in config_json else self.reportGroup
-                self.url = config_json["url"] if "url" in config_json else self.url
-                self.proxy = config_json["proxy"] if "proxy" in config_json else ""
-                self.sftp_username = config_json["sftp_username"] if "sftp_username" in config_json else ""
-                self.sftp_password = config_json["sftp_password"] if "sftp_password" in config_json else ""
-                self.sftp_url = config_json["sftp_url"] if "sftp_url" in config_json else ""
-                self.fast_url = config_json["fast_url"] if "fast_url" in config_json else ""
-                self.fast_ssl = config_json["fast_ssl"] if "fast_ssl" in config_json else self.fast_ssl
-                self.fast_port = config_json["fast_port"] if "fast_port" in config_json else ""
-                self.print_xml = config_json["print_xml"] if "print_xml" in config_json else self.print_xml
-                self.id = config_json["id"] if "id" in config_json else self.id
-                self.batch_requests_path = config_json["batch_requests_path"] if "batch_requests_path" in config_json \
-                    else self.batch_requests_path
-                self.batch_response_path = config_json["batch_response_path"] if "batch_response_path" in config_json \
-                    else self.batch_response_path
+                for k in attr_dict:
+                    if k in config_json and config_json[k]:
+                        setattr(self, k, config_json[k])
         except:
             # If get any exception just pass.
             pass
+
+        # override values by args
+        if conf_dict:
+            for k in conf_dict:
+                if k in attr_dict:
+                    setattr(self, k, conf_dict[k])
+                else:
+                    raise VantivException('"%s" is NOT an attribute of conf' % k)
+
+
 
     def save(self):
         """Save Class Attributes to .vantiv_python_sdk.conf

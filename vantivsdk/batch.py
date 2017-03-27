@@ -31,7 +31,7 @@ import paramiko
 import six
 import xmltodict
 
-from . import (fields, utils, batch_txns, dict2fields)
+from . import (fields, utils, batch_txns, dict2obj)
 
 # Key: transaction name
 # Value: array of batchRequest attributes according to transactions
@@ -71,6 +71,9 @@ def submit(transactions, conf, filename='', timeout=60):
     Raises:
         Exception depends on when get it.
     """
+    if isinstance(transactions, dict):
+        transactions = _to_batch_txns(transactions)
+
     if not isinstance(transactions, Transactions):
         raise utils.VantivException('transactions must be an instance of batch.Transactions')
 
@@ -177,6 +180,9 @@ def stream(transactions, conf, return_format='dict', timeout_send=60, timeout_re
         response XML in desired format.
 
     """
+    if isinstance(transactions, dict):
+        transactions = _to_batch_txns(transactions)
+
     if not isinstance(transactions, Transactions):
         raise utils.VantivException('transactions must be an instance of batch.Transactions')
 
@@ -531,6 +537,26 @@ def _obj_to_xml_element(_obj):
     xml = xml.replace(b' xmlns="http://www.litle.com/schema"', b'')
     return xml.decode('utf-8')
 
+def _to_batch_txns(txns_dict):
+    if not isinstance(txns_dict, dict):
+        raise utils.VantivException('"%s" is not a dict' % txns_dict)
+
+    txns = Transactions()
+
+    for k in txns_dict:
+        if k in batch_txns.supported_transaction_types or k == 'RFRRequest':
+            if isinstance(txns_dict[k], list):
+                for v in txns_dict[k]:
+                    txn = dict2obj.tofileds({k:v})
+                    txns.add(txn)
+            else:
+                txn = dict2obj.tofileds({k: txns_dict[k]})
+                txns.add(txn)
+        else:
+            raise utils.VantivException('Transaction "%s" is not supported by batch' % k)
+
+    return txns
+
 
 class Transactions(object):
     """Container of transactions for batch request
@@ -584,7 +610,7 @@ class Transactions(object):
             raise utils.VantivException('A session should not exceed 1,000,000 transactions.')
 
         if isinstance(transaction, dict):
-            transaction = dict2fields.dict2obj(transaction)
+            transaction = dict2obj.tofileds(transaction)
 
         type_name = type(transaction).__name__
 
