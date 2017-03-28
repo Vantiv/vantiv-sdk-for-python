@@ -169,7 +169,7 @@ def _http_post(post_data, conf, timeout):
     Raise:
         VantivException
     """
-    headers = {'Content-type': 'application/xml','charset':'utf-8'}
+    headers = {'Content-type': 'text/xml; charset=UTF-8'}
     proxies = {'https': conf.proxy} if (conf.proxy is not None and conf.proxy != '') else None
     try:
         response = requests.post(conf.url, data=post_data, headers=headers, proxies=proxies, timeout=timeout)
