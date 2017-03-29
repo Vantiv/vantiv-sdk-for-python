@@ -1,5 +1,5 @@
-Vantiv eCommerce Python SDKv2
-=============================
+Vantiv eCommerce Python SDKv2 for XML v9.x
+==========================================
 
 About Vantiv eCommerce
 ----------------------
@@ -42,8 +42,8 @@ Without Pip
 
 >cd vantiv-sdkv2-for-python
 
-checkout master for xml v9.x
->git checkout master
+checkout 9.0 for xml v9.x
+>git checkout 9.0
 
 >python setup.py install
 
@@ -212,8 +212,9 @@ NOTE: you may need to edit the proxy to to work for your system
     Litle Transaction ID: <your-numeric-litle-txn-id>
     
 
-More examples can be found here https://github.com/LitleCo/vantiv-sdkv2-for-python/tree/master/samples
+More examples can be found here https://github.com/LitleCo/vantiv-sdkv2-for-python/tree/9.0/samples
+More examples can be found here https://github.com/LitleCo/vantiv-sdkv2-for-python/tree/9.0/samples
 
-Detail documents can be found here https://github.com/LitleCo/vantiv-sdkv2-for-python/tree/master/docs/html
+Detail documents can be found here https://github.com/LitleCo/vantiv-sdkv2-for-python/tree/9.0/docs/html
 
 Please contact Vantiv eCommerce with any further questions. You can reach us at SDKSupport@Vantiv.com
