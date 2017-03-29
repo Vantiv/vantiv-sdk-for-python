@@ -42,8 +42,8 @@ Without Pip
 
 >cd vantiv-sdkv2-for-python
 
-checkout branch 11.0 for XML v11.x
->git checkout 11.0
+checkout branch master for XML v11.x
+>git checkout master
 
 >python setup.py install
 
