@@ -1,5 +1,5 @@
-Vantiv eCommerce Python SDKv2
-=============================
+Vantiv eCommerce Python SDKv2 for XML 11.x
+==========================================
 
 About Vantiv eCommerce
 ----------------------
@@ -10,7 +10,7 @@ About this SDK
 --------------
 The Vantiv eCommerce Python SDKv2 is a Python implementation of the [Vantiv eCommerce](https://developer.vantiv.com/community/ecommerce) XML API. This SDK was created to make it as easy as possible to connect to and process payments through Vantiv eCommerce. This SDK utilizes the HTTPS protocol to securely connect to Vantiv eCommerce.  Using the SDK requires coordination with the Vantiv eCommerce team to obtain credentials for accessing our systems.
 
-Each Python SDK release supports all of the functionality present in the associated Vantiv eCommerce XML version (e.g., 9.12.x supports Vantiv eCommerce XML v9.12). Please see the online copy of our XSD for Vantiv eCommerce XML to get more details on what the Vantiv eCommerce payments engine supports .
+Each Python SDK release supports all of the functionality present in the associated Vantiv eCommerce XML version (e.g., 11.0.x supports Vantiv eCommerce XML v11.0). Please see the online copy of our XSD for Vantiv eCommerce XML to get more details on what the Vantiv eCommerce payments engine supports .
 
 This SDK was implemented to support the Python2 version 2.7.9 and later, Python3 version 3.4 and later, and was created by Vantiv eCommerce. Its intended use is for online transaction processing utilizing your account on the Vantiv eCommerce payments engine.
 
@@ -42,8 +42,8 @@ Without Pip
 
 >cd vantiv-sdkv2-for-python
 
-checkout master for xml v9.x
->git checkout master
+checkout branch 11.0 for XML v11.x
+>git checkout 11.0
 
 >python setup.py install
 
@@ -212,8 +212,8 @@ NOTE: you may need to edit the proxy to to work for your system
     Litle Transaction ID: <your-numeric-litle-txn-id>
     
 
-More examples can be found here https://github.com/LitleCo/vantiv-sdkv2-for-python/tree/master/samples
+More examples can be found here https://github.com/LitleCo/vantiv-sdkv2-for-python/tree/11.0/samples
 
-Detail documents can be found here https://github.com/LitleCo/vantiv-sdkv2-for-python/tree/master/docs/html
+Detail documents can be found here https://github.com/LitleCo/vantiv-sdkv2-for-python/tree/11.0/docs/html
 
 Please contact Vantiv eCommerce with any further questions. You can reach us at SDKSupport@Vantiv.com
