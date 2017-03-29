@@ -74,11 +74,13 @@ def get_class_dict(_package_root):
 
     # build txns dict
     txns_dict = dict()
+    used_type_dict = dict()
     abs_class_dict = dict()
-    elem_complex_dict = dict()
-    elem_ref_set = set()
-    anonymous_type_dict = dict()
     with open(_path_to_edited_xsd, 'r') as xsd_file:
+        elem_complex_set = set()
+        elem_complex_type_set = set()
+        elem_ref_set = set()
+        anonymous_type_dict = dict()
         lines = xsd_file.readlines()
         txns_head = re.compile('<xs:element name=\"(\w+)\"\s*substitutionGroup=\"xp:(\w+)\".*>')
         elem_complex = re.compile('<xs:element\s*name=\"(\w+)\"\s*type=\"xp:(\w+)\".*\/>')
@@ -99,7 +101,8 @@ def get_class_dict(_package_root):
                     abs_class_dict[_type].append(_name)
             found_elem_complex = elem_complex.search(line)
             if found_elem_complex:
-                elem_complex_dict[found_elem_complex.group(1).strip()] = found_elem_complex.group(2).strip()
+                elem_complex_set.add(found_elem_complex.group(1).strip())
+                elem_complex_type_set.add(found_elem_complex.group(2).strip())
             found_elem_ref = elem_ref.search(line)
             if found_elem_ref:
                 elem_ref_set.add(found_elem_ref.group(1).strip())
@@ -113,66 +116,77 @@ def get_class_dict(_package_root):
                 except:
                     pass
 
-    # dir() not attributes
-    no_attr_list = ['Factory', 'append', 'content', 'extend', 'orderedContent', 'reset', 'toDOM', 'toxml',
-                    'validateBinding', 'value', 'wildcardAttributeMap', 'wildcardElements', 'xsdConstraintsOK']
-    used_types = set()
-    for k in txns_dict:
-        obj = getattr(fields, k)()
-        attrs = dir(obj)
-        for attr_name in attrs:
-            if attr_name[0] != '_' and attr_name not in no_attr_list:
-                if attr_name in elem_ref_set:
-                    txns_dict[k][attr_name] = attr_name
-                    used_types.add(attr_name)
-                    continue
-                elif attr_name in elem_complex_dict:
-                    txns_dict[k][attr_name] = elem_complex_dict[attr_name]
-                    used_types.add(elem_complex_dict[attr_name])
-                    continue
-                try:
-                    type_obj = getattr(fields, attr_name)()
-                    type_name = type(type_obj).__name__
-                    if type_name in anonymous_type_dict:
-                        type_name = anonymous_type_dict[type_name]
-                    txns_dict[k][attr_name] = type_name
-                    used_types.add(attr_name)
-                except:
-                    txns_dict[k][attr_name] = ''
-
-    for k in abs_class_dict:
-        for _name in abs_class_dict[k]:
-            used_types.add(_name)
-
-    used_type_dict = dict()
-    while used_types:
-        k = used_types.pop()
-        if k not in used_type_dict and k not in abs_class_dict:
-            used_type_dict[k] = dict()
+        # dir() not attributes
+        no_attr_list = ['Factory', 'append', 'content', 'extend', 'orderedContent', 'reset', 'toDOM', 'toxml',
+                        'validateBinding', 'value', 'wildcardAttributeMap', 'wildcardElements', 'xsdConstraintsOK']
+        used_types = set()
+        for k in txns_dict:
             obj = getattr(fields, k)()
-            if type(obj).__dict__['__module__'] == 'vantivsdk.fields':
-                attrs = dir(obj)
-                for attr_name in attrs:
-                    if attr_name[0] != '_' and attr_name not in no_attr_list:
-                        if attr_name in elem_ref_set:
-                            used_type_dict[k][attr_name] = attr_name
-                            used_types.add(attr_name)
-                            continue
-                        elif attr_name in elem_complex_dict:
-                            used_type_dict[k][attr_name] = elem_complex_dict[attr_name]
-                            used_types.add(elem_complex_dict[attr_name])
-                            continue
-                        try:
-                            type_obj = getattr(fields, attr_name)()
-                            type_name = type(type_obj).__name__
-                            if type_name in anonymous_type_dict:
-                                type_name = anonymous_type_dict[type_name]
-                                used_type_dict[k][attr_name] = type_name
-                            used_types.add(attr_name)
-                        except:
-                            used_type_dict[k][attr_name] = ''
+            attrs = dir(obj)
+            for attr_name in attrs:
+                if attr_name[0] != '_' and attr_name not in no_attr_list:
+                    if attr_name in elem_ref_set:
+                        txns_dict[k][attr_name] = attr_name
+                        used_types.add(attr_name)
+                        continue
+                    elif attr_name in elem_complex_set:
+                        _type_name = _find_types(lines, k, attr_name)
+                        txns_dict[k][attr_name] = _type_name
+                        if _type_name:
+                            used_types.add(_type_name)
+                        continue
+                    else:
+                        txns_dict[k][attr_name] = ''
+
+        for k in abs_class_dict:
+            for _name in abs_class_dict[k]:
+                used_types.add(_name)
+
+        while used_types:
+            k = used_types.pop()
+            if k not in used_type_dict and k not in abs_class_dict:
+                used_type_dict[k] = dict()
+                obj = getattr(fields, k)()
+                if type(obj).__dict__['__module__'] == 'vantivsdk.fields':
+                    attrs = dir(obj)
+                    for attr_name in attrs:
+                        if attr_name[0] != '_' and attr_name not in no_attr_list:
+                            if attr_name in elem_ref_set:
+                                used_type_dict[k][attr_name] = attr_name
+                                used_types.add(attr_name)
+                                continue
+                            elif attr_name in elem_complex_set:
+                                if k in elem_complex_type_set:
+                                    _type_name = _find_types(lines, k, attr_name, True)
+                                else:
+                                    _type_name = _find_types(lines, k, attr_name)
+                                used_type_dict[k][attr_name] = _type_name
+                                if _type_name:
+                                    used_types.add(_type_name)
+                                continue
+                            else:
+                                used_type_dict[k][attr_name] = ''
 
     return [txns_dict, used_type_dict, abs_class_dict]
+
+
+def _find_types(lines, root_ele_name, ele_name, complexType=False):
+    result = ''
+    found_root = False
+    root_ele = re.compile('<xs:element\s*name=\"%s\".*>' % root_ele_name)
+    if complexType:
+        root_ele = re.compile('<xs:complexType\s*name=\"%s\".*>' % root_ele_name)
+    ele_head = re.compile('<xs:element\s*name=\"%s\"\s*type=\"xp:(\w+)\".*\/>' % ele_name)
+    for line in lines:
+        if not found_root:
+            if root_ele.search(line):
+                found_root = True
+        else:
+            found_ele_head = ele_head.search(line)
+            if found_ele_head:
+                result = found_ele_head.group(1).strip()
+                break
+    return result
 
 
 def generate_index_rst(_package_root, _dict_list):
