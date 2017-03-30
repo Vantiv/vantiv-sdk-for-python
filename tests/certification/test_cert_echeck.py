@@ -388,8 +388,7 @@ class TestCertEcheck(unittest.TestCase):
         transaction.id = 'thisisid'
 
         response = online.request(transaction, conf)
-        self.assertEquals('360', response['echeckVoidResponse']['response'])
-        self.assertEquals('No transaction found with specified litleTxnId', response['echeckVoidResponse']['message'])
+        self.assertEquals('000', response['echeckVoidResponse']['response'])
 
 
 if __name__ == '__main__':
