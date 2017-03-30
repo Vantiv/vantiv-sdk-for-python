@@ -1241,7 +1241,7 @@ payPal
 
         :var payerEmail: String or Number
         :var payerId: String or Number
-        :var token: instance of :py:class:`vantivsdk.fields.cardTokenType`
+        :var token: String or Number
         :var transactionId: String or Number
 
 pos
