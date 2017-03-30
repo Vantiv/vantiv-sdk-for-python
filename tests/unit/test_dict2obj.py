@@ -31,7 +31,7 @@ import unittest
 package_root = os.path.dirname(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
 sys.path.insert(0, package_root)
 
-from vantivsdk import dict2fields
+from vantivsdk import dict2obj
 
 class TestUtils(unittest.TestCase):
     def test_map_dict(self):
@@ -48,7 +48,7 @@ class TestUtils(unittest.TestCase):
                 }
             }
         }
-        obj = dict2fields.dict2obj(txn_dict)
+        obj = dict2obj.tofileds(txn_dict)
         self.assertEqual(1000, obj.amount)
         self.assertEqual('123', obj.card.cardValidationNum)
 
@@ -68,7 +68,7 @@ class TestUtils(unittest.TestCase):
                 }
             }
         }
-        obj = dict2fields.dict2obj(txn_dict)
+        obj = dict2obj.tofileds(txn_dict)
         self.assertEqual('123', obj.cardOrToken.cardValidationNum)
 
     def test_map_multi_bind(self):
@@ -86,7 +86,7 @@ class TestUtils(unittest.TestCase):
                 }
             }
         }
-        obj = dict2fields.dict2obj(txn_dict)
+        obj = dict2obj.tofileds(txn_dict)
         self.assertEqual(2, len(obj.enhancedData.detailTax))
         self.assertEqual(300, obj.enhancedData.detailTax[0].taxAmount + obj.enhancedData.detailTax[1].taxAmount)
 
