@@ -38,7 +38,7 @@ from vantivsdk import (utils, batch, fields)
 conf = utils.Configuration()
 
 
-class TestCertEcheck(unittest.TestCase):
+class TestCertEcheckPrenotification(unittest.TestCase):
     def test_table_2_5_ECPreNoteSale(self):
         # orderId *
         transactions = batch.Transactions()
