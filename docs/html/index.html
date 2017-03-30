@@ -399,7 +399,7 @@
 <blockquote>
 <div><dl class="function">
 <dt id="vantivsdk.batch.stream">
-<code class="descclassname">vantivsdk.batch.</code><code class="descname">stream</code><span class="sig-paren">(</span><em>transactions</em>, <em>conf</em>, <em>return_format='dict'</em>, <em>timeout_send=60</em>, <em>timeout_rev=2</em><span class="sig-paren">)</span><a class="headerlink" href="#vantivsdk.batch.stream" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">vantivsdk.batch.</code><code class="descname">stream</code><span class="sig-paren">(</span><em>transactions</em>, <em>conf</em>, <em>return_format=u'dict'</em>, <em>timeout_send=60</em>, <em>timeout_rev=2</em><span class="sig-paren">)</span><a class="headerlink" href="#vantivsdk.batch.stream" title="Permalink to this definition">¶</a></dt>
 <dd><p>stream batch request to IBC (inbound batch communicator) via socket and get return object</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -460,7 +460,7 @@
 <blockquote>
 <div><dl class="function">
 <dt id="vantivsdk.batch.submit">
-<code class="descclassname">vantivsdk.batch.</code><code class="descname">submit</code><span class="sig-paren">(</span><em>transactions</em>, <em>conf</em>, <em>filename=''</em>, <em>timeout=60</em><span class="sig-paren">)</span><a class="headerlink" href="#vantivsdk.batch.submit" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">vantivsdk.batch.</code><code class="descname">submit</code><span class="sig-paren">(</span><em>transactions</em>, <em>conf</em>, <em>filename=u''</em>, <em>timeout=60</em><span class="sig-paren">)</span><a class="headerlink" href="#vantivsdk.batch.submit" title="Permalink to this definition">¶</a></dt>
 <dd><p>Submitting a Session File for Processing to server via sFTP</p>
 <ol class="arabic simple">
 <li>Generate litleRequest xml.</li>
@@ -496,7 +496,7 @@
 <blockquote>
 <div><dl class="function">
 <dt id="vantivsdk.batch.retrieve">
-<code class="descclassname">vantivsdk.batch.</code><code class="descname">retrieve</code><span class="sig-paren">(</span><em>filename</em>, <em>conf</em>, <em>return_format='dict'</em>, <em>save_to_local=False</em>, <em>delete_remote=False</em>, <em>timeout=60</em><span class="sig-paren">)</span><a class="headerlink" href="#vantivsdk.batch.retrieve" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">vantivsdk.batch.</code><code class="descname">retrieve</code><span class="sig-paren">(</span><em>filename</em>, <em>conf</em>, <em>return_format=u'dict'</em>, <em>save_to_local=False</em>, <em>delete_remote=False</em>, <em>timeout=60</em><span class="sig-paren">)</span><a class="headerlink" href="#vantivsdk.batch.retrieve" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieving Processed Session File from server via sFTP</p>
 <ol class="arabic simple">
 <li>Get xml file string from server and return object</li>
@@ -593,7 +593,7 @@ RFRRequest cannot exist in the same instance with any other transactions.</p>
 <blockquote>
 <div><dl class="function">
 <dt id="vantivsdk.online.request">
-<code class="descclassname">vantivsdk.online.</code><code class="descname">request</code><span class="sig-paren">(</span><em>transaction</em>, <em>conf</em>, <em>return_format='dict'</em>, <em>timeout=30</em><span class="sig-paren">)</span><a class="headerlink" href="#vantivsdk.online.request" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">vantivsdk.online.</code><code class="descname">request</code><span class="sig-paren">(</span><em>transaction</em>, <em>conf</em>, <em>return_format=u'dict'</em>, <em>timeout=30</em><span class="sig-paren">)</span><a class="headerlink" href="#vantivsdk.online.request" title="Permalink to this definition">¶</a></dt>
 <dd><p>Send request to server.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -625,7 +625,7 @@ RFRRequest cannot exist in the same instance with any other transactions.</p>
 <blockquote>
 <div><dl class="class">
 <dt id="vantivsdk.utils.Configuration">
-<em class="property">class </em><code class="descclassname">vantivsdk.utils.</code><code class="descname">Configuration</code><a class="headerlink" href="#vantivsdk.utils.Configuration" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">vantivsdk.utils.</code><code class="descname">Configuration</code><span class="sig-paren">(</span><em>conf_dict={}</em><span class="sig-paren">)</span><a class="headerlink" href="#vantivsdk.utils.Configuration" title="Permalink to this definition">¶</a></dt>
 <dd><p>Setup Configuration variables.</p>
 <dl class="attribute">
 <dt id="Configuration.user">
@@ -864,7 +864,7 @@ RFRRequest cannot exist in the same instance with any other transactions.</p>
 <li><strong>applepay</strong> &#8211; instance of <a class="reference internal" href="#vantivsdk.fields.applepayType" title="vantivsdk.fields.applepayType"><code class="xref py py-class docutils literal"><span class="pre">vantivsdk.fields.applepayType</span></code></a></li>
 <li><a class="reference internal" href="#vantivsdk.fields.billMeLaterRequest" title="vantivsdk.fields.billMeLaterRequest"><strong>billMeLaterRequest</strong></a> &#8211; instance of <a class="reference internal" href="#vantivsdk.fields.billMeLaterRequest" title="vantivsdk.fields.billMeLaterRequest"><code class="xref py py-class docutils literal"><span class="pre">vantivsdk.fields.billMeLaterRequest</span></code></a></li>
 <li><a class="reference internal" href="#vantivsdk.fields.billToAddress" title="vantivsdk.fields.billToAddress"><strong>billToAddress</strong></a> &#8211; instance of <a class="reference internal" href="#vantivsdk.fields.billToAddress" title="vantivsdk.fields.billToAddress"><code class="xref py py-class docutils literal"><span class="pre">vantivsdk.fields.billToAddress</span></code></a></li>
-<li><a class="reference internal" href="#vantivsdk.fields.card" title="vantivsdk.fields.card"><strong>card</strong></a> &#8211; instance of <a class="reference internal" href="#vantivsdk.fields.giftCardCardType" title="vantivsdk.fields.giftCardCardType"><code class="xref py py-class docutils literal"><span class="pre">vantivsdk.fields.giftCardCardType</span></code></a></li>
+<li><a class="reference internal" href="#vantivsdk.fields.card" title="vantivsdk.fields.card"><strong>card</strong></a> &#8211; instance of <a class="reference internal" href="#vantivsdk.fields.cardType" title="vantivsdk.fields.cardType"><code class="xref py py-class docutils literal"><span class="pre">vantivsdk.fields.cardType</span></code></a></li>
 <li><strong>cardholderAuthentication</strong> &#8211; instance of <a class="reference internal" href="#vantivsdk.fields.fraudCheckType" title="vantivsdk.fields.fraudCheckType"><code class="xref py py-class docutils literal"><span class="pre">vantivsdk.fields.fraudCheckType</span></code></a></li>
 <li><a class="reference internal" href="#vantivsdk.fields.customBilling" title="vantivsdk.fields.customBilling"><strong>customBilling</strong></a> &#8211; instance of <a class="reference internal" href="#vantivsdk.fields.customBilling" title="vantivsdk.fields.customBilling"><code class="xref py py-class docutils literal"><span class="pre">vantivsdk.fields.customBilling</span></code></a></li>
 <li><strong>customerId</strong> &#8211; String or Number</li>
@@ -998,7 +998,7 @@ RFRRequest cannot exist in the same instance with any other transactions.</p>
 <li><a class="reference internal" href="#vantivsdk.fields.authInformation" title="vantivsdk.fields.authInformation"><strong>authInformation</strong></a> &#8211; instance of <a class="reference internal" href="#vantivsdk.fields.authInformation" title="vantivsdk.fields.authInformation"><code class="xref py py-class docutils literal"><span class="pre">vantivsdk.fields.authInformation</span></code></a></li>
 <li><a class="reference internal" href="#vantivsdk.fields.billMeLaterRequest" title="vantivsdk.fields.billMeLaterRequest"><strong>billMeLaterRequest</strong></a> &#8211; instance of <a class="reference internal" href="#vantivsdk.fields.billMeLaterRequest" title="vantivsdk.fields.billMeLaterRequest"><code class="xref py py-class docutils literal"><span class="pre">vantivsdk.fields.billMeLaterRequest</span></code></a></li>
 <li><a class="reference internal" href="#vantivsdk.fields.billToAddress" title="vantivsdk.fields.billToAddress"><strong>billToAddress</strong></a> &#8211; instance of <a class="reference internal" href="#vantivsdk.fields.billToAddress" title="vantivsdk.fields.billToAddress"><code class="xref py py-class docutils literal"><span class="pre">vantivsdk.fields.billToAddress</span></code></a></li>
-<li><a class="reference internal" href="#vantivsdk.fields.card" title="vantivsdk.fields.card"><strong>card</strong></a> &#8211; instance of <a class="reference internal" href="#vantivsdk.fields.giftCardCardType" title="vantivsdk.fields.giftCardCardType"><code class="xref py py-class docutils literal"><span class="pre">vantivsdk.fields.giftCardCardType</span></code></a></li>
+<li><a class="reference internal" href="#vantivsdk.fields.card" title="vantivsdk.fields.card"><strong>card</strong></a> &#8211; instance of <a class="reference internal" href="#vantivsdk.fields.cardType" title="vantivsdk.fields.cardType"><code class="xref py py-class docutils literal"><span class="pre">vantivsdk.fields.cardType</span></code></a></li>
 <li><a class="reference internal" href="#vantivsdk.fields.customBilling" title="vantivsdk.fields.customBilling"><strong>customBilling</strong></a> &#8211; instance of <a class="reference internal" href="#vantivsdk.fields.customBilling" title="vantivsdk.fields.customBilling"><code class="xref py py-class docutils literal"><span class="pre">vantivsdk.fields.customBilling</span></code></a></li>
 <li><strong>customerId</strong> &#8211; String or Number</li>
 <li><strong>debtRepayment</strong> &#8211; String or Number</li>
@@ -1074,7 +1074,7 @@ RFRRequest cannot exist in the same instance with any other transactions.</p>
 <li><strong>amount</strong> &#8211; String or Number</li>
 <li><a class="reference internal" href="#vantivsdk.fields.billMeLaterRequest" title="vantivsdk.fields.billMeLaterRequest"><strong>billMeLaterRequest</strong></a> &#8211; instance of <a class="reference internal" href="#vantivsdk.fields.billMeLaterRequest" title="vantivsdk.fields.billMeLaterRequest"><code class="xref py py-class docutils literal"><span class="pre">vantivsdk.fields.billMeLaterRequest</span></code></a></li>
 <li><a class="reference internal" href="#vantivsdk.fields.billToAddress" title="vantivsdk.fields.billToAddress"><strong>billToAddress</strong></a> &#8211; instance of <a class="reference internal" href="#vantivsdk.fields.billToAddress" title="vantivsdk.fields.billToAddress"><code class="xref py py-class docutils literal"><span class="pre">vantivsdk.fields.billToAddress</span></code></a></li>
-<li><a class="reference internal" href="#vantivsdk.fields.card" title="vantivsdk.fields.card"><strong>card</strong></a> &#8211; instance of <a class="reference internal" href="#vantivsdk.fields.giftCardCardType" title="vantivsdk.fields.giftCardCardType"><code class="xref py py-class docutils literal"><span class="pre">vantivsdk.fields.giftCardCardType</span></code></a></li>
+<li><a class="reference internal" href="#vantivsdk.fields.card" title="vantivsdk.fields.card"><strong>card</strong></a> &#8211; instance of <a class="reference internal" href="#vantivsdk.fields.cardType" title="vantivsdk.fields.cardType"><code class="xref py py-class docutils literal"><span class="pre">vantivsdk.fields.cardType</span></code></a></li>
 <li><a class="reference internal" href="#vantivsdk.fields.customBilling" title="vantivsdk.fields.customBilling"><strong>customBilling</strong></a> &#8211; instance of <a class="reference internal" href="#vantivsdk.fields.customBilling" title="vantivsdk.fields.customBilling"><code class="xref py py-class docutils literal"><span class="pre">vantivsdk.fields.customBilling</span></code></a></li>
 <li><strong>customerId</strong> &#8211; String or Number</li>
 <li><a class="reference internal" href="#vantivsdk.fields.enhancedData" title="vantivsdk.fields.enhancedData"><strong>enhancedData</strong></a> &#8211; instance of <a class="reference internal" href="#vantivsdk.fields.enhancedData" title="vantivsdk.fields.enhancedData"><code class="xref py py-class docutils literal"><span class="pre">vantivsdk.fields.enhancedData</span></code></a></li>
@@ -1407,7 +1407,7 @@ RFRRequest cannot exist in the same instance with any other transactions.</p>
 <li><a class="reference internal" href="#vantivsdk.fields.amexAggregatorData" title="vantivsdk.fields.amexAggregatorData"><strong>amexAggregatorData</strong></a> &#8211; instance of <a class="reference internal" href="#vantivsdk.fields.amexAggregatorData" title="vantivsdk.fields.amexAggregatorData"><code class="xref py py-class docutils literal"><span class="pre">vantivsdk.fields.amexAggregatorData</span></code></a></li>
 <li><strong>amount</strong> &#8211; String or Number</li>
 <li><a class="reference internal" href="#vantivsdk.fields.billToAddress" title="vantivsdk.fields.billToAddress"><strong>billToAddress</strong></a> &#8211; instance of <a class="reference internal" href="#vantivsdk.fields.billToAddress" title="vantivsdk.fields.billToAddress"><code class="xref py py-class docutils literal"><span class="pre">vantivsdk.fields.billToAddress</span></code></a></li>
-<li><a class="reference internal" href="#vantivsdk.fields.card" title="vantivsdk.fields.card"><strong>card</strong></a> &#8211; instance of <a class="reference internal" href="#vantivsdk.fields.giftCardCardType" title="vantivsdk.fields.giftCardCardType"><code class="xref py py-class docutils literal"><span class="pre">vantivsdk.fields.giftCardCardType</span></code></a></li>
+<li><a class="reference internal" href="#vantivsdk.fields.card" title="vantivsdk.fields.card"><strong>card</strong></a> &#8211; instance of <a class="reference internal" href="#vantivsdk.fields.cardType" title="vantivsdk.fields.cardType"><code class="xref py py-class docutils literal"><span class="pre">vantivsdk.fields.cardType</span></code></a></li>
 <li><a class="reference internal" href="#vantivsdk.fields.customBilling" title="vantivsdk.fields.customBilling"><strong>customBilling</strong></a> &#8211; instance of <a class="reference internal" href="#vantivsdk.fields.customBilling" title="vantivsdk.fields.customBilling"><code class="xref py py-class docutils literal"><span class="pre">vantivsdk.fields.customBilling</span></code></a></li>
 <li><strong>customerId</strong> &#8211; String or Number</li>
 <li><strong>debtRepayment</strong> &#8211; String or Number</li>
@@ -1891,7 +1891,7 @@ RFRRequest cannot exist in the same instance with any other transactions.</p>
 <li><strong>applepay</strong> &#8211; instance of <a class="reference internal" href="#vantivsdk.fields.applepayType" title="vantivsdk.fields.applepayType"><code class="xref py py-class docutils literal"><span class="pre">vantivsdk.fields.applepayType</span></code></a></li>
 <li><a class="reference internal" href="#vantivsdk.fields.billMeLaterRequest" title="vantivsdk.fields.billMeLaterRequest"><strong>billMeLaterRequest</strong></a> &#8211; instance of <a class="reference internal" href="#vantivsdk.fields.billMeLaterRequest" title="vantivsdk.fields.billMeLaterRequest"><code class="xref py py-class docutils literal"><span class="pre">vantivsdk.fields.billMeLaterRequest</span></code></a></li>
 <li><a class="reference internal" href="#vantivsdk.fields.billToAddress" title="vantivsdk.fields.billToAddress"><strong>billToAddress</strong></a> &#8211; instance of <a class="reference internal" href="#vantivsdk.fields.billToAddress" title="vantivsdk.fields.billToAddress"><code class="xref py py-class docutils literal"><span class="pre">vantivsdk.fields.billToAddress</span></code></a></li>
-<li><a class="reference internal" href="#vantivsdk.fields.card" title="vantivsdk.fields.card"><strong>card</strong></a> &#8211; instance of <a class="reference internal" href="#vantivsdk.fields.giftCardCardType" title="vantivsdk.fields.giftCardCardType"><code class="xref py py-class docutils literal"><span class="pre">vantivsdk.fields.giftCardCardType</span></code></a></li>
+<li><a class="reference internal" href="#vantivsdk.fields.card" title="vantivsdk.fields.card"><strong>card</strong></a> &#8211; instance of <a class="reference internal" href="#vantivsdk.fields.cardType" title="vantivsdk.fields.cardType"><code class="xref py py-class docutils literal"><span class="pre">vantivsdk.fields.cardType</span></code></a></li>
 <li><strong>cardholderAuthentication</strong> &#8211; instance of <a class="reference internal" href="#vantivsdk.fields.fraudCheckType" title="vantivsdk.fields.fraudCheckType"><code class="xref py py-class docutils literal"><span class="pre">vantivsdk.fields.fraudCheckType</span></code></a></li>
 <li><a class="reference internal" href="#vantivsdk.fields.customBilling" title="vantivsdk.fields.customBilling"><strong>customBilling</strong></a> &#8211; instance of <a class="reference internal" href="#vantivsdk.fields.customBilling" title="vantivsdk.fields.customBilling"><code class="xref py py-class docutils literal"><span class="pre">vantivsdk.fields.customBilling</span></code></a></li>
 <li><strong>customerId</strong> &#8211; String or Number</li>
@@ -2141,7 +2141,7 @@ RFRRequest cannot exist in the same instance with any other transactions.</p>
 <tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><ul class="first last simple">
 <li><a class="reference internal" href="#vantivsdk.fields.billToAddress" title="vantivsdk.fields.billToAddress"><strong>billToAddress</strong></a> &#8211; instance of <a class="reference internal" href="#vantivsdk.fields.billToAddress" title="vantivsdk.fields.billToAddress"><code class="xref py py-class docutils literal"><span class="pre">vantivsdk.fields.billToAddress</span></code></a></li>
 <li><strong>billingDate</strong> &#8211; String or Number</li>
-<li><a class="reference internal" href="#vantivsdk.fields.card" title="vantivsdk.fields.card"><strong>card</strong></a> &#8211; instance of <a class="reference internal" href="#vantivsdk.fields.giftCardCardType" title="vantivsdk.fields.giftCardCardType"><code class="xref py py-class docutils literal"><span class="pre">vantivsdk.fields.giftCardCardType</span></code></a></li>
+<li><a class="reference internal" href="#vantivsdk.fields.card" title="vantivsdk.fields.card"><strong>card</strong></a> &#8211; instance of <a class="reference internal" href="#vantivsdk.fields.cardType" title="vantivsdk.fields.cardType"><code class="xref py py-class docutils literal"><span class="pre">vantivsdk.fields.cardType</span></code></a></li>
 <li><strong>createAddOn</strong> &#8211; instance of <a class="reference internal" href="#vantivsdk.fields.createAddOnType" title="vantivsdk.fields.createAddOnType"><code class="xref py py-class docutils literal"><span class="pre">vantivsdk.fields.createAddOnType</span></code></a></li>
 <li><strong>createDiscount</strong> &#8211; instance of <a class="reference internal" href="#vantivsdk.fields.createDiscountType" title="vantivsdk.fields.createDiscountType"><code class="xref py py-class docutils literal"><span class="pre">vantivsdk.fields.createDiscountType</span></code></a></li>
 <li><strong>deleteAddOn</strong> &#8211; instance of <a class="reference internal" href="#vantivsdk.fields.deleteAddOnType" title="vantivsdk.fields.deleteAddOnType"><code class="xref py py-class docutils literal"><span class="pre">vantivsdk.fields.deleteAddOnType</span></code></a></li>
@@ -2531,6 +2531,32 @@ RFRRequest cannot exist in the same instance with any other transactions.</p>
 <li><strong>cardValidationNum</strong> &#8211; String or Number</li>
 <li><strong>expDate</strong> &#8211; String or Number</li>
 <li><strong>litleToken</strong> &#8211; String or Number</li>
+<li><strong>type</strong> &#8211; String or Number</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div></blockquote>
+</div>
+<div class="section" id="cardtype">
+<h3>cardType<a class="headerlink" href="#cardtype" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><dl class="class">
+<dt id="vantivsdk.fields.cardType">
+<em class="property">class </em><code class="descclassname">vantivsdk.fields.</code><code class="descname">cardType</code><a class="headerlink" href="#vantivsdk.fields.cardType" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><ul class="first last simple">
+<li><strong>cardValidationNum</strong> &#8211; String or Number</li>
+<li><strong>expDate</strong> &#8211; String or Number</li>
+<li><strong>number</strong> &#8211; String or Number</li>
+<li><strong>pin</strong> &#8211; String or Number</li>
+<li><strong>track</strong> &#8211; String or Number</li>
 <li><strong>type</strong> &#8211; String or Number</li>
 </ul>
 </td>
@@ -3136,7 +3162,7 @@ RFRRequest cannot exist in the same instance with any other transactions.</p>
 <tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><ul class="first last simple">
 <li><strong>payerEmail</strong> &#8211; String or Number</li>
 <li><strong>payerId</strong> &#8211; String or Number</li>
-<li><a class="reference internal" href="#vantivsdk.fields.token" title="vantivsdk.fields.token"><strong>token</strong></a> &#8211; instance of <a class="reference internal" href="#vantivsdk.fields.cardTokenType" title="vantivsdk.fields.cardTokenType"><code class="xref py py-class docutils literal"><span class="pre">vantivsdk.fields.cardTokenType</span></code></a></li>
+<li><a class="reference internal" href="#vantivsdk.fields.token" title="vantivsdk.fields.token"><strong>token</strong></a> &#8211; String or Number</li>
 <li><strong>transactionId</strong> &#8211; String or Number</li>
 </ul>
 </td>
@@ -3546,6 +3572,7 @@ RFRRequest cannot exist in the same instance with any other transactions.</p>
 <li><a class="reference internal" href="#card">card</a></li>
 <li><a class="reference internal" href="#cardpaypagetype">cardPaypageType</a></li>
 <li><a class="reference internal" href="#cardtokentype">cardTokenType</a></li>
+<li><a class="reference internal" href="#cardtype">cardType</a></li>
 <li><a class="reference internal" href="#createaddontype">createAddOnType</a></li>
 <li><a class="reference internal" href="#creatediscounttype">createDiscountType</a></li>
 <li><a class="reference internal" href="#custombilling">customBilling</a></li>

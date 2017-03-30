@@ -283,7 +283,7 @@ authorization
         :var applepay: instance of :py:class:`vantivsdk.fields.applepayType`
         :var billMeLaterRequest: instance of :py:class:`vantivsdk.fields.billMeLaterRequest`
         :var billToAddress: instance of :py:class:`vantivsdk.fields.billToAddress`
-        :var card: instance of :py:class:`vantivsdk.fields.giftCardCardType`
+        :var card: instance of :py:class:`vantivsdk.fields.cardType`
         :var cardholderAuthentication: instance of :py:class:`vantivsdk.fields.fraudCheckType`
         :var customBilling: instance of :py:class:`vantivsdk.fields.customBilling`
         :var customerId: String or Number
@@ -360,7 +360,7 @@ captureGivenAuth
         :var authInformation: instance of :py:class:`vantivsdk.fields.authInformation`
         :var billMeLaterRequest: instance of :py:class:`vantivsdk.fields.billMeLaterRequest`
         :var billToAddress: instance of :py:class:`vantivsdk.fields.billToAddress`
-        :var card: instance of :py:class:`vantivsdk.fields.giftCardCardType`
+        :var card: instance of :py:class:`vantivsdk.fields.cardType`
         :var customBilling: instance of :py:class:`vantivsdk.fields.customBilling`
         :var customerId: String or Number
         :var debtRepayment: String or Number
@@ -406,7 +406,7 @@ credit
         :var amount: String or Number
         :var billMeLaterRequest: instance of :py:class:`vantivsdk.fields.billMeLaterRequest`
         :var billToAddress: instance of :py:class:`vantivsdk.fields.billToAddress`
-        :var card: instance of :py:class:`vantivsdk.fields.giftCardCardType`
+        :var card: instance of :py:class:`vantivsdk.fields.cardType`
         :var customBilling: instance of :py:class:`vantivsdk.fields.customBilling`
         :var customerId: String or Number
         :var enhancedData: instance of :py:class:`vantivsdk.fields.enhancedData`
@@ -574,7 +574,7 @@ forceCapture
         :var amexAggregatorData: instance of :py:class:`vantivsdk.fields.amexAggregatorData`
         :var amount: String or Number
         :var billToAddress: instance of :py:class:`vantivsdk.fields.billToAddress`
-        :var card: instance of :py:class:`vantivsdk.fields.giftCardCardType`
+        :var card: instance of :py:class:`vantivsdk.fields.cardType`
         :var customBilling: instance of :py:class:`vantivsdk.fields.customBilling`
         :var customerId: String or Number
         :var debtRepayment: String or Number
@@ -803,7 +803,7 @@ sale
         :var applepay: instance of :py:class:`vantivsdk.fields.applepayType`
         :var billMeLaterRequest: instance of :py:class:`vantivsdk.fields.billMeLaterRequest`
         :var billToAddress: instance of :py:class:`vantivsdk.fields.billToAddress`
-        :var card: instance of :py:class:`vantivsdk.fields.giftCardCardType`
+        :var card: instance of :py:class:`vantivsdk.fields.cardType`
         :var cardholderAuthentication: instance of :py:class:`vantivsdk.fields.fraudCheckType`
         :var customBilling: instance of :py:class:`vantivsdk.fields.customBilling`
         :var customerId: String or Number
@@ -933,7 +933,7 @@ updateSubscription
 
         :var billToAddress: instance of :py:class:`vantivsdk.fields.billToAddress`
         :var billingDate: String or Number
-        :var card: instance of :py:class:`vantivsdk.fields.giftCardCardType`
+        :var card: instance of :py:class:`vantivsdk.fields.cardType`
         :var createAddOn: instance of :py:class:`vantivsdk.fields.createAddOnType`
         :var createDiscount: instance of :py:class:`vantivsdk.fields.createDiscountType`
         :var deleteAddOn: instance of :py:class:`vantivsdk.fields.deleteAddOnType`
@@ -1107,6 +1107,17 @@ cardTokenType
         :var cardValidationNum: String or Number
         :var expDate: String or Number
         :var litleToken: String or Number
+        :var type: String or Number
+
+cardType
+........
+    .. py:class:: vantivsdk.fields.cardType
+
+        :var cardValidationNum: String or Number
+        :var expDate: String or Number
+        :var number: String or Number
+        :var pin: String or Number
+        :var track: String or Number
         :var type: String or Number
 
 createAddOnType
@@ -1349,7 +1360,7 @@ payPal
 
         :var payerEmail: String or Number
         :var payerId: String or Number
-        :var token: instance of :py:class:`vantivsdk.fields.cardTokenType`
+        :var token: String or Number
         :var transactionId: String or Number
 
 pos
