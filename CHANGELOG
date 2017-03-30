@@ -1,4 +1,5 @@
 = Vantiv eCommerce Python SDKv2
 
 ==Version 11.0.0
-* Full function for xml v11.0
+* Feature: Full functions for XML v11.0
+* Feature: Support transactions presented using dict
