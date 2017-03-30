@@ -103,7 +103,7 @@ def _obj_map_attributes(obj, obj_name, obj_attrs_type_dict, obj_attrs_values_dic
             elif attr_type in dictmap.used_type_dict:
                 # when attr_type is in used_type_dict
                 _obj_tmp = getattr(fields, attr_type)()
-                _obj_tmp = _obj_map_attributes(_obj_tmp, attr_name, dictmap.used_type_dict[attr_name], attr_value)
+                _obj_tmp = _obj_map_attributes(_obj_tmp, attr_name, dictmap.used_type_dict[attr_type], attr_value)
                 setattr(obj, attr_name, _obj_tmp)
             else:
                 # obj didn't have this attribute
