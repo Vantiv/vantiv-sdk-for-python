@@ -30,7 +30,7 @@ import unittest
 package_root = os.path.dirname(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
 sys.path.insert(0, package_root)
 
-package_root = os.path.abspath(os.path.dirname(__file__))
+package_root = os.path.dirname(os.path.abspath(os.path.dirname(__file__)))
 sys.path.insert(0, package_root)
 
 import certification_test_conf
@@ -212,9 +212,9 @@ class TestCertAuthsDict(unittest.TestCase):
                     'cardValidationNum': '261',
                     'type': 'MC',
                 },
-                # 'cardholderAuthentication':{
-                #     'authenticationValue': 'BwABBJQ1AgAAAAAgJDUCAAAAAAA=',
-                # }
+                'cardholderAuthentication':{
+                    'authenticationValue': 'BwABBJQ1AgAAAAAgJDUCAAAAAAA=',
+                }
             }
         }
 
@@ -282,9 +282,9 @@ class TestCertAuthsDict(unittest.TestCase):
                     'cardValidationNum': '261',
                     'type': 'MC',
                 },
-                # 'cardholderAuthentication':{
-                #     'authenticationValue': 'BwABBJQ1AgAAAAAgJDUCAAAAAAA=',
-                # }
+                'cardholderAuthentication':{
+                    'authenticationValue': 'BwABBJQ1AgAAAAAgJDUCAAAAAAA=',
+                }
             }
         }
 
@@ -318,9 +318,9 @@ class TestCertAuthsDict(unittest.TestCase):
                     'cardValidationNum': '261',
                     'type': 'MC',
                 },
-                # 'cardholderAuthentication':{
-                #     'authenticationValue': 'BwABBJQ1AgAAAAAgJDUCAAAAAAA=',
-                # }
+                'cardholderAuthentication':{
+                    'authenticationValue': 'BwABBJQ1AgAAAAAgJDUCAAAAAAA=',
+                }
             }
         }
 
@@ -544,11 +544,10 @@ class TestCertAuthsDict(unittest.TestCase):
         }
 
         response = online.request(txn_dict, conf)
-        # TODO Processing Network Unavailable
-        # self.assertEquals('000', response['authorizationResponse']['response'])
-        # self.assertEquals('Approved', response['authorizationResponse']['message'])
-        # self.assertEquals('44444', response['authorizationResponse']['authCode'])
-        # self.assertEquals('13', response['authorizationResponse']['fraudResult']['avsResult'])
+        self.assertEquals('000', response['authorizationResponse']['response'])
+        self.assertEquals('Approved', response['authorizationResponse']['message'])
+        self.assertEquals('44444', response['authorizationResponse']['authCode'])
+        self.assertEquals('13', response['authorizationResponse']['fraudResult']['avsResult'])
 
         # orderId *A
         txn_dict = {
@@ -608,11 +607,10 @@ class TestCertAuthsDict(unittest.TestCase):
         }
 
         response = online.request(txn_dict, conf)
-        # TODO Processing Network Unavailable
-        # self.assertEquals('000', response['authorizationResponse']['response'])
-        # self.assertEquals('Approved', response['authorizationResponse']['message'])
-        # self.assertEquals('44444', response['authorizationResponse']['authCode'])
-        # self.assertEquals('13', response['authorizationResponse']['fraudResult']['avsResult'])
+        self.assertEquals('000', response['authorizationResponse']['response'])
+        self.assertEquals('Approved', response['authorizationResponse']['message'])
+        self.assertEquals('44444', response['authorizationResponse']['authCode'])
+        self.assertEquals('13', response['authorizationResponse']['fraudResult']['avsResult'])
 
     def test_table_2_1_4_sale(self):
         # orderId *
@@ -639,11 +637,10 @@ class TestCertAuthsDict(unittest.TestCase):
         }
 
         response = online.request(txn_dict, conf)
-        # TODO Processing Network Unavailable
-        # self.assertEquals('000', response['saleResponse']['response'])
-        # self.assertEquals('Approved', response['saleResponse']['message'])
-        # self.assertEquals('44444', response['saleResponse']['authCode'])
-        # self.assertEquals('13', response['saleResponse']['fraudResult']['avsResult'])
+        self.assertEquals('000', response['saleResponse']['response'])
+        self.assertEquals('Approved', response['saleResponse']['message'])
+        self.assertEquals('44444', response['saleResponse']['authCode'])
+        self.assertEquals('13', response['saleResponse']['fraudResult']['avsResult'])
 
         # orderId *A
         txn_dict = {
@@ -674,10 +671,9 @@ class TestCertAuthsDict(unittest.TestCase):
                 'amount': 10010,
                 'orderSource': 'ecommerce',
                 'id': 'thisisid',
-                # TODO 3-D Secure transaction not supported by merchant
-                # 'cardholderAuthentication': {
-                #     'authenticationValue': 'BwABBJQ1AgAAAAAgJDUCAAAAAAA=',
-                # },
+                'cardholderAuthentication': {
+                    'authenticationValue': 'BwABBJQ1AgAAAAAgJDUCAAAAAAA=',
+                },
                 'card': {
                     'number': '4100200300011001',
                     'expDate': '0521',
@@ -734,10 +730,9 @@ class TestCertAuthsDict(unittest.TestCase):
                 'amount': '000',
                 'orderSource': 'ecommerce',
                 'id': 'thisisid',
-                # TODO 3-D Secure transaction not supported by merchant
-                # 'cardholderAuthentication': {
-                #     'authenticationValue': 'BwABBJQ1AgAAAAAgJDUCAAAAAAA=',
-                # },
+                'cardholderAuthentication': {
+                    'authenticationValue': 'BwABBJQ1AgAAAAAgJDUCAAAAAAA=',
+                },
                 'card': {
                     'number': '4100200300011001',
                     'expDate': '0521',
@@ -761,10 +756,9 @@ class TestCertAuthsDict(unittest.TestCase):
                 'amount': 10010,
                 'orderSource': 'ecommerce',
                 'id': 'thisisid',
-                # TODO 3-D Secure transaction not supported by merchant
-                # 'cardholderAuthentication': {
-                #     'authenticationValue': 'BwABBJQ1AgAAAAAgJDUCAAAAAAA=',
-                # },
+                'cardholderAuthentication': {
+                    'authenticationValue': 'BwABBJQ1AgAAAAAgJDUCAAAAAAA=',
+                },
                 'card': {
                     'number': '4100200300011001',
                     'expDate': '0521',
@@ -1078,11 +1072,10 @@ class TestCertAuthsDict(unittest.TestCase):
         }
 
         response = online.request(txn_dict, conf)
-        # TODO Processing Network Unavailable
-        # self.assertEquals('303', response['authorizationResponse']['response'])
-        # self.assertEquals('Pick Up Card', response['authorizationResponse']['message'])
-        # self.assertEquals('34', response['authorizationResponse']['fraudResult']['avsResult'])
-        # self.assertEquals('P', response['authorizationResponse']['fraudResult']['cardValidationResult'])
+        self.assertEquals('303', response['authorizationResponse']['response'])
+        self.assertEquals('Pick Up Card', response['authorizationResponse']['message'])
+        self.assertEquals('34', response['authorizationResponse']['fraudResult']['avsResult'])
+        self.assertEquals('P', response['authorizationResponse']['fraudResult']['cardValidationResult'])
 
     def test_table_2_1_9_avs(self):
         txn_dict = {
@@ -1109,11 +1102,10 @@ class TestCertAuthsDict(unittest.TestCase):
         }
 
         response = online.request(txn_dict, conf)
-        # TODO Processing Network Unavailable
-        # self.assertEquals('303', response['authorizationResponse']['response'])
-        # self.assertEquals('Pick Up Card', response['authorizationResponse']['message'])
-        # self.assertEquals('34', response['authorizationResponse']['fraudResult']['avsResult'])
-        # self.assertEquals('P', response['authorizationResponse']['fraudResult']['cardValidationResult'])
+        self.assertEquals('303', response['authorizationResponse']['response'])
+        self.assertEquals('Pick Up Card', response['authorizationResponse']['message'])
+        self.assertEquals('34', response['authorizationResponse']['fraudResult']['avsResult'])
+        self.assertEquals('P', response['authorizationResponse']['fraudResult']['cardValidationResult'])
 
     def test_table_2_1_9_sale(self):
         txn_dict = {
@@ -1140,11 +1132,10 @@ class TestCertAuthsDict(unittest.TestCase):
         }
 
         response = online.request(txn_dict, conf)
-        # TODO Processing Network Unavailable
-        # self.assertEquals('303', response['saleResponse']['response'])
-        # self.assertEquals('Pick Up Card', response['saleResponse']['message'])
-        # self.assertEquals('34', response['saleResponse']['fraudResult']['avsResult'])
-        # self.assertEquals('P', response['saleResponse']['fraudResult']['cardValidationResult'])
+        self.assertEquals('303', response['saleResponse']['response'])
+        self.assertEquals('Pick Up Card', response['saleResponse']['message'])
+        self.assertEquals('34', response['saleResponse']['fraudResult']['avsResult'])
+        self.assertEquals('P', response['saleResponse']['fraudResult']['cardValidationResult'])
 
     def test_table_2_1_10_auth(self):
         txn_dict = {
@@ -1204,10 +1195,9 @@ class TestCertAuthsDict(unittest.TestCase):
             }
         }
         response = online.request(txn_dict, conf)
-        # TODO Processing Network Unavailable
-        # self.assertEquals('010', response['authorizationResponse']['response'])
-        # self.assertEquals('Partially Approved', response['authorizationResponse']['message'])
-        # self.assertEquals('40000', response['authorizationResponse']['approvedAmount'])
+        self.assertEquals('010', response['authorizationResponse']['response'])
+        self.assertEquals('Partially Approved', response['authorizationResponse']['message'])
+        self.assertEquals('40000', response['authorizationResponse']['approvedAmount'])
 
     def test_table_2_1_13_auth(self):
         txn_dict = {

@@ -31,7 +31,7 @@ sys.path.insert(0, package_root)
 
 from vantivsdk import *
 
-package_root = os.path.abspath(os.path.dirname(__file__))
+package_root = os.path.dirname(os.path.abspath(os.path.dirname(__file__)))
 sys.path.insert(0, package_root)
 
 import certification_test_conf

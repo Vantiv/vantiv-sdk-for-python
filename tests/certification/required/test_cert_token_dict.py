@@ -31,7 +31,7 @@ sys.path.insert(0, package_root)
 
 from vantivsdk import *
 
-package_root = os.path.abspath(os.path.dirname(__file__))
+package_root = os.path.dirname(os.path.abspath(os.path.dirname(__file__)))
 sys.path.insert(0, package_root)
 
 import certification_test_conf
@@ -50,10 +50,10 @@ class TestCertTokenDict(unittest.TestCase):
             }
         }
         response = online.request(txn_dict, conf)
-        # TODO Merchant is not authorized for tokens
-        # self.assertEquals('0123', response['registerTokenResponse']['litleToken'][-4:])
-        # self.assertEquals('445711', response['registerTokenResponse']['bin'])
-        # self.assertEquals('VI', response['registerTokenResponse']['type'])
+        self.assertEquals('0123', response['registerTokenResponse']['litleToken'][-4:])
+        self.assertEquals('445711', response['registerTokenResponse']['bin'])
+        self.assertEquals('VI', response['registerTokenResponse']['type'])
+        # TODO run twice get 802
         # self.assertEquals('801', response['registerTokenResponse']['response'])
         # self.assertEquals('Account number was successfully registered', response['registerTokenResponse']['message'])
 
@@ -79,12 +79,11 @@ class TestCertTokenDict(unittest.TestCase):
             }
         }
         response = online.request(txn_dict, conf)
-        # TODO Merchant is not authorized for tokens
-        # self.assertEquals('0123', response['registerTokenResponse']['litleToken'][-4:])
-        # self.assertEquals('445711', response['registerTokenResponse']['bin'])
-        # self.assertEquals('VI', response['registerTokenResponse']['type'])
-        # self.assertEquals('802', response['registerTokenResponse']['response'])
-        # self.assertEquals('Account number was previously registered', response['registerTokenResponse']['message'])
+        self.assertEquals('0123', response['registerTokenResponse']['litleToken'][-4:])
+        self.assertEquals('445711', response['registerTokenResponse']['bin'])
+        self.assertEquals('VI', response['registerTokenResponse']['type'])
+        self.assertEquals('802', response['registerTokenResponse']['response'])
+        self.assertEquals('Account number was previously registered', response['registerTokenResponse']['message'])
 
     def test_table_2_7_53(self):
         txn_dict = {
@@ -98,12 +97,12 @@ class TestCertTokenDict(unittest.TestCase):
             }
         }
         response = online.request(txn_dict, conf)
-        # TODO Merchant is not authorized for tokens
-        # self.assertIsNotNone(response['registerTokenResponse']['litleToken'])
-        # self.assertEquals('EC', response['registerTokenResponse']['type'])
-        # self.assertEquals('998', response['registerTokenResponse']['eCheckAccountSuffix'])
+        self.assertIsNotNone(response['registerTokenResponse']['litleToken'])
+        self.assertEquals('EC', response['registerTokenResponse']['type'])
+        self.assertEquals('998', response['registerTokenResponse']['eCheckAccountSuffix'])
+        # TODO run twice get 802
         # self.assertEquals('801', response['registerTokenResponse']['response'])
-        # self.assertEquals('Account number was previously registered', response['registerTokenResponse']['message'])
+        # self.assertEquals('Account number was successfully registered', response['registerTokenResponse']['message'])
 
     def test_table_2_7_54(self):
         txn_dict = {
@@ -138,13 +137,13 @@ class TestCertTokenDict(unittest.TestCase):
         response = online.request(txn_dict, conf)
         self.assertEquals('000', response['authorizationResponse']['response'])
         self.assertEquals('Approved', response['authorizationResponse']['message'])
-        # TODO no tokenResponse
-        # self.assertEquals('0196', response['authorizationResponse']['tokenResponse']['litleToken'][-4:])
+        self.assertEquals('0196', response['authorizationResponse']['tokenResponse']['litleToken'][-4:])
+        # TODO run twice get 802
         # self.assertEquals('801', response['authorizationResponse']['tokenResponse']['tokenResponseCode'])
         # self.assertEquals('Account number was successfully registered',
         #                   response['authorizationResponse']['tokenResponse']['tokenMessage'])
-        # self.assertEquals('MC', response['authorizationResponse']['tokenResponse']['type'])
-        # self.assertEquals('543510', response['authorizationResponse']['tokenResponse']['bin'])
+        self.assertEquals('MC', response['authorizationResponse']['tokenResponse']['type'])
+        self.assertEquals('543510', response['authorizationResponse']['tokenResponse']['bin'])
 
     def test_table_2_8_56(self):
         txn_dict = {
@@ -184,32 +183,31 @@ class TestCertTokenDict(unittest.TestCase):
         response = online.request(txn_dict, conf)
         self.assertEquals('000', response['authorizationResponse']['response'])
         self.assertEquals('Approved', response['authorizationResponse']['message'])
-        # TODO no tokenResponse
-        # self.assertEquals('0196', response['authorizationResponse']['tokenResponse']['litleToken'][-4:])
-        # self.assertEquals('802', response['authorizationResponse']['tokenResponse']['tokenResponseCode'])
-        # self.assertEquals('Account number was previously registered',
-        #                   response['authorizationResponse']['tokenResponse']['tokenMessage'])
-        # self.assertEquals('MC', response['authorizationResponse']['tokenResponse']['type'])
-        # self.assertEquals('543510', response['authorizationResponse']['tokenResponse']['bin'])
-        #
-        # # orderId 58
-        # txn_dict = {
-        #     'authorization': {
-        #         'orderId': '58',
-        #         'amount': 15000,
-        #         'orderSource': 'ecommerce',
-        #         'id': 'thisisid',
-        #         'token': {
-        #             'litleToken': response['authorizationResponse']['tokenResponse']['litleToken'],
-        #             'expDate': '1121',
-        #             'cardValidationNum': '987',
-        #         }
-        #     }
-        # }
-        #
-        # response = online.request(txn_dict, conf)
-        # self.assertEquals('000', response['authorizationResponse']['response'])
-        # self.assertEquals('Approved', response['authorizationResponse']['message'])
+        self.assertEquals('0196', response['authorizationResponse']['tokenResponse']['litleToken'][-4:])
+        self.assertEquals('802', response['authorizationResponse']['tokenResponse']['tokenResponseCode'])
+        self.assertEquals('Account number was previously registered',
+                          response['authorizationResponse']['tokenResponse']['tokenMessage'])
+        self.assertEquals('MC', response['authorizationResponse']['tokenResponse']['type'])
+        self.assertEquals('543510', response['authorizationResponse']['tokenResponse']['bin'])
+
+        # orderId 58
+        txn_dict = {
+            'authorization': {
+                'orderId': '58',
+                'amount': 15000,
+                'orderSource': 'ecommerce',
+                'id': 'thisisid',
+                'token': {
+                    'litleToken': response['authorizationResponse']['tokenResponse']['litleToken'],
+                    'expDate': '1121',
+                    'cardValidationNum': '987',
+                }
+            }
+        }
+
+        response = online.request(txn_dict, conf)
+        self.assertEquals('000', response['authorizationResponse']['response'])
+        self.assertEquals('Approved', response['authorizationResponse']['message'])
 
     def test_table_2_8_59(self):
         txn_dict = {
@@ -226,9 +224,8 @@ class TestCertTokenDict(unittest.TestCase):
         }
 
         response = online.request(txn_dict, conf)
-        # TODO Merchant is not authorized for tokens
-        # self.assertEquals('822', response['authorizationResponse']['response'])
-        # self.assertEquals('Token was not found', response['authorizationResponse']['message'])
+        self.assertEquals('822', response['authorizationResponse']['response'])
+        self.assertEquals('Token was not found', response['authorizationResponse']['message'])
 
     def test_table_2_8_60(self):
         txn_dict = {

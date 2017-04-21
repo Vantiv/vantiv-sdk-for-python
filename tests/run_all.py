@@ -26,5 +26,5 @@ from __future__ import absolute_import
 
 import run_test_utils
 
-tests_dir = ['certification', 'functional']
+tests_dir = ['certification/required', 'functional']
 run_test_utils.run_tests(tests_dir)

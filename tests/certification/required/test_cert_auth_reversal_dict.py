@@ -30,7 +30,7 @@ sys.path.insert(0, package_root)
 
 from vantivsdk import *
 
-package_root = os.path.abspath(os.path.dirname(__file__))
+package_root = os.path.dirname(os.path.abspath(os.path.dirname(__file__)))
 sys.path.insert(0, package_root)
 
 import certification_test_conf
@@ -115,10 +115,9 @@ class TestCertEcheckDict(unittest.TestCase):
                     'cardValidationNum': '261',
                     'type': 'MC',
                 },
-                # TODO 3-D Secure transaction not supported by merchant
-                # 'cardholderAuthentication':{
-                #     'authenticationValue': 'BwABBJQ1AgAAAAAgJDUCAAAAAAA=',
-                # }
+                'cardholderAuthentication':{
+                    'authenticationValue': 'BwABBJQ1AgAAAAAgJDUCAAAAAAA=',
+                }
             }
         }
 
@@ -207,11 +206,10 @@ class TestCertEcheckDict(unittest.TestCase):
         }
 
         response = online.request(txn_dict, conf)
-        # TODO Processing Network Unavailable
-        # self.assertEquals('000', response['authorizationResponse']['response'])
-        # self.assertEquals('Approved', response['authorizationResponse']['message'])
-        # self.assertEquals('44444 ', response['authorizationResponse']['authCode'])
-        # self.assertEquals('13', response['authorizationResponse']['fraudResult']['avsResult'])
+        self.assertEquals('000', response['authorizationResponse']['response'])
+        self.assertEquals('Approved', response['authorizationResponse']['message'])
+        self.assertEquals('44444', response['authorizationResponse']['authCode'])
+        self.assertEquals('13', response['authorizationResponse']['fraudResult']['avsResult'])
 
         # orderId *A
         txn_dict = {
@@ -255,9 +253,8 @@ class TestCertEcheckDict(unittest.TestCase):
         }
 
         response = online.request(txn_dict, conf)
-        # TODO Processing Network Unavailable
-        # self.assertEquals('000', response['authorizationResponse']['response'])
-        # self.assertEquals('Approved', response['authorizationResponse']['message'])
+        self.assertEquals('000', response['authorizationResponse']['response'])
+        self.assertEquals('Approved', response['authorizationResponse']['message'])
 
         # orderId *A
         txn_dict = {
