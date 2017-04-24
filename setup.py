@@ -25,25 +25,17 @@ setup(
         'six>=1.10.0',
         'xmltodict>=0.10.2'
     ],
+    license='MIT',
     classifiers=[
         'Development Status :: 5 - Production/Stable',
-        'Environment :: Console',
-        'Environment :: Web Environment',
-        'Environment :: MacOS X'
-        'Environment :: Plugins'
-        'Environment :: Win32 (MS Windows)'
         'Intended Audience :: Developers',
         'Intended Audience :: System Administrators',
         'Intended Audience :: Information Technology',
         'License :: OSI Approved :: MIT License',
-        'Operating System :: OS Independent'
-        'Operating System :: MacOS',
-        'Operating System :: Microsoft',
-        'Operating System :: Unix',
-        'Operating System :: POSIX',
+        'Operating System :: OS Independent',
         'Programming Language :: Python',
         'Programming Language :: Python :: 2',
-        'Programming Language :: Python :: 2.7.9',
+        'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',
@@ -77,7 +69,7 @@ This SDK was implemented to support the Python2 version 2.7.9 and later, Python3
 
 See LICENSE file for details on using this software.
 
-Source Code available from : https://github.com/LitleCo/litle-sdk-for-python/tree/9.10v2
+Source Code available from : https://github.com/LitleCo/litle-sdk-for-python/tree/master
 
 Please contact `Vantiv eCommerce`_  to receive valid merchant credentials and determine which version of the SDK is right for your business requirements or if you require assistance in any other way.  You can reach us at sdksupport@Vantiv.com
 
