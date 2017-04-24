@@ -212,8 +212,8 @@ NOTE: you may need to edit the proxy to to work for your system
     Litle Transaction ID: <your-numeric-litle-txn-id>
     
 
-More examples can be found here https://github.com/LitleCo/vantiv-sdk-for-python/tree/11.0/samples
+More examples can be found here https://github.com/LitleCo/vantiv-sdk-for-python/tree/master/samples
 
-Detail documents can be found here https://github.com/LitleCo/vantiv-sdk-for-python/tree/11.0/docs/build/html
+Detail documents can be found here https://github.com/LitleCo/vantiv-sdk-for-python/tree/master/docs/build/html
 
 Please contact Vantiv eCommerce with any further questions. You can reach us at SDKSupport@Vantiv.com
