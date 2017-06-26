@@ -11,9 +11,9 @@ if (sys.version_info[:3] < (2, 7, 9)) or ((sys.version_info[0] == 3) and sys.ver
 (You have %s.)''' % (sys.version,))
 
 setup(
-    name='VantiveCommerceSDKv2',
+    name='VantiveCommerceSDK',
     version='11.0.0',
-    description='Vantiv eCommerce Python SDKv2',
+    description='Vantiv eCommerce Python SDK',
     author='Vantiv eCommerce',
     author_email='SDKSupport@vantiv.com',
     url='https://developer.vantiv.com/community/ecommerce',
@@ -49,7 +49,7 @@ setup(
             'vantiv_python_sdk_setup = scripts.vantiv_python_sdk_setup:main',
         ],
     },
-    long_description='''Vantiv eCommerce Python SDKv2
+    long_description='''Vantiv eCommerce Python SDK
 =============================
 
 .. _`Vantiv eCommerce`: https://developer.vantiv.com/community/ecommerce
@@ -61,7 +61,7 @@ About Vantiv eCommerce
 
 About this SDK
 --------------
-The Vantiv eCommerce Python SDKv2 is a Python implementation of the `Vantiv eCommerce`_ XML API. This SDK was created to make it as easy as possible to connect to and process payments through Vantiv eCommerce. This SDK utilizes the HTTPS protocol to securely connect to Vantiv eCommerce.  Using the SDK requires coordination with the Vantiv eCommerce team to obtain credentials for accessing our systems.
+The Vantiv eCommerce Python SDKt is a Python implementation of the `Vantiv eCommerce`_ XML API. This SDK was created to make it as easy as possible to connect to and process payments through Vantiv eCommerce. This SDK utilizes the HTTPS protocol to securely connect to Vantiv eCommerce.  Using the SDK requires coordination with the Vantiv eCommerce team to obtain credentials for accessing our systems.
 
 Each Python SDK release supports all of the functionality present in the associated Vantiv eCommerce XML version (e.g., 11.0.x supports Vantiv eCommerce XML v11.0). Please see the online copy of our XSD for Vantiv eCommerce XML to get more details on what the Vantiv eCommerce payments engine supports .
 
@@ -95,7 +95,7 @@ Using dict
 ..........
 .. code-block:: python
 
-    #Example for SDKv2
+    #Example for SDK
     from __future__ import print_function, unicode_literals
 
     from vantivsdk import *
@@ -178,7 +178,7 @@ Using object
 ............
 .. code-block:: python
 
-    #Example for SDKv2
+    #Example for SDK
     from __future__ import print_function, unicode_literals
 
     from vantivsdk import *
