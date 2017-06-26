@@ -1,4 +1,4 @@
-Vantiv eCommerce Python SDK for XML 11.x
+Vantiv eCommerce Python SDK
 ==========================================
 
 About Vantiv eCommerce
