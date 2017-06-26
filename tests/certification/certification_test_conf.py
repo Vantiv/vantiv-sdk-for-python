@@ -32,5 +32,4 @@ from vantivsdk import *
 conf = utils.Configuration()
 
 # certification testing should go to prelive
-conf.url = 'https://prelive.litle.com/vap/communicator/online'
-conf.proxy = ''
+conf.url = 'https://payments.vantivprelive.com/vap/communicator/online'
