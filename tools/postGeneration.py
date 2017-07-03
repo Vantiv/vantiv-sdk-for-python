@@ -193,7 +193,7 @@ def generate_index_rst(_package_root, _dict_list):
     _version = version.VERSION
     _index_rst_path = os.path.join(_package_root, 'docs/source/index.rst')
     # base string for index.rst
-    index_rst_base = "Vantiv eCommerce Python SDKv2 documentation %s!\n" % _version
+    index_rst_base = "Vantiv eCommerce Python SDK documentation %s!\n" % _version
     index_rst_base += "%s" % '=' * len(index_rst_base)
     index_rst_base += '\n'
     index_rst_base += """
@@ -208,7 +208,7 @@ Using dict
 .. code-block:: python
    :linenos:
 
-    #Example for SDKv2
+    #Example for SDK
     from __future__ import print_function, unicode_literals
 
     from vantivsdk import *
@@ -292,7 +292,7 @@ Using object
 .. code-block:: python
    :linenos:
 
-    #Example for SDKv2
+    #Example for SDK
     from __future__ import print_function, unicode_literals
 
     from vantivsdk import *

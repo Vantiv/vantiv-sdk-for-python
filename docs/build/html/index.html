@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Vantiv eCommerce Python SDKv2 documentation 9.12! &#8212; Vantiv eCommerce Python SDKv2 9.12.0 documentation</title>
+    <title>Vantiv eCommerce Python SDK documentation 9.12! &#8212; Vantiv eCommerce Python SDKv2 9.12.1 documentation</title>
     
     <link rel="stylesheet" href="_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '9.12.0',
+        VERSION:     '9.12.1',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true,
@@ -34,7 +34,7 @@
         <li class="right" style="margin-right: 10px">
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
-        <li class="nav-item nav-item-0"><a href="#">Vantiv eCommerce Python SDKv2 9.12.0 documentation</a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="#">Vantiv eCommerce Python SDKv2 9.12.1 documentation</a> &#187;</li> 
       </ul>
     </div>  
 
@@ -43,8 +43,8 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="vantiv-ecommerce-python-sdkv2-documentation-9-12">
-<h1>Vantiv eCommerce Python SDKv2 documentation 9.12!<a class="headerlink" href="#vantiv-ecommerce-python-sdkv2-documentation-9-12" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="vantiv-ecommerce-python-sdk-documentation-9-12">
+<h1>Vantiv eCommerce Python SDK documentation 9.12!<a class="headerlink" href="#vantiv-ecommerce-python-sdk-documentation-9-12" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">
 </div>
 <div class="section" id="example">
@@ -128,7 +128,7 @@
 75
 76
 77
-78</pre></div></td><td class="code"><div class="highlight"><pre><span></span> <span class="c1">#Example for SDKv2</span>
+78</pre></div></td><td class="code"><div class="highlight"><pre><span></span> <span class="c1">#Example for SDK</span>
  <span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">print_function</span><span class="p">,</span> <span class="n">unicode_literals</span>
 
  <span class="kn">from</span> <span class="nn">vantivsdk</span> <span class="kn">import</span> <span class="o">*</span>
@@ -299,7 +299,7 @@
 86
 87
 88
-89</pre></div></td><td class="code"><div class="highlight"><pre><span></span> <span class="c1">#Example for SDKv2</span>
+89</pre></div></td><td class="code"><div class="highlight"><pre><span></span> <span class="c1">#Example for SDK</span>
  <span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">print_function</span><span class="p">,</span> <span class="n">unicode_literals</span>
 
  <span class="kn">from</span> <span class="nn">vantivsdk</span> <span class="kn">import</span> <span class="o">*</span>
@@ -399,7 +399,7 @@
 <blockquote>
 <div><dl class="function">
 <dt id="vantivsdk.batch.stream">
-<code class="descclassname">vantivsdk.batch.</code><code class="descname">stream</code><span class="sig-paren">(</span><em>transactions</em>, <em>conf</em>, <em>return_format=u'dict'</em>, <em>timeout_send=60</em>, <em>timeout_rev=2</em><span class="sig-paren">)</span><a class="headerlink" href="#vantivsdk.batch.stream" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">vantivsdk.batch.</code><code class="descname">stream</code><span class="sig-paren">(</span><em>transactions</em>, <em>conf</em>, <em>return_format='dict'</em>, <em>timeout_send=60</em>, <em>timeout_rev=2</em><span class="sig-paren">)</span><a class="headerlink" href="#vantivsdk.batch.stream" title="Permalink to this definition">¶</a></dt>
 <dd><p>stream batch request to IBC (inbound batch communicator) via socket and get return object</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -460,7 +460,7 @@
 <blockquote>
 <div><dl class="function">
 <dt id="vantivsdk.batch.submit">
-<code class="descclassname">vantivsdk.batch.</code><code class="descname">submit</code><span class="sig-paren">(</span><em>transactions</em>, <em>conf</em>, <em>filename=u''</em>, <em>timeout=60</em><span class="sig-paren">)</span><a class="headerlink" href="#vantivsdk.batch.submit" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">vantivsdk.batch.</code><code class="descname">submit</code><span class="sig-paren">(</span><em>transactions</em>, <em>conf</em>, <em>filename=''</em>, <em>timeout=60</em><span class="sig-paren">)</span><a class="headerlink" href="#vantivsdk.batch.submit" title="Permalink to this definition">¶</a></dt>
 <dd><p>Submitting a Session File for Processing to server via sFTP</p>
 <ol class="arabic simple">
 <li>Generate litleRequest xml.</li>
@@ -496,7 +496,7 @@
 <blockquote>
 <div><dl class="function">
 <dt id="vantivsdk.batch.retrieve">
-<code class="descclassname">vantivsdk.batch.</code><code class="descname">retrieve</code><span class="sig-paren">(</span><em>filename</em>, <em>conf</em>, <em>return_format=u'dict'</em>, <em>save_to_local=False</em>, <em>delete_remote=False</em>, <em>timeout=60</em><span class="sig-paren">)</span><a class="headerlink" href="#vantivsdk.batch.retrieve" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">vantivsdk.batch.</code><code class="descname">retrieve</code><span class="sig-paren">(</span><em>filename</em>, <em>conf</em>, <em>return_format='dict'</em>, <em>save_to_local=False</em>, <em>delete_remote=False</em>, <em>timeout=60</em><span class="sig-paren">)</span><a class="headerlink" href="#vantivsdk.batch.retrieve" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieving Processed Session File from server via sFTP</p>
 <ol class="arabic simple">
 <li>Get xml file string from server and return object</li>
@@ -593,7 +593,7 @@ RFRRequest cannot exist in the same instance with any other transactions.</p>
 <blockquote>
 <div><dl class="function">
 <dt id="vantivsdk.online.request">
-<code class="descclassname">vantivsdk.online.</code><code class="descname">request</code><span class="sig-paren">(</span><em>transaction</em>, <em>conf</em>, <em>return_format=u'dict'</em>, <em>timeout=30</em><span class="sig-paren">)</span><a class="headerlink" href="#vantivsdk.online.request" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">vantivsdk.online.</code><code class="descname">request</code><span class="sig-paren">(</span><em>transaction</em>, <em>conf</em>, <em>return_format='dict'</em>, <em>timeout=30</em><span class="sig-paren">)</span><a class="headerlink" href="#vantivsdk.online.request" title="Permalink to this definition">¶</a></dt>
 <dd><p>Send request to server.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -3251,7 +3251,7 @@ RFRRequest cannot exist in the same instance with any other transactions.</p>
         <div class="sphinxsidebarwrapper">
   <h3><a href="#">Table Of Contents</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Vantiv eCommerce Python SDKv2 documentation 9.12!</a><ul>
+<li><a class="reference internal" href="#">Vantiv eCommerce Python SDK documentation 9.12!</a><ul>
 <li><a class="reference internal" href="#example">EXAMPLE</a><ul>
 <li><a class="reference internal" href="#using-dict">Using dict</a></li>
 <li><a class="reference internal" href="#using-object">Using object</a></li>
@@ -3397,7 +3397,7 @@ RFRRequest cannot exist in the same instance with any other transactions.</p>
         <li class="right" style="margin-right: 10px">
           <a href="genindex.html" title="General Index"
              >index</a></li>
-        <li class="nav-item nav-item-0"><a href="#">Vantiv eCommerce Python SDKv2 9.12.0 documentation</a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="#">Vantiv eCommerce Python SDKv2 9.12.1 documentation</a> &#187;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">

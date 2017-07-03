@@ -1,5 +1,5 @@
-Vantiv eCommerce Python SDKv2 documentation 9.12!
-==================================================
+Vantiv eCommerce Python SDK documentation 9.12!
+================================================
 
 .. toctree::
    :maxdepth: 2
@@ -12,7 +12,7 @@ Using dict
 .. code-block:: python
    :linenos:
 
-    #Example for SDKv2
+    #Example for SDK
     from __future__ import print_function, unicode_literals
 
     from vantivsdk import *
@@ -96,7 +96,7 @@ Using object
 .. code-block:: python
    :linenos:
 
-    #Example for SDKv2
+    #Example for SDK
     from __future__ import print_function, unicode_literals
 
     from vantivsdk import *
