@@ -189,234 +189,17 @@ def _find_types(lines, root_ele_name, ele_name, complexType=False):
     return result
 
 
-def generate_index_rst(_package_root, _dict_list):
+def generate_rst(_package_root, _dict_list):
     _version = version.VERSION
     _index_rst_path = os.path.join(_package_root, 'docs/source/index.rst')
-    # base string for index.rst
-    index_rst_base = "Vantiv eCommerce Python SDK documentation %s!\n" % _version
-    index_rst_base += "%s" % '=' * len(index_rst_base)
-    index_rst_base += '\n'
-    index_rst_base += """
-.. toctree::
-   :maxdepth: 2
-   :caption: Contents:
-
-EXAMPLE
--------
-Using dict
-..........
-.. code-block:: python
-   :linenos:
-
-    #Example for SDK
-    from __future__ import print_function, unicode_literals
-
-    from vantivsdk import *
-
-    # Initial Configuration object. If you have saved configuration in '.vantiv_python_sdk.conf' at system environment
-    # variable: VANTIV_SDK_CONFIG or user home directory, the saved configuration will be automatically load.
-    conf = utils.Configuration()
-
-    # Configuration need following attributes for online request:
-    # attributes = default value
-    # user = ''
-    # password = ''
-    # merchantId = ''
-    # reportGroup = 'Default Report Group'
-    # url = 'https://www.testlitle.com/sandbox/communicator/online'
-    # proxy = ''
-    # print_xml = False
-
-    # Transaction presented by dict
-    txn_dict ={
-        'authorization':{
-            'orderId': '1',
-            'amount': 10010,
-            'orderSource': 'ecommerce',
-            'id': 'ThisIsRequiredby11',
-            'billToAddress': {
-                'name': 'John & Mary Smith',
-                'addressLine1': '1 Main St.',
-                'city': 'Burlington',
-                'state': 'MA',
-                'zip': '01803-3747',
-                'country': 'USA'
-            },
-            'card': {
-                'number': '4100000000000000',
-                'expDate': '1215',
-                'cardValidationNum' : '349',
-                'type': 'VI'
-            },
-            'enhancedData':{
-                'detailTax': [
-                    {'taxAmount':100},
-                    {'taxAmount':200},
-                ],
-            }
-        }
-    }
-
-    # Send request to server and get response as dict
-    response = online.request(txn_dict, conf)
-
-    print('Message: %s' % response['authorizationResponse']['message'])
-    print('LitleTransaction ID: %s' % response['authorizationResponse']['litleTxnId'])
-
-    # Configuration need following attributes for batch request:
-    # attributes = default value
-    # sftp_username = ''
-    # sftp_password = ''
-    # sftp_url = ''
-    # batch_requests_path = '/tmp/vantiv_sdk_batch_request'
-    # batch_response_path = '/tmp/vantiv_sdk_batch_response'
-    # fast_url = ''
-    # fast_ssl = True
-    # fast_port = ''
-    # id = ''
-
-    # Initial batch transactions container class
-    transactions = batch.Transactions()
-
-    # Add transaction to batch transactions container
-    transactions.add(txn_dict)
-
-    # Sent batch to server via socket and get response as dict
-    response = batch.stream(transactions, conf)
-
-    print('Message: %s' % response['batchResponse']['authorizationResponse']['message'])
-    print('LitleTransaction ID: %s' % response['batchResponse']['authorizationResponse']['litleTxnId'])
-
-Using object
-............
-.. code-block:: python
-   :linenos:
-
-    #Example for SDK
-    from __future__ import print_function, unicode_literals
-
-    from vantivsdk import *
-
-    # Initial Configuration object. If you have saved configuration in '.vantiv_python_sdk.conf' at system environment
-    # variable: VANTIV_SDK_CONFIG or user home directory, the saved configuration will be automatically load.
-    conf = utils.Configuration()
-
-    # Configuration need following attributes for online request:
-    # attributes = default value
-    # user = ''
-    # password = ''
-    # merchantId = ''
-    # reportGroup = 'Default Report Group'
-    # url = 'https://www.testlitle.com/sandbox/communicator/online'
-    # proxy = ''
-    # print_xml = False
-
-    # Initial Transaction.
-    transaction = fields.authorization()
-    transaction.orderId = '1'
-    transaction.amount = 10010
-    transaction.orderSource = 'ecommerce'
-    transaction.id = 'ThisIsRequiredby11'
-
-    # Create contact object
-    contact = fields.contact()
-    contact.name = 'John & Mary Smith'
-    contact.addressLine1 = '1 Main St.'
-    contact.city = 'Burlington'
-    contact.state = 'MA'
-    contact.zip = '01803-3747'
-    contact.country = 'USA'
-    # The type of billToAddress is contact
-    transaction.billToAddress = contact
-
-    # Create cardType object
-    card = fields.cardType()
-    card.number = '4100000000000000'
-    card.expDate = '1215'
-    card.cardValidationNum = '349'
-    card.type = 'VI'
-    # The type of card is cardType
-    transaction.card = card
-
-    # detail tax
-    detailTaxList = list()
-
-    detailTax = fields.detailTax()
-    detailTax.taxAmount = 100
-    detailTaxList.append(detailTax)
-
-    detailTax2 = fields.detailTax()
-    detailTax2.taxAmount = 200
-    detailTaxList.append(detailTax2)
-
-    enhancedData = fields.enhancedData()
-    enhancedData.detailTax = detailTaxList
-
-    # Send request to server and get response as dict
-    response = online.request(transaction, conf)
-
-    print('Message: %s' % response['authorizationResponse']['message'])
-    print('LitleTransaction ID: %s' % response['authorizationResponse']['litleTxnId'])
-
-    # Configuration need following attributes for batch request:
-    # attributes = default value
-    # sftp_username = ''
-    # sftp_password = ''
-    # sftp_url = ''
-    # batch_requests_path = '/tmp/vantiv_sdk_batch_request'
-    # batch_response_path = '/tmp/vantiv_sdk_batch_response'
-    # fast_url = ''
-    # fast_ssl = True
-    # fast_port = ''
-    # id = ''
-
-    # Initial batch transactions container class
-    transactions = batch.Transactions()
-
-    # Add transaction to batch transactions container
-    transactions.add(transaction)
-
-    # Sent batch to server via socket and get response as dict
-    response = batch.stream(transactions, conf)
-
-    print('Message: %s' % response['batchResponse']['authorizationResponse']['message'])
-    print('LitleTransaction ID: %s' % response['batchResponse']['authorizationResponse']['litleTxnId'])
-
-API
-------
-batch.stream
-............
-    .. autofunction:: vantivsdk.batch.stream
-
-batch.download
-..............
-    .. autofunction:: vantivsdk.batch.download
-
-batch.submit
-............
-    .. autofunction:: vantivsdk.batch.submit
-
-batch.retrieve
-..............
-    .. autofunction:: vantivsdk.batch.retrieve
-
-batch.Transactions
-..................
-    .. autoclass:: vantivsdk.batch.Transactions
-        :members:
-
-online.request
-..............
-    .. autofunction:: vantivsdk.online.request
-
-utils.Configuration
-...................
-    .. autoclass:: vantivsdk.utils.Configuration
-        :members:
-
-Transactions
-------------
-"""
+    _transactions_rst_path = os.path.join(_package_root, 'docs/source/transactions.rst')
+    _complextypes_rst_path = os.path.join(_package_root, 'docs/source/complextypes.rst')
+    with open(_index_rst_path, 'r') as index_rst:
+        lines = index_rst.readlines()
+        lines[0] = "Vantiv eCommerce Python SDK %s!\n" % _version
+        lines[1] = '=' * len(lines[0])
+        with open(_index_rst_path, 'w') as rst_file_w:
+            rst_file_w.writelines(lines)
 
     txns_dict = _dict_list[0].copy()
     used_type_dict = _dict_list[1].copy()
@@ -425,10 +208,10 @@ Transactions
     # Sort class by name
     txns_list = list(txns_dict.keys())
     txns_list.sort()
-
+    rst_base = 'Transactions\n============\n\n'
     for txns in txns_list:
-        index_rst_base += '%s\n%s\n' % (txns, '.' * len(txns))
-        index_rst_base += '    .. py:class:: vantivsdk.fields.%s\n\n' % txns
+        rst_base += '%s\n%s\n' % (txns, '-' * len(txns))
+        rst_base += '    .. py:class:: vantivsdk.fields.%s\n\n' % txns
         attr_list = list(txns_dict[txns].keys())
         attr_list.sort()
 
@@ -436,23 +219,26 @@ Transactions
             attr_tpye = txns_dict[txns][attr_name]
             if attr_tpye:
                 if attr_tpye in abs_class_dict:
-                    index_rst_base += '        :var %s: instance of ' % attr_name
+                    rst_base += '        :var %s: instance of ' % attr_name
                     for e in abs_class_dict[attr_tpye]:
-                        index_rst_base += ':py:class:`vantivsdk.fields.%s`, ' % e
-                    index_rst_base += '\n'
+                        rst_base += ':py:class:`vantivsdk.fields.%s`, ' % e
+                    rst_base += '\n'
                 else:
-                    index_rst_base += '        :var %s: instance of :py:class:`vantivsdk.fields.%s`\n' \
+                    rst_base += '        :var %s: instance of :py:class:`vantivsdk.fields.%s`\n' \
                                       % (attr_name, attr_tpye)
             else:
-                index_rst_base += '        :var %s: String or Number\n' % attr_name
-        index_rst_base += '\n'
-    index_rst_base += 'Complex Types\n-------------\n'
+                rst_base += '        :var %s: String or Number\n' % attr_name
+        rst_base += '\n'
 
+    with open(_transactions_rst_path, 'w') as rst_file_w:
+        rst_file_w.write(rst_base)
+
+    rst_base = 'Complex Types\n=============\n\n'
     used_type_list = list(used_type_dict.keys())
     used_type_list.sort()
     for used_type in used_type_list:
-        index_rst_base += '%s\n%s\n' % (used_type, '.' * len(used_type))
-        index_rst_base += '    .. py:class:: vantivsdk.fields.%s\n\n' % used_type
+        rst_base += '%s\n%s\n' % (used_type, '-' * len(used_type))
+        rst_base += '    .. py:class:: vantivsdk.fields.%s\n\n' % used_type
         attr_list = list(used_type_dict[used_type].keys())
         attr_list.sort()
 
@@ -460,19 +246,19 @@ Transactions
             attr_tpye = used_type_dict[used_type][attr_name]
             if attr_tpye:
                 if attr_tpye in abs_class_dict:
-                    index_rst_base += '        :var %s: instance of ' % attr_name
+                    rst_base += '        :var %s: instance of ' % attr_name
                     for e in abs_class_dict[attr_tpye]:
-                        index_rst_base += ':py:class:`vantivsdk.fields.%s`, ' % e
-                    index_rst_base += '\n'
+                        rst_base += ':py:class:`vantivsdk.fields.%s`, ' % e
+                    rst_base += '\n'
                 else:
-                    index_rst_base += '        :var %s: instance of :py:class:`vantivsdk.fields.%s`\n' \
+                    rst_base += '        :var %s: instance of :py:class:`vantivsdk.fields.%s`\n' \
                                       % (attr_name, attr_tpye)
             else:
-                index_rst_base += '        :var %s: String or Number\n' % attr_name
-        index_rst_base += '\n'
+                rst_base += '        :var %s: String or Number\n' % attr_name
+        rst_base += '\n'
 
-    with open(_index_rst_path, 'w') as index_rst_file_w:
-        index_rst_file_w.write(index_rst_base)
+    with open(_complextypes_rst_path, 'w') as rst_file_w:
+        rst_file_w.write(rst_base)
 
 
 def generate_dictmap_py(_package_root, _dict_list):
@@ -518,4 +304,4 @@ if __name__ == '__main__':
     remove_absolute_path(package_root)
     dict_list = get_class_dict(package_root)
     generate_dictmap_py(package_root, dict_list)
-    generate_index_rst(package_root, dict_list)
+    generate_rst(package_root, dict_list)

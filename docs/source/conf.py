@@ -53,7 +53,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'Vantiv eCommerce Python SDKv2'
+project = u'Vantiv eCommerce Python SDK'
 copyright = u'2017, Vantiv eCommerce'
 author = u'Vantiv eCommerce'
 
@@ -89,13 +89,19 @@ todo_include_todos = False
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'classic'
+# html_theme = 'classic'
+html_theme = "sphinx_rtd_theme"
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
 #
 # html_theme_options = {}
+html_theme_options = {
+    'collapse_navigation': True,
+    'display_version': True,
+    'navigation_depth': 2,
+}
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
@@ -105,7 +111,7 @@ html_static_path = ['_static']
 # -- Options for HTMLHelp output ------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'VantiveCommercePythonSDKv2doc'
+htmlhelp_basename = 'VantiveCommercePythonSDKdoc'
 
 # -- Options for LaTeX output ---------------------------------------------
 
@@ -131,7 +137,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'VantiveCommercePythonSDKv2.tex', u'Vantiv eCommerce Python SDKv2 Documentation',
+    (master_doc, 'VantiveCommercePythonSDK.tex', u'Vantiv eCommerce Python SDK',
      u'Vantiv eCommerce', 'manual'),
 ]
 
@@ -140,7 +146,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'vantivecommercepythonsdkv2', u'Vantiv eCommerce Python SDKv2 Documentation',
+    (master_doc, 'vantivecommercepythonsdk', u'Vantiv eCommerce Python SDK',
      [author], 1)
 ]
 
@@ -150,7 +156,7 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'VantiveCommercePythonSDKv2', u'Vantiv eCommerce Python SDKv2 Documentation',
-     author, 'VantiveCommercePythonSDKv2', 'One line description of project.',
+    (master_doc, 'VantiveCommercePythonSDK', u'Vantiv eCommerce Python SDK',
+     author, 'VantiveCommercePythonSDK', 'One line description of project.',
      'Miscellaneous'),
 ]
