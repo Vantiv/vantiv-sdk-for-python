@@ -70,7 +70,9 @@ This SDK was implemented to support the Python2 version 2.7.9 and later, Python3
 See LICENSE file for details on using this software.
 
 Source Code available from : https://github.com/Vantiv/vantiv-sdk-for-python
+
 Examples can be found here https://github.com/Vantiv/vantiv-sdk-for-python/tree/master/samples
+
 Detail documents can be found here http://vantivecommercepythonsdk.readthedocs.io/en/latest/
 
 Please contact `Vantiv eCommerce`_  to receive valid merchant credentials and determine which version of the SDK is right for your business requirements or if you require assistance in any other way.  You can reach us at sdksupport@Vantiv.com
