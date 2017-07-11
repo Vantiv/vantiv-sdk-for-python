@@ -1,5 +1,5 @@
-Vantiv eCommerce Python SDKv2 for XML v9.x
-==========================================
+Vantiv eCommerce Python SDK for XML v9.x
+========================================
 
 About Vantiv eCommerce
 ----------------------
@@ -8,7 +8,7 @@ About Vantiv eCommerce
 
 About this SDK
 --------------
-The Vantiv eCommerce Python SDKv2 is a Python implementation of the [Vantiv eCommerce](https://developer.vantiv.com/community/ecommerce) XML API. This SDK was created to make it as easy as possible to connect to and process payments through Vantiv eCommerce. This SDK utilizes the HTTPS protocol to securely connect to Vantiv eCommerce.  Using the SDK requires coordination with the Vantiv eCommerce team to obtain credentials for accessing our systems.
+The Vantiv eCommerce Python SDK is a Python implementation of the [Vantiv eCommerce](https://developer.vantiv.com/community/ecommerce) XML API. This SDK was created to make it as easy as possible to connect to and process payments through Vantiv eCommerce. This SDK utilizes the HTTPS protocol to securely connect to Vantiv eCommerce.  Using the SDK requires coordination with the Vantiv eCommerce team to obtain credentials for accessing our systems.
 
 Each Python SDK release supports all of the functionality present in the associated Vantiv eCommerce XML version (e.g., 9.12.x supports Vantiv eCommerce XML v9.12). Please see the online copy of our XSD for Vantiv eCommerce XML to get more details on what the Vantiv eCommerce payments engine supports .
 
@@ -16,7 +16,7 @@ This SDK was implemented to support the Python2 version 2.7.9 and later, Python3
 
 See LICENSE file for details on using this software.
 
-Source Code available from : https://github.com/LitleCo/vantiv-sdkv2-for-python
+Source Code available from : https://github.com/Vantiv/vantiv-sdk-for-python/tree/9.x
 
 Please contact [Vantiv eCommerce](https://developer.vantiv.com/community/ecommerce) to receive valid merchant credentials and determine which version of the SDK is right for your business requirements or if you require assistance in any other way.  You can reach us at sdksupport@Vantiv.com
 
@@ -34,16 +34,16 @@ Setup
 
 Using pip 
 
->pip install VantiveCommerceSDKv2
+>pip install VantiveCommerceSDK
 
 Without Pip
 
->git clone https://github.com/LitleCo/vantiv-sdkv2-for-python.git
+>git https://github.com/Vantiv/vantiv-sdk-for-python.git
 
->cd vantiv-sdkv2-for-python
+>cd vantiv-sdk-for-python
 
-checkout 9.0 for xml v9.x
->git checkout 9.0
+checkout 9.x for xml v9.x
+>git checkout 9.x
 
 >python setup.py install
 
@@ -54,7 +54,7 @@ checkout 9.0 for xml v9.x
 3) Create a python file similar to:
 
 ```python
-#Example for SDKv2 transaction presented by object
+#Example for SDK transaction presented by object
 from __future__ import print_function, unicode_literals
 
 from vantivsdk import *
@@ -148,7 +148,7 @@ print('LitleTransaction ID: %s' % response['batchResponse']['authorizationRespon
 ```
 
 ```python
-#Example for SDKv2, transaction presented by dict
+#Example for SDK, transaction presented by dict
 from __future__ import print_function, unicode_literals
 
 from vantivsdk import *
@@ -212,8 +212,8 @@ NOTE: you may need to edit the proxy to to work for your system
     Litle Transaction ID: <your-numeric-litle-txn-id>
     
 
-More examples can be found here https://github.com/LitleCo/vantiv-sdkv2-for-python/tree/9.0/samples
+More examples can be found here https://github.com/Vantiv/vantiv-sdk-for-python/tree/9.x/samples
 
-Detail documents can be found here https://github.com/LitleCo/vantiv-sdkv2-for-python/tree/9.0/docs/build/html
+Detail documents can be found here http://vantivecommercepythonsdk.readthedocs.io/en/9.x/
 
 Please contact Vantiv eCommerce with any further questions. You can reach us at SDKSupport@Vantiv.com
