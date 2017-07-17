@@ -141,7 +141,7 @@ def _create_request_obj(transaction, conf):
     authentication.user = conf.user
     authentication.password = conf.password
     request_obj.authentication = authentication
-    if not transaction.reportGroup:
+    if hasattr(transaction, 'reportGroup') and not transaction.reportGroup:
         transaction.reportGroup = conf.reportGroup
     # determine option for choice.
     # <xs:choice>
