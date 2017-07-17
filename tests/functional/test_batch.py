@@ -278,5 +278,71 @@ class TestBatch(unittest.TestCase):
         self.assertEquals(response_rfr['batchResponse']['authorizationResponse'][0]['litleTxnId'],
                           response['batchResponse']['authorizationResponse'][0]['litleTxnId'])
 
+    def test_batch_stream_mix_transaction_recurringtransaction(self):
+        txn_dict = {
+            'authorization':[
+                {
+                    'reportGroup': 'Planets',
+                    'orderId': '12344',
+                    'amount': '100',
+                    'orderSource': 'ecommerce',
+                    'id': 'thisisid',
+                    'card': {
+                        'expDate': '1210',
+                        'number': '4100000000000000',
+                        'type': 'VI',
+                    }
+                },
+                {
+                    'reportGroup': 'Planets',
+                    'orderId': '12345',
+                    'amount': '200',
+                    'orderSource': 'ecommerce',
+                    'id': 'thisisid',
+                    'card': {
+                        'expDate': '1210',
+                        'number': '4100000000000000',
+                        'type': 'VI',
+                    }
+                },
+                {
+                    'reportGroup': 'Planets',
+                    'orderId': '12346',
+                    'amount': '300',
+                    'orderSource': 'ecommerce',
+                    'id': 'thisisid',
+                    'card': {
+                        'expDate': '1210',
+                        'number': '4100000000000000',
+                        'type': 'VI',
+                    }
+                }
+            ],
+            'sale': {
+                'reportGroup': 'Planets',
+                'orderId': '12344',
+                'amount': '106',
+                'orderSource': 'ecommerce',
+                'id': 'thisisid',
+                'card': {
+                    'expDate': '1210',
+                    'number': '4100000000000000',
+                    'type': 'VI',
+                }
+            },
+            'createPlan': {
+                'amount': '106',
+                'planCode': '1',
+                'name': 'plan name',
+                'description': 'plan description',
+                'intervalType': 'ANNUAL'
+            }
+        }
+
+        # stream to Vaitiv eCommerce and get object as response
+        with self.assertRaises(utils.VantivException) as context:
+            batch.stream(txn_dict, conf)
+        self.assertIn('Cannot mix transaction and recurringTransaction', str(context.exception))
+
 if __name__ == '__main__':
     unittest.main()
