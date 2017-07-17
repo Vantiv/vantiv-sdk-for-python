@@ -460,82 +460,74 @@ def _create_batch_xml(transactions, conf):
 
     txns = transactions.transactions
 
-    request_str = ''
-    num_batch_requests = 0
+    litle_request = fields.litleRequest()
+    batch_request_list = list()
+    transaction_list_for_batch_request = list()
+
     if transactions.is_rfr_request:
-        request_str += _obj_to_xml_element(txns[0])
+        # Using obj
+        litle_request.RFRRequest = txns[0]
     else:
         attributes_num_dict = _batch_attributes_num_dict.copy()
         attributes_amount_dict = _batch_attributes_amount_dict.copy()
-        txn_count = 0
-        txns_str = ''
         for txn in txns:
             # Add default reportGroup to txn
             if not txn.reportGroup:
                 txn.reportGroup = conf.reportGroup
-            txn_count += 1
             type_name = type(txn).__name__
             attributes_num_dict[_class_transaction_dict[type_name][0]] += 1
             if hasattr(txn, 'amount') and getattr(txn, 'amount') and _class_transaction_dict[type_name][1]:
                 attributes_amount_dict[_class_transaction_dict[type_name][1]] += int(getattr(txn, 'amount'))
-            txns_str += _obj_to_xml_element(txn)
-            if txn_count == 20000:
-                attributes_str = ''
+            # Using obj
+            transaction_list_for_batch_request.append(txn)
+            if len(transaction_list_for_batch_request) == 20000:
+                batch_request = fields.batchRequest()
+                batch_request.merchantId = conf.merchantId
                 for k in attributes_num_dict:
                     if attributes_num_dict[k]:
-                        attributes_str += ' %s ="%d"' % (k, attributes_num_dict[k])
+                        setattr(batch_request, k, attributes_num_dict[k])
                 for k in attributes_amount_dict:
                     if attributes_amount_dict[k]:
-                        attributes_str += ' %s ="%d"' % (k, attributes_amount_dict[k])
-                batch_request_str = '<batchRequest merchantId="%s"%s>' % (conf.merchantId, attributes_str)
-                batch_request_str += txns_str
-                batch_request_str += '</batchRequest>'
-                request_str += batch_request_str
-                num_batch_requests += 1
-                txn_count = 0
-                txns_str = ''
+                        setattr(batch_request, k, attributes_amount_dict[k])
+                # clean attibutes dict
                 attributes_num_dict = _batch_attributes_num_dict.copy()
                 attributes_amount_dict = _batch_attributes_amount_dict.copy()
-        if txn_count:
-            attributes_str = ''
+                # add to transaction
+                # TODO recurringTrans
+                if isinstance(txns[0], fields.transactionType):
+                    batch_request.transaction = transaction_list_for_batch_request
+                elif isinstance(txns[0], fields.recurringTransactionType):
+                    batch_request.recurringTransaction = transaction_list_for_batch_request
+                transaction_list_for_batch_request = list()
+                batch_request_list.append(batch_request)
+        if len(transaction_list_for_batch_request):
+            batch_request = fields.batchRequest()
+            batch_request.merchantId = conf.merchantId
             for k in attributes_num_dict:
                 if attributes_num_dict[k]:
-                    attributes_str += ' %s ="%d"' % (k, attributes_num_dict[k])
+                    setattr(batch_request, k, attributes_num_dict[k])
             for k in attributes_amount_dict:
                 if attributes_amount_dict[k]:
-                    attributes_str += ' %s ="%d"' % (k, attributes_amount_dict[k])
-            batch_request_str = '<batchRequest merchantId="%s"%s>' % (conf.merchantId, attributes_str)
-            batch_request_str += txns_str
-            batch_request_str += '</batchRequest>'
-            request_str += batch_request_str
-            num_batch_requests += 1
+                    setattr(batch_request, k, attributes_amount_dict[k])
+            if isinstance(txns[0], fields.transactionType):
+                batch_request.transaction = transaction_list_for_batch_request
+            elif isinstance(txns[0], fields.recurringTransactionType):
+                batch_request.recurringTransaction = transaction_list_for_batch_request
+            batch_request_list.append(batch_request)
+        litle_request.batchRequest = batch_request_list
 
-    xml_str = '<?xml version="1.0" encoding="utf-8"?>'
-    xml_str += '<litleRequest version="%s" xmlns="http://www.litle.com/schema" id="%s" numBatchRequests="%d">' \
-               % (conf.VERSION, conf.id, num_batch_requests)
-    xml_str += _obj_to_xml_element(authentication)
-    xml_str += request_str
-    xml_str += '</litleRequest>'
+    litle_request.version = conf.VERSION
+    litle_request.id = conf.id
+    litle_request.numBatchRequests = len(batch_request_list)
+    litle_request.authentication = authentication
+
+    batch_xml = utils.obj_to_xml(litle_request).decode('utf-8')
 
     if conf.print_xml:
-        print('Batch request XML:\n', xml_str, '\n')
+        print('Batch request XML Obj:\n', batch_xml, '\n')
 
-    return xml_str
+    return batch_xml
 
-
-def _obj_to_xml_element(_obj):
-    """Convert obj to xml
-
-    Args:
-        _obj: Object
-
-    Returns:
-        xml string
-    """
-    xml = utils.obj_to_xml(_obj)
-    xml = xml.replace(b'<?xml version="1.0" encoding="utf-8"?>', b'')
-    xml = xml.replace(b' xmlns="http://www.litle.com/schema"', b'')
-    return xml.decode('utf-8')
 
 def _to_batch_txns(txns_dict):
     if not isinstance(txns_dict, dict):
@@ -589,6 +581,7 @@ class Transactions(object):
 
     def __init__(self):
         self._RFRRequest = False
+        self._transactionsType = ''
         self._transactions = set()
         obje = getattr(fields, 'RFRRequest')()
         self._RFRRequest_cls_name = type(obje).__name__
@@ -626,9 +619,15 @@ class Transactions(object):
         else:
             if self._RFRRequest:
                 raise utils.VantivException('cannot mix transactions and RFRRequest')
+            if self._transactionsType == '' and isinstance(transaction, fields.transactionType):
+                self._transactionsType = fields.transactionType
+            elif self._transactionsType == '' and isinstance(transaction, fields.recurringTransactionType):
+                self._transactionsType = fields.recurringTransactionType
+            elif not isinstance(transaction, self._transactionsType):
+                raise utils.VantivException('Cannot mix transaction and recurringTransaction')
             if type_name in _class_transaction_dict:
                 if transaction not in self._transactions:
-                    # Add transaction
+                     # Add transaction
                     self._transactions.add(transaction)
                 else:
                     raise utils.VantivException('duplicate transaction cannot be added to a batch')
