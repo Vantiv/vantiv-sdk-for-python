@@ -459,6 +459,7 @@ def _create_batch_xml(transactions, conf):
     authentication.password = conf.password
 
     txns = transactions.transactions
+    rtxns = transactions.recurringTransactions
 
     litle_request = fields.litleRequest()
     batch_request_list = list()
@@ -472,7 +473,7 @@ def _create_batch_xml(transactions, conf):
         attributes_amount_dict = _batch_attributes_amount_dict.copy()
         for txn in txns:
             # Add default reportGroup to txn
-            if not txn.reportGroup:
+            if hasattr(txn, 'reportGroup') and not txn.reportGroup:
                 txn.reportGroup = conf.reportGroup
             type_name = type(txn).__name__
             attributes_num_dict[_class_transaction_dict[type_name][0]] += 1
@@ -493,11 +494,7 @@ def _create_batch_xml(transactions, conf):
                 attributes_num_dict = _batch_attributes_num_dict.copy()
                 attributes_amount_dict = _batch_attributes_amount_dict.copy()
                 # add to transaction
-                # TODO recurringTrans
-                if isinstance(txns[0], fields.transactionType):
-                    batch_request.transaction = transaction_list_for_batch_request
-                elif isinstance(txns[0], fields.recurringTransactionType):
-                    batch_request.recurringTransaction = transaction_list_for_batch_request
+                batch_request.transaction = transaction_list_for_batch_request
                 transaction_list_for_batch_request = list()
                 batch_request_list.append(batch_request)
         if len(transaction_list_for_batch_request):
@@ -509,11 +506,52 @@ def _create_batch_xml(transactions, conf):
             for k in attributes_amount_dict:
                 if attributes_amount_dict[k]:
                     setattr(batch_request, k, attributes_amount_dict[k])
-            if isinstance(txns[0], fields.transactionType):
-                batch_request.transaction = transaction_list_for_batch_request
-            elif isinstance(txns[0], fields.recurringTransactionType):
-                batch_request.recurringTransaction = transaction_list_for_batch_request
+            # clean attibutes dict
+            attributes_num_dict = _batch_attributes_num_dict.copy()
+            attributes_amount_dict = _batch_attributes_amount_dict.copy()
+            batch_request.transaction = transaction_list_for_batch_request
+            transaction_list_for_batch_request = list()
             batch_request_list.append(batch_request)
+
+        for txn in rtxns:
+            # Add default reportGroup to txn
+            if hasattr(txn, 'reportGroup') and not txn.reportGroup:
+                txn.reportGroup = conf.reportGroup
+            type_name = type(txn).__name__
+            attributes_num_dict[_class_transaction_dict[type_name][0]] += 1
+            if hasattr(txn, 'amount') and getattr(txn, 'amount') and _class_transaction_dict[type_name][1]:
+                attributes_amount_dict[_class_transaction_dict[type_name][1]] += int(getattr(txn, 'amount'))
+            # Using obj
+            transaction_list_for_batch_request.append(txn)
+            if len(transaction_list_for_batch_request) == 20000:
+                batch_request = fields.batchRequest()
+                batch_request.merchantId = conf.merchantId
+                for k in attributes_num_dict:
+                    if attributes_num_dict[k]:
+                        setattr(batch_request, k, attributes_num_dict[k])
+                for k in attributes_amount_dict:
+                    if attributes_amount_dict[k]:
+                        setattr(batch_request, k, attributes_amount_dict[k])
+                # clean attibutes dict
+                attributes_num_dict = _batch_attributes_num_dict.copy()
+                attributes_amount_dict = _batch_attributes_amount_dict.copy()
+                # add to transaction
+                batch_request.recurringTransaction = transaction_list_for_batch_request
+                transaction_list_for_batch_request = list()
+                batch_request_list.append(batch_request)
+        if len(transaction_list_for_batch_request):
+            batch_request = fields.batchRequest()
+            batch_request.merchantId = conf.merchantId
+            for k in attributes_num_dict:
+                if attributes_num_dict[k]:
+                    setattr(batch_request, k, attributes_num_dict[k])
+            for k in attributes_amount_dict:
+                if attributes_amount_dict[k]:
+                    setattr(batch_request, k, attributes_amount_dict[k])
+            # clean attibutes dict
+            batch_request.recurringTransaction = transaction_list_for_batch_request
+            batch_request_list.append(batch_request)
+
         litle_request.batchRequest = batch_request_list
 
     litle_request.version = conf.VERSION
@@ -579,10 +617,20 @@ class Transactions(object):
         # The purpose to do this is to avoid giving directly access to _transactions
         return list(self._transactions)
 
+    @property
+    def recurringTransactions(self):
+        """A property, return a new list of recurringTransactions.
+
+        Returns:
+            list of recurringTransactions
+        """
+        # The purpose to do this is to avoid giving directly access to _recurringTransactions
+        return list(self._recurringTransactions)
+
     def __init__(self):
         self._RFRRequest = False
-        self._transactionsType = ''
         self._transactions = set()
+        self._recurringTransactions = set()
         obje = getattr(fields, 'RFRRequest')()
         self._RFRRequest_cls_name = type(obje).__name__
 
@@ -599,7 +647,7 @@ class Transactions(object):
             Exceptions.
         """
         # A Batch should not exceed 1,000,000 transactions.
-        if len(self._transactions) > 1000000:
+        if (len(self._transactions) + len(self._recurringTransactions)) > 1000000:
             raise utils.VantivException('A session should not exceed 1,000,000 transactions.')
 
         if isinstance(transaction, dict):
@@ -619,16 +667,13 @@ class Transactions(object):
         else:
             if self._RFRRequest:
                 raise utils.VantivException('cannot mix transactions and RFRRequest')
-            if self._transactionsType == '' and isinstance(transaction, fields.transactionType):
-                self._transactionsType = fields.transactionType
-            elif self._transactionsType == '' and isinstance(transaction, fields.recurringTransactionType):
-                self._transactionsType = fields.recurringTransactionType
-            elif not isinstance(transaction, self._transactionsType):
-                raise utils.VantivException('Cannot mix transaction and recurringTransaction')
             if type_name in _class_transaction_dict:
-                if transaction not in self._transactions:
-                     # Add transaction
+                if isinstance(transaction, fields.transactionType) and transaction not in self._transactions:
+                    # Add transaction
                     self._transactions.add(transaction)
+                elif isinstance(transaction, fields.recurringTransactionType) and \
+                                transaction not in self._recurringTransactions:
+                    self._recurringTransactions.add(transaction)
                 else:
                     raise utils.VantivException('duplicate transaction cannot be added to a batch')
             else:
