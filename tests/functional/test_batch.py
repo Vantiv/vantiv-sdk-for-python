@@ -340,9 +340,25 @@ class TestBatch(unittest.TestCase):
         }
 
         # stream to Vaitiv eCommerce and get object as response
-        with self.assertRaises(utils.VantivException) as context:
-            batch.stream(txn_dict, conf)
-        self.assertIn('Cannot mix transaction and recurringTransaction', str(context.exception))
+        response = batch.stream(txn_dict, conf)
+
+        self.assertIn('batchResponse', response)
+
+        # Example for RFRRequest
+        RFRRequest = fields.RFRRequest()
+        RFRRequest.litleSessionId = response['@litleSessionId']
+
+        transactions = batch.Transactions()
+        transactions.add(RFRRequest)
+
+        # stream to Vaitiv eCommerce and get object as response
+        response_rfr = batch.stream(transactions, conf)
+
+        self.assertIn('batchResponse', response_rfr)
+        self.assertEquals(response_rfr['batchResponse'][0]['authorizationResponse'][0]['litleTxnId'],
+                          response['batchResponse'][0]['authorizationResponse'][0]['litleTxnId'])
+        self.assertEquals(response_rfr['batchResponse'][1]['createPlanResponse']['litleTxnId'],
+                          response['batchResponse'][1]['createPlanResponse']['litleTxnId'])
 
 if __name__ == '__main__':
     unittest.main()
