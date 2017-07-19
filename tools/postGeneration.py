@@ -197,7 +197,7 @@ def generate_rst(_package_root, _dict_list):
     with open(_index_rst_path, 'r') as index_rst:
         lines = index_rst.readlines()
         lines[0] = "Vantiv eCommerce Python SDK %s!\n" % _version
-        lines[1] = '=' * len(lines[0])
+        lines[1] = '=' * (len(lines[0]) - 1) + '\n'
         with open(_index_rst_path, 'w') as rst_file_w:
             rst_file_w.writelines(lines)
 
