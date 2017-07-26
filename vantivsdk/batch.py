@@ -483,7 +483,10 @@ def _create_batch_xml(transactions, conf):
             transaction_list_for_batch_request.append(txn)
             if len(transaction_list_for_batch_request) == 20000:
                 batch_request = fields.batchRequest()
-                batch_request.merchantId = conf.merchantId
+                if hasattr(batch_request, 'sameDayFunding'):
+                    batch_request.sameDayFunding = transactions.sameDayFunding
+                if hasattr(batch_request, 'merchantId'):
+                    batch_request.merchantId = conf.merchantId
                 for k in attributes_num_dict:
                     if attributes_num_dict[k]:
                         setattr(batch_request, k, attributes_num_dict[k])
@@ -499,7 +502,10 @@ def _create_batch_xml(transactions, conf):
                 batch_request_list.append(batch_request)
         if len(transaction_list_for_batch_request):
             batch_request = fields.batchRequest()
-            batch_request.merchantId = conf.merchantId
+            if hasattr(batch_request, 'sameDayFunding'):
+                batch_request.sameDayFunding = transactions.sameDayFunding
+            if hasattr(batch_request, 'merchantId'):
+                batch_request.merchantId = conf.merchantId
             for k in attributes_num_dict:
                 if attributes_num_dict[k]:
                     setattr(batch_request, k, attributes_num_dict[k])
@@ -525,7 +531,10 @@ def _create_batch_xml(transactions, conf):
             transaction_list_for_batch_request.append(txn)
             if len(transaction_list_for_batch_request) == 20000:
                 batch_request = fields.batchRequest()
-                batch_request.merchantId = conf.merchantId
+                if hasattr(batch_request, 'sameDayFunding'):
+                    batch_request.sameDayFunding = transactions.sameDayFunding
+                if hasattr(batch_request, 'merchantId'):
+                    batch_request.merchantId = conf.merchantId
                 for k in attributes_num_dict:
                     if attributes_num_dict[k]:
                         setattr(batch_request, k, attributes_num_dict[k])
@@ -541,7 +550,10 @@ def _create_batch_xml(transactions, conf):
                 batch_request_list.append(batch_request)
         if len(transaction_list_for_batch_request):
             batch_request = fields.batchRequest()
-            batch_request.merchantId = conf.merchantId
+            if hasattr(batch_request, 'sameDayFunding'):
+                batch_request.sameDayFunding = transactions.sameDayFunding
+            if hasattr(batch_request, 'merchantId'):
+                batch_request.merchantId = conf.merchantId
             for k in attributes_num_dict:
                 if attributes_num_dict[k]:
                     setattr(batch_request, k, attributes_num_dict[k])
@@ -582,6 +594,13 @@ def _to_batch_txns(txns_dict):
             else:
                 txn = dict2obj.tofileds({k: txns_dict[k]})
                 txns.add(txn)
+        elif k == 'sameDayFunding':
+            if txns_dict[k] == True:
+                txns.sameDayFunding = txns_dict[k]
+            elif txns_dict[k] == False:
+                pass
+            else:
+                raise utils.VantivException('Value for "%s" in your dict must be True of False' % k)
         else:
             raise utils.VantivException('Transaction "%s" is not supported by batch' % k)
 
@@ -597,6 +616,8 @@ class Transactions(object):
     A instance cannot contain more than 1,000,000 transactions.
 
     """
+
+    sameDayFunding = False
 
     @property
     def is_rfr_request(self):
@@ -631,6 +652,7 @@ class Transactions(object):
         self._RFRRequest = False
         self._transactions = set()
         self._recurringTransactions = set()
+        self.sameDayFunding = False
         obje = getattr(fields, 'RFRRequest')()
         self._RFRRequest_cls_name = type(obje).__name__
 

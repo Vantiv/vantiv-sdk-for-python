@@ -123,6 +123,7 @@ cardTokenType
     .. py:class:: vantivsdk.fields.cardTokenType
 
         :var cardValidationNum: String or Number
+        :var checkoutId: String or Number
         :var expDate: String or Number
         :var litleToken: String or Number
         :var type: String or Number
@@ -463,6 +464,7 @@ token
     .. py:class:: vantivsdk.fields.token
 
         :var cardValidationNum: String or Number
+        :var checkoutId: String or Number
         :var expDate: String or Number
         :var litleToken: String or Number
         :var type: String or Number

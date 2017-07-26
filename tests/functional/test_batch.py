@@ -128,6 +128,7 @@ class TestBatch(unittest.TestCase):
     def test_batch_stream_and_rfr(self):
         # Initial Transactions container
         transactions = batch.Transactions()
+        transactions.sameDayFunding = True
 
         # Card
         card = fields.cardType()
@@ -280,6 +281,7 @@ class TestBatch(unittest.TestCase):
 
     def test_batch_stream_mix_transaction_recurringtransaction(self):
         txn_dict = {
+            'sameDayFunding': False,
             'authorization':[
                 {
                     'reportGroup': 'Planets',
@@ -349,6 +351,7 @@ class TestBatch(unittest.TestCase):
         RFRRequest.litleSessionId = response['@litleSessionId']
 
         transactions = batch.Transactions()
+        transactions.sameDayFunding = True
         transactions.add(RFRRequest)
 
         # stream to Vaitiv eCommerce and get object as response
