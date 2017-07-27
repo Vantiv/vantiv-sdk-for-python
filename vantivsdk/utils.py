@@ -32,6 +32,7 @@ import pyxb
 
 from . import version
 
+
 class Configuration(object):
     """Setup Configuration variables.
 
@@ -57,31 +58,31 @@ class Configuration(object):
     _CONFIG_FILE_PATH = os.path.join(os.environ['VANTIV_SDK_CONFIG'], ".vantiv_python_sdk.conf") \
         if 'VANTIV_SDK_CONFIG' in os.environ else os.path.join(os.path.expanduser("~"), ".vantiv_python_sdk.conf")
 
-    def __init__(self, conf_dict = dict()):
+    def __init__(self, conf_dict=dict()):
         attr_dict = {
-            'user':'',
-            'password':'',
-            'merchantId':'',
-            'reportGroup':'Default Report Group',
-            'url':'https://www.testlitle.com/sandbox/communicator/online',
-            'proxy':'',
-            'sftp_username':'',
-            'sftp_password':'',
-            'sftp_url':'',
-            'batch_requests_path':os.path.join(tempfile.gettempdir(), 'vantiv_sdk_batch_request'),
-            'batch_response_path':os.path.join(tempfile.gettempdir(), 'vantiv_sdk_batch_response'),
-            'fast_url':'',
-            'fast_ssl':True,
-            'fast_port':'',
-            'print_xml':False,
-            'id':'',
+            'user': '',
+            'password': '',
+            'merchantId': '',
+            'reportGroup': 'Default Report Group',
+            'url': 'https://www.testlitle.com/sandbox/communicator/online',
+            'proxy': '',
+            'sftp_username': '',
+            'sftp_password': '',
+            'sftp_url': '',
+            'batch_requests_path': os.path.join(tempfile.gettempdir(), 'vantiv_sdk_batch_request'),
+            'batch_response_path': os.path.join(tempfile.gettempdir(), 'vantiv_sdk_batch_response'),
+            'fast_url': '',
+            'fast_ssl': True,
+            'fast_port': '',
+            'print_xml': False,
+            'id': '',
         }
 
         # set default values
         for k in attr_dict:
-            setattr(self, k , attr_dict[k])
+            setattr(self, k, attr_dict[k])
 
-        # override valuse by loading saved conf
+        # override values by loading saved conf
         try:
             with open(self._CONFIG_FILE_PATH, 'r') as config_file:
                 config_json = json.load(config_file)
@@ -99,8 +100,6 @@ class Configuration(object):
                     setattr(self, k, conf_dict[k])
                 else:
                     raise VantivException('"%s" is NOT an attribute of conf' % k)
-
-
 
     def save(self):
         """Save Class Attributes to .vantiv_python_sdk.conf
