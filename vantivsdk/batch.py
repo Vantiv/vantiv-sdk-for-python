@@ -595,12 +595,10 @@ def _to_batch_txns(txns_dict):
                 txn = dict2obj.tofileds({k: txns_dict[k]})
                 txns.add(txn)
         elif k == 'sameDayFunding':
-            if txns_dict[k] == True:
-                txns.sameDayFunding = txns_dict[k]
-            elif txns_dict[k] == False:
-                pass
+            if txns_dict[k]:
+                txns.sameDayFunding = True
             else:
-                raise utils.VantivException('Value for "%s" in your dict must be True of False' % k)
+                txns.sameDayFunding = False
         else:
             raise utils.VantivException('Transaction "%s" is not supported by batch' % k)
 
@@ -614,6 +612,9 @@ class Transactions(object):
     RFRRequest cannot exist in the same instance with any other transactions.
 
     A instance cannot contain more than 1,000,000 transactions.
+
+    Attributes:
+        sameDayFunding (bool): Since v11.1. Used for Dynamic Payout Funding Instructions only. Set to True to mark this Batch of Funding Instructions for same day funding.
 
     """
 

@@ -281,7 +281,7 @@ class TestBatch(unittest.TestCase):
 
     def test_batch_stream_mix_transaction_recurringtransaction(self):
         txn_dict = {
-            'sameDayFunding': False,
+            'sameDayFunding': 0,
             'authorization':[
                 {
                     'reportGroup': 'Planets',
