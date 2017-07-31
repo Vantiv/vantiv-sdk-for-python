@@ -1,4 +1,4 @@
-Vantiv eCommerce Python SDK 9.12!
+Vantiv eCommerce Python SDK 9.13!
 =================================
 .. toctree::
    :maxdepth: 2

@@ -289,6 +289,12 @@ fraudResult
         :var avsResult: String or Number
         :var cardValidationResult: String or Number
 
+giropayType
+-----------
+    .. py:class:: vantivsdk.fields.giropayType
+
+        :var preferredLanguage: String or Number
+
 healthcareAmounts
 -----------------
     .. py:class:: vantivsdk.fields.healthcareAmounts
@@ -434,6 +440,12 @@ shipToAddress
         :var phone: String or Number
         :var state: String or Number
         :var zip: String or Number
+
+sofortType
+----------
+    .. py:class:: vantivsdk.fields.sofortType
+
+        :var preferredLanguage: String or Number
 
 token
 -----

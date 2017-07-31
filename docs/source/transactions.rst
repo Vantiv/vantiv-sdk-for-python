@@ -512,6 +512,7 @@ sale
         :var filtering: instance of :py:class:`vantivsdk.fields.filteringType`
         :var fraudCheck: instance of :py:class:`vantivsdk.fields.fraudCheckType`
         :var fraudFilterOverride: String or Number
+        :var giropay: instance of :py:class:`vantivsdk.fields.giropayType`
         :var healthcareIIAS: instance of :py:class:`vantivsdk.fields.healthcareIIAS`
         :var id: String or Number
         :var ideal: instance of :py:class:`vantivsdk.fields.idealType`
@@ -536,6 +537,7 @@ sale
         :var secondaryAmount: String or Number
         :var sepaDirectDebit: instance of :py:class:`vantivsdk.fields.sepaDirectDebitType`
         :var shipToAddress: instance of :py:class:`vantivsdk.fields.shipToAddress`
+        :var sofort: instance of :py:class:`vantivsdk.fields.sofortType`
         :var surchargeAmount: String or Number
         :var taxType: String or Number
         :var token: instance of :py:class:`vantivsdk.fields.cardTokenType`
