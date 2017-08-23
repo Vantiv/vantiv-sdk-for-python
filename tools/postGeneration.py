@@ -190,7 +190,7 @@ def _find_types(lines, root_ele_name, ele_name, complexType=False):
 
 
 def generate_rst(_package_root, _dict_list):
-    _version = version.VERSION
+    _version = version.RELEASE
     _index_rst_path = os.path.join(_package_root, 'docs/source/index.rst')
     _transactions_rst_path = os.path.join(_package_root, 'docs/source/transactions.rst')
     _complextypes_rst_path = os.path.join(_package_root, 'docs/source/complextypes.rst')
