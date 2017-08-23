@@ -348,6 +348,21 @@ echeckVoid
         :var litleTxnId: String or Number
         :var reportGroup: String or Number
 
+fastFunding
+-----------
+    .. py:class:: vantivsdk.fields.fastFunding
+
+        :var amount: String or Number
+        :var card: instance of :py:class:`vantivsdk.fields.cardType`
+        :var customerId: String or Number
+        :var fundingSubmerchantId: String or Number
+        :var fundsTransferId: String or Number
+        :var id: String or Number
+        :var paypage: instance of :py:class:`vantivsdk.fields.cardPaypageType`
+        :var reportGroup: String or Number
+        :var submerchantName: String or Number
+        :var token: instance of :py:class:`vantivsdk.fields.cardTokenType`
+
 forceCapture
 ------------
     .. py:class:: vantivsdk.fields.forceCapture
