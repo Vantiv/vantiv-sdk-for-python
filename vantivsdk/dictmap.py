@@ -772,4 +772,4 @@ used_type_dict = {'advancedFraudChecksType': {'customAttribute1': '',
 'virtualGiftCardType': {'accountNumberLength': '', 'giftCardBin': ''},
 'wallet': {'walletSourceType': '', 'walletSourceTypeId': ''}}
 
-abs_class_dict = {'cardOrToken': ['card', 'token'], 'echeckOrEcheckToken': ['echeck', 'echeckToken']}
+abs_class_dict = {'echeckOrEcheckToken': ['echeck', 'echeckToken'], 'cardOrToken': ['card', 'token']}

@@ -31,15 +31,15 @@ import six
 from . import (fields, utils, dict2obj)
 
 
-def request(transaction, conf, return_format='dict', timeout=30):
+def request(transaction, conf, return_format='dict', timeout=30, sameDayFunding = False):
     """Send request to server.
 
     Args:
         transaction: An instance of transaction class
         conf: An instance of utils.Configuration
         return_format: Return format. The default is 'dict'. Could be one of 'dict', 'object' or 'xml'.
-        timeout: timeout for the request in seconds. timeout is not a time limit on the entire response.
-        It's the time that server has not issued a response.
+        timeout: timeout for the request in seconds. timeout is not a time limit on the entire response. It's the time that server has not issued a response.
+        sameDayFunding (bool): Start v11.3. Used for Online Dynamic Payout Funding Instructions only. Set to True for same day funding.
 
     Returns:
         response XML in desired format.
@@ -61,7 +61,7 @@ def request(transaction, conf, return_format='dict', timeout=30):
     if not isinstance(timeout, six.integer_types) or timeout < 0:
         raise utils.VantivException('timeout must be an positive int')
 
-    request_xml = _create_request_xml(transaction, conf)
+    request_xml = _create_request_xml(transaction, conf, sameDayFunding)
     response_xml = _http_post(request_xml, conf, timeout)
 
     response_dict = xmltodict.parse(response_xml)['litleOnlineResponse']
@@ -81,7 +81,7 @@ def request(transaction, conf, return_format='dict', timeout=30):
         raise utils.VantivException(response_dict['@message'])
 
 
-def _create_request_xml(transaction, conf):
+def _create_request_xml(transaction, conf, same_day_funding):
     """Create xml string from transaction object
 
     Args:
@@ -91,7 +91,7 @@ def _create_request_xml(transaction, conf):
     Returns:
         XML string
     """
-    request_obj = _create_request_obj(transaction, conf)
+    request_obj = _create_request_obj(transaction, conf, same_day_funding)
     request_xml = utils.obj_to_xml(request_obj)
 
     if conf.print_xml:
@@ -100,7 +100,7 @@ def _create_request_xml(transaction, conf):
     return request_xml
 
 
-def _create_request_obj(transaction, conf):
+def _create_request_obj(transaction, conf, same_day_funding):
     """ Create <xs:element name="litleOnlineRequest">
 
     <xs:complexType name="baseRequest">
@@ -137,6 +137,10 @@ def _create_request_obj(transaction, conf):
     request_obj.merchantId = conf.merchantId
     request_obj.version = conf.VERSION
     request_obj.merchantSdk = conf.MERCHANTSDK
+
+    if hasattr(request_obj, 'sameDayFunding') and same_day_funding:
+        request_obj.sameDayFunding = same_day_funding
+
     authentication = fields.authentication()
     authentication.user = conf.user
     authentication.password = conf.password
