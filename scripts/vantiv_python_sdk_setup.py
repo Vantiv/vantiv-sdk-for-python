@@ -16,7 +16,7 @@
 # THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
 # EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
 # OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-# NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+# NON-INFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
 # HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
 # WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 # FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
@@ -28,11 +28,11 @@ import sys
 import tempfile
 
 import six
+from vantivsdk import utils
 
 package_root = os.path.dirname(os.path.abspath(os.path.dirname(__file__)))
 sys.path.insert(0, package_root)
 
-from vantivsdk import utils
 
 def ask_user():
     attrs = [
@@ -74,7 +74,7 @@ def ask_user():
     attr_valid_dict = {
         'url': {
             'prelive': 'https://payments.vantivprelive.com/vap/communicator/online',
-            'sandbox': 'https://www.testlitle.com/sandbox/communicator/online',
+            'sandbox': 'https://www.testvantivcnp.com/sandbox/communicator/online',
             'postlive': 'https://payments.vantivpostlive.com/vap/communicator/online',
             'prod': 'https://payments.vantivcnp.com/vap/communicator/online'
         },
@@ -93,7 +93,7 @@ def ask_user():
         'merchantId': 'Your merchantId:',
         'reportGroup': 'Your default report group:',
         'url': 'URL for you online request',
-        'proxy': 'If you want to using https proxy, please input your proxy server address. Must start with "https://"',
+        'proxy': 'If you want to use https proxy, please input your proxy server address. Must start with "https://"',
         'sftp_username': 'Please input your sftp username:',
         'sftp_password': 'Please input your sftp password:',
         'sftp_url': 'Please input your sftp address:',

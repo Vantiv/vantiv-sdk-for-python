@@ -22,6 +22,7 @@
 # FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 # OTHER DEALINGS IN THE SOFTWARE.
 
+from vantivsdk import *
 import os
 import sys
 import unittest
@@ -31,9 +32,8 @@ sys.path.insert(0, package_root)
 
 import pyxb
 
-from vantivsdk import *
-
 conf = utils.Configuration()
+
 
 class TestAuth(unittest.TestCase):
     def test_simple_auth_with_card(self):
@@ -57,7 +57,7 @@ class TestAuth(unittest.TestCase):
     def test_simple_auth_with_card_dict(self):
         # Transactions presented by dict
         txn_dict = {
-            'authorization':{
+            'authorization': {
                 'reportGroup': 'Planets',
                 'orderId': '12344',
                 'amount': '106',
