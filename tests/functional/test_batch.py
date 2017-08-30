@@ -278,9 +278,9 @@ class TestBatch(unittest.TestCase):
         self.assertEquals(response_rfr['batchResponse']['authorizationResponse'][0]['litleTxnId'],
                           response['batchResponse']['authorizationResponse'][0]['litleTxnId'])
 
-    def test_batch_stream_mix_transaction_recurringtransaction(self):
+    def test_batch_stream_mix_transaction_recurring_transaction(self):
         txn_dict = {
-            'authorization':[
+            'authorization': [
                 {
                     'reportGroup': 'Planets',
                     'orderId': '12344',
