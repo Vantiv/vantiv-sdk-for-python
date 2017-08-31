@@ -55,7 +55,7 @@ for key in _supported_transaction_types:
 def submit(transactions, conf, filename='', timeout=60):
     """Submitting a Session File for Processing to server via sFTP
 
-    1. Generate litleRequest xml.
+    1. Generate cnpRequest xml.
     2. Save xml at local file system.
     3. Send xml file to server.
 
@@ -89,7 +89,7 @@ def submit(transactions, conf, filename='', timeout=60):
     if not isinstance(timeout, six.integer_types) or timeout < 0:
         raise utils.VantivException('timeout must be an positive int')
 
-    # 1. Generate litleRequest xml.
+    # 1. Generate cnpRequest xml.
     xml_str = _create_batch_xml(transactions, conf)
 
     # 2. Save xml at local file system.
@@ -208,7 +208,7 @@ def stream(transactions, conf, return_format='dict', timeout_send=60, timeout_re
 
 
 def _generate_response(_response_xml, _return_format, conf):
-    response_dict = xmltodict.parse(_response_xml)['litleResponse']
+    response_dict = xmltodict.parse(_response_xml)['cnpResponse']
     if response_dict['@response'] == '0':
         return_f_l = _return_format.lower()
         if return_f_l == 'xml':
@@ -267,8 +267,8 @@ def _stream_socket(xml_str, conf, timeout_send, timeout_rev):
             data = s.recv(4096)
             if data:
                 str_array.append(data)
-                # break when got litleResponse close tag
-                if b'</litleResponse>' in data:
+                # break when got cnpResponse close tag
+                if b'</cnpResponse>' in data:
                     break
                 start = time.time()
             else:
@@ -444,14 +444,14 @@ def _save_str_file(xml_str, path, filename):
 
 
 def _create_batch_xml(transactions, conf):
-    """Create litleRequest xml string
+    """Create cnpRequest xml string
 
     Args:
         transactions: an instance of batch.Transactions.
         conf: An instance of utils.Configuration.
 
     Returns:
-        litleRequest xml string
+        cnpRequest xml string
     """
 
     authentication = fields.authentication()
@@ -461,13 +461,13 @@ def _create_batch_xml(transactions, conf):
     txns = transactions.transactions
     rtxns = transactions.recurringTransactions
 
-    litle_request = fields.litleRequest()
+    cnp_request = fields.cnpRequest()
     batch_request_list = list()
     transaction_list_for_batch_request = list()
 
     if transactions.is_rfr_request:
         # Using obj
-        litle_request.RFRRequest = txns[0]
+        cnp_request.RFRRequest = txns[0]
     else:
         attributes_num_dict = _batch_attributes_num_dict.copy()
         attributes_amount_dict = _batch_attributes_amount_dict.copy()
@@ -564,14 +564,14 @@ def _create_batch_xml(transactions, conf):
             batch_request.recurringTransaction = transaction_list_for_batch_request
             batch_request_list.append(batch_request)
 
-        litle_request.batchRequest = batch_request_list
+        cnp_request.batchRequest = batch_request_list
 
-    litle_request.version = conf.VERSION
-    litle_request.id = conf.id
-    litle_request.numBatchRequests = len(batch_request_list)
-    litle_request.authentication = authentication
+    cnp_request.version = conf.VERSION
+    cnp_request.id = conf.id
+    cnp_request.numBatchRequests = len(batch_request_list)
+    cnp_request.authentication = authentication
 
-    batch_xml = utils.obj_to_xml(litle_request).decode('utf-8')
+    batch_xml = utils.obj_to_xml(cnp_request).decode('utf-8')
 
     if conf.print_xml:
         print('Batch request XML Obj:\n', batch_xml, '\n')

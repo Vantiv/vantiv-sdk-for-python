@@ -53,7 +53,7 @@ def request(transaction, conf, return_format='dict', timeout=30, sameDayFunding 
     if not (isinstance(transaction, fields.recurringTransactionType)
             or isinstance(transaction, fields.transactionType)):
         raise utils.VantivException(
-            'transaction must be either litle_xml_fields.recurringTransactionType or transactionType')
+            'transaction must be either cnp_xml_fields.recurringTransactionType or transactionType')
 
     if not isinstance(conf, utils.Configuration):
         raise utils.VantivException('conf must be an instance of utils.Configuration')
@@ -64,7 +64,7 @@ def request(transaction, conf, return_format='dict', timeout=30, sameDayFunding 
     request_xml = _create_request_xml(transaction, conf, sameDayFunding)
     response_xml = _http_post(request_xml, conf, timeout)
 
-    response_dict = xmltodict.parse(response_xml)['litleOnlineResponse']
+    response_dict = xmltodict.parse(response_xml)['cnpOnlineResponse']
 
     if response_dict['@response'] == '0':
         return_f_l = return_format.lower()
@@ -101,7 +101,7 @@ def _create_request_xml(transaction, conf, same_day_funding):
 
 
 def _create_request_obj(transaction, conf, same_day_funding):
-    """ Create <xs:element name="litleOnlineRequest">
+    """ Create <xs:element name="cnpOnlineRequest">
 
     <xs:complexType name="baseRequest">
         <xs:sequence>
@@ -114,7 +114,7 @@ def _create_request_obj(transaction, conf, same_day_funding):
         <xs:attribute name="version" type="xp:versionType" use="required" />
     </xs:complexType>
 
-    <xs:element name="litleOnlineRequest">
+    <xs:element name="cnpOnlineRequest">
         <xs:complexType>
             <xs:complexContent>
                 <xs:extension base="xp:baseRequest">
@@ -131,9 +131,9 @@ def _create_request_obj(transaction, conf, same_day_funding):
         conf: an instance of utils.Configuration
 
     Returns:
-        an instance of litleOnlineRequest object
+        an instance of cnpOnlineRequest object
     """
-    request_obj = fields.litleOnlineRequest()
+    request_obj = fields.cnpOnlineRequest()
     request_obj.merchantId = conf.merchantId
     request_obj.version = conf.VERSION
     request_obj.merchantSdk = conf.MERCHANTSDK

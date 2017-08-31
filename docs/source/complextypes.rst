@@ -54,26 +54,6 @@ authInformation
         :var authDate: String or Number
         :var fraudResult: instance of :py:class:`vantivsdk.fields.fraudResult`
 
-billMeLaterRequest
-------------------
-    .. py:class:: vantivsdk.fields.billMeLaterRequest
-
-        :var authorizationSourcePlatform: String or Number
-        :var bmlMerchantId: String or Number
-        :var bmlProductType: instance of :py:class:`vantivsdk.fields.bmlProductType`
-        :var customerBillingAddressChanged: String or Number
-        :var customerEmailChanged: String or Number
-        :var customerPasswordChanged: String or Number
-        :var customerPhoneChanged: String or Number
-        :var itemCategoryCode: String or Number
-        :var merchantPromotionalCode: String or Number
-        :var preapprovalNumber: String or Number
-        :var secretQuestionAnswer: String or Number
-        :var secretQuestionCode: String or Number
-        :var termsAndConditions: String or Number
-        :var virtualAuthenticationKeyData: String or Number
-        :var virtualAuthenticationKeyPresenceIndicator: String or Number
-
 billToAddress
 -------------
     .. py:class:: vantivsdk.fields.billToAddress
@@ -92,11 +72,6 @@ billToAddress
         :var phone: String or Number
         :var state: String or Number
         :var zip: String or Number
-
-bmlProductType
---------------
-    .. py:class:: vantivsdk.fields.bmlProductType
-
 
 card
 ----
@@ -124,8 +99,8 @@ cardTokenType
 
         :var cardValidationNum: String or Number
         :var checkoutId: String or Number
+        :var cnpToken: String or Number
         :var expDate: String or Number
-        :var litleToken: String or Number
         :var type: String or Number
 
 cardType
@@ -138,6 +113,14 @@ cardType
         :var pin: String or Number
         :var track: String or Number
         :var type: String or Number
+
+cnpInternalRecurringRequestType
+-------------------------------
+    .. py:class:: vantivsdk.fields.cnpInternalRecurringRequestType
+
+        :var finalPayment: String or Number
+        :var recurringTxnId: String or Number
+        :var subscriptionId: String or Number
 
 createAddOnType
 ---------------
@@ -231,7 +214,7 @@ echeckToken
 
         :var accType: String or Number
         :var checkNum: String or Number
-        :var litleToken: String or Number
+        :var cnpToken: String or Number
         :var routingNum: String or Number
 
 echeckType
@@ -347,14 +330,6 @@ lineItemData
         :var unitCost: String or Number
         :var unitOfMeasure: String or Number
 
-litleInternalRecurringRequestType
----------------------------------
-    .. py:class:: vantivsdk.fields.litleInternalRecurringRequestType
-
-        :var finalPayment: String or Number
-        :var recurringTxnId: String or Number
-        :var subscriptionId: String or Number
-
 merchantDataType
 ----------------
     .. py:class:: vantivsdk.fields.merchantDataType
@@ -465,8 +440,8 @@ token
 
         :var cardValidationNum: String or Number
         :var checkoutId: String or Number
+        :var cnpToken: String or Number
         :var expDate: String or Number
-        :var litleToken: String or Number
         :var type: String or Number
 
 updateAddOnType

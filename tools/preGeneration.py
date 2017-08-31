@@ -40,11 +40,11 @@ if (sys.version_info[:3] < (2, 7 ,9)) or ((sys.version_info[0] == 3) and sys.ver
 
 def combine_xsd(_version, _package_root):
     schema_file_names = [
-        'litleCommon',
-        'litleRecurring',
-        'litleTransaction',
-        'litleBatch',
-        'litleOnline'
+        'cnpCommon',
+        'cnpRecurring',
+        'cnpTransaction',
+        'cnpBatch',
+        'cnpOnline'
     ]
     schema_files = dict()
     for name in schema_file_names:

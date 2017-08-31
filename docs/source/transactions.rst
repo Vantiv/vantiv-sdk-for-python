@@ -29,9 +29,9 @@ activateReversal
     .. py:class:: vantivsdk.fields.activateReversal
 
         :var card: instance of :py:class:`vantivsdk.fields.giftCardCardType`
+        :var cnpTxnId: String or Number
         :var customerId: String or Number
         :var id: String or Number
-        :var litleTxnId: String or Number
         :var originalAmount: String or Number
         :var originalRefCode: String or Number
         :var originalSequenceNumber: String or Number
@@ -46,9 +46,9 @@ authReversal
 
         :var actionReason: String or Number
         :var amount: String or Number
+        :var cnpTxnId: String or Number
         :var customerId: String or Number
         :var id: String or Number
-        :var litleTxnId: String or Number
         :var payPalNotes: String or Number
         :var reportGroup: String or Number
         :var surchargeAmount: String or Number
@@ -62,10 +62,10 @@ authorization
         :var amexAggregatorData: instance of :py:class:`vantivsdk.fields.amexAggregatorData`
         :var amount: String or Number
         :var applepay: instance of :py:class:`vantivsdk.fields.applepayType`
-        :var billMeLaterRequest: instance of :py:class:`vantivsdk.fields.billMeLaterRequest`
         :var billToAddress: instance of :py:class:`vantivsdk.fields.billToAddress`
         :var card: instance of :py:class:`vantivsdk.fields.cardType`
         :var cardholderAuthentication: instance of :py:class:`vantivsdk.fields.fraudCheckType`
+        :var cnpTxnId: String or Number
         :var customBilling: instance of :py:class:`vantivsdk.fields.customBilling`
         :var customerId: String or Number
         :var customerInfo: instance of :py:class:`vantivsdk.fields.customerInfo`
@@ -75,7 +75,6 @@ authorization
         :var fraudFilterOverride: String or Number
         :var healthcareIIAS: instance of :py:class:`vantivsdk.fields.healthcareIIAS`
         :var id: String or Number
-        :var litleTxnId: String or Number
         :var merchantData: instance of :py:class:`vantivsdk.fields.merchantDataType`
         :var mpos: instance of :py:class:`vantivsdk.fields.mposType`
         :var orderId: String or Number
@@ -119,11 +118,11 @@ capture
     .. py:class:: vantivsdk.fields.capture
 
         :var amount: String or Number
+        :var cnpTxnId: String or Number
         :var customBilling: instance of :py:class:`vantivsdk.fields.customBilling`
         :var customerId: String or Number
         :var enhancedData: instance of :py:class:`vantivsdk.fields.enhancedData`
         :var id: String or Number
-        :var litleTxnId: String or Number
         :var partial: String or Number
         :var payPalNotes: String or Number
         :var payPalOrderComplete: String or Number
@@ -139,7 +138,6 @@ captureGivenAuth
         :var amexAggregatorData: instance of :py:class:`vantivsdk.fields.amexAggregatorData`
         :var amount: String or Number
         :var authInformation: instance of :py:class:`vantivsdk.fields.authInformation`
-        :var billMeLaterRequest: instance of :py:class:`vantivsdk.fields.billMeLaterRequest`
         :var billToAddress: instance of :py:class:`vantivsdk.fields.billToAddress`
         :var card: instance of :py:class:`vantivsdk.fields.cardType`
         :var customBilling: instance of :py:class:`vantivsdk.fields.customBilling`
@@ -185,14 +183,13 @@ credit
         :var actionReason: String or Number
         :var amexAggregatorData: instance of :py:class:`vantivsdk.fields.amexAggregatorData`
         :var amount: String or Number
-        :var billMeLaterRequest: instance of :py:class:`vantivsdk.fields.billMeLaterRequest`
         :var billToAddress: instance of :py:class:`vantivsdk.fields.billToAddress`
         :var card: instance of :py:class:`vantivsdk.fields.cardType`
+        :var cnpTxnId: String or Number
         :var customBilling: instance of :py:class:`vantivsdk.fields.customBilling`
         :var customerId: String or Number
         :var enhancedData: instance of :py:class:`vantivsdk.fields.enhancedData`
         :var id: String or Number
-        :var litleTxnId: String or Number
         :var merchantData: instance of :py:class:`vantivsdk.fields.merchantDataType`
         :var mpos: instance of :py:class:`vantivsdk.fields.mposType`
         :var orderId: String or Number
@@ -225,9 +222,9 @@ deactivateReversal
     .. py:class:: vantivsdk.fields.deactivateReversal
 
         :var card: instance of :py:class:`vantivsdk.fields.giftCardCardType`
+        :var cnpTxnId: String or Number
         :var customerId: String or Number
         :var id: String or Number
-        :var litleTxnId: String or Number
         :var originalRefCode: String or Number
         :var originalSequenceNumber: String or Number
         :var originalSystemTraceId: String or Number
@@ -239,9 +236,9 @@ depositReversal
     .. py:class:: vantivsdk.fields.depositReversal
 
         :var card: instance of :py:class:`vantivsdk.fields.giftCardCardType`
+        :var cnpTxnId: String or Number
         :var customerId: String or Number
         :var id: String or Number
-        :var litleTxnId: String or Number
         :var originalAmount: String or Number
         :var originalRefCode: String or Number
         :var originalSequenceNumber: String or Number
@@ -255,12 +252,12 @@ echeckCredit
 
         :var amount: String or Number
         :var billToAddress: instance of :py:class:`vantivsdk.fields.billToAddress`
+        :var cnpTxnId: String or Number
         :var customBilling: instance of :py:class:`vantivsdk.fields.customBilling`
         :var customIdentifier: String or Number
         :var customerId: String or Number
         :var echeckOrEcheckToken: instance of :py:class:`vantivsdk.fields.echeck`, :py:class:`vantivsdk.fields.echeckToken`, 
         :var id: String or Number
-        :var litleTxnId: String or Number
         :var merchantData: instance of :py:class:`vantivsdk.fields.merchantDataType`
         :var orderId: String or Number
         :var orderSource: String or Number
@@ -297,11 +294,11 @@ echeckRedeposit
 ---------------
     .. py:class:: vantivsdk.fields.echeckRedeposit
 
+        :var cnpTxnId: String or Number
         :var customIdentifier: String or Number
         :var customerId: String or Number
         :var echeckOrEcheckToken: instance of :py:class:`vantivsdk.fields.echeck`, :py:class:`vantivsdk.fields.echeckToken`, 
         :var id: String or Number
-        :var litleTxnId: String or Number
         :var merchantData: instance of :py:class:`vantivsdk.fields.merchantDataType`
         :var reportGroup: String or Number
 
@@ -311,12 +308,12 @@ echeckSale
 
         :var amount: String or Number
         :var billToAddress: instance of :py:class:`vantivsdk.fields.billToAddress`
+        :var cnpTxnId: String or Number
         :var customBilling: instance of :py:class:`vantivsdk.fields.customBilling`
         :var customIdentifier: String or Number
         :var customerId: String or Number
         :var echeckOrEcheckToken: instance of :py:class:`vantivsdk.fields.echeck`, :py:class:`vantivsdk.fields.echeckToken`, 
         :var id: String or Number
-        :var litleTxnId: String or Number
         :var merchantData: instance of :py:class:`vantivsdk.fields.merchantDataType`
         :var orderId: String or Number
         :var orderSource: String or Number
@@ -343,9 +340,9 @@ echeckVoid
 ----------
     .. py:class:: vantivsdk.fields.echeckVoid
 
+        :var cnpTxnId: String or Number
         :var customerId: String or Number
         :var id: String or Number
-        :var litleTxnId: String or Number
         :var reportGroup: String or Number
 
 fastFunding
@@ -406,9 +403,9 @@ fundingInstructionVoid
 ----------------------
     .. py:class:: vantivsdk.fields.fundingInstructionVoid
 
+        :var cnpTxnId: String or Number
         :var customerId: String or Number
         :var id: String or Number
-        :var litleTxnId: String or Number
         :var reportGroup: String or Number
 
 giftCardAuthReversal
@@ -416,9 +413,9 @@ giftCardAuthReversal
     .. py:class:: vantivsdk.fields.giftCardAuthReversal
 
         :var card: instance of :py:class:`vantivsdk.fields.giftCardCardType`
+        :var cnpTxnId: String or Number
         :var customerId: String or Number
         :var id: String or Number
-        :var litleTxnId: String or Number
         :var originalAmount: String or Number
         :var originalRefCode: String or Number
         :var originalSequenceNumber: String or Number
@@ -432,9 +429,9 @@ giftCardCapture
 
         :var captureAmount: String or Number
         :var card: instance of :py:class:`vantivsdk.fields.giftCardCardType`
+        :var cnpTxnId: String or Number
         :var customerId: String or Number
         :var id: String or Number
-        :var litleTxnId: String or Number
         :var originalAmount: String or Number
         :var originalRefCode: String or Number
         :var originalTxnTime: String or Number
@@ -446,10 +443,10 @@ giftCardCredit
     .. py:class:: vantivsdk.fields.giftCardCredit
 
         :var card: instance of :py:class:`vantivsdk.fields.giftCardCardType`
+        :var cnpTxnId: String or Number
         :var creditAmount: String or Number
         :var customerId: String or Number
         :var id: String or Number
-        :var litleTxnId: String or Number
         :var orderId: String or Number
         :var orderSource: String or Number
         :var reportGroup: String or Number
@@ -471,9 +468,9 @@ loadReversal
     .. py:class:: vantivsdk.fields.loadReversal
 
         :var card: instance of :py:class:`vantivsdk.fields.giftCardCardType`
+        :var cnpTxnId: String or Number
         :var customerId: String or Number
         :var id: String or Number
-        :var litleTxnId: String or Number
         :var originalAmount: String or Number
         :var originalRefCode: String or Number
         :var originalSequenceNumber: String or Number
@@ -532,8 +529,8 @@ queryTransaction
         :var customerId: String or Number
         :var id: String or Number
         :var origActionType: String or Number
+        :var origCnpTxnId: String or Number
         :var origId: String or Number
-        :var origLitleTxnId: String or Number
         :var reportGroup: String or Number
 
 refundReversal
@@ -541,9 +538,9 @@ refundReversal
     .. py:class:: vantivsdk.fields.refundReversal
 
         :var card: instance of :py:class:`vantivsdk.fields.giftCardCardType`
+        :var cnpTxnId: String or Number
         :var customerId: String or Number
         :var id: String or Number
-        :var litleTxnId: String or Number
         :var originalAmount: String or Number
         :var originalRefCode: String or Number
         :var originalSequenceNumber: String or Number
@@ -597,10 +594,11 @@ sale
         :var amexAggregatorData: instance of :py:class:`vantivsdk.fields.amexAggregatorData`
         :var amount: String or Number
         :var applepay: instance of :py:class:`vantivsdk.fields.applepayType`
-        :var billMeLaterRequest: instance of :py:class:`vantivsdk.fields.billMeLaterRequest`
         :var billToAddress: instance of :py:class:`vantivsdk.fields.billToAddress`
         :var card: instance of :py:class:`vantivsdk.fields.cardType`
         :var cardholderAuthentication: instance of :py:class:`vantivsdk.fields.fraudCheckType`
+        :var cnpInternalRecurringRequest: instance of :py:class:`vantivsdk.fields.cnpInternalRecurringRequestType`
+        :var cnpTxnId: String or Number
         :var customBilling: instance of :py:class:`vantivsdk.fields.customBilling`
         :var customerId: String or Number
         :var customerInfo: instance of :py:class:`vantivsdk.fields.customerInfo`
@@ -613,8 +611,6 @@ sale
         :var healthcareIIAS: instance of :py:class:`vantivsdk.fields.healthcareIIAS`
         :var id: String or Number
         :var ideal: instance of :py:class:`vantivsdk.fields.idealType`
-        :var litleInternalRecurringRequest: instance of :py:class:`vantivsdk.fields.litleInternalRecurringRequestType`
-        :var litleTxnId: String or Number
         :var merchantData: instance of :py:class:`vantivsdk.fields.merchantDataType`
         :var mpos: instance of :py:class:`vantivsdk.fields.mposType`
         :var orderId: String or Number
@@ -695,9 +691,9 @@ unloadReversal
     .. py:class:: vantivsdk.fields.unloadReversal
 
         :var card: instance of :py:class:`vantivsdk.fields.giftCardCardType`
+        :var cnpTxnId: String or Number
         :var customerId: String or Number
         :var id: String or Number
-        :var litleTxnId: String or Number
         :var originalAmount: String or Number
         :var originalRefCode: String or Number
         :var originalSequenceNumber: String or Number
@@ -710,9 +706,9 @@ updateCardValidationNumOnToken
     .. py:class:: vantivsdk.fields.updateCardValidationNumOnToken
 
         :var cardValidationNum: String or Number
+        :var cnpToken: String or Number
         :var customerId: String or Number
         :var id: String or Number
-        :var litleToken: String or Number
         :var orderId: String or Number
         :var reportGroup: String or Number
 
@@ -771,9 +767,9 @@ void
 ----
     .. py:class:: vantivsdk.fields.void
 
+        :var cnpTxnId: String or Number
         :var customerId: String or Number
         :var id: String or Number
-        :var litleTxnId: String or Number
         :var processingInstructions: instance of :py:class:`vantivsdk.fields.processingInstructions`
         :var reportGroup: String or Number
 

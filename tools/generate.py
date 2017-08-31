@@ -41,6 +41,7 @@ os.system('python %s' % pre_gen_path)
 #
 print('Generate module fields using pyxb')
 xsd_abs_path =  os.path.join(package_root, xsd_name)
+os.system('rm -f fields.py')
 os.system('pyxbgen -u %s -m fields' % xsd_abs_path)
 
 print('Copy filed.py to package')
