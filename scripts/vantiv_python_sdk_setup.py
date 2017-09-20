@@ -73,10 +73,13 @@ def ask_user():
     }
     attr_valid_dict = {
         'url': {
+            'sandbox': 'https://www.testlitle.com/sandbox/communicator/online',
             'prelive': 'https://payments.vantivprelive.com/vap/communicator/online',
-            'sandbox': 'https://www.testvantivcnp.com/sandbox/communicator/online',
             'postlive': 'https://payments.vantivpostlive.com/vap/communicator/online',
-            'prod': 'https://payments.vantivcnp.com/vap/communicator/online'
+            'prod': 'https://payments.vantivcnp.com/vap/communicator/online',
+            'transactprelive': 'https://transact.vantivprelive.com/vap/communicator/online',
+            'transactpostlive': 'https://transact.vantivpostlive.com/vap/communicator/online',
+            'transactprod': 'https://transact.vantivcnp.com/vap/communicator/online'
         },
         'fast_ssl': {
             'y': True,
