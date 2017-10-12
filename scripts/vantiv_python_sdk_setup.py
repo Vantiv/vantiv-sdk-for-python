@@ -73,7 +73,7 @@ def ask_user():
     }
     attr_valid_dict = {
         'url': {
-            'sandbox': 'https://www.testlitle.com/sandbox/communicator/online',
+            'sandbox': 'https://www.testvantivcnp.com/sandbox/communicator/online',
             'prelive': 'https://payments.vantivprelive.com/vap/communicator/online',
             'postlive': 'https://payments.vantivpostlive.com/vap/communicator/online',
             'prod': 'https://payments.vantivcnp.com/vap/communicator/online',
