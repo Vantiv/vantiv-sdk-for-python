@@ -24,6 +24,12 @@
 
 from __future__ import absolute_import
 
+import os
+import sys
+
+package_root = os.path.abspath(os.path.dirname(__file__))
+sys.path.insert(0, package_root)
+
 import run_test_utils
 
 tests_dir = ['certification/required']
