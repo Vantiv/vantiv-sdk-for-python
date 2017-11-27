@@ -93,14 +93,14 @@ class TestOnline(unittest.TestCase):
 
         transaction.card = card
 
-        mock__http_post.return_value = """<litleOnlineResponse version='11.0' response='1' message='Valid Format' xmlns='http://www.litle.com/schema'>
-</litleOnlineResponse>
+        mock__http_post.return_value = """<cnpOnlineResponse version='11.0' response='1' message='Valid Format' xmlns='http://www.vantivcnp.com/schema'>
+</cnpOnlineResponse>
         """
         self.assertRaises(utils.VantivException, online.request, transaction, conf, 'dict')
 
-        mock__http_post.return_value = """<litleOnlineResponse version='11.0' response='0' message='Valid Format' xmlns='http://www.litle.com/schema'>
+        mock__http_post.return_value = """<cnpOnlineResponse version='11.0' response='0' message='Valid Format' xmlns='http://www.vantivcnp.com/schema'>
           <authorizationResponse id='thisisid' reportGroup='Planets' customerId=''>
-            <litleTxnId>4544691351798650001</litleTxnId>
+            <cnpTxnId>4544691351798650001</cnpTxnId>
             <orderId>12344</orderId>
             <response>000</response>
             <responseTime>2017-03-13T12:14:00</responseTime>
@@ -120,12 +120,12 @@ class TestOnline(unittest.TestCase):
             </accountUpdater>
             <networkTransactionId>63225578415568556365452427825</networkTransactionId>
           </authorizationResponse>
-        </litleOnlineResponse>
+        </cnpOnlineResponse>
                 """
         # return dict
         response = online.request(transaction, conf)
         self.assertEquals('0', response['@response'])
-        self.assertEquals('4544691351798650001', response['authorizationResponse']['litleTxnId'])
+        self.assertEquals('4544691351798650001', response['authorizationResponse']['cnpTxnId'])
         self.assertIsInstance(response, dict)
 
         # return xml string
