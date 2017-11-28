@@ -25,8 +25,12 @@
 import os
 import sys
 import unittest
-from unittest import mock
-import six
+
+if sys.version_info[0:2] >= (3, 3):
+    from unittest import mock
+else:
+    from mock import mock
+
 
 package_root = os.path.dirname(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
 sys.path.insert(0, package_root)
