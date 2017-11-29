@@ -137,21 +137,30 @@ class TestSale(unittest.TestCase):
 
 
     def test_simple_sale_with_token(self):
-        transaction = fields.sale()
-        transaction.reportGroup = 'Planets'
-        transaction.orderId = '12344'
-        transaction.amount = 106
-        transaction.orderSource = 'ecommerce'
-        transaction.id = 'ThisIsID'
+        txn_dict = {
+            'sale': {
+                'orderId': '6',
+                'amount': 10010,
+                'orderSource': 'ecommerce',
+                'id': 'thisisid',
+                'billToAddress': {
+                    'name': 'Joe Green',
+                    'addressLine1': '6 Main St.',
+                    'city': 'Derry',
+                    'state': 'NH',
+                    'zip': '03038',
+                    'country': 'USA',
+                },
+                'token': {
+                    'cnpToken': '1111222233334000',
+                    'expDate': '1210',
+                    'cardValidationNum': '555',
+                    'type': 'VI',
+                }
+            }
+        }
 
-        token = fields.cardTokenType()
-        token.litleToken = '1111222233334000'
-        token.expDate = '1210'
-        token.cardValidationNum = '555'
-        token.type = 'VI'
-        transaction.token = token
-
-        response = online.request(transaction, conf)
+        response = online.request(txn_dict, conf)
         self.assertEquals('000', response['saleResponse']['response'])
         
     def test_sale_with_wallet(self):
