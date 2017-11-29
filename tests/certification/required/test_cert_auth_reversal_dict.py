@@ -73,7 +73,7 @@ class TestCertEcheckDict(unittest.TestCase):
         # orderId *A
         txn_dict = {
             'capture': {
-                'litleTxnId': response['authorizationResponse']['litleTxnId'],
+                'cnpTxnId': response['authorizationResponse']['cnpTxnId'],
                 'id': 'ThisIsID',
                 'amount': 5050,
             }
@@ -85,7 +85,7 @@ class TestCertEcheckDict(unittest.TestCase):
         # orderId *B
         txn_dict = {
             'authReversal': {
-                'litleTxnId': response['authorizationResponse']['litleTxnId'],
+                'cnpTxnId': response['authorizationResponse']['cnpTxnId'],
                 'id': 'ThisIsID',
             }
         }
@@ -132,7 +132,7 @@ class TestCertEcheckDict(unittest.TestCase):
         # orderId *A
         txn_dict = {
             'authReversal': {
-                'litleTxnId': response['authorizationResponse']['litleTxnId'],
+                'cnpTxnId': response['authorizationResponse']['cnpTxnId'],
                 'id': 'ThisIsID',
             }
         }
@@ -174,7 +174,7 @@ class TestCertEcheckDict(unittest.TestCase):
         # orderId *A
         txn_dict = {
             'authReversal': {
-                'litleTxnId': response['authorizationResponse']['litleTxnId'],
+                'cnpTxnId': response['authorizationResponse']['cnpTxnId'],
                 'id': 'ThisIsID',
             }
         }
@@ -214,7 +214,7 @@ class TestCertEcheckDict(unittest.TestCase):
         # orderId *A
         txn_dict = {
             'capture': {
-                'litleTxnId': response['authorizationResponse']['litleTxnId'],
+                'cnpTxnId': response['authorizationResponse']['cnpTxnId'],
                 'id': 'ThisIsID',
                 'amount': 5050,
             }
@@ -226,7 +226,7 @@ class TestCertEcheckDict(unittest.TestCase):
         # orderId *B
         txn_dict = {
             'authReversal': {
-                'litleTxnId': response['authorizationResponse']['litleTxnId'],
+                'cnpTxnId': response['authorizationResponse']['cnpTxnId'],
                 'id': 'ThisIsID',
                 'amount': 5050,
             }
@@ -259,7 +259,7 @@ class TestCertEcheckDict(unittest.TestCase):
         # orderId *A
         txn_dict = {
             'authReversal': {
-                'litleTxnId': response['authorizationResponse']['litleTxnId'],
+                'cnpTxnId': response['authorizationResponse']['cnpTxnId'],
                 'id': 'ThisIsID',
                 'amount': 10000,
             }

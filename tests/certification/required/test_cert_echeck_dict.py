@@ -50,12 +50,10 @@ class TestCertEcheckDict(unittest.TestCase):
                     'lastName': 'Black',
                     'phone': '999-999-9999',
                 },
-                'echeckOrEcheckToken': {
-                    'echeck': {
-                        'accNum': '10@BC99999',
-                        'accType': 'Checking',
-                        'routingNum': '053100300',
-                    }
+                'echeck': {
+                    'accNum': '10@BC99999',
+                    'accType': 'Checking',
+                    'routingNum': '053100300',
                 }
             }
         }
@@ -76,12 +74,10 @@ class TestCertEcheckDict(unittest.TestCase):
                     'lastName': 'Smith',
                     'phone': '999-999-9999',
                 },
-                'echeckOrEcheckToken': {
-                    'echeck': {
-                        'accNum': '1099999999',
-                        'accType': 'Checking',
-                        'routingNum': '011075150',
-                    }
+                'echeck': {
+                    'accNum': '1099999999',
+                    'accType': 'Checking',
+                    'routingNum': '011075150',
                 }
             }
         }
@@ -103,12 +99,10 @@ class TestCertEcheckDict(unittest.TestCase):
                     'companyName': 'Good Goods Inc',
                     'phone': '999-999-9999',
                 },
-                'echeckOrEcheckToken': {
-                    'echeck': {
-                        'accNum': '3099999999',
-                        'accType': 'Corporate',
-                        'routingNum': '053100300',
-                    }
+                'echeck': {
+                    'accNum': '3099999999',
+                    'accType': 'Corporate',
+                    'routingNum': '053100300',
                 }
             }
         }
@@ -130,12 +124,10 @@ class TestCertEcheckDict(unittest.TestCase):
                     'companyName': 'Green Co',
                     'phone': '999-999-9999',
                 },
-                'echeckOrEcheckToken': {
-                    'echeck': {
-                        'accNum': '8099999999',
-                        'accType': 'Corporate',
-                        'routingNum': '011075150',
-                    }
+                'echeck': {
+                    'accNum': '8099999999',
+                    'accType': 'Corporate',
+                    'routingNum': '011075150',
                 }
             }
         }
@@ -158,12 +150,10 @@ class TestCertEcheckDict(unittest.TestCase):
                     'middleInitial': 'J',
                     'phone': '999-999-9999',
                 },
-                'echeckOrEcheckToken': {
-                    'echeck': {
-                        'accNum': '10@BC99999',
-                        'accType': 'Checking',
-                        'routingNum': '053100300',
-                    }
+                'echeck': {
+                    'accNum': '10@BC99999',
+                    'accType': 'Checking',
+                    'routingNum': '053100300',
                 }
             }
         }
@@ -185,12 +175,10 @@ class TestCertEcheckDict(unittest.TestCase):
                     'lastName': 'Black',
                     'phone': '999-999-9999',
                 },
-                'echeckOrEcheckToken': {
-                    'echeck': {
-                        'accNum': '4099999992',
-                        'accType': 'Checking',
-                        'routingNum': '011075150',
-                    }
+                'echeck': {
+                    'accNum': '4099999992',
+                    'accType': 'Checking',
+                    'routingNum': '011075150',
                 }
             }
         }
@@ -201,7 +189,7 @@ class TestCertEcheckDict(unittest.TestCase):
         # eCheck Void
         txn_dict = {
             'echeckVoid': {
-                'litleTxnId': response['echeckSalesResponse']['litleTxnId'],
+                'cnpTxnId': response['echeckSalesResponse']['cnpTxnId'],
                 'id': 'thisisid',
             }
         }
@@ -224,12 +212,10 @@ class TestCertEcheckDict(unittest.TestCase):
                     'companyName': 'Green Co',
                     'phone': '999-999-9999',
                 },
-                'echeckOrEcheckToken': {
-                    'echeck': {
-                        'accNum': '6099999992',
-                        'accType': 'Corporate',
-                        'routingNum': '011075150',
-                    }
+                'echeck': {
+                    'accNum': '6099999992',
+                    'accType': 'Corporate',
+                    'routingNum': '011075150',
                 }
             }
         }
@@ -252,12 +238,10 @@ class TestCertEcheckDict(unittest.TestCase):
                     'companyName': 'Green Co',
                     'phone': '999-999-9999',
                 },
-                'echeckOrEcheckToken': {
-                    'echeck': {
-                        'accNum': '6099999992',
-                        'accType': 'Corporate',
-                        'routingNum': '053133052',
-                    }
+                'echeck': {
+                    'accNum': '6099999992',
+                    'accType': 'Corporate',
+                    'routingNum': '053133052',
                 }
             }
         }
@@ -278,12 +262,10 @@ class TestCertEcheckDict(unittest.TestCase):
                     'lastName': 'John',
                     'phone': '999-999-9999',
                 },
-                'echeckOrEcheckToken': {
-                    'echeck': {
-                        'accNum': '10@BC99999',
-                        'accType': 'Checking',
-                        'routingNum': '053100300',
-                    }
+                'echeck': {
+                    'accNum': '10@BC99999',
+                    'accType': 'Checking',
+                    'routingNum': '053100300',
                 }
             }
         }
@@ -306,12 +288,10 @@ class TestCertEcheckDict(unittest.TestCase):
                     'companyName': 'Good Goods Inc',
                     'phone': '999-999-9999',
                 },
-                'echeckOrEcheckToken': {
-                    'echeck': {
-                        'accNum': '3099999999',
-                        'accType': 'Corporate',
-                        'routingNum': '053100300',
-                    }
+                'echeck': {
+                    'accNum': '3099999999',
+                    'accType': 'Corporate',
+                    'routingNum': '053100300',
                 }
             }
         }
@@ -322,7 +302,7 @@ class TestCertEcheckDict(unittest.TestCase):
         # eCheck Void
         txn_dict = {
             'echeckVoid': {
-                'litleTxnId': response['echeckCreditResponse']['litleTxnId'],
+                'cnpTxnId': response['echeckCreditResponse']['cnpTxnId'],
                 'id': 'thisisid',
             }
         }
@@ -345,12 +325,10 @@ class TestCertEcheckDict(unittest.TestCase):
                     'companyName': 'Green Co',
                     'phone': '999-999-9999',
                 },
-                'echeckOrEcheckToken': {
-                    'echeck': {
-                        'accNum': '6099999993',
-                        'accType': 'Corporate',
-                        'routingNum': '211370545',
-                    }
+                'echeck': {
+                    'accNum': '6099999993',
+                    'accType': 'Corporate',
+                    'routingNum': '211370545',
                 }
             }
         }
@@ -372,19 +350,17 @@ class TestCertEcheckDict(unittest.TestCase):
                     'companyName': 'Green Co',
                     'phone': '999-999-9999',
                 },
-                'echeckOrEcheckToken': {
-                    'echeck': {
-                        'accNum': '6099999992',
-                        'accType': 'Corporate',
-                        'routingNum': '011075150',
-                    }
+                'echeck': {
+                    'accNum': '6099999992',
+                    'accType': 'Corporate',
+                    'routingNum': '011075150',
                 }
             }
         }
         response = online.request(txn_dict, conf)
         txn_dict = {
             'echeckCredit': {
-                'litleTxnId': response['echeckSalesResponse']['litleTxnId'],
+                'cnpTxnId': response['echeckSalesResponse']['cnpTxnId'],
                 'id': 'thisisid',
             }
         }
@@ -397,7 +373,7 @@ class TestCertEcheckDict(unittest.TestCase):
         # orderId *
         txn_dict = {
             'echeckCredit': {
-                'litleTxnId': '2',
+                'cnpTxnId': '2',
                 'id': 'thisisid',
             }
         }
@@ -408,7 +384,7 @@ class TestCertEcheckDict(unittest.TestCase):
     def test_echeck_void_2_6(self):
         txn_dict = {
             'echeckVoid': {
-                'litleTxnId': '2',
+                'cnpTxnId': '2',
                 'id': 'thisisid',
             }
         }

@@ -50,7 +50,7 @@ class TestCertTokenDict(unittest.TestCase):
             }
         }
         response = online.request(txn_dict, conf)
-        self.assertEquals('0123', response['registerTokenResponse']['litleToken'][-4:])
+        self.assertEquals('0123', response['registerTokenResponse']['cnpToken'][-4:])
         self.assertEquals('445711', response['registerTokenResponse']['bin'])
         self.assertEquals('VI', response['registerTokenResponse']['type'])
         # TODO run twice get 802
@@ -66,7 +66,7 @@ class TestCertTokenDict(unittest.TestCase):
             }
         }
         response = online.request(txn_dict, conf)
-        self.assertNotIn('litleToken', response['registerTokenResponse'])
+        self.assertNotIn('cnpToken', response['registerTokenResponse'])
         self.assertEquals('820', response['registerTokenResponse']['response'])
         self.assertEquals('Credit card number was invalid', response['registerTokenResponse']['message'])
 
@@ -79,7 +79,7 @@ class TestCertTokenDict(unittest.TestCase):
             }
         }
         response = online.request(txn_dict, conf)
-        self.assertEquals('0123', response['registerTokenResponse']['litleToken'][-4:])
+        self.assertEquals('0123', response['registerTokenResponse']['cnpToken'][-4:])
         self.assertEquals('445711', response['registerTokenResponse']['bin'])
         self.assertEquals('VI', response['registerTokenResponse']['type'])
         self.assertEquals('802', response['registerTokenResponse']['response'])
@@ -97,7 +97,7 @@ class TestCertTokenDict(unittest.TestCase):
             }
         }
         response = online.request(txn_dict, conf)
-        self.assertIsNotNone(response['registerTokenResponse']['litleToken'])
+        self.assertIsNotNone(response['registerTokenResponse']['cnpToken'])
         self.assertEquals('EC', response['registerTokenResponse']['type'])
         self.assertEquals('998', response['registerTokenResponse']['eCheckAccountSuffix'])
         # TODO run twice get 802
@@ -137,7 +137,7 @@ class TestCertTokenDict(unittest.TestCase):
         response = online.request(txn_dict, conf)
         self.assertEquals('000', response['authorizationResponse']['response'])
         self.assertEquals('Approved', response['authorizationResponse']['message'])
-        self.assertEquals('0196', response['authorizationResponse']['tokenResponse']['litleToken'][-4:])
+        self.assertEquals('0196', response['authorizationResponse']['tokenResponse']['cnpToken'][-4:])
         # TODO run twice get 802
         # self.assertEquals('801', response['authorizationResponse']['tokenResponse']['tokenResponseCode'])
         # self.assertEquals('Account number was successfully registered',
@@ -183,7 +183,7 @@ class TestCertTokenDict(unittest.TestCase):
         response = online.request(txn_dict, conf)
         self.assertEquals('000', response['authorizationResponse']['response'])
         self.assertEquals('Approved', response['authorizationResponse']['message'])
-        self.assertEquals('0196', response['authorizationResponse']['tokenResponse']['litleToken'][-4:])
+        self.assertEquals('0196', response['authorizationResponse']['tokenResponse']['cnpToken'][-4:])
         self.assertEquals('802', response['authorizationResponse']['tokenResponse']['tokenResponseCode'])
         self.assertEquals('Account number was previously registered',
                           response['authorizationResponse']['tokenResponse']['tokenMessage'])
@@ -198,7 +198,7 @@ class TestCertTokenDict(unittest.TestCase):
                 'orderSource': 'ecommerce',
                 'id': 'thisisid',
                 'token': {
-                    'litleToken': response['authorizationResponse']['tokenResponse']['litleToken'],
+                    'cnpToken': response['authorizationResponse']['tokenResponse']['cnpToken'],
                     'expDate': '1121',
                     'cardValidationNum': '987',
                 }
@@ -217,7 +217,7 @@ class TestCertTokenDict(unittest.TestCase):
                 'orderSource': 'ecommerce',
                 'id': 'thisisid',
                 'token': {
-                    'litleToken':'1111000100092332',
+                    'cnpToken':'1111000100092332',
                     'expDate': '1121',
                 }
             }
@@ -235,7 +235,7 @@ class TestCertTokenDict(unittest.TestCase):
                 'orderSource': 'ecommerce',
                 'id': 'thisisid',
                 'token': {
-                    'litleToken':'1112000100000085',
+                    'cnpToken':'1112000100000085',
                     'expDate': '1121',
                 }
             }
@@ -257,18 +257,16 @@ class TestCertTokenDict(unittest.TestCase):
                     'lastName': 'Black',
                     'phone': '999-999-9999',
                 },
-                'echeckOrEcheckToken': {
-                    'echeck' : {
-                        'accType':'Checking',
-                        'accNum': '1099999003',
-                        'routingNum': '011100012',
-                    }
+                'echeck': {
+                    'accType': 'Checking',
+                    'accNum': '1099999003',
+                    'routingNum': '011100012',
                 }
             }
         }
         response = online.request(txn_dict, conf)
         # TODO no tokenResponse
-        # self.assertIsNotNone(response['echeckSalesResponse']['tokenResponse']['litleToken'])
+        # self.assertIsNotNone(response['echeckSalesResponse']['tokenResponse']['cnpToken'])
         # self.assertEquals('801', response['echeckSalesResponse']['tokenResponse']['tokenResponseCode'])
         # self.assertEquals('Account number was successfully registered',
         #                   response['echeckSalesResponse']['tokenResponse']['tokenMessage'])
@@ -287,18 +285,16 @@ class TestCertTokenDict(unittest.TestCase):
                     'lastName': 'Black',
                     'phone': '999-999-9999',
                 },
-                'echeckOrEcheckToken': {
-                    'echeck': {
-                        'accType': 'Checking',
-                        'accNum': '1099999999',
-                        'routingNum': '011100012',
-                    }
+                'echeck': {
+                    'accType': 'Checking',
+                    'accNum': '1099999999',
+                    'routingNum': '011100012',
                 }
             }
         }
         response = online.request(txn_dict, conf)
         # TODO no tokenResponse
-        # self.assertIsNotNone(response['echeckSalesResponse']['tokenResponse']['litleToken'])
+        # self.assertIsNotNone(response['echeckSalesResponse']['tokenResponse']['cnpToken'])
         # self.assertEquals('801', response['echeckSalesResponse']['tokenResponse']['tokenResponseCode'])
         # self.assertEquals('Account number was successfully registered',
         #                   response['echeckSalesResponse']['tokenResponse']['tokenMessage'])
@@ -317,18 +313,16 @@ class TestCertTokenDict(unittest.TestCase):
                     'lastName': 'Black',
                     'phone': '999-999-9999',
                 },
-                'echeckOrEcheckToken': {
-                    'echeck': {
-                        'accType': 'Checking',
-                        'accNum': '1099999999',
-                        'routingNum': '011100012',
-                    }
+                'echeck': {
+                    'accType': 'Checking',
+                    'accNum': '1099999999',
+                    'routingNum': '011100012',
                 }
             }
         }
         response = online.request(txn_dict, conf)
         # TODO no tokenResponse
-        # self.assertIsNotNone(response['echeckCreditResponse']['tokenResponse']['litleToken'])
+        # self.assertIsNotNone(response['echeckCreditResponse']['tokenResponse']['cnpToken'])
         # self.assertEquals('801', response['echeckCreditResponse']['tokenResponse']['tokenResponseCode'])
         # self.assertEquals('Account number was successfully registered',
         #                   response['echeckCreditResponse']['tokenResponse']['tokenMessage'])
@@ -347,12 +341,10 @@ class TestCertTokenDict(unittest.TestCase):
                     'lastName': 'Black',
                     'phone': '999-999-9999',
                 },
-                'echeckOrEcheckToken': {
-                    'echeck': {
-                        'accType': 'Corporate',
-                        'accNum': '6099999993',
-                        'routingNum': '211370545',
-                    }
+                'echeck': {
+                    'accType': 'Corporate',
+                    'accNum': '6099999993',
+                    'routingNum': '211370545',
                 }
             }
         }
@@ -361,16 +353,16 @@ class TestCertTokenDict(unittest.TestCase):
         # self.assertEquals('Checking',
         #                   response['echeckCreditResponse']['accountUpdater']['originalTokenInfo']['accType'])
         # self.assertEquals('11190000001003001',
-        #                   response['echeckCreditResponse']['accountUpdater']['originalTokenInfo']['litleToken'])
+        #                   response['echeckCreditResponse']['accountUpdater']['originalTokenInfo']['cnpToken'])
         # self.assertEquals('211370545',
         #                   response['echeckCreditResponse']['accountUpdater']['originalTokenInfo']['routingNum'])
         #
         # self.assertEquals('Checking', response['echeckCreditResponse']['accountUpdater']['newTokenInfo']['accType'])
         # self.assertEquals('11190000001003001',
-        #                   response['echeckCreditResponse']['accountUpdater']['newTokenInfo']['litleToken'])
+        #                   response['echeckCreditResponse']['accountUpdater']['newTokenInfo']['cnpToken'])
         # self.assertEquals('211370545', response['echeckCreditResponse']['accountUpdater']['newTokenInfo']['routingNum'])
         #
-        # self.assertIsNotNone(response['echeckCreditResponse']['accountUpdater']['newTokenInfo']['litleToken'])
+        # self.assertIsNotNone(response['echeckCreditResponse']['accountUpdater']['newTokenInfo']['cnpToken'])
         # self.assertEquals('801',
         #                   response['echeckCreditResponse']['accountUpdater']['newTokenInfo']['tokenResponseCode'])
         # self.assertEquals('Account number was successfully registered',

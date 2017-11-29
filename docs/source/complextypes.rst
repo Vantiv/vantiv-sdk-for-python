@@ -20,13 +20,6 @@ advancedFraudResultsType
         :var deviceReviewStatus: String or Number
         :var triggeredRule: String or Number
 
-amexAggregatorData
-------------------
-    .. py:class:: vantivsdk.fields.amexAggregatorData
-
-        :var sellerId: String or Number
-        :var sellerMerchantCategoryCode: String or Number
-
 applepayHeaderType
 ------------------
     .. py:class:: vantivsdk.fields.applepayHeaderType
@@ -191,16 +184,6 @@ detailTax
         :var taxRate: String or Number
         :var taxTypeIdentifier: String or Number
 
-echeck
-------
-    .. py:class:: vantivsdk.fields.echeck
-
-        :var accNum: String or Number
-        :var accType: String or Number
-        :var ccdPaymentInformation: String or Number
-        :var checkNum: String or Number
-        :var routingNum: String or Number
-
 echeckForTokenType
 ------------------
     .. py:class:: vantivsdk.fields.echeckForTokenType
@@ -208,9 +191,9 @@ echeckForTokenType
         :var accNum: String or Number
         :var routingNum: String or Number
 
-echeckToken
------------
-    .. py:class:: vantivsdk.fields.echeckToken
+echeckTokenType
+---------------
+    .. py:class:: vantivsdk.fields.echeckTokenType
 
         :var accType: String or Number
         :var checkNum: String or Number
@@ -377,7 +360,7 @@ recurringRequestType
 --------------------
     .. py:class:: vantivsdk.fields.recurringRequestType
 
-        :var subscription: instance of :py:class:`vantivsdk.fields.recurringSubscriptionType`
+        :var createSubscription: instance of :py:class:`vantivsdk.fields.recurringSubscriptionType`
 
 recurringSubscriptionType
 -------------------------

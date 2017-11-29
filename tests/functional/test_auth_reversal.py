@@ -38,7 +38,7 @@ class TestAuthReversal(unittest.TestCase):
     def test_simple_auth_reversal(self):
         transactions = fields.authReversal()
         transactions.reportGroup = 'Planets'
-        transactions.litleTxnId = '12345678000'
+        transactions.cnpTxnId = '12345678000'
         transactions.amount = 106
         transactions.orderSource = 'ecommerce'
         transactions.payPalNotes = 'Notes'

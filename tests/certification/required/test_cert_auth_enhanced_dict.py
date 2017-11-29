@@ -45,7 +45,7 @@ class TestCertEnhancedAuthsDict(unittest.TestCase):
     # <litleOnlineResponse version="9.10" xmlns="http://www.litle.com/fields.
     #     response="0" message="Valid Format">
     #     <authorizationResponse reportGroup="Default Report Group">
-    #         <litleTxnId>82919994154434833</litleTxnId>
+    #         <cnpTxnId>82919994154434833</cnpTxnId>
     #         <orderId>14</orderId>
     #         <response>000</response>
     #         <responseTime>2017-02-21T16:14:39</responseTime>
@@ -270,7 +270,7 @@ class TestCertEnhancedAuthsDict(unittest.TestCase):
     #  <litleOnlineResponse version="9.10" xmlns="http://www.litle.com/fields.
     #     response="0" message="Valid Format">
     #     <authorizationResponse reportGroup="Default Report Group">
-    #         <litleTxnId>82919994227425701</litleTxnId>
+    #         <cnpTxnId>82919994227425701</cnpTxnId>
     #         <orderId>21</orderId>
     #         <response>000</response>
     #         <responseTime>2017-02-21T16:29:10</responseTime>

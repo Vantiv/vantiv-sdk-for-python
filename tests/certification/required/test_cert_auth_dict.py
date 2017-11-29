@@ -75,7 +75,7 @@ class TestCertAuthsDict(unittest.TestCase):
         # orderId *A
         txn_dict = {
             'capture': {
-                'litleTxnId': response['authorizationResponse']['litleTxnId'],
+                'cnpTxnId': response['authorizationResponse']['cnpTxnId'],
                 'id': 'ThisIsID'
             }
         }
@@ -86,7 +86,7 @@ class TestCertAuthsDict(unittest.TestCase):
         # orderId *B
         txn_dict = {
             'credit': {
-                'litleTxnId': captureresponse['captureResponse']['litleTxnId'],
+                'cnpTxnId': captureresponse['captureResponse']['cnpTxnId'],
                 'id': 'ThisIsID'
             }
         }
@@ -97,7 +97,7 @@ class TestCertAuthsDict(unittest.TestCase):
         # orderId *C
         txn_dict = {
             'void': {
-                'litleTxnId': creditresponse['creditResponse']['litleTxnId'],
+                'cnpTxnId': creditresponse['creditResponse']['cnpTxnId'],
                 'id': 'ThisIsID'
             }
         }
@@ -170,7 +170,7 @@ class TestCertAuthsDict(unittest.TestCase):
         # orderId *B
         txn_dict = {
             'credit': {
-                'litleTxnId': response['saleResponse']['litleTxnId'],
+                'cnpTxnId': response['saleResponse']['cnpTxnId'],
                 'id': 'ThisIsID'
             }
         }
@@ -181,7 +181,7 @@ class TestCertAuthsDict(unittest.TestCase):
         # orderId *C
         txn_dict = {
             'void': {
-                'litleTxnId': creditresponse['creditResponse']['litleTxnId'],
+                'cnpTxnId': creditresponse['creditResponse']['cnpTxnId'],
                 'id': 'ThisIsID'
             }
         }
@@ -229,7 +229,7 @@ class TestCertAuthsDict(unittest.TestCase):
         # orderId *A
         txn_dict = {
             'capture': {
-                'litleTxnId': response['authorizationResponse']['litleTxnId'],
+                'cnpTxnId': response['authorizationResponse']['cnpTxnId'],
                 'id': 'ThisIsID'
             }
         }
@@ -240,7 +240,7 @@ class TestCertAuthsDict(unittest.TestCase):
         # orderId *B
         txn_dict = {
             'credit': {
-                'litleTxnId': captureresponse['captureResponse']['litleTxnId'],
+                'cnpTxnId': captureresponse['captureResponse']['cnpTxnId'],
                 'id': 'ThisIsID'
             }
         }
@@ -251,7 +251,7 @@ class TestCertAuthsDict(unittest.TestCase):
         # orderId *C
         txn_dict = {
             'void': {
-                'litleTxnId': creditresponse['creditResponse']['litleTxnId'],
+                'cnpTxnId': creditresponse['creditResponse']['cnpTxnId'],
                 'id': 'ThisIsID'
             }
         }
@@ -334,7 +334,7 @@ class TestCertAuthsDict(unittest.TestCase):
 
         # orderId *A
         # capture = fields.capture()
-        # capture.litleTxnId = response['authorizationResponse']['litleTxnId']
+        # capture.cnpTxnId = response['authorizationResponse']['cnpTxnId']
         # captureresponse = online.request(capture, conf)
         # self.assertEquals('000', captureresponse['authorizationResponse']['response'])
         # self.assertEquals('Approved', captureresponse['authorizationResponse']['message'])
@@ -342,7 +342,7 @@ class TestCertAuthsDict(unittest.TestCase):
         # orderId *B
         txn_dict = {
             'credit': {
-                'litleTxnId': response['saleResponse']['litleTxnId'],
+                'cnpTxnId': response['saleResponse']['cnpTxnId'],
                 'id': 'ThisIsID'
             }
         }
@@ -353,7 +353,7 @@ class TestCertAuthsDict(unittest.TestCase):
         # orderId *C
         txn_dict = {
             'void': {
-                'litleTxnId': creditresponse['creditResponse']['litleTxnId'],
+                'cnpTxnId': creditresponse['creditResponse']['cnpTxnId'],
                 'id': 'ThisIsID'
             }
         }
@@ -395,7 +395,7 @@ class TestCertAuthsDict(unittest.TestCase):
         # orderId *A
         txn_dict = {
             'capture': {
-                'litleTxnId': response['authorizationResponse']['litleTxnId'],
+                'cnpTxnId': response['authorizationResponse']['cnpTxnId'],
                 'id': 'ThisIsID'
             }
         }
@@ -406,7 +406,7 @@ class TestCertAuthsDict(unittest.TestCase):
         # orderId *B
         txn_dict = {
             'credit': {
-                'litleTxnId': captureresponse['captureResponse']['litleTxnId'],
+                'cnpTxnId': captureresponse['captureResponse']['cnpTxnId'],
                 'id': 'ThisIsID'
             }
         }
@@ -417,7 +417,7 @@ class TestCertAuthsDict(unittest.TestCase):
         # orderId *C
         txn_dict = {
             'void': {
-                'litleTxnId': creditresponse['creditResponse']['litleTxnId'],
+                'cnpTxnId': creditresponse['creditResponse']['cnpTxnId'],
                 'id': 'ThisIsID'
             }
         }
@@ -490,7 +490,7 @@ class TestCertAuthsDict(unittest.TestCase):
         # orderId *A
         txn_dict = {
             'capture': {
-                'litleTxnId': response['saleResponse']['litleTxnId'],
+                'cnpTxnId': response['saleResponse']['cnpTxnId'],
                 'id': 'ThisIsID'
             }
         }
@@ -501,7 +501,7 @@ class TestCertAuthsDict(unittest.TestCase):
         # orderId *B
         txn_dict = {
             'credit': {
-                'litleTxnId': captureresponse['captureResponse']['litleTxnId'],
+                'cnpTxnId': captureresponse['captureResponse']['cnpTxnId'],
                 'id': 'ThisIsID'
             }
         }
@@ -512,7 +512,7 @@ class TestCertAuthsDict(unittest.TestCase):
         # orderId *C
         txn_dict = {
             'void': {
-                'litleTxnId': creditresponse['creditResponse']['litleTxnId'],
+                'cnpTxnId': creditresponse['creditResponse']['cnpTxnId'],
                 'id': 'ThisIsID'
             }
         }
@@ -552,7 +552,7 @@ class TestCertAuthsDict(unittest.TestCase):
         # orderId *A
         txn_dict = {
             'capture': {
-                'litleTxnId': response['authorizationResponse']['litleTxnId'],
+                'cnpTxnId': response['authorizationResponse']['cnpTxnId'],
                 'id': 'ThisIsID'
             }
         }
@@ -563,7 +563,7 @@ class TestCertAuthsDict(unittest.TestCase):
         # orderId *B
         txn_dict = {
             'credit': {
-                'litleTxnId': captureresponse['captureResponse']['litleTxnId'],
+                'cnpTxnId': captureresponse['captureResponse']['cnpTxnId'],
                 'id': 'ThisIsID'
             }
         }
@@ -574,7 +574,7 @@ class TestCertAuthsDict(unittest.TestCase):
         # orderId *C
         txn_dict = {
             'void': {
-                'litleTxnId': creditresponse['creditResponse']['litleTxnId'],
+                'cnpTxnId': creditresponse['creditResponse']['cnpTxnId'],
                 'id': 'ThisIsID'
             }
         }
@@ -645,7 +645,7 @@ class TestCertAuthsDict(unittest.TestCase):
         # orderId *A
         txn_dict = {
             'capture': {
-                'litleTxnId': response['saleResponse']['litleTxnId'],
+                'cnpTxnId': response['saleResponse']['cnpTxnId'],
                 'id': 'ThisIsID'
             }
         }
@@ -656,7 +656,7 @@ class TestCertAuthsDict(unittest.TestCase):
         # orderId *B
         txn_dict = {
             'credit': {
-                'litleTxnId': captureresponse['captureResponse']['litleTxnId'],
+                'cnpTxnId': captureresponse['captureResponse']['cnpTxnId'],
                 'id': 'ThisIsID'
             }
         }
@@ -693,7 +693,7 @@ class TestCertAuthsDict(unittest.TestCase):
         # orderId *A
         txn_dict = {
             'capture': {
-                'litleTxnId': response['authorizationResponse']['litleTxnId'],
+                'cnpTxnId': response['authorizationResponse']['cnpTxnId'],
                 'id': 'ThisIsID'
             }
         }
@@ -704,7 +704,7 @@ class TestCertAuthsDict(unittest.TestCase):
         # orderId *B
         txn_dict = {
             'credit': {
-                'litleTxnId': captureresponse['captureResponse']['litleTxnId'],
+                'cnpTxnId': captureresponse['captureResponse']['cnpTxnId'],
                 'id': 'ThisIsID'
             }
         }
@@ -715,7 +715,7 @@ class TestCertAuthsDict(unittest.TestCase):
         # orderId *C
         txn_dict = {
             'void': {
-                'litleTxnId': creditresponse['creditResponse']['litleTxnId'],
+                'cnpTxnId': creditresponse['creditResponse']['cnpTxnId'],
                 'id': 'ThisIsID'
             }
         }
@@ -779,7 +779,7 @@ class TestCertAuthsDict(unittest.TestCase):
         # orderId *B
         txn_dict = {
             'credit': {
-                'litleTxnId': response['saleResponse']['litleTxnId'],
+                'cnpTxnId': response['saleResponse']['cnpTxnId'],
                 'id': 'ThisIsID'
             }
         }
@@ -790,7 +790,7 @@ class TestCertAuthsDict(unittest.TestCase):
         # orderId *C
         txn_dict = {
             'void': {
-                'litleTxnId': creditresponse['creditResponse']['litleTxnId'],
+                'cnpTxnId': creditresponse['creditResponse']['cnpTxnId'],
                 'id': 'ThisIsID'
             }
         }
@@ -859,7 +859,7 @@ class TestCertAuthsDict(unittest.TestCase):
         # orderId *A
         txn_dict = {
             'void': {
-                'litleTxnId': response['saleResponse']['litleTxnId'],
+                'cnpTxnId': response['saleResponse']['cnpTxnId'],
                 'id': 'ThisIsID'
             }
         }

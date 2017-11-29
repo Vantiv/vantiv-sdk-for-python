@@ -26,7 +26,7 @@ import os
 import sys
 import unittest
 
-if sys.version_info[0:2] >= (3, 3):
+if sys.version_info[0:2] >= (3, 4):
     from unittest import mock
 else:
     from mock import mock
