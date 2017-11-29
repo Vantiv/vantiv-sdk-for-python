@@ -53,7 +53,7 @@ class Configuration(object):
     """
     VERSION = version.VERSION
     RELEASE = version.RELEASE
-    MERCHANTSDK = 'Python SDKv2 ' + RELEASE
+    MERCHANTSDK = 'Python;' + RELEASE
     _CONFIG_FILE_PATH = os.path.join(os.environ['VANTIV_SDK_CONFIG'], ".vantiv_python_sdk.conf") \
         if 'VANTIV_SDK_CONFIG' in os.environ else os.path.join(os.path.expanduser("~"), ".vantiv_python_sdk.conf")
 
