@@ -198,7 +198,7 @@ class TestFundingInstruction(unittest.TestCase):
         txn_dict = {
             'fundingInstructionVoid': {
                 'id': 'OnlinePC2',
-                'litleTxnId': '900010002000',
+                'cnpTxnId': '900010002000',
             }
         }
 
@@ -367,7 +367,7 @@ class TestFundingInstruction(unittest.TestCase):
         txn_dict = {
             'fundingInstructionVoid': {
                 'id': 'OnlinePC2',
-                'litleTxnId': '900010002940',
+                'cnpTxnId': '900010002940',
             }
         }
 
@@ -536,7 +536,7 @@ class TestFundingInstruction(unittest.TestCase):
         txn_dict = {
             'fundingInstructionVoid': {
                 'id': 'OnlinePC2',
-                'litleTxnId': '900010002941',
+                'cnpTxnId': '900010002941',
             }
         }
 
@@ -547,7 +547,7 @@ class TestFundingInstruction(unittest.TestCase):
         txn_dict = {
             'fundingInstructionVoid': {
                 'id': 'OnlinePC2',
-                'litleTxnId': '900010002360',
+                'cnpTxnId': '900010002360',
             }
         }
 
@@ -558,7 +558,7 @@ class TestFundingInstruction(unittest.TestCase):
         txn_dict = {
             'fundingInstructionVoid': {
                 'id': 'OnlinePC2',
-                'litleTxnId': '900010002362',
+                'cnpTxnId': '900010002362',
             }
         }
 

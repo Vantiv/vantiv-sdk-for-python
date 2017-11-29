@@ -37,7 +37,7 @@ conf = utils.Configuration()
 class TestEcheckRedeposit(unittest.TestCase):
     def test_simple_echeck_redeposit(self):
         transaction = fields.echeckRedeposit()
-        transaction.litleTxnId = 123456
+        transaction.cnpTxnId = 123456
         transaction.id = 'ThisIsID'
 
         response = online.request(transaction, conf)
@@ -45,10 +45,10 @@ class TestEcheckRedeposit(unittest.TestCase):
 
     def test_echeck_redeposit_with_echeck(self):
         transaction = fields.echeckRedeposit()
-        transaction.litleTxnId = 123456
+        transaction.cnpTxnId = 123456
         transaction.id = 'ThisIsID'
 
-        echeck = fields.echeck()
+        echeck = fields.echeckType()
         echeck.accNum = '12345657890'
         echeck.routingNum = '123456789'
         echeck.checkNum = '123455'
@@ -60,14 +60,14 @@ class TestEcheckRedeposit(unittest.TestCase):
 
     def test_echeck_redeposit_with_token(self):
         transaction = fields.echeckRedeposit()
-        transaction.litleTxnId = 123456
+        transaction.cnpTxnId = 123456
         transaction.id = 'ThisIsID'
 
-        token = fields.echeckToken()
-        token.litleToken = '1234565789012'
+        token = fields.echeckTokenType()
+        token.cnpToken = '1234565789012'
         token.routingNum = '123456789'
         token.accType = 'Checking'
-        transaction.echeckOrEcheckToken = token
+        transaction.echeckToken = token
 
         response = online.request(transaction, conf)
         self.assertEquals('000', response['echeckRedepositResponse']['response'])

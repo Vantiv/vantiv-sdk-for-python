@@ -40,7 +40,7 @@ class TestCapture(unittest.TestCase):
     def test_simple_capture(self):
         transactions = fields.capture()
         transactions.reportGroup = 'Planets'
-        transactions.litleTxnId= '123456000'
+        transactions.cnpTxnId= '123456000'
         transactions.amount = 106
         transactions.payPalNotes='Notes'
         transactions.orderSource = 'ecommerce'
@@ -54,7 +54,7 @@ class TestCapture(unittest.TestCase):
     def test_simple_capture_with_partial(self):
         transactions = fields.capture()
         transactions.reportGroup = 'Planets'
-        transactions.litleTxnId= '123456000'
+        transactions.cnpTxnId= '123456000'
         transactions.amount = 106
         transactions.payPalNotes='Notes'
         transactions.orderSource = 'ecommerce'
@@ -67,7 +67,7 @@ class TestCapture(unittest.TestCase):
     def test_complex_capture(self):
         transactions = fields.capture()
         transactions.reportGroup = 'Planets'
-        transactions.litleTxnId= '123456000'
+        transactions.cnpTxnId= '123456000'
         transactions.amount = 106
         transactions.payPalNotes='Notes'
         transactions.orderSource = 'ecommerce'

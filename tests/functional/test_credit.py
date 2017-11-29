@@ -132,7 +132,7 @@ class TestCredit(unittest.TestCase):
 
     def test_simple_credit_with_litletxn_and_pin(self):
         transaction = fields.credit()
-        transaction.litleTxnId = '1234'
+        transaction.cnpTxnId = '1234'
         transaction.amount = 106
         transaction.secondaryAmount = 20
         transaction.pin = '3333'

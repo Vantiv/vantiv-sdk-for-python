@@ -43,12 +43,12 @@ class TestEcheckVerification(unittest.TestCase):
         transaction.orderSource = 'ecommerce'
         transaction.id = 'ThisIsID'
 
-        echeck = fields.echeck()
+        echeck = fields.echeckType()
         echeck.accNum = '12345657890'
         echeck.routingNum = '123456789'
         echeck.checkNum = '123455'
         echeck.accType = 'Checking'
-        transaction.echeckOrEcheckToken = echeck
+        transaction.echeck = echeck
 
         billtoaddress = fields.contact()
         billtoaddress.firstName = 'Peter'
@@ -69,11 +69,11 @@ class TestEcheckVerification(unittest.TestCase):
         transaction.orderSource = 'ecommerce'
         transaction.id = 'ThisIsID'
 
-        token = fields.echeckToken()
-        token.litleToken = '1234565789012'
+        token = fields.echeckTokenType()
+        token.cnpToken = '1234565789012'
         token.routingNum = '123456789'
         token.accType = 'Checking'
-        transaction.echeckOrEcheckToken = token
+        transaction.echeckToken = token
 
         billtoaddress = fields.contact()
         billtoaddress.firstName = 'Peter'
@@ -95,12 +95,12 @@ class TestEcheckVerification(unittest.TestCase):
         transaction.secondaryAmount = 50
         transaction.id = 'ThisIsID'
 
-        echeck = fields.echeck()
+        echeck = fields.echeckType()
         echeck.accNum = '12345657890'
         echeck.routingNum = '123456789'
         echeck.checkNum = '123455'
         echeck.accType = 'Checking'
-        transaction.echeckOrEcheckToken = echeck
+        transaction.echeck = echeck
 
         self.assertRaises(Exception, online.request, transaction, conf)
 

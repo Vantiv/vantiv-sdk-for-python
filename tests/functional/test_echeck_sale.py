@@ -37,7 +37,7 @@ conf = utils.Configuration()
 class TestEcheckSale(unittest.TestCase):
     def test_simple_echeck_sale(self):
         transaction = fields.echeckSale()
-        transaction.litleTxnId = 123456789101112
+        transaction.cnpTxnId = 123456789101112
         transaction.amount = 12
         transaction.id = 'ThisIsID'
 
@@ -52,12 +52,12 @@ class TestEcheckSale(unittest.TestCase):
         transaction.orderSource = 'ecommerce'
         transaction.id = 'ThisIsID'
 
-        echeck = fields.echeck()
+        echeck = fields.echeckType()
         echeck.accNum = '12345657890'
         echeck.routingNum = '123456789'
         echeck.checkNum = '123455'
         echeck.accType = 'Checking'
-        transaction.echeckOrEcheckToken = echeck
+        transaction.echeck = echeck
 
         billtoaddress = fields.contact()
         billtoaddress.firstName = 'Peter'
@@ -78,11 +78,11 @@ class TestEcheckSale(unittest.TestCase):
         transaction.orderSource = 'ecommerce'
         transaction.id = 'ThisIsID'
 
-        token = fields.echeckToken()
-        token.litleToken = '1234565789012'
+        token = fields.echeckTokenType()
+        token.cnpToken = '1234565789012'
         token.routingNum = '123456789'
         token.accType = 'Checking'
-        transaction.echeckOrEcheckToken = token
+        transaction.echeckToken = token
 
         billtoaddress = fields.contact()
         billtoaddress.firstName = 'Peter'
@@ -103,13 +103,13 @@ class TestEcheckSale(unittest.TestCase):
         transaction.secondaryAmount = 50
         transaction.id = 'ThisIsID'
 
-        echeck = fields.echeck()
+        echeck = fields.echeckType()
         echeck.accNum = '12345657890'
         echeck.routingNum = '123456789'
         echeck.checkNum = '123455'
         echeck.accType = 'Checking'
         echeck.ccdPaymentInformation = '12345678901234567890123456789012345678901234567890123456789012345678901234567890'
-        transaction.echeckOrEcheckToken = echeck
+        transaction.echeck = echeck
 
         billtoaddress = fields.contact()
         billtoaddress.firstName = 'Peter'
@@ -131,13 +131,13 @@ class TestEcheckSale(unittest.TestCase):
         transaction.secondaryAmount = 50
         transaction.id = 'ThisIsID'
 
-        echeck = fields.echeck()
+        echeck = fields.echeckType()
         echeck.accNum = '12345657890'
         echeck.routingNum = '123456789'
         echeck.checkNum = '123455'
         echeck.accType = 'Checking'
         echeck.ccdPaymentInformation = '123456789012345678901234567890123456789012345678901234567890123456789012345678901'
-        transaction.echeckOrEcheckToken = echeck
+        transaction.echeck = echeck
 
         billtoaddress = fields.contact()
         billtoaddress.firstName = 'Peter'

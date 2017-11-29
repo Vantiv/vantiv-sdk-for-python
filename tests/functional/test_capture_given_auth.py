@@ -75,7 +75,7 @@ class TestCaptureGivenAuth(unittest.TestCase):
         transaction.authInformation = authInformation
 
         token = fields.cardTokenType()
-        token.litleToken = '123456789101112'
+        token.cnpToken = '123456789101112'
         token.expDate = '1210'
         token.type = 'VI'
         token.CardValidationNum = '555'

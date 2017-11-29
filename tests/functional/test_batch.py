@@ -65,10 +65,10 @@ class TestBatch(unittest.TestCase):
         card.type = 'VI'
 
         # eCheck
-        echeck = fields.echeck()
-        echeck.accType = 'Checking'
-        echeck.accNum = '4099999992'
-        echeck.routingNum = '011075150'
+        # echeck = fields.echeck()
+        # echeck.accType = 'Checking'
+        # echeck.accNum = '4099999992'
+        # echeck.routingNum = '011075150'
 
         # billtoaddress
         billtoaddress = fields.contact()
@@ -138,10 +138,10 @@ class TestBatch(unittest.TestCase):
         card.type = 'VI'
 
         # eCheck
-        echeck = fields.echeck()
-        echeck.accType = 'Checking'
-        echeck.accNum = '4099999992'
-        echeck.routingNum = '011075150'
+        # echeck = fields.echeck()
+        # echeck.accType = 'Checking'
+        # echeck.accNum = '4099999992'
+        # echeck.routingNum = '011075150'
 
         # billtoaddress
         billtoaddress = fields.contact()
@@ -193,7 +193,7 @@ class TestBatch(unittest.TestCase):
 
         # Example for RFRRequest
         RFRRequest = fields.RFRRequest()
-        RFRRequest.litleSessionId = response['@litleSessionId']
+        RFRRequest.cnpSessionId = response['@cnpSessionId']
 
         transactions = batch.Transactions()
         transactions.add(RFRRequest)
@@ -202,8 +202,8 @@ class TestBatch(unittest.TestCase):
         response_rfr = batch.stream(transactions, conf)
 
         self.assertIn('batchResponse', response_rfr)
-        self.assertEquals(response_rfr['batchResponse']['authorizationResponse'][0]['litleTxnId'],
-                          response['batchResponse']['authorizationResponse'][0]['litleTxnId'])
+        self.assertEquals(response_rfr['batchResponse']['authorizationResponse'][0]['cnpTxnId'],
+                          response['batchResponse']['authorizationResponse'][0]['cnpTxnId'])
 
 
     def test_batch_stream_dict(self):
@@ -267,7 +267,7 @@ class TestBatch(unittest.TestCase):
 
         # Example for RFRRequest
         RFRRequest = fields.RFRRequest()
-        RFRRequest.litleSessionId = response['@litleSessionId']
+        RFRRequest.cnpSessionId = response['@cnpSessionId']
 
         transactions = batch.Transactions()
         transactions.add(RFRRequest)
@@ -276,8 +276,8 @@ class TestBatch(unittest.TestCase):
         response_rfr = batch.stream(transactions, conf)
 
         self.assertIn('batchResponse', response_rfr)
-        self.assertEquals(response_rfr['batchResponse']['authorizationResponse'][0]['litleTxnId'],
-                          response['batchResponse']['authorizationResponse'][0]['litleTxnId'])
+        self.assertEquals(response_rfr['batchResponse']['authorizationResponse'][0]['cnpTxnId'],
+                          response['batchResponse']['authorizationResponse'][0]['cnpTxnId'])
 
     def test_batch_stream_mix_transaction_recurringtransaction(self):
         txn_dict = {
@@ -348,7 +348,7 @@ class TestBatch(unittest.TestCase):
 
         # Example for RFRRequest
         RFRRequest = fields.RFRRequest()
-        RFRRequest.litleSessionId = response['@litleSessionId']
+        RFRRequest.cnpSessionId = response['@cnpSessionId']
 
         transactions = batch.Transactions()
         transactions.sameDayFunding = True
@@ -358,10 +358,10 @@ class TestBatch(unittest.TestCase):
         response_rfr = batch.stream(transactions, conf)
 
         self.assertIn('batchResponse', response_rfr)
-        self.assertEquals(response_rfr['batchResponse'][0]['authorizationResponse'][0]['litleTxnId'],
-                          response['batchResponse'][0]['authorizationResponse'][0]['litleTxnId'])
-        self.assertEquals(response_rfr['batchResponse'][1]['createPlanResponse']['litleTxnId'],
-                          response['batchResponse'][1]['createPlanResponse']['litleTxnId'])
+        self.assertEquals(response_rfr['batchResponse'][0]['authorizationResponse'][0]['cnpTxnId'],
+                          response['batchResponse'][0]['authorizationResponse'][0]['cnpTxnId'])
+        self.assertEquals(response_rfr['batchResponse'][1]['createPlanResponse']['cnpTxnId'],
+                          response['batchResponse'][1]['createPlanResponse']['cnpTxnId'])
 
 if __name__ == '__main__':
     unittest.main()

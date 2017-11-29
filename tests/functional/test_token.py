@@ -37,7 +37,7 @@ conf = utils.Configuration()
 class TestUpdateCardValidationNumOnToken(unittest.TestCase):
     def test_simple(self):
         transaction = fields.updateCardValidationNumOnToken()
-        transaction.litleToken = '1111222233334444'
+        transaction.cnpToken = '1111222233334444'
         transaction.cardValidationNum = '123'
         transaction.id = 'ThisIsID'
 

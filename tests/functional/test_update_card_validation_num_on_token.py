@@ -37,7 +37,7 @@ conf = utils.Configuration()
 class TestEcheckVoid(unittest.TestCase):
     def test_simple_echeck_void(self):
         transaction = fields.echeckVoid()
-        transaction.litleTxnId = 123456
+        transaction.cnpTxnId = 123456
         transaction.id = 'ThisIsID'
 
         response = online.request(transaction, conf)

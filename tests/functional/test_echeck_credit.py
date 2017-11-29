@@ -37,7 +37,7 @@ conf = utils.Configuration()
 class TestEcheckCredit(unittest.TestCase):
     def test_simple_echeck_credit(self):
         transaction = fields.echeckCredit()
-        transaction.litleTxnId = 123456789101112
+        transaction.cnpTxnId = 123456789101112
         transaction.amount = 12
         transaction.secondaryAmount = 50
         transaction.id = 'ThisIsID'
@@ -53,12 +53,12 @@ class TestEcheckCredit(unittest.TestCase):
         transaction.orderSource = 'ecommerce'
         transaction.id = 'ThisIsID'
 
-        echeck = fields.echeck()
+        echeck = fields.echeckType()
         echeck.accNum = '12345657890'
         echeck.routingNum = '123456789'
         echeck.checkNum = '123455'
         echeck.accType = 'Checking'
-        transaction.echeckOrEcheckToken = echeck
+        transaction.echeck = echeck
 
         billtoaddress = fields.contact()
         billtoaddress.firstName = 'Peter'
@@ -78,11 +78,11 @@ class TestEcheckCredit(unittest.TestCase):
         transaction.orderSource = 'ecommerce'
         transaction.id = 'ThisIsID'
 
-        token = fields.echeckToken()
-        token.litleToken = '1234565789012'
+        token = fields.echeckTokenType()
+        token.cnpToken = '1234565789012'
         token.routingNum = '123456789'
         token.accType = 'Checking'
-        transaction.echeckOrEcheckToken = token
+        transaction.echeckToken = token
 
         billtoaddress = fields.contact()
         billtoaddress.firstName = 'Peter'
@@ -103,12 +103,12 @@ class TestEcheckCredit(unittest.TestCase):
         transaction.orderSource = 'ecommerce'
         transaction.id = 'ThisIsID'
 
-        echeck = fields.echeck()
+        echeck = fields.echeckType()
         echeck.accNum = '12345657890'
         echeck.routingNum = '123456789'
         echeck.checkNum = '123455'
         echeck.accType = 'Checking'
-        transaction.echeckOrEcheckToken = echeck
+        transaction.echeck = echeck
 
         billtoaddress = fields.contact()
         billtoaddress.firstName = 'Peter'
