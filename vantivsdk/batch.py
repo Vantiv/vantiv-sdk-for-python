@@ -165,48 +165,6 @@ def retrieve(filename, conf, return_format='dict', save_to_local=False, delete_r
 
     return _generate_response(response_xml, return_format, conf)
 
-
-def stream(transactions, conf, return_format='dict', timeout_send=60, timeout_rev=2):
-    """stream batch request to IBC (inbound batch communicator) via socket and get return object
-
-    Args:
-        transactions: an instance of batch.Transactions.
-        conf: An instance of utils.Configuration.
-        return_format: Return format. The default is ‘dict’. Could be one of ‘dict’, ‘object’ or ‘xml’.
-        timeout_send: Positive int. Timeout in second for socket connection when sending.
-        timeout_rev: Positive int. Timeout in second for socket connection when receiving.
-
-    Returns:
-        response XML in desired format.
-
-    """
-    if isinstance(transactions, dict):
-        transactions = _to_batch_txns(transactions)
-
-    if not isinstance(transactions, Transactions):
-        raise utils.VantivException('transactions must be an instance of batch.Transactions')
-
-    if len(transactions.transactions) < 1:
-        raise utils.VantivException('transactions must have at least 1 transaction')
-
-    if not isinstance(conf, utils.Configuration):
-        raise utils.VantivException('conf must be an instance of utils.Configuration')
-
-    if not isinstance(timeout_send, six.integer_types) or timeout_send < 0:
-        raise utils.VantivException('timeout_send must be an positive int')
-
-    if not isinstance(timeout_rev, six.integer_types) or timeout_rev < 0:
-        raise utils.VantivException('timeout_rev must be an positive int')
-
-    xml_str = _create_batch_xml(transactions, conf)
-    response_xml = _stream_socket(xml_str, conf, timeout_send, timeout_rev)
-
-    if not response_xml.strip():
-        raise utils.VantivException('Cannot get response from vantiv, please tray again later.')
-
-    return _generate_response(response_xml, return_format, conf)
-
-
 def _generate_response(_response_xml, _return_format, conf):
     response_dict = xmltodict.parse(_response_xml)['cnpResponse']
     if response_dict['@response'] == '0':
@@ -222,70 +180,6 @@ def _generate_response(_response_xml, _return_format, conf):
             return response_dict
     else:
         raise utils.VantivException(response_dict['@message'])
-
-
-def _stream_socket(xml_str, conf, timeout_send, timeout_rev):
-    """Send and receive xml string via socket connection
-
-    Args:
-        xml_str: Batch request xml string
-        conf: An instance of utils.Configuration.
-        timeout_send: Positive int. Timeout in second for socket connection when sending.
-        timeout_rev: Positive int. Timeout in second for socket connection when receiving.
-
-    Returns:
-        Response xml string
-    """
-    import socket
-    import ssl
-    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    s.setsockopt(socket.IPPROTO_TCP, socket.TCP_NODELAY, 1)
-    s.settimeout(timeout_send)
-
-    if conf.fast_ssl:
-        s = ssl.wrap_socket(s)
-
-    try:
-        s.connect((conf.fast_url, int(conf.fast_port)))
-    except:
-        raise utils.VantivException("Cannot connect to vantiv")
-
-    s.sendall(xml_str.encode('utf-8'))
-
-    s.settimeout(0.0)
-    str_array = []
-    import time
-    start = time.time()
-    timeout_rev_double = timeout_rev * 2
-    while True:
-        if str_array and time.time() - start > timeout_rev:
-            break
-        if time.time() - start > timeout_rev_double:
-            break
-        # noinspection PyBroadException
-        try:
-            data = s.recv(4096)
-            if data:
-                str_array.append(data)
-                # break when got cnpResponse close tag
-                if b'</cnpResponse>' in data:
-                    break
-                start = time.time()
-            else:
-                time.sleep(0.1)
-        except:
-            pass
-
-    s.close()
-
-    return_str = b''.join(str_array)
-    return_str = return_str.decode('utf-8')
-
-    if conf.print_xml:
-        print('Batch stream response XML: \n', return_str, '\n')
-
-    return return_str
-
 
 def _put_file_to_sftp(file_path, conf, timeout):
     """Upload file to server via sftp.
