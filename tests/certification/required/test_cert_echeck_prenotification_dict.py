@@ -25,6 +25,8 @@
 import os
 import sys
 import unittest
+import datetime
+import time
 
 package_root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(os.path.dirname(__file__)))))
 sys.path.insert(0, package_root)
@@ -58,9 +60,31 @@ class TestCertEcheckPrenotificationDict(unittest.TestCase):
                 }
             ],
         }
-        response = batch.stream(txn_dict, conf)
-        self.assertEquals('000', response['batchResponse']['echeckPreNoteSaleResponse']['response'])
-        self.assertEquals('Approved', response['batchResponse']['echeckPreNoteSaleResponse']['message'])
+
+        filename = 'test_table_2_5_ECPreNoteSale_%s' % datetime.datetime.now().strftime("%Y%m%d%H%M%S%f")
+
+        # submit to Vaitiv eCommerce and get filename as response
+        response_filename = batch.submit(txn_dict, conf, filename)
+        self.assertEquals('%s.xml.asc' % filename, response_filename)
+
+        retry = True
+        tried = 0
+        while retry:
+            ++tried
+            try:
+                response = batch.retrieve(response_filename, conf)
+                self.assertEquals('000', response['batchResponse']['echeckPreNoteSaleResponse']['response'])
+                self.assertEquals('Approved', response['batchResponse']['echeckPreNoteSaleResponse']['message'])
+                retry = False
+            except:
+                # sleep 1 minute waiting for batch get processed
+                print("sleep 30 seconds waiting for batch get processed")
+                time.sleep(30)
+                if tried > 20:
+                    retry = False
+                    self.fail("Timeout for retrieve batch response")
+
+
 
     def test_table_2_5_ECPreNoteCredit(self):
         txn_dict = {
@@ -81,9 +105,28 @@ class TestCertEcheckPrenotificationDict(unittest.TestCase):
                 }
             ],
         }
-        response = batch.stream(txn_dict, conf)
-        self.assertEquals('000', response['batchResponse']['echeckPreNoteCreditResponse']['response'])
-        self.assertEquals('Approved', response['batchResponse']['echeckPreNoteCreditResponse']['message'])
+        filename = 'test_table_2_5_ECPreNoteCredit_%s' % datetime.datetime.now().strftime("%Y%m%d%H%M%S%f")
+
+        # submit to Vaitiv eCommerce and get filename as response
+        response_filename = batch.submit(txn_dict, conf, filename)
+        self.assertEquals('%s.xml.asc' % filename, response_filename)
+
+        retry = True
+        tried = 0
+        while retry:
+            ++tried
+            try:
+                response = batch.retrieve(response_filename, conf)
+                self.assertEquals('000', response['batchResponse']['echeckPreNoteCreditResponse']['response'])
+                self.assertEquals('Approved', response['batchResponse']['echeckPreNoteCreditResponse']['message'])
+                retry = False
+            except:
+                # sleep 1 minute waiting for batch get processed
+                print("sleep 30 seconds waiting for batch get processed")
+                time.sleep(30)
+                if tried > 20:
+                    retry = False
+                    self.fail("Timeout for retrieve batch response")
 
     def test_table_2_5_PreNoteSaleAccNumErr(self):
         txn_dict = {
@@ -104,10 +147,29 @@ class TestCertEcheckPrenotificationDict(unittest.TestCase):
                 }
             ],
         }
-        response = batch.stream(txn_dict, conf)
 
-        self.assertEquals('301', response['batchResponse']['echeckPreNoteSaleResponse']['response'])
-        # self.assertEquals('Approved', response['batchResponse']['echeckPreNoteSaleResponse']['message'])
+        filename = 'test_table_2_5_PreNoteSaleAccNumErr_%s' % datetime.datetime.now().strftime("%Y%m%d%H%M%S%f")
+
+        # submit to Vaitiv eCommerce and get filename as response
+        response_filename = batch.submit(txn_dict, conf, filename)
+        self.assertEquals('%s.xml.asc' % filename, response_filename)
+
+        retry = True
+        tried = 0
+        while retry:
+            ++tried
+            try:
+                response = batch.retrieve(response_filename, conf)
+                self.assertEquals('301', response['batchResponse']['echeckPreNoteSaleResponse']['response'])
+                # self.assertEquals('Approved', response['batchResponse']['echeckPreNoteSaleResponse']['message'])
+                retry = False
+            except:
+                # sleep 1 minute waiting for batch get processed
+                print("sleep 30 seconds waiting for batch get processed")
+                time.sleep(30)
+                if tried > 20:
+                    retry = False
+                    self.fail("Timeout for retrieve batch response")
 
     def test_table_2_5_PreNoteCreditAccNumErr(self):
         txn_dict = {
@@ -128,9 +190,28 @@ class TestCertEcheckPrenotificationDict(unittest.TestCase):
                 }
             ],
         }
-        response = batch.stream(txn_dict, conf)
-        self.assertEquals('301', response['batchResponse']['echeckPreNoteCreditResponse']['response'])
-        # self.assertEquals('Approved', response['batchResponse']['echeckPreNoteCreditResponse']['message'])
+        filename = 'test_table_2_5_PreNoteCreditAccNumErr_%s' % datetime.datetime.now().strftime("%Y%m%d%H%M%S%f")
+
+        # submit to Vaitiv eCommerce and get filename as response
+        response_filename = batch.submit(txn_dict, conf, filename)
+        self.assertEquals('%s.xml.asc' % filename, response_filename)
+
+        retry = True
+        tried = 0
+        while retry:
+            ++tried
+            try:
+                response = batch.retrieve(response_filename, conf)
+                self.assertEquals('301', response['batchResponse']['echeckPreNoteCreditResponse']['response'])
+                # self.assertEquals('Approved', response['batchResponse']['echeckPreNoteCreditResponse']['message'])
+                retry = False
+            except:
+                # sleep 1 minute waiting for batch get processed
+                print("sleep 30 seconds waiting for batch get processed")
+                time.sleep(30)
+                if tried > 20:
+                    retry = False
+                    self.fail("Timeout for retrieve batch response")
 
     def test_table_2_5_PreNoteSaleRoutNumErr(self):
         txn_dict = {
@@ -151,9 +232,29 @@ class TestCertEcheckPrenotificationDict(unittest.TestCase):
                 }
             ],
         }
-        response = batch.stream(txn_dict, conf)
-        self.assertEquals('900', response['batchResponse']['echeckPreNoteSaleResponse']['response'])
-        # self.assertEquals('Approved', response['batchResponse']['echeckPreNoteSaleResponse']['message'])
+
+        filename = 'test_table_2_5_PreNoteSaleRoutNumErr_%s' % datetime.datetime.now().strftime("%Y%m%d%H%M%S%f")
+
+        # submit to Vaitiv eCommerce and get filename as response
+        response_filename = batch.submit(txn_dict, conf, filename)
+        self.assertEquals('%s.xml.asc' % filename, response_filename)
+
+        retry = True
+        tried = 0
+        while retry:
+            ++tried
+            try:
+                response = batch.retrieve(response_filename, conf)
+                self.assertEquals('900', response['batchResponse']['echeckPreNoteSaleResponse']['response'])
+                # self.assertEquals('Approved', response['batchResponse']['echeckPreNoteSaleResponse']['message'])
+                retry = False
+            except:
+                # sleep 1 minute waiting for batch get processed
+                print("sleep 30 seconds waiting for batch get processed")
+                time.sleep(30)
+                if tried > 20:
+                    retry = False
+                    self.fail("Timeout for retrieve batch response")
 
     def test_table_2_5_PreNoteCreditRoutNumErr(self):
         txn_dict = {
@@ -174,10 +275,29 @@ class TestCertEcheckPrenotificationDict(unittest.TestCase):
                 }
             ],
         }
-        response = batch.stream(txn_dict, conf)
-        self.assertEquals('900', response['batchResponse']['echeckPreNoteCreditResponse']['response'])
-        # self.assertEquals('Approved', response['batchResponse']['echeckPreNoteCreditResponse']['message'])
 
+        filename = 'test_table_2_5_PreNoteCreditRoutNumErr_%s' % datetime.datetime.now().strftime("%Y%m%d%H%M%S%f")
+
+        # submit to Vaitiv eCommerce and get filename as response
+        response_filename = batch.submit(txn_dict, conf, filename)
+        self.assertEquals('%s.xml.asc' % filename, response_filename)
+
+        retry = True
+        tried = 0
+        while retry:
+            ++tried
+            try:
+                response = batch.retrieve(response_filename, conf)
+                self.assertEquals('900', response['batchResponse']['echeckPreNoteCreditResponse']['response'])
+                # self.assertEquals('Approved', response['batchResponse']['echeckPreNoteCreditResponse']['message'])
+                retry = False
+            except:
+                # sleep 1 minute waiting for batch get processed
+                print("sleep 30 seconds waiting for batch get processed")
+                time.sleep(30)
+                if tried > 20:
+                    retry = False
+                    self.fail("Timeout for retrieve batch response")
 
 if __name__ == '__main__':
     unittest.main()
