@@ -86,34 +86,34 @@ response = online.request(transaction, conf)
 
 # Print results
 print('Message: %s' % response['authorizationResponse']['message'])
-print('LitleTransaction ID: %s' % response['authorizationResponse']['litleTxnId'])
+print('CNPTransaction ID: %s' % response['authorizationResponse']['cnpTxnId'])
 
 # capture
 capture = fields.capture()
 capture.id = 'ThisIsRequiredby11'
-capture.litleTxnId = response['authorizationResponse']['litleTxnId']
+capture.cnpTxnId = response['authorizationResponse']['cnpTxnId']
 captureresponse = online.request(capture, conf)
 # Print results
 print('Message: %s' % captureresponse['captureResponse']['message'])
-print('LitleTransaction ID: %s' % captureresponse['captureResponse']['litleTxnId'])
+print('CNPTransaction ID: %s' % captureresponse['captureResponse']['cnpTxnId'])
 
 # credit
 credit = fields.credit()
 credit.id = 'ThisIsRequiredby11'
-credit.litleTxnId = captureresponse['captureResponse']['litleTxnId']
+credit.cnpTxnId = captureresponse['captureResponse']['cnpTxnId']
 creditresponse = online.request(credit, conf)
 # Print results
 print('Message: %s' % creditresponse['creditResponse']['message'])
-print('LitleTransaction ID: %s' % creditresponse['creditResponse']['litleTxnId'])
+print('CNPTransaction ID: %s' % creditresponse['creditResponse']['cnpTxnId'])
 
 # void
 void = fields.void()
 void.id = 'ThisIsRequiredby11'
-void.litleTxnId = creditresponse['creditResponse']['litleTxnId']
+void.cnpTxnId = creditresponse['creditResponse']['cnpTxnId']
 voidresponse = online.request(void, conf)
 # Print results
 print('Message: %s' % voidresponse['voidResponse']['message'])
-print('LitleTransaction ID: %s' % voidresponse['voidResponse']['litleTxnId'])
+print('CNPTransaction ID: %s' % voidresponse['voidResponse']['cnpTxnId'])
 
 # In your sample, you can ignore this
 if response['authorizationResponse']['message'] != 'Approved' or \

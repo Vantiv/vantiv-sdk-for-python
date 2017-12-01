@@ -56,7 +56,7 @@ class TestCertEnhancedAuthsDict(unittest.TestCase):
     #             <avsResult>00</avsResult>
     #         </fraudResult>
     #         <tokenResponse>
-    #             <litleToken>1111000274230247</litleToken>
+    #             <cnpToken>1111000274230247</cnpToken>
     #             <tokenResponseCode>801</tokenResponseCode>
     #             <tokenMessage>Account number was successfully registered</tokenMessage>
     #             <type>VI</type>
@@ -281,7 +281,7 @@ class TestCertEnhancedAuthsDict(unittest.TestCase):
     #             <avsResult>00</avsResult>
     #         </fraudResult>
     #         <tokenResponse>
-    #             <litleToken>1111000273442009</litleToken>
+    #             <cnpToken>1111000273442009</cnpToken>
     #             <tokenResponseCode>801</tokenResponseCode>
     #             <tokenMessage>Account number was successfully registered</tokenMessage>
     #             <type>VI</type>

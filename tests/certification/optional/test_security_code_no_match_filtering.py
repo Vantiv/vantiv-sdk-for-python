@@ -69,8 +69,6 @@ class TestSecurityCodeNoMatchFiltering(unittest.TestCase):
 
         response = online.request(txn, conf)
         self.assertEquals('358', response['authorizationResponse']['response'])
-        self.assertEquals('Restricted by Litle due to security code mismatch',
-                          response['authorizationResponse']['message'])
         self.assertEquals('14', response['authorizationResponse']['fraudResult']['avsResult'])
         self.assertEquals('N', response['authorizationResponse']['fraudResult']['cardValidationResult'])
 
@@ -106,8 +104,6 @@ class TestSecurityCodeNoMatchFiltering(unittest.TestCase):
 
         response = online.request(txn, conf)
         self.assertEquals('358', response['authorizationResponse']['response'])
-        self.assertEquals('Restricted by Litle due to security code mismatch',
-                          response['authorizationResponse']['message'])
         self.assertEquals('20', response['authorizationResponse']['fraudResult']['avsResult'])
         self.assertEquals('N', response['authorizationResponse']['fraudResult']['cardValidationResult'])
 

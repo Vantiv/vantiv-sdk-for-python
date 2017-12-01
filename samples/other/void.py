@@ -56,7 +56,7 @@ conf = utils.Configuration()
 
 # Initial Transaction.
 transaction = fields.void()
-transaction.litleTxnId = '100000000000000011'
+transaction.cnpTxnId = '100000000000000011'
 transaction.id = 'ThisIsRequiredby11'
 
 # Send request to server and get response as object
@@ -64,7 +64,7 @@ response = online.request(transaction, conf)
 
 # Print results
 print('Message: %s' % response['voidResponse']['message'])
-print('LitleTransaction ID: %s' % response['voidResponse']['litleTxnId'])
+print('CNPTransaction ID: %s' % response['voidResponse']['cnpTxnId'])
 
 # Send request to server and get response as XML
 # response = online.request(transaction, conf, 'xml')

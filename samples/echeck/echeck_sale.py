@@ -67,18 +67,18 @@ billtoaddress.companyName = 'Green Co'
 billtoaddress.phone = '999-999-9999'
 transaction.billToAddress = billtoaddress
 
-echeck = fields.echeck()
+echeck = fields.echeckType()
 echeck.accType = 'Checking'
 echeck.accNum = '12345657890'
 echeck.routingNum = '123456789'
-transaction.echeckOrEcheckToken = echeck
+transaction.echeck = echeck
 
 # Send request to server and get response as object
 response = online.request(transaction, conf)
 
 # Print results
 print('Message: %s' % response['echeckSalesResponse']['message'])
-print('LitleTransaction ID: %s' % response['echeckSalesResponse']['litleTxnId'])
+print('CNPTransaction ID: %s' % response['echeckSalesResponse']['cnpTxnId'])
 
 # Send request to server and get response as XML
 # response = online.request(transaction, conf, 'xml')

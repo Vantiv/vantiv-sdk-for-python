@@ -119,7 +119,7 @@ class TestGiftCardTxns(unittest.TestCase):
         #         'id': 'ids',
         #         'reportGroup': 'Planets',
         #         'orderSource': 'ecommerce',
-        #         'litleTxnId': response['authorizationResponse']['litleTxnId'],
+        #         'cnpTxnId': response['authorizationResponse']['cnpTxnId'],
         #         'captureAmount': 1500,
         #         'card': {
         #             'number': '5896299633000001135',
@@ -143,7 +143,7 @@ class TestGiftCardTxns(unittest.TestCase):
         #         'id': 'ids',
         #         'reportGroup': 'Planets',
         #         'orderSource': 'ecommerce',
-        #         'litleTxnId': response_gc2a['giftCardCaptureResponse']['litleTxnId'],
+        #         'cnpTxnId': response_gc2a['giftCardCaptureResponse']['cnpTxnId'],
         #         'creditAmount': 500,
         #         'card': {
         #             'number': '5896299633000001135',

@@ -147,7 +147,7 @@ class TestBatch(unittest.TestCase):
 #         mock__get_file_str_from_sftp.return_value = '''<litleResponse version="11.0" xmlns="http://www.litle.com/schema" id="" response="0" message="Valid Format" litleSessionId="82920136495185933">
 # <batchResponse litleBatchId="82920136495185941" merchantId="1288791">
 # <authorizationResponse id="thisisid" reportGroup="Planets">
-#     <litleTxnId>82920136495185966</litleTxnId>
+#     <cnpTxnId>82920136495185966</cnpTxnId>
 #     <orderId>2</orderId>
 #     <response>000</response>
 #     <responseTime>2017-03-13T18:53:30</responseTime>
@@ -160,7 +160,7 @@ class TestBatch(unittest.TestCase):
 #     <networkTransactionId>000000000000000</networkTransactionId>
 # </authorizationResponse>
 # <authorizationResponse id="thisisid" reportGroup="Planets">
-#     <litleTxnId>82920136495185974</litleTxnId>
+#     <cnpTxnId>82920136495185974</cnpTxnId>
 #     <orderId>1</orderId>
 #     <response>000</response>
 #     <responseTime>2017-03-13T18:53:30</responseTime>
@@ -173,7 +173,7 @@ class TestBatch(unittest.TestCase):
 #     <networkTransactionId>000000000000000</networkTransactionId>
 # </authorizationResponse>
 # <saleResponse id="thisisid" reportGroup="Planets">
-#     <litleTxnId>82920136495185982</litleTxnId>
+#     <cnpTxnId>82920136495185982</cnpTxnId>
 #     <orderId>1</orderId>
 #     <response>000</response>
 #     <responseTime>2017-03-13T18:53:31</responseTime>
@@ -193,7 +193,7 @@ class TestBatch(unittest.TestCase):
 #         # return dict
 #         response = batch.retrieve('abcd', conf, 'dict', False)
 #         self.assertEquals('0', response['@response'])
-#         self.assertEquals('4544691351798650001', response['authorizationResponse']['litleTxnId'])
+#         self.assertEquals('4544691351798650001', response['authorizationResponse']['cnpTxnId'])
 #         self.assertIsInstance(response, dict)
 #
 #         # return xml string

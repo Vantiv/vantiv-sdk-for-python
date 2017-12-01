@@ -61,7 +61,7 @@ transaction.orderSource = 'ecommerce'
 transaction.id = 'ThisIsRequiredby11'
 
 token = fields.cardTokenType()
-token.litleToken = '1111222233334000'
+token.cnpToken = '1111222233334000'
 token.expDate = '1214'
 token.cardValidationNum = '349'
 token.type = 'VI'
@@ -72,7 +72,7 @@ response = online.request(transaction, conf)
 
 # Print results
 print('Message: %s' % response['authorizationResponse']['message'])
-print('LitleTransaction ID: %s' % response['authorizationResponse']['litleTxnId'])
+print('CNPTransaction ID: %s' % response['authorizationResponse']['cnpTxnId'])
 
 # Send request to server and get response as XML
 # response = online.request(transaction, conf, 'xml')

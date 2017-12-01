@@ -55,7 +55,7 @@ conf = utils.Configuration()
 
 # Initial Transaction.
 transaction = fields.echeckCredit()
-transaction.litleTxnId = '123456789101112'
+transaction.cnpTxnId = '123456789101112'
 transaction.id = 'ThisIsRequiredby11'
 
 # Send request to server and get response as object
@@ -63,7 +63,7 @@ response = online.request(transaction, conf)
 
 # Print results
 print('Message: %s' % response['echeckCreditResponse']['message'])
-print('LitleTransaction ID: %s' % response['echeckCreditResponse']['litleTxnId'])
+print('CNPTransaction ID: %s' % response['echeckCreditResponse']['cnpTxnId'])
 
 # Send request to server and get response as XML
 # response = online.request(transaction, conf, 'xml')

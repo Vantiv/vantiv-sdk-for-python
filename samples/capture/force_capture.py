@@ -74,7 +74,7 @@ response = online.request(transaction, conf)
 
 # Print results
 print('Message: %s' % response['forceCaptureResponse']['message'])
-print('LitleTransaction ID: %s' % response['forceCaptureResponse']['litleTxnId'])
+print('CNPTransaction ID: %s' % response['forceCaptureResponse']['cnpTxnId'])
 
 # Send request to server and get response as XML
 # response = online.request(transaction, conf, 'xml')

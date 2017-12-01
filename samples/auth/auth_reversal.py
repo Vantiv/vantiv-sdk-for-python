@@ -55,7 +55,7 @@ conf = utils.Configuration()
 
 # Initial Transaction.
 transaction = fields.authReversal()
-transaction.litleTxnId = '100000000000000000'
+transaction.cnpTxnId = '100000000000000000'
 transaction.id = 'ThisIsRequiredby11'
 
 # Send request to server and get response as object
@@ -63,7 +63,7 @@ response = online.request(transaction, conf)
 
 # Print results
 print('Message: %s' % response['authReversalResponse']['message'])
-print('LitleTransaction ID: %s' % response['authReversalResponse']['litleTxnId'])
+print('CNPTransaction ID: %s' % response['authReversalResponse']['cnpTxnId'])
 
 # Send request to server and get response as XML
 # response = online.request(transaction, conf, 'xml')

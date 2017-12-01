@@ -64,7 +64,7 @@ transaction.id = 'ThisIsRequiredby11'
 
 # Create cardType object
 token = fields.cardTokenType()
-token.litleToken = '1111222233334000'
+token.cnpToken = '1111222233334000'
 token.expDate = '1214'
 token.cardValidationNum = '349'
 token.type = 'VI'
@@ -76,7 +76,7 @@ response = online.request(transaction, conf)
 
 # Print results
 print('Message: %s' % response['saleResponse']['message'])
-print('LitleTransaction ID: %s' % response['saleResponse']['litleTxnId'])
+print('CNPTransaction ID: %s' % response['saleResponse']['cnpTxnId'])
 
 # Send request to server and get response as XML
 # response = online.request(transaction, conf, 'xml')

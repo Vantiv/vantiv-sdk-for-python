@@ -78,7 +78,7 @@ response = online.request(transaction, conf)
 
 # Print results
 print('Message: %s' % response['authorizationResponse']['message'])
-print('LitleTransaction ID: %s' % response['authorizationResponse']['litleTxnId'])
+print('CNPTransaction ID: %s' % response['authorizationResponse']['cnpTxnId'])
 
 # Notice that 1003 is a different merchant.  In our system, they could be setup for CDN purchases
 conf.merchantId = '1001'
@@ -87,7 +87,7 @@ response = online.request(transaction, conf)
 
 # Print results
 print('Message: %s' % response['authorizationResponse']['message'])
-print('LitleTransaction ID: %s' % response['authorizationResponse']['litleTxnId'])
+print('CNPTransaction ID: %s' % response['authorizationResponse']['cnpTxnId'])
 
 # Notice that 1003 is a different merchant.  In our system, they could be setup for YEN purchases
 conf.merchantId = '1003'
@@ -96,7 +96,7 @@ response = online.request(transaction, conf)
 
 # Print results
 print('Message: %s' % response['authorizationResponse']['message'])
-print('LitleTransaction ID: %s' % response['authorizationResponse']['litleTxnId'])
+print('CNPTransaction ID: %s' % response['authorizationResponse']['cnpTxnId'])
 
 # Send request to server and get response as XML
 # response = online.request(transaction, conf, 'xml')
