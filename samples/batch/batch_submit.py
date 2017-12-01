@@ -65,7 +65,7 @@ card.cardValidationNum = '349'
 card.type = 'VI'
 
 # eCheck
-echeck = fields.echeck()
+echeck = fields.echeckType()
 echeck.accType = 'Checking'
 echeck.accNum = '4099999992'
 echeck.routingNum = '011075150'
