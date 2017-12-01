@@ -240,7 +240,7 @@ class TestBatch(unittest.TestCase):
                     retry = False
                     self.fail("Timeout for retrieve rfr batch response")
 
-    def test_batch_stream_dict(self):
+    def test_batch_dict(self):
         txn_dict = {
             'authorization':[
                 {
@@ -347,7 +347,7 @@ class TestBatch(unittest.TestCase):
                     retry = False
                     self.fail("Timeout for retrieve rfr batch response")
 
-    def test_batch_stream_mix_transaction_recurringtransaction(self):
+    def test_batch_mix_transaction_recurringtransaction(self):
         txn_dict = {
             'sameDayFunding': 0,
             'authorization':[
