@@ -438,8 +438,12 @@ def _save_str_file(xml_str, path, filename):
         os.makedirs(path)
     while os.path.exists(file_path):
         file_path = os.path.join(path, '%s_%s.xml' % (filename, datetime.datetime.now().strftime("%Y%m%d%H%M%S%f")))
-    with open(file_path, 'w') as request_xml_file:
-        request_xml_file.write(xml_str)
+    if six.PY2:
+        with open(file_path, 'wb') as request_xml_file:
+            request_xml_file.write(xml_str)
+    else:
+        with open(file_path, 'w') as request_xml_file:
+            request_xml_file.write(xml_str)
     return file_path
 
 
