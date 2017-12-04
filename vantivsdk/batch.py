@@ -440,7 +440,7 @@ def _save_str_file(xml_str, path, filename):
         file_path = os.path.join(path, '%s_%s.xml' % (filename, datetime.datetime.now().strftime("%Y%m%d%H%M%S%f")))
     if six.PY2:
         with open(file_path, 'wb') as request_xml_file:
-            request_xml_file.write(xml_str)
+            request_xml_file.write(xml_str.encode('utf-8'))
     else:
         with open(file_path, 'w') as request_xml_file:
             request_xml_file.write(xml_str)
