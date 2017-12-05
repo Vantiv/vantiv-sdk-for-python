@@ -70,7 +70,7 @@ class TestCertEcheckPrenotificationDict(unittest.TestCase):
         retry = True
         tried = 0
         while retry:
-            ++tried
+            tried += 1
             try:
                 response = batch.retrieve(response_filename, conf)
                 self.assertEquals('000', response['batchResponse']['echeckPreNoteSaleResponse']['response'])
@@ -80,9 +80,9 @@ class TestCertEcheckPrenotificationDict(unittest.TestCase):
                 # sleep 1 minute waiting for batch get processed
                 print("sleep 30 seconds waiting for batch get processed")
                 time.sleep(30)
-                if tried > 20:
-                    retry = False
-                    self.fail("Timeout for retrieve batch response")
+            if tried > 20:
+                self.fail("Timeout for retrieve batch response")
+                break
 
 
 
@@ -114,7 +114,7 @@ class TestCertEcheckPrenotificationDict(unittest.TestCase):
         retry = True
         tried = 0
         while retry:
-            ++tried
+            tried += 1
             try:
                 response = batch.retrieve(response_filename, conf)
                 self.assertEquals('000', response['batchResponse']['echeckPreNoteCreditResponse']['response'])
@@ -124,9 +124,9 @@ class TestCertEcheckPrenotificationDict(unittest.TestCase):
                 # sleep 1 minute waiting for batch get processed
                 print("sleep 30 seconds waiting for batch get processed")
                 time.sleep(30)
-                if tried > 20:
-                    retry = False
-                    self.fail("Timeout for retrieve batch response")
+            if tried > 20:
+                self.fail("Timeout for retrieve batch response")
+                break
 
     def test_table_2_5_PreNoteSaleAccNumErr(self):
         txn_dict = {
@@ -157,7 +157,7 @@ class TestCertEcheckPrenotificationDict(unittest.TestCase):
         retry = True
         tried = 0
         while retry:
-            ++tried
+            tried += 1
             try:
                 response = batch.retrieve(response_filename, conf)
                 self.assertEquals('301', response['batchResponse']['echeckPreNoteSaleResponse']['response'])
@@ -167,9 +167,9 @@ class TestCertEcheckPrenotificationDict(unittest.TestCase):
                 # sleep 1 minute waiting for batch get processed
                 print("sleep 30 seconds waiting for batch get processed")
                 time.sleep(30)
-                if tried > 20:
-                    retry = False
-                    self.fail("Timeout for retrieve batch response")
+            if tried > 20:
+                self.fail("Timeout for retrieve batch response")
+                break
 
     def test_table_2_5_PreNoteCreditAccNumErr(self):
         txn_dict = {
@@ -199,7 +199,7 @@ class TestCertEcheckPrenotificationDict(unittest.TestCase):
         retry = True
         tried = 0
         while retry:
-            ++tried
+            tried += 1
             try:
                 response = batch.retrieve(response_filename, conf)
                 self.assertEquals('301', response['batchResponse']['echeckPreNoteCreditResponse']['response'])
@@ -209,9 +209,9 @@ class TestCertEcheckPrenotificationDict(unittest.TestCase):
                 # sleep 1 minute waiting for batch get processed
                 print("sleep 30 seconds waiting for batch get processed")
                 time.sleep(30)
-                if tried > 20:
-                    retry = False
-                    self.fail("Timeout for retrieve batch response")
+            if tried > 20:
+                self.fail("Timeout for retrieve batch response")
+                break
 
     def test_table_2_5_PreNoteSaleRoutNumErr(self):
         txn_dict = {
@@ -242,7 +242,7 @@ class TestCertEcheckPrenotificationDict(unittest.TestCase):
         retry = True
         tried = 0
         while retry:
-            ++tried
+            tried += 1
             try:
                 response = batch.retrieve(response_filename, conf)
                 self.assertEquals('900', response['batchResponse']['echeckPreNoteSaleResponse']['response'])
@@ -252,9 +252,9 @@ class TestCertEcheckPrenotificationDict(unittest.TestCase):
                 # sleep 1 minute waiting for batch get processed
                 print("sleep 30 seconds waiting for batch get processed")
                 time.sleep(30)
-                if tried > 20:
-                    retry = False
-                    self.fail("Timeout for retrieve batch response")
+            if tried > 20:
+                self.fail("Timeout for retrieve batch response")
+                break
 
     def test_table_2_5_PreNoteCreditRoutNumErr(self):
         txn_dict = {
@@ -285,7 +285,7 @@ class TestCertEcheckPrenotificationDict(unittest.TestCase):
         retry = True
         tried = 0
         while retry:
-            ++tried
+            tried += 1
             try:
                 response = batch.retrieve(response_filename, conf)
                 self.assertEquals('900', response['batchResponse']['echeckPreNoteCreditResponse']['response'])
@@ -295,9 +295,9 @@ class TestCertEcheckPrenotificationDict(unittest.TestCase):
                 # sleep 1 minute waiting for batch get processed
                 print("sleep 30 seconds waiting for batch get processed")
                 time.sleep(30)
-                if tried > 20:
-                    retry = False
-                    self.fail("Timeout for retrieve batch response")
+            if tried > 20:
+                self.fail("Timeout for retrieve batch response")
+                break
 
 if __name__ == '__main__':
     unittest.main()

@@ -202,7 +202,7 @@ class TestBatch(unittest.TestCase):
         retry = True
         tried = 0
         while retry:
-            ++tried
+            tried += 1
             try:
                 response = batch.retrieve(response_filename, conf)
                 retry = False
@@ -211,9 +211,9 @@ class TestBatch(unittest.TestCase):
                 # sleep 1 minute waiting for batch get processed
                 print("sleep 30 seconds waiting for batch get processed")
                 time.sleep(30)
-                if tried > 20:
-                    retry = False
-                    self.fail("Timeout for retrieve batch response")
+            if tried > 20:
+                self.fail("Timeout for retrieve batch response")
+                break
 
         transactions = batch.Transactions()
         transactions.add(RFRRequest)
@@ -224,7 +224,7 @@ class TestBatch(unittest.TestCase):
         retry = True
         tried = 0
         while retry:
-            ++tried
+            tried += 1
             try:
                 # retrieve rfr batch request
                 response_rfr = batch.retrieve(response_rfr_filename, conf)
@@ -236,9 +236,9 @@ class TestBatch(unittest.TestCase):
                 # sleep 1 minute waiting for batch get processed
                 print("sleep 30 seconds waiting for rfr batch get processed")
                 time.sleep(30)
-                if tried > 20:
-                    retry = False
-                    self.fail("Timeout for retrieve rfr batch response")
+            if tried > 20:
+                self.fail("Timeout for retrieve rfr batch response")
+                break
 
     def test_batch_dict(self):
         txn_dict = {
@@ -309,7 +309,7 @@ class TestBatch(unittest.TestCase):
         retry = True
         tried = 0
         while retry:
-            ++tried
+            tried += 1
             try:
                 response = batch.retrieve(response_filename, conf)
                 retry = False
@@ -318,9 +318,9 @@ class TestBatch(unittest.TestCase):
                 # sleep 1 minute waiting for batch get processed
                 print("sleep 30 seconds waiting for batch get processed")
                 time.sleep(30)
-                if tried > 20:
-                    retry = False
-                    self.fail("Timeout for retrieve batch response")
+            if tried > 20:
+                self.fail("Timeout for retrieve batch response")
+                break
 
         transactions = batch.Transactions()
         transactions.add(RFRRequest)
@@ -331,7 +331,7 @@ class TestBatch(unittest.TestCase):
         retry = True
         tried = 0
         while retry:
-            ++tried
+            tried += 1
             try:
                 # retrieve rfr batch request
                 response_rfr = batch.retrieve(response_rfr_filename, conf)
@@ -343,9 +343,9 @@ class TestBatch(unittest.TestCase):
                 # sleep 1 minute waiting for batch get processed
                 print("sleep 30 seconds waiting for rfr batch get processed")
                 time.sleep(30)
-                if tried > 20:
-                    retry = False
-                    self.fail("Timeout for retrieve rfr batch response")
+            if tried > 20:
+                self.fail("Timeout for retrieve rfr batch response")
+                break
 
     def test_batch_mix_transaction_recurringtransaction(self):
         txn_dict = {
@@ -424,7 +424,7 @@ class TestBatch(unittest.TestCase):
         retry = True
         tried = 0
         while retry:
-            ++tried
+            tried += 1
             try:
                 response = batch.retrieve(response_filename, conf)
                 retry = False
@@ -433,9 +433,9 @@ class TestBatch(unittest.TestCase):
                 # sleep 1 minute waiting for batch get processed
                 print("sleep 30 seconds waiting for batch get processed")
                 time.sleep(30)
-                if tried > 20:
-                    retry = False
-                    self.fail("Timeout for retrieve batch response")
+            if tried > 20:
+                self.fail("Timeout for retrieve batch response")
+                break
 
         transactions = batch.Transactions()
         transactions.sameDayFunding = True
@@ -447,7 +447,7 @@ class TestBatch(unittest.TestCase):
         retry = True
         tried = 0
         while retry:
-            ++tried
+            tried += 1
             try:
                 # retrieve rfr batch request
                 response_rfr = batch.retrieve(response_rfr_filename, conf)
@@ -461,9 +461,9 @@ class TestBatch(unittest.TestCase):
                 # sleep 1 minute waiting for batch get processed
                 print("sleep 30 seconds waiting for rfr batch get processed")
                 time.sleep(30)
-                if tried > 20:
-                    retry = False
-                    self.fail("Timeout for retrieve rfr batch response")
+            if tried > 20:
+                self.fail("Timeout for retrieve rfr batch response")
+                break
 
 
 
