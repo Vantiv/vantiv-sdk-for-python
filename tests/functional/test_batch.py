@@ -25,6 +25,7 @@
 import os
 import sys
 import unittest
+import time
 
 package_root = os.path.dirname(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
 sys.path.insert(0, package_root)
@@ -65,10 +66,10 @@ class TestBatch(unittest.TestCase):
         card.type = 'VI'
 
         # eCheck
-        echeck = fields.echeck()
-        echeck.accType = 'Checking'
-        echeck.accNum = '4099999992'
-        echeck.routingNum = '011075150'
+        # echeck = fields.echeck()
+        # echeck.accType = 'Checking'
+        # echeck.accNum = '4099999992'
+        # echeck.routingNum = '011075150'
 
         # billtoaddress
         billtoaddress = fields.contact()
@@ -125,7 +126,7 @@ class TestBatch(unittest.TestCase):
 
         self.assertEquals('%s.xml.asc' % filename, response)
 
-    def test_batch_stream_and_rfr(self):
+    def test_batch_rfr(self):
         # Initial Transactions container
         transactions = batch.Transactions()
         transactions.sameDayFunding = True
@@ -138,10 +139,10 @@ class TestBatch(unittest.TestCase):
         card.type = 'VI'
 
         # eCheck
-        echeck = fields.echeck()
-        echeck.accType = 'Checking'
-        echeck.accNum = '4099999992'
-        echeck.routingNum = '011075150'
+        # echeck = fields.echeck()
+        # echeck.accType = 'Checking'
+        # echeck.accNum = '4099999992'
+        # echeck.routingNum = '011075150'
 
         # billtoaddress
         billtoaddress = fields.contact()
@@ -186,28 +187,60 @@ class TestBatch(unittest.TestCase):
         # Add transaction to container
         transactions.add(sale)
 
+        filename = 'batch_test_%s' % datetime.datetime.now().strftime("%Y%m%d%H%M%S%f")
+
         # stream to Vaitiv eCommerce and get object as response
-        response = batch.stream(transactions, conf)
+        response_filename = batch.submit(transactions, conf, filename)
+        self.assertEquals('%s.xml.asc' % filename, response_filename)
 
-        self.assertIn('batchResponse', response)
-
-        # TODO Cannot run on Jenkins, need to fix
-        # # Example for RFRRequest
-        # RFRRequest = fields.RFRRequest()
-        # RFRRequest.litleSessionId = response['@litleSessionId']
-        #
-        # transactions = batch.Transactions()
-        # transactions.add(RFRRequest)
-        #
-        # # stream to Vaitiv eCommerce and get object as response
-        # response_rfr = batch.stream(transactions, conf)
-        #
-        # self.assertIn('batchResponse', response_rfr)
-        # self.assertEquals(response_rfr['batchResponse']['authorizationResponse'][0]['litleTxnId'],
-        #                   response['batchResponse']['authorizationResponse'][0]['litleTxnId'])
+        response = {}
 
 
-    def test_batch_stream_dict(self):
+        # Example for RFRRequest
+        RFRRequest = fields.RFRRequest()
+
+        retry = True
+        tried = 0
+        while retry:
+            tried += 1
+            try:
+                response = batch.retrieve(response_filename, conf)
+                retry = False
+                RFRRequest.litleSessionId = response['@litleSessionId']
+            except:
+                # sleep 1 minute waiting for batch get processed
+                print("sleep 30 seconds waiting for batch get processed")
+                time.sleep(30)
+            if tried > 20:
+                self.fail("Timeout for retrieve batch response")
+                break
+
+        transactions = batch.Transactions()
+        transactions.add(RFRRequest)
+
+        # submit batch request
+        response_rfr_filename = batch.submit(transactions, conf)
+
+        retry = True
+        tried = 0
+        while retry:
+            tried += 1
+            try:
+                # retrieve rfr batch request
+                response_rfr = batch.retrieve(response_rfr_filename, conf)
+                retry = False
+                self.assertIn('batchResponse', response_rfr)
+                self.assertEquals(response_rfr['batchResponse']['authorizationResponse'][0]['litleTxnId'],
+                                  response['batchResponse']['authorizationResponse'][0]['litleTxnId'])
+            except:
+                # sleep 1 minute waiting for batch get processed
+                print("sleep 30 seconds waiting for rfr batch get processed")
+                time.sleep(30)
+            if tried > 20:
+                self.fail("Timeout for retrieve rfr batch response")
+                break
+
+    def test_batch_dict(self):
         txn_dict = {
             'authorization':[
                 {
@@ -261,26 +294,60 @@ class TestBatch(unittest.TestCase):
             }
         }
 
-        # stream to Vaitiv eCommerce and get object as response
-        response = batch.stream(txn_dict, conf)
+        filename = 'batch_test_%s' % datetime.datetime.now().strftime("%Y%m%d%H%M%S%f")
 
-        self.assertIn('batchResponse', response)
+        # stream to Vaitiv eCommerce and get object as response
+        response_filename = batch.submit(txn_dict, conf, filename)
+        self.assertEquals('%s.xml.asc' % filename, response_filename)
+
+        response = {}
+
 
         # Example for RFRRequest
         RFRRequest = fields.RFRRequest()
-        RFRRequest.litleSessionId = response['@litleSessionId']
+
+        retry = True
+        tried = 0
+        while retry:
+            tried += 1
+            try:
+                response = batch.retrieve(response_filename, conf)
+                retry = False
+                RFRRequest.litleSessionId = response['@litleSessionId']
+            except:
+                # sleep 1 minute waiting for batch get processed
+                print("sleep 30 seconds waiting for batch get processed")
+                time.sleep(30)
+            if tried > 20:
+                self.fail("Timeout for retrieve batch response")
+                break
 
         transactions = batch.Transactions()
         transactions.add(RFRRequest)
 
-        # stream to Vaitiv eCommerce and get object as response
-        response_rfr = batch.stream(transactions, conf)
+        # submit batch request
+        response_rfr_filename = batch.submit(transactions, conf)
 
-        self.assertIn('batchResponse', response_rfr)
-        self.assertEquals(response_rfr['batchResponse']['authorizationResponse'][0]['litleTxnId'],
-                          response['batchResponse']['authorizationResponse'][0]['litleTxnId'])
+        retry = True
+        tried = 0
+        while retry:
+            tried += 1
+            try:
+                # retrieve rfr batch request
+                response_rfr = batch.retrieve(response_rfr_filename, conf)
+                retry = False
+                self.assertIn('batchResponse', response_rfr)
+                self.assertEquals(response_rfr['batchResponse']['authorizationResponse'][0]['litleTxnId'],
+                                  response['batchResponse']['authorizationResponse'][0]['litleTxnId'])
+            except:
+                # sleep 1 minute waiting for batch get processed
+                print("sleep 30 seconds waiting for rfr batch get processed")
+                time.sleep(30)
+            if tried > 20:
+                self.fail("Timeout for retrieve rfr batch response")
+                break
 
-    def test_batch_stream_mix_transaction_recurringtransaction(self):
+    def test_batch_mix_transaction_recurringtransaction(self):
         txn_dict = {
             'sameDayFunding': 0,
             'authorization':[
@@ -342,27 +409,64 @@ class TestBatch(unittest.TestCase):
             }
         }
 
-        # stream to Vaitiv eCommerce and get object as response
-        response = batch.stream(txn_dict, conf)
+        filename = 'batch_test_%s' % datetime.datetime.now().strftime("%Y%m%d%H%M%S%f")
 
-        self.assertIn('batchResponse', response)
+        # stream to Vaitiv eCommerce and get object as response
+        response_filename = batch.submit(txn_dict, conf, filename)
+        self.assertEquals('%s.xml.asc' % filename, response_filename)
+
+        response = {}
+
 
         # Example for RFRRequest
         RFRRequest = fields.RFRRequest()
-        RFRRequest.litleSessionId = response['@litleSessionId']
+
+        retry = True
+        tried = 0
+        while retry:
+            tried += 1
+            try:
+                response = batch.retrieve(response_filename, conf)
+                retry = False
+                RFRRequest.litleSessionId = response['@litleSessionId']
+            except:
+                # sleep 1 minute waiting for batch get processed
+                print("sleep 30 seconds waiting for batch get processed")
+                time.sleep(30)
+            if tried > 20:
+                self.fail("Timeout for retrieve batch response")
+                break
 
         transactions = batch.Transactions()
         transactions.sameDayFunding = True
         transactions.add(RFRRequest)
 
-        # stream to Vaitiv eCommerce and get object as response
-        response_rfr = batch.stream(transactions, conf)
+        # submit batch request
+        response_rfr_filename = batch.submit(transactions, conf)
 
-        self.assertIn('batchResponse', response_rfr)
-        self.assertEquals(response_rfr['batchResponse'][0]['authorizationResponse'][0]['litleTxnId'],
-                          response['batchResponse'][0]['authorizationResponse'][0]['litleTxnId'])
-        self.assertEquals(response_rfr['batchResponse'][1]['createPlanResponse']['litleTxnId'],
-                          response['batchResponse'][1]['createPlanResponse']['litleTxnId'])
+        retry = True
+        tried = 0
+        while retry:
+            tried += 1
+            try:
+                # retrieve rfr batch request
+                response_rfr = batch.retrieve(response_rfr_filename, conf)
+                retry = False
+                self.assertIn('batchResponse', response_rfr)
+                self.assertEquals(response_rfr['batchResponse'][0]['authorizationResponse'][0]['litleTxnId'],
+                                  response['batchResponse'][0]['authorizationResponse'][0]['litleTxnId'])
+                self.assertEquals(response_rfr['batchResponse'][1]['createPlanResponse']['litleTxnId'],
+                                  response['batchResponse'][1]['createPlanResponse']['litleTxnId'])
+            except:
+                # sleep 1 minute waiting for batch get processed
+                print("sleep 30 seconds waiting for rfr batch get processed")
+                time.sleep(30)
+            if tried > 20:
+                self.fail("Timeout for retrieve rfr batch response")
+                break
+
+
+
 
 if __name__ == '__main__':
     unittest.main()

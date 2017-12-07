@@ -47,8 +47,6 @@ class Configuration(object):
         sftp_url (Str): Address for sftp
         batch_requests_path (Str): Location for saving generated batch request xml
         batch_response_path (Str): Location for saving batch response xml
-        fast_url (Str): Fast address, using for batch stream
-        fast_port (Str): Fast port, using for batch stream
         print_xml (Str): Whether print request and response xml
     """
     VERSION = version.VERSION
@@ -70,9 +68,6 @@ class Configuration(object):
             'sftp_url':'',
             'batch_requests_path':os.path.join(tempfile.gettempdir(), 'vantiv_sdk_batch_request'),
             'batch_response_path':os.path.join(tempfile.gettempdir(), 'vantiv_sdk_batch_response'),
-            'fast_url':'',
-            'fast_ssl':True,
-            'fast_port':'',
             'print_xml':False,
             'id':'',
         }
@@ -98,7 +93,7 @@ class Configuration(object):
                 if k in attr_dict:
                     setattr(self, k, conf_dict[k])
                 else:
-                    raise VantivException('"%s" is NOT an attribute of conf' % k)
+                    pass
 
 
 

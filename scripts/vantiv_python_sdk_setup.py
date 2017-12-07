@@ -47,9 +47,6 @@ def ask_user():
         'sftp_url',
         'batch_requests_path',
         'batch_response_path',
-        'fast_url',
-        'fast_ssl',
-        'fast_port',
         'print_xml',
         'id'
     ]
@@ -65,9 +62,6 @@ def ask_user():
         'sftp_url': '',
         'batch_requests_path': os.path.join(tempfile.gettempdir(), 'vantiv_sdk_batch_request'),
         'batch_response_path': os.path.join(tempfile.gettempdir(), 'vantiv_sdk_batch_response'),
-        'fast_url': '',
-        'fast_ssl': 'y',
-        'fast_port': '',
         'print_xml': 'n',
         'id': ''
     }
@@ -80,10 +74,6 @@ def ask_user():
             'transactprelive': 'https://transact.vantivprelive.com/vap/communicator/online',
             'transactpostlive': 'https://transact.vantivpostlive.com/vap/communicator/online',
             'transactprod': 'https://transact.vantivcnp.com/vap/communicator/online'
-        },
-        'fast_ssl': {
-            'y': True,
-            'n': False,
         },
         'print_xml': {
             'y': True,
@@ -102,9 +92,6 @@ def ask_user():
         'sftp_url': 'Please input your sftp address:',
         'batch_requests_path': 'Please input location for saving generated batch request xml:',
         'batch_response_path': 'Please input location for saving batch response xml',
-        'fast_url': 'Please input fast address, using for batch stream:',
-        'fast_ssl': 'Using ssl for fast stream? y for Yes, n for No.',
-        'fast_port': 'Please input fast port, using for batch stream',
         'print_xml': 'Do you want to print xml in console? y for Yes, n for No.',
         'id': 'litleRequest id for batch'
     }
