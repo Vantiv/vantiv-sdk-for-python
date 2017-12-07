@@ -19,9 +19,9 @@ See LICENSE file for details on using this software.
 
 Source Code available from : https://github.com/Vantiv/vantiv-sdk-for-python.git
 
-More examples can be found here https://github.com/Vantiv/vantiv-sdk-for-python/tree/master/samples
+More examples can be found here https://github.com/Vantiv/vantiv-sdk-for-python/tree/12.x/samples
 
-Detail documents can be found here http://vantivecommercepythonsdk.readthedocs.io/en/latest/
+Detail documents can be found here http://vantivecommercepythonsdk.readthedocs.io/en/12.x/
 
 Please contact [Vantiv eCommerce](https://developer.vantiv.com/community/ecommerce) to receive valid merchant credentials and determine which version of the SDK is right for your business requirements or if you require assistance in any other way.  You can reach us at sdksupport@Vantiv.com
 
@@ -74,7 +74,7 @@ conf = utils.Configuration()
 # password = ''
 # merchantId = ''
 # reportGroup = 'Default Report Group'
-# url = 'https://www.testlitle.com/sandbox/communicator/online'
+# url = 'https://www.testvantivcnp.com/sandbox/communicator/online'
 # proxy = ''
 # print_xml = False
 
@@ -125,7 +125,7 @@ transaction.enhancedData = enhancedData
 response = online.request(transaction, conf)
 
 print('Message: %s' % response['authorizationResponse']['message'])
-print('LitleTransaction ID: %s' % response['authorizationResponse']['litleTxnId'])
+print('cnpTransaction ID: %s' % response['authorizationResponse']['cnpTxnId'])
 
 # Configuration need following attributes for batch request:
 # attributes = default value
@@ -149,7 +149,7 @@ transactions.add(transaction)
 response = batch.stream(transactions, conf)
 
 print('Message: %s' % response['batchResponse']['authorizationResponse']['message'])
-print('LitleTransaction ID: %s' % response['batchResponse']['authorizationResponse']['litleTxnId'])
+print('cnpTransaction ID: %s' % response['batchResponse']['authorizationResponse']['cnpTxnId'])
 ```
 
 ```python
@@ -168,7 +168,7 @@ conf = utils.Configuration()
 # password = ''
 # merchantId = ''
 # reportGroup = 'Default Report Group'
-# url = 'https://www.testlitle.com/sandbox/communicator/online'
+# url = 'https://www.testvantivcnp.com/sandbox/communicator/online'
 # proxy = ''
 # print_xml = False
 
@@ -206,7 +206,7 @@ txn_dict ={
 response = online.request(txn_dict, conf)
 
 print('Message: %s' % response['batchResponse']['authorizationResponse']['message'])
-print('LitleTransaction ID: %s' % response['batchResponse']['authorizationResponse']['litleTxnId'])
+print('cnpTransaction ID: %s' % response['batchResponse']['authorizationResponse']['cnpTxnId'])
 ```
 
 NOTE: you may need to edit the proxy to to work for your system
@@ -214,6 +214,6 @@ NOTE: you may need to edit the proxy to to work for your system
 4) Next run this file.  You should see the following result.
 
     Message: Valid Format
-    Litle Transaction ID: <your-numeric-litle-txn-id>
+    cnp Transaction ID: <your-numeric-cnp-txn-id>
 
 Please contact Vantiv eCommerce with any further questions. You can reach us at SDKSupport@Vantiv.com

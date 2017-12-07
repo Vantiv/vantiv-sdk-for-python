@@ -1,4 +1,9 @@
-= Vantiv eCommerce Python SDKv2
+= Vantiv eCommerce Python SDK
+
+==Version 12.1.0
+* Feature: Full functions for XML v12.1
+* Feature: Defunct Stream method for batch request
+* Fix unicode bug for batch submit method in python 2
 
 ==Version 11.3.0
 * Feature: Full functions for XML v11.3

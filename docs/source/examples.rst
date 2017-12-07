@@ -21,7 +21,7 @@ Using dict
     # password = ''
     # merchantId = ''
     # reportGroup = 'Default Report Group'
-    # url = 'https://www.testlitle.com/sandbox/communicator/online'
+    # url = 'https://www.testvantivcnp.com/sandbox/communicator/online'
     # proxy = ''
     # print_xml = False
 
@@ -59,7 +59,7 @@ Using dict
     response = online.request(txn_dict, conf)
 
     print('Message: %s' % response['authorizationResponse']['message'])
-    print('LitleTransaction ID: %s' % response['authorizationResponse']['litleTxnId'])
+    print('cnpTransaction ID: %s' % response['authorizationResponse']['cnpTxnId'])
 
     # Configuration need following attributes for batch request:
     # attributes = default value
@@ -83,7 +83,7 @@ Using dict
     response = batch.stream(transactions, conf)
 
     print('Message: %s' % response['batchResponse']['authorizationResponse']['message'])
-    print('LitleTransaction ID: %s' % response['batchResponse']['authorizationResponse']['litleTxnId'])
+    print('cnpTransaction ID: %s' % response['batchResponse']['authorizationResponse']['cnpTxnId'])
 
 Using object
 ------------
@@ -105,7 +105,7 @@ Using object
     # password = ''
     # merchantId = ''
     # reportGroup = 'Default Report Group'
-    # url = 'https://www.testlitle.com/sandbox/communicator/online'
+    # url = 'https://www.testvantivcnp.com/sandbox/communicator/online'
     # proxy = ''
     # print_xml = False
 
@@ -154,7 +154,7 @@ Using object
     response = online.request(transaction, conf)
 
     print('Message: %s' % response['authorizationResponse']['message'])
-    print('LitleTransaction ID: %s' % response['authorizationResponse']['litleTxnId'])
+    print('cnpTransaction ID: %s' % response['authorizationResponse']['cnpTxnId'])
 
     # Configuration need following attributes for batch request:
     # attributes = default value
@@ -178,4 +178,4 @@ Using object
     response = batch.stream(transactions, conf)
 
     print('Message: %s' % response['batchResponse']['authorizationResponse']['message'])
-    print('LitleTransaction ID: %s' % response['batchResponse']['authorizationResponse']['litleTxnId'])
+    print('cnpTransaction ID: %s' % response['batchResponse']['authorizationResponse']['cnpTxnId'])
