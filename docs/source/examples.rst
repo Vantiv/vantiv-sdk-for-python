@@ -163,9 +163,6 @@ Using object
     # sftp_url = ''
     # batch_requests_path = '/tmp/vantiv_sdk_batch_request'
     # batch_response_path = '/tmp/vantiv_sdk_batch_response'
-    # fast_url = ''
-    # fast_ssl = True
-    # fast_port = ''
     # id = ''
 
     # Initial batch transactions container class
