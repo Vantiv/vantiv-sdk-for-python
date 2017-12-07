@@ -1,10 +1,6 @@
 API
 ===
 
-batch.stream
-------------
-    .. autofunction:: vantivsdk.batch.stream
-
 batch.download
 --------------
     .. autofunction:: vantivsdk.batch.download
