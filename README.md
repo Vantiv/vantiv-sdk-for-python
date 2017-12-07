@@ -19,9 +19,9 @@ See LICENSE file for details on using this software.
 
 Source Code available from : https://github.com/Vantiv/vantiv-sdk-for-python.git
 
-More examples can be found here https://github.com/Vantiv/vantiv-sdk-for-python/tree/master/samples
+More examples can be found here https://github.com/Vantiv/vantiv-sdk-for-python/tree/11.x/samples
 
-Detail documents can be found here http://vantivecommercepythonsdk.readthedocs.io/en/latest/
+Detail documents can be found here http://vantivecommercepythonsdk.readthedocs.io/en/11.x/
 
 Please contact [Vantiv eCommerce](https://developer.vantiv.com/community/ecommerce) to receive valid merchant credentials and determine which version of the SDK is right for your business requirements or if you require assistance in any other way.  You can reach us at sdksupport@Vantiv.com
 
@@ -74,7 +74,7 @@ conf = utils.Configuration()
 # password = ''
 # merchantId = ''
 # reportGroup = 'Default Report Group'
-# url = 'https://www.testlitle.com/sandbox/communicator/online'
+# url = 'https://www.testvantivcnp.com/sandbox/communicator/online'
 # proxy = ''
 # print_xml = False
 
@@ -134,9 +134,6 @@ print('LitleTransaction ID: %s' % response['authorizationResponse']['litleTxnId'
 # sftp_url = ''
 # batch_requests_path = '/tmp/vantiv_sdk_batch_request'
 # batch_response_path = '/tmp/vantiv_sdk_batch_response'
-# fast_url = ''
-# fast_ssl = True
-# fast_port = ''
 # id = ''
 
 # Initial batch transactions container class
@@ -168,7 +165,7 @@ conf = utils.Configuration()
 # password = ''
 # merchantId = ''
 # reportGroup = 'Default Report Group'
-# url = 'https://www.testlitle.com/sandbox/communicator/online'
+# url = 'https://www.testvantivcnp.com/sandbox/communicator/online'
 # proxy = ''
 # print_xml = False
 
