@@ -27,6 +27,8 @@ import sys
 import unittest
 import time
 
+from subprocess import call
+
 package_root = os.path.dirname(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
 sys.path.insert(0, package_root)
 
@@ -38,6 +40,134 @@ conf = utils.Configuration()
 
 
 class TestBatch(unittest.TestCase):
+
+    def test_batch_submit_useEncryption(self):
+        # Initial Transactions container
+        transactions = batch.Transactions()
+        # Transactions presented by dict
+        txn_dict = {
+            'authorization':{
+                'reportGroup': 'Planets',
+                'orderId': '12344',
+                'amount': '106',
+                'orderSource': 'ecommerce',
+                'id': 'thisisid',
+                'card': {
+                    'expDate': '1210',
+                    'number': '4100000000000000',
+                    'type': 'VI',
+                }
+            }
+        }
+        transactions.add(txn_dict)
+
+        # Card
+        card = fields.cardType()
+        card.number = '4457010000000009'
+        card.expDate = '0121'
+        card.cardValidationNum = '349'
+        card.type = 'VI'
+
+        # eCheck
+        # echeck = fields.echeck()
+        # echeck.accType = 'Checking'
+        # echeck.accNum = '4099999992'
+        # echeck.routingNum = '011075150'
+
+        # billtoaddress
+        billtoaddress = fields.contact()
+        billtoaddress.firstName = 'Mike'
+        billtoaddress.middleInitial = 'J'
+        billtoaddress.lastName = 'Hammer'
+        billtoaddress.phone = '999-999-9999'
+
+        # Initial authorization
+        authorization = fields.authorization()
+        authorization.orderId = '1'
+        authorization.amount = 10010
+        authorization.reportGroup = 'Planets'
+        authorization.orderSource = 'ecommerce'
+        authorization.card = card
+        authorization.billtoaddress = billtoaddress
+        authorization.id = 'thisisid'
+        # Add transaction to container
+        transactions.add(authorization)
+
+        # Initial authorization
+        authorization2 = fields.authorization()
+        authorization2.orderId = '2'
+        authorization2.amount = 1001
+        authorization2.reportGroup = 'Planets'
+        authorization2.orderSource = 'ecommerce'
+        authorization2.card = card
+        authorization2.billtoaddress = billtoaddress
+        authorization2.id = 'thisisid'
+        # Add transaction to container
+        transactions.add(authorization2)
+
+        # Initial authorization
+        sale = fields.sale()
+        sale.orderId = '1'
+        sale.amount = 10010
+        sale.reportGroup = 'Planets'
+        sale.orderSource = 'ecommerce'
+        sale.card = card
+        sale.billtoaddress = billtoaddress
+        sale.id = 'thisisid'
+        # Add transaction to container
+        transactions.add(sale)
+
+        ## >>> WITH ENCRYPTION
+
+        conf.useEncryption = True
+        conf.user = conf.pgp_user
+        conf.password = conf.pgp_password
+        conf.sftp_username = conf.pgp_sftp_username
+        conf.sftp_password = conf.pgp_sftp_password
+        withEncryptionFilename = 'batch_test_%s' % datetime.datetime.now().strftime("%Y%m%d%H%M%S%f")
+
+
+        # stream to Vaitiv eCommerce and get object as response
+        response = batch.submit(transactions, conf, withEncryptionFilename)
+
+        print(response)
+
+        retry = True
+        tried = 0
+        withEncryptionReponseFilepath = ''
+        while retry:
+            tried += 1
+            try:
+                withEncryptionReponseFilepath = batch._get_file_from_sftp(response, conf, False, 60)
+                retry = False
+            except:
+                # sleep 1 minute waiting for batch get processed
+                print("sleep 30 seconds waiting for batch get processed")
+                time.sleep(30)
+            if tried > 20:
+                self.fail("Timeout for retrieve batch response")
+                break        
+
+        #local_path = os.path.join(conf.batch_requests_path, '%s.xml' % withEncryptionFilename)
+        # encryptionReader = open(withEncryptionReponseFilepath, 'r')
+        # temp = open('localCopy', 'w')
+        # temp.write(encryptionReader.read())
+        # encryptionReader.close()
+        # temp.close()   
+        call(["cat", withEncryptionReponseFilepath])
+        # Undo setting configuration.
+        conf.user = conf.txn_user
+        conf.password = conf.txn_password
+        conf.sftp_username = conf.txn_sftp_username
+        conf.sftp_password = conf.txn_sftp_password
+        conf.userEncryption = False
+        ### <<< WITH ENCRYPTION
+
+        with open(withEncryptionReponseFilepath, 'r') as xml_file:
+            obj = fields.CreateFromDocument(xml_file.read())
+            self.assertEquals("Valid Format", obj.message)
+            
+
     def test_batch_submit(self):
         # Initial Transactions container
         transactions = batch.Transactions()
@@ -464,7 +594,6 @@ class TestBatch(unittest.TestCase):
             if tried > 20:
                 self.fail("Timeout for retrieve rfr batch response")
                 break
-
 
 
 
