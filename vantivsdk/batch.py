@@ -31,7 +31,7 @@ import paramiko
 import six
 import xmltodict
 
-from . import (fields, utils, batch_txns, dict2obj)
+from . import (fields, utils, batch_txns, dict2obj, pgp_helper)
 
 # Key: transaction name
 # Value: array of batchRequest attributes according to transactions
@@ -192,6 +192,12 @@ def _put_file_to_sftp(file_path, conf, timeout):
     Returns:
         filename of file in inbound folder at remote server with '.asc' as extension.
     """
+    # Check if the file should be encrypted.
+    if conf.useEncryption:
+        crypto = pgp_helper.PgpHelper()
+        crypto.encryptFileSameName(conf.vantivPublicKeyID, file_path)
+
+
     basename = os.path.basename(file_path)
     remote_path_prg = 'inbound/%s.prg' % basename
     remote_path_asc = 'inbound/%s.asc' % basename
@@ -249,11 +255,20 @@ def _get_file_from_sftp(filename, conf, delete_remote, timeout):
         if delete_remote:
             sftp.remove(remote_path_asc)
         transport.close()
+
+        print('Passed downloaded!')
+        # Check if the file should be decrypted.
+        if conf.useEncryption:
+            crypto = pgp_helper.PgpHelper()
+            crypto.decryptFile(conf.gpgPassphrase, local_path, local_path)
+            print('Passed decryption!')
+
     except Exception:
         try:
             transport.close()
         except:
             pass
+        print('Cannot find file "%s" on Vantiv server.' % filename)
         raise utils.VantivException('Cannot find file "%s" on Vantiv server.' % filename)
     return local_path
 

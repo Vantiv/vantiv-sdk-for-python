@@ -70,6 +70,19 @@ class Configuration(object):
             'batch_response_path':os.path.join(tempfile.gettempdir(), 'vantiv_sdk_batch_response'),
             'print_xml':False,
             'id':'',
+            'vantivPublicKeyID':'',
+            'gpgPassphrase':'',
+            'merchantPublicKeyID':'',
+            'useEncryption':'',
+            'deleteBatchFiles':'',
+            'pgp_user':'',
+            'pgp_password':'',
+            'pgp_sftp_username':'',
+            'pgp_sftp_password':'',
+            'txn_user':'',
+            'txn_password':'',
+            'txn_sftp_username':'',
+            'txn_sftp_password':''
         }
 
         # set default values
