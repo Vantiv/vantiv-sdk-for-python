@@ -37,7 +37,7 @@ class PgpHelper(object):
     writer.write(reader.read())
     writer.close()
     reader.close()
-    # os.remove(temp)
+    os.remove(temp)
     return returnCode
 
 
