@@ -294,7 +294,27 @@ def _get_file_str_from_sftp(filename, conf, delete_remote, timeout):
         channel.settimeout(timeout)
         sftp = paramiko.SFTPClient.from_transport(transport)
         remote_file = sftp.open(remote_path_asc)
-        return_str = remote_file.read()
+        # If the merchant is using encryption, we got to download and decrypt
+        # it so that the content is readable.
+        return_str = ''
+        if conf.useEncryption:
+            # Download the content to a temporary file.
+            tempFilename = 'encrypted.temp'
+            temp = open(tempFilename, 'w')
+            temp.write(remote_file.read())
+            temp.close()
+            crypto = PgpHelper()
+            # Decrypt the file.
+            crypto.decryptFileSameName(conf.gpgPassphrase, tempFilename)
+            # Read the decrypted file.
+            temp = open(tempFilename, 'r')
+            return_str = temp.read()
+            temp.close()
+            # Delete the temporary file.
+            os.remove(tempFilename)
+        else:
+            return_str = remote_file.read()
+
         return_str = return_str.decode('utf-8')
         if delete_remote:
             sftp.remove(remote_path_asc)

@@ -43,6 +43,8 @@ conf = utils.Configuration()
 class TestBatch(unittest.TestCase):
 
 
+    # Client creates an encrypted xml request, send it to the server to
+    # receive an encrypted xml response, then decrypt it and read the message.
     def test_batch_submit_useEncryption(self):
         # Initial Transactions container
         transactions = batch.Transactions()
@@ -122,10 +124,10 @@ class TestBatch(unittest.TestCase):
         ## >>> WITH ENCRYPTION
 
         conf.useEncryption = True
-        conf.user = conf.pgp_user
-        conf.password = conf.pgp_password
-        conf.sftp_username = conf.pgp_sftp_username
-        conf.sftp_password = conf.pgp_sftp_password
+        conf.user = conf.test_pgp_user
+        conf.password = conf.test_pgp_password
+        conf.sftp_username = conf.test_pgp_sftp_username
+        conf.sftp_password = conf.test_pgp_sftp_password
         withEncryptionFilename = 'batch_test_%s' % datetime.datetime.now().strftime("%Y%m%d%H%M%S%f")
 
 
@@ -152,10 +154,10 @@ class TestBatch(unittest.TestCase):
 
         call(["cat", withEncryptionReponseFilepath])
         # Undo setting configuration.
-        conf.user = conf.txn_user
-        conf.password = conf.txn_password
-        conf.sftp_username = conf.txn_sftp_username
-        conf.sftp_password = conf.txn_sftp_password
+        conf.user = conf.test_txn_user
+        conf.password = conf.test_txn_password
+        conf.sftp_username = conf.test_txn_sftp_username
+        conf.sftp_password = conf.test_txn_sftp_password
         conf.userEncryption = False
         ### <<< WITH ENCRYPTION
 

@@ -38,7 +38,7 @@ class TestPgpHelper(unittest.TestCase):
 		outFilename = "out_test_encryptFile_successful"
 
 		# Assert no error occur when executing gpg command line.
-		self.assertEqual(0, crypto.encryptFile(recipient, testFilename, outFilename))
+		crypto.encryptFile(recipient, testFilename, outFilename)
 
 		# Assert that the generated file is not an empty file.
 		self.assertTrue(os.path.isfile(outFilename))
@@ -73,7 +73,7 @@ class TestPgpHelper(unittest.TestCase):
 		outFilename = "out_test_encryptFile_fail"
 
 		# Assert that the execution of gpg command line fails as the file does not exists.
-		self.assertEquals(2, crypto.encryptFile(recipient, testNonexistentFilename, outFilename))
+		self.assertRaises(utils.VantivException, crypto.encryptFile, recipient, testNonexistentFilename, outFilename)
 
 		# Assert that the generated file does not exist.
 		self.assertFalse(os.path.isfile(outFilename))
@@ -101,7 +101,7 @@ class TestPgpHelper(unittest.TestCase):
 		outFilename = "out_test_encryptFile_fail_nonexistentKeyId"
 
 		# Assert that the execution of gpg command line fails as the key does not exist.
-		self.assertNotEqual(0, crypto.encryptFile(falseRecipient, testFilename, outFilename))
+		self.assertRaises(utils.VantivException, crypto.encryptFile, falseRecipient, testFilename, outFilename)
 
 		# Assert that the generated file does not exist.
 		self.assertFalse(os.path.isfile(outFilename))
@@ -140,7 +140,7 @@ class TestPgpHelper(unittest.TestCase):
 		decryptedFilename = 'out_decrypted_test_decryptFile_successful.txt'
 
 		# Assert that gpg command line execution has run without any error.
-		self.assertEqual(0, crypto.decryptFile(passphrase, encryptedFilename, decryptedFilename))
+		crypto.decryptFile(passphrase, encryptedFilename, decryptedFilename)
 		# Assert that the generated file is not an empty file.
 		self.assertTrue(os.path.isfile(decryptedFilename))
 
@@ -182,7 +182,7 @@ class TestPgpHelper(unittest.TestCase):
 		nonexistentPathToEncryptedFilename = "nonexistent"
 
 		# Assert that gpg command line execution fails as the path to the file does not exist.
-		self.assertNotEqual(0, crypto.decryptFile(passphrase, nonexistentPathToEncryptedFilename, decryptedFile))
+		self.assertRaises(utils.VantivException, crypto.decryptFile, passphrase, nonexistentPathToEncryptedFilename, decryptedFile)
 		# Assert that the generated file does not exist.
 		self.assertFalse(os.path.isfile(decryptedFile))
 
@@ -215,7 +215,7 @@ class TestPgpHelper(unittest.TestCase):
 		decryptedFile = 'out_decrypted_test_decryptFile_fail_wrongPassphrase.txt'
 
 		# Assert that gpg command line execution fails because the passphrase is incorrect.
-		self.assertNotEqual(0, crypto.decryptFile(passphrase, encryptedFilename, decryptedFile))
+		self.assertRaises(utils.VantivException, crypto.decryptFile, passphrase, encryptedFilename, decryptedFile)
 		# Assert that the generated file does not exist.
 		self.assertFalse(os.path.isfile(decryptedFile))
 
