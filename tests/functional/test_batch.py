@@ -120,10 +120,10 @@ class TestBatch(unittest.TestCase):
         ## >>> WITH ENCRYPTION
 
         conf.useEncryption = True
-        conf.user = conf.pgp_user
-        conf.password = conf.pgp_password
-        conf.sftp_username = conf.pgp_sftp_username
-        conf.sftp_password = conf.pgp_sftp_password
+        conf.user = conf.test_pgp_user
+        conf.password = conf.test_pgp_password
+        conf.sftp_username = conf.test_pgp_sftp_username
+        conf.sftp_password = conf.test_pgp_sftp_password
         withEncryptionFilename = 'batch_test_%s' % datetime.datetime.now().strftime("%Y%m%d%H%M%S%f")
 
 
@@ -156,10 +156,10 @@ class TestBatch(unittest.TestCase):
         # temp.close()   
         call(["cat", withEncryptionReponseFilepath])
         # Undo setting configuration.
-        conf.user = conf.txn_user
-        conf.password = conf.txn_password
-        conf.sftp_username = conf.txn_sftp_username
-        conf.sftp_password = conf.txn_sftp_password
+        conf.user = conf.test_txn_user
+        conf.password = conf.test_txn_password
+        conf.sftp_username = conf.test_txn_sftp_username
+        conf.sftp_password = conf.test_txn_sftp_password
         conf.userEncryption = False
         ### <<< WITH ENCRYPTION
 
