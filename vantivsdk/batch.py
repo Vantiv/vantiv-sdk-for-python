@@ -263,12 +263,12 @@ def _get_file_from_sftp(filename, conf, delete_remote, timeout):
             crypto.decryptFile(conf.gpgPassphrase, local_path, local_path)
             print('Passed decryption!')
 
-    except Exception:
+    except Exception as ex:
         try:
             transport.close()
         except:
             pass
-        print('Cannot find file "%s" on Vantiv server.' % filename)
+        print(ex)
         raise utils.VantivException('Cannot find file "%s" on Vantiv server.' % filename)
     return local_path
 
@@ -299,13 +299,13 @@ def _get_file_str_from_sftp(filename, conf, delete_remote, timeout):
         return_str = ''
         if conf.useEncryption:
             # Download the content to a temporary file.
-            tempFilename = 'encrypted.temp'
+            tempFilename = 'pgp.vantiv'
             temp = open(tempFilename, 'w')
             temp.write(remote_file.read())
             temp.close()
-            crypto = PgpHelper()
+            crypto = pgp_helper.PgpHelper()
             # Decrypt the file.
-            crypto.decryptFileSameName(conf.gpgPassphrase, tempFilename)
+            crypto.decryptFile(conf.gpgPassphrase, tempFilename, tempFilename)
             # Read the decrypted file.
             temp = open(tempFilename, 'r')
             return_str = temp.read()
@@ -319,11 +319,12 @@ def _get_file_str_from_sftp(filename, conf, delete_remote, timeout):
         if delete_remote:
             sftp.remove(remote_path_asc)
         transport.close()
-    except Exception:
+    except Exception as ex:
         try:
             transport.close()
         except:
             pass
+        print(ex)
         raise utils.VantivException('Cannot find file "%s" on Vantiv server.' % filename)
 
     if conf.print_xml:

@@ -36,6 +36,8 @@ from vantivsdk import *
 conf = utils.Configuration()
 
 class TestAuth(unittest.TestCase):
+
+    """
     def test_simple_auth_with_card(self):
         authorization = fields.authorization()
         authorization.reportGroup = 'Planets'
@@ -109,7 +111,8 @@ class TestAuth(unittest.TestCase):
 
         response = online.request(authorization, conf)
         self.assertEquals('000', response['authorizationResponse']['response'])
-
+    """
+    # ***
     def test_simple_auth_with_applepay_and_secondary_amount(self):
         authorization = fields.authorization()
         authorization.reportGroup = 'Planets'
@@ -132,9 +135,10 @@ class TestAuth(unittest.TestCase):
         authorization.applepay = applepay
 
         response = online.request(authorization, conf)
+        # vvv
         self.assertEquals('000', response['authorizationResponse']['response'])
         self.assertEquals('106', response['authorizationResponse']['applepayResponse']['transactionAmount'])
-
+    """
     def test_pos_without_capability_entrymod(self):
         authorization = fields.authorization()
         authorization.reportGroup = 'Planets'
@@ -299,7 +303,7 @@ class TestAuth(unittest.TestCase):
         response = online.request(authorization, conf)
         self.assertEquals('000', response['authorizationResponse']['response'])
         self.assertNotIn('networkTransactionId', response['authorizationResponse'])
-
+    """
 
 if __name__ == '__main__':
     unittest.main()
