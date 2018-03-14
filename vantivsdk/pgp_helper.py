@@ -30,8 +30,8 @@ class PgpHelper(object):
     try:
       temp = 'pgp.vantiv'
       self.encryptFile(recipient, toBeEncryptedFilepath, temp)
-      writer = open(toBeEncryptedFilepath, 'w')
-      reader = open(temp, 'r')
+      writer = open(toBeEncryptedFilepath, 'wb')
+      reader = open(temp, 'rb')
       writer.write(reader.read())
       writer.close()
       reader.close()

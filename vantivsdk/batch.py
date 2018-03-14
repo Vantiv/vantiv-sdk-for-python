@@ -300,14 +300,14 @@ def _get_file_str_from_sftp(filename, conf, delete_remote, timeout):
         if conf.useEncryption:
             # Download the content to a temporary file.
             tempFilename = 'pgp.vantiv'
-            temp = open(tempFilename, 'w')
+            temp = open(tempFilename, 'wb')
             temp.write(remote_file.read())
             temp.close()
             crypto = pgp_helper.PgpHelper()
             # Decrypt the file.
             crypto.decryptFile(conf.gpgPassphrase, tempFilename, tempFilename)
             # Read the decrypted file.
-            temp = open(tempFilename, 'r')
+            temp = open(tempFilename, 'rb')
             return_str = temp.read()
             temp.close()
             # Delete the temporary file.
