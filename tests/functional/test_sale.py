@@ -35,7 +35,7 @@ conf = utils.Configuration()
 
 
 class TestSale(unittest.TestCase):
-    """
+    
     def test_simple_sale_with_card(self):
         transaction = fields.sale()
         transaction.reportGroup = 'Planets'
@@ -70,7 +70,7 @@ class TestSale(unittest.TestCase):
 
         response = online.request(transaction, conf)
         self.assertEquals('000', response['saleResponse']['response'])
-    """
+    
     def test_simple_sale_with_applepay_and_secondary_amount(self):
         transaction = fields.sale()
         transaction.reportGroup = 'Planets'
@@ -96,7 +96,7 @@ class TestSale(unittest.TestCase):
         self.assertEquals('000', response['saleResponse']['response'])
         # vvv
         self.assertEquals('106', response['saleResponse']['applepayResponse']['transactionAmount'])
-    """
+    
     def test_simple_sale_with_android_pay(self):
         transaction = fields.sale()
         transaction.reportGroup = 'Planets'
@@ -283,6 +283,6 @@ class TestSale(unittest.TestCase):
         self.assertEquals('000', response['saleResponse']['response'])
         self.assertEquals('http://redirect.url.vantiv.com',
                           response['saleResponse']['idealResponse']['redirectUrl'])
-    """
+    
 if __name__ == '__main__':
     unittest.main()
