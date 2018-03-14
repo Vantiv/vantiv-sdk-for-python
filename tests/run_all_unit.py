@@ -32,8 +32,8 @@ sys.path.insert(0, package_root)
 
 import run_test_utils
 
-if (sys.version_info[0] == 3) and sys.version_info[:2] >= (3, 4):
-    tests_dir = ['unit']
-    run_test_utils.run_tests(tests_dir)
-else:
-    print('Mock is not a standard library, please run unittest using python3.4 or newer')
+#if (sys.version_info[0] == 3) and sys.version_info[:2] >= (3, 4):
+tests_dir = ['unit']
+run_test_utils.run_tests(tests_dir)
+#else:
+#    print('Mock is not a standard library, please run unittest using python3.4 or newer')
