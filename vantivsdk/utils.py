@@ -74,15 +74,7 @@ class Configuration(object):
             'gpgPassphrase':'',
             'merchantPublicKeyID':'',
             'useEncryption':'',
-            'deleteBatchFiles':'',
-            'test_pgp_user':'',
-            'test_pgp_password':'',
-            'test_pgp_sftp_username':'',
-            'test_pgp_sftp_password':'',
-            'test_txn_user':'',
-            'test_txn_password':'',
-            'test_txn_sftp_username':'',
-            'test_txn_sftp_password':''
+            'deleteBatchFiles':''
         }
 
         # set default values

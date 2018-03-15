@@ -28,10 +28,10 @@ class PgpHelper(object):
   # Handle gpg encryption when the output filename is the same as the input filename.
   def encryptFileSameName(self, recipient, toBeEncryptedFilepath):
     try:
-      temp = 'temp.temp'
+      temp = 'pgp.vantiv'
       self.encryptFile(recipient, toBeEncryptedFilepath, temp)
-      writer = open(toBeEncryptedFilepath, 'w')
-      reader = open(temp, 'r')
+      writer = open(toBeEncryptedFilepath, 'wb')
+      reader = open(temp, 'rb')
       writer.write(reader.read())
       writer.close()
       reader.close()
