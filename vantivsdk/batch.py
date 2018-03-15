@@ -312,7 +312,6 @@ def _get_file_str_from_sftp(filename, conf, delete_remote, timeout):
         else:
             return_str = remote_file.read()    
         
-
         return_str = return_str.decode('utf-8')
         if delete_remote:
             sftp.remove(remote_path_asc)
