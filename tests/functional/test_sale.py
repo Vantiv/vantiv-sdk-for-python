@@ -96,7 +96,7 @@ class TestSale(unittest.TestCase):
         self.assertEquals('000', response['saleResponse']['response'])
         # vvv
         self.assertEquals('106', response['saleResponse']['applepayResponse']['transactionAmount'])
-    
+       
     def test_simple_sale_with_android_pay(self):
         transaction = fields.sale()
         transaction.reportGroup = 'Planets'

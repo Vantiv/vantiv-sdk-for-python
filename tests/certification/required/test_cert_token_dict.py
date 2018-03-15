@@ -56,7 +56,7 @@ class TestCertTokenDict(unittest.TestCase):
         # TODO run twice get 802
         # self.assertEquals('801', response['registerTokenResponse']['response'])
         # self.assertEquals('Account number was successfully registered', response['registerTokenResponse']['message'])
-
+    
     def test_table_2_7_51(self):
         txn_dict = {
             'registerTokenRequest' : {
