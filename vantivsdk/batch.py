@@ -303,7 +303,7 @@ def _get_file_str_from_sftp(filename, conf, delete_remote, timeout):
             # Decrypt the file.
             crypto.decryptFile(conf.gpgPassphrase, tempFilename, tempFilename)
             # Read the decrypted file.
-            temp = open(tempFilename, 'r')
+            temp = open(tempFilename, 'rb')
             print('Trying to read')
             return_str = temp.read()
             temp.close()
@@ -311,8 +311,9 @@ def _get_file_str_from_sftp(filename, conf, delete_remote, timeout):
             os.remove(tempFilename)
         else:
             return_str = remote_file.read()    
-            return_str = return_str.decode('utf-8')
         
+
+        return_str = return_str.decode('utf-8')
         if delete_remote:
             sftp.remove(remote_path_asc)
         transport.close()
