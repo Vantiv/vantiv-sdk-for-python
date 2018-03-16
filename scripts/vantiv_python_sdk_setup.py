@@ -51,7 +51,11 @@ def ask_user():
         # 'fast_ssl',
         # 'fast_port',
         'print_xml',
-        'id'
+        'id',
+        'deleteBatchFiles',
+        'useEncryption',
+        'vantivPublicKeyID',
+        'gpgPassphrase'
     ]
     attr_dict = {
         'user': '',
@@ -69,7 +73,11 @@ def ask_user():
         # 'fast_ssl': 'y',
         # 'fast_port': '',
         'print_xml': 'n',
-        'id': ''
+        'id': '',
+        'deleteBatchFiles': 'y',
+        'useEncryption': 'y',
+        'vantivPublicKeyID': '',
+        'gpgPassphrase': ''
     }
     attr_valid_dict = {
         'url': {
@@ -106,7 +114,11 @@ def ask_user():
         # 'fast_ssl': 'Using ssl for fast stream? y for Yes, n for No.',
         # 'fast_port': 'Please input fast port, using for batch stream',
         'print_xml': 'Do you want to print xml in console? y for Yes, n for No.',
-        'id': 'cnpRequest id for batch'
+        'id': 'cnpRequest id for batch',
+        'deleteBatchFiles': 'Do you want to delete xml batch files after the data is retrieved? y for Yes, n for No.',
+        'useEncryption': 'Are you a pgp enabled presenter?  y for Yes, n for No.',
+        'vantivPublicKeyID': 'What is the ID of Vantiv\'s public key on your keyring?',
+        'gpgPassphrase': 'What is the passphrase of the gpg key you will use to decrypt the batches?'
     }
     print(CC.bpurple('Vantiv eCommerce Python SDK configuration!'))
     print('''
