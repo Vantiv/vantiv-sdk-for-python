@@ -38,10 +38,19 @@ import certification_test_conf
 
 conf = certification_test_conf.conf
 
-
+# This test requires set up os environment.                  
+current_user = conf.user
+current_password = conf.password
+current_sftp_username = conf.sftp_username
+current_stfp_password = conf.sftp_password
 
 class TestCertTokenDict(unittest.TestCase):
     def test_table_2_7_50(self):
+        # This test only works for regular test credentials, not pgp test credentials.
+        conf.user = os.getenv('sdk11_test_txn_user')
+        conf.password = os.getenv('sdk11_test_txn_password')
+        conf.sftp_username = os.getenv('sdk11_test_txn_sftp_username')
+        conf.stfp_password = os.getenv('sdk11_test_txn_sftp_password')
         txn_dict = {
             'registerTokenRequest' : {
                 'orderId' : '50',
@@ -56,6 +65,10 @@ class TestCertTokenDict(unittest.TestCase):
         # TODO run twice get 802
         # self.assertEquals('801', response['registerTokenResponse']['response'])
         # self.assertEquals('Account number was successfully registered', response['registerTokenResponse']['message'])
+        conf.user = current_user
+        conf.password = current_password
+        conf.sftp_username = current_sftp_username
+        conf.stfp_password = current_stfp_password
 
     def test_table_2_7_51(self):
         txn_dict = {
@@ -71,6 +84,11 @@ class TestCertTokenDict(unittest.TestCase):
         self.assertEquals('Credit card number was invalid', response['registerTokenResponse']['message'])
 
     def test_table_2_7_52(self):
+        # This test only works for regular test credentials, not pgp test credentials.
+        conf.user = os.getenv('sdk11_test_txn_user')
+        conf.password = os.getenv('sdk11_test_txn_password')
+        conf.sftp_username = os.getenv('sdk11_test_txn_sftp_username')
+        conf.stfp_password = os.getenv('sdk11_test_txn_sftp_password')
         txn_dict = {
             'registerTokenRequest' : {
                 'orderId' : '52',
@@ -84,8 +102,17 @@ class TestCertTokenDict(unittest.TestCase):
         self.assertEquals('VI', response['registerTokenResponse']['type'])
         self.assertEquals('802', response['registerTokenResponse']['response'])
         self.assertEquals('Account number was previously registered', response['registerTokenResponse']['message'])
+        conf.user = current_user
+        conf.password = current_password
+        conf.sftp_username = current_sftp_username
+        conf.stfp_password = current_stfp_password
 
     def test_table_2_7_53(self):
+        # This test only works for regular test credentials, not pgp test credentials.
+        conf.user = os.getenv('sdk11_test_txn_user')
+        conf.password = os.getenv('sdk11_test_txn_password')
+        conf.sftp_username = os.getenv('sdk11_test_txn_sftp_username')
+        conf.stfp_password = os.getenv('sdk11_test_txn_sftp_password')
         txn_dict = {
             'registerTokenRequest' : {
                 'orderId' : '53',
@@ -103,6 +130,10 @@ class TestCertTokenDict(unittest.TestCase):
         # TODO run twice get 802
         # self.assertEquals('801', response['registerTokenResponse']['response'])
         # self.assertEquals('Account number was successfully registered', response['registerTokenResponse']['message'])
+        conf.user = current_user
+        conf.password = current_password
+        conf.sftp_username = current_sftp_username
+        conf.stfp_password = current_stfp_password
 
     def test_table_2_7_54(self):
         txn_dict = {
@@ -120,6 +151,10 @@ class TestCertTokenDict(unittest.TestCase):
         self.assertEquals('Invalid Bank Routing Number', response['registerTokenResponse']['message'])
 
     def test_table_2_8_55(self):
+        conf.user = os.getenv('sdk11_test_txn_user')
+        conf.password = os.getenv('sdk11_test_txn_password')
+        conf.sftp_username = os.getenv('sdk11_test_txn_sftp_username')
+        conf.stfp_password = os.getenv('sdk11_test_txn_sftp_password')
         txn_dict = {
             'authorization' : {
                 'orderId' : '55',
@@ -144,6 +179,10 @@ class TestCertTokenDict(unittest.TestCase):
         #                   response['authorizationResponse']['tokenResponse']['tokenMessage'])
         self.assertEquals('MC', response['authorizationResponse']['tokenResponse']['type'])
         self.assertEquals('543510', response['authorizationResponse']['tokenResponse']['bin'])
+        conf.user = current_user
+        conf.password = current_password
+        conf.sftp_username = current_sftp_username
+        conf.stfp_password = current_stfp_password
 
     def test_table_2_8_56(self):
         txn_dict = {
@@ -165,6 +204,11 @@ class TestCertTokenDict(unittest.TestCase):
         self.assertEquals('Invalid account number'.lower(), response['authorizationResponse']['message'].lower())
 
     def test_table_2_8_57_58(self):
+        # This test only works for regular test credentials, not pgp test credentials.
+        conf.user = os.getenv('sdk11_test_txn_user')
+        conf.password = os.getenv('sdk11_test_txn_password')
+        conf.sftp_username = os.getenv('sdk11_test_txn_sftp_username')
+        conf.stfp_password = os.getenv('sdk11_test_txn_sftp_password')
         # orderId 57
         txn_dict = {
             'authorization': {
@@ -208,8 +252,17 @@ class TestCertTokenDict(unittest.TestCase):
         response = online.request(txn_dict, conf)
         self.assertEquals('000', response['authorizationResponse']['response'])
         self.assertEquals('Approved', response['authorizationResponse']['message'])
+        conf.user = current_user
+        conf.password = current_password
+        conf.sftp_username = current_sftp_username
+        conf.stfp_password = current_stfp_password
 
     def test_table_2_8_59(self):
+        # This test only works for regular test credentials, not pgp test credentials.
+        conf.user = os.getenv('sdk11_test_txn_user')
+        conf.password = os.getenv('sdk11_test_txn_password')
+        conf.sftp_username = os.getenv('sdk11_test_txn_sftp_username')
+        conf.stfp_password = os.getenv('sdk11_test_txn_sftp_password')
         txn_dict = {
             'authorization': {
                 'orderId': '59',
@@ -226,6 +279,10 @@ class TestCertTokenDict(unittest.TestCase):
         response = online.request(txn_dict, conf)
         self.assertEquals('822', response['authorizationResponse']['response'])
         self.assertEquals('Token was not found', response['authorizationResponse']['message'])
+        conf.user = current_user
+        conf.password = current_password
+        conf.sftp_username = current_sftp_username
+        conf.stfp_password = current_stfp_password
 
     def test_table_2_8_60(self):
         txn_dict = {
@@ -246,6 +303,10 @@ class TestCertTokenDict(unittest.TestCase):
         self.assertEquals('Token was invalid', response['authorizationResponse']['message'])
 
     def test_table_2_8_61(self):
+        conf.user = os.getenv('sdk11_test_txn_user')
+        conf.password = os.getenv('sdk11_test_txn_password')
+        conf.sftp_username = os.getenv('sdk11_test_txn_sftp_username')
+        conf.stfp_password = os.getenv('sdk11_test_txn_sftp_password')
         txn_dict = {
             'echeckSale' : {
                 'orderId' : '61',
@@ -274,6 +335,10 @@ class TestCertTokenDict(unittest.TestCase):
         #                   response['echeckSalesResponse']['tokenResponse']['tokenMessage'])
         # self.assertEquals('EC', response['echeckSalesResponse']['tokenResponse']['type'])
         # self.assertEquals('003', response['echeckSalesResponse']['tokenResponse']['eCheckAccountSuffix'])
+        conf.user = current_user
+        conf.password = current_password
+        conf.sftp_username = current_sftp_username
+        conf.stfp_password = current_stfp_password
 
     def test_table_2_8_62(self):
         txn_dict = {
