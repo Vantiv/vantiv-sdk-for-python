@@ -49,7 +49,6 @@ class TestCertTokenDict(unittest.TestCase):
     def test_table_2_7_50(self):
         # This test only works for regular test credentials, not pgp test credentials.
         conf.user = os.getenv('sdk12_test_txn_user')
-        print(conf.user)
         conf.password = os.getenv('sdk12_test_txn_password')
         conf.sftp_username = os.getenv('sdk12_test_txn_sftp_username')
         conf.stfp_password = os.getenv('sdk12_test_txn_sftp_password')
@@ -343,6 +342,10 @@ class TestCertTokenDict(unittest.TestCase):
         #                   response['echeckSalesResponse']['tokenResponse']['tokenMessage'])
         # self.assertEquals('EC', response['echeckSalesResponse']['tokenResponse']['type'])
         # self.assertEquals('003', response['echeckSalesResponse']['tokenResponse']['eCheckAccountSuffix'])
+        conf.user = current_user
+        conf.password = current_password
+        conf.sftp_username = current_sftp_username
+        conf.stfp_password = current_stfp_password
     
     def test_table_2_8_62(self):
         txn_dict = {
