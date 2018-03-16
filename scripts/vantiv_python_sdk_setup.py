@@ -48,7 +48,11 @@ def ask_user():
         'batch_requests_path',
         'batch_response_path',
         'print_xml',
-        'id'
+        'id',
+        'deleteBatchFiles',
+        'useEncryption',
+        'vantivPublicKeyID',
+        'gpgPassphrase'
     ]
     attr_dict = {
         'user': '',
@@ -63,7 +67,11 @@ def ask_user():
         'batch_requests_path': os.path.join(tempfile.gettempdir(), 'vantiv_sdk_batch_request'),
         'batch_response_path': os.path.join(tempfile.gettempdir(), 'vantiv_sdk_batch_response'),
         'print_xml': 'n',
-        'id': ''
+        'id': '',
+        'deleteBatchFiles': 'y',
+        'useEncryption': 'y',
+        'vantivPublicKeyID': '',
+        'gpgPassphrase': ''
     }
     attr_valid_dict = {
         'url': {
@@ -93,7 +101,11 @@ def ask_user():
         'batch_requests_path': 'Please input location for saving generated batch request xml:',
         'batch_response_path': 'Please input location for saving batch response xml',
         'print_xml': 'Do you want to print xml in console? y for Yes, n for No.',
-        'id': 'litleRequest id for batch'
+        'id': 'litleRequest id for batch',
+        'deleteBatchFiles': 'Do you want to delete xml batch files after the data is retrieved? y for Yes, n for No.',
+        'useEncryption': 'Are you a pgp enabled presenter?  y for Yes, n for No.',
+        'vantivPublicKeyID': 'What is the ID of Vantiv\'s public key on your keyring?',
+        'gpgPassphrase': 'What is the passphrase of the gpg key you will use to decrypt the batches?'
     }
     print(CC.bpurple('Vantiv eCommerce Python SDK configuration!'))
     print('''
