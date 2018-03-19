@@ -1,5 +1,8 @@
 = Vantiv eCommerce Python SDK
 
+==Version 12.1.1
+* Feature: PGP Encryption support for sending batches.
+
 ==Version 12.1.0
 * Feature: Full functions for XML v12.1
 * Feature: Defunct Stream method for batch request
