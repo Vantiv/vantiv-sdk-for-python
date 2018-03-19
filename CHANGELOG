@@ -1,5 +1,8 @@
 = Vantiv eCommerce Python SDKv2
 
+==Version 11.4.0
+* Feature: Full functions for XML v11.4.
+
 ==Version 11.3.1
 * Feature: PGP Encryption support for batches.
 
@@ -7,18 +10,18 @@
 * Feature: Full functions for XML v11.3
 
 ==Version 11.1.0
-* Feature: Full functions for XML v11.1
-* Feature: added same day funding for instruction based funding
-* Feature: added checkoutId for token
+* Feature: Full functions for XML v11.1.
+* Feature: added same day funding for instruction based funding.
+* Feature: added checkoutId for token.
 
 ==Version 11.0.2
 * Fix bug for recurringTransaction in online request.
-* Fix bug for mixing Transaction and recurringTransaction into one batchRequest
+* Fix bug for mixing Transaction and recurringTransaction into one batchRequest.
 
 ==Version 11.0.1
 * Retire Litle domain.
 
 ==Version 11.0.0
-* Feature: Full functions for XML v11.0
-* Feature: Support present transactions using dict or object
+* Feature: Full functions for XML v11.0.
+* Feature: Support present transactions using dict or object.
 * Feature: Support get response as dict(default), object, and xml string.

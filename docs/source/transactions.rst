@@ -348,9 +348,9 @@ echeckVoid
         :var litleTxnId: String or Number
         :var reportGroup: String or Number
 
-fastFunding
------------
-    .. py:class:: vantivsdk.fields.fastFunding
+fastAccessFunding
+-----------------
+    .. py:class:: vantivsdk.fields.fastAccessFunding
 
         :var amount: String or Number
         :var card: instance of :py:class:`vantivsdk.fields.cardType`
