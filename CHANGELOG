@@ -1,5 +1,8 @@
 = Vantiv eCommerce Python SDKv2
 
+==Version 11.3.1
+* Feature: PGP Encryption support for batches.
+
 ==Version 11.3.0
 * Feature: Full functions for XML v11.3
 
