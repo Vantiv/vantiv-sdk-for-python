@@ -91,6 +91,7 @@
             <xs:attribute name="numPhysicalCheckDebit" type="xs:integer" use="optional"  default="0"/>
             <xs:attribute name="numPhysicalCheckCredit" type="xs:integer" use="optional"  default="0"/>
             <xs:attribute name="numFundingInstructionVoid" type="xs:integer" use="optional"  default="0"/>
+            <xs:attribute name="numFastAccessFunding" type="xs:integer" use="optional"  default="0"/>
             <xs:attribute name="payFacCreditAmount" type="xp:batchTotalAmountType" use="optional"  default="0"/>
             <xs:attribute name="payFacDebitAmount" type="xp:batchTotalAmountType" use="optional"  default="0"/>
             <xs:attribute name="submerchantCreditAmount" type="xp:batchTotalAmountType" use="optional"  default="0"/>
@@ -101,6 +102,7 @@
             <xs:attribute name="vendorCreditAmount" type="xp:batchTotalAmountType" use="optional"  default="0"/>
             <xs:attribute name="physicalCheckDebitAmount" type="xp:batchTotalAmountType" use="optional"  default="0"/>
             <xs:attribute name="physicalCheckCreditAmount" type="xp:batchTotalAmountType" use="optional"  default="0"/>
+            <xs:attribute name="fastAccessFundingAmount" type="xp:batchTotalAmountType" use="optional"  default="0"/>
             <xs:attribute name="sameDayFunding" type="xs:boolean" use="optional"  default="0"/>
 
             <xs:attribute name="merchantId" type="xp:merchantIdentificationType" use="required" />

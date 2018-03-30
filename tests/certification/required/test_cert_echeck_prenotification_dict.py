@@ -39,6 +39,7 @@ from vantivsdk import (utils, batch, fields)
 
 conf = utils.Configuration()
 
+print('Testing agaisnt: ' + conf.url)
 
 class TestCertEcheckPrenotificationDict(unittest.TestCase):
     def test_table_2_5_ECPreNoteSale(self):

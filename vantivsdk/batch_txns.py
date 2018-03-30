@@ -48,6 +48,7 @@ supported_transaction_types = {
     'echeckVerification': ['numEcheckVerification', 'echeckVerificationAmount'],
     'forceCapture': ['numForceCaptures', 'forceCaptureAmount'],
     'fundingInstructionVoid': ['numFundingInstructionVoid', ''],
+    'fastAccessFunding':['numFastAccessFunding',''],
     'giftCardAuthReversal': ['numGiftCardAuthReversals', 'giftCardAuthReversalOriginalAmount'],
     'giftCardCapture': ['numGiftCardCaptures', 'giftCardCaptureAmount'],
     'giftCardCredit': ['numGiftCardCredits', 'giftCardCreditAmount'],

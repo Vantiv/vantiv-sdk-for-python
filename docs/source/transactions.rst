@@ -626,6 +626,7 @@ sale
         :var recurringRequest: instance of :py:class:`vantivsdk.fields.recurringRequestType`
         :var recyclingRequest: instance of :py:class:`vantivsdk.fields.recyclingRequestType`
         :var reportGroup: String or Number
+        :var routingPreference: String or Number
         :var secondaryAmount: String or Number
         :var sepaDirectDebit: instance of :py:class:`vantivsdk.fields.sepaDirectDebitType`
         :var shipToAddress: instance of :py:class:`vantivsdk.fields.shipToAddress`

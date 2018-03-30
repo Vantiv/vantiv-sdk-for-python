@@ -40,6 +40,8 @@ conf = certification_test_conf.conf
 
 class TestCertEcheckDict(unittest.TestCase):
     def test_table_2_2_32(self):
+
+        print('Testing against: ' + conf.url)
         txn_dict = {
             'authorization': {
                 'orderId': '32',

@@ -39,6 +39,8 @@ import certification_test_conf
 conf = certification_test_conf.conf
 
 
+print('Testing agaisnt: ' + conf.url)
+
 class TestCertEnhancedAuthsDict(unittest.TestCase):
     # response sample for orderId 14 through 20
     #

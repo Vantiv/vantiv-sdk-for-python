@@ -298,46 +298,4 @@
         </xs:complexType>
     </xs:element>
 
-    <xs:element name="fastAccessFunding" substitutionGroup="xp:transaction">
-        <xs:complexType>
-            <xs:complexContent>
-                <xs:extension base="xp:transactionTypeWithReportGroup">
-                    <xs:choice>
-                        <xs:sequence>
-                            <xs:element name="fundingSubmerchantId" type="xp:merchantIdentificationType" />
-                            <xs:element name="submerchantName" type="xp:string256Type"/>
-                            <xs:element name="fundsTransferId" type="xp:stringExactly16AlphanumericType" />
-                            <xs:element name="amount" type="xp:transactionAmountType" />
-                            <xs:choice>
-                                <xs:element name="card" type="xp:cardType" />
-                                <xs:element name="token" type="xp:cardTokenType" />
-                                <xs:element name="paypage" type="xp:cardPaypageType" />
-                            </xs:choice>
-                        </xs:sequence>
-                    </xs:choice>
-                </xs:extension>
-            </xs:complexContent>
-        </xs:complexType>
-    </xs:element>
-
-    <xs:element name="fastAccessFundingResponse" substitutionGroup="xp:transactionResponse">
-        <xs:complexType>
-            <xs:complexContent>
-                <xs:extension base="xp:transactionTypeWithReportGroup">
-                    <xs:all>
-                        <xs:element name="cnpTxnId" type="xp:cnpIdType" />
-                        <xs:element name="fundsTransferId" type="xp:stringExactly16AlphanumericType"/>
-                        <xs:element name="response" type="xp:responseType" />
-                        <xs:element name="responseTime" type="xs:dateTime" />
-                        <xs:element name="postDate" type="xs:date" minOccurs="0" />
-                        <xs:element name="message" type="xp:messageType" />
-                        <!-- if tokenized merchant -->
-                        <xs:element name="tokenResponse" type="xp:tokenResponseType" minOccurs="0"/>
-                    </xs:all>
-                    <xs:attribute name="duplicate" type="xs:boolean" use="optional" />
-                </xs:extension>
-            </xs:complexContent>
-        </xs:complexType>
-    </xs:element>
-
 </xs:schema>

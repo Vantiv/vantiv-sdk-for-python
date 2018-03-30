@@ -73,9 +73,9 @@ def request(transaction, conf, return_format='dict', timeout=30, sameDayFunding 
         elif return_f_l == 'object':
             return fields.CreateFromDocument(response_xml)
         else:
-            if conf.print_xml:
-                import json
-                print('Response Dict:\n', json.dumps(response_dict, indent=4), '\n\n')
+            # if conf.print_xml:
+            #     import json
+            #     print('Response Dict:\n', json.dumps(response_dict, indent=4), '\n\n')
             return response_dict
     else:
         raise utils.VantivException(response_dict['@message'])

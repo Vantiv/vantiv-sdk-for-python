@@ -26,6 +26,7 @@ from __future__ import print_function, absolute_import
 import os
 import sys
 import unittest
+import pprint
 
 package_root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(os.path.dirname(__file__)))))
 sys.path.insert(0, package_root)
@@ -41,11 +42,12 @@ from vantivsdk import *
 
 
 class TestCertAuthsDict(unittest.TestCase):
+
     def test_table_2_1_1_auth(self):
         txn_dict = {
             'authorization': {
                 'orderId': '1',
-                'amount': 10010,
+                'amount': 10100,
                 'orderSource': 'ecommerce',
                 'id': 'thisisid',
                 'billToAddress': {
@@ -104,7 +106,7 @@ class TestCertAuthsDict(unittest.TestCase):
         voidresponse = online.request(txn_dict, conf)
         self.assertEquals('000', voidresponse['voidResponse']['response'])
         self.assertEquals('Approved', voidresponse['voidResponse']['message'])
-
+    
     def test_table_2_1_1_avs(self):
         txn_dict = {
             'authorization': {
@@ -1218,7 +1220,6 @@ class TestCertAuthsDict(unittest.TestCase):
         self.assertEquals('010', response['authorizationResponse']['response'])
         self.assertEquals('Partially Approved', response['authorizationResponse']['message'])
         self.assertEquals('12000', response['authorizationResponse']['approvedAmount'])
-
-
+    
 if __name__ == '__main__':
     unittest.main()

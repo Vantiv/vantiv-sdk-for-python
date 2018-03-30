@@ -37,6 +37,7 @@ import certification_test_conf
 
 conf = certification_test_conf.conf
 
+print('Testing agaisnt: ' + conf.url)
 class TestCertEcheckDict(unittest.TestCase):
     def test_table_2_3_37(self):
         txn_dict = {

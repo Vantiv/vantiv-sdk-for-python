@@ -61,7 +61,7 @@ class Configuration(object):
             'password':'',
             'merchantId':'',
             'reportGroup':'Default Report Group',
-            'url':'https://www.testvantivcnp.com/sandbox/communicator/online',
+            'url':'https://www.testvantivcnp.com/sandbox/new/sandbox/communicator/online',
             'proxy':'',
             'sftp_username':'',
             'sftp_password':'',
