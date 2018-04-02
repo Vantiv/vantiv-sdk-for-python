@@ -35,7 +35,7 @@ conf = utils.Configuration()
 
 
 class TestSale(unittest.TestCase):
-    
+
     def test_simple_sale_with_card(self):
         transaction = fields.sale()
         transaction.reportGroup = 'Planets'
@@ -70,7 +70,7 @@ class TestSale(unittest.TestCase):
 
         response = online.request(transaction, conf)
         self.assertEquals('000', response['saleResponse']['response'])
-    
+
     def test_simple_sale_with_applepay_and_secondary_amount(self):
         transaction = fields.sale()
         transaction.reportGroup = 'Planets'
@@ -96,7 +96,7 @@ class TestSale(unittest.TestCase):
         self.assertEquals('000', response['saleResponse']['response'])
         # vvv
         # self.assertEquals('106', response['saleResponse']['applepayResponse']['transactionAmount'])
-       
+
     def test_simple_sale_with_android_pay(self):
         transaction = fields.sale()
         transaction.reportGroup = 'Planets'
@@ -164,7 +164,7 @@ class TestSale(unittest.TestCase):
 
         response = online.request(txn_dict, conf)
         self.assertEquals('000', response['saleResponse']['response'])
-        
+
     def test_sale_with_wallet(self):
         transaction = fields.sale()
         transaction.id = '12345'
@@ -240,6 +240,36 @@ class TestSale(unittest.TestCase):
         response = online.request(transaction, conf)
         self.assertEquals('000', response['saleResponse']['response'])
 
+    def test_sale_with_processing_type_COF(self):
+        transaction = fields.sale()
+        transaction.id = '12345'
+        transaction.reportGroup = 'Default'
+        transaction.orderId = '67890'
+        transaction.amount = 10000
+        transaction.orderSource = 'ecommerce'
+        transaction.processingType = 'initialCOF'
+        transaction.originalNetworkTransactionId = '9876543210'
+        transaction.originalTransactionAmount = 53698
+        transaction.id = 'ThisIsID'
+
+        card = fields.cardType()
+        card.number = '4100000000000000'
+        card.expDate = '1210'
+        card.type = 'VI'
+        transaction.card = card
+
+        response = online.request(transaction, conf)
+        self.assertEquals('000', response['saleResponse']['response'])
+
+        transaction.processingType = 'merchantInitiatedCOF'
+        response = online.request(transaction, conf)
+        self.assertEquals('000', response['saleResponse']['response'])
+
+        transaction.processingType = 'cardholderInitiatedCOF'
+        response = online.request(transaction, conf)
+        self.assertEquals('000', response['saleResponse']['response'])
+
+
     def test_sale_with_sepa_direct_debit(self):
         transaction = fields.sale()
         transaction.id = '12345'
@@ -283,6 +313,48 @@ class TestSale(unittest.TestCase):
         self.assertEquals('000', response['saleResponse']['response'])
         self.assertEquals('http://redirect.url.vantiv.com',
                           response['saleResponse']['idealResponse']['redirectUrl'])
-    
+
+    def test_sale_with_giropay(self):
+        transaction = fields.sale()
+        transaction.id = '12345'
+        transaction.reportGroup = 'Default'
+        transaction.orderId = '67890'
+        transaction.amount = 10000
+        transaction.orderSource = 'ecommerce'
+        transaction.processingType = 'initialInstallment'
+        transaction.originalNetworkTransactionId = '9876543210'
+        transaction.originalTransactionAmount = 53698
+        transaction.id = 'ThisIsID'
+
+        giropay = fields.giropayType()
+        giropay.preferredLanguage = 'DE'
+        transaction.giropay = giropay
+
+        response = online.request(transaction, conf)
+        self.assertEquals('000', response['saleResponse']['response'])
+        self.assertEquals('http://redirect.url.vantiv.com',
+                          response['saleResponse']['giropayResponse']['redirectUrl'])
+
+    def test_sale_with_sofort(self):
+        transaction = fields.sale()
+        transaction.id = '12345'
+        transaction.reportGroup = 'Default'
+        transaction.orderId = '67890'
+        transaction.amount = 10000
+        transaction.orderSource = 'ecommerce'
+        transaction.processingType = 'initialInstallment'
+        transaction.originalNetworkTransactionId = '9876543210'
+        transaction.originalTransactionAmount = 53698
+        transaction.id = 'ThisIsID'
+
+        sofort = fields.sofortType()
+        sofort.preferredLanguage = 'NL'
+        transaction.sofort = sofort
+
+        response = online.request(transaction, conf)
+        self.assertEquals('000', response['saleResponse']['response'])
+        self.assertEquals('http://redirect.url.vantiv.com',
+                          response['saleResponse']['sofortResponse']['redirectUrl'])
+
 if __name__ == '__main__':
     unittest.main()
