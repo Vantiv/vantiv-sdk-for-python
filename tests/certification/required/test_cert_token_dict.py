@@ -277,8 +277,8 @@ class TestCertTokenDict(unittest.TestCase):
             }
         }
         response = online.request(txn_dict, conf)
-        print('Sent to: ' + conf.url)
-        xmltodict.parse(response)['cnpOnlineResponse']
+        # print('Sent to: ' + conf.url)
+        # xmltodict.parse(response)['cnpOnlineResponse']
         # # TODO no tokenResponse
         # self.assertIsNotNone(response['echeckSalesResponse']['tokenResponse']['cnpToken'])
         # self.assertEquals('801', response['echeckSalesResponse']['tokenResponse']['tokenResponseCode'])
