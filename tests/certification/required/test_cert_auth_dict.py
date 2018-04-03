@@ -27,10 +27,10 @@ import os
 import sys
 import unittest
 
-package_root = os.path.dirname(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
+package_root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(os.path.dirname(__file__)))))
 sys.path.insert(0, package_root)
 
-package_root = os.path.abspath(os.path.dirname(__file__))
+package_root = os.path.dirname(os.path.abspath(os.path.dirname(__file__)))
 sys.path.insert(0, package_root)
 
 import certification_test_conf
@@ -43,12 +43,12 @@ from vantivsdk import *
 class TestCertAuthsDict(unittest.TestCase):
     def test_table_2_1_1_auth(self):
         txn_dict = {
-            'authorization' : {
-                'orderId' : '1',
-                'amount' : 10010,
-                'orderSource' : 'ecommerce',
-                'id' : 'thisisid',
-                'billToAddress' : {
+            'authorization': {
+                'orderId': '1',
+                'amount': 10010,
+                'orderSource': 'ecommerce',
+                'id': 'thisisid',
+                'billToAddress': {
                     'name': 'John & Mary Smith',
                     'addressLine1': '1 Main St.',
                     'city': 'Burlington',
@@ -57,7 +57,7 @@ class TestCertAuthsDict(unittest.TestCase):
                     'country': 'USA',
                 },
                 'card': {
-                    'number':'4457010000000009',
+                    'number': '4457010000000009',
                     'expDate': '0121',
                     'cardValidationNum': '349',
                     'type': 'VI',
@@ -68,14 +68,13 @@ class TestCertAuthsDict(unittest.TestCase):
         response = online.request(txn_dict, conf)
         self.assertEquals('000', response['authorizationResponse']['response'])
         self.assertEquals('Approved', response['authorizationResponse']['message'])
-        # TODO response['authorizationResponse']['authCode'] include extra space
         self.assertEquals('11111', response['authorizationResponse']['authCode'])
         self.assertEquals('01', response['authorizationResponse']['fraudResult']['avsResult'])
         self.assertEquals('M', response['authorizationResponse']['fraudResult']['cardValidationResult'])
 
         # orderId *A
         txn_dict = {
-            'capture' : {
+            'capture': {
                 'litleTxnId': response['authorizationResponse']['litleTxnId'],
                 'id': 'ThisIsID'
             }
@@ -86,7 +85,7 @@ class TestCertAuthsDict(unittest.TestCase):
 
         # orderId *B
         txn_dict = {
-            'credit' : {
+            'credit': {
                 'litleTxnId': captureresponse['captureResponse']['litleTxnId'],
                 'id': 'ThisIsID'
             }
@@ -97,7 +96,7 @@ class TestCertAuthsDict(unittest.TestCase):
 
         # orderId *C
         txn_dict = {
-            'void' : {
+            'void': {
                 'litleTxnId': creditresponse['creditResponse']['litleTxnId'],
                 'id': 'ThisIsID'
             }
@@ -107,14 +106,13 @@ class TestCertAuthsDict(unittest.TestCase):
         self.assertEquals('Approved', voidresponse['voidResponse']['message'])
 
     def test_table_2_1_1_avs(self):
-
         txn_dict = {
-            'authorization' : {
-                'orderId' : '1',
-                'amount' : '000',
-                'orderSource' : 'ecommerce',
-                'id' : 'thisisid',
-                'billToAddress' : {
+            'authorization': {
+                'orderId': '1',
+                'amount': '000',
+                'orderSource': 'ecommerce',
+                'id': 'thisisid',
+                'billToAddress': {
                     'name': 'John & Mary Smith',
                     'addressLine1': '1 Main St.',
                     'city': 'Burlington',
@@ -123,7 +121,7 @@ class TestCertAuthsDict(unittest.TestCase):
                     'country': 'USA',
                 },
                 'card': {
-                    'number':'4457010000000009',
+                    'number': '4457010000000009',
                     'expDate': '0121',
                     'cardValidationNum': '349',
                     'type': 'VI',
@@ -140,12 +138,12 @@ class TestCertAuthsDict(unittest.TestCase):
 
     def test_table_2_1_1_sale(self):
         txn_dict = {
-            'sale' : {
-                'orderId' : '1',
-                'amount' : 10010,
-                'orderSource' : 'ecommerce',
-                'id' : 'thisisid',
-                'billToAddress' : {
+            'sale': {
+                'orderId': '1',
+                'amount': 10010,
+                'orderSource': 'ecommerce',
+                'id': 'thisisid',
+                'billToAddress': {
                     'name': 'John & Mary Smith',
                     'addressLine1': '1 Main St.',
                     'city': 'Burlington',
@@ -154,7 +152,7 @@ class TestCertAuthsDict(unittest.TestCase):
                     'country': 'USA',
                 },
                 'card': {
-                    'number':'4457010000000009',
+                    'number': '4457010000000009',
                     'expDate': '0121',
                     'cardValidationNum': '349',
                     'type': 'VI',
@@ -171,7 +169,7 @@ class TestCertAuthsDict(unittest.TestCase):
 
         # orderId *B
         txn_dict = {
-            'credit' : {
+            'credit': {
                 'litleTxnId': response['saleResponse']['litleTxnId'],
                 'id': 'ThisIsID'
             }
@@ -182,7 +180,7 @@ class TestCertAuthsDict(unittest.TestCase):
 
         # orderId *C
         txn_dict = {
-            'void' : {
+            'void': {
                 'litleTxnId': creditresponse['creditResponse']['litleTxnId'],
                 'id': 'ThisIsID'
             }
@@ -194,12 +192,12 @@ class TestCertAuthsDict(unittest.TestCase):
     def test_table_2_1_2_auth(self):
         # orderId 2
         txn_dict = {
-            'authorization' : {
-                'orderId' : '2',
-                'amount' : 10010,
-                'orderSource' : 'ecommerce',
-                'id' : 'thisisid',
-                'billToAddress' : {
+            'authorization': {
+                'orderId': '2',
+                'amount': 10010,
+                'orderSource': 'ecommerce',
+                'id': 'thisisid',
+                'billToAddress': {
                     'name': 'Mike J. Hammer',
                     'addressLine1': '2 Main St.',
                     'addressLine2': 'Apt. 222',
@@ -209,14 +207,14 @@ class TestCertAuthsDict(unittest.TestCase):
                     'country': 'USA',
                 },
                 'card': {
-                    'number':'5112010000000003',
+                    'number': '5112010000000003',
                     'expDate': '0221',
                     'cardValidationNum': '261',
                     'type': 'MC',
                 },
-                # 'cardholderAuthentication':{
-                #     'authenticationValue': 'BwABBJQ1AgAAAAAgJDUCAAAAAAA=',
-                # }
+                'cardholderAuthentication':{
+                    'authenticationValue': 'BwABBJQ1AgAAAAAgJDUCAAAAAAA=',
+                }
             }
         }
 
@@ -226,11 +224,11 @@ class TestCertAuthsDict(unittest.TestCase):
         self.assertEquals('22222', response['authorizationResponse']['authCode'])
         self.assertEquals('10', response['authorizationResponse']['fraudResult']['avsResult'])
         self.assertEquals('M', response['authorizationResponse']['fraudResult']['cardValidationResult'])
-        # self.assertRaises(response['authorizationResponse']['fraudResult']['authenticationResult'])
+        self.assertNotIn('authenticationResult', response['authorizationResponse']['fraudResult'])
 
         # orderId *A
         txn_dict = {
-            'capture' : {
+            'capture': {
                 'litleTxnId': response['authorizationResponse']['litleTxnId'],
                 'id': 'ThisIsID'
             }
@@ -241,7 +239,7 @@ class TestCertAuthsDict(unittest.TestCase):
 
         # orderId *B
         txn_dict = {
-            'credit' : {
+            'credit': {
                 'litleTxnId': captureresponse['captureResponse']['litleTxnId'],
                 'id': 'ThisIsID'
             }
@@ -252,7 +250,7 @@ class TestCertAuthsDict(unittest.TestCase):
 
         # orderId *C
         txn_dict = {
-            'void' : {
+            'void': {
                 'litleTxnId': creditresponse['creditResponse']['litleTxnId'],
                 'id': 'ThisIsID'
             }
@@ -264,12 +262,12 @@ class TestCertAuthsDict(unittest.TestCase):
     def test_table_2_1_2_avs(self):
         # orderId 2
         txn_dict = {
-            'authorization' : {
-                'orderId' : '2',
-                'amount' : '000',
-                'orderSource' : 'ecommerce',
-                'id' : 'thisisid',
-                'billToAddress' : {
+            'authorization': {
+                'orderId': '2',
+                'amount': '000',
+                'orderSource': 'ecommerce',
+                'id': 'thisisid',
+                'billToAddress': {
                     'name': 'Mike J. Hammer',
                     'addressLine1': '2 Main St.',
                     'addressLine2': 'Apt. 222',
@@ -279,14 +277,14 @@ class TestCertAuthsDict(unittest.TestCase):
                     'country': 'USA',
                 },
                 'card': {
-                    'number':'5112010000000003',
+                    'number': '5112010000000003',
                     'expDate': '0221',
                     'cardValidationNum': '261',
                     'type': 'MC',
                 },
-                # 'cardholderAuthentication':{
-                #     'authenticationValue': 'BwABBJQ1AgAAAAAgJDUCAAAAAAA=',
-                # }
+                'cardholderAuthentication':{
+                    'authenticationValue': 'BwABBJQ1AgAAAAAgJDUCAAAAAAA=',
+                }
             }
         }
 
@@ -296,16 +294,16 @@ class TestCertAuthsDict(unittest.TestCase):
         self.assertEquals('22222', response['authorizationResponse']['authCode'])
         self.assertEquals('10', response['authorizationResponse']['fraudResult']['avsResult'])
         self.assertEquals('M', response['authorizationResponse']['fraudResult']['cardValidationResult'])
-        # self.assertRaises(response.transactionResponse.fraudResult.authenticationResult)
+        self.assertNotIn('authenticationResult', response['authorizationResponse']['fraudResult'])
 
     def test_table_2_1_2_sale(self):
         txn_dict = {
-            'sale' : {
-                'orderId' : '2',
-                'amount' : '000',
-                'orderSource' : 'ecommerce',
-                'id' : 'thisisid',
-                'billToAddress' : {
+            'sale': {
+                'orderId': '2',
+                'amount': 10100,
+                'orderSource': 'ecommerce',
+                'id': 'thisisid',
+                'billToAddress': {
                     'name': 'Mike J. Hammer',
                     'addressLine1': '2 Main St.',
                     'addressLine2': 'Apt. 222',
@@ -315,7 +313,7 @@ class TestCertAuthsDict(unittest.TestCase):
                     'country': 'USA',
                 },
                 'card': {
-                    'number':'5112010000000003',
+                    'number': '5112010000000003',
                     'expDate': '0221',
                     'cardValidationNum': '261',
                     'type': 'MC',
@@ -332,7 +330,7 @@ class TestCertAuthsDict(unittest.TestCase):
         self.assertEquals('22222', response['saleResponse']['authCode'])
         self.assertEquals('10', response['saleResponse']['fraudResult']['avsResult'])
         self.assertEquals('M', response['saleResponse']['fraudResult']['cardValidationResult'])
-        # self.assertRaises(response.transactionResponse.fraudResult.authenticationResult)
+        self.assertNotIn('authenticationResult', response['saleResponse']['fraudResult'])
 
         # orderId *A
         # capture = fields.capture()
@@ -343,7 +341,7 @@ class TestCertAuthsDict(unittest.TestCase):
 
         # orderId *B
         txn_dict = {
-            'credit' : {
+            'credit': {
                 'litleTxnId': response['saleResponse']['litleTxnId'],
                 'id': 'ThisIsID'
             }
@@ -354,7 +352,7 @@ class TestCertAuthsDict(unittest.TestCase):
 
         # orderId *C
         txn_dict = {
-            'void' : {
+            'void': {
                 'litleTxnId': creditresponse['creditResponse']['litleTxnId'],
                 'id': 'ThisIsID'
             }
@@ -365,12 +363,12 @@ class TestCertAuthsDict(unittest.TestCase):
 
     def test_table_2_1_3_auth(self):
         txn_dict = {
-            'authorization' : {
-                'orderId' : '3',
-                'amount' : 10010,
-                'orderSource' : 'ecommerce',
-                'id' : 'thisisid',
-                'billToAddress' : {
+            'authorization': {
+                'orderId': '3',
+                'amount': 10010,
+                'orderSource': 'ecommerce',
+                'id': 'thisisid',
+                'billToAddress': {
                     'name': 'Eileen Jones',
                     'addressLine1': '3 Main St.',
                     'city': 'Bloomfield',
@@ -379,7 +377,7 @@ class TestCertAuthsDict(unittest.TestCase):
                     'country': 'USA',
                 },
                 'card': {
-                    'number':'6011010000000003',
+                    'number': '6011010000000003',
                     'expDate': '0321',
                     'cardValidationNum': '758',
                     'type': 'DI',
@@ -396,7 +394,7 @@ class TestCertAuthsDict(unittest.TestCase):
 
         # orderId *A
         txn_dict = {
-            'capture' : {
+            'capture': {
                 'litleTxnId': response['authorizationResponse']['litleTxnId'],
                 'id': 'ThisIsID'
             }
@@ -407,7 +405,7 @@ class TestCertAuthsDict(unittest.TestCase):
 
         # orderId *B
         txn_dict = {
-            'credit' : {
+            'credit': {
                 'litleTxnId': captureresponse['captureResponse']['litleTxnId'],
                 'id': 'ThisIsID'
             }
@@ -418,7 +416,7 @@ class TestCertAuthsDict(unittest.TestCase):
 
         # orderId *C
         txn_dict = {
-            'void' : {
+            'void': {
                 'litleTxnId': creditresponse['creditResponse']['litleTxnId'],
                 'id': 'ThisIsID'
             }
@@ -429,12 +427,12 @@ class TestCertAuthsDict(unittest.TestCase):
 
     def test_table_2_1_3_avs(self):
         txn_dict = {
-            'authorization' : {
-                'orderId' : '3',
-                'amount' : 10010,
-                'orderSource' : 'ecommerce',
-                'id' : 'thisisid',
-                'billToAddress' : {
+            'authorization': {
+                'orderId': '3',
+                'amount': 10010,
+                'orderSource': 'ecommerce',
+                'id': 'thisisid',
+                'billToAddress': {
                     'name': 'Eileen Jones',
                     'addressLine1': '3 Main St.',
                     'city': 'Bloomfield',
@@ -443,7 +441,7 @@ class TestCertAuthsDict(unittest.TestCase):
                     'country': 'USA',
                 },
                 'card': {
-                    'number':'6011010000000003',
+                    'number': '6011010000000003',
                     'expDate': '0321',
                     'cardValidationNum': '758',
                     'type': 'DI',
@@ -460,12 +458,12 @@ class TestCertAuthsDict(unittest.TestCase):
 
     def test_table_2_1_3_sale(self):
         txn_dict = {
-            'sale' : {
-                'orderId' : '3',
-                'amount' : 10010,
-                'orderSource' : 'ecommerce',
-                'id' : 'thisisid',
-                'billToAddress' : {
+            'sale': {
+                'orderId': '3',
+                'amount': 10010,
+                'orderSource': 'ecommerce',
+                'id': 'thisisid',
+                'billToAddress': {
                     'name': 'Eileen Jones',
                     'addressLine1': '3 Main St.',
                     'city': 'Bloomfield',
@@ -474,7 +472,7 @@ class TestCertAuthsDict(unittest.TestCase):
                     'country': 'USA',
                 },
                 'card': {
-                    'number':'6011010000000003',
+                    'number': '6011010000000003',
                     'expDate': '0321',
                     'cardValidationNum': '758',
                     'type': 'DI',
@@ -491,7 +489,7 @@ class TestCertAuthsDict(unittest.TestCase):
 
         # orderId *A
         txn_dict = {
-            'capture' : {
+            'capture': {
                 'litleTxnId': response['saleResponse']['litleTxnId'],
                 'id': 'ThisIsID'
             }
@@ -502,7 +500,7 @@ class TestCertAuthsDict(unittest.TestCase):
 
         # orderId *B
         txn_dict = {
-            'credit' : {
+            'credit': {
                 'litleTxnId': captureresponse['captureResponse']['litleTxnId'],
                 'id': 'ThisIsID'
             }
@@ -513,7 +511,7 @@ class TestCertAuthsDict(unittest.TestCase):
 
         # orderId *C
         txn_dict = {
-            'void' : {
+            'void': {
                 'litleTxnId': creditresponse['creditResponse']['litleTxnId'],
                 'id': 'ThisIsID'
             }
@@ -524,12 +522,12 @@ class TestCertAuthsDict(unittest.TestCase):
 
     def test_table_2_1_4_auth(self):
         txn_dict = {
-            'authorization' : {
-                'orderId' : '4',
-                'amount' : 10010,
-                'orderSource' : 'ecommerce',
-                'id' : 'thisisid',
-                'billToAddress' : {
+            'authorization': {
+                'orderId': '4',
+                'amount': 10010,
+                'orderSource': 'ecommerce',
+                'id': 'thisisid',
+                'billToAddress': {
                     'name': 'Bob Black',
                     'addressLine1': '4 Main St.',
                     'city': 'Laurel',
@@ -538,7 +536,7 @@ class TestCertAuthsDict(unittest.TestCase):
                     'country': 'USA',
                 },
                 'card': {
-                    'number':'375001000000005',
+                    'number': '375001000000005',
                     'expDate': '0421',
                     'type': 'AX',
                 }
@@ -553,7 +551,7 @@ class TestCertAuthsDict(unittest.TestCase):
 
         # orderId *A
         txn_dict = {
-            'capture' : {
+            'capture': {
                 'litleTxnId': response['authorizationResponse']['litleTxnId'],
                 'id': 'ThisIsID'
             }
@@ -564,7 +562,7 @@ class TestCertAuthsDict(unittest.TestCase):
 
         # orderId *B
         txn_dict = {
-            'credit' : {
+            'credit': {
                 'litleTxnId': captureresponse['captureResponse']['litleTxnId'],
                 'id': 'ThisIsID'
             }
@@ -575,7 +573,7 @@ class TestCertAuthsDict(unittest.TestCase):
 
         # orderId *C
         txn_dict = {
-            'void' : {
+            'void': {
                 'litleTxnId': creditresponse['creditResponse']['litleTxnId'],
                 'id': 'ThisIsID'
             }
@@ -587,12 +585,12 @@ class TestCertAuthsDict(unittest.TestCase):
     def test_table_2_1_4_avs(self):
         # orderId *
         txn_dict = {
-            'authorization' : {
-                'orderId' : '4',
-                'amount' : '000',
-                'orderSource' : 'ecommerce',
-                'id' : 'thisisid',
-                'billToAddress' : {
+            'authorization': {
+                'orderId': '4',
+                'amount': '000',
+                'orderSource': 'ecommerce',
+                'id': 'thisisid',
+                'billToAddress': {
                     'name': 'Bob Black',
                     'addressLine1': '4 Main St.',
                     'city': 'Laurel',
@@ -601,7 +599,7 @@ class TestCertAuthsDict(unittest.TestCase):
                     'country': 'USA',
                 },
                 'card': {
-                    'number':'375001000000005',
+                    'number': '375001000000005',
                     'expDate': '0421',
                     'type': 'AX',
                 }
@@ -617,12 +615,12 @@ class TestCertAuthsDict(unittest.TestCase):
     def test_table_2_1_4_sale(self):
         # orderId *
         txn_dict = {
-            'sale' : {
-                'orderId' : '4',
-                'amount' : 10010,
-                'orderSource' : 'ecommerce',
-                'id' : 'thisisid',
-                'billToAddress' : {
+            'sale': {
+                'orderId': '4',
+                'amount': 10010,
+                'orderSource': 'ecommerce',
+                'id': 'thisisid',
+                'billToAddress': {
                     'name': 'Bob Black',
                     'addressLine1': '4 Main St.',
                     'city': 'Laurel',
@@ -631,7 +629,7 @@ class TestCertAuthsDict(unittest.TestCase):
                     'country': 'USA',
                 },
                 'card': {
-                    'number':'375001000000005',
+                    'number': '375001000000005',
                     'expDate': '0421',
                     'type': 'AX',
                 }
@@ -646,7 +644,7 @@ class TestCertAuthsDict(unittest.TestCase):
 
         # orderId *A
         txn_dict = {
-            'capture' : {
+            'capture': {
                 'litleTxnId': response['saleResponse']['litleTxnId'],
                 'id': 'ThisIsID'
             }
@@ -657,7 +655,7 @@ class TestCertAuthsDict(unittest.TestCase):
 
         # orderId *B
         txn_dict = {
-            'credit' : {
+            'credit': {
                 'litleTxnId': captureresponse['captureResponse']['litleTxnId'],
                 'id': 'ThisIsID'
             }
@@ -668,16 +666,16 @@ class TestCertAuthsDict(unittest.TestCase):
 
     def test_table_2_1_5_auth(self):
         txn_dict = {
-            'authorization' : {
-                'orderId' : '5',
-                'amount' : 10010,
-                'orderSource' : 'ecommerce',
-                'id' : 'thisisid',
-                # 'cardholderAuthentication': {
-                #     'authenticationValue': 'BwABBJQ1AgAAAAAgJDUCAAAAAAA=',
-                # },
+            'authorization': {
+                'orderId': '5',
+                'amount': 10010,
+                'orderSource': 'ecommerce',
+                'id': 'thisisid',
+                'cardholderAuthentication': {
+                    'authenticationValue': 'BwABBJQ1AgAAAAAgJDUCAAAAAAA=',
+                },
                 'card': {
-                    'number':'4100200300011001',
+                    'number': '4100200300011001',
                     'expDate': '0521',
                     'cardValidationNum': '463',
                     'type': 'VI',
@@ -694,7 +692,7 @@ class TestCertAuthsDict(unittest.TestCase):
 
         # orderId *A
         txn_dict = {
-            'capture' : {
+            'capture': {
                 'litleTxnId': response['authorizationResponse']['litleTxnId'],
                 'id': 'ThisIsID'
             }
@@ -705,7 +703,7 @@ class TestCertAuthsDict(unittest.TestCase):
 
         # orderId *B
         txn_dict = {
-            'credit' : {
+            'credit': {
                 'litleTxnId': captureresponse['captureResponse']['litleTxnId'],
                 'id': 'ThisIsID'
             }
@@ -716,7 +714,7 @@ class TestCertAuthsDict(unittest.TestCase):
 
         # orderId *C
         txn_dict = {
-            'void' : {
+            'void': {
                 'litleTxnId': creditresponse['creditResponse']['litleTxnId'],
                 'id': 'ThisIsID'
             }
@@ -727,16 +725,16 @@ class TestCertAuthsDict(unittest.TestCase):
 
     def test_table_2_1_5_avs(self):
         txn_dict = {
-            'authorization' : {
-                'orderId' : '5',
-                'amount' : '000',
-                'orderSource' : 'ecommerce',
-                'id' : 'thisisid',
-                # 'cardholderAuthentication': {
-                #     'authenticationValue': 'BwABBJQ1AgAAAAAgJDUCAAAAAAA=',
-                # },
+            'authorization': {
+                'orderId': '5',
+                'amount': '000',
+                'orderSource': 'ecommerce',
+                'id': 'thisisid',
+                'cardholderAuthentication': {
+                    'authenticationValue': 'BwABBJQ1AgAAAAAgJDUCAAAAAAA=',
+                },
                 'card': {
-                    'number':'4100200300011001',
+                    'number': '4100200300011001',
                     'expDate': '0521',
                     'cardValidationNum': '463',
                     'type': 'VI',
@@ -753,16 +751,16 @@ class TestCertAuthsDict(unittest.TestCase):
 
     def test_table_2_1_5_sale(self):
         txn_dict = {
-            'sale' : {
-                'orderId' : '5',
-                'amount' : 10010,
-                'orderSource' : 'ecommerce',
-                'id' : 'thisisid',
-                # 'cardholderAuthentication': {
-                #     'authenticationValue': 'BwABBJQ1AgAAAAAgJDUCAAAAAAA=',
-                # },
+            'sale': {
+                'orderId': '5',
+                'amount': 10010,
+                'orderSource': 'ecommerce',
+                'id': 'thisisid',
+                'cardholderAuthentication': {
+                    'authenticationValue': 'BwABBJQ1AgAAAAAgJDUCAAAAAAA=',
+                },
                 'card': {
-                    'number':'4100200300011001',
+                    'number': '4100200300011001',
                     'expDate': '0521',
                     'cardValidationNum': '463',
                     'type': 'VI',
@@ -802,12 +800,12 @@ class TestCertAuthsDict(unittest.TestCase):
 
     def test_table_2_1_6_auth(self):
         txn_dict = {
-            'authorization' : {
-                'orderId' : '6',
-                'amount' : 10010,
-                'orderSource' : 'ecommerce',
-                'id' : 'thisisid',
-                'billToAddress' : {
+            'authorization': {
+                'orderId': '6',
+                'amount': 10010,
+                'orderSource': 'ecommerce',
+                'id': 'thisisid',
+                'billToAddress': {
                     'name': 'Joe Green',
                     'addressLine1': '6 Main St.',
                     'city': 'Derry',
@@ -816,7 +814,7 @@ class TestCertAuthsDict(unittest.TestCase):
                     'country': 'USA',
                 },
                 'card': {
-                    'number':'4457010100000008',
+                    'number': '4457010100000008',
                     'expDate': '0621',
                     'cardValidationNum': '992',
                     'type': 'VI',
@@ -831,12 +829,12 @@ class TestCertAuthsDict(unittest.TestCase):
 
     def test_table_2_1_6_sale(self):
         txn_dict = {
-            'sale' : {
-                'orderId' : '6',
-                'amount' : 10010,
-                'orderSource' : 'ecommerce',
-                'id' : 'thisisid',
-                'billToAddress' : {
+            'sale': {
+                'orderId': '6',
+                'amount': 10010,
+                'orderSource': 'ecommerce',
+                'id': 'thisisid',
+                'billToAddress': {
                     'name': 'Joe Green',
                     'addressLine1': '6 Main St.',
                     'city': 'Derry',
@@ -845,7 +843,7 @@ class TestCertAuthsDict(unittest.TestCase):
                     'country': 'USA',
                 },
                 'card': {
-                    'number':'4457010100000008',
+                    'number': '4457010100000008',
                     'expDate': '0621',
                     'cardValidationNum': '992',
                     'type': 'VI',
@@ -858,25 +856,25 @@ class TestCertAuthsDict(unittest.TestCase):
         self.assertEquals('34', response['saleResponse']['fraudResult']['avsResult'])
         self.assertEquals('P', response['saleResponse']['fraudResult']['cardValidationResult'])
 
-        # orderId *C
+        # orderId *A
         txn_dict = {
-            'void' : {
+            'void': {
                 'litleTxnId': response['saleResponse']['litleTxnId'],
                 'id': 'ThisIsID'
             }
         }
         voidresponse = online.request(txn_dict, conf)
-        self.assertEquals('360', voidresponse['voidResponse']['response'])
-        self.assertEquals('No transaction found with specified litleTxnId', voidresponse['voidResponse']['message'])
+        self.assertEquals('000', voidresponse['voidResponse']['response'])
+        self.assertEquals('Approved', voidresponse['voidResponse']['message'])
 
     def test_table_2_1_7_auth(self):
         txn_dict = {
-            'authorization' : {
-                'orderId' : '7',
-                'amount' : 10010,
-                'orderSource' : 'ecommerce',
-                'id' : 'thisisid',
-                'billToAddress' : {
+            'authorization': {
+                'orderId': '7',
+                'amount': 10010,
+                'orderSource': 'ecommerce',
+                'id': 'thisisid',
+                'billToAddress': {
                     'name': 'Jane Murray',
                     'addressLine1': '7 Main St.',
                     'city': 'Amesbury',
@@ -885,7 +883,7 @@ class TestCertAuthsDict(unittest.TestCase):
                     'country': 'USA',
                 },
                 'card': {
-                    'number':'5112010100000002',
+                    'number': '5112010100000002',
                     'expDate': '0721',
                     'cardValidationNum': '251',
                     'type': 'MC',
@@ -901,12 +899,12 @@ class TestCertAuthsDict(unittest.TestCase):
 
     def test_table_2_1_7_avs(self):
         txn_dict = {
-            'authorization' : {
-                'orderId' : '7',
-                'amount' : '000',
-                'orderSource' : 'ecommerce',
-                'id' : 'thisisid',
-                'billToAddress' : {
+            'authorization': {
+                'orderId': '7',
+                'amount': '000',
+                'orderSource': 'ecommerce',
+                'id': 'thisisid',
+                'billToAddress': {
                     'name': 'Jane Murray',
                     'addressLine1': '7 Main St.',
                     'city': 'Amesbury',
@@ -915,7 +913,7 @@ class TestCertAuthsDict(unittest.TestCase):
                     'country': 'USA',
                 },
                 'card': {
-                    'number':'5112010100000002',
+                    'number': '5112010100000002',
                     'expDate': '0721',
                     'cardValidationNum': '251',
                     'type': 'MC',
@@ -931,12 +929,12 @@ class TestCertAuthsDict(unittest.TestCase):
 
     def test_table_2_1_7_sale(self):
         txn_dict = {
-            'sale' : {
-                'orderId' : '7',
-                'amount' : 10010,
-                'orderSource' : 'ecommerce',
-                'id' : 'thisisid',
-                'billToAddress' : {
+            'sale': {
+                'orderId': '7',
+                'amount': 10010,
+                'orderSource': 'ecommerce',
+                'id': 'thisisid',
+                'billToAddress': {
                     'name': 'Jane Murray',
                     'addressLine1': '7 Main St.',
                     'city': 'Amesbury',
@@ -945,7 +943,7 @@ class TestCertAuthsDict(unittest.TestCase):
                     'country': 'USA',
                 },
                 'card': {
-                    'number':'5112010100000002',
+                    'number': '5112010100000002',
                     'expDate': '0721',
                     'cardValidationNum': '251',
                     'type': 'MC',
@@ -961,12 +959,12 @@ class TestCertAuthsDict(unittest.TestCase):
 
     def test_table_2_1_8_auth(self):
         txn_dict = {
-            'authorization' : {
-                'orderId' : '8',
-                'amount' : 10010,
-                'orderSource' : 'ecommerce',
-                'id' : 'thisisid',
-                'billToAddress' : {
+            'authorization': {
+                'orderId': '8',
+                'amount': 10010,
+                'orderSource': 'ecommerce',
+                'id': 'thisisid',
+                'billToAddress': {
                     'name': 'Mark Johnson',
                     'addressLine1': '8 Main St.',
                     'city': 'Manchester',
@@ -975,7 +973,7 @@ class TestCertAuthsDict(unittest.TestCase):
                     'country': 'USA',
                 },
                 'card': {
-                    'number':'6011010100000002',
+                    'number': '6011010100000002',
                     'expDate': '0821',
                     'cardValidationNum': '184',
                     'type': 'DI',
@@ -991,12 +989,12 @@ class TestCertAuthsDict(unittest.TestCase):
 
     def test_table_2_1_8_avs(self):
         txn_dict = {
-            'authorization' : {
-                'orderId' : '8',
-                'amount' : '000',
-                'orderSource' : 'ecommerce',
-                'id' : 'thisisid',
-                'billToAddress' : {
+            'authorization': {
+                'orderId': '8',
+                'amount': '000',
+                'orderSource': 'ecommerce',
+                'id': 'thisisid',
+                'billToAddress': {
                     'name': 'Mark Johnson',
                     'addressLine1': '8 Main St.',
                     'city': 'Manchester',
@@ -1005,7 +1003,7 @@ class TestCertAuthsDict(unittest.TestCase):
                     'country': 'USA',
                 },
                 'card': {
-                    'number':'6011010100000002',
+                    'number': '6011010100000002',
                     'expDate': '0821',
                     'cardValidationNum': '184',
                     'type': 'DI',
@@ -1021,12 +1019,12 @@ class TestCertAuthsDict(unittest.TestCase):
 
     def test_table_2_1_8_sale(self):
         txn_dict = {
-            'sale' : {
-                'orderId' : '8',
-                'amount' : 10010,
-                'orderSource' : 'ecommerce',
-                'id' : 'thisisid',
-                'billToAddress' : {
+            'sale': {
+                'orderId': '8',
+                'amount': 10010,
+                'orderSource': 'ecommerce',
+                'id': 'thisisid',
+                'billToAddress': {
                     'name': 'Mark Johnson',
                     'addressLine1': '8 Main St.',
                     'city': 'Manchester',
@@ -1035,7 +1033,7 @@ class TestCertAuthsDict(unittest.TestCase):
                     'country': 'USA',
                 },
                 'card': {
-                    'number':'6011010100000002',
+                    'number': '6011010100000002',
                     'expDate': '0821',
                     'cardValidationNum': '184',
                     'type': 'DI',
@@ -1051,12 +1049,12 @@ class TestCertAuthsDict(unittest.TestCase):
 
     def test_table_2_1_9_auth(self):
         txn_dict = {
-            'authorization' : {
-                'orderId' : '9',
-                'amount' : 10010,
-                'orderSource' : 'ecommerce',
-                'id' : 'thisisid',
-                'billToAddress' : {
+            'authorization': {
+                'orderId': '9',
+                'amount': 10010,
+                'orderSource': 'ecommerce',
+                'id': 'thisisid',
+                'billToAddress': {
                     'name': 'James Miller',
                     'addressLine1': '9 Main St.',
                     'city': 'Boston',
@@ -1065,7 +1063,7 @@ class TestCertAuthsDict(unittest.TestCase):
                     'country': 'USA',
                 },
                 'card': {
-                    'number':'375001010000003',
+                    'number': '375001010000003',
                     'expDate': '0921',
                     'cardValidationNum': '0421',
                     'type': 'AX',
@@ -1081,12 +1079,12 @@ class TestCertAuthsDict(unittest.TestCase):
 
     def test_table_2_1_9_avs(self):
         txn_dict = {
-            'authorization' : {
-                'orderId' : '9',
-                'amount' : '000',
-                'orderSource' : 'ecommerce',
-                'id' : 'thisisid',
-                'billToAddress' : {
+            'authorization': {
+                'orderId': '9',
+                'amount': '000',
+                'orderSource': 'ecommerce',
+                'id': 'thisisid',
+                'billToAddress': {
                     'name': 'James Miller',
                     'addressLine1': '9 Main St.',
                     'city': 'Boston',
@@ -1095,7 +1093,7 @@ class TestCertAuthsDict(unittest.TestCase):
                     'country': 'USA',
                 },
                 'card': {
-                    'number':'375001010000003',
+                    'number': '375001010000003',
                     'expDate': '0921',
                     'cardValidationNum': '0421',
                     'type': 'AX',
@@ -1111,12 +1109,12 @@ class TestCertAuthsDict(unittest.TestCase):
 
     def test_table_2_1_9_sale(self):
         txn_dict = {
-            'sale' : {
-                'orderId' : '9',
-                'amount' : 10010,
-                'orderSource' : 'ecommerce',
-                'id' : 'thisisid',
-                'billToAddress' : {
+            'sale': {
+                'orderId': '9',
+                'amount': 10010,
+                'orderSource': 'ecommerce',
+                'id': 'thisisid',
+                'billToAddress': {
                     'name': 'James Miller',
                     'addressLine1': '9 Main St.',
                     'city': 'Boston',
@@ -1125,7 +1123,7 @@ class TestCertAuthsDict(unittest.TestCase):
                     'country': 'USA',
                 },
                 'card': {
-                    'number':'375001010000003',
+                    'number': '375001010000003',
                     'expDate': '0921',
                     'cardValidationNum': '0421',
                     'type': 'AX',
@@ -1141,17 +1139,17 @@ class TestCertAuthsDict(unittest.TestCase):
 
     def test_table_2_1_10_auth(self):
         txn_dict = {
-            'authorization' : {
-                'orderId' : '10',
-                'amount' : 40000,
-                'orderSource' : 'ecommerce',
-                'id' : 'thisisid',
+            'authorization': {
+                'orderId': '10',
+                'amount': 40000,
+                'orderSource': 'ecommerce',
+                'id': 'thisisid',
                 'card': {
-                    'number':'4457010140000141',
+                    'number': '4457010140000141',
                     'expDate': '0921',
                     'type': 'VI',
                 },
-                'allowPartialAuth' : True,
+                'allowPartialAuth': True,
             }
         }
 
@@ -1162,17 +1160,17 @@ class TestCertAuthsDict(unittest.TestCase):
 
     def test_table_2_1_11_auth(self):
         txn_dict = {
-            'authorization' : {
-                'orderId' : '11',
-                'amount' : 60000,
-                'orderSource' : 'ecommerce',
-                'id' : 'thisisid',
+            'authorization': {
+                'orderId': '11',
+                'amount': 60000,
+                'orderSource': 'ecommerce',
+                'id': 'thisisid',
                 'card': {
-                    'number':'5112010140000004',
+                    'number': '5112010140000004',
                     'expDate': '1121',
                     'type': 'MC',
                 },
-                'allowPartialAuth' : True,
+                'allowPartialAuth': True,
             }
         }
 
@@ -1183,37 +1181,37 @@ class TestCertAuthsDict(unittest.TestCase):
 
     def test_table_2_1_12_auth(self):
         txn_dict = {
-            'authorization' : {
-                'orderId' : '12',
-                'amount' : 50000,
-                'orderSource' : 'ecommerce',
-                'id' : 'thisisid',
+            'authorization': {
+                'orderId': '12',
+                'amount': 50000,
+                'orderSource': 'ecommerce',
+                'id': 'thisisid',
                 'card': {
-                    'number':'375001014000009',
+                    'number': '375001014000009',
                     'expDate': '0421',
                     'type': 'AX',
                 },
-                'allowPartialAuth' : True,
+                'allowPartialAuth': True,
             }
         }
         response = online.request(txn_dict, conf)
-        # self.assertEquals('010', response['authorizationResponse']['response'])
+        self.assertEquals('010', response['authorizationResponse']['response'])
         self.assertEquals('Partially Approved', response['authorizationResponse']['message'])
         self.assertEquals('40000', response['authorizationResponse']['approvedAmount'])
 
     def test_table_2_1_13_auth(self):
         txn_dict = {
-            'authorization' : {
-                'orderId' : '13',
-                'amount' : 15000,
-                'orderSource' : 'ecommerce',
-                'id' : 'thisisid',
+            'authorization': {
+                'orderId': '13',
+                'amount': 15000,
+                'orderSource': 'ecommerce',
+                'id': 'thisisid',
                 'card': {
-                    'number':'6011010140000004',
+                    'number': '6011010140000004',
                     'expDate': '0821',
                     'type': 'DI',
                 },
-                'allowPartialAuth' : True,
+                'allowPartialAuth': True,
             }
         }
         response = online.request(txn_dict, conf)
