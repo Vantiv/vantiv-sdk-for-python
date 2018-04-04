@@ -288,9 +288,8 @@ class TestCertEcheckDict(unittest.TestCase):
             }
         }
         response = online.request(txn_dict, conf)
-        # TODO response is wrong.
-        # self.assertEquals('301', response['echeckCreditResponse']['response'])
-        # self.assertEquals('Invalid Account Number', response['echeckCreditResponse']['message'])
+        self.assertEquals('301', response['echeckCreditResponse']['response'])
+        self.assertEquals('Invalid Account Number', response['echeckCreditResponse']['message'])
 
 
     def test_table_2_6_46(self):
