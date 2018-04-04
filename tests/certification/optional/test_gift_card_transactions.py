@@ -75,7 +75,7 @@ class TestGiftCardTxns(unittest.TestCase):
                 'orderSource': 'ecommerce',
                 'virtualGiftCard': {
                     'accountNumberLength': 16,
-                    'giftCardBin': '123',
+                    'giftCardBin': '603571',
                 }
             }
         }

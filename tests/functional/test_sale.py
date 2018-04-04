@@ -300,5 +300,47 @@ class TestSale(unittest.TestCase):
         self.assertEquals('http://redirect.url.vantiv.com',
                           response['saleResponse']['idealResponse']['redirectUrl'])
 
+    def test_sale_with_giropay(self):
+        transaction = fields.sale()
+        transaction.id = '12345'
+        transaction.reportGroup = 'Default'
+        transaction.orderId = '67890'
+        transaction.amount = 10000
+        transaction.orderSource = 'ecommerce'
+        transaction.processingType = 'initialInstallment'
+        transaction.originalNetworkTransactionId = '9876543210'
+        transaction.originalTransactionAmount = 53698
+        transaction.id = 'ThisIsID'
+
+        giropay = fields.giropayType()
+        giropay.preferredLanguage = 'DE'
+        transaction.giropay = giropay
+
+        response = online.request(transaction, conf)
+        self.assertEquals('000', response['saleResponse']['response'])
+        self.assertEquals('http://redirect.url.vantiv.com',
+                          response['saleResponse']['giropayResponse']['redirectUrl'])
+
+    def test_sale_with_sofort(self):
+        transaction = fields.sale()
+        transaction.id = '12345'
+        transaction.reportGroup = 'Default'
+        transaction.orderId = '67890'
+        transaction.amount = 10000
+        transaction.orderSource = 'ecommerce'
+        transaction.processingType = 'initialInstallment'
+        transaction.originalNetworkTransactionId = '9876543210'
+        transaction.originalTransactionAmount = 53698
+        transaction.id = 'ThisIsID'
+
+        sofort = fields.sofortType()
+        sofort.preferredLanguage = 'NL'
+        transaction.sofort = sofort
+
+        response = online.request(transaction, conf)
+        self.assertEquals('000', response['saleResponse']['response'])
+        self.assertEquals('http://redirect.url.vantiv.com',
+                          response['saleResponse']['sofortResponse']['redirectUrl'])
+
 if __name__ == '__main__':
     unittest.main()

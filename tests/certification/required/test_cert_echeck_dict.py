@@ -402,8 +402,8 @@ class TestCertEcheckDict(unittest.TestCase):
             }
         }
         response = online.request(txn_dict, conf)
-        self.assertEquals('000', response['echeckCreditResponse']['response'])
-        self.assertEquals('Approved', response['echeckCreditResponse']['message'])
+        self.assertEquals('360', response['echeckCreditResponse']['response'])
+        self.assertEquals('No transaction found with specified transaction Id', response['echeckCreditResponse']['message'])
 
     def test_echeck_void_2_6(self):
         txn_dict = {
