@@ -247,7 +247,8 @@ def _stream_socket(xml_str, conf, timeout_send, timeout_rev):
 
     try:
         s.connect((conf.fast_url, int(conf.fast_port)))
-    except:
+    except Exception as e:
+        print(e)
         raise utils.VantivException("Cannot connect to vantiv")
 
     s.sendall(xml_str.encode('utf-8'))

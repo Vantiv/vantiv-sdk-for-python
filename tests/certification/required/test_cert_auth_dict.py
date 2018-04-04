@@ -194,9 +194,8 @@ class TestCertAuthsDict(unittest.TestCase):
         txn_dict = {
             'authorization': {
                 'orderId': '2',
-                'amount': 10010,
+                'amount': 10100,
                 'orderSource': 'ecommerce',
-                'id': 'thisisid',
                 'billToAddress': {
                     'name': 'Mike J. Hammer',
                     'addressLine1': '2 Main St.',
@@ -204,7 +203,7 @@ class TestCertAuthsDict(unittest.TestCase):
                     'city': 'Riverside',
                     'state': 'RI',
                     'zip': '02915',
-                    'country': 'USA',
+                    'country': 'US',
                 },
                 'card': {
                     'number': '5112010000000003',
@@ -230,7 +229,6 @@ class TestCertAuthsDict(unittest.TestCase):
         txn_dict = {
             'capture': {
                 'litleTxnId': response['authorizationResponse']['litleTxnId'],
-                'id': 'ThisIsID'
             }
         }
         captureresponse = online.request(txn_dict, conf)
@@ -241,7 +239,6 @@ class TestCertAuthsDict(unittest.TestCase):
         txn_dict = {
             'credit': {
                 'litleTxnId': captureresponse['captureResponse']['litleTxnId'],
-                'id': 'ThisIsID'
             }
         }
         creditresponse = online.request(txn_dict, conf)
@@ -252,7 +249,6 @@ class TestCertAuthsDict(unittest.TestCase):
         txn_dict = {
             'void': {
                 'litleTxnId': creditresponse['creditResponse']['litleTxnId'],
-                'id': 'ThisIsID'
             }
         }
         voidresponse = online.request(txn_dict, conf)
@@ -302,7 +298,6 @@ class TestCertAuthsDict(unittest.TestCase):
                 'orderId': '2',
                 'amount': 10100,
                 'orderSource': 'ecommerce',
-                'id': 'thisisid',
                 'billToAddress': {
                     'name': 'Mike J. Hammer',
                     'addressLine1': '2 Main St.',
@@ -310,7 +305,7 @@ class TestCertAuthsDict(unittest.TestCase):
                     'city': 'Riverside',
                     'state': 'RI',
                     'zip': '02915',
-                    'country': 'USA',
+                    'country': 'US',
                 },
                 'card': {
                     'number': '5112010000000003',
@@ -343,7 +338,6 @@ class TestCertAuthsDict(unittest.TestCase):
         txn_dict = {
             'credit': {
                 'litleTxnId': response['saleResponse']['litleTxnId'],
-                'id': 'ThisIsID'
             }
         }
         creditresponse = online.request(txn_dict, conf)
@@ -354,7 +348,6 @@ class TestCertAuthsDict(unittest.TestCase):
         txn_dict = {
             'void': {
                 'litleTxnId': creditresponse['creditResponse']['litleTxnId'],
-                'id': 'ThisIsID'
             }
         }
         voidresponse = online.request(txn_dict, conf)
@@ -831,7 +824,7 @@ class TestCertAuthsDict(unittest.TestCase):
         txn_dict = {
             'sale': {
                 'orderId': '6',
-                'amount': 10010,
+                'amount': 10100,
                 'orderSource': 'ecommerce',
                 'id': 'thisisid',
                 'billToAddress': {
@@ -840,7 +833,7 @@ class TestCertAuthsDict(unittest.TestCase):
                     'city': 'Derry',
                     'state': 'NH',
                     'zip': '03038',
-                    'country': 'USA',
+                    'country': 'US',
                 },
                 'card': {
                     'number': '4457010100000008',
@@ -864,8 +857,8 @@ class TestCertAuthsDict(unittest.TestCase):
             }
         }
         voidresponse = online.request(txn_dict, conf)
-        self.assertEquals('000', voidresponse['voidResponse']['response'])
-        self.assertEquals('Approved', voidresponse['voidResponse']['message'])
+        self.assertEquals('360', voidresponse['voidResponse']['response'])
+        self.assertEquals('No transaction found with specified transaction Id', voidresponse['voidResponse']['message'])
 
     def test_table_2_1_7_auth(self):
         txn_dict = {
