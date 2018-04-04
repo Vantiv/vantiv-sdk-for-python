@@ -151,9 +151,9 @@ class TestFundingInstruction(unittest.TestCase):
                 'amount': 900010002000,
             }
         }
-        # Sandbox issue.
-        # response = online.request(txn_dict, conf)
-        # self.assertEquals('000', response['physicalCheckCreditResponse']['response'])
+
+        response = online.request(txn_dict, conf)
+        self.assertEquals('000', response['physicalCheckCreditResponse']['response'])
 
     def test_physicalCheckDebit_000(self):
         txn_dict = {
@@ -204,6 +204,25 @@ class TestFundingInstruction(unittest.TestCase):
 
         response = online.request(txn_dict, conf)
         self.assertEquals('000', response['fundingInstructionVoidResponse']['response'])
+
+    def test_fastAccessFunding_000(self):
+        txn_dict = {
+            'fastAccessFunding': {
+                'id': 'OnlinePC2',
+                'fundingSubmerchantId': 'fundingSubmerchantId',
+                'submerchantName': 'submerhc',
+                'fundsTransferId': '1234567891111111',
+                'amount': 90000000,
+                'card': {
+                    'type': 'VI',
+                    'number' : '4100000000000000',
+                    'expDate' : '1210'
+                }
+            }
+        }
+
+        response = online.request(txn_dict, conf)
+        self.assertEquals('000', response['fastAccessFundingResponse']['response'])
 
     def test_payFacCredit_940(self):
         txn_dict = {
@@ -374,6 +393,25 @@ class TestFundingInstruction(unittest.TestCase):
         response = online.request(txn_dict, conf)
         self.assertEquals('940', response['fundingInstructionVoidResponse']['response'])
 
+    def test_fastAccessFunding_940(self):
+        txn_dict = {
+            'fastAccessFunding': {
+                'id': 'OnlinePC2',
+                'fundingSubmerchantId': 'fundingSubmerchantId',
+                'submerchantName': 'submerch',
+                'fundsTransferId': '1234567891111111',
+                'amount': 90000940,
+                'card': {
+                    'type': 'VI',
+                    'number' : '4100000000000000',
+                    'expDate' : '1210'
+                }
+            }
+        }
+
+        response = online.request(txn_dict, conf)
+        self.assertEquals('940', response['fastAccessFundingResponse']['response'])
+
     def test_payFacCredit_941(self):
         txn_dict = {
             'payFacCredit': {
@@ -543,6 +581,25 @@ class TestFundingInstruction(unittest.TestCase):
         response = online.request(txn_dict, conf)
         self.assertEquals('941', response['fundingInstructionVoidResponse']['response'])
 
+    def test_fastAccessFunding_941(self):
+        txn_dict = {
+            'fastAccessFunding': {
+                'id': 'OnlinePC2',
+                'fundingSubmerchantId': 'fundingSubmerchantId',
+                'submerchantName': 'submerch',
+                'fundsTransferId': '1234567891111111',
+                'amount': 90000941,
+                'card': {
+                    'type': 'VI',
+                    'number' : '4100000000000000',
+                    'expDate' : '1210'
+                }
+            }
+        }
+
+        response = online.request(txn_dict, conf)
+        self.assertEquals('941', response['fastAccessFundingResponse']['response'])
+
     def test_fundingInstructionVoid_360(self):
         txn_dict = {
             'fundingInstructionVoid': {
@@ -562,9 +619,8 @@ class TestFundingInstruction(unittest.TestCase):
             }
         }
 
-        # Sandbox issue.
-        # response = online.request(txn_dict, conf)
-        # self.assertEquals('362', response['fundingInstructionVoidResponse']['response'])
+        response = online.request(txn_dict, conf)
+        self.assertEquals('362', response['fundingInstructionVoidResponse']['response'])
 
 if __name__ == '__main__':
     unittest.main()
