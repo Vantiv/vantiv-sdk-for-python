@@ -186,7 +186,7 @@ class TestCertEcheckDict(unittest.TestCase):
         txn_dict = {
             'authorization': {
                 'orderId': '35',
-                'amount': 10010,
+                'amount': 10100,
                 'orderSource': 'ecommerce',
                 'id': 'thisisid',
                 'billToAddress': {
@@ -234,8 +234,8 @@ class TestCertEcheckDict(unittest.TestCase):
 
         authreversalresponse = online.request(txn_dict, conf)
 
-        self.assertEquals('000', authreversalresponse['authReversalResponse']['response'])
-        self.assertEquals('Approved', authreversalresponse['authReversalResponse']['message'])
+        self.assertEquals('336', authreversalresponse['authReversalResponse']['response'])
+        self.assertEquals('Reversal amount does not match authorization amount', authreversalresponse['authReversalResponse']['message'])
 
     def test_table_2_2_36(self):
         txn_dict = {
@@ -265,8 +265,8 @@ class TestCertEcheckDict(unittest.TestCase):
             }
         }
         authreversalresponse = online.request(txn_dict, conf)
-        self.assertEquals('000', authreversalresponse['authReversalResponse']['response'])
-        self.assertEquals('Approved', authreversalresponse['authReversalResponse']['message'])
+        self.assertEquals('336', authreversalresponse['authReversalResponse']['response'])
+        self.assertEquals('Reversal amount does not match authorization amount', authreversalresponse['authReversalResponse']['message'])
 
 
 if __name__ == '__main__':
