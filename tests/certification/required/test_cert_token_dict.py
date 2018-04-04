@@ -208,7 +208,6 @@ class TestCertTokenDict(unittest.TestCase):
         self.assertEquals('Approved', response['authorizationResponse']['message'])
 
     def test_table_2_8_59(self):
-        conf.stfp_password = os.getenv('sdk11_test_txn_sftp_password')
         txn_dict = {
             'authorization': {
                 'orderId': '59',
@@ -273,6 +272,7 @@ class TestCertTokenDict(unittest.TestCase):
         #                   response['echeckSalesResponse']['tokenResponse']['tokenMessage'])
         # self.assertEquals('EC', response['echeckSalesResponse']['tokenResponse']['type'])
         # self.assertEquals('003', response['echeckSalesResponse']['tokenResponse']['eCheckAccountSuffix'])
+        
 
     def test_table_2_8_62(self):
         txn_dict = {
