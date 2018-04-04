@@ -2,6 +2,7 @@
 
 ==Version 12.1.0
 * Feature: Full functions for XML v12.1
+* Feature: Added support for Visa card on file transactions
 * Feature: Defunct Stream method for batch request
 * Fix unicode bug for batch submit method in python 2
 * Feature: PGP Encryption support for sending batches.
