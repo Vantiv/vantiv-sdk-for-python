@@ -95,9 +95,9 @@ class TestCertTokenDict(unittest.TestCase):
             }
         }
         response = online.request(txn_dict, conf)
-        # self.assertIsNotNone(response['registerTokenResponse']['litleToken'])
-        # self.assertEquals('EC', response['registerTokenResponse']['type'])
-        # self.assertEquals('998', response['registerTokenResponse']['eCheckAccountSuffix'])
+        self.assertIsNotNone(response['registerTokenResponse']['litleToken'])
+        self.assertEquals('EC', response['registerTokenResponse']['type'])
+        self.assertEquals('998', response['registerTokenResponse']['eCheckAccountSuffix'])
         # self.assertEquals('801', response['registerTokenResponse']['response'])
         # self.assertEquals('Account number was successfully registered', response['registerTokenResponse']['message'])
 

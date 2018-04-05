@@ -92,15 +92,14 @@ class TestCertEnhancedAuthsDict(unittest.TestCase):
         response = online.request(txn_dict, conf)
         self.assertEquals('000', response['authorizationResponse']['response'])
         self.assertEquals('Approved', response['authorizationResponse']['message'])
-        # TODO enhancedAuthResponse is empty
-        # self.assertEquals('PREPAID',
-        #                   response['authorizationResponse']['enhancedAuthResponse']['fundingSource']['type'])
-        # self.assertEquals(2000,
-        #                   response['authorizationResponse']['enhancedAuthResponse']['fundingSource']['availableBalance'])
-        # self.assertEquals('NO',
-        #                   response['authorizationResponse']['enhancedAuthResponse']['fundingSource']['reloadable'])
-        # self.assertEquals('GIFT',
-        #                   response['authorizationResponse']['enhancedAuthResponse']['fundingSource']['prepaidCardType'])
+        self.assertEquals('PREPAID',
+                          response['authorizationResponse']['enhancedAuthResponse']['fundingSource']['type'])
+        self.assertEquals('2000',
+                          response['authorizationResponse']['enhancedAuthResponse']['fundingSource']['availableBalance'])
+        self.assertEquals('NO',
+                          response['authorizationResponse']['enhancedAuthResponse']['fundingSource']['reloadable'])
+        self.assertEquals('GIFT',
+                          response['authorizationResponse']['enhancedAuthResponse']['fundingSource']['prepaidCardType'])
 
     def test_table_2_1_15_auth(self):
         txn_dict = {
@@ -119,15 +118,14 @@ class TestCertEnhancedAuthsDict(unittest.TestCase):
         response = online.request(txn_dict, conf)
         self.assertEquals('000', response['authorizationResponse']['response'])
         self.assertEquals('Approved', response['authorizationResponse']['message'])
-        # TODO enhancedAuthResponse is empty
-        # self.assertEquals('PREPAID',
-        #                   response['authorizationResponse']['enhancedAuthResponse']['fundingSource']['type'])
-        # self.assertEquals(2000,
-        #                   response['authorizationResponse']['enhancedAuthResponse']['fundingSource']['availableBalance'])
-        # self.assertEquals('YES',
-        #                   response['authorizationResponse']['enhancedAuthResponse']['fundingSource']['reloadable'])
-        # self.assertEquals('PAYROLL',
-        #                   response['authorizationResponse']['enhancedAuthResponse']['fundingSource']['prepaidCardType'])
+        self.assertEquals('PREPAID',
+                          response['authorizationResponse']['enhancedAuthResponse']['fundingSource']['type'])
+        self.assertEquals('2000',
+                          response['authorizationResponse']['enhancedAuthResponse']['fundingSource']['availableBalance'])
+        self.assertEquals('YES',
+                          response['authorizationResponse']['enhancedAuthResponse']['fundingSource']['reloadable'])
+        self.assertEquals('PAYROLL',
+                          response['authorizationResponse']['enhancedAuthResponse']['fundingSource']['prepaidCardType'])
 
     def test_table_2_1_16_auth(self):
         txn_dict = {
@@ -146,15 +144,14 @@ class TestCertEnhancedAuthsDict(unittest.TestCase):
         response = online.request(txn_dict, conf)
         self.assertEquals('000', response['authorizationResponse']['response'])
         self.assertEquals('Approved', response['authorizationResponse']['message'])
-        # TODO enhancedAuthResponse is empty
-        # self.assertEquals('PREPAID',
-        #                   response['authorizationResponse']['enhancedAuthResponse']['fundingSource']['type'])
-        # self.assertEquals(0,
-        #                   response['authorizationResponse']['enhancedAuthResponse']['fundingSource']['availableBalance'])
-        # self.assertEquals('YES',
-        #                   response['authorizationResponse']['enhancedAuthResponse']['fundingSource']['reloadable'])
-        # self.assertEquals('PAYROLL',
-        #                   response['authorizationResponse']['enhancedAuthResponse']['fundingSource']['prepaidCardType'])
+        self.assertEquals('PREPAID',
+                          response['authorizationResponse']['enhancedAuthResponse']['fundingSource']['type'])
+        self.assertEquals('0',
+                          response['authorizationResponse']['enhancedAuthResponse']['fundingSource']['availableBalance'])
+        self.assertEquals('YES',
+                          response['authorizationResponse']['enhancedAuthResponse']['fundingSource']['reloadable'])
+        self.assertEquals('PAYROLL',
+                          response['authorizationResponse']['enhancedAuthResponse']['fundingSource']['prepaidCardType'])
 
     def test_table_2_1_17_auth(self):
         txn_dict = {
@@ -173,15 +170,14 @@ class TestCertEnhancedAuthsDict(unittest.TestCase):
         response = online.request(txn_dict, conf)
         self.assertEquals('000', response['authorizationResponse']['response'])
         self.assertEquals('Approved', response['authorizationResponse']['message'])
-        # TODO enhancedAuthResponse is empty
-        # self.assertEquals('PREPAID',
-        #                   response['authorizationResponse']['enhancedAuthResponse']['fundingSource']['type'])
-        # self.assertEquals(6500,
-        #                   response['authorizationResponse']['enhancedAuthResponse']['fundingSource']['availableBalance'])
-        # self.assertEquals('YES',
-        #                   response['authorizationResponse']['enhancedAuthResponse']['fundingSource']['reloadable'])
-        # self.assertEquals('PAYROLL',
-        #                   response['authorizationResponse']['enhancedAuthResponse']['fundingSource']['prepaidCardType'])
+        self.assertEquals('PREPAID',
+                          response['authorizationResponse']['enhancedAuthResponse']['fundingSource']['type'])
+        self.assertEquals('6500',
+                          response['authorizationResponse']['enhancedAuthResponse']['fundingSource']['availableBalance'])
+        self.assertEquals('YES',
+                          response['authorizationResponse']['enhancedAuthResponse']['fundingSource']['reloadable'])
+        self.assertEquals('PAYROLL',
+                          response['authorizationResponse']['enhancedAuthResponse']['fundingSource']['prepaidCardType'])
 
     def test_table_2_1_18_auth(self):
         txn_dict = {
@@ -200,15 +196,14 @@ class TestCertEnhancedAuthsDict(unittest.TestCase):
         response = online.request(txn_dict, conf)
         self.assertEquals('000', response['authorizationResponse']['response'])
         self.assertEquals('Approved', response['authorizationResponse']['message'])
-        # TODO enhancedAuthResponse is empty
-        # self.assertEquals('PREPAID',
-        #                   response['authorizationResponse']['enhancedAuthResponse']['fundingSource']['type'])
-        # self.assertEquals(12200,
-        #                   response['authorizationResponse']['enhancedAuthResponse']['fundingSource']['availableBalance'])
-        # self.assertEquals('YES',
-        #                   response['authorizationResponse']['enhancedAuthResponse']['fundingSource']['reloadable'])
-        # self.assertEquals('PAYROLL',
-        #                   response['authorizationResponse']['enhancedAuthResponse']['fundingSource']['prepaidCardType'])
+        self.assertEquals('PREPAID',
+                          response['authorizationResponse']['enhancedAuthResponse']['fundingSource']['type'])
+        self.assertEquals('12200',
+                          response['authorizationResponse']['enhancedAuthResponse']['fundingSource']['availableBalance'])
+        self.assertEquals('YES',
+                          response['authorizationResponse']['enhancedAuthResponse']['fundingSource']['reloadable'])
+        self.assertEquals('PAYROLL',
+                          response['authorizationResponse']['enhancedAuthResponse']['fundingSource']['prepaidCardType'])
 
     def test_table_2_1_19_auth(self):
         txn_dict = {
@@ -228,15 +223,14 @@ class TestCertEnhancedAuthsDict(unittest.TestCase):
 
         self.assertEquals('000', response['authorizationResponse']['response'])
         self.assertEquals('Approved', response['authorizationResponse']['message'])
-        # TODO enhancedAuthResponse is empty
-        # self.assertEquals('PREPAID',
-        #                   response['authorizationResponse']['enhancedAuthResponse']['fundingSource']['type'])
-        # self.assertEquals(20000,
-        #                   response['authorizationResponse']['enhancedAuthResponse']['fundingSource']['availableBalance'])
-        # self.assertEquals('YES',
-        #                   response['authorizationResponse']['enhancedAuthResponse']['fundingSource']['reloadable'])
-        # self.assertEquals('PAYROLL',
-        #                   response['authorizationResponse']['enhancedAuthResponse']['fundingSource']['prepaidCardType'])
+        self.assertEquals('PREPAID',
+                          response['authorizationResponse']['enhancedAuthResponse']['fundingSource']['type'])
+        self.assertEquals('20000',
+                          response['authorizationResponse']['enhancedAuthResponse']['fundingSource']['availableBalance'])
+        self.assertEquals('YES',
+                          response['authorizationResponse']['enhancedAuthResponse']['fundingSource']['reloadable'])
+        self.assertEquals('PAYROLL',
+                          response['authorizationResponse']['enhancedAuthResponse']['fundingSource']['prepaidCardType'])
 
     def test_table_2_1_20_auth(self):
         txn_dict = {
@@ -256,15 +250,14 @@ class TestCertEnhancedAuthsDict(unittest.TestCase):
 
         self.assertEquals('000', response['authorizationResponse']['response'])
         self.assertEquals('Approved', response['authorizationResponse']['message'])
-        # TODO enhancedAuthResponse is empty
-        # self.assertEquals('PREPAID',
-        #                   response['authorizationResponse']['enhancedAuthResponse']['fundingSource']['type'])
-        # self.assertEquals(10050,
-        #                   response['authorizationResponse']['enhancedAuthResponse']['fundingSource']['availableBalance'])
-        # self.assertEquals('YES',
-        #                   response['authorizationResponse']['enhancedAuthResponse']['fundingSource']['reloadable'])
-        # self.assertEquals('PAYROLL',
-        #                   response['authorizationResponse']['enhancedAuthResponse']['fundingSource']['prepaidCardType'])
+        self.assertEquals('PREPAID',
+                          response['authorizationResponse']['enhancedAuthResponse']['fundingSource']['type'])
+        self.assertEquals('10050',
+                          response['authorizationResponse']['enhancedAuthResponse']['fundingSource']['availableBalance'])
+        self.assertEquals('YES',
+                          response['authorizationResponse']['enhancedAuthResponse']['fundingSource']['reloadable'])
+        self.assertEquals('PAYROLL',
+                          response['authorizationResponse']['enhancedAuthResponse']['fundingSource']['prepaidCardType'])
 
     # response sample for orderId 21 through 24
     #  <litleOnlineResponse version="9.10" xmlns="http://www.litle.com/fields.
@@ -312,8 +305,7 @@ class TestCertEnhancedAuthsDict(unittest.TestCase):
 
         self.assertEquals('000', response['authorizationResponse']['response'])
         self.assertEquals('Approved', response['authorizationResponse']['message'])
-        # TODO enhancedAuthResponse is empty
-        # self.assertEquals('AFFLUENT', response['authorizationResponse']['enhancedAuthResponse']['affluence'])
+        self.assertEquals('AFFLUENT', response['authorizationResponse']['enhancedAuthResponse']['affluence'])
 
     def test_table_2_1_22_auth(self):
         txn_dict = {
@@ -333,8 +325,7 @@ class TestCertEnhancedAuthsDict(unittest.TestCase):
 
         self.assertEquals('000', response['authorizationResponse']['response'])
         self.assertEquals('Approved', response['authorizationResponse']['message'])
-        # TODO enhancedAuthResponse is empty
-        # self.assertEquals('MASS AFFLUENT', response['authorizationResponse']['enhancedAuthResponse']['affluence'])
+        self.assertEquals('MASS AFFLUENT', response['authorizationResponse']['enhancedAuthResponse']['affluence'])
 
     def test_table_2_1_23_auth(self):
         txn_dict = {
@@ -354,8 +345,7 @@ class TestCertEnhancedAuthsDict(unittest.TestCase):
 
         self.assertEquals('000', response['authorizationResponse']['response'])
         self.assertEquals('Approved', response['authorizationResponse']['message'])
-        # TODO enhancedAuthResponse is empty
-        # self.assertEquals('AFFLUENT', response['authorizationResponse']['enhancedAuthResponse']['affluence'])
+        self.assertEquals('AFFLUENT', response['authorizationResponse']['enhancedAuthResponse']['affluence'])
 
     def test_table_2_1_24_auth(self):
         txn_dict = {
@@ -374,8 +364,7 @@ class TestCertEnhancedAuthsDict(unittest.TestCase):
         response = online.request(txn_dict, conf)
         self.assertEquals('000', response['authorizationResponse']['response'])
         self.assertEquals('Approved', response['authorizationResponse']['message'])
-        # TODO enhancedAuthResponse is empty
-        # self.assertEquals('MASS AFFLUENT', response['authorizationResponse']['enhancedAuthResponse']['affluence'])
+        self.assertEquals('MASS AFFLUENT', response['authorizationResponse']['enhancedAuthResponse']['affluence'])
 
     def test_table_2_1_25_auth(self):
         txn_dict = {
@@ -395,8 +384,7 @@ class TestCertEnhancedAuthsDict(unittest.TestCase):
 
         self.assertEquals('000', response['authorizationResponse']['response'])
         self.assertEquals('Approved', response['authorizationResponse']['message'])
-        # TODO enhancedAuthResponse is empty
-        # self.assertEquals('BRA', response['authorizationResponse']['enhancedAuthResponse']['issuerCountry'])
+        self.assertEquals('BRA', response['authorizationResponse']['enhancedAuthResponse']['issuerCountry'])
 
 
 if __name__ == '__main__':
