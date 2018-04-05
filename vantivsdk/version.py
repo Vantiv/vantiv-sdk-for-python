@@ -23,6 +23,6 @@
 # OTHER DEALINGS IN THE SOFTWARE.
 
 # XML Version
-VERSION = u'9.14'
+VERSION = u'8.31'
 # SDKv2 release
-RELEASE = u'9.14.0'
+RELEASE = u'8.31.0'

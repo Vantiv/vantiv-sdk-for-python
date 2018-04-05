@@ -83,20 +83,20 @@ class CTD_ANON (pyxb.binding.basis.complexTypeDefinition):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 6, 8)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 6, 8)
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
     # Element {http://www.litle.com/schema}user uses Python identifier user
-    __user = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'user'), 'user', '__httpwww_litle_comschema_CTD_ANON_httpwww_litle_comschemauser', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 8, 16), )
+    __user = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'user'), 'user', '__httpwww_litle_comschema_CTD_ANON_httpwww_litle_comschemauser', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 8, 16), )
 
     
     user = property(__user.value, __user.set, None, None)
 
     
     # Element {http://www.litle.com/schema}password uses Python identifier password
-    __password = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'password'), 'password', '__httpwww_litle_comschema_CTD_ANON_httpwww_litle_comschemapassword', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 9, 16), )
+    __password = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'password'), 'password', '__httpwww_litle_comschema_CTD_ANON_httpwww_litle_comschemapassword', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 9, 16), )
 
     
     password = property(__password.value, __password.set, None, None)
@@ -118,104 +118,104 @@ class contact (pyxb.binding.basis.complexTypeDefinition):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'contact')
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 50, 4)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 50, 4)
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
     # Element {http://www.litle.com/schema}name uses Python identifier name
-    __name = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'name'), 'name', '__httpwww_litle_comschema_contact_httpwww_litle_comschemaname', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 52, 12), )
+    __name = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'name'), 'name', '__httpwww_litle_comschema_contact_httpwww_litle_comschemaname', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 52, 12), )
 
     
     name = property(__name.value, __name.set, None, None)
 
     
     # Element {http://www.litle.com/schema}firstName uses Python identifier firstName
-    __firstName = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'firstName'), 'firstName', '__httpwww_litle_comschema_contact_httpwww_litle_comschemafirstName', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 53, 12), )
+    __firstName = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'firstName'), 'firstName', '__httpwww_litle_comschema_contact_httpwww_litle_comschemafirstName', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 53, 12), )
 
     
     firstName = property(__firstName.value, __firstName.set, None, None)
 
     
     # Element {http://www.litle.com/schema}middleInitial uses Python identifier middleInitial
-    __middleInitial = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'middleInitial'), 'middleInitial', '__httpwww_litle_comschema_contact_httpwww_litle_comschemamiddleInitial', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 54, 12), )
+    __middleInitial = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'middleInitial'), 'middleInitial', '__httpwww_litle_comschema_contact_httpwww_litle_comschemamiddleInitial', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 54, 12), )
 
     
     middleInitial = property(__middleInitial.value, __middleInitial.set, None, None)
 
     
     # Element {http://www.litle.com/schema}lastName uses Python identifier lastName
-    __lastName = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'lastName'), 'lastName', '__httpwww_litle_comschema_contact_httpwww_litle_comschemalastName', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 55, 12), )
+    __lastName = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'lastName'), 'lastName', '__httpwww_litle_comschema_contact_httpwww_litle_comschemalastName', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 55, 12), )
 
     
     lastName = property(__lastName.value, __lastName.set, None, None)
 
     
     # Element {http://www.litle.com/schema}companyName uses Python identifier companyName
-    __companyName = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'companyName'), 'companyName', '__httpwww_litle_comschema_contact_httpwww_litle_comschemacompanyName', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 56, 12), )
+    __companyName = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'companyName'), 'companyName', '__httpwww_litle_comschema_contact_httpwww_litle_comschemacompanyName', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 56, 12), )
 
     
     companyName = property(__companyName.value, __companyName.set, None, None)
 
     
     # Element {http://www.litle.com/schema}addressLine1 uses Python identifier addressLine1
-    __addressLine1 = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'addressLine1'), 'addressLine1', '__httpwww_litle_comschema_contact_httpwww_litle_comschemaaddressLine1', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 57, 12), )
+    __addressLine1 = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'addressLine1'), 'addressLine1', '__httpwww_litle_comschema_contact_httpwww_litle_comschemaaddressLine1', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 57, 12), )
 
     
     addressLine1 = property(__addressLine1.value, __addressLine1.set, None, None)
 
     
     # Element {http://www.litle.com/schema}addressLine2 uses Python identifier addressLine2
-    __addressLine2 = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'addressLine2'), 'addressLine2', '__httpwww_litle_comschema_contact_httpwww_litle_comschemaaddressLine2', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 58, 12), )
+    __addressLine2 = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'addressLine2'), 'addressLine2', '__httpwww_litle_comschema_contact_httpwww_litle_comschemaaddressLine2', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 58, 12), )
 
     
     addressLine2 = property(__addressLine2.value, __addressLine2.set, None, None)
 
     
     # Element {http://www.litle.com/schema}addressLine3 uses Python identifier addressLine3
-    __addressLine3 = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'addressLine3'), 'addressLine3', '__httpwww_litle_comschema_contact_httpwww_litle_comschemaaddressLine3', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 59, 12), )
+    __addressLine3 = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'addressLine3'), 'addressLine3', '__httpwww_litle_comschema_contact_httpwww_litle_comschemaaddressLine3', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 59, 12), )
 
     
     addressLine3 = property(__addressLine3.value, __addressLine3.set, None, None)
 
     
     # Element {http://www.litle.com/schema}city uses Python identifier city
-    __city = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'city'), 'city', '__httpwww_litle_comschema_contact_httpwww_litle_comschemacity', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 60, 12), )
+    __city = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'city'), 'city', '__httpwww_litle_comschema_contact_httpwww_litle_comschemacity', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 60, 12), )
 
     
     city = property(__city.value, __city.set, None, None)
 
     
     # Element {http://www.litle.com/schema}state uses Python identifier state
-    __state = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'state'), 'state', '__httpwww_litle_comschema_contact_httpwww_litle_comschemastate', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 61, 12), )
+    __state = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'state'), 'state', '__httpwww_litle_comschema_contact_httpwww_litle_comschemastate', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 61, 12), )
 
     
     state = property(__state.value, __state.set, None, None)
 
     
     # Element {http://www.litle.com/schema}zip uses Python identifier zip
-    __zip = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'zip'), 'zip', '__httpwww_litle_comschema_contact_httpwww_litle_comschemazip', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 62, 12), )
+    __zip = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'zip'), 'zip', '__httpwww_litle_comschema_contact_httpwww_litle_comschemazip', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 62, 12), )
 
     
     zip = property(__zip.value, __zip.set, None, None)
 
     
     # Element {http://www.litle.com/schema}country uses Python identifier country
-    __country = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'country'), 'country', '__httpwww_litle_comschema_contact_httpwww_litle_comschemacountry', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 63, 12), )
+    __country = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'country'), 'country', '__httpwww_litle_comschema_contact_httpwww_litle_comschemacountry', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 63, 12), )
 
     
     country = property(__country.value, __country.set, None, None)
 
     
     # Element {http://www.litle.com/schema}email uses Python identifier email
-    __email = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'email'), 'email', '__httpwww_litle_comschema_contact_httpwww_litle_comschemaemail', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 64, 12), )
+    __email = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'email'), 'email', '__httpwww_litle_comschema_contact_httpwww_litle_comschemaemail', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 64, 12), )
 
     
     email = property(__email.value, __email.set, None, None)
 
     
     # Element {http://www.litle.com/schema}phone uses Python identifier phone
-    __phone = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'phone'), 'phone', '__httpwww_litle_comschema_contact_httpwww_litle_comschemaphone', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 65, 12), )
+    __phone = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'phone'), 'phone', '__httpwww_litle_comschema_contact_httpwww_litle_comschemaphone', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 65, 12), )
 
     
     phone = property(__phone.value, __phone.set, None, None)
@@ -250,41 +250,41 @@ class mposType (pyxb.binding.basis.complexTypeDefinition):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'mposType')
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 71, 4)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 71, 4)
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
     # Element {http://www.litle.com/schema}ksn uses Python identifier ksn
-    __ksn = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'ksn'), 'ksn', '__httpwww_litle_comschema_mposType_httpwww_litle_comschemaksn', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 73, 12), )
+    __ksn = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'ksn'), 'ksn', '__httpwww_litle_comschema_mposType_httpwww_litle_comschemaksn', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 73, 12), )
 
     
     ksn = property(__ksn.value, __ksn.set, None, None)
 
     
     # Element {http://www.litle.com/schema}formatId uses Python identifier formatId
-    __formatId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'formatId'), 'formatId', '__httpwww_litle_comschema_mposType_httpwww_litle_comschemaformatId', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 74, 12), )
+    __formatId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'formatId'), 'formatId', '__httpwww_litle_comschema_mposType_httpwww_litle_comschemaformatId', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 74, 12), )
 
     
     formatId = property(__formatId.value, __formatId.set, None, None)
 
     
     # Element {http://www.litle.com/schema}encryptedTrack uses Python identifier encryptedTrack
-    __encryptedTrack = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'encryptedTrack'), 'encryptedTrack', '__httpwww_litle_comschema_mposType_httpwww_litle_comschemaencryptedTrack', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 75, 12), )
+    __encryptedTrack = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'encryptedTrack'), 'encryptedTrack', '__httpwww_litle_comschema_mposType_httpwww_litle_comschemaencryptedTrack', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 75, 12), )
 
     
     encryptedTrack = property(__encryptedTrack.value, __encryptedTrack.set, None, None)
 
     
     # Element {http://www.litle.com/schema}track1Status uses Python identifier track1Status
-    __track1Status = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'track1Status'), 'track1Status', '__httpwww_litle_comschema_mposType_httpwww_litle_comschematrack1Status', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 76, 12), )
+    __track1Status = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'track1Status'), 'track1Status', '__httpwww_litle_comschema_mposType_httpwww_litle_comschematrack1Status', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 76, 12), )
 
     
     track1Status = property(__track1Status.value, __track1Status.set, None, None)
 
     
     # Element {http://www.litle.com/schema}track2Status uses Python identifier track2Status
-    __track2Status = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'track2Status'), 'track2Status', '__httpwww_litle_comschema_mposType_httpwww_litle_comschematrack2Status', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 77, 12), )
+    __track2Status = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'track2Status'), 'track2Status', '__httpwww_litle_comschema_mposType_httpwww_litle_comschematrack2Status', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 77, 12), )
 
     
     track2Status = property(__track2Status.value, __track2Status.set, None, None)
@@ -310,48 +310,48 @@ class cardType (pyxb.binding.basis.complexTypeDefinition):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'cardType')
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 81, 4)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 81, 4)
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
     # Element {http://www.litle.com/schema}type uses Python identifier type
-    __type = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'type'), 'type', '__httpwww_litle_comschema_cardType_httpwww_litle_comschematype', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 85, 20), )
+    __type = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'type'), 'type', '__httpwww_litle_comschema_cardType_httpwww_litle_comschematype', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 85, 20), )
 
     
     type = property(__type.value, __type.set, None, None)
 
     
     # Element {http://www.litle.com/schema}number uses Python identifier number
-    __number = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'number'), 'number', '__httpwww_litle_comschema_cardType_httpwww_litle_comschemanumber', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 86, 20), )
+    __number = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'number'), 'number', '__httpwww_litle_comschema_cardType_httpwww_litle_comschemanumber', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 86, 20), )
 
     
     number = property(__number.value, __number.set, None, None)
 
     
     # Element {http://www.litle.com/schema}expDate uses Python identifier expDate
-    __expDate = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'expDate'), 'expDate', '__httpwww_litle_comschema_cardType_httpwww_litle_comschemaexpDate', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 87, 20), )
+    __expDate = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'expDate'), 'expDate', '__httpwww_litle_comschema_cardType_httpwww_litle_comschemaexpDate', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 87, 20), )
 
     
     expDate = property(__expDate.value, __expDate.set, None, None)
 
     
     # Element {http://www.litle.com/schema}track uses Python identifier track
-    __track = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'track'), 'track', '__httpwww_litle_comschema_cardType_httpwww_litle_comschematrack', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 90, 20), )
+    __track = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'track'), 'track', '__httpwww_litle_comschema_cardType_httpwww_litle_comschematrack', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 90, 20), )
 
     
     track = property(__track.value, __track.set, None, None)
 
     
     # Element {http://www.litle.com/schema}cardValidationNum uses Python identifier cardValidationNum
-    __cardValidationNum = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'cardValidationNum'), 'cardValidationNum', '__httpwww_litle_comschema_cardType_httpwww_litle_comschemacardValidationNum', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 93, 12), )
+    __cardValidationNum = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'cardValidationNum'), 'cardValidationNum', '__httpwww_litle_comschema_cardType_httpwww_litle_comschemacardValidationNum', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 93, 12), )
 
     
     cardValidationNum = property(__cardValidationNum.value, __cardValidationNum.set, None, None)
 
     
     # Element {http://www.litle.com/schema}pin uses Python identifier pin
-    __pin = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'pin'), 'pin', '__httpwww_litle_comschema_cardType_httpwww_litle_comschemapin', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 94, 12), )
+    __pin = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'pin'), 'pin', '__httpwww_litle_comschema_cardType_httpwww_litle_comschemapin', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 94, 12), )
 
     
     pin = property(__pin.value, __pin.set, None, None)
@@ -378,34 +378,34 @@ class cardTokenType (pyxb.binding.basis.complexTypeDefinition):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'cardTokenType')
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 99, 4)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 99, 4)
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
     # Element {http://www.litle.com/schema}litleToken uses Python identifier litleToken
-    __litleToken = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'litleToken'), 'litleToken', '__httpwww_litle_comschema_cardTokenType_httpwww_litle_comschemalitleToken', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 101, 12), )
+    __litleToken = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'litleToken'), 'litleToken', '__httpwww_litle_comschema_cardTokenType_httpwww_litle_comschemalitleToken', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 101, 12), )
 
     
     litleToken = property(__litleToken.value, __litleToken.set, None, None)
 
     
     # Element {http://www.litle.com/schema}expDate uses Python identifier expDate
-    __expDate = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'expDate'), 'expDate', '__httpwww_litle_comschema_cardTokenType_httpwww_litle_comschemaexpDate', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 102, 12), )
+    __expDate = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'expDate'), 'expDate', '__httpwww_litle_comschema_cardTokenType_httpwww_litle_comschemaexpDate', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 102, 12), )
 
     
     expDate = property(__expDate.value, __expDate.set, None, None)
 
     
     # Element {http://www.litle.com/schema}cardValidationNum uses Python identifier cardValidationNum
-    __cardValidationNum = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'cardValidationNum'), 'cardValidationNum', '__httpwww_litle_comschema_cardTokenType_httpwww_litle_comschemacardValidationNum', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 103, 12), )
+    __cardValidationNum = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'cardValidationNum'), 'cardValidationNum', '__httpwww_litle_comschema_cardTokenType_httpwww_litle_comschemacardValidationNum', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 103, 12), )
 
     
     cardValidationNum = property(__cardValidationNum.value, __cardValidationNum.set, None, None)
 
     
     # Element {http://www.litle.com/schema}type uses Python identifier type
-    __type = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'type'), 'type', '__httpwww_litle_comschema_cardTokenType_httpwww_litle_comschematype', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 104, 12), )
+    __type = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'type'), 'type', '__httpwww_litle_comschema_cardTokenType_httpwww_litle_comschematype', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 104, 12), )
 
     
     type = property(__type.value, __type.set, None, None)
@@ -430,34 +430,34 @@ class cardPaypageType (pyxb.binding.basis.complexTypeDefinition):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'cardPaypageType')
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 108, 4)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 108, 4)
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
     # Element {http://www.litle.com/schema}paypageRegistrationId uses Python identifier paypageRegistrationId
-    __paypageRegistrationId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'paypageRegistrationId'), 'paypageRegistrationId', '__httpwww_litle_comschema_cardPaypageType_httpwww_litle_comschemapaypageRegistrationId', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 110, 12), )
+    __paypageRegistrationId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'paypageRegistrationId'), 'paypageRegistrationId', '__httpwww_litle_comschema_cardPaypageType_httpwww_litle_comschemapaypageRegistrationId', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 110, 12), )
 
     
     paypageRegistrationId = property(__paypageRegistrationId.value, __paypageRegistrationId.set, None, None)
 
     
     # Element {http://www.litle.com/schema}expDate uses Python identifier expDate
-    __expDate = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'expDate'), 'expDate', '__httpwww_litle_comschema_cardPaypageType_httpwww_litle_comschemaexpDate', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 111, 12), )
+    __expDate = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'expDate'), 'expDate', '__httpwww_litle_comschema_cardPaypageType_httpwww_litle_comschemaexpDate', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 111, 12), )
 
     
     expDate = property(__expDate.value, __expDate.set, None, None)
 
     
     # Element {http://www.litle.com/schema}cardValidationNum uses Python identifier cardValidationNum
-    __cardValidationNum = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'cardValidationNum'), 'cardValidationNum', '__httpwww_litle_comschema_cardPaypageType_httpwww_litle_comschemacardValidationNum', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 112, 12), )
+    __cardValidationNum = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'cardValidationNum'), 'cardValidationNum', '__httpwww_litle_comschema_cardPaypageType_httpwww_litle_comschemacardValidationNum', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 112, 12), )
 
     
     cardValidationNum = property(__cardValidationNum.value, __cardValidationNum.set, None, None)
 
     
     # Element {http://www.litle.com/schema}type uses Python identifier type
-    __type = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'type'), 'type', '__httpwww_litle_comschema_cardPaypageType_httpwww_litle_comschematype', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 113, 12), )
+    __type = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'type'), 'type', '__httpwww_litle_comschema_cardPaypageType_httpwww_litle_comschematype', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 113, 12), )
 
     
     type = property(__type.value, __type.set, None, None)
@@ -482,48 +482,48 @@ class tokenResponseType (pyxb.binding.basis.complexTypeDefinition):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'tokenResponseType')
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 117, 4)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 117, 4)
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
     # Element {http://www.litle.com/schema}litleToken uses Python identifier litleToken
-    __litleToken = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'litleToken'), 'litleToken', '__httpwww_litle_comschema_tokenResponseType_httpwww_litle_comschemalitleToken', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 119, 12), )
+    __litleToken = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'litleToken'), 'litleToken', '__httpwww_litle_comschema_tokenResponseType_httpwww_litle_comschemalitleToken', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 119, 12), )
 
     
     litleToken = property(__litleToken.value, __litleToken.set, None, None)
 
     
     # Element {http://www.litle.com/schema}tokenResponseCode uses Python identifier tokenResponseCode
-    __tokenResponseCode = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'tokenResponseCode'), 'tokenResponseCode', '__httpwww_litle_comschema_tokenResponseType_httpwww_litle_comschematokenResponseCode', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 120, 12), )
+    __tokenResponseCode = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'tokenResponseCode'), 'tokenResponseCode', '__httpwww_litle_comschema_tokenResponseType_httpwww_litle_comschematokenResponseCode', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 120, 12), )
 
     
     tokenResponseCode = property(__tokenResponseCode.value, __tokenResponseCode.set, None, None)
 
     
     # Element {http://www.litle.com/schema}tokenMessage uses Python identifier tokenMessage
-    __tokenMessage = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'tokenMessage'), 'tokenMessage', '__httpwww_litle_comschema_tokenResponseType_httpwww_litle_comschematokenMessage', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 121, 12), )
+    __tokenMessage = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'tokenMessage'), 'tokenMessage', '__httpwww_litle_comschema_tokenResponseType_httpwww_litle_comschematokenMessage', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 121, 12), )
 
     
     tokenMessage = property(__tokenMessage.value, __tokenMessage.set, None, None)
 
     
     # Element {http://www.litle.com/schema}type uses Python identifier type
-    __type = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'type'), 'type', '__httpwww_litle_comschema_tokenResponseType_httpwww_litle_comschematype', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 122, 12), )
+    __type = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'type'), 'type', '__httpwww_litle_comschema_tokenResponseType_httpwww_litle_comschematype', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 122, 12), )
 
     
     type = property(__type.value, __type.set, None, None)
 
     
     # Element {http://www.litle.com/schema}bin uses Python identifier bin
-    __bin = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'bin'), 'bin', '__httpwww_litle_comschema_tokenResponseType_httpwww_litle_comschemabin', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 123, 12), )
+    __bin = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'bin'), 'bin', '__httpwww_litle_comschema_tokenResponseType_httpwww_litle_comschemabin', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 123, 12), )
 
     
     bin = property(__bin.value, __bin.set, None, None)
 
     
     # Element {http://www.litle.com/schema}eCheckAccountSuffix uses Python identifier eCheckAccountSuffix
-    __eCheckAccountSuffix = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'eCheckAccountSuffix'), 'eCheckAccountSuffix', '__httpwww_litle_comschema_tokenResponseType_httpwww_litle_comschemaeCheckAccountSuffix', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 124, 12), )
+    __eCheckAccountSuffix = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'eCheckAccountSuffix'), 'eCheckAccountSuffix', '__httpwww_litle_comschema_tokenResponseType_httpwww_litle_comschemaeCheckAccountSuffix', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 124, 12), )
 
     
     eCheckAccountSuffix = property(__eCheckAccountSuffix.value, __eCheckAccountSuffix.set, None, None)
@@ -550,48 +550,48 @@ class advancedFraudChecksType (pyxb.binding.basis.complexTypeDefinition):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'advancedFraudChecksType')
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 133, 4)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 133, 4)
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
     # Element {http://www.litle.com/schema}threatMetrixSessionId uses Python identifier threatMetrixSessionId
-    __threatMetrixSessionId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'threatMetrixSessionId'), 'threatMetrixSessionId', '__httpwww_litle_comschema_advancedFraudChecksType_httpwww_litle_comschemathreatMetrixSessionId', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 135, 12), )
+    __threatMetrixSessionId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'threatMetrixSessionId'), 'threatMetrixSessionId', '__httpwww_litle_comschema_advancedFraudChecksType_httpwww_litle_comschemathreatMetrixSessionId', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 135, 12), )
 
     
     threatMetrixSessionId = property(__threatMetrixSessionId.value, __threatMetrixSessionId.set, None, None)
 
     
     # Element {http://www.litle.com/schema}customAttribute1 uses Python identifier customAttribute1
-    __customAttribute1 = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'customAttribute1'), 'customAttribute1', '__httpwww_litle_comschema_advancedFraudChecksType_httpwww_litle_comschemacustomAttribute1', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 136, 12), )
+    __customAttribute1 = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'customAttribute1'), 'customAttribute1', '__httpwww_litle_comschema_advancedFraudChecksType_httpwww_litle_comschemacustomAttribute1', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 136, 12), )
 
     
     customAttribute1 = property(__customAttribute1.value, __customAttribute1.set, None, None)
 
     
     # Element {http://www.litle.com/schema}customAttribute2 uses Python identifier customAttribute2
-    __customAttribute2 = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'customAttribute2'), 'customAttribute2', '__httpwww_litle_comschema_advancedFraudChecksType_httpwww_litle_comschemacustomAttribute2', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 137, 12), )
+    __customAttribute2 = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'customAttribute2'), 'customAttribute2', '__httpwww_litle_comschema_advancedFraudChecksType_httpwww_litle_comschemacustomAttribute2', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 137, 12), )
 
     
     customAttribute2 = property(__customAttribute2.value, __customAttribute2.set, None, None)
 
     
     # Element {http://www.litle.com/schema}customAttribute3 uses Python identifier customAttribute3
-    __customAttribute3 = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'customAttribute3'), 'customAttribute3', '__httpwww_litle_comschema_advancedFraudChecksType_httpwww_litle_comschemacustomAttribute3', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 138, 12), )
+    __customAttribute3 = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'customAttribute3'), 'customAttribute3', '__httpwww_litle_comschema_advancedFraudChecksType_httpwww_litle_comschemacustomAttribute3', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 138, 12), )
 
     
     customAttribute3 = property(__customAttribute3.value, __customAttribute3.set, None, None)
 
     
     # Element {http://www.litle.com/schema}customAttribute4 uses Python identifier customAttribute4
-    __customAttribute4 = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'customAttribute4'), 'customAttribute4', '__httpwww_litle_comschema_advancedFraudChecksType_httpwww_litle_comschemacustomAttribute4', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 139, 12), )
+    __customAttribute4 = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'customAttribute4'), 'customAttribute4', '__httpwww_litle_comschema_advancedFraudChecksType_httpwww_litle_comschemacustomAttribute4', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 139, 12), )
 
     
     customAttribute4 = property(__customAttribute4.value, __customAttribute4.set, None, None)
 
     
     # Element {http://www.litle.com/schema}customAttribute5 uses Python identifier customAttribute5
-    __customAttribute5 = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'customAttribute5'), 'customAttribute5', '__httpwww_litle_comschema_advancedFraudChecksType_httpwww_litle_comschemacustomAttribute5', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 140, 12), )
+    __customAttribute5 = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'customAttribute5'), 'customAttribute5', '__httpwww_litle_comschema_advancedFraudChecksType_httpwww_litle_comschemacustomAttribute5', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 140, 12), )
 
     
     customAttribute5 = property(__customAttribute5.value, __customAttribute5.set, None, None)
@@ -618,27 +618,27 @@ class advancedFraudResultsType (pyxb.binding.basis.complexTypeDefinition):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'advancedFraudResultsType')
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 145, 4)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 145, 4)
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
     # Element {http://www.litle.com/schema}deviceReviewStatus uses Python identifier deviceReviewStatus
-    __deviceReviewStatus = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'deviceReviewStatus'), 'deviceReviewStatus', '__httpwww_litle_comschema_advancedFraudResultsType_httpwww_litle_comschemadeviceReviewStatus', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 147, 12), )
+    __deviceReviewStatus = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'deviceReviewStatus'), 'deviceReviewStatus', '__httpwww_litle_comschema_advancedFraudResultsType_httpwww_litle_comschemadeviceReviewStatus', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 147, 12), )
 
     
     deviceReviewStatus = property(__deviceReviewStatus.value, __deviceReviewStatus.set, None, None)
 
     
     # Element {http://www.litle.com/schema}deviceReputationScore uses Python identifier deviceReputationScore
-    __deviceReputationScore = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'deviceReputationScore'), 'deviceReputationScore', '__httpwww_litle_comschema_advancedFraudResultsType_httpwww_litle_comschemadeviceReputationScore', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 148, 12), )
+    __deviceReputationScore = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'deviceReputationScore'), 'deviceReputationScore', '__httpwww_litle_comschema_advancedFraudResultsType_httpwww_litle_comschemadeviceReputationScore', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 148, 12), )
 
     
     deviceReputationScore = property(__deviceReputationScore.value, __deviceReputationScore.set, None, None)
 
     
     # Element {http://www.litle.com/schema}triggeredRule uses Python identifier triggeredRule
-    __triggeredRule = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'triggeredRule'), 'triggeredRule', '__httpwww_litle_comschema_advancedFraudResultsType_httpwww_litle_comschematriggeredRule', True, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 149, 12), )
+    __triggeredRule = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'triggeredRule'), 'triggeredRule', '__httpwww_litle_comschema_advancedFraudResultsType_httpwww_litle_comschematriggeredRule', True, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 149, 12), )
 
     
     triggeredRule = property(__triggeredRule.value, __triggeredRule.set, None, None)
@@ -662,7 +662,7 @@ class recurringTransactionType (pyxb.binding.basis.complexTypeDefinition):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_EMPTY
     _Abstract = False
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'recurringTransactionType')
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 163, 4)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 163, 4)
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
@@ -683,34 +683,34 @@ class recurringTransactionResponseType (pyxb.binding.basis.complexTypeDefinition
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'recurringTransactionResponseType')
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 166, 4)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 166, 4)
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
     # Element {http://www.litle.com/schema}litleTxnId uses Python identifier litleTxnId
-    __litleTxnId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'litleTxnId'), 'litleTxnId', '__httpwww_litle_comschema_recurringTransactionResponseType_httpwww_litle_comschemalitleTxnId', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 168, 12), )
+    __litleTxnId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'litleTxnId'), 'litleTxnId', '__httpwww_litle_comschema_recurringTransactionResponseType_httpwww_litle_comschemalitleTxnId', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 168, 12), )
 
     
     litleTxnId = property(__litleTxnId.value, __litleTxnId.set, None, None)
 
     
     # Element {http://www.litle.com/schema}response uses Python identifier response
-    __response = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'response'), 'response', '__httpwww_litle_comschema_recurringTransactionResponseType_httpwww_litle_comschemaresponse', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 169, 12), )
+    __response = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'response'), 'response', '__httpwww_litle_comschema_recurringTransactionResponseType_httpwww_litle_comschemaresponse', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 169, 12), )
 
     
     response = property(__response.value, __response.set, None, None)
 
     
     # Element {http://www.litle.com/schema}message uses Python identifier message
-    __message = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'message'), 'message', '__httpwww_litle_comschema_recurringTransactionResponseType_httpwww_litle_comschemamessage', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 170, 12), )
+    __message = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'message'), 'message', '__httpwww_litle_comschema_recurringTransactionResponseType_httpwww_litle_comschemamessage', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 170, 12), )
 
     
     message = property(__message.value, __message.set, None, None)
 
     
     # Element {http://www.litle.com/schema}responseTime uses Python identifier responseTime
-    __responseTime = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'responseTime'), 'responseTime', '__httpwww_litle_comschema_recurringTransactionResponseType_httpwww_litle_comschemaresponseTime', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 171, 12), )
+    __responseTime = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'responseTime'), 'responseTime', '__httpwww_litle_comschema_recurringTransactionResponseType_httpwww_litle_comschemaresponseTime', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 171, 12), )
 
     
     responseTime = property(__responseTime.value, __responseTime.set, None, None)
@@ -735,48 +735,48 @@ class recurringSubscriptionType (pyxb.binding.basis.complexTypeDefinition):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'recurringSubscriptionType')
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 296, 4)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 296, 4)
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
     # Element {http://www.litle.com/schema}planCode uses Python identifier planCode
-    __planCode = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'planCode'), 'planCode', '__httpwww_litle_comschema_recurringSubscriptionType_httpwww_litle_comschemaplanCode', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 298, 12), )
+    __planCode = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'planCode'), 'planCode', '__httpwww_litle_comschema_recurringSubscriptionType_httpwww_litle_comschemaplanCode', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 298, 12), )
 
     
     planCode = property(__planCode.value, __planCode.set, None, None)
 
     
     # Element {http://www.litle.com/schema}numberOfPayments uses Python identifier numberOfPayments
-    __numberOfPayments = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'numberOfPayments'), 'numberOfPayments', '__httpwww_litle_comschema_recurringSubscriptionType_httpwww_litle_comschemanumberOfPayments', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 299, 12), )
+    __numberOfPayments = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'numberOfPayments'), 'numberOfPayments', '__httpwww_litle_comschema_recurringSubscriptionType_httpwww_litle_comschemanumberOfPayments', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 299, 12), )
 
     
     numberOfPayments = property(__numberOfPayments.value, __numberOfPayments.set, None, None)
 
     
     # Element {http://www.litle.com/schema}startDate uses Python identifier startDate
-    __startDate = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'startDate'), 'startDate', '__httpwww_litle_comschema_recurringSubscriptionType_httpwww_litle_comschemastartDate', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 300, 12), )
+    __startDate = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'startDate'), 'startDate', '__httpwww_litle_comschema_recurringSubscriptionType_httpwww_litle_comschemastartDate', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 300, 12), )
 
     
     startDate = property(__startDate.value, __startDate.set, None, None)
 
     
     # Element {http://www.litle.com/schema}amount uses Python identifier amount
-    __amount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'amount'), 'amount', '__httpwww_litle_comschema_recurringSubscriptionType_httpwww_litle_comschemaamount', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 301, 12), )
+    __amount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'amount'), 'amount', '__httpwww_litle_comschema_recurringSubscriptionType_httpwww_litle_comschemaamount', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 301, 12), )
 
     
     amount = property(__amount.value, __amount.set, None, None)
 
     
     # Element {http://www.litle.com/schema}createDiscount uses Python identifier createDiscount
-    __createDiscount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'createDiscount'), 'createDiscount', '__httpwww_litle_comschema_recurringSubscriptionType_httpwww_litle_comschemacreateDiscount', True, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 302, 12), )
+    __createDiscount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'createDiscount'), 'createDiscount', '__httpwww_litle_comschema_recurringSubscriptionType_httpwww_litle_comschemacreateDiscount', True, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 302, 12), )
 
     
     createDiscount = property(__createDiscount.value, __createDiscount.set, None, None)
 
     
     # Element {http://www.litle.com/schema}createAddOn uses Python identifier createAddOn
-    __createAddOn = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'createAddOn'), 'createAddOn', '__httpwww_litle_comschema_recurringSubscriptionType_httpwww_litle_comschemacreateAddOn', True, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 303, 12), )
+    __createAddOn = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'createAddOn'), 'createAddOn', '__httpwww_litle_comschema_recurringSubscriptionType_httpwww_litle_comschemacreateAddOn', True, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 303, 12), )
 
     
     createAddOn = property(__createAddOn.value, __createAddOn.set, None, None)
@@ -803,27 +803,27 @@ class litleInternalRecurringRequestType (pyxb.binding.basis.complexTypeDefinitio
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'litleInternalRecurringRequestType')
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 310, 4)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 310, 4)
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
     # Element {http://www.litle.com/schema}subscriptionId uses Python identifier subscriptionId
-    __subscriptionId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'subscriptionId'), 'subscriptionId', '__httpwww_litle_comschema_litleInternalRecurringRequestType_httpwww_litle_comschemasubscriptionId', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 312, 12), )
+    __subscriptionId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'subscriptionId'), 'subscriptionId', '__httpwww_litle_comschema_litleInternalRecurringRequestType_httpwww_litle_comschemasubscriptionId', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 312, 12), )
 
     
     subscriptionId = property(__subscriptionId.value, __subscriptionId.set, None, None)
 
     
     # Element {http://www.litle.com/schema}recurringTxnId uses Python identifier recurringTxnId
-    __recurringTxnId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'recurringTxnId'), 'recurringTxnId', '__httpwww_litle_comschema_litleInternalRecurringRequestType_httpwww_litle_comschemarecurringTxnId', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 313, 12), )
+    __recurringTxnId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'recurringTxnId'), 'recurringTxnId', '__httpwww_litle_comschema_litleInternalRecurringRequestType_httpwww_litle_comschemarecurringTxnId', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 313, 12), )
 
     
     recurringTxnId = property(__recurringTxnId.value, __recurringTxnId.set, None, None)
 
     
     # Element {http://www.litle.com/schema}finalPayment uses Python identifier finalPayment
-    __finalPayment = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'finalPayment'), 'finalPayment', '__httpwww_litle_comschema_litleInternalRecurringRequestType_httpwww_litle_comschemafinalPayment', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 314, 12), )
+    __finalPayment = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'finalPayment'), 'finalPayment', '__httpwww_litle_comschema_litleInternalRecurringRequestType_httpwww_litle_comschemafinalPayment', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 314, 12), )
 
     
     finalPayment = property(__finalPayment.value, __finalPayment.set, None, None)
@@ -847,13 +847,13 @@ class recurringRequestType (pyxb.binding.basis.complexTypeDefinition):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'recurringRequestType')
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 318, 4)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 318, 4)
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
     # Element {http://www.litle.com/schema}subscription uses Python identifier subscription
-    __subscription = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'subscription'), 'subscription', '__httpwww_litle_comschema_recurringRequestType_httpwww_litle_comschemasubscription', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 320, 12), )
+    __subscription = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'subscription'), 'subscription', '__httpwww_litle_comschema_recurringRequestType_httpwww_litle_comschemasubscription', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 320, 12), )
 
     
     subscription = property(__subscription.value, __subscription.set, None, None)
@@ -875,34 +875,34 @@ class recurringResponseType (pyxb.binding.basis.complexTypeDefinition):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'recurringResponseType')
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 324, 4)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 324, 4)
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
     # Element {http://www.litle.com/schema}subscriptionId uses Python identifier subscriptionId
-    __subscriptionId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'subscriptionId'), 'subscriptionId', '__httpwww_litle_comschema_recurringResponseType_httpwww_litle_comschemasubscriptionId', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 326, 12), )
+    __subscriptionId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'subscriptionId'), 'subscriptionId', '__httpwww_litle_comschema_recurringResponseType_httpwww_litle_comschemasubscriptionId', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 326, 12), )
 
     
     subscriptionId = property(__subscriptionId.value, __subscriptionId.set, None, None)
 
     
     # Element {http://www.litle.com/schema}responseCode uses Python identifier responseCode
-    __responseCode = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'responseCode'), 'responseCode', '__httpwww_litle_comschema_recurringResponseType_httpwww_litle_comschemaresponseCode', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 327, 12), )
+    __responseCode = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'responseCode'), 'responseCode', '__httpwww_litle_comschema_recurringResponseType_httpwww_litle_comschemaresponseCode', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 327, 12), )
 
     
     responseCode = property(__responseCode.value, __responseCode.set, None, None)
 
     
     # Element {http://www.litle.com/schema}responseMessage uses Python identifier responseMessage
-    __responseMessage = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'responseMessage'), 'responseMessage', '__httpwww_litle_comschema_recurringResponseType_httpwww_litle_comschemaresponseMessage', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 328, 12), )
+    __responseMessage = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'responseMessage'), 'responseMessage', '__httpwww_litle_comschema_recurringResponseType_httpwww_litle_comschemaresponseMessage', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 328, 12), )
 
     
     responseMessage = property(__responseMessage.value, __responseMessage.set, None, None)
 
     
     # Element {http://www.litle.com/schema}recurringTxnId uses Python identifier recurringTxnId
-    __recurringTxnId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'recurringTxnId'), 'recurringTxnId', '__httpwww_litle_comschema_recurringResponseType_httpwww_litle_comschemarecurringTxnId', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 329, 12), )
+    __recurringTxnId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'recurringTxnId'), 'recurringTxnId', '__httpwww_litle_comschema_recurringResponseType_httpwww_litle_comschemarecurringTxnId', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 329, 12), )
 
     
     recurringTxnId = property(__recurringTxnId.value, __recurringTxnId.set, None, None)
@@ -927,41 +927,41 @@ class createDiscountType (pyxb.binding.basis.complexTypeDefinition):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'createDiscountType')
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 333, 4)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 333, 4)
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
     # Element {http://www.litle.com/schema}discountCode uses Python identifier discountCode
-    __discountCode = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'discountCode'), 'discountCode', '__httpwww_litle_comschema_createDiscountType_httpwww_litle_comschemadiscountCode', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 335, 12), )
+    __discountCode = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'discountCode'), 'discountCode', '__httpwww_litle_comschema_createDiscountType_httpwww_litle_comschemadiscountCode', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 335, 12), )
 
     
     discountCode = property(__discountCode.value, __discountCode.set, None, None)
 
     
     # Element {http://www.litle.com/schema}name uses Python identifier name
-    __name = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'name'), 'name', '__httpwww_litle_comschema_createDiscountType_httpwww_litle_comschemaname', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 336, 12), )
+    __name = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'name'), 'name', '__httpwww_litle_comschema_createDiscountType_httpwww_litle_comschemaname', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 336, 12), )
 
     
     name = property(__name.value, __name.set, None, None)
 
     
     # Element {http://www.litle.com/schema}amount uses Python identifier amount
-    __amount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'amount'), 'amount', '__httpwww_litle_comschema_createDiscountType_httpwww_litle_comschemaamount', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 337, 12), )
+    __amount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'amount'), 'amount', '__httpwww_litle_comschema_createDiscountType_httpwww_litle_comschemaamount', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 337, 12), )
 
     
     amount = property(__amount.value, __amount.set, None, None)
 
     
     # Element {http://www.litle.com/schema}startDate uses Python identifier startDate
-    __startDate = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'startDate'), 'startDate', '__httpwww_litle_comschema_createDiscountType_httpwww_litle_comschemastartDate', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 338, 12), )
+    __startDate = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'startDate'), 'startDate', '__httpwww_litle_comschema_createDiscountType_httpwww_litle_comschemastartDate', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 338, 12), )
 
     
     startDate = property(__startDate.value, __startDate.set, None, None)
 
     
     # Element {http://www.litle.com/schema}endDate uses Python identifier endDate
-    __endDate = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'endDate'), 'endDate', '__httpwww_litle_comschema_createDiscountType_httpwww_litle_comschemaendDate', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 339, 12), )
+    __endDate = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'endDate'), 'endDate', '__httpwww_litle_comschema_createDiscountType_httpwww_litle_comschemaendDate', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 339, 12), )
 
     
     endDate = property(__endDate.value, __endDate.set, None, None)
@@ -987,41 +987,41 @@ class updateDiscountType (pyxb.binding.basis.complexTypeDefinition):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'updateDiscountType')
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 343, 4)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 343, 4)
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
     # Element {http://www.litle.com/schema}discountCode uses Python identifier discountCode
-    __discountCode = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'discountCode'), 'discountCode', '__httpwww_litle_comschema_updateDiscountType_httpwww_litle_comschemadiscountCode', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 345, 12), )
+    __discountCode = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'discountCode'), 'discountCode', '__httpwww_litle_comschema_updateDiscountType_httpwww_litle_comschemadiscountCode', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 345, 12), )
 
     
     discountCode = property(__discountCode.value, __discountCode.set, None, None)
 
     
     # Element {http://www.litle.com/schema}name uses Python identifier name
-    __name = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'name'), 'name', '__httpwww_litle_comschema_updateDiscountType_httpwww_litle_comschemaname', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 346, 12), )
+    __name = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'name'), 'name', '__httpwww_litle_comschema_updateDiscountType_httpwww_litle_comschemaname', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 346, 12), )
 
     
     name = property(__name.value, __name.set, None, None)
 
     
     # Element {http://www.litle.com/schema}amount uses Python identifier amount
-    __amount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'amount'), 'amount', '__httpwww_litle_comschema_updateDiscountType_httpwww_litle_comschemaamount', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 347, 12), )
+    __amount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'amount'), 'amount', '__httpwww_litle_comschema_updateDiscountType_httpwww_litle_comschemaamount', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 347, 12), )
 
     
     amount = property(__amount.value, __amount.set, None, None)
 
     
     # Element {http://www.litle.com/schema}startDate uses Python identifier startDate
-    __startDate = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'startDate'), 'startDate', '__httpwww_litle_comschema_updateDiscountType_httpwww_litle_comschemastartDate', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 348, 12), )
+    __startDate = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'startDate'), 'startDate', '__httpwww_litle_comschema_updateDiscountType_httpwww_litle_comschemastartDate', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 348, 12), )
 
     
     startDate = property(__startDate.value, __startDate.set, None, None)
 
     
     # Element {http://www.litle.com/schema}endDate uses Python identifier endDate
-    __endDate = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'endDate'), 'endDate', '__httpwww_litle_comschema_updateDiscountType_httpwww_litle_comschemaendDate', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 349, 12), )
+    __endDate = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'endDate'), 'endDate', '__httpwww_litle_comschema_updateDiscountType_httpwww_litle_comschemaendDate', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 349, 12), )
 
     
     endDate = property(__endDate.value, __endDate.set, None, None)
@@ -1047,13 +1047,13 @@ class deleteDiscountType (pyxb.binding.basis.complexTypeDefinition):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'deleteDiscountType')
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 353, 4)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 353, 4)
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
     # Element {http://www.litle.com/schema}discountCode uses Python identifier discountCode
-    __discountCode = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'discountCode'), 'discountCode', '__httpwww_litle_comschema_deleteDiscountType_httpwww_litle_comschemadiscountCode', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 355, 12), )
+    __discountCode = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'discountCode'), 'discountCode', '__httpwww_litle_comschema_deleteDiscountType_httpwww_litle_comschemadiscountCode', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 355, 12), )
 
     
     discountCode = property(__discountCode.value, __discountCode.set, None, None)
@@ -1075,41 +1075,41 @@ class createAddOnType (pyxb.binding.basis.complexTypeDefinition):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'createAddOnType')
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 359, 4)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 359, 4)
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
     # Element {http://www.litle.com/schema}addOnCode uses Python identifier addOnCode
-    __addOnCode = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'addOnCode'), 'addOnCode', '__httpwww_litle_comschema_createAddOnType_httpwww_litle_comschemaaddOnCode', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 361, 12), )
+    __addOnCode = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'addOnCode'), 'addOnCode', '__httpwww_litle_comschema_createAddOnType_httpwww_litle_comschemaaddOnCode', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 361, 12), )
 
     
     addOnCode = property(__addOnCode.value, __addOnCode.set, None, None)
 
     
     # Element {http://www.litle.com/schema}name uses Python identifier name
-    __name = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'name'), 'name', '__httpwww_litle_comschema_createAddOnType_httpwww_litle_comschemaname', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 362, 12), )
+    __name = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'name'), 'name', '__httpwww_litle_comschema_createAddOnType_httpwww_litle_comschemaname', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 362, 12), )
 
     
     name = property(__name.value, __name.set, None, None)
 
     
     # Element {http://www.litle.com/schema}amount uses Python identifier amount
-    __amount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'amount'), 'amount', '__httpwww_litle_comschema_createAddOnType_httpwww_litle_comschemaamount', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 363, 12), )
+    __amount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'amount'), 'amount', '__httpwww_litle_comschema_createAddOnType_httpwww_litle_comschemaamount', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 363, 12), )
 
     
     amount = property(__amount.value, __amount.set, None, None)
 
     
     # Element {http://www.litle.com/schema}startDate uses Python identifier startDate
-    __startDate = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'startDate'), 'startDate', '__httpwww_litle_comschema_createAddOnType_httpwww_litle_comschemastartDate', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 364, 12), )
+    __startDate = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'startDate'), 'startDate', '__httpwww_litle_comschema_createAddOnType_httpwww_litle_comschemastartDate', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 364, 12), )
 
     
     startDate = property(__startDate.value, __startDate.set, None, None)
 
     
     # Element {http://www.litle.com/schema}endDate uses Python identifier endDate
-    __endDate = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'endDate'), 'endDate', '__httpwww_litle_comschema_createAddOnType_httpwww_litle_comschemaendDate', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 365, 12), )
+    __endDate = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'endDate'), 'endDate', '__httpwww_litle_comschema_createAddOnType_httpwww_litle_comschemaendDate', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 365, 12), )
 
     
     endDate = property(__endDate.value, __endDate.set, None, None)
@@ -1135,41 +1135,41 @@ class updateAddOnType (pyxb.binding.basis.complexTypeDefinition):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'updateAddOnType')
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 369, 4)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 369, 4)
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
     # Element {http://www.litle.com/schema}addOnCode uses Python identifier addOnCode
-    __addOnCode = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'addOnCode'), 'addOnCode', '__httpwww_litle_comschema_updateAddOnType_httpwww_litle_comschemaaddOnCode', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 371, 12), )
+    __addOnCode = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'addOnCode'), 'addOnCode', '__httpwww_litle_comschema_updateAddOnType_httpwww_litle_comschemaaddOnCode', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 371, 12), )
 
     
     addOnCode = property(__addOnCode.value, __addOnCode.set, None, None)
 
     
     # Element {http://www.litle.com/schema}name uses Python identifier name
-    __name = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'name'), 'name', '__httpwww_litle_comschema_updateAddOnType_httpwww_litle_comschemaname', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 372, 12), )
+    __name = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'name'), 'name', '__httpwww_litle_comschema_updateAddOnType_httpwww_litle_comschemaname', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 372, 12), )
 
     
     name = property(__name.value, __name.set, None, None)
 
     
     # Element {http://www.litle.com/schema}amount uses Python identifier amount
-    __amount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'amount'), 'amount', '__httpwww_litle_comschema_updateAddOnType_httpwww_litle_comschemaamount', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 373, 12), )
+    __amount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'amount'), 'amount', '__httpwww_litle_comschema_updateAddOnType_httpwww_litle_comschemaamount', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 373, 12), )
 
     
     amount = property(__amount.value, __amount.set, None, None)
 
     
     # Element {http://www.litle.com/schema}startDate uses Python identifier startDate
-    __startDate = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'startDate'), 'startDate', '__httpwww_litle_comschema_updateAddOnType_httpwww_litle_comschemastartDate', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 374, 12), )
+    __startDate = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'startDate'), 'startDate', '__httpwww_litle_comschema_updateAddOnType_httpwww_litle_comschemastartDate', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 374, 12), )
 
     
     startDate = property(__startDate.value, __startDate.set, None, None)
 
     
     # Element {http://www.litle.com/schema}endDate uses Python identifier endDate
-    __endDate = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'endDate'), 'endDate', '__httpwww_litle_comschema_updateAddOnType_httpwww_litle_comschemaendDate', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 375, 12), )
+    __endDate = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'endDate'), 'endDate', '__httpwww_litle_comschema_updateAddOnType_httpwww_litle_comschemaendDate', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 375, 12), )
 
     
     endDate = property(__endDate.value, __endDate.set, None, None)
@@ -1195,13 +1195,13 @@ class deleteAddOnType (pyxb.binding.basis.complexTypeDefinition):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'deleteAddOnType')
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 379, 4)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 379, 4)
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
     # Element {http://www.litle.com/schema}addOnCode uses Python identifier addOnCode
-    __addOnCode = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'addOnCode'), 'addOnCode', '__httpwww_litle_comschema_deleteAddOnType_httpwww_litle_comschemaaddOnCode', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 381, 12), )
+    __addOnCode = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'addOnCode'), 'addOnCode', '__httpwww_litle_comschema_deleteAddOnType_httpwww_litle_comschemaaddOnCode', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 381, 12), )
 
     
     addOnCode = property(__addOnCode.value, __addOnCode.set, None, None)
@@ -1223,23 +1223,23 @@ class transactionType (pyxb.binding.basis.complexTypeDefinition):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_EMPTY
     _Abstract = False
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'transactionType')
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 394, 4)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 394, 4)
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
     # Attribute id uses Python identifier id
     __id = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'id'), 'id', '__httpwww_litle_comschema_transactionType_id', pyxb.binding.datatypes.string)
-    __id._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 395, 8)
-    __id._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 395, 8)
+    __id._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 395, 8)
+    __id._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 395, 8)
     
     id = property(__id.value, __id.set, None, None)
 
     
     # Attribute customerId uses Python identifier customerId
     __customerId = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'customerId'), 'customerId', '__httpwww_litle_comschema_transactionType_customerId', pyxb.binding.datatypes.string)
-    __customerId._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 396, 8)
-    __customerId._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 396, 8)
+    __customerId._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 396, 8)
+    __customerId._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 396, 8)
     
     customerId = property(__customerId.value, __customerId.set, None, None)
 
@@ -1261,27 +1261,27 @@ class merchantDataType (pyxb.binding.basis.complexTypeDefinition):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'merchantDataType')
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 407, 4)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 407, 4)
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
     # Element {http://www.litle.com/schema}campaign uses Python identifier campaign
-    __campaign = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'campaign'), 'campaign', '__httpwww_litle_comschema_merchantDataType_httpwww_litle_comschemacampaign', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 409, 12), )
+    __campaign = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'campaign'), 'campaign', '__httpwww_litle_comschema_merchantDataType_httpwww_litle_comschemacampaign', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 409, 12), )
 
     
     campaign = property(__campaign.value, __campaign.set, None, None)
 
     
     # Element {http://www.litle.com/schema}affiliate uses Python identifier affiliate
-    __affiliate = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'affiliate'), 'affiliate', '__httpwww_litle_comschema_merchantDataType_httpwww_litle_comschemaaffiliate', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 410, 12), )
+    __affiliate = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'affiliate'), 'affiliate', '__httpwww_litle_comschema_merchantDataType_httpwww_litle_comschemaaffiliate', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 410, 12), )
 
     
     affiliate = property(__affiliate.value, __affiliate.set, None, None)
 
     
     # Element {http://www.litle.com/schema}merchantGroupingId uses Python identifier merchantGroupingId
-    __merchantGroupingId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'merchantGroupingId'), 'merchantGroupingId', '__httpwww_litle_comschema_merchantDataType_httpwww_litle_comschemamerchantGroupingId', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 411, 12), )
+    __merchantGroupingId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'merchantGroupingId'), 'merchantGroupingId', '__httpwww_litle_comschema_merchantDataType_httpwww_litle_comschemamerchantGroupingId', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 411, 12), )
 
     
     merchantGroupingId = property(__merchantGroupingId.value, __merchantGroupingId.set, None, None)
@@ -1305,27 +1305,27 @@ class driversLicenseInfo (pyxb.binding.basis.complexTypeDefinition):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'driversLicenseInfo')
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 432, 4)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 432, 4)
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
     # Element {http://www.litle.com/schema}licenseNumber uses Python identifier licenseNumber
-    __licenseNumber = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'licenseNumber'), 'licenseNumber', '__httpwww_litle_comschema_driversLicenseInfo_httpwww_litle_comschemalicenseNumber', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 434, 12), )
+    __licenseNumber = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'licenseNumber'), 'licenseNumber', '__httpwww_litle_comschema_driversLicenseInfo_httpwww_litle_comschemalicenseNumber', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 434, 12), )
 
     
     licenseNumber = property(__licenseNumber.value, __licenseNumber.set, None, None)
 
     
     # Element {http://www.litle.com/schema}state uses Python identifier state
-    __state = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'state'), 'state', '__httpwww_litle_comschema_driversLicenseInfo_httpwww_litle_comschemastate', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 435, 12), )
+    __state = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'state'), 'state', '__httpwww_litle_comschema_driversLicenseInfo_httpwww_litle_comschemastate', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 435, 12), )
 
     
     state = property(__state.value, __state.set, None, None)
 
     
     # Element {http://www.litle.com/schema}dateOfBirth uses Python identifier dateOfBirth
-    __dateOfBirth = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'dateOfBirth'), 'dateOfBirth', '__httpwww_litle_comschema_driversLicenseInfo_httpwww_litle_comschemadateOfBirth', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 436, 12), )
+    __dateOfBirth = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'dateOfBirth'), 'dateOfBirth', '__httpwww_litle_comschema_driversLicenseInfo_httpwww_litle_comschemadateOfBirth', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 436, 12), )
 
     
     dateOfBirth = property(__dateOfBirth.value, __dateOfBirth.set, None, None)
@@ -1349,97 +1349,97 @@ class CTD_ANON_ (pyxb.binding.basis.complexTypeDefinition):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 441, 8)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 441, 8)
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
     # Element {http://www.litle.com/schema}ssn uses Python identifier ssn
-    __ssn = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'ssn'), 'ssn', '__httpwww_litle_comschema_CTD_ANON__httpwww_litle_comschemassn', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 443, 16), )
+    __ssn = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'ssn'), 'ssn', '__httpwww_litle_comschema_CTD_ANON__httpwww_litle_comschemassn', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 443, 16), )
 
     
     ssn = property(__ssn.value, __ssn.set, None, None)
 
     
     # Element {http://www.litle.com/schema}dob uses Python identifier dob
-    __dob = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'dob'), 'dob', '__httpwww_litle_comschema_CTD_ANON__httpwww_litle_comschemadob', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 444, 16), )
+    __dob = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'dob'), 'dob', '__httpwww_litle_comschema_CTD_ANON__httpwww_litle_comschemadob', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 444, 16), )
 
     
     dob = property(__dob.value, __dob.set, None, None)
 
     
     # Element {http://www.litle.com/schema}customerRegistrationDate uses Python identifier customerRegistrationDate
-    __customerRegistrationDate = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'customerRegistrationDate'), 'customerRegistrationDate', '__httpwww_litle_comschema_CTD_ANON__httpwww_litle_comschemacustomerRegistrationDate', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 445, 16), )
+    __customerRegistrationDate = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'customerRegistrationDate'), 'customerRegistrationDate', '__httpwww_litle_comschema_CTD_ANON__httpwww_litle_comschemacustomerRegistrationDate', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 445, 16), )
 
     
     customerRegistrationDate = property(__customerRegistrationDate.value, __customerRegistrationDate.set, None, None)
 
     
     # Element {http://www.litle.com/schema}customerType uses Python identifier customerType
-    __customerType = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'customerType'), 'customerType', '__httpwww_litle_comschema_CTD_ANON__httpwww_litle_comschemacustomerType', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 446, 16), )
+    __customerType = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'customerType'), 'customerType', '__httpwww_litle_comschema_CTD_ANON__httpwww_litle_comschemacustomerType', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 446, 16), )
 
     
     customerType = property(__customerType.value, __customerType.set, None, None)
 
     
     # Element {http://www.litle.com/schema}incomeAmount uses Python identifier incomeAmount
-    __incomeAmount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'incomeAmount'), 'incomeAmount', '__httpwww_litle_comschema_CTD_ANON__httpwww_litle_comschemaincomeAmount', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 447, 16), )
+    __incomeAmount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'incomeAmount'), 'incomeAmount', '__httpwww_litle_comschema_CTD_ANON__httpwww_litle_comschemaincomeAmount', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 447, 16), )
 
     
     incomeAmount = property(__incomeAmount.value, __incomeAmount.set, None, None)
 
     
     # Element {http://www.litle.com/schema}incomeCurrency uses Python identifier incomeCurrency
-    __incomeCurrency = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'incomeCurrency'), 'incomeCurrency', '__httpwww_litle_comschema_CTD_ANON__httpwww_litle_comschemaincomeCurrency', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 448, 16), )
+    __incomeCurrency = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'incomeCurrency'), 'incomeCurrency', '__httpwww_litle_comschema_CTD_ANON__httpwww_litle_comschemaincomeCurrency', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 448, 16), )
 
     
     incomeCurrency = property(__incomeCurrency.value, __incomeCurrency.set, None, None)
 
     
     # Element {http://www.litle.com/schema}customerCheckingAccount uses Python identifier customerCheckingAccount
-    __customerCheckingAccount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'customerCheckingAccount'), 'customerCheckingAccount', '__httpwww_litle_comschema_CTD_ANON__httpwww_litle_comschemacustomerCheckingAccount', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 449, 16), )
+    __customerCheckingAccount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'customerCheckingAccount'), 'customerCheckingAccount', '__httpwww_litle_comschema_CTD_ANON__httpwww_litle_comschemacustomerCheckingAccount', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 449, 16), )
 
     
     customerCheckingAccount = property(__customerCheckingAccount.value, __customerCheckingAccount.set, None, None)
 
     
     # Element {http://www.litle.com/schema}customerSavingAccount uses Python identifier customerSavingAccount
-    __customerSavingAccount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'customerSavingAccount'), 'customerSavingAccount', '__httpwww_litle_comschema_CTD_ANON__httpwww_litle_comschemacustomerSavingAccount', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 450, 16), )
+    __customerSavingAccount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'customerSavingAccount'), 'customerSavingAccount', '__httpwww_litle_comschema_CTD_ANON__httpwww_litle_comschemacustomerSavingAccount', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 450, 16), )
 
     
     customerSavingAccount = property(__customerSavingAccount.value, __customerSavingAccount.set, None, None)
 
     
     # Element {http://www.litle.com/schema}employerName uses Python identifier employerName
-    __employerName = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'employerName'), 'employerName', '__httpwww_litle_comschema_CTD_ANON__httpwww_litle_comschemaemployerName', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 451, 16), )
+    __employerName = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'employerName'), 'employerName', '__httpwww_litle_comschema_CTD_ANON__httpwww_litle_comschemaemployerName', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 451, 16), )
 
     
     employerName = property(__employerName.value, __employerName.set, None, None)
 
     
     # Element {http://www.litle.com/schema}customerWorkTelephone uses Python identifier customerWorkTelephone
-    __customerWorkTelephone = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'customerWorkTelephone'), 'customerWorkTelephone', '__httpwww_litle_comschema_CTD_ANON__httpwww_litle_comschemacustomerWorkTelephone', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 452, 16), )
+    __customerWorkTelephone = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'customerWorkTelephone'), 'customerWorkTelephone', '__httpwww_litle_comschema_CTD_ANON__httpwww_litle_comschemacustomerWorkTelephone', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 452, 16), )
 
     
     customerWorkTelephone = property(__customerWorkTelephone.value, __customerWorkTelephone.set, None, None)
 
     
     # Element {http://www.litle.com/schema}residenceStatus uses Python identifier residenceStatus
-    __residenceStatus = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'residenceStatus'), 'residenceStatus', '__httpwww_litle_comschema_CTD_ANON__httpwww_litle_comschemaresidenceStatus', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 453, 16), )
+    __residenceStatus = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'residenceStatus'), 'residenceStatus', '__httpwww_litle_comschema_CTD_ANON__httpwww_litle_comschemaresidenceStatus', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 453, 16), )
 
     
     residenceStatus = property(__residenceStatus.value, __residenceStatus.set, None, None)
 
     
     # Element {http://www.litle.com/schema}yearsAtResidence uses Python identifier yearsAtResidence
-    __yearsAtResidence = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'yearsAtResidence'), 'yearsAtResidence', '__httpwww_litle_comschema_CTD_ANON__httpwww_litle_comschemayearsAtResidence', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 454, 16), )
+    __yearsAtResidence = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'yearsAtResidence'), 'yearsAtResidence', '__httpwww_litle_comschema_CTD_ANON__httpwww_litle_comschemayearsAtResidence', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 454, 16), )
 
     
     yearsAtResidence = property(__yearsAtResidence.value, __yearsAtResidence.set, None, None)
 
     
     # Element {http://www.litle.com/schema}yearsAtEmployer uses Python identifier yearsAtEmployer
-    __yearsAtEmployer = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'yearsAtEmployer'), 'yearsAtEmployer', '__httpwww_litle_comschema_CTD_ANON__httpwww_litle_comschemayearsAtEmployer', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 455, 16), )
+    __yearsAtEmployer = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'yearsAtEmployer'), 'yearsAtEmployer', '__httpwww_litle_comschema_CTD_ANON__httpwww_litle_comschemayearsAtEmployer', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 455, 16), )
 
     
     yearsAtEmployer = property(__yearsAtEmployer.value, __yearsAtEmployer.set, None, None)
@@ -1472,111 +1472,111 @@ class CTD_ANON_2 (pyxb.binding.basis.complexTypeDefinition):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 463, 8)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 463, 8)
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
     # Element {http://www.litle.com/schema}bmlProductType uses Python identifier bmlProductType
-    __bmlProductType = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'bmlProductType'), 'bmlProductType', '__httpwww_litle_comschema_CTD_ANON_2_httpwww_litle_comschemabmlProductType', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 460, 4), )
+    __bmlProductType = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'bmlProductType'), 'bmlProductType', '__httpwww_litle_comschema_CTD_ANON_2_httpwww_litle_comschemabmlProductType', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 460, 4), )
 
     
     bmlProductType = property(__bmlProductType.value, __bmlProductType.set, None, None)
 
     
     # Element {http://www.litle.com/schema}bmlMerchantId uses Python identifier bmlMerchantId
-    __bmlMerchantId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'bmlMerchantId'), 'bmlMerchantId', '__httpwww_litle_comschema_CTD_ANON_2_httpwww_litle_comschemabmlMerchantId', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 465, 16), )
+    __bmlMerchantId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'bmlMerchantId'), 'bmlMerchantId', '__httpwww_litle_comschema_CTD_ANON_2_httpwww_litle_comschemabmlMerchantId', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 465, 16), )
 
     
     bmlMerchantId = property(__bmlMerchantId.value, __bmlMerchantId.set, None, None)
 
     
     # Element {http://www.litle.com/schema}termsAndConditions uses Python identifier termsAndConditions
-    __termsAndConditions = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'termsAndConditions'), 'termsAndConditions', '__httpwww_litle_comschema_CTD_ANON_2_httpwww_litle_comschematermsAndConditions', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 468, 16), )
+    __termsAndConditions = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'termsAndConditions'), 'termsAndConditions', '__httpwww_litle_comschema_CTD_ANON_2_httpwww_litle_comschematermsAndConditions', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 468, 16), )
 
     
     termsAndConditions = property(__termsAndConditions.value, __termsAndConditions.set, None, None)
 
     
     # Element {http://www.litle.com/schema}preapprovalNumber uses Python identifier preapprovalNumber
-    __preapprovalNumber = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'preapprovalNumber'), 'preapprovalNumber', '__httpwww_litle_comschema_CTD_ANON_2_httpwww_litle_comschemapreapprovalNumber', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 469, 16), )
+    __preapprovalNumber = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'preapprovalNumber'), 'preapprovalNumber', '__httpwww_litle_comschema_CTD_ANON_2_httpwww_litle_comschemapreapprovalNumber', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 469, 16), )
 
     
     preapprovalNumber = property(__preapprovalNumber.value, __preapprovalNumber.set, None, None)
 
     
     # Element {http://www.litle.com/schema}merchantPromotionalCode uses Python identifier merchantPromotionalCode
-    __merchantPromotionalCode = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'merchantPromotionalCode'), 'merchantPromotionalCode', '__httpwww_litle_comschema_CTD_ANON_2_httpwww_litle_comschemamerchantPromotionalCode', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 470, 16), )
+    __merchantPromotionalCode = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'merchantPromotionalCode'), 'merchantPromotionalCode', '__httpwww_litle_comschema_CTD_ANON_2_httpwww_litle_comschemamerchantPromotionalCode', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 470, 16), )
 
     
     merchantPromotionalCode = property(__merchantPromotionalCode.value, __merchantPromotionalCode.set, None, None)
 
     
     # Element {http://www.litle.com/schema}customerPasswordChanged uses Python identifier customerPasswordChanged
-    __customerPasswordChanged = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'customerPasswordChanged'), 'customerPasswordChanged', '__httpwww_litle_comschema_CTD_ANON_2_httpwww_litle_comschemacustomerPasswordChanged', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 472, 16), )
+    __customerPasswordChanged = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'customerPasswordChanged'), 'customerPasswordChanged', '__httpwww_litle_comschema_CTD_ANON_2_httpwww_litle_comschemacustomerPasswordChanged', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 472, 16), )
 
     
     customerPasswordChanged = property(__customerPasswordChanged.value, __customerPasswordChanged.set, None, None)
 
     
     # Element {http://www.litle.com/schema}customerBillingAddressChanged uses Python identifier customerBillingAddressChanged
-    __customerBillingAddressChanged = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'customerBillingAddressChanged'), 'customerBillingAddressChanged', '__httpwww_litle_comschema_CTD_ANON_2_httpwww_litle_comschemacustomerBillingAddressChanged', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 473, 16), )
+    __customerBillingAddressChanged = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'customerBillingAddressChanged'), 'customerBillingAddressChanged', '__httpwww_litle_comschema_CTD_ANON_2_httpwww_litle_comschemacustomerBillingAddressChanged', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 473, 16), )
 
     
     customerBillingAddressChanged = property(__customerBillingAddressChanged.value, __customerBillingAddressChanged.set, None, None)
 
     
     # Element {http://www.litle.com/schema}customerEmailChanged uses Python identifier customerEmailChanged
-    __customerEmailChanged = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'customerEmailChanged'), 'customerEmailChanged', '__httpwww_litle_comschema_CTD_ANON_2_httpwww_litle_comschemacustomerEmailChanged', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 474, 16), )
+    __customerEmailChanged = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'customerEmailChanged'), 'customerEmailChanged', '__httpwww_litle_comschema_CTD_ANON_2_httpwww_litle_comschemacustomerEmailChanged', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 474, 16), )
 
     
     customerEmailChanged = property(__customerEmailChanged.value, __customerEmailChanged.set, None, None)
 
     
     # Element {http://www.litle.com/schema}customerPhoneChanged uses Python identifier customerPhoneChanged
-    __customerPhoneChanged = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'customerPhoneChanged'), 'customerPhoneChanged', '__httpwww_litle_comschema_CTD_ANON_2_httpwww_litle_comschemacustomerPhoneChanged', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 475, 16), )
+    __customerPhoneChanged = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'customerPhoneChanged'), 'customerPhoneChanged', '__httpwww_litle_comschema_CTD_ANON_2_httpwww_litle_comschemacustomerPhoneChanged', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 475, 16), )
 
     
     customerPhoneChanged = property(__customerPhoneChanged.value, __customerPhoneChanged.set, None, None)
 
     
     # Element {http://www.litle.com/schema}secretQuestionCode uses Python identifier secretQuestionCode
-    __secretQuestionCode = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'secretQuestionCode'), 'secretQuestionCode', '__httpwww_litle_comschema_CTD_ANON_2_httpwww_litle_comschemasecretQuestionCode', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 477, 16), )
+    __secretQuestionCode = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'secretQuestionCode'), 'secretQuestionCode', '__httpwww_litle_comschema_CTD_ANON_2_httpwww_litle_comschemasecretQuestionCode', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 477, 16), )
 
     
     secretQuestionCode = property(__secretQuestionCode.value, __secretQuestionCode.set, None, None)
 
     
     # Element {http://www.litle.com/schema}secretQuestionAnswer uses Python identifier secretQuestionAnswer
-    __secretQuestionAnswer = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'secretQuestionAnswer'), 'secretQuestionAnswer', '__httpwww_litle_comschema_CTD_ANON_2_httpwww_litle_comschemasecretQuestionAnswer', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 478, 16), )
+    __secretQuestionAnswer = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'secretQuestionAnswer'), 'secretQuestionAnswer', '__httpwww_litle_comschema_CTD_ANON_2_httpwww_litle_comschemasecretQuestionAnswer', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 478, 16), )
 
     
     secretQuestionAnswer = property(__secretQuestionAnswer.value, __secretQuestionAnswer.set, None, None)
 
     
     # Element {http://www.litle.com/schema}virtualAuthenticationKeyPresenceIndicator uses Python identifier virtualAuthenticationKeyPresenceIndicator
-    __virtualAuthenticationKeyPresenceIndicator = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'virtualAuthenticationKeyPresenceIndicator'), 'virtualAuthenticationKeyPresenceIndicator', '__httpwww_litle_comschema_CTD_ANON_2_httpwww_litle_comschemavirtualAuthenticationKeyPresenceIndicator', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 479, 16), )
+    __virtualAuthenticationKeyPresenceIndicator = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'virtualAuthenticationKeyPresenceIndicator'), 'virtualAuthenticationKeyPresenceIndicator', '__httpwww_litle_comschema_CTD_ANON_2_httpwww_litle_comschemavirtualAuthenticationKeyPresenceIndicator', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 479, 16), )
 
     
     virtualAuthenticationKeyPresenceIndicator = property(__virtualAuthenticationKeyPresenceIndicator.value, __virtualAuthenticationKeyPresenceIndicator.set, None, None)
 
     
     # Element {http://www.litle.com/schema}virtualAuthenticationKeyData uses Python identifier virtualAuthenticationKeyData
-    __virtualAuthenticationKeyData = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'virtualAuthenticationKeyData'), 'virtualAuthenticationKeyData', '__httpwww_litle_comschema_CTD_ANON_2_httpwww_litle_comschemavirtualAuthenticationKeyData', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 481, 16), )
+    __virtualAuthenticationKeyData = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'virtualAuthenticationKeyData'), 'virtualAuthenticationKeyData', '__httpwww_litle_comschema_CTD_ANON_2_httpwww_litle_comschemavirtualAuthenticationKeyData', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 481, 16), )
 
     
     virtualAuthenticationKeyData = property(__virtualAuthenticationKeyData.value, __virtualAuthenticationKeyData.set, None, None)
 
     
     # Element {http://www.litle.com/schema}itemCategoryCode uses Python identifier itemCategoryCode
-    __itemCategoryCode = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'itemCategoryCode'), 'itemCategoryCode', '__httpwww_litle_comschema_CTD_ANON_2_httpwww_litle_comschemaitemCategoryCode', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 483, 16), )
+    __itemCategoryCode = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'itemCategoryCode'), 'itemCategoryCode', '__httpwww_litle_comschema_CTD_ANON_2_httpwww_litle_comschemaitemCategoryCode', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 483, 16), )
 
     
     itemCategoryCode = property(__itemCategoryCode.value, __itemCategoryCode.set, None, None)
 
     
     # Element {http://www.litle.com/schema}authorizationSourcePlatform uses Python identifier authorizationSourcePlatform
-    __authorizationSourcePlatform = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'authorizationSourcePlatform'), 'authorizationSourcePlatform', '__httpwww_litle_comschema_CTD_ANON_2_httpwww_litle_comschemaauthorizationSourcePlatform', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 485, 16), )
+    __authorizationSourcePlatform = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'authorizationSourcePlatform'), 'authorizationSourcePlatform', '__httpwww_litle_comschema_CTD_ANON_2_httpwww_litle_comschemaauthorizationSourcePlatform', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 485, 16), )
 
     
     authorizationSourcePlatform = property(__authorizationSourcePlatform.value, __authorizationSourcePlatform.set, None, None)
@@ -1611,62 +1611,62 @@ class CTD_ANON_3 (pyxb.binding.basis.complexTypeDefinition):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 491, 8)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 491, 8)
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
     # Element {http://www.litle.com/schema}bmlMerchantId uses Python identifier bmlMerchantId
-    __bmlMerchantId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'bmlMerchantId'), 'bmlMerchantId', '__httpwww_litle_comschema_CTD_ANON_3_httpwww_litle_comschemabmlMerchantId', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 493, 16), )
+    __bmlMerchantId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'bmlMerchantId'), 'bmlMerchantId', '__httpwww_litle_comschema_CTD_ANON_3_httpwww_litle_comschemabmlMerchantId', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 493, 16), )
 
     
     bmlMerchantId = property(__bmlMerchantId.value, __bmlMerchantId.set, None, None)
 
     
     # Element {http://www.litle.com/schema}promotionalOfferCode uses Python identifier promotionalOfferCode
-    __promotionalOfferCode = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'promotionalOfferCode'), 'promotionalOfferCode', '__httpwww_litle_comschema_CTD_ANON_3_httpwww_litle_comschemapromotionalOfferCode', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 495, 16), )
+    __promotionalOfferCode = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'promotionalOfferCode'), 'promotionalOfferCode', '__httpwww_litle_comschema_CTD_ANON_3_httpwww_litle_comschemapromotionalOfferCode', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 495, 16), )
 
     
     promotionalOfferCode = property(__promotionalOfferCode.value, __promotionalOfferCode.set, None, None)
 
     
     # Element {http://www.litle.com/schema}approvedTermsCode uses Python identifier approvedTermsCode
-    __approvedTermsCode = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'approvedTermsCode'), 'approvedTermsCode', '__httpwww_litle_comschema_CTD_ANON_3_httpwww_litle_comschemaapprovedTermsCode', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 497, 16), )
+    __approvedTermsCode = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'approvedTermsCode'), 'approvedTermsCode', '__httpwww_litle_comschema_CTD_ANON_3_httpwww_litle_comschemaapprovedTermsCode', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 497, 16), )
 
     
     approvedTermsCode = property(__approvedTermsCode.value, __approvedTermsCode.set, None, None)
 
     
     # Element {http://www.litle.com/schema}creditLine uses Python identifier creditLine
-    __creditLine = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'creditLine'), 'creditLine', '__httpwww_litle_comschema_CTD_ANON_3_httpwww_litle_comschemacreditLine', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 498, 16), )
+    __creditLine = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'creditLine'), 'creditLine', '__httpwww_litle_comschema_CTD_ANON_3_httpwww_litle_comschemacreditLine', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 498, 16), )
 
     
     creditLine = property(__creditLine.value, __creditLine.set, None, None)
 
     
     # Element {http://www.litle.com/schema}addressIndicator uses Python identifier addressIndicator
-    __addressIndicator = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'addressIndicator'), 'addressIndicator', '__httpwww_litle_comschema_CTD_ANON_3_httpwww_litle_comschemaaddressIndicator', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 500, 16), )
+    __addressIndicator = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'addressIndicator'), 'addressIndicator', '__httpwww_litle_comschema_CTD_ANON_3_httpwww_litle_comschemaaddressIndicator', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 500, 16), )
 
     
     addressIndicator = property(__addressIndicator.value, __addressIndicator.set, None, None)
 
     
     # Element {http://www.litle.com/schema}loanToValueEstimator uses Python identifier loanToValueEstimator
-    __loanToValueEstimator = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'loanToValueEstimator'), 'loanToValueEstimator', '__httpwww_litle_comschema_CTD_ANON_3_httpwww_litle_comschemaloanToValueEstimator', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 501, 16), )
+    __loanToValueEstimator = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'loanToValueEstimator'), 'loanToValueEstimator', '__httpwww_litle_comschema_CTD_ANON_3_httpwww_litle_comschemaloanToValueEstimator', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 501, 16), )
 
     
     loanToValueEstimator = property(__loanToValueEstimator.value, __loanToValueEstimator.set, None, None)
 
     
     # Element {http://www.litle.com/schema}riskEstimator uses Python identifier riskEstimator
-    __riskEstimator = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'riskEstimator'), 'riskEstimator', '__httpwww_litle_comschema_CTD_ANON_3_httpwww_litle_comschemariskEstimator', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 502, 16), )
+    __riskEstimator = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'riskEstimator'), 'riskEstimator', '__httpwww_litle_comschema_CTD_ANON_3_httpwww_litle_comschemariskEstimator', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 502, 16), )
 
     
     riskEstimator = property(__riskEstimator.value, __riskEstimator.set, None, None)
 
     
     # Element {http://www.litle.com/schema}riskQueueAssignment uses Python identifier riskQueueAssignment
-    __riskQueueAssignment = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'riskQueueAssignment'), 'riskQueueAssignment', '__httpwww_litle_comschema_CTD_ANON_3_httpwww_litle_comschemariskQueueAssignment', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 503, 16), )
+    __riskQueueAssignment = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'riskQueueAssignment'), 'riskQueueAssignment', '__httpwww_litle_comschema_CTD_ANON_3_httpwww_litle_comschemariskQueueAssignment', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 503, 16), )
 
     
     riskQueueAssignment = property(__riskQueueAssignment.value, __riskQueueAssignment.set, None, None)
@@ -1694,34 +1694,34 @@ class fraudCheckType (pyxb.binding.basis.complexTypeDefinition):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'fraudCheckType')
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 508, 4)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 508, 4)
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
     # Element {http://www.litle.com/schema}authenticationValue uses Python identifier authenticationValue
-    __authenticationValue = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'authenticationValue'), 'authenticationValue', '__httpwww_litle_comschema_fraudCheckType_httpwww_litle_comschemaauthenticationValue', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 510, 12), )
+    __authenticationValue = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'authenticationValue'), 'authenticationValue', '__httpwww_litle_comschema_fraudCheckType_httpwww_litle_comschemaauthenticationValue', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 510, 12), )
 
     
     authenticationValue = property(__authenticationValue.value, __authenticationValue.set, None, None)
 
     
     # Element {http://www.litle.com/schema}authenticationTransactionId uses Python identifier authenticationTransactionId
-    __authenticationTransactionId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'authenticationTransactionId'), 'authenticationTransactionId', '__httpwww_litle_comschema_fraudCheckType_httpwww_litle_comschemaauthenticationTransactionId', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 511, 12), )
+    __authenticationTransactionId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'authenticationTransactionId'), 'authenticationTransactionId', '__httpwww_litle_comschema_fraudCheckType_httpwww_litle_comschemaauthenticationTransactionId', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 511, 12), )
 
     
     authenticationTransactionId = property(__authenticationTransactionId.value, __authenticationTransactionId.set, None, None)
 
     
     # Element {http://www.litle.com/schema}customerIpAddress uses Python identifier customerIpAddress
-    __customerIpAddress = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'customerIpAddress'), 'customerIpAddress', '__httpwww_litle_comschema_fraudCheckType_httpwww_litle_comschemacustomerIpAddress', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 512, 12), )
+    __customerIpAddress = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'customerIpAddress'), 'customerIpAddress', '__httpwww_litle_comschema_fraudCheckType_httpwww_litle_comschemacustomerIpAddress', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 512, 12), )
 
     
     customerIpAddress = property(__customerIpAddress.value, __customerIpAddress.set, None, None)
 
     
     # Element {http://www.litle.com/schema}authenticatedByMerchant uses Python identifier authenticatedByMerchant
-    __authenticatedByMerchant = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'authenticatedByMerchant'), 'authenticatedByMerchant', '__httpwww_litle_comschema_fraudCheckType_httpwww_litle_comschemaauthenticatedByMerchant', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 513, 12), )
+    __authenticatedByMerchant = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'authenticatedByMerchant'), 'authenticatedByMerchant', '__httpwww_litle_comschema_fraudCheckType_httpwww_litle_comschemaauthenticatedByMerchant', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 513, 12), )
 
     
     authenticatedByMerchant = property(__authenticatedByMerchant.value, __authenticatedByMerchant.set, None, None)
@@ -1746,34 +1746,34 @@ class CTD_ANON_4 (pyxb.binding.basis.complexTypeDefinition):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 853, 8)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 853, 8)
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
     # Element {http://www.litle.com/schema}authDate uses Python identifier authDate
-    __authDate = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'authDate'), 'authDate', '__httpwww_litle_comschema_CTD_ANON_4_httpwww_litle_comschemaauthDate', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 855, 16), )
+    __authDate = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'authDate'), 'authDate', '__httpwww_litle_comschema_CTD_ANON_4_httpwww_litle_comschemaauthDate', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 855, 16), )
 
     
     authDate = property(__authDate.value, __authDate.set, None, None)
 
     
     # Element {http://www.litle.com/schema}authCode uses Python identifier authCode
-    __authCode = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'authCode'), 'authCode', '__httpwww_litle_comschema_CTD_ANON_4_httpwww_litle_comschemaauthCode', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 856, 16), )
+    __authCode = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'authCode'), 'authCode', '__httpwww_litle_comschema_CTD_ANON_4_httpwww_litle_comschemaauthCode', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 856, 16), )
 
     
     authCode = property(__authCode.value, __authCode.set, None, None)
 
     
     # Element {http://www.litle.com/schema}authAmount uses Python identifier authAmount
-    __authAmount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'authAmount'), 'authAmount', '__httpwww_litle_comschema_CTD_ANON_4_httpwww_litle_comschemaauthAmount', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 858, 16), )
+    __authAmount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'authAmount'), 'authAmount', '__httpwww_litle_comschema_CTD_ANON_4_httpwww_litle_comschemaauthAmount', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 858, 16), )
 
     
     authAmount = property(__authAmount.value, __authAmount.set, None, None)
 
     
     # Element {http://www.litle.com/schema}fraudResult uses Python identifier fraudResult
-    __fraudResult = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'fraudResult'), 'fraudResult', '__httpwww_litle_comschema_CTD_ANON_4_httpwww_litle_comschemafraudResult', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1443, 4), )
+    __fraudResult = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'fraudResult'), 'fraudResult', '__httpwww_litle_comschema_CTD_ANON_4_httpwww_litle_comschemafraudResult', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1443, 4), )
 
     
     fraudResult = property(__fraudResult.value, __fraudResult.set, None, None)
@@ -1797,20 +1797,20 @@ class CTD_ANON_5 (pyxb.binding.basis.complexTypeDefinition):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 878, 8)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 878, 8)
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
     # Element {http://www.litle.com/schema}IIASFlag uses Python identifier IIASFlag
-    __IIASFlag = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'IIASFlag'), 'IIASFlag', '__httpwww_litle_comschema_CTD_ANON_5_httpwww_litle_comschemaIIASFlag', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 881, 16), )
+    __IIASFlag = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'IIASFlag'), 'IIASFlag', '__httpwww_litle_comschema_CTD_ANON_5_httpwww_litle_comschemaIIASFlag', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 881, 16), )
 
     
     IIASFlag = property(__IIASFlag.value, __IIASFlag.set, None, None)
 
     
     # Element {http://www.litle.com/schema}healthcareAmounts uses Python identifier healthcareAmounts
-    __healthcareAmounts = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'healthcareAmounts'), 'healthcareAmounts', '__httpwww_litle_comschema_CTD_ANON_5_httpwww_litle_comschemahealthcareAmounts', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 886, 4), )
+    __healthcareAmounts = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'healthcareAmounts'), 'healthcareAmounts', '__httpwww_litle_comschema_CTD_ANON_5_httpwww_litle_comschemahealthcareAmounts', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 886, 4), )
 
     
     healthcareAmounts = property(__healthcareAmounts.value, __healthcareAmounts.set, None, None)
@@ -1832,41 +1832,41 @@ class CTD_ANON_6 (pyxb.binding.basis.complexTypeDefinition):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 887, 8)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 887, 8)
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
     # Element {http://www.litle.com/schema}totalHealthcareAmount uses Python identifier totalHealthcareAmount
-    __totalHealthcareAmount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'totalHealthcareAmount'), 'totalHealthcareAmount', '__httpwww_litle_comschema_CTD_ANON_6_httpwww_litle_comschematotalHealthcareAmount', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 889, 16), )
+    __totalHealthcareAmount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'totalHealthcareAmount'), 'totalHealthcareAmount', '__httpwww_litle_comschema_CTD_ANON_6_httpwww_litle_comschematotalHealthcareAmount', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 889, 16), )
 
     
     totalHealthcareAmount = property(__totalHealthcareAmount.value, __totalHealthcareAmount.set, None, None)
 
     
     # Element {http://www.litle.com/schema}RxAmount uses Python identifier RxAmount
-    __RxAmount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'RxAmount'), 'RxAmount', '__httpwww_litle_comschema_CTD_ANON_6_httpwww_litle_comschemaRxAmount', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 890, 16), )
+    __RxAmount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'RxAmount'), 'RxAmount', '__httpwww_litle_comschema_CTD_ANON_6_httpwww_litle_comschemaRxAmount', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 890, 16), )
 
     
     RxAmount = property(__RxAmount.value, __RxAmount.set, None, None)
 
     
     # Element {http://www.litle.com/schema}visionAmount uses Python identifier visionAmount
-    __visionAmount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'visionAmount'), 'visionAmount', '__httpwww_litle_comschema_CTD_ANON_6_httpwww_litle_comschemavisionAmount', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 891, 16), )
+    __visionAmount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'visionAmount'), 'visionAmount', '__httpwww_litle_comschema_CTD_ANON_6_httpwww_litle_comschemavisionAmount', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 891, 16), )
 
     
     visionAmount = property(__visionAmount.value, __visionAmount.set, None, None)
 
     
     # Element {http://www.litle.com/schema}clinicOtherAmount uses Python identifier clinicOtherAmount
-    __clinicOtherAmount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'clinicOtherAmount'), 'clinicOtherAmount', '__httpwww_litle_comschema_CTD_ANON_6_httpwww_litle_comschemaclinicOtherAmount', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 892, 16), )
+    __clinicOtherAmount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'clinicOtherAmount'), 'clinicOtherAmount', '__httpwww_litle_comschema_CTD_ANON_6_httpwww_litle_comschemaclinicOtherAmount', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 892, 16), )
 
     
     clinicOtherAmount = property(__clinicOtherAmount.value, __clinicOtherAmount.set, None, None)
 
     
     # Element {http://www.litle.com/schema}dentalAmount uses Python identifier dentalAmount
-    __dentalAmount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'dentalAmount'), 'dentalAmount', '__httpwww_litle_comschema_CTD_ANON_6_httpwww_litle_comschemadentalAmount', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 893, 16), )
+    __dentalAmount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'dentalAmount'), 'dentalAmount', '__httpwww_litle_comschema_CTD_ANON_6_httpwww_litle_comschemadentalAmount', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 893, 16), )
 
     
     dentalAmount = property(__dentalAmount.value, __dentalAmount.set, None, None)
@@ -1891,104 +1891,104 @@ class CTD_ANON_7 (pyxb.binding.basis.complexTypeDefinition):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 899, 8)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 899, 8)
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
     # Element {http://www.litle.com/schema}customerReference uses Python identifier customerReference
-    __customerReference = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'customerReference'), 'customerReference', '__httpwww_litle_comschema_CTD_ANON_7_httpwww_litle_comschemacustomerReference', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 901, 16), )
+    __customerReference = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'customerReference'), 'customerReference', '__httpwww_litle_comschema_CTD_ANON_7_httpwww_litle_comschemacustomerReference', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 901, 16), )
 
     
     customerReference = property(__customerReference.value, __customerReference.set, None, None)
 
     
     # Element {http://www.litle.com/schema}salesTax uses Python identifier salesTax
-    __salesTax = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'salesTax'), 'salesTax', '__httpwww_litle_comschema_CTD_ANON_7_httpwww_litle_comschemasalesTax', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 902, 16), )
+    __salesTax = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'salesTax'), 'salesTax', '__httpwww_litle_comschema_CTD_ANON_7_httpwww_litle_comschemasalesTax', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 902, 16), )
 
     
     salesTax = property(__salesTax.value, __salesTax.set, None, None)
 
     
     # Element {http://www.litle.com/schema}deliveryType uses Python identifier deliveryType
-    __deliveryType = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'deliveryType'), 'deliveryType', '__httpwww_litle_comschema_CTD_ANON_7_httpwww_litle_comschemadeliveryType', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 903, 16), )
+    __deliveryType = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'deliveryType'), 'deliveryType', '__httpwww_litle_comschema_CTD_ANON_7_httpwww_litle_comschemadeliveryType', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 903, 16), )
 
     
     deliveryType = property(__deliveryType.value, __deliveryType.set, None, None)
 
     
     # Element {http://www.litle.com/schema}taxExempt uses Python identifier taxExempt
-    __taxExempt = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'taxExempt'), 'taxExempt', '__httpwww_litle_comschema_CTD_ANON_7_httpwww_litle_comschemataxExempt', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 904, 16), )
+    __taxExempt = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'taxExempt'), 'taxExempt', '__httpwww_litle_comschema_CTD_ANON_7_httpwww_litle_comschemataxExempt', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 904, 16), )
 
     
     taxExempt = property(__taxExempt.value, __taxExempt.set, None, None)
 
     
     # Element {http://www.litle.com/schema}discountAmount uses Python identifier discountAmount
-    __discountAmount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'discountAmount'), 'discountAmount', '__httpwww_litle_comschema_CTD_ANON_7_httpwww_litle_comschemadiscountAmount', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 905, 16), )
+    __discountAmount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'discountAmount'), 'discountAmount', '__httpwww_litle_comschema_CTD_ANON_7_httpwww_litle_comschemadiscountAmount', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 905, 16), )
 
     
     discountAmount = property(__discountAmount.value, __discountAmount.set, None, None)
 
     
     # Element {http://www.litle.com/schema}shippingAmount uses Python identifier shippingAmount
-    __shippingAmount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'shippingAmount'), 'shippingAmount', '__httpwww_litle_comschema_CTD_ANON_7_httpwww_litle_comschemashippingAmount', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 906, 16), )
+    __shippingAmount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'shippingAmount'), 'shippingAmount', '__httpwww_litle_comschema_CTD_ANON_7_httpwww_litle_comschemashippingAmount', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 906, 16), )
 
     
     shippingAmount = property(__shippingAmount.value, __shippingAmount.set, None, None)
 
     
     # Element {http://www.litle.com/schema}dutyAmount uses Python identifier dutyAmount
-    __dutyAmount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'dutyAmount'), 'dutyAmount', '__httpwww_litle_comschema_CTD_ANON_7_httpwww_litle_comschemadutyAmount', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 907, 16), )
+    __dutyAmount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'dutyAmount'), 'dutyAmount', '__httpwww_litle_comschema_CTD_ANON_7_httpwww_litle_comschemadutyAmount', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 907, 16), )
 
     
     dutyAmount = property(__dutyAmount.value, __dutyAmount.set, None, None)
 
     
     # Element {http://www.litle.com/schema}shipFromPostalCode uses Python identifier shipFromPostalCode
-    __shipFromPostalCode = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'shipFromPostalCode'), 'shipFromPostalCode', '__httpwww_litle_comschema_CTD_ANON_7_httpwww_litle_comschemashipFromPostalCode', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 908, 16), )
+    __shipFromPostalCode = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'shipFromPostalCode'), 'shipFromPostalCode', '__httpwww_litle_comschema_CTD_ANON_7_httpwww_litle_comschemashipFromPostalCode', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 908, 16), )
 
     
     shipFromPostalCode = property(__shipFromPostalCode.value, __shipFromPostalCode.set, None, None)
 
     
     # Element {http://www.litle.com/schema}destinationPostalCode uses Python identifier destinationPostalCode
-    __destinationPostalCode = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'destinationPostalCode'), 'destinationPostalCode', '__httpwww_litle_comschema_CTD_ANON_7_httpwww_litle_comschemadestinationPostalCode', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 909, 16), )
+    __destinationPostalCode = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'destinationPostalCode'), 'destinationPostalCode', '__httpwww_litle_comschema_CTD_ANON_7_httpwww_litle_comschemadestinationPostalCode', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 909, 16), )
 
     
     destinationPostalCode = property(__destinationPostalCode.value, __destinationPostalCode.set, None, None)
 
     
     # Element {http://www.litle.com/schema}destinationCountryCode uses Python identifier destinationCountryCode
-    __destinationCountryCode = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'destinationCountryCode'), 'destinationCountryCode', '__httpwww_litle_comschema_CTD_ANON_7_httpwww_litle_comschemadestinationCountryCode', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 910, 16), )
+    __destinationCountryCode = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'destinationCountryCode'), 'destinationCountryCode', '__httpwww_litle_comschema_CTD_ANON_7_httpwww_litle_comschemadestinationCountryCode', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 910, 16), )
 
     
     destinationCountryCode = property(__destinationCountryCode.value, __destinationCountryCode.set, None, None)
 
     
     # Element {http://www.litle.com/schema}invoiceReferenceNumber uses Python identifier invoiceReferenceNumber
-    __invoiceReferenceNumber = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'invoiceReferenceNumber'), 'invoiceReferenceNumber', '__httpwww_litle_comschema_CTD_ANON_7_httpwww_litle_comschemainvoiceReferenceNumber', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 911, 16), )
+    __invoiceReferenceNumber = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'invoiceReferenceNumber'), 'invoiceReferenceNumber', '__httpwww_litle_comschema_CTD_ANON_7_httpwww_litle_comschemainvoiceReferenceNumber', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 911, 16), )
 
     
     invoiceReferenceNumber = property(__invoiceReferenceNumber.value, __invoiceReferenceNumber.set, None, None)
 
     
     # Element {http://www.litle.com/schema}orderDate uses Python identifier orderDate
-    __orderDate = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'orderDate'), 'orderDate', '__httpwww_litle_comschema_CTD_ANON_7_httpwww_litle_comschemaorderDate', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 912, 16), )
+    __orderDate = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'orderDate'), 'orderDate', '__httpwww_litle_comschema_CTD_ANON_7_httpwww_litle_comschemaorderDate', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 912, 16), )
 
     
     orderDate = property(__orderDate.value, __orderDate.set, None, None)
 
     
     # Element {http://www.litle.com/schema}detailTax uses Python identifier detailTax
-    __detailTax = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'detailTax'), 'detailTax', '__httpwww_litle_comschema_CTD_ANON_7_httpwww_litle_comschemadetailTax', True, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 928, 4), )
+    __detailTax = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'detailTax'), 'detailTax', '__httpwww_litle_comschema_CTD_ANON_7_httpwww_litle_comschemadetailTax', True, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 928, 4), )
 
     
     detailTax = property(__detailTax.value, __detailTax.set, None, None)
 
     
     # Element {http://www.litle.com/schema}lineItemData uses Python identifier lineItemData
-    __lineItemData = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'lineItemData'), 'lineItemData', '__httpwww_litle_comschema_CTD_ANON_7_httpwww_litle_comschemalineItemData', True, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 940, 4), )
+    __lineItemData = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'lineItemData'), 'lineItemData', '__httpwww_litle_comschema_CTD_ANON_7_httpwww_litle_comschemalineItemData', True, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 940, 4), )
 
     
     lineItemData = property(__lineItemData.value, __lineItemData.set, None, None)
@@ -2022,20 +2022,20 @@ class CTD_ANON_8 (pyxb.binding.basis.complexTypeDefinition):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 920, 8)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 920, 8)
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
     # Element {http://www.litle.com/schema}sellerId uses Python identifier sellerId
-    __sellerId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'sellerId'), 'sellerId', '__httpwww_litle_comschema_CTD_ANON_8_httpwww_litle_comschemasellerId', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 922, 16), )
+    __sellerId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'sellerId'), 'sellerId', '__httpwww_litle_comschema_CTD_ANON_8_httpwww_litle_comschemasellerId', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 922, 16), )
 
     
     sellerId = property(__sellerId.value, __sellerId.set, None, None)
 
     
     # Element {http://www.litle.com/schema}sellerMerchantCategoryCode uses Python identifier sellerMerchantCategoryCode
-    __sellerMerchantCategoryCode = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'sellerMerchantCategoryCode'), 'sellerMerchantCategoryCode', '__httpwww_litle_comschema_CTD_ANON_8_httpwww_litle_comschemasellerMerchantCategoryCode', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 923, 16), )
+    __sellerMerchantCategoryCode = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'sellerMerchantCategoryCode'), 'sellerMerchantCategoryCode', '__httpwww_litle_comschema_CTD_ANON_8_httpwww_litle_comschemasellerMerchantCategoryCode', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 923, 16), )
 
     
     sellerMerchantCategoryCode = property(__sellerMerchantCategoryCode.value, __sellerMerchantCategoryCode.set, None, None)
@@ -2057,41 +2057,41 @@ class CTD_ANON_9 (pyxb.binding.basis.complexTypeDefinition):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 929, 8)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 929, 8)
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
     # Element {http://www.litle.com/schema}taxIncludedInTotal uses Python identifier taxIncludedInTotal
-    __taxIncludedInTotal = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'taxIncludedInTotal'), 'taxIncludedInTotal', '__httpwww_litle_comschema_CTD_ANON_9_httpwww_litle_comschemataxIncludedInTotal', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 931, 16), )
+    __taxIncludedInTotal = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'taxIncludedInTotal'), 'taxIncludedInTotal', '__httpwww_litle_comschema_CTD_ANON_9_httpwww_litle_comschemataxIncludedInTotal', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 931, 16), )
 
     
     taxIncludedInTotal = property(__taxIncludedInTotal.value, __taxIncludedInTotal.set, None, None)
 
     
     # Element {http://www.litle.com/schema}taxAmount uses Python identifier taxAmount
-    __taxAmount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'taxAmount'), 'taxAmount', '__httpwww_litle_comschema_CTD_ANON_9_httpwww_litle_comschemataxAmount', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 932, 16), )
+    __taxAmount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'taxAmount'), 'taxAmount', '__httpwww_litle_comschema_CTD_ANON_9_httpwww_litle_comschemataxAmount', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 932, 16), )
 
     
     taxAmount = property(__taxAmount.value, __taxAmount.set, None, None)
 
     
     # Element {http://www.litle.com/schema}taxRate uses Python identifier taxRate
-    __taxRate = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'taxRate'), 'taxRate', '__httpwww_litle_comschema_CTD_ANON_9_httpwww_litle_comschemataxRate', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 933, 16), )
+    __taxRate = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'taxRate'), 'taxRate', '__httpwww_litle_comschema_CTD_ANON_9_httpwww_litle_comschemataxRate', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 933, 16), )
 
     
     taxRate = property(__taxRate.value, __taxRate.set, None, None)
 
     
     # Element {http://www.litle.com/schema}taxTypeIdentifier uses Python identifier taxTypeIdentifier
-    __taxTypeIdentifier = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'taxTypeIdentifier'), 'taxTypeIdentifier', '__httpwww_litle_comschema_CTD_ANON_9_httpwww_litle_comschemataxTypeIdentifier', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 934, 16), )
+    __taxTypeIdentifier = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'taxTypeIdentifier'), 'taxTypeIdentifier', '__httpwww_litle_comschema_CTD_ANON_9_httpwww_litle_comschemataxTypeIdentifier', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 934, 16), )
 
     
     taxTypeIdentifier = property(__taxTypeIdentifier.value, __taxTypeIdentifier.set, None, None)
 
     
     # Element {http://www.litle.com/schema}cardAcceptorTaxId uses Python identifier cardAcceptorTaxId
-    __cardAcceptorTaxId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'cardAcceptorTaxId'), 'cardAcceptorTaxId', '__httpwww_litle_comschema_CTD_ANON_9_httpwww_litle_comschemacardAcceptorTaxId', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 935, 16), )
+    __cardAcceptorTaxId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'cardAcceptorTaxId'), 'cardAcceptorTaxId', '__httpwww_litle_comschema_CTD_ANON_9_httpwww_litle_comschemacardAcceptorTaxId', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 935, 16), )
 
     
     cardAcceptorTaxId = property(__cardAcceptorTaxId.value, __cardAcceptorTaxId.set, None, None)
@@ -2116,90 +2116,90 @@ class CTD_ANON_10 (pyxb.binding.basis.complexTypeDefinition):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 941, 8)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 941, 8)
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
     # Element {http://www.litle.com/schema}detailTax uses Python identifier detailTax
-    __detailTax = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'detailTax'), 'detailTax', '__httpwww_litle_comschema_CTD_ANON_10_httpwww_litle_comschemadetailTax', True, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 928, 4), )
+    __detailTax = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'detailTax'), 'detailTax', '__httpwww_litle_comschema_CTD_ANON_10_httpwww_litle_comschemadetailTax', True, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 928, 4), )
 
     
     detailTax = property(__detailTax.value, __detailTax.set, None, None)
 
     
     # Element {http://www.litle.com/schema}itemSequenceNumber uses Python identifier itemSequenceNumber
-    __itemSequenceNumber = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'itemSequenceNumber'), 'itemSequenceNumber', '__httpwww_litle_comschema_CTD_ANON_10_httpwww_litle_comschemaitemSequenceNumber', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 943, 16), )
+    __itemSequenceNumber = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'itemSequenceNumber'), 'itemSequenceNumber', '__httpwww_litle_comschema_CTD_ANON_10_httpwww_litle_comschemaitemSequenceNumber', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 943, 16), )
 
     
     itemSequenceNumber = property(__itemSequenceNumber.value, __itemSequenceNumber.set, None, None)
 
     
     # Element {http://www.litle.com/schema}itemDescription uses Python identifier itemDescription
-    __itemDescription = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'itemDescription'), 'itemDescription', '__httpwww_litle_comschema_CTD_ANON_10_httpwww_litle_comschemaitemDescription', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 944, 16), )
+    __itemDescription = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'itemDescription'), 'itemDescription', '__httpwww_litle_comschema_CTD_ANON_10_httpwww_litle_comschemaitemDescription', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 944, 16), )
 
     
     itemDescription = property(__itemDescription.value, __itemDescription.set, None, None)
 
     
     # Element {http://www.litle.com/schema}productCode uses Python identifier productCode
-    __productCode = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'productCode'), 'productCode', '__httpwww_litle_comschema_CTD_ANON_10_httpwww_litle_comschemaproductCode', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 945, 16), )
+    __productCode = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'productCode'), 'productCode', '__httpwww_litle_comschema_CTD_ANON_10_httpwww_litle_comschemaproductCode', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 945, 16), )
 
     
     productCode = property(__productCode.value, __productCode.set, None, None)
 
     
     # Element {http://www.litle.com/schema}quantity uses Python identifier quantity
-    __quantity = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'quantity'), 'quantity', '__httpwww_litle_comschema_CTD_ANON_10_httpwww_litle_comschemaquantity', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 946, 16), )
+    __quantity = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'quantity'), 'quantity', '__httpwww_litle_comschema_CTD_ANON_10_httpwww_litle_comschemaquantity', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 946, 16), )
 
     
     quantity = property(__quantity.value, __quantity.set, None, None)
 
     
     # Element {http://www.litle.com/schema}unitOfMeasure uses Python identifier unitOfMeasure
-    __unitOfMeasure = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'unitOfMeasure'), 'unitOfMeasure', '__httpwww_litle_comschema_CTD_ANON_10_httpwww_litle_comschemaunitOfMeasure', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 947, 16), )
+    __unitOfMeasure = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'unitOfMeasure'), 'unitOfMeasure', '__httpwww_litle_comschema_CTD_ANON_10_httpwww_litle_comschemaunitOfMeasure', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 947, 16), )
 
     
     unitOfMeasure = property(__unitOfMeasure.value, __unitOfMeasure.set, None, None)
 
     
     # Element {http://www.litle.com/schema}taxAmount uses Python identifier taxAmount
-    __taxAmount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'taxAmount'), 'taxAmount', '__httpwww_litle_comschema_CTD_ANON_10_httpwww_litle_comschemataxAmount', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 948, 16), )
+    __taxAmount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'taxAmount'), 'taxAmount', '__httpwww_litle_comschema_CTD_ANON_10_httpwww_litle_comschemataxAmount', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 948, 16), )
 
     
     taxAmount = property(__taxAmount.value, __taxAmount.set, None, None)
 
     
     # Element {http://www.litle.com/schema}lineItemTotal uses Python identifier lineItemTotal
-    __lineItemTotal = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'lineItemTotal'), 'lineItemTotal', '__httpwww_litle_comschema_CTD_ANON_10_httpwww_litle_comschemalineItemTotal', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 949, 16), )
+    __lineItemTotal = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'lineItemTotal'), 'lineItemTotal', '__httpwww_litle_comschema_CTD_ANON_10_httpwww_litle_comschemalineItemTotal', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 949, 16), )
 
     
     lineItemTotal = property(__lineItemTotal.value, __lineItemTotal.set, None, None)
 
     
     # Element {http://www.litle.com/schema}lineItemTotalWithTax uses Python identifier lineItemTotalWithTax
-    __lineItemTotalWithTax = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'lineItemTotalWithTax'), 'lineItemTotalWithTax', '__httpwww_litle_comschema_CTD_ANON_10_httpwww_litle_comschemalineItemTotalWithTax', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 951, 16), )
+    __lineItemTotalWithTax = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'lineItemTotalWithTax'), 'lineItemTotalWithTax', '__httpwww_litle_comschema_CTD_ANON_10_httpwww_litle_comschemalineItemTotalWithTax', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 951, 16), )
 
     
     lineItemTotalWithTax = property(__lineItemTotalWithTax.value, __lineItemTotalWithTax.set, None, None)
 
     
     # Element {http://www.litle.com/schema}itemDiscountAmount uses Python identifier itemDiscountAmount
-    __itemDiscountAmount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'itemDiscountAmount'), 'itemDiscountAmount', '__httpwww_litle_comschema_CTD_ANON_10_httpwww_litle_comschemaitemDiscountAmount', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 953, 16), )
+    __itemDiscountAmount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'itemDiscountAmount'), 'itemDiscountAmount', '__httpwww_litle_comschema_CTD_ANON_10_httpwww_litle_comschemaitemDiscountAmount', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 953, 16), )
 
     
     itemDiscountAmount = property(__itemDiscountAmount.value, __itemDiscountAmount.set, None, None)
 
     
     # Element {http://www.litle.com/schema}commodityCode uses Python identifier commodityCode
-    __commodityCode = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'commodityCode'), 'commodityCode', '__httpwww_litle_comschema_CTD_ANON_10_httpwww_litle_comschemacommodityCode', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 954, 16), )
+    __commodityCode = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'commodityCode'), 'commodityCode', '__httpwww_litle_comschema_CTD_ANON_10_httpwww_litle_comschemacommodityCode', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 954, 16), )
 
     
     commodityCode = property(__commodityCode.value, __commodityCode.set, None, None)
 
     
     # Element {http://www.litle.com/schema}unitCost uses Python identifier unitCost
-    __unitCost = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'unitCost'), 'unitCost', '__httpwww_litle_comschema_CTD_ANON_10_httpwww_litle_comschemaunitCost', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 955, 16), )
+    __unitCost = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'unitCost'), 'unitCost', '__httpwww_litle_comschema_CTD_ANON_10_httpwww_litle_comschemaunitCost', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 955, 16), )
 
     
     unitCost = property(__unitCost.value, __unitCost.set, None, None)
@@ -2231,20 +2231,20 @@ class accountInfoType (pyxb.binding.basis.complexTypeDefinition):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'accountInfoType')
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 961, 4)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 961, 4)
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
     # Element {http://www.litle.com/schema}type uses Python identifier type
-    __type = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'type'), 'type', '__httpwww_litle_comschema_accountInfoType_httpwww_litle_comschematype', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 963, 12), )
+    __type = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'type'), 'type', '__httpwww_litle_comschema_accountInfoType_httpwww_litle_comschematype', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 963, 12), )
 
     
     type = property(__type.value, __type.set, None, None)
 
     
     # Element {http://www.litle.com/schema}number uses Python identifier number
-    __number = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'number'), 'number', '__httpwww_litle_comschema_accountInfoType_httpwww_litle_comschemanumber', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 964, 12), )
+    __number = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'number'), 'number', '__httpwww_litle_comschema_accountInfoType_httpwww_litle_comschemanumber', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 964, 12), )
 
     
     number = property(__number.value, __number.set, None, None)
@@ -2267,34 +2267,34 @@ class echeckTokenType (pyxb.binding.basis.complexTypeDefinition):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'echeckTokenType')
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 968, 4)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 968, 4)
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
     # Element {http://www.litle.com/schema}litleToken uses Python identifier litleToken
-    __litleToken = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'litleToken'), 'litleToken', '__httpwww_litle_comschema_echeckTokenType_httpwww_litle_comschemalitleToken', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 970, 12), )
+    __litleToken = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'litleToken'), 'litleToken', '__httpwww_litle_comschema_echeckTokenType_httpwww_litle_comschemalitleToken', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 970, 12), )
 
     
     litleToken = property(__litleToken.value, __litleToken.set, None, None)
 
     
     # Element {http://www.litle.com/schema}routingNum uses Python identifier routingNum
-    __routingNum = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'routingNum'), 'routingNum', '__httpwww_litle_comschema_echeckTokenType_httpwww_litle_comschemaroutingNum', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 971, 12), )
+    __routingNum = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'routingNum'), 'routingNum', '__httpwww_litle_comschema_echeckTokenType_httpwww_litle_comschemaroutingNum', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 971, 12), )
 
     
     routingNum = property(__routingNum.value, __routingNum.set, None, None)
 
     
     # Element {http://www.litle.com/schema}accType uses Python identifier accType
-    __accType = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'accType'), 'accType', '__httpwww_litle_comschema_echeckTokenType_httpwww_litle_comschemaaccType', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 972, 12), )
+    __accType = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'accType'), 'accType', '__httpwww_litle_comschema_echeckTokenType_httpwww_litle_comschemaaccType', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 972, 12), )
 
     
     accType = property(__accType.value, __accType.set, None, None)
 
     
     # Element {http://www.litle.com/schema}checkNum uses Python identifier checkNum
-    __checkNum = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'checkNum'), 'checkNum', '__httpwww_litle_comschema_echeckTokenType_httpwww_litle_comschemacheckNum', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 973, 12), )
+    __checkNum = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'checkNum'), 'checkNum', '__httpwww_litle_comschema_echeckTokenType_httpwww_litle_comschemacheckNum', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 973, 12), )
 
     
     checkNum = property(__checkNum.value, __checkNum.set, None, None)
@@ -2319,34 +2319,34 @@ class payPal (pyxb.binding.basis.complexTypeDefinition):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'payPal')
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 977, 4)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 977, 4)
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
     # Element {http://www.litle.com/schema}payerEmail uses Python identifier payerEmail
-    __payerEmail = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'payerEmail'), 'payerEmail', '__httpwww_litle_comschema_payPal_httpwww_litle_comschemapayerEmail', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 980, 16), )
+    __payerEmail = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'payerEmail'), 'payerEmail', '__httpwww_litle_comschema_payPal_httpwww_litle_comschemapayerEmail', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 980, 16), )
 
     
     payerEmail = property(__payerEmail.value, __payerEmail.set, None, None)
 
     
     # Element {http://www.litle.com/schema}payerId uses Python identifier payerId
-    __payerId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'payerId'), 'payerId', '__httpwww_litle_comschema_payPal_httpwww_litle_comschemapayerId', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 983, 16), )
+    __payerId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'payerId'), 'payerId', '__httpwww_litle_comschema_payPal_httpwww_litle_comschemapayerId', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 983, 16), )
 
     
     payerId = property(__payerId.value, __payerId.set, None, None)
 
     
     # Element {http://www.litle.com/schema}token uses Python identifier token
-    __token = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'token'), 'token', '__httpwww_litle_comschema_payPal_httpwww_litle_comschematoken', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 984, 16), )
+    __token = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'token'), 'token', '__httpwww_litle_comschema_payPal_httpwww_litle_comschematoken', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 984, 16), )
 
     
     token = property(__token.value, __token.set, None, None)
 
     
     # Element {http://www.litle.com/schema}transactionId uses Python identifier transactionId
-    __transactionId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'transactionId'), 'transactionId', '__httpwww_litle_comschema_payPal_httpwww_litle_comschematransactionId', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 985, 16), )
+    __transactionId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'transactionId'), 'transactionId', '__httpwww_litle_comschema_payPal_httpwww_litle_comschematransactionId', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 985, 16), )
 
     
     transactionId = property(__transactionId.value, __transactionId.set, None, None)
@@ -2371,34 +2371,34 @@ class CTD_ANON_11 (pyxb.binding.basis.complexTypeDefinition):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 993, 8)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 993, 8)
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
     # Element {http://www.litle.com/schema}phone uses Python identifier phone
-    __phone = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'phone'), 'phone', '__httpwww_litle_comschema_CTD_ANON_11_httpwww_litle_comschemaphone', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 996, 20), )
+    __phone = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'phone'), 'phone', '__httpwww_litle_comschema_CTD_ANON_11_httpwww_litle_comschemaphone', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 996, 20), )
 
     
     phone = property(__phone.value, __phone.set, None, None)
 
     
     # Element {http://www.litle.com/schema}city uses Python identifier city
-    __city = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'city'), 'city', '__httpwww_litle_comschema_CTD_ANON_11_httpwww_litle_comschemacity', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 997, 20), )
+    __city = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'city'), 'city', '__httpwww_litle_comschema_CTD_ANON_11_httpwww_litle_comschemacity', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 997, 20), )
 
     
     city = property(__city.value, __city.set, None, None)
 
     
     # Element {http://www.litle.com/schema}url uses Python identifier url
-    __url = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'url'), 'url', '__httpwww_litle_comschema_CTD_ANON_11_httpwww_litle_comschemaurl', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 998, 20), )
+    __url = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'url'), 'url', '__httpwww_litle_comschema_CTD_ANON_11_httpwww_litle_comschemaurl', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 998, 20), )
 
     
     url = property(__url.value, __url.set, None, None)
 
     
     # Element {http://www.litle.com/schema}descriptor uses Python identifier descriptor
-    __descriptor = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'descriptor'), 'descriptor', '__httpwww_litle_comschema_CTD_ANON_11_httpwww_litle_comschemadescriptor', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1000, 16), )
+    __descriptor = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'descriptor'), 'descriptor', '__httpwww_litle_comschema_CTD_ANON_11_httpwww_litle_comschemadescriptor', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1000, 16), )
 
     
     descriptor = property(__descriptor.value, __descriptor.set, None, None)
@@ -2422,13 +2422,13 @@ class CTD_ANON_12 (pyxb.binding.basis.complexTypeDefinition):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1007, 8)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1007, 8)
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
     # Element {http://www.litle.com/schema}bypassVelocityCheck uses Python identifier bypassVelocityCheck
-    __bypassVelocityCheck = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'bypassVelocityCheck'), 'bypassVelocityCheck', '__httpwww_litle_comschema_CTD_ANON_12_httpwww_litle_comschemabypassVelocityCheck', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1009, 16), )
+    __bypassVelocityCheck = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'bypassVelocityCheck'), 'bypassVelocityCheck', '__httpwww_litle_comschema_CTD_ANON_12_httpwww_litle_comschemabypassVelocityCheck', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1009, 16), )
 
     
     bypassVelocityCheck = property(__bypassVelocityCheck.value, __bypassVelocityCheck.set, None, None)
@@ -2449,41 +2449,41 @@ class CTD_ANON_13 (pyxb.binding.basis.complexTypeDefinition):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1015, 8)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1015, 8)
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
     # Element {http://www.litle.com/schema}capability uses Python identifier capability
-    __capability = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'capability'), 'capability', '__httpwww_litle_comschema_CTD_ANON_13_httpwww_litle_comschemacapability', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1017, 16), )
+    __capability = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'capability'), 'capability', '__httpwww_litle_comschema_CTD_ANON_13_httpwww_litle_comschemacapability', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1017, 16), )
 
     
     capability = property(__capability.value, __capability.set, None, None)
 
     
     # Element {http://www.litle.com/schema}entryMode uses Python identifier entryMode
-    __entryMode = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'entryMode'), 'entryMode', '__httpwww_litle_comschema_CTD_ANON_13_httpwww_litle_comschemaentryMode', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1018, 16), )
+    __entryMode = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'entryMode'), 'entryMode', '__httpwww_litle_comschema_CTD_ANON_13_httpwww_litle_comschemaentryMode', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1018, 16), )
 
     
     entryMode = property(__entryMode.value, __entryMode.set, None, None)
 
     
     # Element {http://www.litle.com/schema}cardholderId uses Python identifier cardholderId
-    __cardholderId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'cardholderId'), 'cardholderId', '__httpwww_litle_comschema_CTD_ANON_13_httpwww_litle_comschemacardholderId', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1019, 16), )
+    __cardholderId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'cardholderId'), 'cardholderId', '__httpwww_litle_comschema_CTD_ANON_13_httpwww_litle_comschemacardholderId', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1019, 16), )
 
     
     cardholderId = property(__cardholderId.value, __cardholderId.set, None, None)
 
     
     # Element {http://www.litle.com/schema}terminalId uses Python identifier terminalId
-    __terminalId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'terminalId'), 'terminalId', '__httpwww_litle_comschema_CTD_ANON_13_httpwww_litle_comschematerminalId', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1020, 16), )
+    __terminalId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'terminalId'), 'terminalId', '__httpwww_litle_comschema_CTD_ANON_13_httpwww_litle_comschematerminalId', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1020, 16), )
 
     
     terminalId = property(__terminalId.value, __terminalId.set, None, None)
 
     
     # Element {http://www.litle.com/schema}catLevel uses Python identifier catLevel
-    __catLevel = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'catLevel'), 'catLevel', '__httpwww_litle_comschema_CTD_ANON_13_httpwww_litle_comschemacatLevel', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1021, 16), )
+    __catLevel = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'catLevel'), 'catLevel', '__httpwww_litle_comschema_CTD_ANON_13_httpwww_litle_comschemacatLevel', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1021, 16), )
 
     
     catLevel = property(__catLevel.value, __catLevel.set, None, None)
@@ -2508,20 +2508,20 @@ class recycleAdviceType (pyxb.binding.basis.complexTypeDefinition):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'recycleAdviceType')
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1114, 4)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1114, 4)
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
     # Element {http://www.litle.com/schema}nextRecycleTime uses Python identifier nextRecycleTime
-    __nextRecycleTime = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'nextRecycleTime'), 'nextRecycleTime', '__httpwww_litle_comschema_recycleAdviceType_httpwww_litle_comschemanextRecycleTime', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1116, 12), )
+    __nextRecycleTime = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'nextRecycleTime'), 'nextRecycleTime', '__httpwww_litle_comschema_recycleAdviceType_httpwww_litle_comschemanextRecycleTime', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1116, 12), )
 
     
     nextRecycleTime = property(__nextRecycleTime.value, __nextRecycleTime.set, None, None)
 
     
     # Element {http://www.litle.com/schema}recycleAdviceEnd uses Python identifier recycleAdviceEnd
-    __recycleAdviceEnd = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'recycleAdviceEnd'), 'recycleAdviceEnd', '__httpwww_litle_comschema_recycleAdviceType_httpwww_litle_comschemarecycleAdviceEnd', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1117, 12), )
+    __recycleAdviceEnd = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'recycleAdviceEnd'), 'recycleAdviceEnd', '__httpwww_litle_comschema_recycleAdviceType_httpwww_litle_comschemarecycleAdviceEnd', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1117, 12), )
 
     
     recycleAdviceEnd = property(__recycleAdviceEnd.value, __recycleAdviceEnd.set, None, None)
@@ -2544,20 +2544,20 @@ class recyclingType (pyxb.binding.basis.complexTypeDefinition):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'recyclingType')
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1122, 4)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1122, 4)
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
     # Element {http://www.litle.com/schema}recycleAdvice uses Python identifier recycleAdvice
-    __recycleAdvice = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'recycleAdvice'), 'recycleAdvice', '__httpwww_litle_comschema_recyclingType_httpwww_litle_comschemarecycleAdvice', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1124, 12), )
+    __recycleAdvice = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'recycleAdvice'), 'recycleAdvice', '__httpwww_litle_comschema_recyclingType_httpwww_litle_comschemarecycleAdvice', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1124, 12), )
 
     
     recycleAdvice = property(__recycleAdvice.value, __recycleAdvice.set, None, None)
 
     
     # Element {http://www.litle.com/schema}recycleEngineActive uses Python identifier recycleEngineActive
-    __recycleEngineActive = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'recycleEngineActive'), 'recycleEngineActive', '__httpwww_litle_comschema_recyclingType_httpwww_litle_comschemarecycleEngineActive', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1125, 12), )
+    __recycleEngineActive = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'recycleEngineActive'), 'recycleEngineActive', '__httpwww_litle_comschema_recyclingType_httpwww_litle_comschemarecycleEngineActive', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1125, 12), )
 
     
     recycleEngineActive = property(__recycleEngineActive.value, __recycleEngineActive.set, None, None)
@@ -2580,20 +2580,20 @@ class recyclingRequestType (pyxb.binding.basis.complexTypeDefinition):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'recyclingRequestType')
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1129, 4)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1129, 4)
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
     # Element {http://www.litle.com/schema}recycleBy uses Python identifier recycleBy
-    __recycleBy = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'recycleBy'), 'recycleBy', '__httpwww_litle_comschema_recyclingRequestType_httpwww_litle_comschemarecycleBy', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1131, 12), )
+    __recycleBy = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'recycleBy'), 'recycleBy', '__httpwww_litle_comschema_recyclingRequestType_httpwww_litle_comschemarecycleBy', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1131, 12), )
 
     
     recycleBy = property(__recycleBy.value, __recycleBy.set, None, None)
 
     
     # Element {http://www.litle.com/schema}recycleId uses Python identifier recycleId
-    __recycleId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'recycleId'), 'recycleId', '__httpwww_litle_comschema_recyclingRequestType_httpwww_litle_comschemarecycleId', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1132, 12), )
+    __recycleId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'recycleId'), 'recycleId', '__httpwww_litle_comschema_recyclingRequestType_httpwww_litle_comschemarecycleId', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1132, 12), )
 
     
     recycleId = property(__recycleId.value, __recycleId.set, None, None)
@@ -2616,41 +2616,41 @@ class CTD_ANON_14 (pyxb.binding.basis.complexTypeDefinition):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1137, 8)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1137, 8)
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
     # Element {http://www.litle.com/schema}fundingSource uses Python identifier fundingSource
-    __fundingSource = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'fundingSource'), 'fundingSource', '__httpwww_litle_comschema_CTD_ANON_14_httpwww_litle_comschemafundingSource', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1139, 16), )
+    __fundingSource = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'fundingSource'), 'fundingSource', '__httpwww_litle_comschema_CTD_ANON_14_httpwww_litle_comschemafundingSource', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1139, 16), )
 
     
     fundingSource = property(__fundingSource.value, __fundingSource.set, None, None)
 
     
     # Element {http://www.litle.com/schema}affluence uses Python identifier affluence
-    __affluence = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'affluence'), 'affluence', '__httpwww_litle_comschema_CTD_ANON_14_httpwww_litle_comschemaaffluence', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1149, 16), )
+    __affluence = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'affluence'), 'affluence', '__httpwww_litle_comschema_CTD_ANON_14_httpwww_litle_comschemaaffluence', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1149, 16), )
 
     
     affluence = property(__affluence.value, __affluence.set, None, None)
 
     
     # Element {http://www.litle.com/schema}issuerCountry uses Python identifier issuerCountry
-    __issuerCountry = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'issuerCountry'), 'issuerCountry', '__httpwww_litle_comschema_CTD_ANON_14_httpwww_litle_comschemaissuerCountry', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1150, 16), )
+    __issuerCountry = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'issuerCountry'), 'issuerCountry', '__httpwww_litle_comschema_CTD_ANON_14_httpwww_litle_comschemaissuerCountry', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1150, 16), )
 
     
     issuerCountry = property(__issuerCountry.value, __issuerCountry.set, None, None)
 
     
     # Element {http://www.litle.com/schema}cardProductType uses Python identifier cardProductType
-    __cardProductType = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'cardProductType'), 'cardProductType', '__httpwww_litle_comschema_CTD_ANON_14_httpwww_litle_comschemacardProductType', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1151, 16), )
+    __cardProductType = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'cardProductType'), 'cardProductType', '__httpwww_litle_comschema_CTD_ANON_14_httpwww_litle_comschemacardProductType', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1151, 16), )
 
     
     cardProductType = property(__cardProductType.value, __cardProductType.set, None, None)
 
     
     # Element {http://www.litle.com/schema}virtualAccountNumber uses Python identifier virtualAccountNumber
-    __virtualAccountNumber = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'virtualAccountNumber'), 'virtualAccountNumber', '__httpwww_litle_comschema_CTD_ANON_14_httpwww_litle_comschemavirtualAccountNumber', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1152, 16), )
+    __virtualAccountNumber = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'virtualAccountNumber'), 'virtualAccountNumber', '__httpwww_litle_comschema_CTD_ANON_14_httpwww_litle_comschemavirtualAccountNumber', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1152, 16), )
 
     
     virtualAccountNumber = property(__virtualAccountNumber.value, __virtualAccountNumber.set, None, None)
@@ -2675,34 +2675,34 @@ class CTD_ANON_15 (pyxb.binding.basis.complexTypeDefinition):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1140, 20)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1140, 20)
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
     # Element {http://www.litle.com/schema}type uses Python identifier type
-    __type = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'type'), 'type', '__httpwww_litle_comschema_CTD_ANON_15_httpwww_litle_comschematype', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1142, 28), )
+    __type = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'type'), 'type', '__httpwww_litle_comschema_CTD_ANON_15_httpwww_litle_comschematype', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1142, 28), )
 
     
     type = property(__type.value, __type.set, None, None)
 
     
     # Element {http://www.litle.com/schema}availableBalance uses Python identifier availableBalance
-    __availableBalance = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'availableBalance'), 'availableBalance', '__httpwww_litle_comschema_CTD_ANON_15_httpwww_litle_comschemaavailableBalance', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1143, 28), )
+    __availableBalance = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'availableBalance'), 'availableBalance', '__httpwww_litle_comschema_CTD_ANON_15_httpwww_litle_comschemaavailableBalance', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1143, 28), )
 
     
     availableBalance = property(__availableBalance.value, __availableBalance.set, None, None)
 
     
     # Element {http://www.litle.com/schema}reloadable uses Python identifier reloadable
-    __reloadable = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'reloadable'), 'reloadable', '__httpwww_litle_comschema_CTD_ANON_15_httpwww_litle_comschemareloadable', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1144, 28), )
+    __reloadable = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'reloadable'), 'reloadable', '__httpwww_litle_comschema_CTD_ANON_15_httpwww_litle_comschemareloadable', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1144, 28), )
 
     
     reloadable = property(__reloadable.value, __reloadable.set, None, None)
 
     
     # Element {http://www.litle.com/schema}prepaidCardType uses Python identifier prepaidCardType
-    __prepaidCardType = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'prepaidCardType'), 'prepaidCardType', '__httpwww_litle_comschema_CTD_ANON_15_httpwww_litle_comschemaprepaidCardType', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1145, 28), )
+    __prepaidCardType = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'prepaidCardType'), 'prepaidCardType', '__httpwww_litle_comschema_CTD_ANON_15_httpwww_litle_comschemaprepaidCardType', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1145, 28), )
 
     
     prepaidCardType = property(__prepaidCardType.value, __prepaidCardType.set, None, None)
@@ -2726,41 +2726,41 @@ class CTD_ANON_16 (pyxb.binding.basis.complexTypeDefinition):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1444, 8)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1444, 8)
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
     # Element {http://www.litle.com/schema}avsResult uses Python identifier avsResult
-    __avsResult = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'avsResult'), 'avsResult', '__httpwww_litle_comschema_CTD_ANON_16_httpwww_litle_comschemaavsResult', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1446, 16), )
+    __avsResult = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'avsResult'), 'avsResult', '__httpwww_litle_comschema_CTD_ANON_16_httpwww_litle_comschemaavsResult', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1446, 16), )
 
     
     avsResult = property(__avsResult.value, __avsResult.set, None, None)
 
     
     # Element {http://www.litle.com/schema}cardValidationResult uses Python identifier cardValidationResult
-    __cardValidationResult = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'cardValidationResult'), 'cardValidationResult', '__httpwww_litle_comschema_CTD_ANON_16_httpwww_litle_comschemacardValidationResult', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1447, 16), )
+    __cardValidationResult = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'cardValidationResult'), 'cardValidationResult', '__httpwww_litle_comschema_CTD_ANON_16_httpwww_litle_comschemacardValidationResult', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1447, 16), )
 
     
     cardValidationResult = property(__cardValidationResult.value, __cardValidationResult.set, None, None)
 
     
     # Element {http://www.litle.com/schema}authenticationResult uses Python identifier authenticationResult
-    __authenticationResult = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'authenticationResult'), 'authenticationResult', '__httpwww_litle_comschema_CTD_ANON_16_httpwww_litle_comschemaauthenticationResult', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1449, 16), )
+    __authenticationResult = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'authenticationResult'), 'authenticationResult', '__httpwww_litle_comschema_CTD_ANON_16_httpwww_litle_comschemaauthenticationResult', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1449, 16), )
 
     
     authenticationResult = property(__authenticationResult.value, __authenticationResult.set, None, None)
 
     
     # Element {http://www.litle.com/schema}advancedAVSResult uses Python identifier advancedAVSResult
-    __advancedAVSResult = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'advancedAVSResult'), 'advancedAVSResult', '__httpwww_litle_comschema_CTD_ANON_16_httpwww_litle_comschemaadvancedAVSResult', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1450, 16), )
+    __advancedAVSResult = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'advancedAVSResult'), 'advancedAVSResult', '__httpwww_litle_comschema_CTD_ANON_16_httpwww_litle_comschemaadvancedAVSResult', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1450, 16), )
 
     
     advancedAVSResult = property(__advancedAVSResult.value, __advancedAVSResult.set, None, None)
 
     
     # Element {http://www.litle.com/schema}advancedFraudResults uses Python identifier advancedFraudResults
-    __advancedFraudResults = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'advancedFraudResults'), 'advancedFraudResults', '__httpwww_litle_comschema_CTD_ANON_16_httpwww_litle_comschemaadvancedFraudResults', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1451, 16), )
+    __advancedFraudResults = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'advancedFraudResults'), 'advancedFraudResults', '__httpwww_litle_comschema_CTD_ANON_16_httpwww_litle_comschemaadvancedFraudResults', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1451, 16), )
 
     
     advancedFraudResults = property(__advancedFraudResults.value, __advancedFraudResults.set, None, None)
@@ -2785,34 +2785,34 @@ class CTD_ANON_17 (pyxb.binding.basis.complexTypeDefinition):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1524, 7)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1524, 7)
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
     # Element {http://www.litle.com/schema}availableBalance uses Python identifier availableBalance
-    __availableBalance = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'availableBalance'), 'availableBalance', '__httpwww_litle_comschema_CTD_ANON_17_httpwww_litle_comschemaavailableBalance', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1526, 13), )
+    __availableBalance = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'availableBalance'), 'availableBalance', '__httpwww_litle_comschema_CTD_ANON_17_httpwww_litle_comschemaavailableBalance', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1526, 13), )
 
     
     availableBalance = property(__availableBalance.value, __availableBalance.set, None, None)
 
     
     # Element {http://www.litle.com/schema}beginningBalance uses Python identifier beginningBalance
-    __beginningBalance = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'beginningBalance'), 'beginningBalance', '__httpwww_litle_comschema_CTD_ANON_17_httpwww_litle_comschemabeginningBalance', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1527, 13), )
+    __beginningBalance = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'beginningBalance'), 'beginningBalance', '__httpwww_litle_comschema_CTD_ANON_17_httpwww_litle_comschemabeginningBalance', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1527, 13), )
 
     
     beginningBalance = property(__beginningBalance.value, __beginningBalance.set, None, None)
 
     
     # Element {http://www.litle.com/schema}endingBalance uses Python identifier endingBalance
-    __endingBalance = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'endingBalance'), 'endingBalance', '__httpwww_litle_comschema_CTD_ANON_17_httpwww_litle_comschemaendingBalance', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1528, 13), )
+    __endingBalance = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'endingBalance'), 'endingBalance', '__httpwww_litle_comschema_CTD_ANON_17_httpwww_litle_comschemaendingBalance', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1528, 13), )
 
     
     endingBalance = property(__endingBalance.value, __endingBalance.set, None, None)
 
     
     # Element {http://www.litle.com/schema}cashBackAmount uses Python identifier cashBackAmount
-    __cashBackAmount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'cashBackAmount'), 'cashBackAmount', '__httpwww_litle_comschema_CTD_ANON_17_httpwww_litle_comschemacashBackAmount', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1529, 13), )
+    __cashBackAmount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'cashBackAmount'), 'cashBackAmount', '__httpwww_litle_comschema_CTD_ANON_17_httpwww_litle_comschemacashBackAmount', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1529, 13), )
 
     
     cashBackAmount = property(__cashBackAmount.value, __cashBackAmount.set, None, None)
@@ -2836,27 +2836,27 @@ class CTD_ANON_18 (pyxb.binding.basis.complexTypeDefinition):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1535, 7)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1535, 7)
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
     # Element {http://www.litle.com/schema}accountNumber uses Python identifier accountNumber
-    __accountNumber = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'accountNumber'), 'accountNumber', '__httpwww_litle_comschema_CTD_ANON_18_httpwww_litle_comschemaaccountNumber', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1537, 13), )
+    __accountNumber = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'accountNumber'), 'accountNumber', '__httpwww_litle_comschema_CTD_ANON_18_httpwww_litle_comschemaaccountNumber', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1537, 13), )
 
     
     accountNumber = property(__accountNumber.value, __accountNumber.set, None, None)
 
     
     # Element {http://www.litle.com/schema}cardValidationNum uses Python identifier cardValidationNum
-    __cardValidationNum = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'cardValidationNum'), 'cardValidationNum', '__httpwww_litle_comschema_CTD_ANON_18_httpwww_litle_comschemacardValidationNum', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1538, 13), )
+    __cardValidationNum = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'cardValidationNum'), 'cardValidationNum', '__httpwww_litle_comschema_CTD_ANON_18_httpwww_litle_comschemacardValidationNum', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1538, 13), )
 
     
     cardValidationNum = property(__cardValidationNum.value, __cardValidationNum.set, None, None)
 
     
     # Element {http://www.litle.com/schema}pin uses Python identifier pin
-    __pin = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'pin'), 'pin', '__httpwww_litle_comschema_CTD_ANON_18_httpwww_litle_comschemapin', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1539, 13), )
+    __pin = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'pin'), 'pin', '__httpwww_litle_comschema_CTD_ANON_18_httpwww_litle_comschemapin', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1539, 13), )
 
     
     pin = property(__pin.value, __pin.set, None, None)
@@ -2879,27 +2879,27 @@ class echeckAccountInfoType (pyxb.binding.basis.complexTypeDefinition):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'echeckAccountInfoType')
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1709, 4)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1709, 4)
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
     # Element {http://www.litle.com/schema}accType uses Python identifier accType
-    __accType = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'accType'), 'accType', '__httpwww_litle_comschema_echeckAccountInfoType_httpwww_litle_comschemaaccType', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1711, 16), )
+    __accType = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'accType'), 'accType', '__httpwww_litle_comschema_echeckAccountInfoType_httpwww_litle_comschemaaccType', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1711, 16), )
 
     
     accType = property(__accType.value, __accType.set, None, None)
 
     
     # Element {http://www.litle.com/schema}accNum uses Python identifier accNum
-    __accNum = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'accNum'), 'accNum', '__httpwww_litle_comschema_echeckAccountInfoType_httpwww_litle_comschemaaccNum', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1712, 16), )
+    __accNum = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'accNum'), 'accNum', '__httpwww_litle_comschema_echeckAccountInfoType_httpwww_litle_comschemaaccNum', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1712, 16), )
 
     
     accNum = property(__accNum.value, __accNum.set, None, None)
 
     
     # Element {http://www.litle.com/schema}routingNum uses Python identifier routingNum
-    __routingNum = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'routingNum'), 'routingNum', '__httpwww_litle_comschema_echeckAccountInfoType_httpwww_litle_comschemaroutingNum', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1713, 16), )
+    __routingNum = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'routingNum'), 'routingNum', '__httpwww_litle_comschema_echeckAccountInfoType_httpwww_litle_comschemaroutingNum', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1713, 16), )
 
     
     routingNum = property(__routingNum.value, __routingNum.set, None, None)
@@ -2923,27 +2923,27 @@ class echeckTokenInfoType (pyxb.binding.basis.complexTypeDefinition):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'echeckTokenInfoType')
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1717, 4)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1717, 4)
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
     # Element {http://www.litle.com/schema}accType uses Python identifier accType
-    __accType = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'accType'), 'accType', '__httpwww_litle_comschema_echeckTokenInfoType_httpwww_litle_comschemaaccType', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1719, 16), )
+    __accType = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'accType'), 'accType', '__httpwww_litle_comschema_echeckTokenInfoType_httpwww_litle_comschemaaccType', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1719, 16), )
 
     
     accType = property(__accType.value, __accType.set, None, None)
 
     
     # Element {http://www.litle.com/schema}litleToken uses Python identifier litleToken
-    __litleToken = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'litleToken'), 'litleToken', '__httpwww_litle_comschema_echeckTokenInfoType_httpwww_litle_comschemalitleToken', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1720, 16), )
+    __litleToken = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'litleToken'), 'litleToken', '__httpwww_litle_comschema_echeckTokenInfoType_httpwww_litle_comschemalitleToken', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1720, 16), )
 
     
     litleToken = property(__litleToken.value, __litleToken.set, None, None)
 
     
     # Element {http://www.litle.com/schema}routingNum uses Python identifier routingNum
-    __routingNum = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'routingNum'), 'routingNum', '__httpwww_litle_comschema_echeckTokenInfoType_httpwww_litle_comschemaroutingNum', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1721, 16), )
+    __routingNum = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'routingNum'), 'routingNum', '__httpwww_litle_comschema_echeckTokenInfoType_httpwww_litle_comschemaroutingNum', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1721, 16), )
 
     
     routingNum = property(__routingNum.value, __routingNum.set, None, None)
@@ -2967,27 +2967,27 @@ class cardAccountInfoType (pyxb.binding.basis.complexTypeDefinition):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'cardAccountInfoType')
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1726, 4)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1726, 4)
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
     # Element {http://www.litle.com/schema}type uses Python identifier type
-    __type = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'type'), 'type', '__httpwww_litle_comschema_cardAccountInfoType_httpwww_litle_comschematype', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1728, 16), )
+    __type = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'type'), 'type', '__httpwww_litle_comschema_cardAccountInfoType_httpwww_litle_comschematype', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1728, 16), )
 
     
     type = property(__type.value, __type.set, None, None)
 
     
     # Element {http://www.litle.com/schema}number uses Python identifier number
-    __number = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'number'), 'number', '__httpwww_litle_comschema_cardAccountInfoType_httpwww_litle_comschemanumber', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1729, 16), )
+    __number = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'number'), 'number', '__httpwww_litle_comschema_cardAccountInfoType_httpwww_litle_comschemanumber', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1729, 16), )
 
     
     number = property(__number.value, __number.set, None, None)
 
     
     # Element {http://www.litle.com/schema}expDate uses Python identifier expDate
-    __expDate = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'expDate'), 'expDate', '__httpwww_litle_comschema_cardAccountInfoType_httpwww_litle_comschemaexpDate', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1730, 16), )
+    __expDate = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'expDate'), 'expDate', '__httpwww_litle_comschema_cardAccountInfoType_httpwww_litle_comschemaexpDate', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1730, 16), )
 
     
     expDate = property(__expDate.value, __expDate.set, None, None)
@@ -3011,34 +3011,34 @@ class cardTokenInfoType (pyxb.binding.basis.complexTypeDefinition):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'cardTokenInfoType')
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1734, 4)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1734, 4)
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
     # Element {http://www.litle.com/schema}litleToken uses Python identifier litleToken
-    __litleToken = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'litleToken'), 'litleToken', '__httpwww_litle_comschema_cardTokenInfoType_httpwww_litle_comschemalitleToken', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1736, 16), )
+    __litleToken = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'litleToken'), 'litleToken', '__httpwww_litle_comschema_cardTokenInfoType_httpwww_litle_comschemalitleToken', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1736, 16), )
 
     
     litleToken = property(__litleToken.value, __litleToken.set, None, None)
 
     
     # Element {http://www.litle.com/schema}type uses Python identifier type
-    __type = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'type'), 'type', '__httpwww_litle_comschema_cardTokenInfoType_httpwww_litle_comschematype', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1737, 16), )
+    __type = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'type'), 'type', '__httpwww_litle_comschema_cardTokenInfoType_httpwww_litle_comschematype', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1737, 16), )
 
     
     type = property(__type.value, __type.set, None, None)
 
     
     # Element {http://www.litle.com/schema}expDate uses Python identifier expDate
-    __expDate = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'expDate'), 'expDate', '__httpwww_litle_comschema_cardTokenInfoType_httpwww_litle_comschemaexpDate', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1738, 16), )
+    __expDate = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'expDate'), 'expDate', '__httpwww_litle_comschema_cardTokenInfoType_httpwww_litle_comschemaexpDate', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1738, 16), )
 
     
     expDate = property(__expDate.value, __expDate.set, None, None)
 
     
     # Element {http://www.litle.com/schema}bin uses Python identifier bin
-    __bin = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'bin'), 'bin', '__httpwww_litle_comschema_cardTokenInfoType_httpwww_litle_comschemabin', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1739, 16), )
+    __bin = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'bin'), 'bin', '__httpwww_litle_comschema_cardTokenInfoType_httpwww_litle_comschemabin', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1739, 16), )
 
     
     bin = property(__bin.value, __bin.set, None, None)
@@ -3063,20 +3063,20 @@ class extendedCardResponseType (pyxb.binding.basis.complexTypeDefinition):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'extendedCardResponseType')
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1744, 4)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1744, 4)
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
     # Element {http://www.litle.com/schema}message uses Python identifier message
-    __message = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'message'), 'message', '__httpwww_litle_comschema_extendedCardResponseType_httpwww_litle_comschemamessage', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1746, 16), )
+    __message = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'message'), 'message', '__httpwww_litle_comschema_extendedCardResponseType_httpwww_litle_comschemamessage', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1746, 16), )
 
     
     message = property(__message.value, __message.set, None, None)
 
     
     # Element {http://www.litle.com/schema}code uses Python identifier code
-    __code = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'code'), 'code', '__httpwww_litle_comschema_extendedCardResponseType_httpwww_litle_comschemacode', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1747, 16), )
+    __code = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'code'), 'code', '__httpwww_litle_comschema_extendedCardResponseType_httpwww_litle_comschemacode', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1747, 16), )
 
     
     code = property(__code.value, __code.set, None, None)
@@ -3099,69 +3099,69 @@ class CTD_ANON_19 (pyxb.binding.basis.complexTypeDefinition):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1753, 8)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1753, 8)
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
     # Element {http://www.litle.com/schema}originalAccountInfo uses Python identifier originalAccountInfo
-    __originalAccountInfo = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'originalAccountInfo'), 'originalAccountInfo', '__httpwww_litle_comschema_CTD_ANON_19_httpwww_litle_comschemaoriginalAccountInfo', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1756, 20), )
+    __originalAccountInfo = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'originalAccountInfo'), 'originalAccountInfo', '__httpwww_litle_comschema_CTD_ANON_19_httpwww_litle_comschemaoriginalAccountInfo', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1756, 20), )
 
     
     originalAccountInfo = property(__originalAccountInfo.value, __originalAccountInfo.set, None, None)
 
     
     # Element {http://www.litle.com/schema}newAccountInfo uses Python identifier newAccountInfo
-    __newAccountInfo = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'newAccountInfo'), 'newAccountInfo', '__httpwww_litle_comschema_CTD_ANON_19_httpwww_litle_comschemanewAccountInfo', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1757, 20), )
+    __newAccountInfo = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'newAccountInfo'), 'newAccountInfo', '__httpwww_litle_comschema_CTD_ANON_19_httpwww_litle_comschemanewAccountInfo', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1757, 20), )
 
     
     newAccountInfo = property(__newAccountInfo.value, __newAccountInfo.set, None, None)
 
     
     # Element {http://www.litle.com/schema}originalTokenInfo uses Python identifier originalTokenInfo
-    __originalTokenInfo = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'originalTokenInfo'), 'originalTokenInfo', '__httpwww_litle_comschema_CTD_ANON_19_httpwww_litle_comschemaoriginalTokenInfo', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1761, 20), )
+    __originalTokenInfo = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'originalTokenInfo'), 'originalTokenInfo', '__httpwww_litle_comschema_CTD_ANON_19_httpwww_litle_comschemaoriginalTokenInfo', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1761, 20), )
 
     
     originalTokenInfo = property(__originalTokenInfo.value, __originalTokenInfo.set, None, None)
 
     
     # Element {http://www.litle.com/schema}newTokenInfo uses Python identifier newTokenInfo
-    __newTokenInfo = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'newTokenInfo'), 'newTokenInfo', '__httpwww_litle_comschema_CTD_ANON_19_httpwww_litle_comschemanewTokenInfo', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1762, 20), )
+    __newTokenInfo = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'newTokenInfo'), 'newTokenInfo', '__httpwww_litle_comschema_CTD_ANON_19_httpwww_litle_comschemanewTokenInfo', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1762, 20), )
 
     
     newTokenInfo = property(__newTokenInfo.value, __newTokenInfo.set, None, None)
 
     
     # Element {http://www.litle.com/schema}originalCardInfo uses Python identifier originalCardInfo
-    __originalCardInfo = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'originalCardInfo'), 'originalCardInfo', '__httpwww_litle_comschema_CTD_ANON_19_httpwww_litle_comschemaoriginalCardInfo', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1766, 20), )
+    __originalCardInfo = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'originalCardInfo'), 'originalCardInfo', '__httpwww_litle_comschema_CTD_ANON_19_httpwww_litle_comschemaoriginalCardInfo', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1766, 20), )
 
     
     originalCardInfo = property(__originalCardInfo.value, __originalCardInfo.set, None, None)
 
     
     # Element {http://www.litle.com/schema}newCardInfo uses Python identifier newCardInfo
-    __newCardInfo = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'newCardInfo'), 'newCardInfo', '__httpwww_litle_comschema_CTD_ANON_19_httpwww_litle_comschemanewCardInfo', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1767, 20), )
+    __newCardInfo = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'newCardInfo'), 'newCardInfo', '__httpwww_litle_comschema_CTD_ANON_19_httpwww_litle_comschemanewCardInfo', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1767, 20), )
 
     
     newCardInfo = property(__newCardInfo.value, __newCardInfo.set, None, None)
 
     
     # Element {http://www.litle.com/schema}extendedCardResponse uses Python identifier extendedCardResponse
-    __extendedCardResponse = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'extendedCardResponse'), 'extendedCardResponse', '__httpwww_litle_comschema_CTD_ANON_19_httpwww_litle_comschemaextendedCardResponse', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1768, 20), )
+    __extendedCardResponse = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'extendedCardResponse'), 'extendedCardResponse', '__httpwww_litle_comschema_CTD_ANON_19_httpwww_litle_comschemaextendedCardResponse', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1768, 20), )
 
     
     extendedCardResponse = property(__extendedCardResponse.value, __extendedCardResponse.set, None, None)
 
     
     # Element {http://www.litle.com/schema}originalCardTokenInfo uses Python identifier originalCardTokenInfo
-    __originalCardTokenInfo = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'originalCardTokenInfo'), 'originalCardTokenInfo', '__httpwww_litle_comschema_CTD_ANON_19_httpwww_litle_comschemaoriginalCardTokenInfo', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1772, 20), )
+    __originalCardTokenInfo = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'originalCardTokenInfo'), 'originalCardTokenInfo', '__httpwww_litle_comschema_CTD_ANON_19_httpwww_litle_comschemaoriginalCardTokenInfo', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1772, 20), )
 
     
     originalCardTokenInfo = property(__originalCardTokenInfo.value, __originalCardTokenInfo.set, None, None)
 
     
     # Element {http://www.litle.com/schema}newCardTokenInfo uses Python identifier newCardTokenInfo
-    __newCardTokenInfo = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'newCardTokenInfo'), 'newCardTokenInfo', '__httpwww_litle_comschema_CTD_ANON_19_httpwww_litle_comschemanewCardTokenInfo', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1773, 20), )
+    __newCardTokenInfo = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'newCardTokenInfo'), 'newCardTokenInfo', '__httpwww_litle_comschema_CTD_ANON_19_httpwww_litle_comschemanewCardTokenInfo', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1773, 20), )
 
     
     newCardTokenInfo = property(__newCardTokenInfo.value, __newCardTokenInfo.set, None, None)
@@ -3190,41 +3190,41 @@ class echeckType (pyxb.binding.basis.complexTypeDefinition):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'echeckType')
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1834, 4)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1834, 4)
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
     # Element {http://www.litle.com/schema}accType uses Python identifier accType
-    __accType = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'accType'), 'accType', '__httpwww_litle_comschema_echeckType_httpwww_litle_comschemaaccType', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1836, 12), )
+    __accType = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'accType'), 'accType', '__httpwww_litle_comschema_echeckType_httpwww_litle_comschemaaccType', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1836, 12), )
 
     
     accType = property(__accType.value, __accType.set, None, None)
 
     
     # Element {http://www.litle.com/schema}accNum uses Python identifier accNum
-    __accNum = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'accNum'), 'accNum', '__httpwww_litle_comschema_echeckType_httpwww_litle_comschemaaccNum', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1837, 12), )
+    __accNum = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'accNum'), 'accNum', '__httpwww_litle_comschema_echeckType_httpwww_litle_comschemaaccNum', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1837, 12), )
 
     
     accNum = property(__accNum.value, __accNum.set, None, None)
 
     
     # Element {http://www.litle.com/schema}routingNum uses Python identifier routingNum
-    __routingNum = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'routingNum'), 'routingNum', '__httpwww_litle_comschema_echeckType_httpwww_litle_comschemaroutingNum', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1838, 12), )
+    __routingNum = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'routingNum'), 'routingNum', '__httpwww_litle_comschema_echeckType_httpwww_litle_comschemaroutingNum', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1838, 12), )
 
     
     routingNum = property(__routingNum.value, __routingNum.set, None, None)
 
     
     # Element {http://www.litle.com/schema}checkNum uses Python identifier checkNum
-    __checkNum = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'checkNum'), 'checkNum', '__httpwww_litle_comschema_echeckType_httpwww_litle_comschemacheckNum', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1839, 12), )
+    __checkNum = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'checkNum'), 'checkNum', '__httpwww_litle_comschema_echeckType_httpwww_litle_comschemacheckNum', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1839, 12), )
 
     
     checkNum = property(__checkNum.value, __checkNum.set, None, None)
 
     
     # Element {http://www.litle.com/schema}ccdPaymentInformation uses Python identifier ccdPaymentInformation
-    __ccdPaymentInformation = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'ccdPaymentInformation'), 'ccdPaymentInformation', '__httpwww_litle_comschema_echeckType_httpwww_litle_comschemaccdPaymentInformation', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1840, 12), )
+    __ccdPaymentInformation = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'ccdPaymentInformation'), 'ccdPaymentInformation', '__httpwww_litle_comschema_echeckType_httpwww_litle_comschemaccdPaymentInformation', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1840, 12), )
 
     
     ccdPaymentInformation = property(__ccdPaymentInformation.value, __ccdPaymentInformation.set, None, None)
@@ -3250,20 +3250,20 @@ class echeckForTokenType (pyxb.binding.basis.complexTypeDefinition):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'echeckForTokenType')
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1844, 4)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1844, 4)
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
     # Element {http://www.litle.com/schema}accNum uses Python identifier accNum
-    __accNum = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'accNum'), 'accNum', '__httpwww_litle_comschema_echeckForTokenType_httpwww_litle_comschemaaccNum', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1846, 12), )
+    __accNum = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'accNum'), 'accNum', '__httpwww_litle_comschema_echeckForTokenType_httpwww_litle_comschemaaccNum', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1846, 12), )
 
     
     accNum = property(__accNum.value, __accNum.set, None, None)
 
     
     # Element {http://www.litle.com/schema}routingNum uses Python identifier routingNum
-    __routingNum = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'routingNum'), 'routingNum', '__httpwww_litle_comschema_echeckForTokenType_httpwww_litle_comschemaroutingNum', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1847, 12), )
+    __routingNum = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'routingNum'), 'routingNum', '__httpwww_litle_comschema_echeckForTokenType_httpwww_litle_comschemaroutingNum', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1847, 12), )
 
     
     routingNum = property(__routingNum.value, __routingNum.set, None, None)
@@ -3286,27 +3286,27 @@ class filteringType (pyxb.binding.basis.complexTypeDefinition):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'filteringType')
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1860, 4)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1860, 4)
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
     # Element {http://www.litle.com/schema}prepaid uses Python identifier prepaid
-    __prepaid = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'prepaid'), 'prepaid', '__httpwww_litle_comschema_filteringType_httpwww_litle_comschemaprepaid', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1862, 12), )
+    __prepaid = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'prepaid'), 'prepaid', '__httpwww_litle_comschema_filteringType_httpwww_litle_comschemaprepaid', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1862, 12), )
 
     
     prepaid = property(__prepaid.value, __prepaid.set, None, None)
 
     
     # Element {http://www.litle.com/schema}international uses Python identifier international
-    __international = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'international'), 'international', '__httpwww_litle_comschema_filteringType_httpwww_litle_comschemainternational', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1863, 12), )
+    __international = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'international'), 'international', '__httpwww_litle_comschema_filteringType_httpwww_litle_comschemainternational', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1863, 12), )
 
     
     international = property(__international.value, __international.set, None, None)
 
     
     # Element {http://www.litle.com/schema}chargeback uses Python identifier chargeback
-    __chargeback = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'chargeback'), 'chargeback', '__httpwww_litle_comschema_filteringType_httpwww_litle_comschemachargeback', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1864, 12), )
+    __chargeback = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'chargeback'), 'chargeback', '__httpwww_litle_comschema_filteringType_httpwww_litle_comschemachargeback', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1864, 12), )
 
     
     chargeback = property(__chargeback.value, __chargeback.set, None, None)
@@ -3330,20 +3330,20 @@ class virtualGiftCardType (pyxb.binding.basis.complexTypeDefinition):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'virtualGiftCardType')
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1901, 4)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1901, 4)
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
     # Element {http://www.litle.com/schema}accountNumberLength uses Python identifier accountNumberLength
-    __accountNumberLength = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'accountNumberLength'), 'accountNumberLength', '__httpwww_litle_comschema_virtualGiftCardType_httpwww_litle_comschemaaccountNumberLength', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1903, 20), )
+    __accountNumberLength = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'accountNumberLength'), 'accountNumberLength', '__httpwww_litle_comschema_virtualGiftCardType_httpwww_litle_comschemaaccountNumberLength', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1903, 20), )
 
     
     accountNumberLength = property(__accountNumberLength.value, __accountNumberLength.set, None, None)
 
     
     # Element {http://www.litle.com/schema}giftCardBin uses Python identifier giftCardBin
-    __giftCardBin = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'giftCardBin'), 'giftCardBin', '__httpwww_litle_comschema_virtualGiftCardType_httpwww_litle_comschemagiftCardBin', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1904, 20), )
+    __giftCardBin = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'giftCardBin'), 'giftCardBin', '__httpwww_litle_comschema_virtualGiftCardType_httpwww_litle_comschemagiftCardBin', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1904, 20), )
 
     
     giftCardBin = property(__giftCardBin.value, __giftCardBin.set, None, None)
@@ -3366,20 +3366,20 @@ class CTD_ANON_20 (pyxb.binding.basis.complexTypeDefinition):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1941, 8)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1941, 8)
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
     # Element {http://www.litle.com/schema}walletSourceType uses Python identifier walletSourceType
-    __walletSourceType = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'walletSourceType'), 'walletSourceType', '__httpwww_litle_comschema_CTD_ANON_20_httpwww_litle_comschemawalletSourceType', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1943, 16), )
+    __walletSourceType = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'walletSourceType'), 'walletSourceType', '__httpwww_litle_comschema_CTD_ANON_20_httpwww_litle_comschemawalletSourceType', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1943, 16), )
 
     
     walletSourceType = property(__walletSourceType.value, __walletSourceType.set, None, None)
 
     
     # Element {http://www.litle.com/schema}walletSourceTypeId uses Python identifier walletSourceTypeId
-    __walletSourceTypeId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'walletSourceTypeId'), 'walletSourceTypeId', '__httpwww_litle_comschema_CTD_ANON_20_httpwww_litle_comschemawalletSourceTypeId', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1944, 16), )
+    __walletSourceTypeId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'walletSourceTypeId'), 'walletSourceTypeId', '__httpwww_litle_comschema_CTD_ANON_20_httpwww_litle_comschemawalletSourceTypeId', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1944, 16), )
 
     
     walletSourceTypeId = property(__walletSourceTypeId.value, __walletSourceTypeId.set, None, None)
@@ -3401,34 +3401,34 @@ class applepayType (pyxb.binding.basis.complexTypeDefinition):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'applepayType')
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1949, 4)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1949, 4)
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
     # Element {http://www.litle.com/schema}data uses Python identifier data
-    __data = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'data'), 'data', '__httpwww_litle_comschema_applepayType_httpwww_litle_comschemadata', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1951, 12), )
+    __data = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'data'), 'data', '__httpwww_litle_comschema_applepayType_httpwww_litle_comschemadata', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1951, 12), )
 
     
     data = property(__data.value, __data.set, None, None)
 
     
     # Element {http://www.litle.com/schema}header uses Python identifier header
-    __header = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'header'), 'header', '__httpwww_litle_comschema_applepayType_httpwww_litle_comschemaheader', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1952, 12), )
+    __header = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'header'), 'header', '__httpwww_litle_comschema_applepayType_httpwww_litle_comschemaheader', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1952, 12), )
 
     
     header = property(__header.value, __header.set, None, None)
 
     
     # Element {http://www.litle.com/schema}signature uses Python identifier signature
-    __signature = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'signature'), 'signature', '__httpwww_litle_comschema_applepayType_httpwww_litle_comschemasignature', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1953, 12), )
+    __signature = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'signature'), 'signature', '__httpwww_litle_comschema_applepayType_httpwww_litle_comschemasignature', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1953, 12), )
 
     
     signature = property(__signature.value, __signature.set, None, None)
 
     
     # Element {http://www.litle.com/schema}version uses Python identifier version
-    __version = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'version'), 'version', '__httpwww_litle_comschema_applepayType_httpwww_litle_comschemaversion', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1954, 12), )
+    __version = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'version'), 'version', '__httpwww_litle_comschema_applepayType_httpwww_litle_comschemaversion', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1954, 12), )
 
     
     version = property(__version.value, __version.set, None, None)
@@ -3453,34 +3453,34 @@ class applepayHeaderType (pyxb.binding.basis.complexTypeDefinition):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'applepayHeaderType')
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1958, 4)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1958, 4)
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
     # Element {http://www.litle.com/schema}applicationData uses Python identifier applicationData
-    __applicationData = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'applicationData'), 'applicationData', '__httpwww_litle_comschema_applepayHeaderType_httpwww_litle_comschemaapplicationData', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1960, 12), )
+    __applicationData = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'applicationData'), 'applicationData', '__httpwww_litle_comschema_applepayHeaderType_httpwww_litle_comschemaapplicationData', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1960, 12), )
 
     
     applicationData = property(__applicationData.value, __applicationData.set, None, None)
 
     
     # Element {http://www.litle.com/schema}ephemeralPublicKey uses Python identifier ephemeralPublicKey
-    __ephemeralPublicKey = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'ephemeralPublicKey'), 'ephemeralPublicKey', '__httpwww_litle_comschema_applepayHeaderType_httpwww_litle_comschemaephemeralPublicKey', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1961, 12), )
+    __ephemeralPublicKey = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'ephemeralPublicKey'), 'ephemeralPublicKey', '__httpwww_litle_comschema_applepayHeaderType_httpwww_litle_comschemaephemeralPublicKey', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1961, 12), )
 
     
     ephemeralPublicKey = property(__ephemeralPublicKey.value, __ephemeralPublicKey.set, None, None)
 
     
     # Element {http://www.litle.com/schema}publicKeyHash uses Python identifier publicKeyHash
-    __publicKeyHash = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'publicKeyHash'), 'publicKeyHash', '__httpwww_litle_comschema_applepayHeaderType_httpwww_litle_comschemapublicKeyHash', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1962, 12), )
+    __publicKeyHash = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'publicKeyHash'), 'publicKeyHash', '__httpwww_litle_comschema_applepayHeaderType_httpwww_litle_comschemapublicKeyHash', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1962, 12), )
 
     
     publicKeyHash = property(__publicKeyHash.value, __publicKeyHash.set, None, None)
 
     
     # Element {http://www.litle.com/schema}transactionId uses Python identifier transactionId
-    __transactionId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'transactionId'), 'transactionId', '__httpwww_litle_comschema_applepayHeaderType_httpwww_litle_comschematransactionId', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1963, 12), )
+    __transactionId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'transactionId'), 'transactionId', '__httpwww_litle_comschema_applepayHeaderType_httpwww_litle_comschematransactionId', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1963, 12), )
 
     
     transactionId = property(__transactionId.value, __transactionId.set, None, None)
@@ -3505,69 +3505,69 @@ class CTD_ANON_21 (pyxb.binding.basis.complexTypeDefinition):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1968, 7)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1968, 7)
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
     # Element {http://www.litle.com/schema}applicationPrimaryAccountNumber uses Python identifier applicationPrimaryAccountNumber
-    __applicationPrimaryAccountNumber = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'applicationPrimaryAccountNumber'), 'applicationPrimaryAccountNumber', '__httpwww_litle_comschema_CTD_ANON_21_httpwww_litle_comschemaapplicationPrimaryAccountNumber', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1970, 13), )
+    __applicationPrimaryAccountNumber = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'applicationPrimaryAccountNumber'), 'applicationPrimaryAccountNumber', '__httpwww_litle_comschema_CTD_ANON_21_httpwww_litle_comschemaapplicationPrimaryAccountNumber', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1970, 13), )
 
     
     applicationPrimaryAccountNumber = property(__applicationPrimaryAccountNumber.value, __applicationPrimaryAccountNumber.set, None, None)
 
     
     # Element {http://www.litle.com/schema}applicationExpirationDate uses Python identifier applicationExpirationDate
-    __applicationExpirationDate = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'applicationExpirationDate'), 'applicationExpirationDate', '__httpwww_litle_comschema_CTD_ANON_21_httpwww_litle_comschemaapplicationExpirationDate', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1971, 13), )
+    __applicationExpirationDate = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'applicationExpirationDate'), 'applicationExpirationDate', '__httpwww_litle_comschema_CTD_ANON_21_httpwww_litle_comschemaapplicationExpirationDate', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1971, 13), )
 
     
     applicationExpirationDate = property(__applicationExpirationDate.value, __applicationExpirationDate.set, None, None)
 
     
     # Element {http://www.litle.com/schema}currencyCode uses Python identifier currencyCode
-    __currencyCode = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'currencyCode'), 'currencyCode', '__httpwww_litle_comschema_CTD_ANON_21_httpwww_litle_comschemacurrencyCode', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1972, 13), )
+    __currencyCode = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'currencyCode'), 'currencyCode', '__httpwww_litle_comschema_CTD_ANON_21_httpwww_litle_comschemacurrencyCode', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1972, 13), )
 
     
     currencyCode = property(__currencyCode.value, __currencyCode.set, None, None)
 
     
     # Element {http://www.litle.com/schema}transactionAmount uses Python identifier transactionAmount
-    __transactionAmount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'transactionAmount'), 'transactionAmount', '__httpwww_litle_comschema_CTD_ANON_21_httpwww_litle_comschematransactionAmount', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1973, 13), )
+    __transactionAmount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'transactionAmount'), 'transactionAmount', '__httpwww_litle_comschema_CTD_ANON_21_httpwww_litle_comschematransactionAmount', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1973, 13), )
 
     
     transactionAmount = property(__transactionAmount.value, __transactionAmount.set, None, None)
 
     
     # Element {http://www.litle.com/schema}cardholderName uses Python identifier cardholderName
-    __cardholderName = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'cardholderName'), 'cardholderName', '__httpwww_litle_comschema_CTD_ANON_21_httpwww_litle_comschemacardholderName', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1974, 13), )
+    __cardholderName = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'cardholderName'), 'cardholderName', '__httpwww_litle_comschema_CTD_ANON_21_httpwww_litle_comschemacardholderName', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1974, 13), )
 
     
     cardholderName = property(__cardholderName.value, __cardholderName.set, None, None)
 
     
     # Element {http://www.litle.com/schema}deviceManufacturerIdentifier uses Python identifier deviceManufacturerIdentifier
-    __deviceManufacturerIdentifier = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'deviceManufacturerIdentifier'), 'deviceManufacturerIdentifier', '__httpwww_litle_comschema_CTD_ANON_21_httpwww_litle_comschemadeviceManufacturerIdentifier', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1975, 13), )
+    __deviceManufacturerIdentifier = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'deviceManufacturerIdentifier'), 'deviceManufacturerIdentifier', '__httpwww_litle_comschema_CTD_ANON_21_httpwww_litle_comschemadeviceManufacturerIdentifier', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1975, 13), )
 
     
     deviceManufacturerIdentifier = property(__deviceManufacturerIdentifier.value, __deviceManufacturerIdentifier.set, None, None)
 
     
     # Element {http://www.litle.com/schema}paymentDataType uses Python identifier paymentDataType
-    __paymentDataType = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'paymentDataType'), 'paymentDataType', '__httpwww_litle_comschema_CTD_ANON_21_httpwww_litle_comschemapaymentDataType', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1976, 13), )
+    __paymentDataType = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'paymentDataType'), 'paymentDataType', '__httpwww_litle_comschema_CTD_ANON_21_httpwww_litle_comschemapaymentDataType', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1976, 13), )
 
     
     paymentDataType = property(__paymentDataType.value, __paymentDataType.set, None, None)
 
     
     # Element {http://www.litle.com/schema}onlinePaymentCryptogram uses Python identifier onlinePaymentCryptogram
-    __onlinePaymentCryptogram = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'onlinePaymentCryptogram'), 'onlinePaymentCryptogram', '__httpwww_litle_comschema_CTD_ANON_21_httpwww_litle_comschemaonlinePaymentCryptogram', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1977, 13), )
+    __onlinePaymentCryptogram = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'onlinePaymentCryptogram'), 'onlinePaymentCryptogram', '__httpwww_litle_comschema_CTD_ANON_21_httpwww_litle_comschemaonlinePaymentCryptogram', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1977, 13), )
 
     
     onlinePaymentCryptogram = property(__onlinePaymentCryptogram.value, __onlinePaymentCryptogram.set, None, None)
 
     
     # Element {http://www.litle.com/schema}eciIndicator uses Python identifier eciIndicator
-    __eciIndicator = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'eciIndicator'), 'eciIndicator', '__httpwww_litle_comschema_CTD_ANON_21_httpwww_litle_comschemaeciIndicator', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1978, 13), )
+    __eciIndicator = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'eciIndicator'), 'eciIndicator', '__httpwww_litle_comschema_CTD_ANON_21_httpwww_litle_comschemaeciIndicator', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1978, 13), )
 
     
     eciIndicator = property(__eciIndicator.value, __eciIndicator.set, None, None)
@@ -3596,34 +3596,34 @@ class CTD_ANON_22 (pyxb.binding.basis.complexTypeDefinition):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1984, 7)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1984, 7)
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
     # Element {http://www.litle.com/schema}cryptogram uses Python identifier cryptogram
-    __cryptogram = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'cryptogram'), 'cryptogram', '__httpwww_litle_comschema_CTD_ANON_22_httpwww_litle_comschemacryptogram', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1986, 13), )
+    __cryptogram = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'cryptogram'), 'cryptogram', '__httpwww_litle_comschema_CTD_ANON_22_httpwww_litle_comschemacryptogram', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1986, 13), )
 
     
     cryptogram = property(__cryptogram.value, __cryptogram.set, None, None)
 
     
     # Element {http://www.litle.com/schema}expMonth uses Python identifier expMonth
-    __expMonth = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'expMonth'), 'expMonth', '__httpwww_litle_comschema_CTD_ANON_22_httpwww_litle_comschemaexpMonth', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1987, 13), )
+    __expMonth = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'expMonth'), 'expMonth', '__httpwww_litle_comschema_CTD_ANON_22_httpwww_litle_comschemaexpMonth', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1987, 13), )
 
     
     expMonth = property(__expMonth.value, __expMonth.set, None, None)
 
     
     # Element {http://www.litle.com/schema}expYear uses Python identifier expYear
-    __expYear = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'expYear'), 'expYear', '__httpwww_litle_comschema_CTD_ANON_22_httpwww_litle_comschemaexpYear', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1988, 13), )
+    __expYear = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'expYear'), 'expYear', '__httpwww_litle_comschema_CTD_ANON_22_httpwww_litle_comschemaexpYear', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1988, 13), )
 
     
     expYear = property(__expYear.value, __expYear.set, None, None)
 
     
     # Element {http://www.litle.com/schema}eciIndicator uses Python identifier eciIndicator
-    __eciIndicator = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'eciIndicator'), 'eciIndicator', '__httpwww_litle_comschema_CTD_ANON_22_httpwww_litle_comschemaeciIndicator', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1989, 13), )
+    __eciIndicator = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'eciIndicator'), 'eciIndicator', '__httpwww_litle_comschema_CTD_ANON_22_httpwww_litle_comschemaeciIndicator', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1989, 13), )
 
     
     eciIndicator = property(__eciIndicator.value, __eciIndicator.set, None, None)
@@ -3647,55 +3647,55 @@ class sepaDirectDebitType (pyxb.binding.basis.complexTypeDefinition):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'sepaDirectDebitType')
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1995, 4)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1995, 4)
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
     # Element {http://www.litle.com/schema}mandateProvider uses Python identifier mandateProvider
-    __mandateProvider = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'mandateProvider'), 'mandateProvider', '__httpwww_litle_comschema_sepaDirectDebitType_httpwww_litle_comschemamandateProvider', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1997, 12), )
+    __mandateProvider = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'mandateProvider'), 'mandateProvider', '__httpwww_litle_comschema_sepaDirectDebitType_httpwww_litle_comschemamandateProvider', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1997, 12), )
 
     
     mandateProvider = property(__mandateProvider.value, __mandateProvider.set, None, None)
 
     
     # Element {http://www.litle.com/schema}sequenceType uses Python identifier sequenceType
-    __sequenceType = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'sequenceType'), 'sequenceType', '__httpwww_litle_comschema_sepaDirectDebitType_httpwww_litle_comschemasequenceType', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1998, 12), )
+    __sequenceType = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'sequenceType'), 'sequenceType', '__httpwww_litle_comschema_sepaDirectDebitType_httpwww_litle_comschemasequenceType', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1998, 12), )
 
     
     sequenceType = property(__sequenceType.value, __sequenceType.set, None, None)
 
     
     # Element {http://www.litle.com/schema}mandateReference uses Python identifier mandateReference
-    __mandateReference = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'mandateReference'), 'mandateReference', '__httpwww_litle_comschema_sepaDirectDebitType_httpwww_litle_comschemamandateReference', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1999, 12), )
+    __mandateReference = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'mandateReference'), 'mandateReference', '__httpwww_litle_comschema_sepaDirectDebitType_httpwww_litle_comschemamandateReference', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1999, 12), )
 
     
     mandateReference = property(__mandateReference.value, __mandateReference.set, None, None)
 
     
     # Element {http://www.litle.com/schema}mandateUrl uses Python identifier mandateUrl
-    __mandateUrl = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'mandateUrl'), 'mandateUrl', '__httpwww_litle_comschema_sepaDirectDebitType_httpwww_litle_comschemamandateUrl', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2000, 12), )
+    __mandateUrl = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'mandateUrl'), 'mandateUrl', '__httpwww_litle_comschema_sepaDirectDebitType_httpwww_litle_comschemamandateUrl', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2000, 12), )
 
     
     mandateUrl = property(__mandateUrl.value, __mandateUrl.set, None, None)
 
     
     # Element {http://www.litle.com/schema}mandateSignatureDate uses Python identifier mandateSignatureDate
-    __mandateSignatureDate = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'mandateSignatureDate'), 'mandateSignatureDate', '__httpwww_litle_comschema_sepaDirectDebitType_httpwww_litle_comschemamandateSignatureDate', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2001, 12), )
+    __mandateSignatureDate = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'mandateSignatureDate'), 'mandateSignatureDate', '__httpwww_litle_comschema_sepaDirectDebitType_httpwww_litle_comschemamandateSignatureDate', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2001, 12), )
 
     
     mandateSignatureDate = property(__mandateSignatureDate.value, __mandateSignatureDate.set, None, None)
 
     
     # Element {http://www.litle.com/schema}iban uses Python identifier iban
-    __iban = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'iban'), 'iban', '__httpwww_litle_comschema_sepaDirectDebitType_httpwww_litle_comschemaiban', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2002, 12), )
+    __iban = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'iban'), 'iban', '__httpwww_litle_comschema_sepaDirectDebitType_httpwww_litle_comschemaiban', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2002, 12), )
 
     
     iban = property(__iban.value, __iban.set, None, None)
 
     
     # Element {http://www.litle.com/schema}preferredLanguage uses Python identifier preferredLanguage
-    __preferredLanguage = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'preferredLanguage'), 'preferredLanguage', '__httpwww_litle_comschema_sepaDirectDebitType_httpwww_litle_comschemapreferredLanguage', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2003, 12), )
+    __preferredLanguage = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'preferredLanguage'), 'preferredLanguage', '__httpwww_litle_comschema_sepaDirectDebitType_httpwww_litle_comschemapreferredLanguage', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2003, 12), )
 
     
     preferredLanguage = property(__preferredLanguage.value, __preferredLanguage.set, None, None)
@@ -3723,27 +3723,27 @@ class CTD_ANON_23 (pyxb.binding.basis.complexTypeDefinition):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2008, 8)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2008, 8)
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
     # Element {http://www.litle.com/schema}redirectUrl uses Python identifier redirectUrl
-    __redirectUrl = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'redirectUrl'), 'redirectUrl', '__httpwww_litle_comschema_CTD_ANON_23_httpwww_litle_comschemaredirectUrl', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2010, 16), )
+    __redirectUrl = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'redirectUrl'), 'redirectUrl', '__httpwww_litle_comschema_CTD_ANON_23_httpwww_litle_comschemaredirectUrl', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2010, 16), )
 
     
     redirectUrl = property(__redirectUrl.value, __redirectUrl.set, None, None)
 
     
     # Element {http://www.litle.com/schema}redirectToken uses Python identifier redirectToken
-    __redirectToken = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'redirectToken'), 'redirectToken', '__httpwww_litle_comschema_CTD_ANON_23_httpwww_litle_comschemaredirectToken', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2011, 16), )
+    __redirectToken = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'redirectToken'), 'redirectToken', '__httpwww_litle_comschema_CTD_ANON_23_httpwww_litle_comschemaredirectToken', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2011, 16), )
 
     
     redirectToken = property(__redirectToken.value, __redirectToken.set, None, None)
 
     
     # Element {http://www.litle.com/schema}mandateReference uses Python identifier mandateReference
-    __mandateReference = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'mandateReference'), 'mandateReference', '__httpwww_litle_comschema_CTD_ANON_23_httpwww_litle_comschemamandateReference', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2012, 16), )
+    __mandateReference = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'mandateReference'), 'mandateReference', '__httpwww_litle_comschema_CTD_ANON_23_httpwww_litle_comschemamandateReference', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2012, 16), )
 
     
     mandateReference = property(__mandateReference.value, __mandateReference.set, None, None)
@@ -3766,13 +3766,13 @@ class idealType (pyxb.binding.basis.complexTypeDefinition):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'idealType')
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2017, 4)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2017, 4)
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
     # Element {http://www.litle.com/schema}preferredLanguage uses Python identifier preferredLanguage
-    __preferredLanguage = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'preferredLanguage'), 'preferredLanguage', '__httpwww_litle_comschema_idealType_httpwww_litle_comschemapreferredLanguage', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2019, 12), )
+    __preferredLanguage = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'preferredLanguage'), 'preferredLanguage', '__httpwww_litle_comschema_idealType_httpwww_litle_comschemapreferredLanguage', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2019, 12), )
 
     
     preferredLanguage = property(__preferredLanguage.value, __preferredLanguage.set, None, None)
@@ -3794,27 +3794,27 @@ class CTD_ANON_24 (pyxb.binding.basis.complexTypeDefinition):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2024, 8)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2024, 8)
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
     # Element {http://www.litle.com/schema}redirectUrl uses Python identifier redirectUrl
-    __redirectUrl = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'redirectUrl'), 'redirectUrl', '__httpwww_litle_comschema_CTD_ANON_24_httpwww_litle_comschemaredirectUrl', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2026, 16), )
+    __redirectUrl = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'redirectUrl'), 'redirectUrl', '__httpwww_litle_comschema_CTD_ANON_24_httpwww_litle_comschemaredirectUrl', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2026, 16), )
 
     
     redirectUrl = property(__redirectUrl.value, __redirectUrl.set, None, None)
 
     
     # Element {http://www.litle.com/schema}redirectToken uses Python identifier redirectToken
-    __redirectToken = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'redirectToken'), 'redirectToken', '__httpwww_litle_comschema_CTD_ANON_24_httpwww_litle_comschemaredirectToken', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2027, 16), )
+    __redirectToken = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'redirectToken'), 'redirectToken', '__httpwww_litle_comschema_CTD_ANON_24_httpwww_litle_comschemaredirectToken', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2027, 16), )
 
     
     redirectToken = property(__redirectToken.value, __redirectToken.set, None, None)
 
     
     # Element {http://www.litle.com/schema}paymentPurpose uses Python identifier paymentPurpose
-    __paymentPurpose = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'paymentPurpose'), 'paymentPurpose', '__httpwww_litle_comschema_CTD_ANON_24_httpwww_litle_comschemapaymentPurpose', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2028, 16), )
+    __paymentPurpose = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'paymentPurpose'), 'paymentPurpose', '__httpwww_litle_comschema_CTD_ANON_24_httpwww_litle_comschemapaymentPurpose', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2028, 16), )
 
     
     paymentPurpose = property(__paymentPurpose.value, __paymentPurpose.set, None, None)
@@ -3837,13 +3837,13 @@ class giropayType (pyxb.binding.basis.complexTypeDefinition):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'giropayType')
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2033, 4)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2033, 4)
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
     # Element {http://www.litle.com/schema}preferredLanguage uses Python identifier preferredLanguage
-    __preferredLanguage = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'preferredLanguage'), 'preferredLanguage', '__httpwww_litle_comschema_giropayType_httpwww_litle_comschemapreferredLanguage', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2035, 12), )
+    __preferredLanguage = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'preferredLanguage'), 'preferredLanguage', '__httpwww_litle_comschema_giropayType_httpwww_litle_comschemapreferredLanguage', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2035, 12), )
 
     
     preferredLanguage = property(__preferredLanguage.value, __preferredLanguage.set, None, None)
@@ -3865,27 +3865,27 @@ class CTD_ANON_25 (pyxb.binding.basis.complexTypeDefinition):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2040, 8)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2040, 8)
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
     # Element {http://www.litle.com/schema}redirectUrl uses Python identifier redirectUrl
-    __redirectUrl = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'redirectUrl'), 'redirectUrl', '__httpwww_litle_comschema_CTD_ANON_25_httpwww_litle_comschemaredirectUrl', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2042, 16), )
+    __redirectUrl = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'redirectUrl'), 'redirectUrl', '__httpwww_litle_comschema_CTD_ANON_25_httpwww_litle_comschemaredirectUrl', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2042, 16), )
 
     
     redirectUrl = property(__redirectUrl.value, __redirectUrl.set, None, None)
 
     
     # Element {http://www.litle.com/schema}redirectToken uses Python identifier redirectToken
-    __redirectToken = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'redirectToken'), 'redirectToken', '__httpwww_litle_comschema_CTD_ANON_25_httpwww_litle_comschemaredirectToken', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2043, 16), )
+    __redirectToken = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'redirectToken'), 'redirectToken', '__httpwww_litle_comschema_CTD_ANON_25_httpwww_litle_comschemaredirectToken', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2043, 16), )
 
     
     redirectToken = property(__redirectToken.value, __redirectToken.set, None, None)
 
     
     # Element {http://www.litle.com/schema}paymentPurpose uses Python identifier paymentPurpose
-    __paymentPurpose = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'paymentPurpose'), 'paymentPurpose', '__httpwww_litle_comschema_CTD_ANON_25_httpwww_litle_comschemapaymentPurpose', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2044, 16), )
+    __paymentPurpose = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'paymentPurpose'), 'paymentPurpose', '__httpwww_litle_comschema_CTD_ANON_25_httpwww_litle_comschemapaymentPurpose', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2044, 16), )
 
     
     paymentPurpose = property(__paymentPurpose.value, __paymentPurpose.set, None, None)
@@ -3908,13 +3908,13 @@ class sofortType (pyxb.binding.basis.complexTypeDefinition):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'sofortType')
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2049, 8)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2049, 8)
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
     # Element {http://www.litle.com/schema}preferredLanguage uses Python identifier preferredLanguage
-    __preferredLanguage = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'preferredLanguage'), 'preferredLanguage', '__httpwww_litle_comschema_sofortType_httpwww_litle_comschemapreferredLanguage', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2051, 12), )
+    __preferredLanguage = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'preferredLanguage'), 'preferredLanguage', '__httpwww_litle_comschema_sofortType_httpwww_litle_comschemapreferredLanguage', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2051, 12), )
 
     
     preferredLanguage = property(__preferredLanguage.value, __preferredLanguage.set, None, None)
@@ -3936,27 +3936,27 @@ class CTD_ANON_26 (pyxb.binding.basis.complexTypeDefinition):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2056, 8)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2056, 8)
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
     # Element {http://www.litle.com/schema}redirectUrl uses Python identifier redirectUrl
-    __redirectUrl = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'redirectUrl'), 'redirectUrl', '__httpwww_litle_comschema_CTD_ANON_26_httpwww_litle_comschemaredirectUrl', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2058, 16), )
+    __redirectUrl = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'redirectUrl'), 'redirectUrl', '__httpwww_litle_comschema_CTD_ANON_26_httpwww_litle_comschemaredirectUrl', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2058, 16), )
 
     
     redirectUrl = property(__redirectUrl.value, __redirectUrl.set, None, None)
 
     
     # Element {http://www.litle.com/schema}redirectToken uses Python identifier redirectToken
-    __redirectToken = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'redirectToken'), 'redirectToken', '__httpwww_litle_comschema_CTD_ANON_26_httpwww_litle_comschemaredirectToken', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2059, 16), )
+    __redirectToken = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'redirectToken'), 'redirectToken', '__httpwww_litle_comschema_CTD_ANON_26_httpwww_litle_comschemaredirectToken', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2059, 16), )
 
     
     redirectToken = property(__redirectToken.value, __redirectToken.set, None, None)
 
     
     # Element {http://www.litle.com/schema}paymentPurpose uses Python identifier paymentPurpose
-    __paymentPurpose = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'paymentPurpose'), 'paymentPurpose', '__httpwww_litle_comschema_CTD_ANON_26_httpwww_litle_comschemapaymentPurpose', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2060, 16), )
+    __paymentPurpose = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'paymentPurpose'), 'paymentPurpose', '__httpwww_litle_comschema_CTD_ANON_26_httpwww_litle_comschemapaymentPurpose', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2060, 16), )
 
     
     paymentPurpose = property(__paymentPurpose.value, __paymentPurpose.set, None, None)
@@ -3979,27 +3979,27 @@ class CTD_ANON_27 (pyxb.binding.basis.complexTypeDefinition):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2073, 8)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2073, 8)
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
     # Element {http://www.litle.com/schema}authentication uses Python identifier authentication
-    __authentication = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'authentication'), 'authentication', '__httpwww_litle_comschema_CTD_ANON_27_httpwww_litle_comschemaauthentication', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 5, 4), )
+    __authentication = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'authentication'), 'authentication', '__httpwww_litle_comschema_CTD_ANON_27_httpwww_litle_comschemaauthentication', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 5, 4), )
 
     
     authentication = property(__authentication.value, __authentication.set, None, None)
 
     
     # Element {http://www.litle.com/schema}RFRRequest uses Python identifier RFRRequest
-    __RFRRequest = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'RFRRequest'), 'RFRRequest', '__httpwww_litle_comschema_CTD_ANON_27_httpwww_litle_comschemaRFRRequest', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2086, 4), )
+    __RFRRequest = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'RFRRequest'), 'RFRRequest', '__httpwww_litle_comschema_CTD_ANON_27_httpwww_litle_comschemaRFRRequest', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2086, 4), )
 
     
     RFRRequest = property(__RFRRequest.value, __RFRRequest.set, None, None)
 
     
     # Element {http://www.litle.com/schema}batchRequest uses Python identifier batchRequest
-    __batchRequest = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'batchRequest'), 'batchRequest', '__httpwww_litle_comschema_CTD_ANON_27_httpwww_litle_comschemabatchRequest', True, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2094, 4), )
+    __batchRequest = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'batchRequest'), 'batchRequest', '__httpwww_litle_comschema_CTD_ANON_27_httpwww_litle_comschemabatchRequest', True, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2094, 4), )
 
     
     batchRequest = property(__batchRequest.value, __batchRequest.set, None, None)
@@ -4007,24 +4007,24 @@ class CTD_ANON_27 (pyxb.binding.basis.complexTypeDefinition):
     
     # Attribute version uses Python identifier version
     __version = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'version'), 'version', '__httpwww_litle_comschema_CTD_ANON_27_version', pyxb.binding.datatypes.string, required=True)
-    __version._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2081, 12)
-    __version._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2081, 12)
+    __version._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2081, 12)
+    __version._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2081, 12)
     
     version = property(__version.value, __version.set, None, None)
 
     
     # Attribute id uses Python identifier id
     __id = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'id'), 'id', '__httpwww_litle_comschema_CTD_ANON_27_id', pyxb.binding.datatypes.string)
-    __id._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2082, 12)
-    __id._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2082, 12)
+    __id._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2082, 12)
+    __id._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2082, 12)
     
     id = property(__id.value, __id.set, None, None)
 
     
     # Attribute numBatchRequests uses Python identifier numBatchRequests
     __numBatchRequests = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'numBatchRequests'), 'numBatchRequests', '__httpwww_litle_comschema_CTD_ANON_27_numBatchRequests', pyxb.binding.datatypes.integer, required=True)
-    __numBatchRequests._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2083, 12)
-    __numBatchRequests._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2083, 12)
+    __numBatchRequests._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2083, 12)
+    __numBatchRequests._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2083, 12)
     
     numBatchRequests = property(__numBatchRequests.value, __numBatchRequests.set, None, None)
 
@@ -4048,20 +4048,20 @@ class CTD_ANON_28 (pyxb.binding.basis.complexTypeDefinition):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2087, 8)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2087, 8)
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
     # Element {http://www.litle.com/schema}litleSessionId uses Python identifier litleSessionId
-    __litleSessionId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'litleSessionId'), 'litleSessionId', '__httpwww_litle_comschema_CTD_ANON_28_httpwww_litle_comschemalitleSessionId', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2089, 16), )
+    __litleSessionId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'litleSessionId'), 'litleSessionId', '__httpwww_litle_comschema_CTD_ANON_28_httpwww_litle_comschemalitleSessionId', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2089, 16), )
 
     
     litleSessionId = property(__litleSessionId.value, __litleSessionId.set, None, None)
 
     
     # Element {http://www.litle.com/schema}accountUpdateFileRequestData uses Python identifier accountUpdateFileRequestData
-    __accountUpdateFileRequestData = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'accountUpdateFileRequestData'), 'accountUpdateFileRequestData', '__httpwww_litle_comschema_CTD_ANON_28_httpwww_litle_comschemaaccountUpdateFileRequestData', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2303, 4), )
+    __accountUpdateFileRequestData = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'accountUpdateFileRequestData'), 'accountUpdateFileRequestData', '__httpwww_litle_comschema_CTD_ANON_28_httpwww_litle_comschemaaccountUpdateFileRequestData', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2303, 4), )
 
     
     accountUpdateFileRequestData = property(__accountUpdateFileRequestData.value, __accountUpdateFileRequestData.set, None, None)
@@ -4083,20 +4083,20 @@ class CTD_ANON_29 (pyxb.binding.basis.complexTypeDefinition):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2095, 8)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2095, 8)
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
     # Element {http://www.litle.com/schema}recurringTransaction uses Python identifier recurringTransaction
-    __recurringTransaction = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'recurringTransaction'), 'recurringTransaction', '__httpwww_litle_comschema_CTD_ANON_29_httpwww_litle_comschemarecurringTransaction', True, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 160, 4), )
+    __recurringTransaction = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'recurringTransaction'), 'recurringTransaction', '__httpwww_litle_comschema_CTD_ANON_29_httpwww_litle_comschemarecurringTransaction', True, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 160, 4), )
 
     
     recurringTransaction = property(__recurringTransaction.value, __recurringTransaction.set, None, None)
 
     
     # Element {http://www.litle.com/schema}transaction uses Python identifier transaction
-    __transaction = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'transaction'), 'transaction', '__httpwww_litle_comschema_CTD_ANON_29_httpwww_litle_comschematransaction', True, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 392, 4), )
+    __transaction = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'transaction'), 'transaction', '__httpwww_litle_comschema_CTD_ANON_29_httpwww_litle_comschematransaction', True, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 392, 4), )
 
     
     transaction = property(__transaction.value, __transaction.set, None, None)
@@ -4104,504 +4104,504 @@ class CTD_ANON_29 (pyxb.binding.basis.complexTypeDefinition):
     
     # Attribute merchantSdk uses Python identifier merchantSdk
     __merchantSdk = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'merchantSdk'), 'merchantSdk', '__httpwww_litle_comschema_CTD_ANON_29_merchantSdk', pyxb.binding.datatypes.string)
-    __merchantSdk._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2100, 12)
-    __merchantSdk._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2100, 12)
+    __merchantSdk._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2100, 12)
+    __merchantSdk._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2100, 12)
     
     merchantSdk = property(__merchantSdk.value, __merchantSdk.set, None, None)
 
     
     # Attribute id uses Python identifier id
     __id = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'id'), 'id', '__httpwww_litle_comschema_CTD_ANON_29_id', pyxb.binding.datatypes.string)
-    __id._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2101, 12)
-    __id._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2101, 12)
+    __id._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2101, 12)
+    __id._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2101, 12)
     
     id = property(__id.value, __id.set, None, None)
 
     
     # Attribute numAuths uses Python identifier numAuths
     __numAuths = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'numAuths'), 'numAuths', '__httpwww_litle_comschema_CTD_ANON_29_numAuths', pyxb.binding.datatypes.integer)
-    __numAuths._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2102, 12)
-    __numAuths._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2102, 12)
+    __numAuths._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2102, 12)
+    __numAuths._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2102, 12)
     
     numAuths = property(__numAuths.value, __numAuths.set, None, None)
 
     
     # Attribute authAmount uses Python identifier authAmount
     __authAmount = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'authAmount'), 'authAmount', '__httpwww_litle_comschema_CTD_ANON_29_authAmount', pyxb.binding.datatypes.integer)
-    __authAmount._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2103, 12)
-    __authAmount._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2103, 12)
+    __authAmount._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2103, 12)
+    __authAmount._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2103, 12)
     
     authAmount = property(__authAmount.value, __authAmount.set, None, None)
 
     
     # Attribute numAuthReversals uses Python identifier numAuthReversals
     __numAuthReversals = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'numAuthReversals'), 'numAuthReversals', '__httpwww_litle_comschema_CTD_ANON_29_numAuthReversals', pyxb.binding.datatypes.integer)
-    __numAuthReversals._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2104, 12)
-    __numAuthReversals._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2104, 12)
+    __numAuthReversals._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2104, 12)
+    __numAuthReversals._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2104, 12)
     
     numAuthReversals = property(__numAuthReversals.value, __numAuthReversals.set, None, None)
 
     
     # Attribute authReversalAmount uses Python identifier authReversalAmount
     __authReversalAmount = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'authReversalAmount'), 'authReversalAmount', '__httpwww_litle_comschema_CTD_ANON_29_authReversalAmount', pyxb.binding.datatypes.integer)
-    __authReversalAmount._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2105, 12)
-    __authReversalAmount._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2105, 12)
+    __authReversalAmount._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2105, 12)
+    __authReversalAmount._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2105, 12)
     
     authReversalAmount = property(__authReversalAmount.value, __authReversalAmount.set, None, None)
 
     
     # Attribute numCaptures uses Python identifier numCaptures
     __numCaptures = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'numCaptures'), 'numCaptures', '__httpwww_litle_comschema_CTD_ANON_29_numCaptures', pyxb.binding.datatypes.integer)
-    __numCaptures._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2106, 12)
-    __numCaptures._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2106, 12)
+    __numCaptures._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2106, 12)
+    __numCaptures._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2106, 12)
     
     numCaptures = property(__numCaptures.value, __numCaptures.set, None, None)
 
     
     # Attribute captureAmount uses Python identifier captureAmount
     __captureAmount = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'captureAmount'), 'captureAmount', '__httpwww_litle_comschema_CTD_ANON_29_captureAmount', pyxb.binding.datatypes.integer)
-    __captureAmount._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2107, 12)
-    __captureAmount._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2107, 12)
+    __captureAmount._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2107, 12)
+    __captureAmount._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2107, 12)
     
     captureAmount = property(__captureAmount.value, __captureAmount.set, None, None)
 
     
     # Attribute numExtCaptures uses Python identifier numExtCaptures
     __numExtCaptures = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'numExtCaptures'), 'numExtCaptures', '__httpwww_litle_comschema_CTD_ANON_29_numExtCaptures', pyxb.binding.datatypes.integer)
-    __numExtCaptures._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2108, 12)
-    __numExtCaptures._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2108, 12)
+    __numExtCaptures._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2108, 12)
+    __numExtCaptures._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2108, 12)
     
     numExtCaptures = property(__numExtCaptures.value, __numExtCaptures.set, None, None)
 
     
     # Attribute extCaptureAmount uses Python identifier extCaptureAmount
     __extCaptureAmount = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'extCaptureAmount'), 'extCaptureAmount', '__httpwww_litle_comschema_CTD_ANON_29_extCaptureAmount', pyxb.binding.datatypes.integer)
-    __extCaptureAmount._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2109, 12)
-    __extCaptureAmount._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2109, 12)
+    __extCaptureAmount._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2109, 12)
+    __extCaptureAmount._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2109, 12)
     
     extCaptureAmount = property(__extCaptureAmount.value, __extCaptureAmount.set, None, None)
 
     
     # Attribute numCredits uses Python identifier numCredits
     __numCredits = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'numCredits'), 'numCredits', '__httpwww_litle_comschema_CTD_ANON_29_numCredits', pyxb.binding.datatypes.integer)
-    __numCredits._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2110, 12)
-    __numCredits._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2110, 12)
+    __numCredits._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2110, 12)
+    __numCredits._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2110, 12)
     
     numCredits = property(__numCredits.value, __numCredits.set, None, None)
 
     
     # Attribute creditAmount uses Python identifier creditAmount
     __creditAmount = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'creditAmount'), 'creditAmount', '__httpwww_litle_comschema_CTD_ANON_29_creditAmount', pyxb.binding.datatypes.integer)
-    __creditAmount._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2111, 12)
-    __creditAmount._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2111, 12)
+    __creditAmount._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2111, 12)
+    __creditAmount._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2111, 12)
     
     creditAmount = property(__creditAmount.value, __creditAmount.set, None, None)
 
     
     # Attribute numForceCaptures uses Python identifier numForceCaptures
     __numForceCaptures = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'numForceCaptures'), 'numForceCaptures', '__httpwww_litle_comschema_CTD_ANON_29_numForceCaptures', pyxb.binding.datatypes.integer)
-    __numForceCaptures._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2112, 12)
-    __numForceCaptures._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2112, 12)
+    __numForceCaptures._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2112, 12)
+    __numForceCaptures._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2112, 12)
     
     numForceCaptures = property(__numForceCaptures.value, __numForceCaptures.set, None, None)
 
     
     # Attribute forceCaptureAmount uses Python identifier forceCaptureAmount
     __forceCaptureAmount = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'forceCaptureAmount'), 'forceCaptureAmount', '__httpwww_litle_comschema_CTD_ANON_29_forceCaptureAmount', pyxb.binding.datatypes.integer)
-    __forceCaptureAmount._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2113, 12)
-    __forceCaptureAmount._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2113, 12)
+    __forceCaptureAmount._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2113, 12)
+    __forceCaptureAmount._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2113, 12)
     
     forceCaptureAmount = property(__forceCaptureAmount.value, __forceCaptureAmount.set, None, None)
 
     
     # Attribute numSales uses Python identifier numSales
     __numSales = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'numSales'), 'numSales', '__httpwww_litle_comschema_CTD_ANON_29_numSales', pyxb.binding.datatypes.integer)
-    __numSales._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2114, 12)
-    __numSales._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2114, 12)
+    __numSales._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2114, 12)
+    __numSales._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2114, 12)
     
     numSales = property(__numSales.value, __numSales.set, None, None)
 
     
     # Attribute saleAmount uses Python identifier saleAmount
     __saleAmount = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'saleAmount'), 'saleAmount', '__httpwww_litle_comschema_CTD_ANON_29_saleAmount', pyxb.binding.datatypes.integer)
-    __saleAmount._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2115, 12)
-    __saleAmount._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2115, 12)
+    __saleAmount._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2115, 12)
+    __saleAmount._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2115, 12)
     
     saleAmount = property(__saleAmount.value, __saleAmount.set, None, None)
 
     
     # Attribute numCaptureGivenAuths uses Python identifier numCaptureGivenAuths
     __numCaptureGivenAuths = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'numCaptureGivenAuths'), 'numCaptureGivenAuths', '__httpwww_litle_comschema_CTD_ANON_29_numCaptureGivenAuths', pyxb.binding.datatypes.integer)
-    __numCaptureGivenAuths._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2116, 12)
-    __numCaptureGivenAuths._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2116, 12)
+    __numCaptureGivenAuths._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2116, 12)
+    __numCaptureGivenAuths._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2116, 12)
     
     numCaptureGivenAuths = property(__numCaptureGivenAuths.value, __numCaptureGivenAuths.set, None, None)
 
     
     # Attribute captureGivenAuthAmount uses Python identifier captureGivenAuthAmount
     __captureGivenAuthAmount = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'captureGivenAuthAmount'), 'captureGivenAuthAmount', '__httpwww_litle_comschema_CTD_ANON_29_captureGivenAuthAmount', pyxb.binding.datatypes.integer)
-    __captureGivenAuthAmount._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2117, 12)
-    __captureGivenAuthAmount._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2117, 12)
+    __captureGivenAuthAmount._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2117, 12)
+    __captureGivenAuthAmount._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2117, 12)
     
     captureGivenAuthAmount = property(__captureGivenAuthAmount.value, __captureGivenAuthAmount.set, None, None)
 
     
     # Attribute numEcheckSales uses Python identifier numEcheckSales
     __numEcheckSales = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'numEcheckSales'), 'numEcheckSales', '__httpwww_litle_comschema_CTD_ANON_29_numEcheckSales', pyxb.binding.datatypes.integer)
-    __numEcheckSales._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2118, 12)
-    __numEcheckSales._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2118, 12)
+    __numEcheckSales._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2118, 12)
+    __numEcheckSales._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2118, 12)
     
     numEcheckSales = property(__numEcheckSales.value, __numEcheckSales.set, None, None)
 
     
     # Attribute echeckSalesAmount uses Python identifier echeckSalesAmount
     __echeckSalesAmount = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'echeckSalesAmount'), 'echeckSalesAmount', '__httpwww_litle_comschema_CTD_ANON_29_echeckSalesAmount', pyxb.binding.datatypes.integer)
-    __echeckSalesAmount._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2119, 12)
-    __echeckSalesAmount._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2119, 12)
+    __echeckSalesAmount._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2119, 12)
+    __echeckSalesAmount._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2119, 12)
     
     echeckSalesAmount = property(__echeckSalesAmount.value, __echeckSalesAmount.set, None, None)
 
     
     # Attribute numEcheckCredit uses Python identifier numEcheckCredit
     __numEcheckCredit = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'numEcheckCredit'), 'numEcheckCredit', '__httpwww_litle_comschema_CTD_ANON_29_numEcheckCredit', pyxb.binding.datatypes.integer)
-    __numEcheckCredit._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2120, 12)
-    __numEcheckCredit._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2120, 12)
+    __numEcheckCredit._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2120, 12)
+    __numEcheckCredit._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2120, 12)
     
     numEcheckCredit = property(__numEcheckCredit.value, __numEcheckCredit.set, None, None)
 
     
     # Attribute echeckCreditAmount uses Python identifier echeckCreditAmount
     __echeckCreditAmount = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'echeckCreditAmount'), 'echeckCreditAmount', '__httpwww_litle_comschema_CTD_ANON_29_echeckCreditAmount', pyxb.binding.datatypes.integer)
-    __echeckCreditAmount._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2121, 12)
-    __echeckCreditAmount._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2121, 12)
+    __echeckCreditAmount._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2121, 12)
+    __echeckCreditAmount._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2121, 12)
     
     echeckCreditAmount = property(__echeckCreditAmount.value, __echeckCreditAmount.set, None, None)
 
     
     # Attribute numEcheckVerification uses Python identifier numEcheckVerification
     __numEcheckVerification = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'numEcheckVerification'), 'numEcheckVerification', '__httpwww_litle_comschema_CTD_ANON_29_numEcheckVerification', pyxb.binding.datatypes.integer)
-    __numEcheckVerification._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2122, 12)
-    __numEcheckVerification._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2122, 12)
+    __numEcheckVerification._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2122, 12)
+    __numEcheckVerification._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2122, 12)
     
     numEcheckVerification = property(__numEcheckVerification.value, __numEcheckVerification.set, None, None)
 
     
     # Attribute echeckVerificationAmount uses Python identifier echeckVerificationAmount
     __echeckVerificationAmount = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'echeckVerificationAmount'), 'echeckVerificationAmount', '__httpwww_litle_comschema_CTD_ANON_29_echeckVerificationAmount', pyxb.binding.datatypes.integer)
-    __echeckVerificationAmount._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2123, 12)
-    __echeckVerificationAmount._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2123, 12)
+    __echeckVerificationAmount._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2123, 12)
+    __echeckVerificationAmount._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2123, 12)
     
     echeckVerificationAmount = property(__echeckVerificationAmount.value, __echeckVerificationAmount.set, None, None)
 
     
     # Attribute numEcheckRedeposit uses Python identifier numEcheckRedeposit
     __numEcheckRedeposit = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'numEcheckRedeposit'), 'numEcheckRedeposit', '__httpwww_litle_comschema_CTD_ANON_29_numEcheckRedeposit', pyxb.binding.datatypes.integer)
-    __numEcheckRedeposit._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2124, 12)
-    __numEcheckRedeposit._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2124, 12)
+    __numEcheckRedeposit._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2124, 12)
+    __numEcheckRedeposit._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2124, 12)
     
     numEcheckRedeposit = property(__numEcheckRedeposit.value, __numEcheckRedeposit.set, None, None)
 
     
     # Attribute numEcheckPreNoteSale uses Python identifier numEcheckPreNoteSale
     __numEcheckPreNoteSale = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'numEcheckPreNoteSale'), 'numEcheckPreNoteSale', '__httpwww_litle_comschema_CTD_ANON_29_numEcheckPreNoteSale', pyxb.binding.datatypes.integer)
-    __numEcheckPreNoteSale._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2125, 12)
-    __numEcheckPreNoteSale._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2125, 12)
+    __numEcheckPreNoteSale._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2125, 12)
+    __numEcheckPreNoteSale._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2125, 12)
     
     numEcheckPreNoteSale = property(__numEcheckPreNoteSale.value, __numEcheckPreNoteSale.set, None, None)
 
     
     # Attribute numEcheckPreNoteCredit uses Python identifier numEcheckPreNoteCredit
     __numEcheckPreNoteCredit = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'numEcheckPreNoteCredit'), 'numEcheckPreNoteCredit', '__httpwww_litle_comschema_CTD_ANON_29_numEcheckPreNoteCredit', pyxb.binding.datatypes.integer)
-    __numEcheckPreNoteCredit._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2126, 12)
-    __numEcheckPreNoteCredit._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2126, 12)
+    __numEcheckPreNoteCredit._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2126, 12)
+    __numEcheckPreNoteCredit._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2126, 12)
     
     numEcheckPreNoteCredit = property(__numEcheckPreNoteCredit.value, __numEcheckPreNoteCredit.set, None, None)
 
     
     # Attribute numAccountUpdates uses Python identifier numAccountUpdates
     __numAccountUpdates = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'numAccountUpdates'), 'numAccountUpdates', '__httpwww_litle_comschema_CTD_ANON_29_numAccountUpdates', pyxb.binding.datatypes.integer)
-    __numAccountUpdates._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2127, 12)
-    __numAccountUpdates._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2127, 12)
+    __numAccountUpdates._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2127, 12)
+    __numAccountUpdates._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2127, 12)
     
     numAccountUpdates = property(__numAccountUpdates.value, __numAccountUpdates.set, None, None)
 
     
     # Attribute numTokenRegistrations uses Python identifier numTokenRegistrations
     __numTokenRegistrations = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'numTokenRegistrations'), 'numTokenRegistrations', '__httpwww_litle_comschema_CTD_ANON_29_numTokenRegistrations', pyxb.binding.datatypes.integer)
-    __numTokenRegistrations._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2128, 12)
-    __numTokenRegistrations._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2128, 12)
+    __numTokenRegistrations._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2128, 12)
+    __numTokenRegistrations._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2128, 12)
     
     numTokenRegistrations = property(__numTokenRegistrations.value, __numTokenRegistrations.set, None, None)
 
     
     # Attribute numUpdateCardValidationNumOnTokens uses Python identifier numUpdateCardValidationNumOnTokens
     __numUpdateCardValidationNumOnTokens = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'numUpdateCardValidationNumOnTokens'), 'numUpdateCardValidationNumOnTokens', '__httpwww_litle_comschema_CTD_ANON_29_numUpdateCardValidationNumOnTokens', pyxb.binding.datatypes.integer)
-    __numUpdateCardValidationNumOnTokens._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2129, 12)
-    __numUpdateCardValidationNumOnTokens._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2129, 12)
+    __numUpdateCardValidationNumOnTokens._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2129, 12)
+    __numUpdateCardValidationNumOnTokens._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2129, 12)
     
     numUpdateCardValidationNumOnTokens = property(__numUpdateCardValidationNumOnTokens.value, __numUpdateCardValidationNumOnTokens.set, None, None)
 
     
     # Attribute numCancelSubscriptions uses Python identifier numCancelSubscriptions
     __numCancelSubscriptions = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'numCancelSubscriptions'), 'numCancelSubscriptions', '__httpwww_litle_comschema_CTD_ANON_29_numCancelSubscriptions', pyxb.binding.datatypes.integer)
-    __numCancelSubscriptions._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2130, 12)
-    __numCancelSubscriptions._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2130, 12)
+    __numCancelSubscriptions._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2130, 12)
+    __numCancelSubscriptions._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2130, 12)
     
     numCancelSubscriptions = property(__numCancelSubscriptions.value, __numCancelSubscriptions.set, None, None)
 
     
     # Attribute numUpdateSubscriptions uses Python identifier numUpdateSubscriptions
     __numUpdateSubscriptions = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'numUpdateSubscriptions'), 'numUpdateSubscriptions', '__httpwww_litle_comschema_CTD_ANON_29_numUpdateSubscriptions', pyxb.binding.datatypes.integer)
-    __numUpdateSubscriptions._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2131, 12)
-    __numUpdateSubscriptions._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2131, 12)
+    __numUpdateSubscriptions._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2131, 12)
+    __numUpdateSubscriptions._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2131, 12)
     
     numUpdateSubscriptions = property(__numUpdateSubscriptions.value, __numUpdateSubscriptions.set, None, None)
 
     
     # Attribute numCreatePlans uses Python identifier numCreatePlans
     __numCreatePlans = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'numCreatePlans'), 'numCreatePlans', '__httpwww_litle_comschema_CTD_ANON_29_numCreatePlans', pyxb.binding.datatypes.integer)
-    __numCreatePlans._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2132, 12)
-    __numCreatePlans._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2132, 12)
+    __numCreatePlans._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2132, 12)
+    __numCreatePlans._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2132, 12)
     
     numCreatePlans = property(__numCreatePlans.value, __numCreatePlans.set, None, None)
 
     
     # Attribute numUpdatePlans uses Python identifier numUpdatePlans
     __numUpdatePlans = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'numUpdatePlans'), 'numUpdatePlans', '__httpwww_litle_comschema_CTD_ANON_29_numUpdatePlans', pyxb.binding.datatypes.integer)
-    __numUpdatePlans._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2133, 12)
-    __numUpdatePlans._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2133, 12)
+    __numUpdatePlans._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2133, 12)
+    __numUpdatePlans._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2133, 12)
     
     numUpdatePlans = property(__numUpdatePlans.value, __numUpdatePlans.set, None, None)
 
     
     # Attribute numActivates uses Python identifier numActivates
     __numActivates = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'numActivates'), 'numActivates', '__httpwww_litle_comschema_CTD_ANON_29_numActivates', pyxb.binding.datatypes.integer)
-    __numActivates._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2134, 12)
-    __numActivates._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2134, 12)
+    __numActivates._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2134, 12)
+    __numActivates._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2134, 12)
     
     numActivates = property(__numActivates.value, __numActivates.set, None, None)
 
     
     # Attribute numDeactivates uses Python identifier numDeactivates
     __numDeactivates = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'numDeactivates'), 'numDeactivates', '__httpwww_litle_comschema_CTD_ANON_29_numDeactivates', pyxb.binding.datatypes.integer)
-    __numDeactivates._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2135, 12)
-    __numDeactivates._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2135, 12)
+    __numDeactivates._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2135, 12)
+    __numDeactivates._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2135, 12)
     
     numDeactivates = property(__numDeactivates.value, __numDeactivates.set, None, None)
 
     
     # Attribute activateAmount uses Python identifier activateAmount
     __activateAmount = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'activateAmount'), 'activateAmount', '__httpwww_litle_comschema_CTD_ANON_29_activateAmount', pyxb.binding.datatypes.integer)
-    __activateAmount._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2136, 12)
-    __activateAmount._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2136, 12)
+    __activateAmount._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2136, 12)
+    __activateAmount._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2136, 12)
     
     activateAmount = property(__activateAmount.value, __activateAmount.set, None, None)
 
     
     # Attribute numLoads uses Python identifier numLoads
     __numLoads = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'numLoads'), 'numLoads', '__httpwww_litle_comschema_CTD_ANON_29_numLoads', pyxb.binding.datatypes.integer)
-    __numLoads._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2137, 12)
-    __numLoads._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2137, 12)
+    __numLoads._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2137, 12)
+    __numLoads._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2137, 12)
     
     numLoads = property(__numLoads.value, __numLoads.set, None, None)
 
     
     # Attribute loadAmount uses Python identifier loadAmount
     __loadAmount = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'loadAmount'), 'loadAmount', '__httpwww_litle_comschema_CTD_ANON_29_loadAmount', pyxb.binding.datatypes.integer)
-    __loadAmount._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2138, 12)
-    __loadAmount._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2138, 12)
+    __loadAmount._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2138, 12)
+    __loadAmount._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2138, 12)
     
     loadAmount = property(__loadAmount.value, __loadAmount.set, None, None)
 
     
     # Attribute numUnloads uses Python identifier numUnloads
     __numUnloads = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'numUnloads'), 'numUnloads', '__httpwww_litle_comschema_CTD_ANON_29_numUnloads', pyxb.binding.datatypes.integer)
-    __numUnloads._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2139, 12)
-    __numUnloads._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2139, 12)
+    __numUnloads._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2139, 12)
+    __numUnloads._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2139, 12)
     
     numUnloads = property(__numUnloads.value, __numUnloads.set, None, None)
 
     
     # Attribute unloadAmount uses Python identifier unloadAmount
     __unloadAmount = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'unloadAmount'), 'unloadAmount', '__httpwww_litle_comschema_CTD_ANON_29_unloadAmount', pyxb.binding.datatypes.integer)
-    __unloadAmount._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2140, 12)
-    __unloadAmount._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2140, 12)
+    __unloadAmount._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2140, 12)
+    __unloadAmount._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2140, 12)
     
     unloadAmount = property(__unloadAmount.value, __unloadAmount.set, None, None)
 
     
     # Attribute numBalanceInquirys uses Python identifier numBalanceInquirys
     __numBalanceInquirys = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'numBalanceInquirys'), 'numBalanceInquirys', '__httpwww_litle_comschema_CTD_ANON_29_numBalanceInquirys', pyxb.binding.datatypes.integer)
-    __numBalanceInquirys._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2141, 12)
-    __numBalanceInquirys._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2141, 12)
+    __numBalanceInquirys._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2141, 12)
+    __numBalanceInquirys._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2141, 12)
     
     numBalanceInquirys = property(__numBalanceInquirys.value, __numBalanceInquirys.set, None, None)
 
     
     # Attribute numPayFacCredit uses Python identifier numPayFacCredit
     __numPayFacCredit = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'numPayFacCredit'), 'numPayFacCredit', '__httpwww_litle_comschema_CTD_ANON_29_numPayFacCredit', pyxb.binding.datatypes.integer)
-    __numPayFacCredit._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2142, 12)
-    __numPayFacCredit._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2142, 12)
+    __numPayFacCredit._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2142, 12)
+    __numPayFacCredit._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2142, 12)
     
     numPayFacCredit = property(__numPayFacCredit.value, __numPayFacCredit.set, None, None)
 
     
     # Attribute numPayFacDebit uses Python identifier numPayFacDebit
     __numPayFacDebit = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'numPayFacDebit'), 'numPayFacDebit', '__httpwww_litle_comschema_CTD_ANON_29_numPayFacDebit', pyxb.binding.datatypes.integer)
-    __numPayFacDebit._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2143, 12)
-    __numPayFacDebit._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2143, 12)
+    __numPayFacDebit._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2143, 12)
+    __numPayFacDebit._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2143, 12)
     
     numPayFacDebit = property(__numPayFacDebit.value, __numPayFacDebit.set, None, None)
 
     
     # Attribute numSubmerchantCredit uses Python identifier numSubmerchantCredit
     __numSubmerchantCredit = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'numSubmerchantCredit'), 'numSubmerchantCredit', '__httpwww_litle_comschema_CTD_ANON_29_numSubmerchantCredit', pyxb.binding.datatypes.integer)
-    __numSubmerchantCredit._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2144, 12)
-    __numSubmerchantCredit._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2144, 12)
+    __numSubmerchantCredit._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2144, 12)
+    __numSubmerchantCredit._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2144, 12)
     
     numSubmerchantCredit = property(__numSubmerchantCredit.value, __numSubmerchantCredit.set, None, None)
 
     
     # Attribute numSubmerchantDebit uses Python identifier numSubmerchantDebit
     __numSubmerchantDebit = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'numSubmerchantDebit'), 'numSubmerchantDebit', '__httpwww_litle_comschema_CTD_ANON_29_numSubmerchantDebit', pyxb.binding.datatypes.integer)
-    __numSubmerchantDebit._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2145, 12)
-    __numSubmerchantDebit._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2145, 12)
+    __numSubmerchantDebit._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2145, 12)
+    __numSubmerchantDebit._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2145, 12)
     
     numSubmerchantDebit = property(__numSubmerchantDebit.value, __numSubmerchantDebit.set, None, None)
 
     
     # Attribute numReserveCredit uses Python identifier numReserveCredit
     __numReserveCredit = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'numReserveCredit'), 'numReserveCredit', '__httpwww_litle_comschema_CTD_ANON_29_numReserveCredit', pyxb.binding.datatypes.integer)
-    __numReserveCredit._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2146, 12)
-    __numReserveCredit._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2146, 12)
+    __numReserveCredit._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2146, 12)
+    __numReserveCredit._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2146, 12)
     
     numReserveCredit = property(__numReserveCredit.value, __numReserveCredit.set, None, None)
 
     
     # Attribute numReserveDebit uses Python identifier numReserveDebit
     __numReserveDebit = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'numReserveDebit'), 'numReserveDebit', '__httpwww_litle_comschema_CTD_ANON_29_numReserveDebit', pyxb.binding.datatypes.integer)
-    __numReserveDebit._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2147, 12)
-    __numReserveDebit._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2147, 12)
+    __numReserveDebit._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2147, 12)
+    __numReserveDebit._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2147, 12)
     
     numReserveDebit = property(__numReserveDebit.value, __numReserveDebit.set, None, None)
 
     
     # Attribute numVendorDebit uses Python identifier numVendorDebit
     __numVendorDebit = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'numVendorDebit'), 'numVendorDebit', '__httpwww_litle_comschema_CTD_ANON_29_numVendorDebit', pyxb.binding.datatypes.integer)
-    __numVendorDebit._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2148, 12)
-    __numVendorDebit._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2148, 12)
+    __numVendorDebit._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2148, 12)
+    __numVendorDebit._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2148, 12)
     
     numVendorDebit = property(__numVendorDebit.value, __numVendorDebit.set, None, None)
 
     
     # Attribute numVendorCredit uses Python identifier numVendorCredit
     __numVendorCredit = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'numVendorCredit'), 'numVendorCredit', '__httpwww_litle_comschema_CTD_ANON_29_numVendorCredit', pyxb.binding.datatypes.integer)
-    __numVendorCredit._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2149, 12)
-    __numVendorCredit._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2149, 12)
+    __numVendorCredit._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2149, 12)
+    __numVendorCredit._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2149, 12)
     
     numVendorCredit = property(__numVendorCredit.value, __numVendorCredit.set, None, None)
 
     
     # Attribute numPhysicalCheckDebit uses Python identifier numPhysicalCheckDebit
     __numPhysicalCheckDebit = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'numPhysicalCheckDebit'), 'numPhysicalCheckDebit', '__httpwww_litle_comschema_CTD_ANON_29_numPhysicalCheckDebit', pyxb.binding.datatypes.integer)
-    __numPhysicalCheckDebit._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2150, 12)
-    __numPhysicalCheckDebit._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2150, 12)
+    __numPhysicalCheckDebit._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2150, 12)
+    __numPhysicalCheckDebit._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2150, 12)
     
     numPhysicalCheckDebit = property(__numPhysicalCheckDebit.value, __numPhysicalCheckDebit.set, None, None)
 
     
     # Attribute numPhysicalCheckCredit uses Python identifier numPhysicalCheckCredit
     __numPhysicalCheckCredit = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'numPhysicalCheckCredit'), 'numPhysicalCheckCredit', '__httpwww_litle_comschema_CTD_ANON_29_numPhysicalCheckCredit', pyxb.binding.datatypes.integer)
-    __numPhysicalCheckCredit._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2151, 12)
-    __numPhysicalCheckCredit._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2151, 12)
+    __numPhysicalCheckCredit._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2151, 12)
+    __numPhysicalCheckCredit._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2151, 12)
     
     numPhysicalCheckCredit = property(__numPhysicalCheckCredit.value, __numPhysicalCheckCredit.set, None, None)
 
     
     # Attribute payFacCreditAmount uses Python identifier payFacCreditAmount
     __payFacCreditAmount = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'payFacCreditAmount'), 'payFacCreditAmount', '__httpwww_litle_comschema_CTD_ANON_29_payFacCreditAmount', pyxb.binding.datatypes.integer)
-    __payFacCreditAmount._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2152, 12)
-    __payFacCreditAmount._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2152, 12)
+    __payFacCreditAmount._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2152, 12)
+    __payFacCreditAmount._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2152, 12)
     
     payFacCreditAmount = property(__payFacCreditAmount.value, __payFacCreditAmount.set, None, None)
 
     
     # Attribute payFacDebitAmount uses Python identifier payFacDebitAmount
     __payFacDebitAmount = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'payFacDebitAmount'), 'payFacDebitAmount', '__httpwww_litle_comschema_CTD_ANON_29_payFacDebitAmount', pyxb.binding.datatypes.integer)
-    __payFacDebitAmount._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2153, 12)
-    __payFacDebitAmount._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2153, 12)
+    __payFacDebitAmount._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2153, 12)
+    __payFacDebitAmount._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2153, 12)
     
     payFacDebitAmount = property(__payFacDebitAmount.value, __payFacDebitAmount.set, None, None)
 
     
     # Attribute submerchantCreditAmount uses Python identifier submerchantCreditAmount
     __submerchantCreditAmount = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'submerchantCreditAmount'), 'submerchantCreditAmount', '__httpwww_litle_comschema_CTD_ANON_29_submerchantCreditAmount', pyxb.binding.datatypes.integer)
-    __submerchantCreditAmount._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2154, 12)
-    __submerchantCreditAmount._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2154, 12)
+    __submerchantCreditAmount._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2154, 12)
+    __submerchantCreditAmount._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2154, 12)
     
     submerchantCreditAmount = property(__submerchantCreditAmount.value, __submerchantCreditAmount.set, None, None)
 
     
     # Attribute submerchantDebitAmount uses Python identifier submerchantDebitAmount
     __submerchantDebitAmount = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'submerchantDebitAmount'), 'submerchantDebitAmount', '__httpwww_litle_comschema_CTD_ANON_29_submerchantDebitAmount', pyxb.binding.datatypes.integer)
-    __submerchantDebitAmount._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2155, 12)
-    __submerchantDebitAmount._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2155, 12)
+    __submerchantDebitAmount._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2155, 12)
+    __submerchantDebitAmount._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2155, 12)
     
     submerchantDebitAmount = property(__submerchantDebitAmount.value, __submerchantDebitAmount.set, None, None)
 
     
     # Attribute reserveCreditAmount uses Python identifier reserveCreditAmount
     __reserveCreditAmount = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'reserveCreditAmount'), 'reserveCreditAmount', '__httpwww_litle_comschema_CTD_ANON_29_reserveCreditAmount', pyxb.binding.datatypes.integer)
-    __reserveCreditAmount._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2156, 12)
-    __reserveCreditAmount._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2156, 12)
+    __reserveCreditAmount._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2156, 12)
+    __reserveCreditAmount._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2156, 12)
     
     reserveCreditAmount = property(__reserveCreditAmount.value, __reserveCreditAmount.set, None, None)
 
     
     # Attribute reserveDebitAmount uses Python identifier reserveDebitAmount
     __reserveDebitAmount = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'reserveDebitAmount'), 'reserveDebitAmount', '__httpwww_litle_comschema_CTD_ANON_29_reserveDebitAmount', pyxb.binding.datatypes.integer)
-    __reserveDebitAmount._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2157, 12)
-    __reserveDebitAmount._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2157, 12)
+    __reserveDebitAmount._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2157, 12)
+    __reserveDebitAmount._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2157, 12)
     
     reserveDebitAmount = property(__reserveDebitAmount.value, __reserveDebitAmount.set, None, None)
 
     
     # Attribute vendorDebitAmount uses Python identifier vendorDebitAmount
     __vendorDebitAmount = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'vendorDebitAmount'), 'vendorDebitAmount', '__httpwww_litle_comschema_CTD_ANON_29_vendorDebitAmount', pyxb.binding.datatypes.integer)
-    __vendorDebitAmount._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2158, 12)
-    __vendorDebitAmount._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2158, 12)
+    __vendorDebitAmount._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2158, 12)
+    __vendorDebitAmount._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2158, 12)
     
     vendorDebitAmount = property(__vendorDebitAmount.value, __vendorDebitAmount.set, None, None)
 
     
     # Attribute vendorCreditAmount uses Python identifier vendorCreditAmount
     __vendorCreditAmount = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'vendorCreditAmount'), 'vendorCreditAmount', '__httpwww_litle_comschema_CTD_ANON_29_vendorCreditAmount', pyxb.binding.datatypes.integer)
-    __vendorCreditAmount._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2159, 12)
-    __vendorCreditAmount._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2159, 12)
+    __vendorCreditAmount._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2159, 12)
+    __vendorCreditAmount._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2159, 12)
     
     vendorCreditAmount = property(__vendorCreditAmount.value, __vendorCreditAmount.set, None, None)
 
     
     # Attribute physicalCheckDebitAmount uses Python identifier physicalCheckDebitAmount
     __physicalCheckDebitAmount = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'physicalCheckDebitAmount'), 'physicalCheckDebitAmount', '__httpwww_litle_comschema_CTD_ANON_29_physicalCheckDebitAmount', pyxb.binding.datatypes.integer)
-    __physicalCheckDebitAmount._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2160, 12)
-    __physicalCheckDebitAmount._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2160, 12)
+    __physicalCheckDebitAmount._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2160, 12)
+    __physicalCheckDebitAmount._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2160, 12)
     
     physicalCheckDebitAmount = property(__physicalCheckDebitAmount.value, __physicalCheckDebitAmount.set, None, None)
 
     
     # Attribute physicalCheckCreditAmount uses Python identifier physicalCheckCreditAmount
     __physicalCheckCreditAmount = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'physicalCheckCreditAmount'), 'physicalCheckCreditAmount', '__httpwww_litle_comschema_CTD_ANON_29_physicalCheckCreditAmount', pyxb.binding.datatypes.integer)
-    __physicalCheckCreditAmount._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2161, 12)
-    __physicalCheckCreditAmount._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2161, 12)
+    __physicalCheckCreditAmount._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2161, 12)
+    __physicalCheckCreditAmount._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2161, 12)
     
     physicalCheckCreditAmount = property(__physicalCheckCreditAmount.value, __physicalCheckCreditAmount.set, None, None)
 
     
     # Attribute merchantId uses Python identifier merchantId
     __merchantId = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'merchantId'), 'merchantId', '__httpwww_litle_comschema_CTD_ANON_29_merchantId', pyxb.binding.datatypes.string, required=True)
-    __merchantId._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2163, 12)
-    __merchantId._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2163, 12)
+    __merchantId._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2163, 12)
+    __merchantId._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2163, 12)
     
     merchantId = property(__merchantId.value, __merchantId.set, None, None)
 
@@ -4684,20 +4684,20 @@ class CTD_ANON_30 (pyxb.binding.basis.complexTypeDefinition):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2240, 8)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2240, 8)
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
     # Element {http://www.litle.com/schema}RFRResponse uses Python identifier RFRResponse
-    __RFRResponse = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'RFRResponse'), 'RFRResponse', '__httpwww_litle_comschema_CTD_ANON_30_httpwww_litle_comschemaRFRResponse', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2254, 4), )
+    __RFRResponse = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'RFRResponse'), 'RFRResponse', '__httpwww_litle_comschema_CTD_ANON_30_httpwww_litle_comschemaRFRResponse', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2254, 4), )
 
     
     RFRResponse = property(__RFRResponse.value, __RFRResponse.set, None, None)
 
     
     # Element {http://www.litle.com/schema}batchResponse uses Python identifier batchResponse
-    __batchResponse = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'batchResponse'), 'batchResponse', '__httpwww_litle_comschema_CTD_ANON_30_httpwww_litle_comschemabatchResponse', True, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2260, 4), )
+    __batchResponse = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'batchResponse'), 'batchResponse', '__httpwww_litle_comschema_CTD_ANON_30_httpwww_litle_comschemabatchResponse', True, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2260, 4), )
 
     
     batchResponse = property(__batchResponse.value, __batchResponse.set, None, None)
@@ -4705,40 +4705,40 @@ class CTD_ANON_30 (pyxb.binding.basis.complexTypeDefinition):
     
     # Attribute version uses Python identifier version
     __version = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'version'), 'version', '__httpwww_litle_comschema_CTD_ANON_30_version', pyxb.binding.datatypes.string, required=True)
-    __version._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2247, 12)
-    __version._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2247, 12)
+    __version._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2247, 12)
+    __version._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2247, 12)
     
     version = property(__version.value, __version.set, None, None)
 
     
     # Attribute id uses Python identifier id
     __id = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'id'), 'id', '__httpwww_litle_comschema_CTD_ANON_30_id', pyxb.binding.datatypes.string)
-    __id._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2248, 12)
-    __id._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2248, 12)
+    __id._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2248, 12)
+    __id._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2248, 12)
     
     id = property(__id.value, __id.set, None, None)
 
     
     # Attribute response uses Python identifier response
     __response = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'response'), 'response', '__httpwww_litle_comschema_CTD_ANON_30_response', pyxb.binding.datatypes.string, required=True)
-    __response._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2249, 12)
-    __response._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2249, 12)
+    __response._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2249, 12)
+    __response._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2249, 12)
     
     response = property(__response.value, __response.set, None, None)
 
     
     # Attribute message uses Python identifier message
     __message = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'message'), 'message', '__httpwww_litle_comschema_CTD_ANON_30_message', pyxb.binding.datatypes.string, required=True)
-    __message._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2250, 12)
-    __message._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2250, 12)
+    __message._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2250, 12)
+    __message._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2250, 12)
     
     message = property(__message.value, __message.set, None, None)
 
     
     # Attribute litleSessionId uses Python identifier litleSessionId
     __litleSessionId = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'litleSessionId'), 'litleSessionId', '__httpwww_litle_comschema_CTD_ANON_30_litleSessionId', pyxb.binding.datatypes.long, required=True)
-    __litleSessionId._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2251, 12)
-    __litleSessionId._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2251, 12)
+    __litleSessionId._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2251, 12)
+    __litleSessionId._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2251, 12)
     
     litleSessionId = property(__litleSessionId.value, __litleSessionId.set, None, None)
 
@@ -4763,23 +4763,23 @@ class CTD_ANON_31 (pyxb.binding.basis.complexTypeDefinition):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_EMPTY
     _Abstract = False
     _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2255, 8)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2255, 8)
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
     # Attribute response uses Python identifier response
     __response = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'response'), 'response', '__httpwww_litle_comschema_CTD_ANON_31_response', pyxb.binding.datatypes.string, required=True)
-    __response._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2256, 12)
-    __response._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2256, 12)
+    __response._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2256, 12)
+    __response._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2256, 12)
     
     response = property(__response.value, __response.set, None, None)
 
     
     # Attribute message uses Python identifier message
     __message = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'message'), 'message', '__httpwww_litle_comschema_CTD_ANON_31_message', pyxb.binding.datatypes.string, required=True)
-    __message._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2257, 12)
-    __message._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2257, 12)
+    __message._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2257, 12)
+    __message._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2257, 12)
     
     message = property(__message.value, __message.set, None, None)
 
@@ -4800,20 +4800,20 @@ class CTD_ANON_32 (pyxb.binding.basis.complexTypeDefinition):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2261, 8)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2261, 8)
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
     # Element {http://www.litle.com/schema}recurringTransactionResponse uses Python identifier recurringTransactionResponse
-    __recurringTransactionResponse = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'recurringTransactionResponse'), 'recurringTransactionResponse', '__httpwww_litle_comschema_CTD_ANON_32_httpwww_litle_comschemarecurringTransactionResponse', True, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 161, 4), )
+    __recurringTransactionResponse = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'recurringTransactionResponse'), 'recurringTransactionResponse', '__httpwww_litle_comschema_CTD_ANON_32_httpwww_litle_comschemarecurringTransactionResponse', True, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 161, 4), )
 
     
     recurringTransactionResponse = property(__recurringTransactionResponse.value, __recurringTransactionResponse.set, None, None)
 
     
     # Element {http://www.litle.com/schema}transactionResponse uses Python identifier transactionResponse
-    __transactionResponse = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'transactionResponse'), 'transactionResponse', '__httpwww_litle_comschema_CTD_ANON_32_httpwww_litle_comschematransactionResponse', True, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1069, 4), )
+    __transactionResponse = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'transactionResponse'), 'transactionResponse', '__httpwww_litle_comschema_CTD_ANON_32_httpwww_litle_comschematransactionResponse', True, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1069, 4), )
 
     
     transactionResponse = property(__transactionResponse.value, __transactionResponse.set, None, None)
@@ -4821,24 +4821,24 @@ class CTD_ANON_32 (pyxb.binding.basis.complexTypeDefinition):
     
     # Attribute id uses Python identifier id
     __id = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'id'), 'id', '__httpwww_litle_comschema_CTD_ANON_32_id', pyxb.binding.datatypes.string)
-    __id._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2266, 12)
-    __id._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2266, 12)
+    __id._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2266, 12)
+    __id._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2266, 12)
     
     id = property(__id.value, __id.set, None, None)
 
     
     # Attribute litleBatchId uses Python identifier litleBatchId
     __litleBatchId = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'litleBatchId'), 'litleBatchId', '__httpwww_litle_comschema_CTD_ANON_32_litleBatchId', pyxb.binding.datatypes.long, required=True)
-    __litleBatchId._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2267, 12)
-    __litleBatchId._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2267, 12)
+    __litleBatchId._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2267, 12)
+    __litleBatchId._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2267, 12)
     
     litleBatchId = property(__litleBatchId.value, __litleBatchId.set, None, None)
 
     
     # Attribute merchantId uses Python identifier merchantId
     __merchantId = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'merchantId'), 'merchantId', '__httpwww_litle_comschema_CTD_ANON_32_merchantId', pyxb.binding.datatypes.string, required=True)
-    __merchantId._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2268, 12)
-    __merchantId._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2268, 12)
+    __merchantId._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2268, 12)
+    __merchantId._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2268, 12)
     
     merchantId = property(__merchantId.value, __merchantId.set, None, None)
 
@@ -4861,20 +4861,20 @@ class CTD_ANON_33 (pyxb.binding.basis.complexTypeDefinition):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2304, 8)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2304, 8)
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
     # Element {http://www.litle.com/schema}merchantId uses Python identifier merchantId
-    __merchantId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'merchantId'), 'merchantId', '__httpwww_litle_comschema_CTD_ANON_33_httpwww_litle_comschemamerchantId', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2306, 16), )
+    __merchantId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'merchantId'), 'merchantId', '__httpwww_litle_comschema_CTD_ANON_33_httpwww_litle_comschemamerchantId', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2306, 16), )
 
     
     merchantId = property(__merchantId.value, __merchantId.set, None, None)
 
     
     # Element {http://www.litle.com/schema}postDay uses Python identifier postDay
-    __postDay = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'postDay'), 'postDay', '__httpwww_litle_comschema_CTD_ANON_33_httpwww_litle_comschemapostDay', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2307, 16), )
+    __postDay = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'postDay'), 'postDay', '__httpwww_litle_comschema_CTD_ANON_33_httpwww_litle_comschemapostDay', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2307, 16), )
 
     
     postDay = property(__postDay.value, __postDay.set, None, None)
@@ -4896,27 +4896,27 @@ class baseRequest (pyxb.binding.basis.complexTypeDefinition):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'baseRequest')
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2713, 4)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2713, 4)
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
     # Element {http://www.litle.com/schema}authentication uses Python identifier authentication
-    __authentication = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'authentication'), 'authentication', '__httpwww_litle_comschema_baseRequest_httpwww_litle_comschemaauthentication', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 5, 4), )
+    __authentication = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'authentication'), 'authentication', '__httpwww_litle_comschema_baseRequest_httpwww_litle_comschemaauthentication', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 5, 4), )
 
     
     authentication = property(__authentication.value, __authentication.set, None, None)
 
     
     # Element {http://www.litle.com/schema}recurringTransaction uses Python identifier recurringTransaction
-    __recurringTransaction = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'recurringTransaction'), 'recurringTransaction', '__httpwww_litle_comschema_baseRequest_httpwww_litle_comschemarecurringTransaction', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 160, 4), )
+    __recurringTransaction = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'recurringTransaction'), 'recurringTransaction', '__httpwww_litle_comschema_baseRequest_httpwww_litle_comschemarecurringTransaction', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 160, 4), )
 
     
     recurringTransaction = property(__recurringTransaction.value, __recurringTransaction.set, None, None)
 
     
     # Element {http://www.litle.com/schema}transaction uses Python identifier transaction
-    __transaction = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'transaction'), 'transaction', '__httpwww_litle_comschema_baseRequest_httpwww_litle_comschematransaction', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 392, 4), )
+    __transaction = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'transaction'), 'transaction', '__httpwww_litle_comschema_baseRequest_httpwww_litle_comschematransaction', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 392, 4), )
 
     
     transaction = property(__transaction.value, __transaction.set, None, None)
@@ -4924,8 +4924,8 @@ class baseRequest (pyxb.binding.basis.complexTypeDefinition):
     
     # Attribute version uses Python identifier version
     __version = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'version'), 'version', '__httpwww_litle_comschema_baseRequest_version', pyxb.binding.datatypes.string, required=True)
-    __version._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2721, 8)
-    __version._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2721, 8)
+    __version._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2721, 8)
+    __version._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2721, 8)
     
     version = property(__version.value, __version.set, None, None)
 
@@ -4948,20 +4948,20 @@ class CTD_ANON_34 (pyxb.binding.basis.complexTypeDefinition):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2737, 8)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2737, 8)
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
     # Element {http://www.litle.com/schema}recurringTransactionResponse uses Python identifier recurringTransactionResponse
-    __recurringTransactionResponse = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'recurringTransactionResponse'), 'recurringTransactionResponse', '__httpwww_litle_comschema_CTD_ANON_34_httpwww_litle_comschemarecurringTransactionResponse', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 161, 4), )
+    __recurringTransactionResponse = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'recurringTransactionResponse'), 'recurringTransactionResponse', '__httpwww_litle_comschema_CTD_ANON_34_httpwww_litle_comschemarecurringTransactionResponse', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 161, 4), )
 
     
     recurringTransactionResponse = property(__recurringTransactionResponse.value, __recurringTransactionResponse.set, None, None)
 
     
     # Element {http://www.litle.com/schema}transactionResponse uses Python identifier transactionResponse
-    __transactionResponse = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'transactionResponse'), 'transactionResponse', '__httpwww_litle_comschema_CTD_ANON_34_httpwww_litle_comschematransactionResponse', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1069, 4), )
+    __transactionResponse = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'transactionResponse'), 'transactionResponse', '__httpwww_litle_comschema_CTD_ANON_34_httpwww_litle_comschematransactionResponse', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1069, 4), )
 
     
     transactionResponse = property(__transactionResponse.value, __transactionResponse.set, None, None)
@@ -4969,24 +4969,24 @@ class CTD_ANON_34 (pyxb.binding.basis.complexTypeDefinition):
     
     # Attribute response uses Python identifier response
     __response = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'response'), 'response', '__httpwww_litle_comschema_CTD_ANON_34_response', pyxb.binding.datatypes.string, required=True)
-    __response._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2742, 12)
-    __response._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2742, 12)
+    __response._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2742, 12)
+    __response._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2742, 12)
     
     response = property(__response.value, __response.set, None, None)
 
     
     # Attribute message uses Python identifier message
     __message = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'message'), 'message', '__httpwww_litle_comschema_CTD_ANON_34_message', pyxb.binding.datatypes.string, required=True)
-    __message._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2743, 12)
-    __message._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2743, 12)
+    __message._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2743, 12)
+    __message._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2743, 12)
     
     message = property(__message.value, __message.set, None, None)
 
     
     # Attribute version uses Python identifier version
     __version = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'version'), 'version', '__httpwww_litle_comschema_CTD_ANON_34_version', pyxb.binding.datatypes.string, required=True)
-    __version._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2744, 12)
-    __version._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2744, 12)
+    __version._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2744, 12)
+    __version._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2744, 12)
     
     version = property(__version.value, __version.set, None, None)
 
@@ -5009,13 +5009,13 @@ class voidRecyclingResponseType (pyxb.binding.basis.complexTypeDefinition):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'voidRecyclingResponseType')
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2780, 4)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2780, 4)
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
     # Element {http://www.litle.com/schema}creditLitleTxnId uses Python identifier creditLitleTxnId
-    __creditLitleTxnId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'creditLitleTxnId'), 'creditLitleTxnId', '__httpwww_litle_comschema_voidRecyclingResponseType_httpwww_litle_comschemacreditLitleTxnId', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2782, 12), )
+    __creditLitleTxnId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'creditLitleTxnId'), 'creditLitleTxnId', '__httpwww_litle_comschema_voidRecyclingResponseType_httpwww_litle_comschemacreditLitleTxnId', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2782, 12), )
 
     
     creditLitleTxnId = property(__creditLitleTxnId.value, __creditLitleTxnId.set, None, None)
@@ -5037,13 +5037,13 @@ class CTD_ANON_35 (pyxb.binding.basis.complexTypeDefinition):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2913, 29)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2913, 29)
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
     # Element {http://www.litle.com/schema}transactionResponse uses Python identifier transactionResponse
-    __transactionResponse = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'transactionResponse'), 'transactionResponse', '__httpwww_litle_comschema_CTD_ANON_35_httpwww_litle_comschematransactionResponse', True, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1069, 4), )
+    __transactionResponse = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'transactionResponse'), 'transactionResponse', '__httpwww_litle_comschema_CTD_ANON_35_httpwww_litle_comschematransactionResponse', True, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1069, 4), )
 
     
     transactionResponse = property(__transactionResponse.value, __transactionResponse.set, None, None)
@@ -5064,13 +5064,13 @@ class CTD_ANON_36 (recurringTransactionType):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 176, 8)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 176, 8)
     _ElementMap = recurringTransactionType._ElementMap.copy()
     _AttributeMap = recurringTransactionType._AttributeMap.copy()
     # Base type is recurringTransactionType
     
     # Element {http://www.litle.com/schema}subscriptionId uses Python identifier subscriptionId
-    __subscriptionId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'subscriptionId'), 'subscriptionId', '__httpwww_litle_comschema_CTD_ANON_36_httpwww_litle_comschemasubscriptionId', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 180, 25), )
+    __subscriptionId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'subscriptionId'), 'subscriptionId', '__httpwww_litle_comschema_CTD_ANON_36_httpwww_litle_comschemasubscriptionId', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 180, 25), )
 
     
     subscriptionId = property(__subscriptionId.value, __subscriptionId.set, None, None)
@@ -5091,97 +5091,97 @@ class CTD_ANON_37 (recurringTransactionType):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 188, 8)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 188, 8)
     _ElementMap = recurringTransactionType._ElementMap.copy()
     _AttributeMap = recurringTransactionType._AttributeMap.copy()
     # Base type is recurringTransactionType
     
     # Element {http://www.litle.com/schema}billToAddress uses Python identifier billToAddress
-    __billToAddress = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'billToAddress'), 'billToAddress', '__httpwww_litle_comschema_CTD_ANON_37_httpwww_litle_comschemabillToAddress', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 69, 4), )
+    __billToAddress = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'billToAddress'), 'billToAddress', '__httpwww_litle_comschema_CTD_ANON_37_httpwww_litle_comschemabillToAddress', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 69, 4), )
 
     
     billToAddress = property(__billToAddress.value, __billToAddress.set, None, None)
 
     
     # Element {http://www.litle.com/schema}subscriptionId uses Python identifier subscriptionId
-    __subscriptionId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'subscriptionId'), 'subscriptionId', '__httpwww_litle_comschema_CTD_ANON_37_httpwww_litle_comschemasubscriptionId', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 192, 25), )
+    __subscriptionId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'subscriptionId'), 'subscriptionId', '__httpwww_litle_comschema_CTD_ANON_37_httpwww_litle_comschemasubscriptionId', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 192, 25), )
 
     
     subscriptionId = property(__subscriptionId.value, __subscriptionId.set, None, None)
 
     
     # Element {http://www.litle.com/schema}planCode uses Python identifier planCode
-    __planCode = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'planCode'), 'planCode', '__httpwww_litle_comschema_CTD_ANON_37_httpwww_litle_comschemaplanCode', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 193, 25), )
+    __planCode = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'planCode'), 'planCode', '__httpwww_litle_comschema_CTD_ANON_37_httpwww_litle_comschemaplanCode', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 193, 25), )
 
     
     planCode = property(__planCode.value, __planCode.set, None, None)
 
     
     # Element {http://www.litle.com/schema}card uses Python identifier card
-    __card = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'card'), 'card', '__httpwww_litle_comschema_CTD_ANON_37_httpwww_litle_comschemacard', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 196, 29), )
+    __card = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'card'), 'card', '__httpwww_litle_comschema_CTD_ANON_37_httpwww_litle_comschemacard', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 196, 29), )
 
     
     card = property(__card.value, __card.set, None, None)
 
     
     # Element {http://www.litle.com/schema}token uses Python identifier token
-    __token = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'token'), 'token', '__httpwww_litle_comschema_CTD_ANON_37_httpwww_litle_comschematoken', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 197, 29), )
+    __token = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'token'), 'token', '__httpwww_litle_comschema_CTD_ANON_37_httpwww_litle_comschematoken', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 197, 29), )
 
     
     token = property(__token.value, __token.set, None, None)
 
     
     # Element {http://www.litle.com/schema}paypage uses Python identifier paypage
-    __paypage = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'paypage'), 'paypage', '__httpwww_litle_comschema_CTD_ANON_37_httpwww_litle_comschemapaypage', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 198, 29), )
+    __paypage = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'paypage'), 'paypage', '__httpwww_litle_comschema_CTD_ANON_37_httpwww_litle_comschemapaypage', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 198, 29), )
 
     
     paypage = property(__paypage.value, __paypage.set, None, None)
 
     
     # Element {http://www.litle.com/schema}billingDate uses Python identifier billingDate
-    __billingDate = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'billingDate'), 'billingDate', '__httpwww_litle_comschema_CTD_ANON_37_httpwww_litle_comschemabillingDate', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 200, 25), )
+    __billingDate = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'billingDate'), 'billingDate', '__httpwww_litle_comschema_CTD_ANON_37_httpwww_litle_comschemabillingDate', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 200, 25), )
 
     
     billingDate = property(__billingDate.value, __billingDate.set, None, None)
 
     
     # Element {http://www.litle.com/schema}createDiscount uses Python identifier createDiscount
-    __createDiscount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'createDiscount'), 'createDiscount', '__httpwww_litle_comschema_CTD_ANON_37_httpwww_litle_comschemacreateDiscount', True, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 201, 25), )
+    __createDiscount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'createDiscount'), 'createDiscount', '__httpwww_litle_comschema_CTD_ANON_37_httpwww_litle_comschemacreateDiscount', True, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 201, 25), )
 
     
     createDiscount = property(__createDiscount.value, __createDiscount.set, None, None)
 
     
     # Element {http://www.litle.com/schema}updateDiscount uses Python identifier updateDiscount
-    __updateDiscount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'updateDiscount'), 'updateDiscount', '__httpwww_litle_comschema_CTD_ANON_37_httpwww_litle_comschemaupdateDiscount', True, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 202, 25), )
+    __updateDiscount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'updateDiscount'), 'updateDiscount', '__httpwww_litle_comschema_CTD_ANON_37_httpwww_litle_comschemaupdateDiscount', True, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 202, 25), )
 
     
     updateDiscount = property(__updateDiscount.value, __updateDiscount.set, None, None)
 
     
     # Element {http://www.litle.com/schema}deleteDiscount uses Python identifier deleteDiscount
-    __deleteDiscount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'deleteDiscount'), 'deleteDiscount', '__httpwww_litle_comschema_CTD_ANON_37_httpwww_litle_comschemadeleteDiscount', True, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 203, 25), )
+    __deleteDiscount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'deleteDiscount'), 'deleteDiscount', '__httpwww_litle_comschema_CTD_ANON_37_httpwww_litle_comschemadeleteDiscount', True, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 203, 25), )
 
     
     deleteDiscount = property(__deleteDiscount.value, __deleteDiscount.set, None, None)
 
     
     # Element {http://www.litle.com/schema}createAddOn uses Python identifier createAddOn
-    __createAddOn = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'createAddOn'), 'createAddOn', '__httpwww_litle_comschema_CTD_ANON_37_httpwww_litle_comschemacreateAddOn', True, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 204, 25), )
+    __createAddOn = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'createAddOn'), 'createAddOn', '__httpwww_litle_comschema_CTD_ANON_37_httpwww_litle_comschemacreateAddOn', True, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 204, 25), )
 
     
     createAddOn = property(__createAddOn.value, __createAddOn.set, None, None)
 
     
     # Element {http://www.litle.com/schema}updateAddOn uses Python identifier updateAddOn
-    __updateAddOn = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'updateAddOn'), 'updateAddOn', '__httpwww_litle_comschema_CTD_ANON_37_httpwww_litle_comschemaupdateAddOn', True, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 205, 25), )
+    __updateAddOn = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'updateAddOn'), 'updateAddOn', '__httpwww_litle_comschema_CTD_ANON_37_httpwww_litle_comschemaupdateAddOn', True, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 205, 25), )
 
     
     updateAddOn = property(__updateAddOn.value, __updateAddOn.set, None, None)
 
     
     # Element {http://www.litle.com/schema}deleteAddOn uses Python identifier deleteAddOn
-    __deleteAddOn = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'deleteAddOn'), 'deleteAddOn', '__httpwww_litle_comschema_CTD_ANON_37_httpwww_litle_comschemadeleteAddOn', True, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 206, 25), )
+    __deleteAddOn = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'deleteAddOn'), 'deleteAddOn', '__httpwww_litle_comschema_CTD_ANON_37_httpwww_litle_comschemadeleteAddOn', True, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 206, 25), )
 
     
     deleteAddOn = property(__deleteAddOn.value, __deleteAddOn.set, None, None)
@@ -5214,69 +5214,69 @@ class CTD_ANON_38 (recurringTransactionType):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 214, 8)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 214, 8)
     _ElementMap = recurringTransactionType._ElementMap.copy()
     _AttributeMap = recurringTransactionType._AttributeMap.copy()
     # Base type is recurringTransactionType
     
     # Element {http://www.litle.com/schema}planCode uses Python identifier planCode
-    __planCode = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'planCode'), 'planCode', '__httpwww_litle_comschema_CTD_ANON_38_httpwww_litle_comschemaplanCode', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 218, 25), )
+    __planCode = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'planCode'), 'planCode', '__httpwww_litle_comschema_CTD_ANON_38_httpwww_litle_comschemaplanCode', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 218, 25), )
 
     
     planCode = property(__planCode.value, __planCode.set, None, None)
 
     
     # Element {http://www.litle.com/schema}name uses Python identifier name
-    __name = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'name'), 'name', '__httpwww_litle_comschema_CTD_ANON_38_httpwww_litle_comschemaname', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 219, 25), )
+    __name = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'name'), 'name', '__httpwww_litle_comschema_CTD_ANON_38_httpwww_litle_comschemaname', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 219, 25), )
 
     
     name = property(__name.value, __name.set, None, None)
 
     
     # Element {http://www.litle.com/schema}description uses Python identifier description
-    __description = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'description'), 'description', '__httpwww_litle_comschema_CTD_ANON_38_httpwww_litle_comschemadescription', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 220, 25), )
+    __description = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'description'), 'description', '__httpwww_litle_comschema_CTD_ANON_38_httpwww_litle_comschemadescription', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 220, 25), )
 
     
     description = property(__description.value, __description.set, None, None)
 
     
     # Element {http://www.litle.com/schema}intervalType uses Python identifier intervalType
-    __intervalType = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'intervalType'), 'intervalType', '__httpwww_litle_comschema_CTD_ANON_38_httpwww_litle_comschemaintervalType', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 221, 25), )
+    __intervalType = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'intervalType'), 'intervalType', '__httpwww_litle_comschema_CTD_ANON_38_httpwww_litle_comschemaintervalType', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 221, 25), )
 
     
     intervalType = property(__intervalType.value, __intervalType.set, None, None)
 
     
     # Element {http://www.litle.com/schema}amount uses Python identifier amount
-    __amount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'amount'), 'amount', '__httpwww_litle_comschema_CTD_ANON_38_httpwww_litle_comschemaamount', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 222, 25), )
+    __amount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'amount'), 'amount', '__httpwww_litle_comschema_CTD_ANON_38_httpwww_litle_comschemaamount', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 222, 25), )
 
     
     amount = property(__amount.value, __amount.set, None, None)
 
     
     # Element {http://www.litle.com/schema}numberOfPayments uses Python identifier numberOfPayments
-    __numberOfPayments = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'numberOfPayments'), 'numberOfPayments', '__httpwww_litle_comschema_CTD_ANON_38_httpwww_litle_comschemanumberOfPayments', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 223, 25), )
+    __numberOfPayments = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'numberOfPayments'), 'numberOfPayments', '__httpwww_litle_comschema_CTD_ANON_38_httpwww_litle_comschemanumberOfPayments', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 223, 25), )
 
     
     numberOfPayments = property(__numberOfPayments.value, __numberOfPayments.set, None, None)
 
     
     # Element {http://www.litle.com/schema}trialNumberOfIntervals uses Python identifier trialNumberOfIntervals
-    __trialNumberOfIntervals = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'trialNumberOfIntervals'), 'trialNumberOfIntervals', '__httpwww_litle_comschema_CTD_ANON_38_httpwww_litle_comschematrialNumberOfIntervals', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 224, 25), )
+    __trialNumberOfIntervals = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'trialNumberOfIntervals'), 'trialNumberOfIntervals', '__httpwww_litle_comschema_CTD_ANON_38_httpwww_litle_comschematrialNumberOfIntervals', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 224, 25), )
 
     
     trialNumberOfIntervals = property(__trialNumberOfIntervals.value, __trialNumberOfIntervals.set, None, None)
 
     
     # Element {http://www.litle.com/schema}trialIntervalType uses Python identifier trialIntervalType
-    __trialIntervalType = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'trialIntervalType'), 'trialIntervalType', '__httpwww_litle_comschema_CTD_ANON_38_httpwww_litle_comschematrialIntervalType', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 225, 25), )
+    __trialIntervalType = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'trialIntervalType'), 'trialIntervalType', '__httpwww_litle_comschema_CTD_ANON_38_httpwww_litle_comschematrialIntervalType', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 225, 25), )
 
     
     trialIntervalType = property(__trialIntervalType.value, __trialIntervalType.set, None, None)
 
     
     # Element {http://www.litle.com/schema}active uses Python identifier active
-    __active = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'active'), 'active', '__httpwww_litle_comschema_CTD_ANON_38_httpwww_litle_comschemaactive', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 226, 25), )
+    __active = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'active'), 'active', '__httpwww_litle_comschema_CTD_ANON_38_httpwww_litle_comschemaactive', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 226, 25), )
 
     
     active = property(__active.value, __active.set, None, None)
@@ -5305,20 +5305,20 @@ class CTD_ANON_39 (recurringTransactionType):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 234, 8)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 234, 8)
     _ElementMap = recurringTransactionType._ElementMap.copy()
     _AttributeMap = recurringTransactionType._AttributeMap.copy()
     # Base type is recurringTransactionType
     
     # Element {http://www.litle.com/schema}planCode uses Python identifier planCode
-    __planCode = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'planCode'), 'planCode', '__httpwww_litle_comschema_CTD_ANON_39_httpwww_litle_comschemaplanCode', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 238, 25), )
+    __planCode = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'planCode'), 'planCode', '__httpwww_litle_comschema_CTD_ANON_39_httpwww_litle_comschemaplanCode', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 238, 25), )
 
     
     planCode = property(__planCode.value, __planCode.set, None, None)
 
     
     # Element {http://www.litle.com/schema}active uses Python identifier active
-    __active = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'active'), 'active', '__httpwww_litle_comschema_CTD_ANON_39_httpwww_litle_comschemaactive', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 239, 25), )
+    __active = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'active'), 'active', '__httpwww_litle_comschema_CTD_ANON_39_httpwww_litle_comschemaactive', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 239, 25), )
 
     
     active = property(__active.value, __active.set, None, None)
@@ -5340,7 +5340,7 @@ class CTD_ANON_40 (recurringTransactionResponseType):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 247, 8)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 247, 8)
     _ElementMap = recurringTransactionResponseType._ElementMap.copy()
     _AttributeMap = recurringTransactionResponseType._AttributeMap.copy()
     # Base type is recurringTransactionResponseType
@@ -5354,7 +5354,7 @@ class CTD_ANON_40 (recurringTransactionResponseType):
     # Element responseTime ({http://www.litle.com/schema}responseTime) inherited from {http://www.litle.com/schema}recurringTransactionResponseType
     
     # Element {http://www.litle.com/schema}subscriptionId uses Python identifier subscriptionId
-    __subscriptionId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'subscriptionId'), 'subscriptionId', '__httpwww_litle_comschema_CTD_ANON_40_httpwww_litle_comschemasubscriptionId', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 251, 25), )
+    __subscriptionId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'subscriptionId'), 'subscriptionId', '__httpwww_litle_comschema_CTD_ANON_40_httpwww_litle_comschemasubscriptionId', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 251, 25), )
 
     
     subscriptionId = property(__subscriptionId.value, __subscriptionId.set, None, None)
@@ -5375,7 +5375,7 @@ class CTD_ANON_41 (recurringTransactionResponseType):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 259, 8)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 259, 8)
     _ElementMap = recurringTransactionResponseType._ElementMap.copy()
     _AttributeMap = recurringTransactionResponseType._AttributeMap.copy()
     # Base type is recurringTransactionResponseType
@@ -5389,14 +5389,14 @@ class CTD_ANON_41 (recurringTransactionResponseType):
     # Element responseTime ({http://www.litle.com/schema}responseTime) inherited from {http://www.litle.com/schema}recurringTransactionResponseType
     
     # Element {http://www.litle.com/schema}subscriptionId uses Python identifier subscriptionId
-    __subscriptionId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'subscriptionId'), 'subscriptionId', '__httpwww_litle_comschema_CTD_ANON_41_httpwww_litle_comschemasubscriptionId', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 263, 25), )
+    __subscriptionId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'subscriptionId'), 'subscriptionId', '__httpwww_litle_comschema_CTD_ANON_41_httpwww_litle_comschemasubscriptionId', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 263, 25), )
 
     
     subscriptionId = property(__subscriptionId.value, __subscriptionId.set, None, None)
 
     
     # Element {http://www.litle.com/schema}tokenResponse uses Python identifier tokenResponse
-    __tokenResponse = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'tokenResponse'), 'tokenResponse', '__httpwww_litle_comschema_CTD_ANON_41_httpwww_litle_comschematokenResponse', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 264, 25), )
+    __tokenResponse = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'tokenResponse'), 'tokenResponse', '__httpwww_litle_comschema_CTD_ANON_41_httpwww_litle_comschematokenResponse', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 264, 25), )
 
     
     tokenResponse = property(__tokenResponse.value, __tokenResponse.set, None, None)
@@ -5418,7 +5418,7 @@ class CTD_ANON_42 (recurringTransactionResponseType):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 272, 8)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 272, 8)
     _ElementMap = recurringTransactionResponseType._ElementMap.copy()
     _AttributeMap = recurringTransactionResponseType._AttributeMap.copy()
     # Base type is recurringTransactionResponseType
@@ -5432,7 +5432,7 @@ class CTD_ANON_42 (recurringTransactionResponseType):
     # Element responseTime ({http://www.litle.com/schema}responseTime) inherited from {http://www.litle.com/schema}recurringTransactionResponseType
     
     # Element {http://www.litle.com/schema}planCode uses Python identifier planCode
-    __planCode = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'planCode'), 'planCode', '__httpwww_litle_comschema_CTD_ANON_42_httpwww_litle_comschemaplanCode', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 276, 25), )
+    __planCode = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'planCode'), 'planCode', '__httpwww_litle_comschema_CTD_ANON_42_httpwww_litle_comschemaplanCode', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 276, 25), )
 
     
     planCode = property(__planCode.value, __planCode.set, None, None)
@@ -5453,7 +5453,7 @@ class CTD_ANON_43 (recurringTransactionResponseType):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 284, 8)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 284, 8)
     _ElementMap = recurringTransactionResponseType._ElementMap.copy()
     _AttributeMap = recurringTransactionResponseType._AttributeMap.copy()
     # Base type is recurringTransactionResponseType
@@ -5467,7 +5467,7 @@ class CTD_ANON_43 (recurringTransactionResponseType):
     # Element responseTime ({http://www.litle.com/schema}responseTime) inherited from {http://www.litle.com/schema}recurringTransactionResponseType
     
     # Element {http://www.litle.com/schema}planCode uses Python identifier planCode
-    __planCode = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'planCode'), 'planCode', '__httpwww_litle_comschema_CTD_ANON_43_httpwww_litle_comschemaplanCode', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 288, 25), )
+    __planCode = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'planCode'), 'planCode', '__httpwww_litle_comschema_CTD_ANON_43_httpwww_litle_comschemaplanCode', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 288, 25), )
 
     
     planCode = property(__planCode.value, __planCode.set, None, None)
@@ -5488,7 +5488,7 @@ class transactionTypeWithReportGroup (transactionType):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_EMPTY
     _Abstract = False
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'transactionTypeWithReportGroup')
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 399, 4)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 399, 4)
     _ElementMap = transactionType._ElementMap.copy()
     _AttributeMap = transactionType._AttributeMap.copy()
     # Base type is transactionType
@@ -5499,8 +5499,8 @@ class transactionTypeWithReportGroup (transactionType):
     
     # Attribute reportGroup uses Python identifier reportGroup
     __reportGroup = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'reportGroup'), 'reportGroup', '__httpwww_litle_comschema_transactionTypeWithReportGroup_reportGroup', pyxb.binding.datatypes.string, required=True)
-    __reportGroup._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 402, 16)
-    __reportGroup._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 402, 16)
+    __reportGroup._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 402, 16)
+    __reportGroup._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 402, 16)
     
     reportGroup = property(__reportGroup.value, __reportGroup.set, None, None)
 
@@ -5521,7 +5521,7 @@ class transactionTypeWithReportGroupAndPartial (transactionType):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_EMPTY
     _Abstract = False
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'transactionTypeWithReportGroupAndPartial')
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 415, 4)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 415, 4)
     _ElementMap = transactionType._ElementMap.copy()
     _AttributeMap = transactionType._AttributeMap.copy()
     # Base type is transactionType
@@ -5532,16 +5532,16 @@ class transactionTypeWithReportGroupAndPartial (transactionType):
     
     # Attribute reportGroup uses Python identifier reportGroup
     __reportGroup = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'reportGroup'), 'reportGroup', '__httpwww_litle_comschema_transactionTypeWithReportGroupAndPartial_reportGroup', pyxb.binding.datatypes.string, required=True)
-    __reportGroup._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 418, 16)
-    __reportGroup._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 418, 16)
+    __reportGroup._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 418, 16)
+    __reportGroup._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 418, 16)
     
     reportGroup = property(__reportGroup.value, __reportGroup.set, None, None)
 
     
     # Attribute partial uses Python identifier partial
     __partial = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'partial'), 'partial', '__httpwww_litle_comschema_transactionTypeWithReportGroupAndPartial_partial', pyxb.binding.datatypes.boolean)
-    __partial._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 419, 16)
-    __partial._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 419, 16)
+    __partial._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 419, 16)
+    __partial._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 419, 16)
     
     partial = property(__partial.value, __partial.set, None, None)
 
@@ -5563,7 +5563,7 @@ class transactionTypeOptionReportGroup (transactionType):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_EMPTY
     _Abstract = False
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'transactionTypeOptionReportGroup')
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 424, 4)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 424, 4)
     _ElementMap = transactionType._ElementMap.copy()
     _AttributeMap = transactionType._AttributeMap.copy()
     # Base type is transactionType
@@ -5574,8 +5574,8 @@ class transactionTypeOptionReportGroup (transactionType):
     
     # Attribute reportGroup uses Python identifier reportGroup
     __reportGroup = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'reportGroup'), 'reportGroup', '__httpwww_litle_comschema_transactionTypeOptionReportGroup_reportGroup', pyxb.binding.datatypes.string)
-    __reportGroup._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 427, 16)
-    __reportGroup._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 427, 16)
+    __reportGroup._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 427, 16)
+    __reportGroup._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 427, 16)
     
     reportGroup = property(__reportGroup.value, __reportGroup.set, None, None)
 
@@ -5596,7 +5596,7 @@ class cardTokenTypeAU (cardTokenType):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'cardTokenTypeAU')
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2292, 4)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2292, 4)
     _ElementMap = cardTokenType._ElementMap.copy()
     _AttributeMap = cardTokenType._AttributeMap.copy()
     # Base type is cardTokenType
@@ -5610,7 +5610,7 @@ class cardTokenTypeAU (cardTokenType):
     # Element type ({http://www.litle.com/schema}type) inherited from {http://www.litle.com/schema}cardTokenType
     
     # Element {http://www.litle.com/schema}bin uses Python identifier bin
-    __bin = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'bin'), 'bin', '__httpwww_litle_comschema_cardTokenTypeAU_httpwww_litle_comschemabin', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2296, 20), )
+    __bin = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'bin'), 'bin', '__httpwww_litle_comschema_cardTokenTypeAU_httpwww_litle_comschemabin', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2296, 20), )
 
     
     bin = property(__bin.value, __bin.set, None, None)
@@ -5632,7 +5632,7 @@ class CTD_ANON_44 (baseRequest):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2725, 8)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2725, 8)
     _ElementMap = baseRequest._ElementMap.copy()
     _AttributeMap = baseRequest._AttributeMap.copy()
     # Base type is baseRequest
@@ -5647,24 +5647,24 @@ class CTD_ANON_44 (baseRequest):
     
     # Attribute merchantId uses Python identifier merchantId
     __merchantId = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'merchantId'), 'merchantId', '__httpwww_litle_comschema_CTD_ANON_44_merchantId', pyxb.binding.datatypes.string, required=True)
-    __merchantId._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2728, 20)
-    __merchantId._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2728, 20)
+    __merchantId._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2728, 20)
+    __merchantId._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2728, 20)
     
     merchantId = property(__merchantId.value, __merchantId.set, None, None)
 
     
     # Attribute merchantSdk uses Python identifier merchantSdk
     __merchantSdk = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'merchantSdk'), 'merchantSdk', '__httpwww_litle_comschema_CTD_ANON_44_merchantSdk', pyxb.binding.datatypes.string)
-    __merchantSdk._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2729, 20)
-    __merchantSdk._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2729, 20)
+    __merchantSdk._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2729, 20)
+    __merchantSdk._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2729, 20)
     
     merchantSdk = property(__merchantSdk.value, __merchantSdk.set, None, None)
 
     
     # Attribute loggedInUser uses Python identifier loggedInUser
     __loggedInUser = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'loggedInUser'), 'loggedInUser', '__httpwww_litle_comschema_CTD_ANON_44_loggedInUser', pyxb.binding.datatypes.string)
-    __loggedInUser._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2730, 20)
-    __loggedInUser._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2730, 20)
+    __loggedInUser._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2730, 20)
+    __loggedInUser._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2730, 20)
     
     loggedInUser = property(__loggedInUser.value, __loggedInUser.set, None, None)
 
@@ -5686,258 +5686,258 @@ class CTD_ANON_45 (transactionTypeWithReportGroup):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 518, 8)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 518, 8)
     _ElementMap = transactionTypeWithReportGroup._ElementMap.copy()
     _AttributeMap = transactionTypeWithReportGroup._AttributeMap.copy()
     # Base type is transactionTypeWithReportGroup
     
     # Element {http://www.litle.com/schema}billToAddress uses Python identifier billToAddress
-    __billToAddress = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'billToAddress'), 'billToAddress', '__httpwww_litle_comschema_CTD_ANON_45_httpwww_litle_comschemabillToAddress', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 69, 4), )
+    __billToAddress = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'billToAddress'), 'billToAddress', '__httpwww_litle_comschema_CTD_ANON_45_httpwww_litle_comschemabillToAddress', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 69, 4), )
 
     
     billToAddress = property(__billToAddress.value, __billToAddress.set, None, None)
 
     
     # Element {http://www.litle.com/schema}customerInfo uses Python identifier customerInfo
-    __customerInfo = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'customerInfo'), 'customerInfo', '__httpwww_litle_comschema_CTD_ANON_45_httpwww_litle_comschemacustomerInfo', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 440, 4), )
+    __customerInfo = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'customerInfo'), 'customerInfo', '__httpwww_litle_comschema_CTD_ANON_45_httpwww_litle_comschemacustomerInfo', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 440, 4), )
 
     
     customerInfo = property(__customerInfo.value, __customerInfo.set, None, None)
 
     
     # Element {http://www.litle.com/schema}billMeLaterRequest uses Python identifier billMeLaterRequest
-    __billMeLaterRequest = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'billMeLaterRequest'), 'billMeLaterRequest', '__httpwww_litle_comschema_CTD_ANON_45_httpwww_litle_comschemabillMeLaterRequest', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 462, 4), )
+    __billMeLaterRequest = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'billMeLaterRequest'), 'billMeLaterRequest', '__httpwww_litle_comschema_CTD_ANON_45_httpwww_litle_comschemabillMeLaterRequest', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 462, 4), )
 
     
     billMeLaterRequest = property(__billMeLaterRequest.value, __billMeLaterRequest.set, None, None)
 
     
     # Element {http://www.litle.com/schema}litleTxnId uses Python identifier litleTxnId
-    __litleTxnId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'litleTxnId'), 'litleTxnId', '__httpwww_litle_comschema_CTD_ANON_45_httpwww_litle_comschemalitleTxnId', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 523, 28), )
+    __litleTxnId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'litleTxnId'), 'litleTxnId', '__httpwww_litle_comschema_CTD_ANON_45_httpwww_litle_comschemalitleTxnId', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 523, 28), )
 
     
     litleTxnId = property(__litleTxnId.value, __litleTxnId.set, None, None)
 
     
     # Element {http://www.litle.com/schema}orderId uses Python identifier orderId
-    __orderId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'orderId'), 'orderId', '__httpwww_litle_comschema_CTD_ANON_45_httpwww_litle_comschemaorderId', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 526, 28), )
+    __orderId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'orderId'), 'orderId', '__httpwww_litle_comschema_CTD_ANON_45_httpwww_litle_comschemaorderId', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 526, 28), )
 
     
     orderId = property(__orderId.value, __orderId.set, None, None)
 
     
     # Element {http://www.litle.com/schema}amount uses Python identifier amount
-    __amount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'amount'), 'amount', '__httpwww_litle_comschema_CTD_ANON_45_httpwww_litle_comschemaamount', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 527, 28), )
+    __amount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'amount'), 'amount', '__httpwww_litle_comschema_CTD_ANON_45_httpwww_litle_comschemaamount', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 527, 28), )
 
     
     amount = property(__amount.value, __amount.set, None, None)
 
     
     # Element {http://www.litle.com/schema}secondaryAmount uses Python identifier secondaryAmount
-    __secondaryAmount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'secondaryAmount'), 'secondaryAmount', '__httpwww_litle_comschema_CTD_ANON_45_httpwww_litle_comschemasecondaryAmount', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 528, 28), )
+    __secondaryAmount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'secondaryAmount'), 'secondaryAmount', '__httpwww_litle_comschema_CTD_ANON_45_httpwww_litle_comschemasecondaryAmount', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 528, 28), )
 
     
     secondaryAmount = property(__secondaryAmount.value, __secondaryAmount.set, None, None)
 
     
     # Element {http://www.litle.com/schema}surchargeAmount uses Python identifier surchargeAmount
-    __surchargeAmount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'surchargeAmount'), 'surchargeAmount', '__httpwww_litle_comschema_CTD_ANON_45_httpwww_litle_comschemasurchargeAmount', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 529, 28), )
+    __surchargeAmount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'surchargeAmount'), 'surchargeAmount', '__httpwww_litle_comschema_CTD_ANON_45_httpwww_litle_comschemasurchargeAmount', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 529, 28), )
 
     
     surchargeAmount = property(__surchargeAmount.value, __surchargeAmount.set, None, None)
 
     
     # Element {http://www.litle.com/schema}orderSource uses Python identifier orderSource
-    __orderSource = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'orderSource'), 'orderSource', '__httpwww_litle_comschema_CTD_ANON_45_httpwww_litle_comschemaorderSource', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 530, 28), )
+    __orderSource = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'orderSource'), 'orderSource', '__httpwww_litle_comschema_CTD_ANON_45_httpwww_litle_comschemaorderSource', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 530, 28), )
 
     
     orderSource = property(__orderSource.value, __orderSource.set, None, None)
 
     
     # Element {http://www.litle.com/schema}mpos uses Python identifier mpos
-    __mpos = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'mpos'), 'mpos', '__httpwww_litle_comschema_CTD_ANON_45_httpwww_litle_comschemampos', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 535, 32), )
+    __mpos = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'mpos'), 'mpos', '__httpwww_litle_comschema_CTD_ANON_45_httpwww_litle_comschemampos', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 535, 32), )
 
     
     mpos = property(__mpos.value, __mpos.set, None, None)
 
     
     # Element {http://www.litle.com/schema}card uses Python identifier card
-    __card = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'card'), 'card', '__httpwww_litle_comschema_CTD_ANON_45_httpwww_litle_comschemacard', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 536, 32), )
+    __card = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'card'), 'card', '__httpwww_litle_comschema_CTD_ANON_45_httpwww_litle_comschemacard', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 536, 32), )
 
     
     card = property(__card.value, __card.set, None, None)
 
     
     # Element {http://www.litle.com/schema}paypal uses Python identifier paypal
-    __paypal = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'paypal'), 'paypal', '__httpwww_litle_comschema_CTD_ANON_45_httpwww_litle_comschemapaypal', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 537, 32), )
+    __paypal = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'paypal'), 'paypal', '__httpwww_litle_comschema_CTD_ANON_45_httpwww_litle_comschemapaypal', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 537, 32), )
 
     
     paypal = property(__paypal.value, __paypal.set, None, None)
 
     
     # Element {http://www.litle.com/schema}token uses Python identifier token
-    __token = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'token'), 'token', '__httpwww_litle_comschema_CTD_ANON_45_httpwww_litle_comschematoken', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 538, 32), )
+    __token = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'token'), 'token', '__httpwww_litle_comschema_CTD_ANON_45_httpwww_litle_comschematoken', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 538, 32), )
 
     
     token = property(__token.value, __token.set, None, None)
 
     
     # Element {http://www.litle.com/schema}paypage uses Python identifier paypage
-    __paypage = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'paypage'), 'paypage', '__httpwww_litle_comschema_CTD_ANON_45_httpwww_litle_comschemapaypage', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 539, 32), )
+    __paypage = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'paypage'), 'paypage', '__httpwww_litle_comschema_CTD_ANON_45_httpwww_litle_comschemapaypage', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 539, 32), )
 
     
     paypage = property(__paypage.value, __paypage.set, None, None)
 
     
     # Element {http://www.litle.com/schema}applepay uses Python identifier applepay
-    __applepay = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'applepay'), 'applepay', '__httpwww_litle_comschema_CTD_ANON_45_httpwww_litle_comschemaapplepay', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 540, 32), )
+    __applepay = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'applepay'), 'applepay', '__httpwww_litle_comschema_CTD_ANON_45_httpwww_litle_comschemaapplepay', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 540, 32), )
 
     
     applepay = property(__applepay.value, __applepay.set, None, None)
 
     
     # Element {http://www.litle.com/schema}cardholderAuthentication uses Python identifier cardholderAuthentication
-    __cardholderAuthentication = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'cardholderAuthentication'), 'cardholderAuthentication', '__httpwww_litle_comschema_CTD_ANON_45_httpwww_litle_comschemacardholderAuthentication', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 543, 28), )
+    __cardholderAuthentication = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'cardholderAuthentication'), 'cardholderAuthentication', '__httpwww_litle_comschema_CTD_ANON_45_httpwww_litle_comschemacardholderAuthentication', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 543, 28), )
 
     
     cardholderAuthentication = property(__cardholderAuthentication.value, __cardholderAuthentication.set, None, None)
 
     
     # Element {http://www.litle.com/schema}taxType uses Python identifier taxType
-    __taxType = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'taxType'), 'taxType', '__httpwww_litle_comschema_CTD_ANON_45_httpwww_litle_comschemataxType', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 547, 28), )
+    __taxType = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'taxType'), 'taxType', '__httpwww_litle_comschema_CTD_ANON_45_httpwww_litle_comschemataxType', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 547, 28), )
 
     
     taxType = property(__taxType.value, __taxType.set, None, None)
 
     
     # Element {http://www.litle.com/schema}allowPartialAuth uses Python identifier allowPartialAuth
-    __allowPartialAuth = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'allowPartialAuth'), 'allowPartialAuth', '__httpwww_litle_comschema_CTD_ANON_45_httpwww_litle_comschemaallowPartialAuth', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 550, 28), )
+    __allowPartialAuth = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'allowPartialAuth'), 'allowPartialAuth', '__httpwww_litle_comschema_CTD_ANON_45_httpwww_litle_comschemaallowPartialAuth', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 550, 28), )
 
     
     allowPartialAuth = property(__allowPartialAuth.value, __allowPartialAuth.set, None, None)
 
     
     # Element {http://www.litle.com/schema}filtering uses Python identifier filtering
-    __filtering = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'filtering'), 'filtering', '__httpwww_litle_comschema_CTD_ANON_45_httpwww_litle_comschemafiltering', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 552, 28), )
+    __filtering = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'filtering'), 'filtering', '__httpwww_litle_comschema_CTD_ANON_45_httpwww_litle_comschemafiltering', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 552, 28), )
 
     
     filtering = property(__filtering.value, __filtering.set, None, None)
 
     
     # Element {http://www.litle.com/schema}merchantData uses Python identifier merchantData
-    __merchantData = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'merchantData'), 'merchantData', '__httpwww_litle_comschema_CTD_ANON_45_httpwww_litle_comschemamerchantData', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 553, 28), )
+    __merchantData = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'merchantData'), 'merchantData', '__httpwww_litle_comschema_CTD_ANON_45_httpwww_litle_comschemamerchantData', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 553, 28), )
 
     
     merchantData = property(__merchantData.value, __merchantData.set, None, None)
 
     
     # Element {http://www.litle.com/schema}recyclingRequest uses Python identifier recyclingRequest
-    __recyclingRequest = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'recyclingRequest'), 'recyclingRequest', '__httpwww_litle_comschema_CTD_ANON_45_httpwww_litle_comschemarecyclingRequest', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 554, 28), )
+    __recyclingRequest = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'recyclingRequest'), 'recyclingRequest', '__httpwww_litle_comschema_CTD_ANON_45_httpwww_litle_comschemarecyclingRequest', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 554, 28), )
 
     
     recyclingRequest = property(__recyclingRequest.value, __recyclingRequest.set, None, None)
 
     
     # Element {http://www.litle.com/schema}fraudFilterOverride uses Python identifier fraudFilterOverride
-    __fraudFilterOverride = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'fraudFilterOverride'), 'fraudFilterOverride', '__httpwww_litle_comschema_CTD_ANON_45_httpwww_litle_comschemafraudFilterOverride', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 555, 28), )
+    __fraudFilterOverride = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'fraudFilterOverride'), 'fraudFilterOverride', '__httpwww_litle_comschema_CTD_ANON_45_httpwww_litle_comschemafraudFilterOverride', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 555, 28), )
 
     
     fraudFilterOverride = property(__fraudFilterOverride.value, __fraudFilterOverride.set, None, None)
 
     
     # Element {http://www.litle.com/schema}recurringRequest uses Python identifier recurringRequest
-    __recurringRequest = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'recurringRequest'), 'recurringRequest', '__httpwww_litle_comschema_CTD_ANON_45_httpwww_litle_comschemarecurringRequest', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 556, 28), )
+    __recurringRequest = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'recurringRequest'), 'recurringRequest', '__httpwww_litle_comschema_CTD_ANON_45_httpwww_litle_comschemarecurringRequest', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 556, 28), )
 
     
     recurringRequest = property(__recurringRequest.value, __recurringRequest.set, None, None)
 
     
     # Element {http://www.litle.com/schema}debtRepayment uses Python identifier debtRepayment
-    __debtRepayment = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'debtRepayment'), 'debtRepayment', '__httpwww_litle_comschema_CTD_ANON_45_httpwww_litle_comschemadebtRepayment', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 557, 28), )
+    __debtRepayment = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'debtRepayment'), 'debtRepayment', '__httpwww_litle_comschema_CTD_ANON_45_httpwww_litle_comschemadebtRepayment', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 557, 28), )
 
     
     debtRepayment = property(__debtRepayment.value, __debtRepayment.set, None, None)
 
     
     # Element {http://www.litle.com/schema}advancedFraudChecks uses Python identifier advancedFraudChecks
-    __advancedFraudChecks = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'advancedFraudChecks'), 'advancedFraudChecks', '__httpwww_litle_comschema_CTD_ANON_45_httpwww_litle_comschemaadvancedFraudChecks', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 558, 28), )
+    __advancedFraudChecks = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'advancedFraudChecks'), 'advancedFraudChecks', '__httpwww_litle_comschema_CTD_ANON_45_httpwww_litle_comschemaadvancedFraudChecks', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 558, 28), )
 
     
     advancedFraudChecks = property(__advancedFraudChecks.value, __advancedFraudChecks.set, None, None)
 
     
     # Element {http://www.litle.com/schema}processingType uses Python identifier processingType
-    __processingType = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'processingType'), 'processingType', '__httpwww_litle_comschema_CTD_ANON_45_httpwww_litle_comschemaprocessingType', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 560, 28), )
+    __processingType = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'processingType'), 'processingType', '__httpwww_litle_comschema_CTD_ANON_45_httpwww_litle_comschemaprocessingType', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 560, 28), )
 
     
     processingType = property(__processingType.value, __processingType.set, None, None)
 
     
     # Element {http://www.litle.com/schema}originalNetworkTransactionId uses Python identifier originalNetworkTransactionId
-    __originalNetworkTransactionId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'originalNetworkTransactionId'), 'originalNetworkTransactionId', '__httpwww_litle_comschema_CTD_ANON_45_httpwww_litle_comschemaoriginalNetworkTransactionId', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 561, 28), )
+    __originalNetworkTransactionId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'originalNetworkTransactionId'), 'originalNetworkTransactionId', '__httpwww_litle_comschema_CTD_ANON_45_httpwww_litle_comschemaoriginalNetworkTransactionId', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 561, 28), )
 
     
     originalNetworkTransactionId = property(__originalNetworkTransactionId.value, __originalNetworkTransactionId.set, None, None)
 
     
     # Element {http://www.litle.com/schema}originalTransactionAmount uses Python identifier originalTransactionAmount
-    __originalTransactionAmount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'originalTransactionAmount'), 'originalTransactionAmount', '__httpwww_litle_comschema_CTD_ANON_45_httpwww_litle_comschemaoriginalTransactionAmount', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 562, 28), )
+    __originalTransactionAmount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'originalTransactionAmount'), 'originalTransactionAmount', '__httpwww_litle_comschema_CTD_ANON_45_httpwww_litle_comschemaoriginalTransactionAmount', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 562, 28), )
 
     
     originalTransactionAmount = property(__originalTransactionAmount.value, __originalTransactionAmount.set, None, None)
 
     
     # Element {http://www.litle.com/schema}shipToAddress uses Python identifier shipToAddress
-    __shipToAddress = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'shipToAddress'), 'shipToAddress', '__httpwww_litle_comschema_CTD_ANON_45_httpwww_litle_comschemashipToAddress', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 850, 4), )
+    __shipToAddress = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'shipToAddress'), 'shipToAddress', '__httpwww_litle_comschema_CTD_ANON_45_httpwww_litle_comschemashipToAddress', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 850, 4), )
 
     
     shipToAddress = property(__shipToAddress.value, __shipToAddress.set, None, None)
 
     
     # Element {http://www.litle.com/schema}healthcareIIAS uses Python identifier healthcareIIAS
-    __healthcareIIAS = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'healthcareIIAS'), 'healthcareIIAS', '__httpwww_litle_comschema_CTD_ANON_45_httpwww_litle_comschemahealthcareIIAS', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 877, 4), )
+    __healthcareIIAS = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'healthcareIIAS'), 'healthcareIIAS', '__httpwww_litle_comschema_CTD_ANON_45_httpwww_litle_comschemahealthcareIIAS', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 877, 4), )
 
     
     healthcareIIAS = property(__healthcareIIAS.value, __healthcareIIAS.set, None, None)
 
     
     # Element {http://www.litle.com/schema}enhancedData uses Python identifier enhancedData
-    __enhancedData = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'enhancedData'), 'enhancedData', '__httpwww_litle_comschema_CTD_ANON_45_httpwww_litle_comschemaenhancedData', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 898, 4), )
+    __enhancedData = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'enhancedData'), 'enhancedData', '__httpwww_litle_comschema_CTD_ANON_45_httpwww_litle_comschemaenhancedData', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 898, 4), )
 
     
     enhancedData = property(__enhancedData.value, __enhancedData.set, None, None)
 
     
     # Element {http://www.litle.com/schema}amexAggregatorData uses Python identifier amexAggregatorData
-    __amexAggregatorData = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'amexAggregatorData'), 'amexAggregatorData', '__httpwww_litle_comschema_CTD_ANON_45_httpwww_litle_comschemaamexAggregatorData', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 919, 4), )
+    __amexAggregatorData = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'amexAggregatorData'), 'amexAggregatorData', '__httpwww_litle_comschema_CTD_ANON_45_httpwww_litle_comschemaamexAggregatorData', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 919, 4), )
 
     
     amexAggregatorData = property(__amexAggregatorData.value, __amexAggregatorData.set, None, None)
 
     
     # Element {http://www.litle.com/schema}customBilling uses Python identifier customBilling
-    __customBilling = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'customBilling'), 'customBilling', '__httpwww_litle_comschema_CTD_ANON_45_httpwww_litle_comschemacustomBilling', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 992, 4), )
+    __customBilling = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'customBilling'), 'customBilling', '__httpwww_litle_comschema_CTD_ANON_45_httpwww_litle_comschemacustomBilling', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 992, 4), )
 
     
     customBilling = property(__customBilling.value, __customBilling.set, None, None)
 
     
     # Element {http://www.litle.com/schema}processingInstructions uses Python identifier processingInstructions
-    __processingInstructions = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'processingInstructions'), 'processingInstructions', '__httpwww_litle_comschema_CTD_ANON_45_httpwww_litle_comschemaprocessingInstructions', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1006, 4), )
+    __processingInstructions = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'processingInstructions'), 'processingInstructions', '__httpwww_litle_comschema_CTD_ANON_45_httpwww_litle_comschemaprocessingInstructions', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1006, 4), )
 
     
     processingInstructions = property(__processingInstructions.value, __processingInstructions.set, None, None)
 
     
     # Element {http://www.litle.com/schema}pos uses Python identifier pos
-    __pos = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'pos'), 'pos', '__httpwww_litle_comschema_CTD_ANON_45_httpwww_litle_comschemapos', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1014, 4), )
+    __pos = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'pos'), 'pos', '__httpwww_litle_comschema_CTD_ANON_45_httpwww_litle_comschemapos', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1014, 4), )
 
     
     pos = property(__pos.value, __pos.set, None, None)
 
     
     # Element {http://www.litle.com/schema}wallet uses Python identifier wallet
-    __wallet = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'wallet'), 'wallet', '__httpwww_litle_comschema_CTD_ANON_45_httpwww_litle_comschemawallet', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1940, 4), )
+    __wallet = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'wallet'), 'wallet', '__httpwww_litle_comschema_CTD_ANON_45_httpwww_litle_comschemawallet', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1940, 4), )
 
     
     wallet = property(__wallet.value, __wallet.set, None, None)
@@ -5999,41 +5999,41 @@ class CTD_ANON_46 (transactionTypeWithReportGroup):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 572, 8)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 572, 8)
     _ElementMap = transactionTypeWithReportGroup._ElementMap.copy()
     _AttributeMap = transactionTypeWithReportGroup._AttributeMap.copy()
     # Base type is transactionTypeWithReportGroup
     
     # Element {http://www.litle.com/schema}litleTxnId uses Python identifier litleTxnId
-    __litleTxnId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'litleTxnId'), 'litleTxnId', '__httpwww_litle_comschema_CTD_ANON_46_httpwww_litle_comschemalitleTxnId', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 576, 24), )
+    __litleTxnId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'litleTxnId'), 'litleTxnId', '__httpwww_litle_comschema_CTD_ANON_46_httpwww_litle_comschemalitleTxnId', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 576, 24), )
 
     
     litleTxnId = property(__litleTxnId.value, __litleTxnId.set, None, None)
 
     
     # Element {http://www.litle.com/schema}amount uses Python identifier amount
-    __amount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'amount'), 'amount', '__httpwww_litle_comschema_CTD_ANON_46_httpwww_litle_comschemaamount', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 577, 24), )
+    __amount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'amount'), 'amount', '__httpwww_litle_comschema_CTD_ANON_46_httpwww_litle_comschemaamount', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 577, 24), )
 
     
     amount = property(__amount.value, __amount.set, None, None)
 
     
     # Element {http://www.litle.com/schema}surchargeAmount uses Python identifier surchargeAmount
-    __surchargeAmount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'surchargeAmount'), 'surchargeAmount', '__httpwww_litle_comschema_CTD_ANON_46_httpwww_litle_comschemasurchargeAmount', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 578, 24), )
+    __surchargeAmount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'surchargeAmount'), 'surchargeAmount', '__httpwww_litle_comschema_CTD_ANON_46_httpwww_litle_comschemasurchargeAmount', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 578, 24), )
 
     
     surchargeAmount = property(__surchargeAmount.value, __surchargeAmount.set, None, None)
 
     
     # Element {http://www.litle.com/schema}payPalNotes uses Python identifier payPalNotes
-    __payPalNotes = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'payPalNotes'), 'payPalNotes', '__httpwww_litle_comschema_CTD_ANON_46_httpwww_litle_comschemapayPalNotes', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 579, 24), )
+    __payPalNotes = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'payPalNotes'), 'payPalNotes', '__httpwww_litle_comschema_CTD_ANON_46_httpwww_litle_comschemapayPalNotes', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 579, 24), )
 
     
     payPalNotes = property(__payPalNotes.value, __payPalNotes.set, None, None)
 
     
     # Element {http://www.litle.com/schema}actionReason uses Python identifier actionReason
-    __actionReason = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'actionReason'), 'actionReason', '__httpwww_litle_comschema_CTD_ANON_46_httpwww_litle_comschemaactionReason', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 580, 24), )
+    __actionReason = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'actionReason'), 'actionReason', '__httpwww_litle_comschema_CTD_ANON_46_httpwww_litle_comschemaactionReason', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 580, 24), )
 
     
     actionReason = property(__actionReason.value, __actionReason.set, None, None)
@@ -6064,69 +6064,69 @@ class CTD_ANON_47 (transactionTypeWithReportGroupAndPartial):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 588, 8)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 588, 8)
     _ElementMap = transactionTypeWithReportGroupAndPartial._ElementMap.copy()
     _AttributeMap = transactionTypeWithReportGroupAndPartial._AttributeMap.copy()
     # Base type is transactionTypeWithReportGroupAndPartial
     
     # Element {http://www.litle.com/schema}litleTxnId uses Python identifier litleTxnId
-    __litleTxnId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'litleTxnId'), 'litleTxnId', '__httpwww_litle_comschema_CTD_ANON_47_httpwww_litle_comschemalitleTxnId', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 592, 24), )
+    __litleTxnId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'litleTxnId'), 'litleTxnId', '__httpwww_litle_comschema_CTD_ANON_47_httpwww_litle_comschemalitleTxnId', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 592, 24), )
 
     
     litleTxnId = property(__litleTxnId.value, __litleTxnId.set, None, None)
 
     
     # Element {http://www.litle.com/schema}amount uses Python identifier amount
-    __amount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'amount'), 'amount', '__httpwww_litle_comschema_CTD_ANON_47_httpwww_litle_comschemaamount', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 593, 24), )
+    __amount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'amount'), 'amount', '__httpwww_litle_comschema_CTD_ANON_47_httpwww_litle_comschemaamount', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 593, 24), )
 
     
     amount = property(__amount.value, __amount.set, None, None)
 
     
     # Element {http://www.litle.com/schema}surchargeAmount uses Python identifier surchargeAmount
-    __surchargeAmount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'surchargeAmount'), 'surchargeAmount', '__httpwww_litle_comschema_CTD_ANON_47_httpwww_litle_comschemasurchargeAmount', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 594, 24), )
+    __surchargeAmount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'surchargeAmount'), 'surchargeAmount', '__httpwww_litle_comschema_CTD_ANON_47_httpwww_litle_comschemasurchargeAmount', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 594, 24), )
 
     
     surchargeAmount = property(__surchargeAmount.value, __surchargeAmount.set, None, None)
 
     
     # Element {http://www.litle.com/schema}payPalOrderComplete uses Python identifier payPalOrderComplete
-    __payPalOrderComplete = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'payPalOrderComplete'), 'payPalOrderComplete', '__httpwww_litle_comschema_CTD_ANON_47_httpwww_litle_comschemapayPalOrderComplete', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 597, 24), )
+    __payPalOrderComplete = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'payPalOrderComplete'), 'payPalOrderComplete', '__httpwww_litle_comschema_CTD_ANON_47_httpwww_litle_comschemapayPalOrderComplete', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 597, 24), )
 
     
     payPalOrderComplete = property(__payPalOrderComplete.value, __payPalOrderComplete.set, None, None)
 
     
     # Element {http://www.litle.com/schema}payPalNotes uses Python identifier payPalNotes
-    __payPalNotes = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'payPalNotes'), 'payPalNotes', '__httpwww_litle_comschema_CTD_ANON_47_httpwww_litle_comschemapayPalNotes', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 598, 24), )
+    __payPalNotes = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'payPalNotes'), 'payPalNotes', '__httpwww_litle_comschema_CTD_ANON_47_httpwww_litle_comschemapayPalNotes', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 598, 24), )
 
     
     payPalNotes = property(__payPalNotes.value, __payPalNotes.set, None, None)
 
     
     # Element {http://www.litle.com/schema}pin uses Python identifier pin
-    __pin = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'pin'), 'pin', '__httpwww_litle_comschema_CTD_ANON_47_httpwww_litle_comschemapin', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 600, 24), )
+    __pin = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'pin'), 'pin', '__httpwww_litle_comschema_CTD_ANON_47_httpwww_litle_comschemapin', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 600, 24), )
 
     
     pin = property(__pin.value, __pin.set, None, None)
 
     
     # Element {http://www.litle.com/schema}enhancedData uses Python identifier enhancedData
-    __enhancedData = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'enhancedData'), 'enhancedData', '__httpwww_litle_comschema_CTD_ANON_47_httpwww_litle_comschemaenhancedData', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 898, 4), )
+    __enhancedData = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'enhancedData'), 'enhancedData', '__httpwww_litle_comschema_CTD_ANON_47_httpwww_litle_comschemaenhancedData', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 898, 4), )
 
     
     enhancedData = property(__enhancedData.value, __enhancedData.set, None, None)
 
     
     # Element {http://www.litle.com/schema}customBilling uses Python identifier customBilling
-    __customBilling = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'customBilling'), 'customBilling', '__httpwww_litle_comschema_CTD_ANON_47_httpwww_litle_comschemacustomBilling', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 992, 4), )
+    __customBilling = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'customBilling'), 'customBilling', '__httpwww_litle_comschema_CTD_ANON_47_httpwww_litle_comschemacustomBilling', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 992, 4), )
 
     
     customBilling = property(__customBilling.value, __customBilling.set, None, None)
 
     
     # Element {http://www.litle.com/schema}processingInstructions uses Python identifier processingInstructions
-    __processingInstructions = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'processingInstructions'), 'processingInstructions', '__httpwww_litle_comschema_CTD_ANON_47_httpwww_litle_comschemaprocessingInstructions', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1006, 4), )
+    __processingInstructions = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'processingInstructions'), 'processingInstructions', '__httpwww_litle_comschema_CTD_ANON_47_httpwww_litle_comschemaprocessingInstructions', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1006, 4), )
 
     
     processingInstructions = property(__processingInstructions.value, __processingInstructions.set, None, None)
@@ -6163,139 +6163,139 @@ class CTD_ANON_48 (transactionTypeWithReportGroup):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 608, 8)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 608, 8)
     _ElementMap = transactionTypeWithReportGroup._ElementMap.copy()
     _AttributeMap = transactionTypeWithReportGroup._AttributeMap.copy()
     # Base type is transactionTypeWithReportGroup
     
     # Element {http://www.litle.com/schema}billToAddress uses Python identifier billToAddress
-    __billToAddress = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'billToAddress'), 'billToAddress', '__httpwww_litle_comschema_CTD_ANON_48_httpwww_litle_comschemabillToAddress', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 69, 4), )
+    __billToAddress = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'billToAddress'), 'billToAddress', '__httpwww_litle_comschema_CTD_ANON_48_httpwww_litle_comschemabillToAddress', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 69, 4), )
 
     
     billToAddress = property(__billToAddress.value, __billToAddress.set, None, None)
 
     
     # Element {http://www.litle.com/schema}orderId uses Python identifier orderId
-    __orderId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'orderId'), 'orderId', '__httpwww_litle_comschema_CTD_ANON_48_httpwww_litle_comschemaorderId', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 612, 24), )
+    __orderId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'orderId'), 'orderId', '__httpwww_litle_comschema_CTD_ANON_48_httpwww_litle_comschemaorderId', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 612, 24), )
 
     
     orderId = property(__orderId.value, __orderId.set, None, None)
 
     
     # Element {http://www.litle.com/schema}amount uses Python identifier amount
-    __amount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'amount'), 'amount', '__httpwww_litle_comschema_CTD_ANON_48_httpwww_litle_comschemaamount', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 613, 24), )
+    __amount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'amount'), 'amount', '__httpwww_litle_comschema_CTD_ANON_48_httpwww_litle_comschemaamount', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 613, 24), )
 
     
     amount = property(__amount.value, __amount.set, None, None)
 
     
     # Element {http://www.litle.com/schema}secondaryAmount uses Python identifier secondaryAmount
-    __secondaryAmount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'secondaryAmount'), 'secondaryAmount', '__httpwww_litle_comschema_CTD_ANON_48_httpwww_litle_comschemasecondaryAmount', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 614, 24), )
+    __secondaryAmount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'secondaryAmount'), 'secondaryAmount', '__httpwww_litle_comschema_CTD_ANON_48_httpwww_litle_comschemasecondaryAmount', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 614, 24), )
 
     
     secondaryAmount = property(__secondaryAmount.value, __secondaryAmount.set, None, None)
 
     
     # Element {http://www.litle.com/schema}surchargeAmount uses Python identifier surchargeAmount
-    __surchargeAmount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'surchargeAmount'), 'surchargeAmount', '__httpwww_litle_comschema_CTD_ANON_48_httpwww_litle_comschemasurchargeAmount', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 615, 24), )
+    __surchargeAmount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'surchargeAmount'), 'surchargeAmount', '__httpwww_litle_comschema_CTD_ANON_48_httpwww_litle_comschemasurchargeAmount', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 615, 24), )
 
     
     surchargeAmount = property(__surchargeAmount.value, __surchargeAmount.set, None, None)
 
     
     # Element {http://www.litle.com/schema}orderSource uses Python identifier orderSource
-    __orderSource = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'orderSource'), 'orderSource', '__httpwww_litle_comschema_CTD_ANON_48_httpwww_litle_comschemaorderSource', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 616, 24), )
+    __orderSource = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'orderSource'), 'orderSource', '__httpwww_litle_comschema_CTD_ANON_48_httpwww_litle_comschemaorderSource', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 616, 24), )
 
     
     orderSource = property(__orderSource.value, __orderSource.set, None, None)
 
     
     # Element {http://www.litle.com/schema}mpos uses Python identifier mpos
-    __mpos = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'mpos'), 'mpos', '__httpwww_litle_comschema_CTD_ANON_48_httpwww_litle_comschemampos', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 619, 32), )
+    __mpos = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'mpos'), 'mpos', '__httpwww_litle_comschema_CTD_ANON_48_httpwww_litle_comschemampos', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 619, 32), )
 
     
     mpos = property(__mpos.value, __mpos.set, None, None)
 
     
     # Element {http://www.litle.com/schema}card uses Python identifier card
-    __card = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'card'), 'card', '__httpwww_litle_comschema_CTD_ANON_48_httpwww_litle_comschemacard', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 620, 32), )
+    __card = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'card'), 'card', '__httpwww_litle_comschema_CTD_ANON_48_httpwww_litle_comschemacard', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 620, 32), )
 
     
     card = property(__card.value, __card.set, None, None)
 
     
     # Element {http://www.litle.com/schema}token uses Python identifier token
-    __token = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'token'), 'token', '__httpwww_litle_comschema_CTD_ANON_48_httpwww_litle_comschematoken', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 621, 32), )
+    __token = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'token'), 'token', '__httpwww_litle_comschema_CTD_ANON_48_httpwww_litle_comschematoken', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 621, 32), )
 
     
     token = property(__token.value, __token.set, None, None)
 
     
     # Element {http://www.litle.com/schema}paypage uses Python identifier paypage
-    __paypage = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'paypage'), 'paypage', '__httpwww_litle_comschema_CTD_ANON_48_httpwww_litle_comschemapaypage', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 622, 32), )
+    __paypage = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'paypage'), 'paypage', '__httpwww_litle_comschema_CTD_ANON_48_httpwww_litle_comschemapaypage', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 622, 32), )
 
     
     paypage = property(__paypage.value, __paypage.set, None, None)
 
     
     # Element {http://www.litle.com/schema}taxType uses Python identifier taxType
-    __taxType = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'taxType'), 'taxType', '__httpwww_litle_comschema_CTD_ANON_48_httpwww_litle_comschemataxType', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 625, 24), )
+    __taxType = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'taxType'), 'taxType', '__httpwww_litle_comschema_CTD_ANON_48_httpwww_litle_comschemataxType', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 625, 24), )
 
     
     taxType = property(__taxType.value, __taxType.set, None, None)
 
     
     # Element {http://www.litle.com/schema}merchantData uses Python identifier merchantData
-    __merchantData = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'merchantData'), 'merchantData', '__httpwww_litle_comschema_CTD_ANON_48_httpwww_litle_comschemamerchantData', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 630, 24), )
+    __merchantData = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'merchantData'), 'merchantData', '__httpwww_litle_comschema_CTD_ANON_48_httpwww_litle_comschemamerchantData', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 630, 24), )
 
     
     merchantData = property(__merchantData.value, __merchantData.set, None, None)
 
     
     # Element {http://www.litle.com/schema}debtRepayment uses Python identifier debtRepayment
-    __debtRepayment = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'debtRepayment'), 'debtRepayment', '__httpwww_litle_comschema_CTD_ANON_48_httpwww_litle_comschemadebtRepayment', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 631, 24), )
+    __debtRepayment = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'debtRepayment'), 'debtRepayment', '__httpwww_litle_comschema_CTD_ANON_48_httpwww_litle_comschemadebtRepayment', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 631, 24), )
 
     
     debtRepayment = property(__debtRepayment.value, __debtRepayment.set, None, None)
 
     
     # Element {http://www.litle.com/schema}processingType uses Python identifier processingType
-    __processingType = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'processingType'), 'processingType', '__httpwww_litle_comschema_CTD_ANON_48_httpwww_litle_comschemaprocessingType', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 632, 24), )
+    __processingType = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'processingType'), 'processingType', '__httpwww_litle_comschema_CTD_ANON_48_httpwww_litle_comschemaprocessingType', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 632, 24), )
 
     
     processingType = property(__processingType.value, __processingType.set, None, None)
 
     
     # Element {http://www.litle.com/schema}enhancedData uses Python identifier enhancedData
-    __enhancedData = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'enhancedData'), 'enhancedData', '__httpwww_litle_comschema_CTD_ANON_48_httpwww_litle_comschemaenhancedData', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 898, 4), )
+    __enhancedData = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'enhancedData'), 'enhancedData', '__httpwww_litle_comschema_CTD_ANON_48_httpwww_litle_comschemaenhancedData', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 898, 4), )
 
     
     enhancedData = property(__enhancedData.value, __enhancedData.set, None, None)
 
     
     # Element {http://www.litle.com/schema}amexAggregatorData uses Python identifier amexAggregatorData
-    __amexAggregatorData = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'amexAggregatorData'), 'amexAggregatorData', '__httpwww_litle_comschema_CTD_ANON_48_httpwww_litle_comschemaamexAggregatorData', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 919, 4), )
+    __amexAggregatorData = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'amexAggregatorData'), 'amexAggregatorData', '__httpwww_litle_comschema_CTD_ANON_48_httpwww_litle_comschemaamexAggregatorData', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 919, 4), )
 
     
     amexAggregatorData = property(__amexAggregatorData.value, __amexAggregatorData.set, None, None)
 
     
     # Element {http://www.litle.com/schema}customBilling uses Python identifier customBilling
-    __customBilling = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'customBilling'), 'customBilling', '__httpwww_litle_comschema_CTD_ANON_48_httpwww_litle_comschemacustomBilling', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 992, 4), )
+    __customBilling = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'customBilling'), 'customBilling', '__httpwww_litle_comschema_CTD_ANON_48_httpwww_litle_comschemacustomBilling', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 992, 4), )
 
     
     customBilling = property(__customBilling.value, __customBilling.set, None, None)
 
     
     # Element {http://www.litle.com/schema}processingInstructions uses Python identifier processingInstructions
-    __processingInstructions = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'processingInstructions'), 'processingInstructions', '__httpwww_litle_comschema_CTD_ANON_48_httpwww_litle_comschemaprocessingInstructions', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1006, 4), )
+    __processingInstructions = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'processingInstructions'), 'processingInstructions', '__httpwww_litle_comschema_CTD_ANON_48_httpwww_litle_comschemaprocessingInstructions', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1006, 4), )
 
     
     processingInstructions = property(__processingInstructions.value, __processingInstructions.set, None, None)
 
     
     # Element {http://www.litle.com/schema}pos uses Python identifier pos
-    __pos = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'pos'), 'pos', '__httpwww_litle_comschema_CTD_ANON_48_httpwww_litle_comschemapos', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1014, 4), )
+    __pos = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'pos'), 'pos', '__httpwww_litle_comschema_CTD_ANON_48_httpwww_litle_comschemapos', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1014, 4), )
 
     
     pos = property(__pos.value, __pos.set, None, None)
@@ -6340,174 +6340,174 @@ class CTD_ANON_49 (transactionTypeWithReportGroup):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 640, 8)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 640, 8)
     _ElementMap = transactionTypeWithReportGroup._ElementMap.copy()
     _AttributeMap = transactionTypeWithReportGroup._AttributeMap.copy()
     # Base type is transactionTypeWithReportGroup
     
     # Element {http://www.litle.com/schema}billToAddress uses Python identifier billToAddress
-    __billToAddress = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'billToAddress'), 'billToAddress', '__httpwww_litle_comschema_CTD_ANON_49_httpwww_litle_comschemabillToAddress', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 69, 4), )
+    __billToAddress = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'billToAddress'), 'billToAddress', '__httpwww_litle_comschema_CTD_ANON_49_httpwww_litle_comschemabillToAddress', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 69, 4), )
 
     
     billToAddress = property(__billToAddress.value, __billToAddress.set, None, None)
 
     
     # Element {http://www.litle.com/schema}billMeLaterRequest uses Python identifier billMeLaterRequest
-    __billMeLaterRequest = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'billMeLaterRequest'), 'billMeLaterRequest', '__httpwww_litle_comschema_CTD_ANON_49_httpwww_litle_comschemabillMeLaterRequest', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 462, 4), )
+    __billMeLaterRequest = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'billMeLaterRequest'), 'billMeLaterRequest', '__httpwww_litle_comschema_CTD_ANON_49_httpwww_litle_comschemabillMeLaterRequest', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 462, 4), )
 
     
     billMeLaterRequest = property(__billMeLaterRequest.value, __billMeLaterRequest.set, None, None)
 
     
     # Element {http://www.litle.com/schema}orderId uses Python identifier orderId
-    __orderId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'orderId'), 'orderId', '__httpwww_litle_comschema_CTD_ANON_49_httpwww_litle_comschemaorderId', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 644, 24), )
+    __orderId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'orderId'), 'orderId', '__httpwww_litle_comschema_CTD_ANON_49_httpwww_litle_comschemaorderId', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 644, 24), )
 
     
     orderId = property(__orderId.value, __orderId.set, None, None)
 
     
     # Element {http://www.litle.com/schema}amount uses Python identifier amount
-    __amount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'amount'), 'amount', '__httpwww_litle_comschema_CTD_ANON_49_httpwww_litle_comschemaamount', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 646, 24), )
+    __amount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'amount'), 'amount', '__httpwww_litle_comschema_CTD_ANON_49_httpwww_litle_comschemaamount', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 646, 24), )
 
     
     amount = property(__amount.value, __amount.set, None, None)
 
     
     # Element {http://www.litle.com/schema}secondaryAmount uses Python identifier secondaryAmount
-    __secondaryAmount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'secondaryAmount'), 'secondaryAmount', '__httpwww_litle_comschema_CTD_ANON_49_httpwww_litle_comschemasecondaryAmount', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 647, 24), )
+    __secondaryAmount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'secondaryAmount'), 'secondaryAmount', '__httpwww_litle_comschema_CTD_ANON_49_httpwww_litle_comschemasecondaryAmount', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 647, 24), )
 
     
     secondaryAmount = property(__secondaryAmount.value, __secondaryAmount.set, None, None)
 
     
     # Element {http://www.litle.com/schema}surchargeAmount uses Python identifier surchargeAmount
-    __surchargeAmount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'surchargeAmount'), 'surchargeAmount', '__httpwww_litle_comschema_CTD_ANON_49_httpwww_litle_comschemasurchargeAmount', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 648, 24), )
+    __surchargeAmount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'surchargeAmount'), 'surchargeAmount', '__httpwww_litle_comschema_CTD_ANON_49_httpwww_litle_comschemasurchargeAmount', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 648, 24), )
 
     
     surchargeAmount = property(__surchargeAmount.value, __surchargeAmount.set, None, None)
 
     
     # Element {http://www.litle.com/schema}orderSource uses Python identifier orderSource
-    __orderSource = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'orderSource'), 'orderSource', '__httpwww_litle_comschema_CTD_ANON_49_httpwww_litle_comschemaorderSource', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 649, 24), )
+    __orderSource = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'orderSource'), 'orderSource', '__httpwww_litle_comschema_CTD_ANON_49_httpwww_litle_comschemaorderSource', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 649, 24), )
 
     
     orderSource = property(__orderSource.value, __orderSource.set, None, None)
 
     
     # Element {http://www.litle.com/schema}mpos uses Python identifier mpos
-    __mpos = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'mpos'), 'mpos', '__httpwww_litle_comschema_CTD_ANON_49_httpwww_litle_comschemampos', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 653, 32), )
+    __mpos = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'mpos'), 'mpos', '__httpwww_litle_comschema_CTD_ANON_49_httpwww_litle_comschemampos', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 653, 32), )
 
     
     mpos = property(__mpos.value, __mpos.set, None, None)
 
     
     # Element {http://www.litle.com/schema}card uses Python identifier card
-    __card = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'card'), 'card', '__httpwww_litle_comschema_CTD_ANON_49_httpwww_litle_comschemacard', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 654, 32), )
+    __card = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'card'), 'card', '__httpwww_litle_comschema_CTD_ANON_49_httpwww_litle_comschemacard', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 654, 32), )
 
     
     card = property(__card.value, __card.set, None, None)
 
     
     # Element {http://www.litle.com/schema}token uses Python identifier token
-    __token = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'token'), 'token', '__httpwww_litle_comschema_CTD_ANON_49_httpwww_litle_comschematoken', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 655, 32), )
+    __token = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'token'), 'token', '__httpwww_litle_comschema_CTD_ANON_49_httpwww_litle_comschematoken', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 655, 32), )
 
     
     token = property(__token.value, __token.set, None, None)
 
     
     # Element {http://www.litle.com/schema}paypage uses Python identifier paypage
-    __paypage = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'paypage'), 'paypage', '__httpwww_litle_comschema_CTD_ANON_49_httpwww_litle_comschemapaypage', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 656, 32), )
+    __paypage = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'paypage'), 'paypage', '__httpwww_litle_comschema_CTD_ANON_49_httpwww_litle_comschemapaypage', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 656, 32), )
 
     
     paypage = property(__paypage.value, __paypage.set, None, None)
 
     
     # Element {http://www.litle.com/schema}taxType uses Python identifier taxType
-    __taxType = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'taxType'), 'taxType', '__httpwww_litle_comschema_CTD_ANON_49_httpwww_litle_comschemataxType', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 659, 24), )
+    __taxType = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'taxType'), 'taxType', '__httpwww_litle_comschema_CTD_ANON_49_httpwww_litle_comschemataxType', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 659, 24), )
 
     
     taxType = property(__taxType.value, __taxType.set, None, None)
 
     
     # Element {http://www.litle.com/schema}merchantData uses Python identifier merchantData
-    __merchantData = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'merchantData'), 'merchantData', '__httpwww_litle_comschema_CTD_ANON_49_httpwww_litle_comschemamerchantData', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 665, 24), )
+    __merchantData = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'merchantData'), 'merchantData', '__httpwww_litle_comschema_CTD_ANON_49_httpwww_litle_comschemamerchantData', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 665, 24), )
 
     
     merchantData = property(__merchantData.value, __merchantData.set, None, None)
 
     
     # Element {http://www.litle.com/schema}debtRepayment uses Python identifier debtRepayment
-    __debtRepayment = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'debtRepayment'), 'debtRepayment', '__httpwww_litle_comschema_CTD_ANON_49_httpwww_litle_comschemadebtRepayment', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 666, 24), )
+    __debtRepayment = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'debtRepayment'), 'debtRepayment', '__httpwww_litle_comschema_CTD_ANON_49_httpwww_litle_comschemadebtRepayment', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 666, 24), )
 
     
     debtRepayment = property(__debtRepayment.value, __debtRepayment.set, None, None)
 
     
     # Element {http://www.litle.com/schema}processingType uses Python identifier processingType
-    __processingType = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'processingType'), 'processingType', '__httpwww_litle_comschema_CTD_ANON_49_httpwww_litle_comschemaprocessingType', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 667, 24), )
+    __processingType = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'processingType'), 'processingType', '__httpwww_litle_comschema_CTD_ANON_49_httpwww_litle_comschemaprocessingType', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 667, 24), )
 
     
     processingType = property(__processingType.value, __processingType.set, None, None)
 
     
     # Element {http://www.litle.com/schema}originalNetworkTransactionId uses Python identifier originalNetworkTransactionId
-    __originalNetworkTransactionId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'originalNetworkTransactionId'), 'originalNetworkTransactionId', '__httpwww_litle_comschema_CTD_ANON_49_httpwww_litle_comschemaoriginalNetworkTransactionId', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 668, 24), )
+    __originalNetworkTransactionId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'originalNetworkTransactionId'), 'originalNetworkTransactionId', '__httpwww_litle_comschema_CTD_ANON_49_httpwww_litle_comschemaoriginalNetworkTransactionId', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 668, 24), )
 
     
     originalNetworkTransactionId = property(__originalNetworkTransactionId.value, __originalNetworkTransactionId.set, None, None)
 
     
     # Element {http://www.litle.com/schema}originalTransactionAmount uses Python identifier originalTransactionAmount
-    __originalTransactionAmount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'originalTransactionAmount'), 'originalTransactionAmount', '__httpwww_litle_comschema_CTD_ANON_49_httpwww_litle_comschemaoriginalTransactionAmount', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 669, 24), )
+    __originalTransactionAmount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'originalTransactionAmount'), 'originalTransactionAmount', '__httpwww_litle_comschema_CTD_ANON_49_httpwww_litle_comschemaoriginalTransactionAmount', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 669, 24), )
 
     
     originalTransactionAmount = property(__originalTransactionAmount.value, __originalTransactionAmount.set, None, None)
 
     
     # Element {http://www.litle.com/schema}shipToAddress uses Python identifier shipToAddress
-    __shipToAddress = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'shipToAddress'), 'shipToAddress', '__httpwww_litle_comschema_CTD_ANON_49_httpwww_litle_comschemashipToAddress', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 850, 4), )
+    __shipToAddress = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'shipToAddress'), 'shipToAddress', '__httpwww_litle_comschema_CTD_ANON_49_httpwww_litle_comschemashipToAddress', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 850, 4), )
 
     
     shipToAddress = property(__shipToAddress.value, __shipToAddress.set, None, None)
 
     
     # Element {http://www.litle.com/schema}authInformation uses Python identifier authInformation
-    __authInformation = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'authInformation'), 'authInformation', '__httpwww_litle_comschema_CTD_ANON_49_httpwww_litle_comschemaauthInformation', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 852, 4), )
+    __authInformation = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'authInformation'), 'authInformation', '__httpwww_litle_comschema_CTD_ANON_49_httpwww_litle_comschemaauthInformation', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 852, 4), )
 
     
     authInformation = property(__authInformation.value, __authInformation.set, None, None)
 
     
     # Element {http://www.litle.com/schema}enhancedData uses Python identifier enhancedData
-    __enhancedData = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'enhancedData'), 'enhancedData', '__httpwww_litle_comschema_CTD_ANON_49_httpwww_litle_comschemaenhancedData', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 898, 4), )
+    __enhancedData = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'enhancedData'), 'enhancedData', '__httpwww_litle_comschema_CTD_ANON_49_httpwww_litle_comschemaenhancedData', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 898, 4), )
 
     
     enhancedData = property(__enhancedData.value, __enhancedData.set, None, None)
 
     
     # Element {http://www.litle.com/schema}amexAggregatorData uses Python identifier amexAggregatorData
-    __amexAggregatorData = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'amexAggregatorData'), 'amexAggregatorData', '__httpwww_litle_comschema_CTD_ANON_49_httpwww_litle_comschemaamexAggregatorData', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 919, 4), )
+    __amexAggregatorData = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'amexAggregatorData'), 'amexAggregatorData', '__httpwww_litle_comschema_CTD_ANON_49_httpwww_litle_comschemaamexAggregatorData', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 919, 4), )
 
     
     amexAggregatorData = property(__amexAggregatorData.value, __amexAggregatorData.set, None, None)
 
     
     # Element {http://www.litle.com/schema}customBilling uses Python identifier customBilling
-    __customBilling = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'customBilling'), 'customBilling', '__httpwww_litle_comschema_CTD_ANON_49_httpwww_litle_comschemacustomBilling', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 992, 4), )
+    __customBilling = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'customBilling'), 'customBilling', '__httpwww_litle_comschema_CTD_ANON_49_httpwww_litle_comschemacustomBilling', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 992, 4), )
 
     
     customBilling = property(__customBilling.value, __customBilling.set, None, None)
 
     
     # Element {http://www.litle.com/schema}processingInstructions uses Python identifier processingInstructions
-    __processingInstructions = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'processingInstructions'), 'processingInstructions', '__httpwww_litle_comschema_CTD_ANON_49_httpwww_litle_comschemaprocessingInstructions', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1006, 4), )
+    __processingInstructions = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'processingInstructions'), 'processingInstructions', '__httpwww_litle_comschema_CTD_ANON_49_httpwww_litle_comschemaprocessingInstructions', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1006, 4), )
 
     
     processingInstructions = property(__processingInstructions.value, __processingInstructions.set, None, None)
 
     
     # Element {http://www.litle.com/schema}pos uses Python identifier pos
-    __pos = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'pos'), 'pos', '__httpwww_litle_comschema_CTD_ANON_49_httpwww_litle_comschemapos', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1014, 4), )
+    __pos = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'pos'), 'pos', '__httpwww_litle_comschema_CTD_ANON_49_httpwww_litle_comschemapos', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1014, 4), )
 
     
     pos = property(__pos.value, __pos.set, None, None)
@@ -6557,314 +6557,314 @@ class CTD_ANON_50 (transactionTypeWithReportGroup):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 677, 8)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 677, 8)
     _ElementMap = transactionTypeWithReportGroup._ElementMap.copy()
     _AttributeMap = transactionTypeWithReportGroup._AttributeMap.copy()
     # Base type is transactionTypeWithReportGroup
     
     # Element {http://www.litle.com/schema}billToAddress uses Python identifier billToAddress
-    __billToAddress = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'billToAddress'), 'billToAddress', '__httpwww_litle_comschema_CTD_ANON_50_httpwww_litle_comschemabillToAddress', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 69, 4), )
+    __billToAddress = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'billToAddress'), 'billToAddress', '__httpwww_litle_comschema_CTD_ANON_50_httpwww_litle_comschemabillToAddress', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 69, 4), )
 
     
     billToAddress = property(__billToAddress.value, __billToAddress.set, None, None)
 
     
     # Element {http://www.litle.com/schema}customerInfo uses Python identifier customerInfo
-    __customerInfo = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'customerInfo'), 'customerInfo', '__httpwww_litle_comschema_CTD_ANON_50_httpwww_litle_comschemacustomerInfo', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 440, 4), )
+    __customerInfo = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'customerInfo'), 'customerInfo', '__httpwww_litle_comschema_CTD_ANON_50_httpwww_litle_comschemacustomerInfo', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 440, 4), )
 
     
     customerInfo = property(__customerInfo.value, __customerInfo.set, None, None)
 
     
     # Element {http://www.litle.com/schema}billMeLaterRequest uses Python identifier billMeLaterRequest
-    __billMeLaterRequest = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'billMeLaterRequest'), 'billMeLaterRequest', '__httpwww_litle_comschema_CTD_ANON_50_httpwww_litle_comschemabillMeLaterRequest', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 462, 4), )
+    __billMeLaterRequest = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'billMeLaterRequest'), 'billMeLaterRequest', '__httpwww_litle_comschema_CTD_ANON_50_httpwww_litle_comschemabillMeLaterRequest', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 462, 4), )
 
     
     billMeLaterRequest = property(__billMeLaterRequest.value, __billMeLaterRequest.set, None, None)
 
     
     # Element {http://www.litle.com/schema}litleTxnId uses Python identifier litleTxnId
-    __litleTxnId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'litleTxnId'), 'litleTxnId', '__httpwww_litle_comschema_CTD_ANON_50_httpwww_litle_comschemalitleTxnId', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 682, 24), )
+    __litleTxnId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'litleTxnId'), 'litleTxnId', '__httpwww_litle_comschema_CTD_ANON_50_httpwww_litle_comschemalitleTxnId', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 682, 24), )
 
     
     litleTxnId = property(__litleTxnId.value, __litleTxnId.set, None, None)
 
     
     # Element {http://www.litle.com/schema}orderId uses Python identifier orderId
-    __orderId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'orderId'), 'orderId', '__httpwww_litle_comschema_CTD_ANON_50_httpwww_litle_comschemaorderId', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 683, 24), )
+    __orderId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'orderId'), 'orderId', '__httpwww_litle_comschema_CTD_ANON_50_httpwww_litle_comschemaorderId', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 683, 24), )
 
     
     orderId = property(__orderId.value, __orderId.set, None, None)
 
     
     # Element {http://www.litle.com/schema}amount uses Python identifier amount
-    __amount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'amount'), 'amount', '__httpwww_litle_comschema_CTD_ANON_50_httpwww_litle_comschemaamount', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 684, 24), )
+    __amount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'amount'), 'amount', '__httpwww_litle_comschema_CTD_ANON_50_httpwww_litle_comschemaamount', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 684, 24), )
 
     
     amount = property(__amount.value, __amount.set, None, None)
 
     
     # Element {http://www.litle.com/schema}secondaryAmount uses Python identifier secondaryAmount
-    __secondaryAmount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'secondaryAmount'), 'secondaryAmount', '__httpwww_litle_comschema_CTD_ANON_50_httpwww_litle_comschemasecondaryAmount', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 685, 24), )
+    __secondaryAmount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'secondaryAmount'), 'secondaryAmount', '__httpwww_litle_comschema_CTD_ANON_50_httpwww_litle_comschemasecondaryAmount', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 685, 24), )
 
     
     secondaryAmount = property(__secondaryAmount.value, __secondaryAmount.set, None, None)
 
     
     # Element {http://www.litle.com/schema}surchargeAmount uses Python identifier surchargeAmount
-    __surchargeAmount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'surchargeAmount'), 'surchargeAmount', '__httpwww_litle_comschema_CTD_ANON_50_httpwww_litle_comschemasurchargeAmount', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 686, 24), )
+    __surchargeAmount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'surchargeAmount'), 'surchargeAmount', '__httpwww_litle_comschema_CTD_ANON_50_httpwww_litle_comschemasurchargeAmount', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 686, 24), )
 
     
     surchargeAmount = property(__surchargeAmount.value, __surchargeAmount.set, None, None)
 
     
     # Element {http://www.litle.com/schema}orderSource uses Python identifier orderSource
-    __orderSource = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'orderSource'), 'orderSource', '__httpwww_litle_comschema_CTD_ANON_50_httpwww_litle_comschemaorderSource', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 687, 24), )
+    __orderSource = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'orderSource'), 'orderSource', '__httpwww_litle_comschema_CTD_ANON_50_httpwww_litle_comschemaorderSource', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 687, 24), )
 
     
     orderSource = property(__orderSource.value, __orderSource.set, None, None)
 
     
     # Element {http://www.litle.com/schema}mpos uses Python identifier mpos
-    __mpos = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'mpos'), 'mpos', '__httpwww_litle_comschema_CTD_ANON_50_httpwww_litle_comschemampos', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 692, 28), )
+    __mpos = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'mpos'), 'mpos', '__httpwww_litle_comschema_CTD_ANON_50_httpwww_litle_comschemampos', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 692, 28), )
 
     
     mpos = property(__mpos.value, __mpos.set, None, None)
 
     
     # Element {http://www.litle.com/schema}card uses Python identifier card
-    __card = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'card'), 'card', '__httpwww_litle_comschema_CTD_ANON_50_httpwww_litle_comschemacard', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 693, 28), )
+    __card = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'card'), 'card', '__httpwww_litle_comschema_CTD_ANON_50_httpwww_litle_comschemacard', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 693, 28), )
 
     
     card = property(__card.value, __card.set, None, None)
 
     
     # Element {http://www.litle.com/schema}paypal uses Python identifier paypal
-    __paypal = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'paypal'), 'paypal', '__httpwww_litle_comschema_CTD_ANON_50_httpwww_litle_comschemapaypal', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 694, 28), )
+    __paypal = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'paypal'), 'paypal', '__httpwww_litle_comschema_CTD_ANON_50_httpwww_litle_comschemapaypal', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 694, 28), )
 
     
     paypal = property(__paypal.value, __paypal.set, None, None)
 
     
     # Element {http://www.litle.com/schema}token uses Python identifier token
-    __token = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'token'), 'token', '__httpwww_litle_comschema_CTD_ANON_50_httpwww_litle_comschematoken', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 695, 28), )
+    __token = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'token'), 'token', '__httpwww_litle_comschema_CTD_ANON_50_httpwww_litle_comschematoken', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 695, 28), )
 
     
     token = property(__token.value, __token.set, None, None)
 
     
     # Element {http://www.litle.com/schema}paypage uses Python identifier paypage
-    __paypage = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'paypage'), 'paypage', '__httpwww_litle_comschema_CTD_ANON_50_httpwww_litle_comschemapaypage', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 696, 28), )
+    __paypage = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'paypage'), 'paypage', '__httpwww_litle_comschema_CTD_ANON_50_httpwww_litle_comschemapaypage', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 696, 28), )
 
     
     paypage = property(__paypage.value, __paypage.set, None, None)
 
     
     # Element {http://www.litle.com/schema}applepay uses Python identifier applepay
-    __applepay = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'applepay'), 'applepay', '__httpwww_litle_comschema_CTD_ANON_50_httpwww_litle_comschemaapplepay', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 697, 28), )
+    __applepay = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'applepay'), 'applepay', '__httpwww_litle_comschema_CTD_ANON_50_httpwww_litle_comschemaapplepay', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 697, 28), )
 
     
     applepay = property(__applepay.value, __applepay.set, None, None)
 
     
     # Element {http://www.litle.com/schema}sepaDirectDebit uses Python identifier sepaDirectDebit
-    __sepaDirectDebit = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'sepaDirectDebit'), 'sepaDirectDebit', '__httpwww_litle_comschema_CTD_ANON_50_httpwww_litle_comschemasepaDirectDebit', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 698, 28), )
+    __sepaDirectDebit = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'sepaDirectDebit'), 'sepaDirectDebit', '__httpwww_litle_comschema_CTD_ANON_50_httpwww_litle_comschemasepaDirectDebit', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 698, 28), )
 
     
     sepaDirectDebit = property(__sepaDirectDebit.value, __sepaDirectDebit.set, None, None)
 
     
     # Element {http://www.litle.com/schema}ideal uses Python identifier ideal
-    __ideal = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'ideal'), 'ideal', '__httpwww_litle_comschema_CTD_ANON_50_httpwww_litle_comschemaideal', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 699, 28), )
+    __ideal = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'ideal'), 'ideal', '__httpwww_litle_comschema_CTD_ANON_50_httpwww_litle_comschemaideal', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 699, 28), )
 
     
     ideal = property(__ideal.value, __ideal.set, None, None)
 
     
     # Element {http://www.litle.com/schema}giropay uses Python identifier giropay
-    __giropay = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'giropay'), 'giropay', '__httpwww_litle_comschema_CTD_ANON_50_httpwww_litle_comschemagiropay', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 700, 28), )
+    __giropay = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'giropay'), 'giropay', '__httpwww_litle_comschema_CTD_ANON_50_httpwww_litle_comschemagiropay', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 700, 28), )
 
     
     giropay = property(__giropay.value, __giropay.set, None, None)
 
     
     # Element {http://www.litle.com/schema}sofort uses Python identifier sofort
-    __sofort = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'sofort'), 'sofort', '__httpwww_litle_comschema_CTD_ANON_50_httpwww_litle_comschemasofort', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 701, 28), )
+    __sofort = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'sofort'), 'sofort', '__httpwww_litle_comschema_CTD_ANON_50_httpwww_litle_comschemasofort', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 701, 28), )
 
     
     sofort = property(__sofort.value, __sofort.set, None, None)
 
     
     # Element {http://www.litle.com/schema}fraudCheck uses Python identifier fraudCheck
-    __fraudCheck = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'fraudCheck'), 'fraudCheck', '__httpwww_litle_comschema_CTD_ANON_50_httpwww_litle_comschemafraudCheck', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 707, 28), )
+    __fraudCheck = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'fraudCheck'), 'fraudCheck', '__httpwww_litle_comschema_CTD_ANON_50_httpwww_litle_comschemafraudCheck', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 707, 28), )
 
     
     fraudCheck = property(__fraudCheck.value, __fraudCheck.set, None, None)
 
     
     # Element {http://www.litle.com/schema}cardholderAuthentication uses Python identifier cardholderAuthentication
-    __cardholderAuthentication = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'cardholderAuthentication'), 'cardholderAuthentication', '__httpwww_litle_comschema_CTD_ANON_50_httpwww_litle_comschemacardholderAuthentication', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 708, 28), )
+    __cardholderAuthentication = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'cardholderAuthentication'), 'cardholderAuthentication', '__httpwww_litle_comschema_CTD_ANON_50_httpwww_litle_comschemacardholderAuthentication', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 708, 28), )
 
     
     cardholderAuthentication = property(__cardholderAuthentication.value, __cardholderAuthentication.set, None, None)
 
     
     # Element {http://www.litle.com/schema}taxType uses Python identifier taxType
-    __taxType = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'taxType'), 'taxType', '__httpwww_litle_comschema_CTD_ANON_50_httpwww_litle_comschemataxType', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 711, 24), )
+    __taxType = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'taxType'), 'taxType', '__httpwww_litle_comschema_CTD_ANON_50_httpwww_litle_comschemataxType', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 711, 24), )
 
     
     taxType = property(__taxType.value, __taxType.set, None, None)
 
     
     # Element {http://www.litle.com/schema}payPalOrderComplete uses Python identifier payPalOrderComplete
-    __payPalOrderComplete = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'payPalOrderComplete'), 'payPalOrderComplete', '__httpwww_litle_comschema_CTD_ANON_50_httpwww_litle_comschemapayPalOrderComplete', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 715, 24), )
+    __payPalOrderComplete = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'payPalOrderComplete'), 'payPalOrderComplete', '__httpwww_litle_comschema_CTD_ANON_50_httpwww_litle_comschemapayPalOrderComplete', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 715, 24), )
 
     
     payPalOrderComplete = property(__payPalOrderComplete.value, __payPalOrderComplete.set, None, None)
 
     
     # Element {http://www.litle.com/schema}payPalNotes uses Python identifier payPalNotes
-    __payPalNotes = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'payPalNotes'), 'payPalNotes', '__httpwww_litle_comschema_CTD_ANON_50_httpwww_litle_comschemapayPalNotes', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 716, 24), )
+    __payPalNotes = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'payPalNotes'), 'payPalNotes', '__httpwww_litle_comschema_CTD_ANON_50_httpwww_litle_comschemapayPalNotes', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 716, 24), )
 
     
     payPalNotes = property(__payPalNotes.value, __payPalNotes.set, None, None)
 
     
     # Element {http://www.litle.com/schema}allowPartialAuth uses Python identifier allowPartialAuth
-    __allowPartialAuth = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'allowPartialAuth'), 'allowPartialAuth', '__httpwww_litle_comschema_CTD_ANON_50_httpwww_litle_comschemaallowPartialAuth', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 718, 24), )
+    __allowPartialAuth = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'allowPartialAuth'), 'allowPartialAuth', '__httpwww_litle_comschema_CTD_ANON_50_httpwww_litle_comschemaallowPartialAuth', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 718, 24), )
 
     
     allowPartialAuth = property(__allowPartialAuth.value, __allowPartialAuth.set, None, None)
 
     
     # Element {http://www.litle.com/schema}filtering uses Python identifier filtering
-    __filtering = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'filtering'), 'filtering', '__httpwww_litle_comschema_CTD_ANON_50_httpwww_litle_comschemafiltering', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 720, 24), )
+    __filtering = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'filtering'), 'filtering', '__httpwww_litle_comschema_CTD_ANON_50_httpwww_litle_comschemafiltering', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 720, 24), )
 
     
     filtering = property(__filtering.value, __filtering.set, None, None)
 
     
     # Element {http://www.litle.com/schema}merchantData uses Python identifier merchantData
-    __merchantData = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'merchantData'), 'merchantData', '__httpwww_litle_comschema_CTD_ANON_50_httpwww_litle_comschemamerchantData', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 721, 24), )
+    __merchantData = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'merchantData'), 'merchantData', '__httpwww_litle_comschema_CTD_ANON_50_httpwww_litle_comschemamerchantData', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 721, 24), )
 
     
     merchantData = property(__merchantData.value, __merchantData.set, None, None)
 
     
     # Element {http://www.litle.com/schema}recyclingRequest uses Python identifier recyclingRequest
-    __recyclingRequest = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'recyclingRequest'), 'recyclingRequest', '__httpwww_litle_comschema_CTD_ANON_50_httpwww_litle_comschemarecyclingRequest', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 722, 24), )
+    __recyclingRequest = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'recyclingRequest'), 'recyclingRequest', '__httpwww_litle_comschema_CTD_ANON_50_httpwww_litle_comschemarecyclingRequest', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 722, 24), )
 
     
     recyclingRequest = property(__recyclingRequest.value, __recyclingRequest.set, None, None)
 
     
     # Element {http://www.litle.com/schema}fraudFilterOverride uses Python identifier fraudFilterOverride
-    __fraudFilterOverride = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'fraudFilterOverride'), 'fraudFilterOverride', '__httpwww_litle_comschema_CTD_ANON_50_httpwww_litle_comschemafraudFilterOverride', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 723, 24), )
+    __fraudFilterOverride = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'fraudFilterOverride'), 'fraudFilterOverride', '__httpwww_litle_comschema_CTD_ANON_50_httpwww_litle_comschemafraudFilterOverride', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 723, 24), )
 
     
     fraudFilterOverride = property(__fraudFilterOverride.value, __fraudFilterOverride.set, None, None)
 
     
     # Element {http://www.litle.com/schema}recurringRequest uses Python identifier recurringRequest
-    __recurringRequest = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'recurringRequest'), 'recurringRequest', '__httpwww_litle_comschema_CTD_ANON_50_httpwww_litle_comschemarecurringRequest', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 724, 24), )
+    __recurringRequest = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'recurringRequest'), 'recurringRequest', '__httpwww_litle_comschema_CTD_ANON_50_httpwww_litle_comschemarecurringRequest', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 724, 24), )
 
     
     recurringRequest = property(__recurringRequest.value, __recurringRequest.set, None, None)
 
     
     # Element {http://www.litle.com/schema}litleInternalRecurringRequest uses Python identifier litleInternalRecurringRequest
-    __litleInternalRecurringRequest = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'litleInternalRecurringRequest'), 'litleInternalRecurringRequest', '__httpwww_litle_comschema_CTD_ANON_50_httpwww_litle_comschemalitleInternalRecurringRequest', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 725, 24), )
+    __litleInternalRecurringRequest = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'litleInternalRecurringRequest'), 'litleInternalRecurringRequest', '__httpwww_litle_comschema_CTD_ANON_50_httpwww_litle_comschemalitleInternalRecurringRequest', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 725, 24), )
 
     
     litleInternalRecurringRequest = property(__litleInternalRecurringRequest.value, __litleInternalRecurringRequest.set, None, None)
 
     
     # Element {http://www.litle.com/schema}debtRepayment uses Python identifier debtRepayment
-    __debtRepayment = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'debtRepayment'), 'debtRepayment', '__httpwww_litle_comschema_CTD_ANON_50_httpwww_litle_comschemadebtRepayment', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 726, 24), )
+    __debtRepayment = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'debtRepayment'), 'debtRepayment', '__httpwww_litle_comschema_CTD_ANON_50_httpwww_litle_comschemadebtRepayment', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 726, 24), )
 
     
     debtRepayment = property(__debtRepayment.value, __debtRepayment.set, None, None)
 
     
     # Element {http://www.litle.com/schema}advancedFraudChecks uses Python identifier advancedFraudChecks
-    __advancedFraudChecks = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'advancedFraudChecks'), 'advancedFraudChecks', '__httpwww_litle_comschema_CTD_ANON_50_httpwww_litle_comschemaadvancedFraudChecks', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 727, 24), )
+    __advancedFraudChecks = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'advancedFraudChecks'), 'advancedFraudChecks', '__httpwww_litle_comschema_CTD_ANON_50_httpwww_litle_comschemaadvancedFraudChecks', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 727, 24), )
 
     
     advancedFraudChecks = property(__advancedFraudChecks.value, __advancedFraudChecks.set, None, None)
 
     
     # Element {http://www.litle.com/schema}processingType uses Python identifier processingType
-    __processingType = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'processingType'), 'processingType', '__httpwww_litle_comschema_CTD_ANON_50_httpwww_litle_comschemaprocessingType', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 729, 24), )
+    __processingType = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'processingType'), 'processingType', '__httpwww_litle_comschema_CTD_ANON_50_httpwww_litle_comschemaprocessingType', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 729, 24), )
 
     
     processingType = property(__processingType.value, __processingType.set, None, None)
 
     
     # Element {http://www.litle.com/schema}originalNetworkTransactionId uses Python identifier originalNetworkTransactionId
-    __originalNetworkTransactionId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'originalNetworkTransactionId'), 'originalNetworkTransactionId', '__httpwww_litle_comschema_CTD_ANON_50_httpwww_litle_comschemaoriginalNetworkTransactionId', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 730, 24), )
+    __originalNetworkTransactionId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'originalNetworkTransactionId'), 'originalNetworkTransactionId', '__httpwww_litle_comschema_CTD_ANON_50_httpwww_litle_comschemaoriginalNetworkTransactionId', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 730, 24), )
 
     
     originalNetworkTransactionId = property(__originalNetworkTransactionId.value, __originalNetworkTransactionId.set, None, None)
 
     
     # Element {http://www.litle.com/schema}originalTransactionAmount uses Python identifier originalTransactionAmount
-    __originalTransactionAmount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'originalTransactionAmount'), 'originalTransactionAmount', '__httpwww_litle_comschema_CTD_ANON_50_httpwww_litle_comschemaoriginalTransactionAmount', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 731, 24), )
+    __originalTransactionAmount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'originalTransactionAmount'), 'originalTransactionAmount', '__httpwww_litle_comschema_CTD_ANON_50_httpwww_litle_comschemaoriginalTransactionAmount', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 731, 24), )
 
     
     originalTransactionAmount = property(__originalTransactionAmount.value, __originalTransactionAmount.set, None, None)
 
     
     # Element {http://www.litle.com/schema}shipToAddress uses Python identifier shipToAddress
-    __shipToAddress = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'shipToAddress'), 'shipToAddress', '__httpwww_litle_comschema_CTD_ANON_50_httpwww_litle_comschemashipToAddress', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 850, 4), )
+    __shipToAddress = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'shipToAddress'), 'shipToAddress', '__httpwww_litle_comschema_CTD_ANON_50_httpwww_litle_comschemashipToAddress', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 850, 4), )
 
     
     shipToAddress = property(__shipToAddress.value, __shipToAddress.set, None, None)
 
     
     # Element {http://www.litle.com/schema}healthcareIIAS uses Python identifier healthcareIIAS
-    __healthcareIIAS = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'healthcareIIAS'), 'healthcareIIAS', '__httpwww_litle_comschema_CTD_ANON_50_httpwww_litle_comschemahealthcareIIAS', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 877, 4), )
+    __healthcareIIAS = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'healthcareIIAS'), 'healthcareIIAS', '__httpwww_litle_comschema_CTD_ANON_50_httpwww_litle_comschemahealthcareIIAS', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 877, 4), )
 
     
     healthcareIIAS = property(__healthcareIIAS.value, __healthcareIIAS.set, None, None)
 
     
     # Element {http://www.litle.com/schema}enhancedData uses Python identifier enhancedData
-    __enhancedData = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'enhancedData'), 'enhancedData', '__httpwww_litle_comschema_CTD_ANON_50_httpwww_litle_comschemaenhancedData', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 898, 4), )
+    __enhancedData = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'enhancedData'), 'enhancedData', '__httpwww_litle_comschema_CTD_ANON_50_httpwww_litle_comschemaenhancedData', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 898, 4), )
 
     
     enhancedData = property(__enhancedData.value, __enhancedData.set, None, None)
 
     
     # Element {http://www.litle.com/schema}amexAggregatorData uses Python identifier amexAggregatorData
-    __amexAggregatorData = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'amexAggregatorData'), 'amexAggregatorData', '__httpwww_litle_comschema_CTD_ANON_50_httpwww_litle_comschemaamexAggregatorData', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 919, 4), )
+    __amexAggregatorData = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'amexAggregatorData'), 'amexAggregatorData', '__httpwww_litle_comschema_CTD_ANON_50_httpwww_litle_comschemaamexAggregatorData', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 919, 4), )
 
     
     amexAggregatorData = property(__amexAggregatorData.value, __amexAggregatorData.set, None, None)
 
     
     # Element {http://www.litle.com/schema}customBilling uses Python identifier customBilling
-    __customBilling = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'customBilling'), 'customBilling', '__httpwww_litle_comschema_CTD_ANON_50_httpwww_litle_comschemacustomBilling', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 992, 4), )
+    __customBilling = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'customBilling'), 'customBilling', '__httpwww_litle_comschema_CTD_ANON_50_httpwww_litle_comschemacustomBilling', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 992, 4), )
 
     
     customBilling = property(__customBilling.value, __customBilling.set, None, None)
 
     
     # Element {http://www.litle.com/schema}processingInstructions uses Python identifier processingInstructions
-    __processingInstructions = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'processingInstructions'), 'processingInstructions', '__httpwww_litle_comschema_CTD_ANON_50_httpwww_litle_comschemaprocessingInstructions', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1006, 4), )
+    __processingInstructions = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'processingInstructions'), 'processingInstructions', '__httpwww_litle_comschema_CTD_ANON_50_httpwww_litle_comschemaprocessingInstructions', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1006, 4), )
 
     
     processingInstructions = property(__processingInstructions.value, __processingInstructions.set, None, None)
 
     
     # Element {http://www.litle.com/schema}pos uses Python identifier pos
-    __pos = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'pos'), 'pos', '__httpwww_litle_comschema_CTD_ANON_50_httpwww_litle_comschemapos', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1014, 4), )
+    __pos = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'pos'), 'pos', '__httpwww_litle_comschema_CTD_ANON_50_httpwww_litle_comschemapos', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1014, 4), )
 
     
     pos = property(__pos.value, __pos.set, None, None)
 
     
     # Element {http://www.litle.com/schema}wallet uses Python identifier wallet
-    __wallet = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'wallet'), 'wallet', '__httpwww_litle_comschema_CTD_ANON_50_httpwww_litle_comschemawallet', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1940, 4), )
+    __wallet = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'wallet'), 'wallet', '__httpwww_litle_comschema_CTD_ANON_50_httpwww_litle_comschemawallet', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1940, 4), )
 
     
     wallet = property(__wallet.value, __wallet.set, None, None)
@@ -6934,167 +6934,167 @@ class CTD_ANON_51 (transactionTypeWithReportGroup):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 740, 8)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 740, 8)
     _ElementMap = transactionTypeWithReportGroup._ElementMap.copy()
     _AttributeMap = transactionTypeWithReportGroup._AttributeMap.copy()
     # Base type is transactionTypeWithReportGroup
     
     # Element {http://www.litle.com/schema}billToAddress uses Python identifier billToAddress
-    __billToAddress = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'billToAddress'), 'billToAddress', '__httpwww_litle_comschema_CTD_ANON_51_httpwww_litle_comschemabillToAddress', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 69, 4), )
+    __billToAddress = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'billToAddress'), 'billToAddress', '__httpwww_litle_comschema_CTD_ANON_51_httpwww_litle_comschemabillToAddress', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 69, 4), )
 
     
     billToAddress = property(__billToAddress.value, __billToAddress.set, None, None)
 
     
     # Element {http://www.litle.com/schema}billMeLaterRequest uses Python identifier billMeLaterRequest
-    __billMeLaterRequest = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'billMeLaterRequest'), 'billMeLaterRequest', '__httpwww_litle_comschema_CTD_ANON_51_httpwww_litle_comschemabillMeLaterRequest', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 462, 4), )
+    __billMeLaterRequest = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'billMeLaterRequest'), 'billMeLaterRequest', '__httpwww_litle_comschema_CTD_ANON_51_httpwww_litle_comschemabillMeLaterRequest', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 462, 4), )
 
     
     billMeLaterRequest = property(__billMeLaterRequest.value, __billMeLaterRequest.set, None, None)
 
     
     # Element {http://www.litle.com/schema}litleTxnId uses Python identifier litleTxnId
-    __litleTxnId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'litleTxnId'), 'litleTxnId', '__httpwww_litle_comschema_CTD_ANON_51_httpwww_litle_comschemalitleTxnId', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 746, 32), )
+    __litleTxnId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'litleTxnId'), 'litleTxnId', '__httpwww_litle_comschema_CTD_ANON_51_httpwww_litle_comschemalitleTxnId', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 746, 32), )
 
     
     litleTxnId = property(__litleTxnId.value, __litleTxnId.set, None, None)
 
     
     # Element {http://www.litle.com/schema}amount uses Python identifier amount
-    __amount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'amount'), 'amount', '__httpwww_litle_comschema_CTD_ANON_51_httpwww_litle_comschemaamount', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 747, 32), )
+    __amount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'amount'), 'amount', '__httpwww_litle_comschema_CTD_ANON_51_httpwww_litle_comschemaamount', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 747, 32), )
 
     
     amount = property(__amount.value, __amount.set, None, None)
 
     
     # Element {http://www.litle.com/schema}secondaryAmount uses Python identifier secondaryAmount
-    __secondaryAmount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'secondaryAmount'), 'secondaryAmount', '__httpwww_litle_comschema_CTD_ANON_51_httpwww_litle_comschemasecondaryAmount', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 748, 32), )
+    __secondaryAmount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'secondaryAmount'), 'secondaryAmount', '__httpwww_litle_comschema_CTD_ANON_51_httpwww_litle_comschemasecondaryAmount', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 748, 32), )
 
     
     secondaryAmount = property(__secondaryAmount.value, __secondaryAmount.set, None, None)
 
     
     # Element {http://www.litle.com/schema}surchargeAmount uses Python identifier surchargeAmount
-    __surchargeAmount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'surchargeAmount'), 'surchargeAmount', '__httpwww_litle_comschema_CTD_ANON_51_httpwww_litle_comschemasurchargeAmount', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 749, 32), )
+    __surchargeAmount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'surchargeAmount'), 'surchargeAmount', '__httpwww_litle_comschema_CTD_ANON_51_httpwww_litle_comschemasurchargeAmount', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 749, 32), )
 
     
     surchargeAmount = property(__surchargeAmount.value, __surchargeAmount.set, None, None)
 
     
     # Element {http://www.litle.com/schema}pin uses Python identifier pin
-    __pin = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'pin'), 'pin', '__httpwww_litle_comschema_CTD_ANON_51_httpwww_litle_comschemapin', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 754, 32), )
+    __pin = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'pin'), 'pin', '__httpwww_litle_comschema_CTD_ANON_51_httpwww_litle_comschemapin', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 754, 32), )
 
     
     pin = property(__pin.value, __pin.set, None, None)
 
     
     # Element {http://www.litle.com/schema}orderId uses Python identifier orderId
-    __orderId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'orderId'), 'orderId', '__httpwww_litle_comschema_CTD_ANON_51_httpwww_litle_comschemaorderId', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 757, 32), )
+    __orderId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'orderId'), 'orderId', '__httpwww_litle_comschema_CTD_ANON_51_httpwww_litle_comschemaorderId', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 757, 32), )
 
     
     orderId = property(__orderId.value, __orderId.set, None, None)
 
     
     # Element {http://www.litle.com/schema}orderSource uses Python identifier orderSource
-    __orderSource = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'orderSource'), 'orderSource', '__httpwww_litle_comschema_CTD_ANON_51_httpwww_litle_comschemaorderSource', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 761, 32), )
+    __orderSource = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'orderSource'), 'orderSource', '__httpwww_litle_comschema_CTD_ANON_51_httpwww_litle_comschemaorderSource', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 761, 32), )
 
     
     orderSource = property(__orderSource.value, __orderSource.set, None, None)
 
     
     # Element {http://www.litle.com/schema}mpos uses Python identifier mpos
-    __mpos = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'mpos'), 'mpos', '__httpwww_litle_comschema_CTD_ANON_51_httpwww_litle_comschemampos', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 764, 36), )
+    __mpos = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'mpos'), 'mpos', '__httpwww_litle_comschema_CTD_ANON_51_httpwww_litle_comschemampos', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 764, 36), )
 
     
     mpos = property(__mpos.value, __mpos.set, None, None)
 
     
     # Element {http://www.litle.com/schema}card uses Python identifier card
-    __card = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'card'), 'card', '__httpwww_litle_comschema_CTD_ANON_51_httpwww_litle_comschemacard', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 765, 36), )
+    __card = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'card'), 'card', '__httpwww_litle_comschema_CTD_ANON_51_httpwww_litle_comschemacard', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 765, 36), )
 
     
     card = property(__card.value, __card.set, None, None)
 
     
     # Element {http://www.litle.com/schema}token uses Python identifier token
-    __token = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'token'), 'token', '__httpwww_litle_comschema_CTD_ANON_51_httpwww_litle_comschematoken', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 766, 36), )
+    __token = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'token'), 'token', '__httpwww_litle_comschema_CTD_ANON_51_httpwww_litle_comschematoken', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 766, 36), )
 
     
     token = property(__token.value, __token.set, None, None)
 
     
     # Element {http://www.litle.com/schema}paypage uses Python identifier paypage
-    __paypage = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'paypage'), 'paypage', '__httpwww_litle_comschema_CTD_ANON_51_httpwww_litle_comschemapaypage', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 767, 36), )
+    __paypage = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'paypage'), 'paypage', '__httpwww_litle_comschema_CTD_ANON_51_httpwww_litle_comschemapaypage', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 767, 36), )
 
     
     paypage = property(__paypage.value, __paypage.set, None, None)
 
     
     # Element {http://www.litle.com/schema}paypal uses Python identifier paypal
-    __paypal = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'paypal'), 'paypal', '__httpwww_litle_comschema_CTD_ANON_51_httpwww_litle_comschemapaypal', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 768, 36), )
+    __paypal = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'paypal'), 'paypal', '__httpwww_litle_comschema_CTD_ANON_51_httpwww_litle_comschemapaypal', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 768, 36), )
 
     
     paypal = property(__paypal.value, __paypal.set, None, None)
 
     
     # Element {http://www.litle.com/schema}taxType uses Python identifier taxType
-    __taxType = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'taxType'), 'taxType', '__httpwww_litle_comschema_CTD_ANON_51_httpwww_litle_comschemataxType', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 771, 32), )
+    __taxType = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'taxType'), 'taxType', '__httpwww_litle_comschema_CTD_ANON_51_httpwww_litle_comschemataxType', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 771, 32), )
 
     
     taxType = property(__taxType.value, __taxType.set, None, None)
 
     
     # Element {http://www.litle.com/schema}merchantData uses Python identifier merchantData
-    __merchantData = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'merchantData'), 'merchantData', '__httpwww_litle_comschema_CTD_ANON_51_httpwww_litle_comschemamerchantData', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 777, 32), )
+    __merchantData = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'merchantData'), 'merchantData', '__httpwww_litle_comschema_CTD_ANON_51_httpwww_litle_comschemamerchantData', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 777, 32), )
 
     
     merchantData = property(__merchantData.value, __merchantData.set, None, None)
 
     
     # Element {http://www.litle.com/schema}payPalNotes uses Python identifier payPalNotes
-    __payPalNotes = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'payPalNotes'), 'payPalNotes', '__httpwww_litle_comschema_CTD_ANON_51_httpwww_litle_comschemapayPalNotes', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 780, 24), )
+    __payPalNotes = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'payPalNotes'), 'payPalNotes', '__httpwww_litle_comschema_CTD_ANON_51_httpwww_litle_comschemapayPalNotes', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 780, 24), )
 
     
     payPalNotes = property(__payPalNotes.value, __payPalNotes.set, None, None)
 
     
     # Element {http://www.litle.com/schema}actionReason uses Python identifier actionReason
-    __actionReason = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'actionReason'), 'actionReason', '__httpwww_litle_comschema_CTD_ANON_51_httpwww_litle_comschemaactionReason', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 781, 24), )
+    __actionReason = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'actionReason'), 'actionReason', '__httpwww_litle_comschema_CTD_ANON_51_httpwww_litle_comschemaactionReason', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 781, 24), )
 
     
     actionReason = property(__actionReason.value, __actionReason.set, None, None)
 
     
     # Element {http://www.litle.com/schema}enhancedData uses Python identifier enhancedData
-    __enhancedData = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'enhancedData'), 'enhancedData', '__httpwww_litle_comschema_CTD_ANON_51_httpwww_litle_comschemaenhancedData', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 898, 4), )
+    __enhancedData = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'enhancedData'), 'enhancedData', '__httpwww_litle_comschema_CTD_ANON_51_httpwww_litle_comschemaenhancedData', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 898, 4), )
 
     
     enhancedData = property(__enhancedData.value, __enhancedData.set, None, None)
 
     
     # Element {http://www.litle.com/schema}amexAggregatorData uses Python identifier amexAggregatorData
-    __amexAggregatorData = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'amexAggregatorData'), 'amexAggregatorData', '__httpwww_litle_comschema_CTD_ANON_51_httpwww_litle_comschemaamexAggregatorData', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 919, 4), )
+    __amexAggregatorData = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'amexAggregatorData'), 'amexAggregatorData', '__httpwww_litle_comschema_CTD_ANON_51_httpwww_litle_comschemaamexAggregatorData', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 919, 4), )
 
     
     amexAggregatorData = property(__amexAggregatorData.value, __amexAggregatorData.set, None, None)
 
     
     # Element {http://www.litle.com/schema}customBilling uses Python identifier customBilling
-    __customBilling = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'customBilling'), 'customBilling', '__httpwww_litle_comschema_CTD_ANON_51_httpwww_litle_comschemacustomBilling', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 992, 4), )
+    __customBilling = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'customBilling'), 'customBilling', '__httpwww_litle_comschema_CTD_ANON_51_httpwww_litle_comschemacustomBilling', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 992, 4), )
 
     
     customBilling = property(__customBilling.value, __customBilling.set, None, None)
 
     
     # Element {http://www.litle.com/schema}processingInstructions uses Python identifier processingInstructions
-    __processingInstructions = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'processingInstructions'), 'processingInstructions', '__httpwww_litle_comschema_CTD_ANON_51_httpwww_litle_comschemaprocessingInstructions', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1006, 4), )
+    __processingInstructions = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'processingInstructions'), 'processingInstructions', '__httpwww_litle_comschema_CTD_ANON_51_httpwww_litle_comschemaprocessingInstructions', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1006, 4), )
 
     
     processingInstructions = property(__processingInstructions.value, __processingInstructions.set, None, None)
 
     
     # Element {http://www.litle.com/schema}pos uses Python identifier pos
-    __pos = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'pos'), 'pos', '__httpwww_litle_comschema_CTD_ANON_51_httpwww_litle_comschemapos', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1014, 4), )
+    __pos = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'pos'), 'pos', '__httpwww_litle_comschema_CTD_ANON_51_httpwww_litle_comschemapos', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1014, 4), )
 
     
     pos = property(__pos.value, __pos.set, None, None)
@@ -7143,41 +7143,41 @@ class CTD_ANON_52 (transactionTypeWithReportGroup):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 789, 8)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 789, 8)
     _ElementMap = transactionTypeWithReportGroup._ElementMap.copy()
     _AttributeMap = transactionTypeWithReportGroup._AttributeMap.copy()
     # Base type is transactionTypeWithReportGroup
     
     # Element {http://www.litle.com/schema}orderId uses Python identifier orderId
-    __orderId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'orderId'), 'orderId', '__httpwww_litle_comschema_CTD_ANON_52_httpwww_litle_comschemaorderId', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 793, 28), )
+    __orderId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'orderId'), 'orderId', '__httpwww_litle_comschema_CTD_ANON_52_httpwww_litle_comschemaorderId', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 793, 28), )
 
     
     orderId = property(__orderId.value, __orderId.set, None, None)
 
     
     # Element {http://www.litle.com/schema}amount uses Python identifier amount
-    __amount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'amount'), 'amount', '__httpwww_litle_comschema_CTD_ANON_52_httpwww_litle_comschemaamount', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 794, 28), )
+    __amount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'amount'), 'amount', '__httpwww_litle_comschema_CTD_ANON_52_httpwww_litle_comschemaamount', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 794, 28), )
 
     
     amount = property(__amount.value, __amount.set, None, None)
 
     
     # Element {http://www.litle.com/schema}orderSource uses Python identifier orderSource
-    __orderSource = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'orderSource'), 'orderSource', '__httpwww_litle_comschema_CTD_ANON_52_httpwww_litle_comschemaorderSource', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 795, 28), )
+    __orderSource = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'orderSource'), 'orderSource', '__httpwww_litle_comschema_CTD_ANON_52_httpwww_litle_comschemaorderSource', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 795, 28), )
 
     
     orderSource = property(__orderSource.value, __orderSource.set, None, None)
 
     
     # Element {http://www.litle.com/schema}card uses Python identifier card
-    __card = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'card'), 'card', '__httpwww_litle_comschema_CTD_ANON_52_httpwww_litle_comschemacard', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 797, 37), )
+    __card = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'card'), 'card', '__httpwww_litle_comschema_CTD_ANON_52_httpwww_litle_comschemacard', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 797, 37), )
 
     
     card = property(__card.value, __card.set, None, None)
 
     
     # Element {http://www.litle.com/schema}virtualGiftCard uses Python identifier virtualGiftCard
-    __virtualGiftCard = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'virtualGiftCard'), 'virtualGiftCard', '__httpwww_litle_comschema_CTD_ANON_52_httpwww_litle_comschemavirtualGiftCard', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 798, 37), )
+    __virtualGiftCard = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'virtualGiftCard'), 'virtualGiftCard', '__httpwww_litle_comschema_CTD_ANON_52_httpwww_litle_comschemavirtualGiftCard', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 798, 37), )
 
     
     virtualGiftCard = property(__virtualGiftCard.value, __virtualGiftCard.set, None, None)
@@ -7208,27 +7208,27 @@ class CTD_ANON_53 (transactionTypeWithReportGroup):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 807, 8)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 807, 8)
     _ElementMap = transactionTypeWithReportGroup._ElementMap.copy()
     _AttributeMap = transactionTypeWithReportGroup._AttributeMap.copy()
     # Base type is transactionTypeWithReportGroup
     
     # Element {http://www.litle.com/schema}orderId uses Python identifier orderId
-    __orderId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'orderId'), 'orderId', '__httpwww_litle_comschema_CTD_ANON_53_httpwww_litle_comschemaorderId', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 811, 28), )
+    __orderId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'orderId'), 'orderId', '__httpwww_litle_comschema_CTD_ANON_53_httpwww_litle_comschemaorderId', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 811, 28), )
 
     
     orderId = property(__orderId.value, __orderId.set, None, None)
 
     
     # Element {http://www.litle.com/schema}orderSource uses Python identifier orderSource
-    __orderSource = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'orderSource'), 'orderSource', '__httpwww_litle_comschema_CTD_ANON_53_httpwww_litle_comschemaorderSource', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 812, 28), )
+    __orderSource = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'orderSource'), 'orderSource', '__httpwww_litle_comschema_CTD_ANON_53_httpwww_litle_comschemaorderSource', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 812, 28), )
 
     
     orderSource = property(__orderSource.value, __orderSource.set, None, None)
 
     
     # Element {http://www.litle.com/schema}card uses Python identifier card
-    __card = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'card'), 'card', '__httpwww_litle_comschema_CTD_ANON_53_httpwww_litle_comschemacard', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 813, 28), )
+    __card = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'card'), 'card', '__httpwww_litle_comschema_CTD_ANON_53_httpwww_litle_comschemacard', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 813, 28), )
 
     
     card = property(__card.value, __card.set, None, None)
@@ -7257,34 +7257,34 @@ class CTD_ANON_54 (transactionTypeWithReportGroup):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 821, 8)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 821, 8)
     _ElementMap = transactionTypeWithReportGroup._ElementMap.copy()
     _AttributeMap = transactionTypeWithReportGroup._AttributeMap.copy()
     # Base type is transactionTypeWithReportGroup
     
     # Element {http://www.litle.com/schema}orderId uses Python identifier orderId
-    __orderId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'orderId'), 'orderId', '__httpwww_litle_comschema_CTD_ANON_54_httpwww_litle_comschemaorderId', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 825, 28), )
+    __orderId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'orderId'), 'orderId', '__httpwww_litle_comschema_CTD_ANON_54_httpwww_litle_comschemaorderId', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 825, 28), )
 
     
     orderId = property(__orderId.value, __orderId.set, None, None)
 
     
     # Element {http://www.litle.com/schema}amount uses Python identifier amount
-    __amount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'amount'), 'amount', '__httpwww_litle_comschema_CTD_ANON_54_httpwww_litle_comschemaamount', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 826, 28), )
+    __amount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'amount'), 'amount', '__httpwww_litle_comschema_CTD_ANON_54_httpwww_litle_comschemaamount', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 826, 28), )
 
     
     amount = property(__amount.value, __amount.set, None, None)
 
     
     # Element {http://www.litle.com/schema}orderSource uses Python identifier orderSource
-    __orderSource = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'orderSource'), 'orderSource', '__httpwww_litle_comschema_CTD_ANON_54_httpwww_litle_comschemaorderSource', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 827, 28), )
+    __orderSource = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'orderSource'), 'orderSource', '__httpwww_litle_comschema_CTD_ANON_54_httpwww_litle_comschemaorderSource', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 827, 28), )
 
     
     orderSource = property(__orderSource.value, __orderSource.set, None, None)
 
     
     # Element {http://www.litle.com/schema}card uses Python identifier card
-    __card = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'card'), 'card', '__httpwww_litle_comschema_CTD_ANON_54_httpwww_litle_comschemacard', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 828, 28), )
+    __card = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'card'), 'card', '__httpwww_litle_comschema_CTD_ANON_54_httpwww_litle_comschemacard', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 828, 28), )
 
     
     card = property(__card.value, __card.set, None, None)
@@ -7314,34 +7314,34 @@ class CTD_ANON_55 (transactionTypeWithReportGroup):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 836, 8)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 836, 8)
     _ElementMap = transactionTypeWithReportGroup._ElementMap.copy()
     _AttributeMap = transactionTypeWithReportGroup._AttributeMap.copy()
     # Base type is transactionTypeWithReportGroup
     
     # Element {http://www.litle.com/schema}orderId uses Python identifier orderId
-    __orderId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'orderId'), 'orderId', '__httpwww_litle_comschema_CTD_ANON_55_httpwww_litle_comschemaorderId', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 840, 28), )
+    __orderId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'orderId'), 'orderId', '__httpwww_litle_comschema_CTD_ANON_55_httpwww_litle_comschemaorderId', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 840, 28), )
 
     
     orderId = property(__orderId.value, __orderId.set, None, None)
 
     
     # Element {http://www.litle.com/schema}amount uses Python identifier amount
-    __amount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'amount'), 'amount', '__httpwww_litle_comschema_CTD_ANON_55_httpwww_litle_comschemaamount', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 841, 28), )
+    __amount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'amount'), 'amount', '__httpwww_litle_comschema_CTD_ANON_55_httpwww_litle_comschemaamount', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 841, 28), )
 
     
     amount = property(__amount.value, __amount.set, None, None)
 
     
     # Element {http://www.litle.com/schema}orderSource uses Python identifier orderSource
-    __orderSource = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'orderSource'), 'orderSource', '__httpwww_litle_comschema_CTD_ANON_55_httpwww_litle_comschemaorderSource', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 842, 28), )
+    __orderSource = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'orderSource'), 'orderSource', '__httpwww_litle_comschema_CTD_ANON_55_httpwww_litle_comschemaorderSource', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 842, 28), )
 
     
     orderSource = property(__orderSource.value, __orderSource.set, None, None)
 
     
     # Element {http://www.litle.com/schema}card uses Python identifier card
-    __card = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'card'), 'card', '__httpwww_litle_comschema_CTD_ANON_55_httpwww_litle_comschemacard', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 843, 28), )
+    __card = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'card'), 'card', '__httpwww_litle_comschema_CTD_ANON_55_httpwww_litle_comschemacard', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 843, 28), )
 
     
     card = property(__card.value, __card.set, None, None)
@@ -7371,27 +7371,27 @@ class CTD_ANON_56 (transactionTypeWithReportGroup):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 864, 8)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 864, 8)
     _ElementMap = transactionTypeWithReportGroup._ElementMap.copy()
     _AttributeMap = transactionTypeWithReportGroup._AttributeMap.copy()
     # Base type is transactionTypeWithReportGroup
     
     # Element {http://www.litle.com/schema}orderId uses Python identifier orderId
-    __orderId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'orderId'), 'orderId', '__httpwww_litle_comschema_CTD_ANON_56_httpwww_litle_comschemaorderId', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 868, 28), )
+    __orderId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'orderId'), 'orderId', '__httpwww_litle_comschema_CTD_ANON_56_httpwww_litle_comschemaorderId', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 868, 28), )
 
     
     orderId = property(__orderId.value, __orderId.set, None, None)
 
     
     # Element {http://www.litle.com/schema}orderSource uses Python identifier orderSource
-    __orderSource = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'orderSource'), 'orderSource', '__httpwww_litle_comschema_CTD_ANON_56_httpwww_litle_comschemaorderSource', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 869, 28), )
+    __orderSource = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'orderSource'), 'orderSource', '__httpwww_litle_comschema_CTD_ANON_56_httpwww_litle_comschemaorderSource', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 869, 28), )
 
     
     orderSource = property(__orderSource.value, __orderSource.set, None, None)
 
     
     # Element {http://www.litle.com/schema}card uses Python identifier card
-    __card = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'card'), 'card', '__httpwww_litle_comschema_CTD_ANON_56_httpwww_litle_comschemacard', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 870, 28), )
+    __card = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'card'), 'card', '__httpwww_litle_comschema_CTD_ANON_56_httpwww_litle_comschemacard', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 870, 28), )
 
     
     card = property(__card.value, __card.set, None, None)
@@ -7420,55 +7420,55 @@ class registerTokenRequestType (transactionTypeWithReportGroup):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'registerTokenRequestType')
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1028, 4)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1028, 4)
     _ElementMap = transactionTypeWithReportGroup._ElementMap.copy()
     _AttributeMap = transactionTypeWithReportGroup._AttributeMap.copy()
     # Base type is transactionTypeWithReportGroup
     
     # Element {http://www.litle.com/schema}orderId uses Python identifier orderId
-    __orderId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'orderId'), 'orderId', '__httpwww_litle_comschema_registerTokenRequestType_httpwww_litle_comschemaorderId', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1032, 20), )
+    __orderId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'orderId'), 'orderId', '__httpwww_litle_comschema_registerTokenRequestType_httpwww_litle_comschemaorderId', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1032, 20), )
 
     
     orderId = property(__orderId.value, __orderId.set, None, None)
 
     
     # Element {http://www.litle.com/schema}mpos uses Python identifier mpos
-    __mpos = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'mpos'), 'mpos', '__httpwww_litle_comschema_registerTokenRequestType_httpwww_litle_comschemampos', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1034, 24), )
+    __mpos = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'mpos'), 'mpos', '__httpwww_litle_comschema_registerTokenRequestType_httpwww_litle_comschemampos', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1034, 24), )
 
     
     mpos = property(__mpos.value, __mpos.set, None, None)
 
     
     # Element {http://www.litle.com/schema}accountNumber uses Python identifier accountNumber
-    __accountNumber = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'accountNumber'), 'accountNumber', '__httpwww_litle_comschema_registerTokenRequestType_httpwww_litle_comschemaaccountNumber', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1035, 24), )
+    __accountNumber = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'accountNumber'), 'accountNumber', '__httpwww_litle_comschema_registerTokenRequestType_httpwww_litle_comschemaaccountNumber', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1035, 24), )
 
     
     accountNumber = property(__accountNumber.value, __accountNumber.set, None, None)
 
     
     # Element {http://www.litle.com/schema}echeckForToken uses Python identifier echeckForToken
-    __echeckForToken = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'echeckForToken'), 'echeckForToken', '__httpwww_litle_comschema_registerTokenRequestType_httpwww_litle_comschemaecheckForToken', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1036, 24), )
+    __echeckForToken = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'echeckForToken'), 'echeckForToken', '__httpwww_litle_comschema_registerTokenRequestType_httpwww_litle_comschemaecheckForToken', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1036, 24), )
 
     
     echeckForToken = property(__echeckForToken.value, __echeckForToken.set, None, None)
 
     
     # Element {http://www.litle.com/schema}paypageRegistrationId uses Python identifier paypageRegistrationId
-    __paypageRegistrationId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'paypageRegistrationId'), 'paypageRegistrationId', '__httpwww_litle_comschema_registerTokenRequestType_httpwww_litle_comschemapaypageRegistrationId', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1037, 24), )
+    __paypageRegistrationId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'paypageRegistrationId'), 'paypageRegistrationId', '__httpwww_litle_comschema_registerTokenRequestType_httpwww_litle_comschemapaypageRegistrationId', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1037, 24), )
 
     
     paypageRegistrationId = property(__paypageRegistrationId.value, __paypageRegistrationId.set, None, None)
 
     
     # Element {http://www.litle.com/schema}applepay uses Python identifier applepay
-    __applepay = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'applepay'), 'applepay', '__httpwww_litle_comschema_registerTokenRequestType_httpwww_litle_comschemaapplepay', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1038, 24), )
+    __applepay = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'applepay'), 'applepay', '__httpwww_litle_comschema_registerTokenRequestType_httpwww_litle_comschemaapplepay', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1038, 24), )
 
     
     applepay = property(__applepay.value, __applepay.set, None, None)
 
     
     # Element {http://www.litle.com/schema}cardValidationNum uses Python identifier cardValidationNum
-    __cardValidationNum = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'cardValidationNum'), 'cardValidationNum', '__httpwww_litle_comschema_registerTokenRequestType_httpwww_litle_comschemacardValidationNum', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1040, 20), )
+    __cardValidationNum = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'cardValidationNum'), 'cardValidationNum', '__httpwww_litle_comschema_registerTokenRequestType_httpwww_litle_comschemacardValidationNum', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1040, 20), )
 
     
     cardValidationNum = property(__cardValidationNum.value, __cardValidationNum.set, None, None)
@@ -7502,83 +7502,83 @@ class CTD_ANON_57 (transactionTypeWithReportGroup):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1047, 8)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1047, 8)
     _ElementMap = transactionTypeWithReportGroup._ElementMap.copy()
     _AttributeMap = transactionTypeWithReportGroup._AttributeMap.copy()
     # Base type is transactionTypeWithReportGroup
     
     # Element {http://www.litle.com/schema}litleTxnId uses Python identifier litleTxnId
-    __litleTxnId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'litleTxnId'), 'litleTxnId', '__httpwww_litle_comschema_CTD_ANON_57_httpwww_litle_comschemalitleTxnId', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1051, 24), )
+    __litleTxnId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'litleTxnId'), 'litleTxnId', '__httpwww_litle_comschema_CTD_ANON_57_httpwww_litle_comschemalitleTxnId', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1051, 24), )
 
     
     litleTxnId = property(__litleTxnId.value, __litleTxnId.set, None, None)
 
     
     # Element {http://www.litle.com/schema}orderId uses Python identifier orderId
-    __orderId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'orderId'), 'orderId', '__httpwww_litle_comschema_CTD_ANON_57_httpwww_litle_comschemaorderId', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1052, 24), )
+    __orderId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'orderId'), 'orderId', '__httpwww_litle_comschema_CTD_ANON_57_httpwww_litle_comschemaorderId', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1052, 24), )
 
     
     orderId = property(__orderId.value, __orderId.set, None, None)
 
     
     # Element {http://www.litle.com/schema}litleToken uses Python identifier litleToken
-    __litleToken = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'litleToken'), 'litleToken', '__httpwww_litle_comschema_CTD_ANON_57_httpwww_litle_comschemalitleToken', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1053, 24), )
+    __litleToken = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'litleToken'), 'litleToken', '__httpwww_litle_comschema_CTD_ANON_57_httpwww_litle_comschemalitleToken', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1053, 24), )
 
     
     litleToken = property(__litleToken.value, __litleToken.set, None, None)
 
     
     # Element {http://www.litle.com/schema}bin uses Python identifier bin
-    __bin = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'bin'), 'bin', '__httpwww_litle_comschema_CTD_ANON_57_httpwww_litle_comschemabin', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1054, 24), )
+    __bin = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'bin'), 'bin', '__httpwww_litle_comschema_CTD_ANON_57_httpwww_litle_comschemabin', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1054, 24), )
 
     
     bin = property(__bin.value, __bin.set, None, None)
 
     
     # Element {http://www.litle.com/schema}type uses Python identifier type
-    __type = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'type'), 'type', '__httpwww_litle_comschema_CTD_ANON_57_httpwww_litle_comschematype', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1055, 24), )
+    __type = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'type'), 'type', '__httpwww_litle_comschema_CTD_ANON_57_httpwww_litle_comschematype', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1055, 24), )
 
     
     type = property(__type.value, __type.set, None, None)
 
     
     # Element {http://www.litle.com/schema}eCheckAccountSuffix uses Python identifier eCheckAccountSuffix
-    __eCheckAccountSuffix = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'eCheckAccountSuffix'), 'eCheckAccountSuffix', '__httpwww_litle_comschema_CTD_ANON_57_httpwww_litle_comschemaeCheckAccountSuffix', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1056, 24), )
+    __eCheckAccountSuffix = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'eCheckAccountSuffix'), 'eCheckAccountSuffix', '__httpwww_litle_comschema_CTD_ANON_57_httpwww_litle_comschemaeCheckAccountSuffix', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1056, 24), )
 
     
     eCheckAccountSuffix = property(__eCheckAccountSuffix.value, __eCheckAccountSuffix.set, None, None)
 
     
     # Element {http://www.litle.com/schema}response uses Python identifier response
-    __response = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'response'), 'response', '__httpwww_litle_comschema_CTD_ANON_57_httpwww_litle_comschemaresponse', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1057, 24), )
+    __response = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'response'), 'response', '__httpwww_litle_comschema_CTD_ANON_57_httpwww_litle_comschemaresponse', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1057, 24), )
 
     
     response = property(__response.value, __response.set, None, None)
 
     
     # Element {http://www.litle.com/schema}message uses Python identifier message
-    __message = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'message'), 'message', '__httpwww_litle_comschema_CTD_ANON_57_httpwww_litle_comschemamessage', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1058, 24), )
+    __message = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'message'), 'message', '__httpwww_litle_comschema_CTD_ANON_57_httpwww_litle_comschemamessage', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1058, 24), )
 
     
     message = property(__message.value, __message.set, None, None)
 
     
     # Element {http://www.litle.com/schema}responseTime uses Python identifier responseTime
-    __responseTime = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'responseTime'), 'responseTime', '__httpwww_litle_comschema_CTD_ANON_57_httpwww_litle_comschemaresponseTime', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1059, 24), )
+    __responseTime = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'responseTime'), 'responseTime', '__httpwww_litle_comschema_CTD_ANON_57_httpwww_litle_comschemaresponseTime', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1059, 24), )
 
     
     responseTime = property(__responseTime.value, __responseTime.set, None, None)
 
     
     # Element {http://www.litle.com/schema}applepayResponse uses Python identifier applepayResponse
-    __applepayResponse = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'applepayResponse'), 'applepayResponse', '__httpwww_litle_comschema_CTD_ANON_57_httpwww_litle_comschemaapplepayResponse', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1967, 4), )
+    __applepayResponse = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'applepayResponse'), 'applepayResponse', '__httpwww_litle_comschema_CTD_ANON_57_httpwww_litle_comschemaapplepayResponse', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1967, 4), )
 
     
     applepayResponse = property(__applepayResponse.value, __applepayResponse.set, None, None)
 
     
     # Element {http://www.litle.com/schema}androidpayResponse uses Python identifier androidpayResponse
-    __androidpayResponse = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'androidpayResponse'), 'androidpayResponse', '__httpwww_litle_comschema_CTD_ANON_57_httpwww_litle_comschemaandroidpayResponse', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1983, 4), )
+    __androidpayResponse = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'androidpayResponse'), 'androidpayResponse', '__httpwww_litle_comschema_CTD_ANON_57_httpwww_litle_comschemaandroidpayResponse', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1983, 4), )
 
     
     androidpayResponse = property(__androidpayResponse.value, __androidpayResponse.set, None, None)
@@ -7615,167 +7615,167 @@ class CTD_ANON_58 (transactionTypeWithReportGroup):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1072, 8)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1072, 8)
     _ElementMap = transactionTypeWithReportGroup._ElementMap.copy()
     _AttributeMap = transactionTypeWithReportGroup._AttributeMap.copy()
     # Base type is transactionTypeWithReportGroup
     
     # Element {http://www.litle.com/schema}billMeLaterResponseData uses Python identifier billMeLaterResponseData
-    __billMeLaterResponseData = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'billMeLaterResponseData'), 'billMeLaterResponseData', '__httpwww_litle_comschema_CTD_ANON_58_httpwww_litle_comschemabillMeLaterResponseData', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 490, 4), )
+    __billMeLaterResponseData = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'billMeLaterResponseData'), 'billMeLaterResponseData', '__httpwww_litle_comschema_CTD_ANON_58_httpwww_litle_comschemabillMeLaterResponseData', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 490, 4), )
 
     
     billMeLaterResponseData = property(__billMeLaterResponseData.value, __billMeLaterResponseData.set, None, None)
 
     
     # Element {http://www.litle.com/schema}litleTxnId uses Python identifier litleTxnId
-    __litleTxnId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'litleTxnId'), 'litleTxnId', '__httpwww_litle_comschema_CTD_ANON_58_httpwww_litle_comschemalitleTxnId', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1076, 24), )
+    __litleTxnId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'litleTxnId'), 'litleTxnId', '__httpwww_litle_comschema_CTD_ANON_58_httpwww_litle_comschemalitleTxnId', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1076, 24), )
 
     
     litleTxnId = property(__litleTxnId.value, __litleTxnId.set, None, None)
 
     
     # Element {http://www.litle.com/schema}orderId uses Python identifier orderId
-    __orderId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'orderId'), 'orderId', '__httpwww_litle_comschema_CTD_ANON_58_httpwww_litle_comschemaorderId', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1077, 24), )
+    __orderId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'orderId'), 'orderId', '__httpwww_litle_comschema_CTD_ANON_58_httpwww_litle_comschemaorderId', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1077, 24), )
 
     
     orderId = property(__orderId.value, __orderId.set, None, None)
 
     
     # Element {http://www.litle.com/schema}response uses Python identifier response
-    __response = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'response'), 'response', '__httpwww_litle_comschema_CTD_ANON_58_httpwww_litle_comschemaresponse', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1078, 24), )
+    __response = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'response'), 'response', '__httpwww_litle_comschema_CTD_ANON_58_httpwww_litle_comschemaresponse', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1078, 24), )
 
     
     response = property(__response.value, __response.set, None, None)
 
     
     # Element {http://www.litle.com/schema}responseTime uses Python identifier responseTime
-    __responseTime = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'responseTime'), 'responseTime', '__httpwww_litle_comschema_CTD_ANON_58_httpwww_litle_comschemaresponseTime', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1079, 24), )
+    __responseTime = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'responseTime'), 'responseTime', '__httpwww_litle_comschema_CTD_ANON_58_httpwww_litle_comschemaresponseTime', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1079, 24), )
 
     
     responseTime = property(__responseTime.value, __responseTime.set, None, None)
 
     
     # Element {http://www.litle.com/schema}cardProductId uses Python identifier cardProductId
-    __cardProductId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'cardProductId'), 'cardProductId', '__httpwww_litle_comschema_CTD_ANON_58_httpwww_litle_comschemacardProductId', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1080, 24), )
+    __cardProductId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'cardProductId'), 'cardProductId', '__httpwww_litle_comschema_CTD_ANON_58_httpwww_litle_comschemacardProductId', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1080, 24), )
 
     
     cardProductId = property(__cardProductId.value, __cardProductId.set, None, None)
 
     
     # Element {http://www.litle.com/schema}postDate uses Python identifier postDate
-    __postDate = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'postDate'), 'postDate', '__httpwww_litle_comschema_CTD_ANON_58_httpwww_litle_comschemapostDate', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1082, 24), )
+    __postDate = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'postDate'), 'postDate', '__httpwww_litle_comschema_CTD_ANON_58_httpwww_litle_comschemapostDate', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1082, 24), )
 
     
     postDate = property(__postDate.value, __postDate.set, None, None)
 
     
     # Element {http://www.litle.com/schema}message uses Python identifier message
-    __message = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'message'), 'message', '__httpwww_litle_comschema_CTD_ANON_58_httpwww_litle_comschemamessage', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1083, 24), )
+    __message = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'message'), 'message', '__httpwww_litle_comschema_CTD_ANON_58_httpwww_litle_comschemamessage', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1083, 24), )
 
     
     message = property(__message.value, __message.set, None, None)
 
     
     # Element {http://www.litle.com/schema}authCode uses Python identifier authCode
-    __authCode = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'authCode'), 'authCode', '__httpwww_litle_comschema_CTD_ANON_58_httpwww_litle_comschemaauthCode', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1084, 24), )
+    __authCode = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'authCode'), 'authCode', '__httpwww_litle_comschema_CTD_ANON_58_httpwww_litle_comschemaauthCode', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1084, 24), )
 
     
     authCode = property(__authCode.value, __authCode.set, None, None)
 
     
     # Element {http://www.litle.com/schema}authorizationResponseSubCode uses Python identifier authorizationResponseSubCode
-    __authorizationResponseSubCode = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'authorizationResponseSubCode'), 'authorizationResponseSubCode', '__httpwww_litle_comschema_CTD_ANON_58_httpwww_litle_comschemaauthorizationResponseSubCode', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1085, 24), )
+    __authorizationResponseSubCode = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'authorizationResponseSubCode'), 'authorizationResponseSubCode', '__httpwww_litle_comschema_CTD_ANON_58_httpwww_litle_comschemaauthorizationResponseSubCode', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1085, 24), )
 
     
     authorizationResponseSubCode = property(__authorizationResponseSubCode.value, __authorizationResponseSubCode.set, None, None)
 
     
     # Element {http://www.litle.com/schema}approvedAmount uses Python identifier approvedAmount
-    __approvedAmount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'approvedAmount'), 'approvedAmount', '__httpwww_litle_comschema_CTD_ANON_58_httpwww_litle_comschemaapprovedAmount', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1086, 24), )
+    __approvedAmount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'approvedAmount'), 'approvedAmount', '__httpwww_litle_comschema_CTD_ANON_58_httpwww_litle_comschemaapprovedAmount', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1086, 24), )
 
     
     approvedAmount = property(__approvedAmount.value, __approvedAmount.set, None, None)
 
     
     # Element {http://www.litle.com/schema}accountInformation uses Python identifier accountInformation
-    __accountInformation = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'accountInformation'), 'accountInformation', '__httpwww_litle_comschema_CTD_ANON_58_httpwww_litle_comschemaaccountInformation', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1087, 24), )
+    __accountInformation = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'accountInformation'), 'accountInformation', '__httpwww_litle_comschema_CTD_ANON_58_httpwww_litle_comschemaaccountInformation', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1087, 24), )
 
     
     accountInformation = property(__accountInformation.value, __accountInformation.set, None, None)
 
     
     # Element {http://www.litle.com/schema}tokenResponse uses Python identifier tokenResponse
-    __tokenResponse = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'tokenResponse'), 'tokenResponse', '__httpwww_litle_comschema_CTD_ANON_58_httpwww_litle_comschematokenResponse', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1092, 24), )
+    __tokenResponse = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'tokenResponse'), 'tokenResponse', '__httpwww_litle_comschema_CTD_ANON_58_httpwww_litle_comschematokenResponse', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1092, 24), )
 
     
     tokenResponse = property(__tokenResponse.value, __tokenResponse.set, None, None)
 
     
     # Element {http://www.litle.com/schema}recycling uses Python identifier recycling
-    __recycling = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'recycling'), 'recycling', '__httpwww_litle_comschema_CTD_ANON_58_httpwww_litle_comschemarecycling', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1094, 24), )
+    __recycling = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'recycling'), 'recycling', '__httpwww_litle_comschema_CTD_ANON_58_httpwww_litle_comschemarecycling', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1094, 24), )
 
     
     recycling = property(__recycling.value, __recycling.set, None, None)
 
     
     # Element {http://www.litle.com/schema}recurringResponse uses Python identifier recurringResponse
-    __recurringResponse = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'recurringResponse'), 'recurringResponse', '__httpwww_litle_comschema_CTD_ANON_58_httpwww_litle_comschemarecurringResponse', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1095, 24), )
+    __recurringResponse = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'recurringResponse'), 'recurringResponse', '__httpwww_litle_comschema_CTD_ANON_58_httpwww_litle_comschemarecurringResponse', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1095, 24), )
 
     
     recurringResponse = property(__recurringResponse.value, __recurringResponse.set, None, None)
 
     
     # Element {http://www.litle.com/schema}cardSuffix uses Python identifier cardSuffix
-    __cardSuffix = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'cardSuffix'), 'cardSuffix', '__httpwww_litle_comschema_CTD_ANON_58_httpwww_litle_comschemacardSuffix', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1099, 24), )
+    __cardSuffix = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'cardSuffix'), 'cardSuffix', '__httpwww_litle_comschema_CTD_ANON_58_httpwww_litle_comschemacardSuffix', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1099, 24), )
 
     
     cardSuffix = property(__cardSuffix.value, __cardSuffix.set, None, None)
 
     
     # Element {http://www.litle.com/schema}networkTransactionId uses Python identifier networkTransactionId
-    __networkTransactionId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'networkTransactionId'), 'networkTransactionId', '__httpwww_litle_comschema_CTD_ANON_58_httpwww_litle_comschemanetworkTransactionId', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1102, 24), )
+    __networkTransactionId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'networkTransactionId'), 'networkTransactionId', '__httpwww_litle_comschema_CTD_ANON_58_httpwww_litle_comschemanetworkTransactionId', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1102, 24), )
 
     
     networkTransactionId = property(__networkTransactionId.value, __networkTransactionId.set, None, None)
 
     
     # Element {http://www.litle.com/schema}enhancedAuthResponse uses Python identifier enhancedAuthResponse
-    __enhancedAuthResponse = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'enhancedAuthResponse'), 'enhancedAuthResponse', '__httpwww_litle_comschema_CTD_ANON_58_httpwww_litle_comschemaenhancedAuthResponse', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1136, 4), )
+    __enhancedAuthResponse = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'enhancedAuthResponse'), 'enhancedAuthResponse', '__httpwww_litle_comschema_CTD_ANON_58_httpwww_litle_comschemaenhancedAuthResponse', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1136, 4), )
 
     
     enhancedAuthResponse = property(__enhancedAuthResponse.value, __enhancedAuthResponse.set, None, None)
 
     
     # Element {http://www.litle.com/schema}fraudResult uses Python identifier fraudResult
-    __fraudResult = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'fraudResult'), 'fraudResult', '__httpwww_litle_comschema_CTD_ANON_58_httpwww_litle_comschemafraudResult', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1443, 4), )
+    __fraudResult = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'fraudResult'), 'fraudResult', '__httpwww_litle_comschema_CTD_ANON_58_httpwww_litle_comschemafraudResult', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1443, 4), )
 
     
     fraudResult = property(__fraudResult.value, __fraudResult.set, None, None)
 
     
     # Element {http://www.litle.com/schema}giftCardResponse uses Python identifier giftCardResponse
-    __giftCardResponse = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'giftCardResponse'), 'giftCardResponse', '__httpwww_litle_comschema_CTD_ANON_58_httpwww_litle_comschemagiftCardResponse', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1523, 4), )
+    __giftCardResponse = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'giftCardResponse'), 'giftCardResponse', '__httpwww_litle_comschema_CTD_ANON_58_httpwww_litle_comschemagiftCardResponse', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1523, 4), )
 
     
     giftCardResponse = property(__giftCardResponse.value, __giftCardResponse.set, None, None)
 
     
     # Element {http://www.litle.com/schema}accountUpdater uses Python identifier accountUpdater
-    __accountUpdater = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'accountUpdater'), 'accountUpdater', '__httpwww_litle_comschema_CTD_ANON_58_httpwww_litle_comschemaaccountUpdater', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1752, 4), )
+    __accountUpdater = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'accountUpdater'), 'accountUpdater', '__httpwww_litle_comschema_CTD_ANON_58_httpwww_litle_comschemaaccountUpdater', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1752, 4), )
 
     
     accountUpdater = property(__accountUpdater.value, __accountUpdater.set, None, None)
 
     
     # Element {http://www.litle.com/schema}applepayResponse uses Python identifier applepayResponse
-    __applepayResponse = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'applepayResponse'), 'applepayResponse', '__httpwww_litle_comschema_CTD_ANON_58_httpwww_litle_comschemaapplepayResponse', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1967, 4), )
+    __applepayResponse = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'applepayResponse'), 'applepayResponse', '__httpwww_litle_comschema_CTD_ANON_58_httpwww_litle_comschemaapplepayResponse', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1967, 4), )
 
     
     applepayResponse = property(__applepayResponse.value, __applepayResponse.set, None, None)
 
     
     # Element {http://www.litle.com/schema}androidpayResponse uses Python identifier androidpayResponse
-    __androidpayResponse = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'androidpayResponse'), 'androidpayResponse', '__httpwww_litle_comschema_CTD_ANON_58_httpwww_litle_comschemaandroidpayResponse', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1983, 4), )
+    __androidpayResponse = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'androidpayResponse'), 'androidpayResponse', '__httpwww_litle_comschema_CTD_ANON_58_httpwww_litle_comschemaandroidpayResponse', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1983, 4), )
 
     
     androidpayResponse = property(__androidpayResponse.value, __androidpayResponse.set, None, None)
@@ -7824,55 +7824,55 @@ class CTD_ANON_59 (transactionTypeWithReportGroup):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1158, 8)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1158, 8)
     _ElementMap = transactionTypeWithReportGroup._ElementMap.copy()
     _AttributeMap = transactionTypeWithReportGroup._AttributeMap.copy()
     # Base type is transactionTypeWithReportGroup
     
     # Element {http://www.litle.com/schema}litleTxnId uses Python identifier litleTxnId
-    __litleTxnId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'litleTxnId'), 'litleTxnId', '__httpwww_litle_comschema_CTD_ANON_59_httpwww_litle_comschemalitleTxnId', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1162, 24), )
+    __litleTxnId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'litleTxnId'), 'litleTxnId', '__httpwww_litle_comschema_CTD_ANON_59_httpwww_litle_comschemalitleTxnId', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1162, 24), )
 
     
     litleTxnId = property(__litleTxnId.value, __litleTxnId.set, None, None)
 
     
     # Element {http://www.litle.com/schema}orderId uses Python identifier orderId
-    __orderId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'orderId'), 'orderId', '__httpwww_litle_comschema_CTD_ANON_59_httpwww_litle_comschemaorderId', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1163, 24), )
+    __orderId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'orderId'), 'orderId', '__httpwww_litle_comschema_CTD_ANON_59_httpwww_litle_comschemaorderId', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1163, 24), )
 
     
     orderId = property(__orderId.value, __orderId.set, None, None)
 
     
     # Element {http://www.litle.com/schema}response uses Python identifier response
-    __response = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'response'), 'response', '__httpwww_litle_comschema_CTD_ANON_59_httpwww_litle_comschemaresponse', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1164, 24), )
+    __response = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'response'), 'response', '__httpwww_litle_comschema_CTD_ANON_59_httpwww_litle_comschemaresponse', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1164, 24), )
 
     
     response = property(__response.value, __response.set, None, None)
 
     
     # Element {http://www.litle.com/schema}responseTime uses Python identifier responseTime
-    __responseTime = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'responseTime'), 'responseTime', '__httpwww_litle_comschema_CTD_ANON_59_httpwww_litle_comschemaresponseTime', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1165, 24), )
+    __responseTime = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'responseTime'), 'responseTime', '__httpwww_litle_comschema_CTD_ANON_59_httpwww_litle_comschemaresponseTime', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1165, 24), )
 
     
     responseTime = property(__responseTime.value, __responseTime.set, None, None)
 
     
     # Element {http://www.litle.com/schema}postDate uses Python identifier postDate
-    __postDate = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'postDate'), 'postDate', '__httpwww_litle_comschema_CTD_ANON_59_httpwww_litle_comschemapostDate', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1167, 24), )
+    __postDate = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'postDate'), 'postDate', '__httpwww_litle_comschema_CTD_ANON_59_httpwww_litle_comschemapostDate', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1167, 24), )
 
     
     postDate = property(__postDate.value, __postDate.set, None, None)
 
     
     # Element {http://www.litle.com/schema}message uses Python identifier message
-    __message = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'message'), 'message', '__httpwww_litle_comschema_CTD_ANON_59_httpwww_litle_comschemamessage', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1168, 24), )
+    __message = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'message'), 'message', '__httpwww_litle_comschema_CTD_ANON_59_httpwww_litle_comschemamessage', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1168, 24), )
 
     
     message = property(__message.value, __message.set, None, None)
 
     
     # Element {http://www.litle.com/schema}giftCardResponse uses Python identifier giftCardResponse
-    __giftCardResponse = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'giftCardResponse'), 'giftCardResponse', '__httpwww_litle_comschema_CTD_ANON_59_httpwww_litle_comschemagiftCardResponse', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1523, 4), )
+    __giftCardResponse = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'giftCardResponse'), 'giftCardResponse', '__httpwww_litle_comschema_CTD_ANON_59_httpwww_litle_comschemagiftCardResponse', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1523, 4), )
 
     
     giftCardResponse = property(__giftCardResponse.value, __giftCardResponse.set, None, None)
@@ -7886,8 +7886,8 @@ class CTD_ANON_59 (transactionTypeWithReportGroup):
     
     # Attribute duplicate uses Python identifier duplicate
     __duplicate = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'duplicate'), 'duplicate', '__httpwww_litle_comschema_CTD_ANON_59_duplicate', pyxb.binding.datatypes.boolean)
-    __duplicate._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1172, 20)
-    __duplicate._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1172, 20)
+    __duplicate._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1172, 20)
+    __duplicate._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1172, 20)
     
     duplicate = property(__duplicate.value, __duplicate.set, None, None)
 
@@ -7913,55 +7913,55 @@ class CTD_ANON_60 (transactionTypeWithReportGroup):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1179, 8)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1179, 8)
     _ElementMap = transactionTypeWithReportGroup._ElementMap.copy()
     _AttributeMap = transactionTypeWithReportGroup._AttributeMap.copy()
     # Base type is transactionTypeWithReportGroup
     
     # Element {http://www.litle.com/schema}litleTxnId uses Python identifier litleTxnId
-    __litleTxnId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'litleTxnId'), 'litleTxnId', '__httpwww_litle_comschema_CTD_ANON_60_httpwww_litle_comschemalitleTxnId', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1183, 24), )
+    __litleTxnId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'litleTxnId'), 'litleTxnId', '__httpwww_litle_comschema_CTD_ANON_60_httpwww_litle_comschemalitleTxnId', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1183, 24), )
 
     
     litleTxnId = property(__litleTxnId.value, __litleTxnId.set, None, None)
 
     
     # Element {http://www.litle.com/schema}orderId uses Python identifier orderId
-    __orderId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'orderId'), 'orderId', '__httpwww_litle_comschema_CTD_ANON_60_httpwww_litle_comschemaorderId', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1184, 24), )
+    __orderId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'orderId'), 'orderId', '__httpwww_litle_comschema_CTD_ANON_60_httpwww_litle_comschemaorderId', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1184, 24), )
 
     
     orderId = property(__orderId.value, __orderId.set, None, None)
 
     
     # Element {http://www.litle.com/schema}response uses Python identifier response
-    __response = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'response'), 'response', '__httpwww_litle_comschema_CTD_ANON_60_httpwww_litle_comschemaresponse', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1185, 24), )
+    __response = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'response'), 'response', '__httpwww_litle_comschema_CTD_ANON_60_httpwww_litle_comschemaresponse', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1185, 24), )
 
     
     response = property(__response.value, __response.set, None, None)
 
     
     # Element {http://www.litle.com/schema}responseTime uses Python identifier responseTime
-    __responseTime = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'responseTime'), 'responseTime', '__httpwww_litle_comschema_CTD_ANON_60_httpwww_litle_comschemaresponseTime', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1186, 24), )
+    __responseTime = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'responseTime'), 'responseTime', '__httpwww_litle_comschema_CTD_ANON_60_httpwww_litle_comschemaresponseTime', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1186, 24), )
 
     
     responseTime = property(__responseTime.value, __responseTime.set, None, None)
 
     
     # Element {http://www.litle.com/schema}postDate uses Python identifier postDate
-    __postDate = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'postDate'), 'postDate', '__httpwww_litle_comschema_CTD_ANON_60_httpwww_litle_comschemapostDate', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1188, 24), )
+    __postDate = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'postDate'), 'postDate', '__httpwww_litle_comschema_CTD_ANON_60_httpwww_litle_comschemapostDate', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1188, 24), )
 
     
     postDate = property(__postDate.value, __postDate.set, None, None)
 
     
     # Element {http://www.litle.com/schema}message uses Python identifier message
-    __message = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'message'), 'message', '__httpwww_litle_comschema_CTD_ANON_60_httpwww_litle_comschemamessage', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1189, 24), )
+    __message = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'message'), 'message', '__httpwww_litle_comschema_CTD_ANON_60_httpwww_litle_comschemamessage', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1189, 24), )
 
     
     message = property(__message.value, __message.set, None, None)
 
     
     # Element {http://www.litle.com/schema}giftCardResponse uses Python identifier giftCardResponse
-    __giftCardResponse = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'giftCardResponse'), 'giftCardResponse', '__httpwww_litle_comschema_CTD_ANON_60_httpwww_litle_comschemagiftCardResponse', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1523, 4), )
+    __giftCardResponse = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'giftCardResponse'), 'giftCardResponse', '__httpwww_litle_comschema_CTD_ANON_60_httpwww_litle_comschemagiftCardResponse', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1523, 4), )
 
     
     giftCardResponse = property(__giftCardResponse.value, __giftCardResponse.set, None, None)
@@ -7994,55 +7994,55 @@ class CTD_ANON_61 (transactionTypeWithReportGroup):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1199, 8)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1199, 8)
     _ElementMap = transactionTypeWithReportGroup._ElementMap.copy()
     _AttributeMap = transactionTypeWithReportGroup._AttributeMap.copy()
     # Base type is transactionTypeWithReportGroup
     
     # Element {http://www.litle.com/schema}litleTxnId uses Python identifier litleTxnId
-    __litleTxnId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'litleTxnId'), 'litleTxnId', '__httpwww_litle_comschema_CTD_ANON_61_httpwww_litle_comschemalitleTxnId', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1203, 24), )
+    __litleTxnId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'litleTxnId'), 'litleTxnId', '__httpwww_litle_comschema_CTD_ANON_61_httpwww_litle_comschemalitleTxnId', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1203, 24), )
 
     
     litleTxnId = property(__litleTxnId.value, __litleTxnId.set, None, None)
 
     
     # Element {http://www.litle.com/schema}orderId uses Python identifier orderId
-    __orderId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'orderId'), 'orderId', '__httpwww_litle_comschema_CTD_ANON_61_httpwww_litle_comschemaorderId', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1204, 24), )
+    __orderId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'orderId'), 'orderId', '__httpwww_litle_comschema_CTD_ANON_61_httpwww_litle_comschemaorderId', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1204, 24), )
 
     
     orderId = property(__orderId.value, __orderId.set, None, None)
 
     
     # Element {http://www.litle.com/schema}response uses Python identifier response
-    __response = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'response'), 'response', '__httpwww_litle_comschema_CTD_ANON_61_httpwww_litle_comschemaresponse', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1205, 24), )
+    __response = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'response'), 'response', '__httpwww_litle_comschema_CTD_ANON_61_httpwww_litle_comschemaresponse', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1205, 24), )
 
     
     response = property(__response.value, __response.set, None, None)
 
     
     # Element {http://www.litle.com/schema}responseTime uses Python identifier responseTime
-    __responseTime = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'responseTime'), 'responseTime', '__httpwww_litle_comschema_CTD_ANON_61_httpwww_litle_comschemaresponseTime', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1206, 24), )
+    __responseTime = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'responseTime'), 'responseTime', '__httpwww_litle_comschema_CTD_ANON_61_httpwww_litle_comschemaresponseTime', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1206, 24), )
 
     
     responseTime = property(__responseTime.value, __responseTime.set, None, None)
 
     
     # Element {http://www.litle.com/schema}postDate uses Python identifier postDate
-    __postDate = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'postDate'), 'postDate', '__httpwww_litle_comschema_CTD_ANON_61_httpwww_litle_comschemapostDate', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1208, 24), )
+    __postDate = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'postDate'), 'postDate', '__httpwww_litle_comschema_CTD_ANON_61_httpwww_litle_comschemapostDate', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1208, 24), )
 
     
     postDate = property(__postDate.value, __postDate.set, None, None)
 
     
     # Element {http://www.litle.com/schema}message uses Python identifier message
-    __message = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'message'), 'message', '__httpwww_litle_comschema_CTD_ANON_61_httpwww_litle_comschemamessage', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1209, 24), )
+    __message = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'message'), 'message', '__httpwww_litle_comschema_CTD_ANON_61_httpwww_litle_comschemamessage', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1209, 24), )
 
     
     message = property(__message.value, __message.set, None, None)
 
     
     # Element {http://www.litle.com/schema}giftCardResponse uses Python identifier giftCardResponse
-    __giftCardResponse = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'giftCardResponse'), 'giftCardResponse', '__httpwww_litle_comschema_CTD_ANON_61_httpwww_litle_comschemagiftCardResponse', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1523, 4), )
+    __giftCardResponse = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'giftCardResponse'), 'giftCardResponse', '__httpwww_litle_comschema_CTD_ANON_61_httpwww_litle_comschemagiftCardResponse', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1523, 4), )
 
     
     giftCardResponse = property(__giftCardResponse.value, __giftCardResponse.set, None, None)
@@ -8075,55 +8075,55 @@ class CTD_ANON_62 (transactionTypeWithReportGroup):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1219, 8)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1219, 8)
     _ElementMap = transactionTypeWithReportGroup._ElementMap.copy()
     _AttributeMap = transactionTypeWithReportGroup._AttributeMap.copy()
     # Base type is transactionTypeWithReportGroup
     
     # Element {http://www.litle.com/schema}litleTxnId uses Python identifier litleTxnId
-    __litleTxnId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'litleTxnId'), 'litleTxnId', '__httpwww_litle_comschema_CTD_ANON_62_httpwww_litle_comschemalitleTxnId', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1223, 24), )
+    __litleTxnId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'litleTxnId'), 'litleTxnId', '__httpwww_litle_comschema_CTD_ANON_62_httpwww_litle_comschemalitleTxnId', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1223, 24), )
 
     
     litleTxnId = property(__litleTxnId.value, __litleTxnId.set, None, None)
 
     
     # Element {http://www.litle.com/schema}orderId uses Python identifier orderId
-    __orderId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'orderId'), 'orderId', '__httpwww_litle_comschema_CTD_ANON_62_httpwww_litle_comschemaorderId', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1224, 24), )
+    __orderId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'orderId'), 'orderId', '__httpwww_litle_comschema_CTD_ANON_62_httpwww_litle_comschemaorderId', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1224, 24), )
 
     
     orderId = property(__orderId.value, __orderId.set, None, None)
 
     
     # Element {http://www.litle.com/schema}response uses Python identifier response
-    __response = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'response'), 'response', '__httpwww_litle_comschema_CTD_ANON_62_httpwww_litle_comschemaresponse', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1225, 24), )
+    __response = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'response'), 'response', '__httpwww_litle_comschema_CTD_ANON_62_httpwww_litle_comschemaresponse', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1225, 24), )
 
     
     response = property(__response.value, __response.set, None, None)
 
     
     # Element {http://www.litle.com/schema}responseTime uses Python identifier responseTime
-    __responseTime = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'responseTime'), 'responseTime', '__httpwww_litle_comschema_CTD_ANON_62_httpwww_litle_comschemaresponseTime', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1226, 24), )
+    __responseTime = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'responseTime'), 'responseTime', '__httpwww_litle_comschema_CTD_ANON_62_httpwww_litle_comschemaresponseTime', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1226, 24), )
 
     
     responseTime = property(__responseTime.value, __responseTime.set, None, None)
 
     
     # Element {http://www.litle.com/schema}postDate uses Python identifier postDate
-    __postDate = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'postDate'), 'postDate', '__httpwww_litle_comschema_CTD_ANON_62_httpwww_litle_comschemapostDate', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1228, 24), )
+    __postDate = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'postDate'), 'postDate', '__httpwww_litle_comschema_CTD_ANON_62_httpwww_litle_comschemapostDate', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1228, 24), )
 
     
     postDate = property(__postDate.value, __postDate.set, None, None)
 
     
     # Element {http://www.litle.com/schema}message uses Python identifier message
-    __message = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'message'), 'message', '__httpwww_litle_comschema_CTD_ANON_62_httpwww_litle_comschemamessage', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1229, 24), )
+    __message = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'message'), 'message', '__httpwww_litle_comschema_CTD_ANON_62_httpwww_litle_comschemamessage', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1229, 24), )
 
     
     message = property(__message.value, __message.set, None, None)
 
     
     # Element {http://www.litle.com/schema}giftCardResponse uses Python identifier giftCardResponse
-    __giftCardResponse = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'giftCardResponse'), 'giftCardResponse', '__httpwww_litle_comschema_CTD_ANON_62_httpwww_litle_comschemagiftCardResponse', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1523, 4), )
+    __giftCardResponse = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'giftCardResponse'), 'giftCardResponse', '__httpwww_litle_comschema_CTD_ANON_62_httpwww_litle_comschemagiftCardResponse', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1523, 4), )
 
     
     giftCardResponse = property(__giftCardResponse.value, __giftCardResponse.set, None, None)
@@ -8156,55 +8156,55 @@ class CTD_ANON_63 (transactionTypeWithReportGroup):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1239, 8)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1239, 8)
     _ElementMap = transactionTypeWithReportGroup._ElementMap.copy()
     _AttributeMap = transactionTypeWithReportGroup._AttributeMap.copy()
     # Base type is transactionTypeWithReportGroup
     
     # Element {http://www.litle.com/schema}litleTxnId uses Python identifier litleTxnId
-    __litleTxnId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'litleTxnId'), 'litleTxnId', '__httpwww_litle_comschema_CTD_ANON_63_httpwww_litle_comschemalitleTxnId', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1243, 24), )
+    __litleTxnId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'litleTxnId'), 'litleTxnId', '__httpwww_litle_comschema_CTD_ANON_63_httpwww_litle_comschemalitleTxnId', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1243, 24), )
 
     
     litleTxnId = property(__litleTxnId.value, __litleTxnId.set, None, None)
 
     
     # Element {http://www.litle.com/schema}orderId uses Python identifier orderId
-    __orderId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'orderId'), 'orderId', '__httpwww_litle_comschema_CTD_ANON_63_httpwww_litle_comschemaorderId', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1244, 24), )
+    __orderId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'orderId'), 'orderId', '__httpwww_litle_comschema_CTD_ANON_63_httpwww_litle_comschemaorderId', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1244, 24), )
 
     
     orderId = property(__orderId.value, __orderId.set, None, None)
 
     
     # Element {http://www.litle.com/schema}response uses Python identifier response
-    __response = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'response'), 'response', '__httpwww_litle_comschema_CTD_ANON_63_httpwww_litle_comschemaresponse', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1245, 24), )
+    __response = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'response'), 'response', '__httpwww_litle_comschema_CTD_ANON_63_httpwww_litle_comschemaresponse', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1245, 24), )
 
     
     response = property(__response.value, __response.set, None, None)
 
     
     # Element {http://www.litle.com/schema}responseTime uses Python identifier responseTime
-    __responseTime = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'responseTime'), 'responseTime', '__httpwww_litle_comschema_CTD_ANON_63_httpwww_litle_comschemaresponseTime', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1246, 24), )
+    __responseTime = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'responseTime'), 'responseTime', '__httpwww_litle_comschema_CTD_ANON_63_httpwww_litle_comschemaresponseTime', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1246, 24), )
 
     
     responseTime = property(__responseTime.value, __responseTime.set, None, None)
 
     
     # Element {http://www.litle.com/schema}postDate uses Python identifier postDate
-    __postDate = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'postDate'), 'postDate', '__httpwww_litle_comschema_CTD_ANON_63_httpwww_litle_comschemapostDate', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1248, 24), )
+    __postDate = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'postDate'), 'postDate', '__httpwww_litle_comschema_CTD_ANON_63_httpwww_litle_comschemapostDate', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1248, 24), )
 
     
     postDate = property(__postDate.value, __postDate.set, None, None)
 
     
     # Element {http://www.litle.com/schema}message uses Python identifier message
-    __message = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'message'), 'message', '__httpwww_litle_comschema_CTD_ANON_63_httpwww_litle_comschemamessage', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1249, 24), )
+    __message = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'message'), 'message', '__httpwww_litle_comschema_CTD_ANON_63_httpwww_litle_comschemamessage', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1249, 24), )
 
     
     message = property(__message.value, __message.set, None, None)
 
     
     # Element {http://www.litle.com/schema}giftCardResponse uses Python identifier giftCardResponse
-    __giftCardResponse = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'giftCardResponse'), 'giftCardResponse', '__httpwww_litle_comschema_CTD_ANON_63_httpwww_litle_comschemagiftCardResponse', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1523, 4), )
+    __giftCardResponse = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'giftCardResponse'), 'giftCardResponse', '__httpwww_litle_comschema_CTD_ANON_63_httpwww_litle_comschemagiftCardResponse', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1523, 4), )
 
     
     giftCardResponse = property(__giftCardResponse.value, __giftCardResponse.set, None, None)
@@ -8237,55 +8237,55 @@ class CTD_ANON_64 (transactionTypeWithReportGroup):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1259, 8)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1259, 8)
     _ElementMap = transactionTypeWithReportGroup._ElementMap.copy()
     _AttributeMap = transactionTypeWithReportGroup._AttributeMap.copy()
     # Base type is transactionTypeWithReportGroup
     
     # Element {http://www.litle.com/schema}litleTxnId uses Python identifier litleTxnId
-    __litleTxnId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'litleTxnId'), 'litleTxnId', '__httpwww_litle_comschema_CTD_ANON_64_httpwww_litle_comschemalitleTxnId', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1263, 24), )
+    __litleTxnId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'litleTxnId'), 'litleTxnId', '__httpwww_litle_comschema_CTD_ANON_64_httpwww_litle_comschemalitleTxnId', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1263, 24), )
 
     
     litleTxnId = property(__litleTxnId.value, __litleTxnId.set, None, None)
 
     
     # Element {http://www.litle.com/schema}orderId uses Python identifier orderId
-    __orderId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'orderId'), 'orderId', '__httpwww_litle_comschema_CTD_ANON_64_httpwww_litle_comschemaorderId', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1264, 24), )
+    __orderId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'orderId'), 'orderId', '__httpwww_litle_comschema_CTD_ANON_64_httpwww_litle_comschemaorderId', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1264, 24), )
 
     
     orderId = property(__orderId.value, __orderId.set, None, None)
 
     
     # Element {http://www.litle.com/schema}response uses Python identifier response
-    __response = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'response'), 'response', '__httpwww_litle_comschema_CTD_ANON_64_httpwww_litle_comschemaresponse', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1265, 24), )
+    __response = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'response'), 'response', '__httpwww_litle_comschema_CTD_ANON_64_httpwww_litle_comschemaresponse', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1265, 24), )
 
     
     response = property(__response.value, __response.set, None, None)
 
     
     # Element {http://www.litle.com/schema}responseTime uses Python identifier responseTime
-    __responseTime = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'responseTime'), 'responseTime', '__httpwww_litle_comschema_CTD_ANON_64_httpwww_litle_comschemaresponseTime', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1266, 24), )
+    __responseTime = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'responseTime'), 'responseTime', '__httpwww_litle_comschema_CTD_ANON_64_httpwww_litle_comschemaresponseTime', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1266, 24), )
 
     
     responseTime = property(__responseTime.value, __responseTime.set, None, None)
 
     
     # Element {http://www.litle.com/schema}postDate uses Python identifier postDate
-    __postDate = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'postDate'), 'postDate', '__httpwww_litle_comschema_CTD_ANON_64_httpwww_litle_comschemapostDate', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1268, 24), )
+    __postDate = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'postDate'), 'postDate', '__httpwww_litle_comschema_CTD_ANON_64_httpwww_litle_comschemapostDate', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1268, 24), )
 
     
     postDate = property(__postDate.value, __postDate.set, None, None)
 
     
     # Element {http://www.litle.com/schema}message uses Python identifier message
-    __message = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'message'), 'message', '__httpwww_litle_comschema_CTD_ANON_64_httpwww_litle_comschemamessage', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1269, 24), )
+    __message = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'message'), 'message', '__httpwww_litle_comschema_CTD_ANON_64_httpwww_litle_comschemamessage', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1269, 24), )
 
     
     message = property(__message.value, __message.set, None, None)
 
     
     # Element {http://www.litle.com/schema}giftCardResponse uses Python identifier giftCardResponse
-    __giftCardResponse = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'giftCardResponse'), 'giftCardResponse', '__httpwww_litle_comschema_CTD_ANON_64_httpwww_litle_comschemagiftCardResponse', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1523, 4), )
+    __giftCardResponse = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'giftCardResponse'), 'giftCardResponse', '__httpwww_litle_comschema_CTD_ANON_64_httpwww_litle_comschemagiftCardResponse', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1523, 4), )
 
     
     giftCardResponse = property(__giftCardResponse.value, __giftCardResponse.set, None, None)
@@ -8318,55 +8318,55 @@ class CTD_ANON_65 (transactionTypeWithReportGroup):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1279, 8)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1279, 8)
     _ElementMap = transactionTypeWithReportGroup._ElementMap.copy()
     _AttributeMap = transactionTypeWithReportGroup._AttributeMap.copy()
     # Base type is transactionTypeWithReportGroup
     
     # Element {http://www.litle.com/schema}litleTxnId uses Python identifier litleTxnId
-    __litleTxnId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'litleTxnId'), 'litleTxnId', '__httpwww_litle_comschema_CTD_ANON_65_httpwww_litle_comschemalitleTxnId', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1283, 24), )
+    __litleTxnId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'litleTxnId'), 'litleTxnId', '__httpwww_litle_comschema_CTD_ANON_65_httpwww_litle_comschemalitleTxnId', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1283, 24), )
 
     
     litleTxnId = property(__litleTxnId.value, __litleTxnId.set, None, None)
 
     
     # Element {http://www.litle.com/schema}orderId uses Python identifier orderId
-    __orderId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'orderId'), 'orderId', '__httpwww_litle_comschema_CTD_ANON_65_httpwww_litle_comschemaorderId', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1284, 24), )
+    __orderId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'orderId'), 'orderId', '__httpwww_litle_comschema_CTD_ANON_65_httpwww_litle_comschemaorderId', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1284, 24), )
 
     
     orderId = property(__orderId.value, __orderId.set, None, None)
 
     
     # Element {http://www.litle.com/schema}response uses Python identifier response
-    __response = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'response'), 'response', '__httpwww_litle_comschema_CTD_ANON_65_httpwww_litle_comschemaresponse', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1285, 24), )
+    __response = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'response'), 'response', '__httpwww_litle_comschema_CTD_ANON_65_httpwww_litle_comschemaresponse', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1285, 24), )
 
     
     response = property(__response.value, __response.set, None, None)
 
     
     # Element {http://www.litle.com/schema}responseTime uses Python identifier responseTime
-    __responseTime = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'responseTime'), 'responseTime', '__httpwww_litle_comschema_CTD_ANON_65_httpwww_litle_comschemaresponseTime', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1286, 24), )
+    __responseTime = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'responseTime'), 'responseTime', '__httpwww_litle_comschema_CTD_ANON_65_httpwww_litle_comschemaresponseTime', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1286, 24), )
 
     
     responseTime = property(__responseTime.value, __responseTime.set, None, None)
 
     
     # Element {http://www.litle.com/schema}postDate uses Python identifier postDate
-    __postDate = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'postDate'), 'postDate', '__httpwww_litle_comschema_CTD_ANON_65_httpwww_litle_comschemapostDate', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1288, 24), )
+    __postDate = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'postDate'), 'postDate', '__httpwww_litle_comschema_CTD_ANON_65_httpwww_litle_comschemapostDate', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1288, 24), )
 
     
     postDate = property(__postDate.value, __postDate.set, None, None)
 
     
     # Element {http://www.litle.com/schema}message uses Python identifier message
-    __message = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'message'), 'message', '__httpwww_litle_comschema_CTD_ANON_65_httpwww_litle_comschemamessage', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1289, 24), )
+    __message = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'message'), 'message', '__httpwww_litle_comschema_CTD_ANON_65_httpwww_litle_comschemamessage', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1289, 24), )
 
     
     message = property(__message.value, __message.set, None, None)
 
     
     # Element {http://www.litle.com/schema}giftCardResponse uses Python identifier giftCardResponse
-    __giftCardResponse = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'giftCardResponse'), 'giftCardResponse', '__httpwww_litle_comschema_CTD_ANON_65_httpwww_litle_comschemagiftCardResponse', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1523, 4), )
+    __giftCardResponse = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'giftCardResponse'), 'giftCardResponse', '__httpwww_litle_comschema_CTD_ANON_65_httpwww_litle_comschemagiftCardResponse', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1523, 4), )
 
     
     giftCardResponse = property(__giftCardResponse.value, __giftCardResponse.set, None, None)
@@ -8399,69 +8399,69 @@ class CTD_ANON_66 (transactionTypeWithReportGroup):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1299, 8)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1299, 8)
     _ElementMap = transactionTypeWithReportGroup._ElementMap.copy()
     _AttributeMap = transactionTypeWithReportGroup._AttributeMap.copy()
     # Base type is transactionTypeWithReportGroup
     
     # Element {http://www.litle.com/schema}litleTxnId uses Python identifier litleTxnId
-    __litleTxnId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'litleTxnId'), 'litleTxnId', '__httpwww_litle_comschema_CTD_ANON_66_httpwww_litle_comschemalitleTxnId', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1303, 24), )
+    __litleTxnId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'litleTxnId'), 'litleTxnId', '__httpwww_litle_comschema_CTD_ANON_66_httpwww_litle_comschemalitleTxnId', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1303, 24), )
 
     
     litleTxnId = property(__litleTxnId.value, __litleTxnId.set, None, None)
 
     
     # Element {http://www.litle.com/schema}orderId uses Python identifier orderId
-    __orderId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'orderId'), 'orderId', '__httpwww_litle_comschema_CTD_ANON_66_httpwww_litle_comschemaorderId', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1305, 24), )
+    __orderId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'orderId'), 'orderId', '__httpwww_litle_comschema_CTD_ANON_66_httpwww_litle_comschemaorderId', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1305, 24), )
 
     
     orderId = property(__orderId.value, __orderId.set, None, None)
 
     
     # Element {http://www.litle.com/schema}response uses Python identifier response
-    __response = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'response'), 'response', '__httpwww_litle_comschema_CTD_ANON_66_httpwww_litle_comschemaresponse', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1306, 24), )
+    __response = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'response'), 'response', '__httpwww_litle_comschema_CTD_ANON_66_httpwww_litle_comschemaresponse', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1306, 24), )
 
     
     response = property(__response.value, __response.set, None, None)
 
     
     # Element {http://www.litle.com/schema}responseTime uses Python identifier responseTime
-    __responseTime = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'responseTime'), 'responseTime', '__httpwww_litle_comschema_CTD_ANON_66_httpwww_litle_comschemaresponseTime', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1307, 24), )
+    __responseTime = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'responseTime'), 'responseTime', '__httpwww_litle_comschema_CTD_ANON_66_httpwww_litle_comschemaresponseTime', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1307, 24), )
 
     
     responseTime = property(__responseTime.value, __responseTime.set, None, None)
 
     
     # Element {http://www.litle.com/schema}postDate uses Python identifier postDate
-    __postDate = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'postDate'), 'postDate', '__httpwww_litle_comschema_CTD_ANON_66_httpwww_litle_comschemapostDate', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1309, 24), )
+    __postDate = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'postDate'), 'postDate', '__httpwww_litle_comschema_CTD_ANON_66_httpwww_litle_comschemapostDate', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1309, 24), )
 
     
     postDate = property(__postDate.value, __postDate.set, None, None)
 
     
     # Element {http://www.litle.com/schema}message uses Python identifier message
-    __message = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'message'), 'message', '__httpwww_litle_comschema_CTD_ANON_66_httpwww_litle_comschemamessage', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1310, 24), )
+    __message = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'message'), 'message', '__httpwww_litle_comschema_CTD_ANON_66_httpwww_litle_comschemamessage', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1310, 24), )
 
     
     message = property(__message.value, __message.set, None, None)
 
     
     # Element {http://www.litle.com/schema}fraudResult uses Python identifier fraudResult
-    __fraudResult = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'fraudResult'), 'fraudResult', '__httpwww_litle_comschema_CTD_ANON_66_httpwww_litle_comschemafraudResult', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1443, 4), )
+    __fraudResult = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'fraudResult'), 'fraudResult', '__httpwww_litle_comschema_CTD_ANON_66_httpwww_litle_comschemafraudResult', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1443, 4), )
 
     
     fraudResult = property(__fraudResult.value, __fraudResult.set, None, None)
 
     
     # Element {http://www.litle.com/schema}giftCardResponse uses Python identifier giftCardResponse
-    __giftCardResponse = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'giftCardResponse'), 'giftCardResponse', '__httpwww_litle_comschema_CTD_ANON_66_httpwww_litle_comschemagiftCardResponse', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1523, 4), )
+    __giftCardResponse = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'giftCardResponse'), 'giftCardResponse', '__httpwww_litle_comschema_CTD_ANON_66_httpwww_litle_comschemagiftCardResponse', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1523, 4), )
 
     
     giftCardResponse = property(__giftCardResponse.value, __giftCardResponse.set, None, None)
 
     
     # Element {http://www.litle.com/schema}accountUpdater uses Python identifier accountUpdater
-    __accountUpdater = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'accountUpdater'), 'accountUpdater', '__httpwww_litle_comschema_CTD_ANON_66_httpwww_litle_comschemaaccountUpdater', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1752, 4), )
+    __accountUpdater = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'accountUpdater'), 'accountUpdater', '__httpwww_litle_comschema_CTD_ANON_66_httpwww_litle_comschemaaccountUpdater', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1752, 4), )
 
     
     accountUpdater = property(__accountUpdater.value, __accountUpdater.set, None, None)
@@ -8475,8 +8475,8 @@ class CTD_ANON_66 (transactionTypeWithReportGroup):
     
     # Attribute duplicate uses Python identifier duplicate
     __duplicate = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'duplicate'), 'duplicate', '__httpwww_litle_comschema_CTD_ANON_66_duplicate', pyxb.binding.datatypes.boolean)
-    __duplicate._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1317, 20)
-    __duplicate._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1317, 20)
+    __duplicate._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1317, 20)
+    __duplicate._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1317, 20)
     
     duplicate = property(__duplicate.value, __duplicate.set, None, None)
 
@@ -8504,76 +8504,76 @@ class CTD_ANON_67 (transactionTypeWithReportGroup):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1324, 8)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1324, 8)
     _ElementMap = transactionTypeWithReportGroup._ElementMap.copy()
     _AttributeMap = transactionTypeWithReportGroup._AttributeMap.copy()
     # Base type is transactionTypeWithReportGroup
     
     # Element {http://www.litle.com/schema}litleTxnId uses Python identifier litleTxnId
-    __litleTxnId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'litleTxnId'), 'litleTxnId', '__httpwww_litle_comschema_CTD_ANON_67_httpwww_litle_comschemalitleTxnId', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1328, 24), )
+    __litleTxnId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'litleTxnId'), 'litleTxnId', '__httpwww_litle_comschema_CTD_ANON_67_httpwww_litle_comschemalitleTxnId', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1328, 24), )
 
     
     litleTxnId = property(__litleTxnId.value, __litleTxnId.set, None, None)
 
     
     # Element {http://www.litle.com/schema}orderId uses Python identifier orderId
-    __orderId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'orderId'), 'orderId', '__httpwww_litle_comschema_CTD_ANON_67_httpwww_litle_comschemaorderId', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1329, 24), )
+    __orderId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'orderId'), 'orderId', '__httpwww_litle_comschema_CTD_ANON_67_httpwww_litle_comschemaorderId', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1329, 24), )
 
     
     orderId = property(__orderId.value, __orderId.set, None, None)
 
     
     # Element {http://www.litle.com/schema}response uses Python identifier response
-    __response = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'response'), 'response', '__httpwww_litle_comschema_CTD_ANON_67_httpwww_litle_comschemaresponse', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1330, 24), )
+    __response = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'response'), 'response', '__httpwww_litle_comschema_CTD_ANON_67_httpwww_litle_comschemaresponse', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1330, 24), )
 
     
     response = property(__response.value, __response.set, None, None)
 
     
     # Element {http://www.litle.com/schema}responseTime uses Python identifier responseTime
-    __responseTime = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'responseTime'), 'responseTime', '__httpwww_litle_comschema_CTD_ANON_67_httpwww_litle_comschemaresponseTime', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1331, 24), )
+    __responseTime = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'responseTime'), 'responseTime', '__httpwww_litle_comschema_CTD_ANON_67_httpwww_litle_comschemaresponseTime', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1331, 24), )
 
     
     responseTime = property(__responseTime.value, __responseTime.set, None, None)
 
     
     # Element {http://www.litle.com/schema}postDate uses Python identifier postDate
-    __postDate = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'postDate'), 'postDate', '__httpwww_litle_comschema_CTD_ANON_67_httpwww_litle_comschemapostDate', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1333, 24), )
+    __postDate = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'postDate'), 'postDate', '__httpwww_litle_comschema_CTD_ANON_67_httpwww_litle_comschemapostDate', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1333, 24), )
 
     
     postDate = property(__postDate.value, __postDate.set, None, None)
 
     
     # Element {http://www.litle.com/schema}message uses Python identifier message
-    __message = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'message'), 'message', '__httpwww_litle_comschema_CTD_ANON_67_httpwww_litle_comschemamessage', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1334, 24), )
+    __message = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'message'), 'message', '__httpwww_litle_comschema_CTD_ANON_67_httpwww_litle_comschemamessage', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1334, 24), )
 
     
     message = property(__message.value, __message.set, None, None)
 
     
     # Element {http://www.litle.com/schema}tokenResponse uses Python identifier tokenResponse
-    __tokenResponse = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'tokenResponse'), 'tokenResponse', '__httpwww_litle_comschema_CTD_ANON_67_httpwww_litle_comschematokenResponse', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1336, 24), )
+    __tokenResponse = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'tokenResponse'), 'tokenResponse', '__httpwww_litle_comschema_CTD_ANON_67_httpwww_litle_comschematokenResponse', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1336, 24), )
 
     
     tokenResponse = property(__tokenResponse.value, __tokenResponse.set, None, None)
 
     
     # Element {http://www.litle.com/schema}fraudResult uses Python identifier fraudResult
-    __fraudResult = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'fraudResult'), 'fraudResult', '__httpwww_litle_comschema_CTD_ANON_67_httpwww_litle_comschemafraudResult', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1443, 4), )
+    __fraudResult = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'fraudResult'), 'fraudResult', '__httpwww_litle_comschema_CTD_ANON_67_httpwww_litle_comschemafraudResult', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1443, 4), )
 
     
     fraudResult = property(__fraudResult.value, __fraudResult.set, None, None)
 
     
     # Element {http://www.litle.com/schema}giftCardResponse uses Python identifier giftCardResponse
-    __giftCardResponse = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'giftCardResponse'), 'giftCardResponse', '__httpwww_litle_comschema_CTD_ANON_67_httpwww_litle_comschemagiftCardResponse', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1523, 4), )
+    __giftCardResponse = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'giftCardResponse'), 'giftCardResponse', '__httpwww_litle_comschema_CTD_ANON_67_httpwww_litle_comschemagiftCardResponse', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1523, 4), )
 
     
     giftCardResponse = property(__giftCardResponse.value, __giftCardResponse.set, None, None)
 
     
     # Element {http://www.litle.com/schema}accountUpdater uses Python identifier accountUpdater
-    __accountUpdater = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'accountUpdater'), 'accountUpdater', '__httpwww_litle_comschema_CTD_ANON_67_httpwww_litle_comschemaaccountUpdater', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1752, 4), )
+    __accountUpdater = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'accountUpdater'), 'accountUpdater', '__httpwww_litle_comschema_CTD_ANON_67_httpwww_litle_comschemaaccountUpdater', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1752, 4), )
 
     
     accountUpdater = property(__accountUpdater.value, __accountUpdater.set, None, None)
@@ -8609,69 +8609,69 @@ class CTD_ANON_68 (transactionTypeWithReportGroup):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1350, 8)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1350, 8)
     _ElementMap = transactionTypeWithReportGroup._ElementMap.copy()
     _AttributeMap = transactionTypeWithReportGroup._AttributeMap.copy()
     # Base type is transactionTypeWithReportGroup
     
     # Element {http://www.litle.com/schema}litleTxnId uses Python identifier litleTxnId
-    __litleTxnId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'litleTxnId'), 'litleTxnId', '__httpwww_litle_comschema_CTD_ANON_68_httpwww_litle_comschemalitleTxnId', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1354, 24), )
+    __litleTxnId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'litleTxnId'), 'litleTxnId', '__httpwww_litle_comschema_CTD_ANON_68_httpwww_litle_comschemalitleTxnId', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1354, 24), )
 
     
     litleTxnId = property(__litleTxnId.value, __litleTxnId.set, None, None)
 
     
     # Element {http://www.litle.com/schema}orderId uses Python identifier orderId
-    __orderId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'orderId'), 'orderId', '__httpwww_litle_comschema_CTD_ANON_68_httpwww_litle_comschemaorderId', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1355, 24), )
+    __orderId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'orderId'), 'orderId', '__httpwww_litle_comschema_CTD_ANON_68_httpwww_litle_comschemaorderId', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1355, 24), )
 
     
     orderId = property(__orderId.value, __orderId.set, None, None)
 
     
     # Element {http://www.litle.com/schema}response uses Python identifier response
-    __response = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'response'), 'response', '__httpwww_litle_comschema_CTD_ANON_68_httpwww_litle_comschemaresponse', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1356, 24), )
+    __response = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'response'), 'response', '__httpwww_litle_comschema_CTD_ANON_68_httpwww_litle_comschemaresponse', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1356, 24), )
 
     
     response = property(__response.value, __response.set, None, None)
 
     
     # Element {http://www.litle.com/schema}responseTime uses Python identifier responseTime
-    __responseTime = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'responseTime'), 'responseTime', '__httpwww_litle_comschema_CTD_ANON_68_httpwww_litle_comschemaresponseTime', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1357, 24), )
+    __responseTime = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'responseTime'), 'responseTime', '__httpwww_litle_comschema_CTD_ANON_68_httpwww_litle_comschemaresponseTime', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1357, 24), )
 
     
     responseTime = property(__responseTime.value, __responseTime.set, None, None)
 
     
     # Element {http://www.litle.com/schema}postDate uses Python identifier postDate
-    __postDate = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'postDate'), 'postDate', '__httpwww_litle_comschema_CTD_ANON_68_httpwww_litle_comschemapostDate', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1359, 24), )
+    __postDate = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'postDate'), 'postDate', '__httpwww_litle_comschema_CTD_ANON_68_httpwww_litle_comschemapostDate', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1359, 24), )
 
     
     postDate = property(__postDate.value, __postDate.set, None, None)
 
     
     # Element {http://www.litle.com/schema}message uses Python identifier message
-    __message = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'message'), 'message', '__httpwww_litle_comschema_CTD_ANON_68_httpwww_litle_comschemamessage', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1360, 24), )
+    __message = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'message'), 'message', '__httpwww_litle_comschema_CTD_ANON_68_httpwww_litle_comschemamessage', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1360, 24), )
 
     
     message = property(__message.value, __message.set, None, None)
 
     
     # Element {http://www.litle.com/schema}tokenResponse uses Python identifier tokenResponse
-    __tokenResponse = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'tokenResponse'), 'tokenResponse', '__httpwww_litle_comschema_CTD_ANON_68_httpwww_litle_comschematokenResponse', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1362, 24), )
+    __tokenResponse = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'tokenResponse'), 'tokenResponse', '__httpwww_litle_comschema_CTD_ANON_68_httpwww_litle_comschematokenResponse', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1362, 24), )
 
     
     tokenResponse = property(__tokenResponse.value, __tokenResponse.set, None, None)
 
     
     # Element {http://www.litle.com/schema}fraudResult uses Python identifier fraudResult
-    __fraudResult = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'fraudResult'), 'fraudResult', '__httpwww_litle_comschema_CTD_ANON_68_httpwww_litle_comschemafraudResult', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1443, 4), )
+    __fraudResult = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'fraudResult'), 'fraudResult', '__httpwww_litle_comschema_CTD_ANON_68_httpwww_litle_comschemafraudResult', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1443, 4), )
 
     
     fraudResult = property(__fraudResult.value, __fraudResult.set, None, None)
 
     
     # Element {http://www.litle.com/schema}giftCardResponse uses Python identifier giftCardResponse
-    __giftCardResponse = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'giftCardResponse'), 'giftCardResponse', '__httpwww_litle_comschema_CTD_ANON_68_httpwww_litle_comschemagiftCardResponse', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1523, 4), )
+    __giftCardResponse = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'giftCardResponse'), 'giftCardResponse', '__httpwww_litle_comschema_CTD_ANON_68_httpwww_litle_comschemagiftCardResponse', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1523, 4), )
 
     
     giftCardResponse = property(__giftCardResponse.value, __giftCardResponse.set, None, None)
@@ -8706,195 +8706,195 @@ class CTD_ANON_69 (transactionTypeWithReportGroup):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1375, 8)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1375, 8)
     _ElementMap = transactionTypeWithReportGroup._ElementMap.copy()
     _AttributeMap = transactionTypeWithReportGroup._AttributeMap.copy()
     # Base type is transactionTypeWithReportGroup
     
     # Element {http://www.litle.com/schema}billMeLaterResponseData uses Python identifier billMeLaterResponseData
-    __billMeLaterResponseData = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'billMeLaterResponseData'), 'billMeLaterResponseData', '__httpwww_litle_comschema_CTD_ANON_69_httpwww_litle_comschemabillMeLaterResponseData', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 490, 4), )
+    __billMeLaterResponseData = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'billMeLaterResponseData'), 'billMeLaterResponseData', '__httpwww_litle_comschema_CTD_ANON_69_httpwww_litle_comschemabillMeLaterResponseData', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 490, 4), )
 
     
     billMeLaterResponseData = property(__billMeLaterResponseData.value, __billMeLaterResponseData.set, None, None)
 
     
     # Element {http://www.litle.com/schema}enhancedAuthResponse uses Python identifier enhancedAuthResponse
-    __enhancedAuthResponse = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'enhancedAuthResponse'), 'enhancedAuthResponse', '__httpwww_litle_comschema_CTD_ANON_69_httpwww_litle_comschemaenhancedAuthResponse', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1136, 4), )
+    __enhancedAuthResponse = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'enhancedAuthResponse'), 'enhancedAuthResponse', '__httpwww_litle_comschema_CTD_ANON_69_httpwww_litle_comschemaenhancedAuthResponse', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1136, 4), )
 
     
     enhancedAuthResponse = property(__enhancedAuthResponse.value, __enhancedAuthResponse.set, None, None)
 
     
     # Element {http://www.litle.com/schema}litleTxnId uses Python identifier litleTxnId
-    __litleTxnId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'litleTxnId'), 'litleTxnId', '__httpwww_litle_comschema_CTD_ANON_69_httpwww_litle_comschemalitleTxnId', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1379, 24), )
+    __litleTxnId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'litleTxnId'), 'litleTxnId', '__httpwww_litle_comschema_CTD_ANON_69_httpwww_litle_comschemalitleTxnId', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1379, 24), )
 
     
     litleTxnId = property(__litleTxnId.value, __litleTxnId.set, None, None)
 
     
     # Element {http://www.litle.com/schema}orderId uses Python identifier orderId
-    __orderId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'orderId'), 'orderId', '__httpwww_litle_comschema_CTD_ANON_69_httpwww_litle_comschemaorderId', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1380, 24), )
+    __orderId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'orderId'), 'orderId', '__httpwww_litle_comschema_CTD_ANON_69_httpwww_litle_comschemaorderId', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1380, 24), )
 
     
     orderId = property(__orderId.value, __orderId.set, None, None)
 
     
     # Element {http://www.litle.com/schema}response uses Python identifier response
-    __response = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'response'), 'response', '__httpwww_litle_comschema_CTD_ANON_69_httpwww_litle_comschemaresponse', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1381, 24), )
+    __response = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'response'), 'response', '__httpwww_litle_comschema_CTD_ANON_69_httpwww_litle_comschemaresponse', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1381, 24), )
 
     
     response = property(__response.value, __response.set, None, None)
 
     
     # Element {http://www.litle.com/schema}responseTime uses Python identifier responseTime
-    __responseTime = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'responseTime'), 'responseTime', '__httpwww_litle_comschema_CTD_ANON_69_httpwww_litle_comschemaresponseTime', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1382, 24), )
+    __responseTime = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'responseTime'), 'responseTime', '__httpwww_litle_comschema_CTD_ANON_69_httpwww_litle_comschemaresponseTime', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1382, 24), )
 
     
     responseTime = property(__responseTime.value, __responseTime.set, None, None)
 
     
     # Element {http://www.litle.com/schema}cardProductId uses Python identifier cardProductId
-    __cardProductId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'cardProductId'), 'cardProductId', '__httpwww_litle_comschema_CTD_ANON_69_httpwww_litle_comschemacardProductId', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1383, 24), )
+    __cardProductId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'cardProductId'), 'cardProductId', '__httpwww_litle_comschema_CTD_ANON_69_httpwww_litle_comschemacardProductId', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1383, 24), )
 
     
     cardProductId = property(__cardProductId.value, __cardProductId.set, None, None)
 
     
     # Element {http://www.litle.com/schema}postDate uses Python identifier postDate
-    __postDate = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'postDate'), 'postDate', '__httpwww_litle_comschema_CTD_ANON_69_httpwww_litle_comschemapostDate', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1384, 24), )
+    __postDate = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'postDate'), 'postDate', '__httpwww_litle_comschema_CTD_ANON_69_httpwww_litle_comschemapostDate', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1384, 24), )
 
     
     postDate = property(__postDate.value, __postDate.set, None, None)
 
     
     # Element {http://www.litle.com/schema}message uses Python identifier message
-    __message = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'message'), 'message', '__httpwww_litle_comschema_CTD_ANON_69_httpwww_litle_comschemamessage', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1385, 24), )
+    __message = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'message'), 'message', '__httpwww_litle_comschema_CTD_ANON_69_httpwww_litle_comschemamessage', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1385, 24), )
 
     
     message = property(__message.value, __message.set, None, None)
 
     
     # Element {http://www.litle.com/schema}authCode uses Python identifier authCode
-    __authCode = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'authCode'), 'authCode', '__httpwww_litle_comschema_CTD_ANON_69_httpwww_litle_comschemaauthCode', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1386, 24), )
+    __authCode = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'authCode'), 'authCode', '__httpwww_litle_comschema_CTD_ANON_69_httpwww_litle_comschemaauthCode', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1386, 24), )
 
     
     authCode = property(__authCode.value, __authCode.set, None, None)
 
     
     # Element {http://www.litle.com/schema}authorizationResponseSubCode uses Python identifier authorizationResponseSubCode
-    __authorizationResponseSubCode = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'authorizationResponseSubCode'), 'authorizationResponseSubCode', '__httpwww_litle_comschema_CTD_ANON_69_httpwww_litle_comschemaauthorizationResponseSubCode', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1387, 24), )
+    __authorizationResponseSubCode = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'authorizationResponseSubCode'), 'authorizationResponseSubCode', '__httpwww_litle_comschema_CTD_ANON_69_httpwww_litle_comschemaauthorizationResponseSubCode', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1387, 24), )
 
     
     authorizationResponseSubCode = property(__authorizationResponseSubCode.value, __authorizationResponseSubCode.set, None, None)
 
     
     # Element {http://www.litle.com/schema}approvedAmount uses Python identifier approvedAmount
-    __approvedAmount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'approvedAmount'), 'approvedAmount', '__httpwww_litle_comschema_CTD_ANON_69_httpwww_litle_comschemaapprovedAmount', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1388, 24), )
+    __approvedAmount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'approvedAmount'), 'approvedAmount', '__httpwww_litle_comschema_CTD_ANON_69_httpwww_litle_comschemaapprovedAmount', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1388, 24), )
 
     
     approvedAmount = property(__approvedAmount.value, __approvedAmount.set, None, None)
 
     
     # Element {http://www.litle.com/schema}accountInformation uses Python identifier accountInformation
-    __accountInformation = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'accountInformation'), 'accountInformation', '__httpwww_litle_comschema_CTD_ANON_69_httpwww_litle_comschemaaccountInformation', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1389, 24), )
+    __accountInformation = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'accountInformation'), 'accountInformation', '__httpwww_litle_comschema_CTD_ANON_69_httpwww_litle_comschemaaccountInformation', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1389, 24), )
 
     
     accountInformation = property(__accountInformation.value, __accountInformation.set, None, None)
 
     
     # Element {http://www.litle.com/schema}tokenResponse uses Python identifier tokenResponse
-    __tokenResponse = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'tokenResponse'), 'tokenResponse', '__httpwww_litle_comschema_CTD_ANON_69_httpwww_litle_comschematokenResponse', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1393, 24), )
+    __tokenResponse = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'tokenResponse'), 'tokenResponse', '__httpwww_litle_comschema_CTD_ANON_69_httpwww_litle_comschematokenResponse', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1393, 24), )
 
     
     tokenResponse = property(__tokenResponse.value, __tokenResponse.set, None, None)
 
     
     # Element {http://www.litle.com/schema}recycling uses Python identifier recycling
-    __recycling = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'recycling'), 'recycling', '__httpwww_litle_comschema_CTD_ANON_69_httpwww_litle_comschemarecycling', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1396, 24), )
+    __recycling = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'recycling'), 'recycling', '__httpwww_litle_comschema_CTD_ANON_69_httpwww_litle_comschemarecycling', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1396, 24), )
 
     
     recycling = property(__recycling.value, __recycling.set, None, None)
 
     
     # Element {http://www.litle.com/schema}recurringResponse uses Python identifier recurringResponse
-    __recurringResponse = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'recurringResponse'), 'recurringResponse', '__httpwww_litle_comschema_CTD_ANON_69_httpwww_litle_comschemarecurringResponse', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1397, 24), )
+    __recurringResponse = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'recurringResponse'), 'recurringResponse', '__httpwww_litle_comschema_CTD_ANON_69_httpwww_litle_comschemarecurringResponse', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1397, 24), )
 
     
     recurringResponse = property(__recurringResponse.value, __recurringResponse.set, None, None)
 
     
     # Element {http://www.litle.com/schema}cardSuffix uses Python identifier cardSuffix
-    __cardSuffix = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'cardSuffix'), 'cardSuffix', '__httpwww_litle_comschema_CTD_ANON_69_httpwww_litle_comschemacardSuffix', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1401, 24), )
+    __cardSuffix = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'cardSuffix'), 'cardSuffix', '__httpwww_litle_comschema_CTD_ANON_69_httpwww_litle_comschemacardSuffix', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1401, 24), )
 
     
     cardSuffix = property(__cardSuffix.value, __cardSuffix.set, None, None)
 
     
     # Element {http://www.litle.com/schema}networkTransactionId uses Python identifier networkTransactionId
-    __networkTransactionId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'networkTransactionId'), 'networkTransactionId', '__httpwww_litle_comschema_CTD_ANON_69_httpwww_litle_comschemanetworkTransactionId', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1409, 24), )
+    __networkTransactionId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'networkTransactionId'), 'networkTransactionId', '__httpwww_litle_comschema_CTD_ANON_69_httpwww_litle_comschemanetworkTransactionId', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1409, 24), )
 
     
     networkTransactionId = property(__networkTransactionId.value, __networkTransactionId.set, None, None)
 
     
     # Element {http://www.litle.com/schema}fraudResult uses Python identifier fraudResult
-    __fraudResult = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'fraudResult'), 'fraudResult', '__httpwww_litle_comschema_CTD_ANON_69_httpwww_litle_comschemafraudResult', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1443, 4), )
+    __fraudResult = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'fraudResult'), 'fraudResult', '__httpwww_litle_comschema_CTD_ANON_69_httpwww_litle_comschemafraudResult', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1443, 4), )
 
     
     fraudResult = property(__fraudResult.value, __fraudResult.set, None, None)
 
     
     # Element {http://www.litle.com/schema}giftCardResponse uses Python identifier giftCardResponse
-    __giftCardResponse = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'giftCardResponse'), 'giftCardResponse', '__httpwww_litle_comschema_CTD_ANON_69_httpwww_litle_comschemagiftCardResponse', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1523, 4), )
+    __giftCardResponse = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'giftCardResponse'), 'giftCardResponse', '__httpwww_litle_comschema_CTD_ANON_69_httpwww_litle_comschemagiftCardResponse', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1523, 4), )
 
     
     giftCardResponse = property(__giftCardResponse.value, __giftCardResponse.set, None, None)
 
     
     # Element {http://www.litle.com/schema}accountUpdater uses Python identifier accountUpdater
-    __accountUpdater = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'accountUpdater'), 'accountUpdater', '__httpwww_litle_comschema_CTD_ANON_69_httpwww_litle_comschemaaccountUpdater', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1752, 4), )
+    __accountUpdater = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'accountUpdater'), 'accountUpdater', '__httpwww_litle_comschema_CTD_ANON_69_httpwww_litle_comschemaaccountUpdater', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1752, 4), )
 
     
     accountUpdater = property(__accountUpdater.value, __accountUpdater.set, None, None)
 
     
     # Element {http://www.litle.com/schema}applepayResponse uses Python identifier applepayResponse
-    __applepayResponse = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'applepayResponse'), 'applepayResponse', '__httpwww_litle_comschema_CTD_ANON_69_httpwww_litle_comschemaapplepayResponse', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1967, 4), )
+    __applepayResponse = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'applepayResponse'), 'applepayResponse', '__httpwww_litle_comschema_CTD_ANON_69_httpwww_litle_comschemaapplepayResponse', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1967, 4), )
 
     
     applepayResponse = property(__applepayResponse.value, __applepayResponse.set, None, None)
 
     
     # Element {http://www.litle.com/schema}androidpayResponse uses Python identifier androidpayResponse
-    __androidpayResponse = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'androidpayResponse'), 'androidpayResponse', '__httpwww_litle_comschema_CTD_ANON_69_httpwww_litle_comschemaandroidpayResponse', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1983, 4), )
+    __androidpayResponse = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'androidpayResponse'), 'androidpayResponse', '__httpwww_litle_comschema_CTD_ANON_69_httpwww_litle_comschemaandroidpayResponse', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1983, 4), )
 
     
     androidpayResponse = property(__androidpayResponse.value, __androidpayResponse.set, None, None)
 
     
     # Element {http://www.litle.com/schema}sepaDirectDebitResponse uses Python identifier sepaDirectDebitResponse
-    __sepaDirectDebitResponse = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'sepaDirectDebitResponse'), 'sepaDirectDebitResponse', '__httpwww_litle_comschema_CTD_ANON_69_httpwww_litle_comschemasepaDirectDebitResponse', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2007, 4), )
+    __sepaDirectDebitResponse = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'sepaDirectDebitResponse'), 'sepaDirectDebitResponse', '__httpwww_litle_comschema_CTD_ANON_69_httpwww_litle_comschemasepaDirectDebitResponse', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2007, 4), )
 
     
     sepaDirectDebitResponse = property(__sepaDirectDebitResponse.value, __sepaDirectDebitResponse.set, None, None)
 
     
     # Element {http://www.litle.com/schema}idealResponse uses Python identifier idealResponse
-    __idealResponse = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'idealResponse'), 'idealResponse', '__httpwww_litle_comschema_CTD_ANON_69_httpwww_litle_comschemaidealResponse', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2023, 4), )
+    __idealResponse = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'idealResponse'), 'idealResponse', '__httpwww_litle_comschema_CTD_ANON_69_httpwww_litle_comschemaidealResponse', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2023, 4), )
 
     
     idealResponse = property(__idealResponse.value, __idealResponse.set, None, None)
 
     
     # Element {http://www.litle.com/schema}giropayResponse uses Python identifier giropayResponse
-    __giropayResponse = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'giropayResponse'), 'giropayResponse', '__httpwww_litle_comschema_CTD_ANON_69_httpwww_litle_comschemagiropayResponse', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2039, 4), )
+    __giropayResponse = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'giropayResponse'), 'giropayResponse', '__httpwww_litle_comschema_CTD_ANON_69_httpwww_litle_comschemagiropayResponse', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2039, 4), )
 
     
     giropayResponse = property(__giropayResponse.value, __giropayResponse.set, None, None)
 
     
     # Element {http://www.litle.com/schema}sofortResponse uses Python identifier sofortResponse
-    __sofortResponse = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'sofortResponse'), 'sofortResponse', '__httpwww_litle_comschema_CTD_ANON_69_httpwww_litle_comschemasofortResponse', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 2055, 4), )
+    __sofortResponse = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'sofortResponse'), 'sofortResponse', '__httpwww_litle_comschema_CTD_ANON_69_httpwww_litle_comschemasofortResponse', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 2055, 4), )
 
     
     sofortResponse = property(__sofortResponse.value, __sofortResponse.set, None, None)
@@ -8908,8 +8908,8 @@ class CTD_ANON_69 (transactionTypeWithReportGroup):
     
     # Attribute duplicate uses Python identifier duplicate
     __duplicate = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'duplicate'), 'duplicate', '__httpwww_litle_comschema_CTD_ANON_69_duplicate', pyxb.binding.datatypes.boolean)
-    __duplicate._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1412, 20)
-    __duplicate._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1412, 20)
+    __duplicate._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1412, 20)
+    __duplicate._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1412, 20)
     
     duplicate = property(__duplicate.value, __duplicate.set, None, None)
 
@@ -8955,69 +8955,69 @@ class CTD_ANON_70 (transactionTypeWithReportGroup):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1419, 8)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1419, 8)
     _ElementMap = transactionTypeWithReportGroup._ElementMap.copy()
     _AttributeMap = transactionTypeWithReportGroup._AttributeMap.copy()
     # Base type is transactionTypeWithReportGroup
     
     # Element {http://www.litle.com/schema}litleTxnId uses Python identifier litleTxnId
-    __litleTxnId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'litleTxnId'), 'litleTxnId', '__httpwww_litle_comschema_CTD_ANON_70_httpwww_litle_comschemalitleTxnId', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1423, 24), )
+    __litleTxnId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'litleTxnId'), 'litleTxnId', '__httpwww_litle_comschema_CTD_ANON_70_httpwww_litle_comschemalitleTxnId', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1423, 24), )
 
     
     litleTxnId = property(__litleTxnId.value, __litleTxnId.set, None, None)
 
     
     # Element {http://www.litle.com/schema}orderId uses Python identifier orderId
-    __orderId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'orderId'), 'orderId', '__httpwww_litle_comschema_CTD_ANON_70_httpwww_litle_comschemaorderId', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1424, 24), )
+    __orderId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'orderId'), 'orderId', '__httpwww_litle_comschema_CTD_ANON_70_httpwww_litle_comschemaorderId', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1424, 24), )
 
     
     orderId = property(__orderId.value, __orderId.set, None, None)
 
     
     # Element {http://www.litle.com/schema}response uses Python identifier response
-    __response = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'response'), 'response', '__httpwww_litle_comschema_CTD_ANON_70_httpwww_litle_comschemaresponse', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1425, 24), )
+    __response = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'response'), 'response', '__httpwww_litle_comschema_CTD_ANON_70_httpwww_litle_comschemaresponse', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1425, 24), )
 
     
     response = property(__response.value, __response.set, None, None)
 
     
     # Element {http://www.litle.com/schema}responseTime uses Python identifier responseTime
-    __responseTime = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'responseTime'), 'responseTime', '__httpwww_litle_comschema_CTD_ANON_70_httpwww_litle_comschemaresponseTime', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1426, 24), )
+    __responseTime = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'responseTime'), 'responseTime', '__httpwww_litle_comschema_CTD_ANON_70_httpwww_litle_comschemaresponseTime', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1426, 24), )
 
     
     responseTime = property(__responseTime.value, __responseTime.set, None, None)
 
     
     # Element {http://www.litle.com/schema}postDate uses Python identifier postDate
-    __postDate = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'postDate'), 'postDate', '__httpwww_litle_comschema_CTD_ANON_70_httpwww_litle_comschemapostDate', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1428, 24), )
+    __postDate = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'postDate'), 'postDate', '__httpwww_litle_comschema_CTD_ANON_70_httpwww_litle_comschemapostDate', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1428, 24), )
 
     
     postDate = property(__postDate.value, __postDate.set, None, None)
 
     
     # Element {http://www.litle.com/schema}message uses Python identifier message
-    __message = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'message'), 'message', '__httpwww_litle_comschema_CTD_ANON_70_httpwww_litle_comschemamessage', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1429, 24), )
+    __message = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'message'), 'message', '__httpwww_litle_comschema_CTD_ANON_70_httpwww_litle_comschemamessage', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1429, 24), )
 
     
     message = property(__message.value, __message.set, None, None)
 
     
     # Element {http://www.litle.com/schema}tokenResponse uses Python identifier tokenResponse
-    __tokenResponse = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'tokenResponse'), 'tokenResponse', '__httpwww_litle_comschema_CTD_ANON_70_httpwww_litle_comschematokenResponse', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1431, 24), )
+    __tokenResponse = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'tokenResponse'), 'tokenResponse', '__httpwww_litle_comschema_CTD_ANON_70_httpwww_litle_comschematokenResponse', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1431, 24), )
 
     
     tokenResponse = property(__tokenResponse.value, __tokenResponse.set, None, None)
 
     
     # Element {http://www.litle.com/schema}fraudResult uses Python identifier fraudResult
-    __fraudResult = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'fraudResult'), 'fraudResult', '__httpwww_litle_comschema_CTD_ANON_70_httpwww_litle_comschemafraudResult', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1443, 4), )
+    __fraudResult = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'fraudResult'), 'fraudResult', '__httpwww_litle_comschema_CTD_ANON_70_httpwww_litle_comschemafraudResult', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1443, 4), )
 
     
     fraudResult = property(__fraudResult.value, __fraudResult.set, None, None)
 
     
     # Element {http://www.litle.com/schema}giftCardResponse uses Python identifier giftCardResponse
-    __giftCardResponse = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'giftCardResponse'), 'giftCardResponse', '__httpwww_litle_comschema_CTD_ANON_70_httpwww_litle_comschemagiftCardResponse', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1523, 4), )
+    __giftCardResponse = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'giftCardResponse'), 'giftCardResponse', '__httpwww_litle_comschema_CTD_ANON_70_httpwww_litle_comschemagiftCardResponse', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1523, 4), )
 
     
     giftCardResponse = property(__giftCardResponse.value, __giftCardResponse.set, None, None)
@@ -9031,8 +9031,8 @@ class CTD_ANON_70 (transactionTypeWithReportGroup):
     
     # Attribute duplicate uses Python identifier duplicate
     __duplicate = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'duplicate'), 'duplicate', '__httpwww_litle_comschema_CTD_ANON_70_duplicate', pyxb.binding.datatypes.boolean)
-    __duplicate._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1437, 20)
-    __duplicate._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1437, 20)
+    __duplicate._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1437, 20)
+    __duplicate._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1437, 20)
     
     duplicate = property(__duplicate.value, __duplicate.set, None, None)
 
@@ -9060,48 +9060,48 @@ class CTD_ANON_71 (transactionTypeWithReportGroup):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1457, 8)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1457, 8)
     _ElementMap = transactionTypeWithReportGroup._ElementMap.copy()
     _AttributeMap = transactionTypeWithReportGroup._AttributeMap.copy()
     # Base type is transactionTypeWithReportGroup
     
     # Element {http://www.litle.com/schema}fraudResult uses Python identifier fraudResult
-    __fraudResult = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'fraudResult'), 'fraudResult', '__httpwww_litle_comschema_CTD_ANON_71_httpwww_litle_comschemafraudResult', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1443, 4), )
+    __fraudResult = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'fraudResult'), 'fraudResult', '__httpwww_litle_comschema_CTD_ANON_71_httpwww_litle_comschemafraudResult', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1443, 4), )
 
     
     fraudResult = property(__fraudResult.value, __fraudResult.set, None, None)
 
     
     # Element {http://www.litle.com/schema}litleTxnId uses Python identifier litleTxnId
-    __litleTxnId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'litleTxnId'), 'litleTxnId', '__httpwww_litle_comschema_CTD_ANON_71_httpwww_litle_comschemalitleTxnId', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1461, 24), )
+    __litleTxnId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'litleTxnId'), 'litleTxnId', '__httpwww_litle_comschema_CTD_ANON_71_httpwww_litle_comschemalitleTxnId', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1461, 24), )
 
     
     litleTxnId = property(__litleTxnId.value, __litleTxnId.set, None, None)
 
     
     # Element {http://www.litle.com/schema}orderId uses Python identifier orderId
-    __orderId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'orderId'), 'orderId', '__httpwww_litle_comschema_CTD_ANON_71_httpwww_litle_comschemaorderId', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1462, 24), )
+    __orderId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'orderId'), 'orderId', '__httpwww_litle_comschema_CTD_ANON_71_httpwww_litle_comschemaorderId', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1462, 24), )
 
     
     orderId = property(__orderId.value, __orderId.set, None, None)
 
     
     # Element {http://www.litle.com/schema}response uses Python identifier response
-    __response = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'response'), 'response', '__httpwww_litle_comschema_CTD_ANON_71_httpwww_litle_comschemaresponse', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1463, 24), )
+    __response = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'response'), 'response', '__httpwww_litle_comschema_CTD_ANON_71_httpwww_litle_comschemaresponse', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1463, 24), )
 
     
     response = property(__response.value, __response.set, None, None)
 
     
     # Element {http://www.litle.com/schema}responseTime uses Python identifier responseTime
-    __responseTime = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'responseTime'), 'responseTime', '__httpwww_litle_comschema_CTD_ANON_71_httpwww_litle_comschemaresponseTime', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1464, 24), )
+    __responseTime = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'responseTime'), 'responseTime', '__httpwww_litle_comschema_CTD_ANON_71_httpwww_litle_comschemaresponseTime', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1464, 24), )
 
     
     responseTime = property(__responseTime.value, __responseTime.set, None, None)
 
     
     # Element {http://www.litle.com/schema}postDate uses Python identifier postDate
-    __postDate = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'postDate'), 'postDate', '__httpwww_litle_comschema_CTD_ANON_71_httpwww_litle_comschemapostDate', False, pyxb.utils.utility.Location('SchemaCombined_v9.14.xsd', 1466, 24), )
+    __postDate = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'postDate'), 'postDate', '__httpwww_litle_comschema_CTD_ANON_71_httpwww_litle_comschemapostDate', False, pyxb.utils.utility.Location('SchemaCombined_v8.31.xsd', 1466, 24), )
 
     
     postDate = property(__postDate.value, __postDate.set, None, None)

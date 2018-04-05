@@ -248,32 +248,6 @@ echeckCredit
         :var reportGroup: String or Number
         :var secondaryAmount: String or Number
 
-echeckPreNoteCredit
--------------------
-    .. py:class:: vantivsdk.fields.echeckPreNoteCredit
-
-        :var billToAddress: instance of :py:class:`vantivsdk.fields.billToAddress`
-        :var customerId: String or Number
-        :var echeck: instance of :py:class:`vantivsdk.fields.echeck`
-        :var id: String or Number
-        :var merchantData: instance of :py:class:`vantivsdk.fields.merchantDataType`
-        :var orderId: String or Number
-        :var orderSource: String or Number
-        :var reportGroup: String or Number
-
-echeckPreNoteSale
------------------
-    .. py:class:: vantivsdk.fields.echeckPreNoteSale
-
-        :var billToAddress: instance of :py:class:`vantivsdk.fields.billToAddress`
-        :var customerId: String or Number
-        :var echeck: instance of :py:class:`vantivsdk.fields.echeck`
-        :var id: String or Number
-        :var merchantData: instance of :py:class:`vantivsdk.fields.merchantDataType`
-        :var orderId: String or Number
-        :var orderSource: String or Number
-        :var reportGroup: String or Number
-
 echeckRedeposit
 ---------------
     .. py:class:: vantivsdk.fields.echeckRedeposit
@@ -388,63 +362,6 @@ loadReversal
         :var litleTxnId: String or Number
         :var reportGroup: String or Number
 
-payFacCredit
-------------
-    .. py:class:: vantivsdk.fields.payFacCredit
-
-        :var amount: String or Number
-        :var customerId: String or Number
-        :var fundingSubmerchantId: String or Number
-        :var fundsTransferId: String or Number
-        :var id: String or Number
-        :var reportGroup: String or Number
-
-payFacDebit
------------
-    .. py:class:: vantivsdk.fields.payFacDebit
-
-        :var amount: String or Number
-        :var customerId: String or Number
-        :var fundingSubmerchantId: String or Number
-        :var fundsTransferId: String or Number
-        :var id: String or Number
-        :var reportGroup: String or Number
-
-physicalCheckCredit
--------------------
-    .. py:class:: vantivsdk.fields.physicalCheckCredit
-
-        :var amount: String or Number
-        :var customerId: String or Number
-        :var fundingSubmerchantId: String or Number
-        :var fundsTransferId: String or Number
-        :var id: String or Number
-        :var reportGroup: String or Number
-
-physicalCheckDebit
-------------------
-    .. py:class:: vantivsdk.fields.physicalCheckDebit
-
-        :var amount: String or Number
-        :var customerId: String or Number
-        :var fundingSubmerchantId: String or Number
-        :var fundsTransferId: String or Number
-        :var id: String or Number
-        :var reportGroup: String or Number
-
-queryTransaction
-----------------
-    .. py:class:: vantivsdk.fields.queryTransaction
-
-        :var customerId: String or Number
-        :var id: String or Number
-        :var origAccountNumber: String or Number
-        :var origActionType: String or Number
-        :var origId: String or Number
-        :var origLitleTxnId: String or Number
-        :var origOrderId: String or Number
-        :var reportGroup: String or Number
-
 refundReversal
 --------------
     .. py:class:: vantivsdk.fields.refundReversal
@@ -469,28 +386,6 @@ registerTokenRequest
         :var paypageRegistrationId: String or Number
         :var reportGroup: String or Number
 
-reserveCredit
--------------
-    .. py:class:: vantivsdk.fields.reserveCredit
-
-        :var amount: String or Number
-        :var customerId: String or Number
-        :var fundingSubmerchantId: String or Number
-        :var fundsTransferId: String or Number
-        :var id: String or Number
-        :var reportGroup: String or Number
-
-reserveDebit
-------------
-    .. py:class:: vantivsdk.fields.reserveDebit
-
-        :var amount: String or Number
-        :var customerId: String or Number
-        :var fundingSubmerchantId: String or Number
-        :var fundsTransferId: String or Number
-        :var id: String or Number
-        :var reportGroup: String or Number
-
 sale
 ----
     .. py:class:: vantivsdk.fields.sale
@@ -512,10 +407,10 @@ sale
         :var filtering: instance of :py:class:`vantivsdk.fields.filteringType`
         :var fraudCheck: instance of :py:class:`vantivsdk.fields.fraudCheckType`
         :var fraudFilterOverride: String or Number
-        :var giropay: instance of :py:class:`vantivsdk.fields.giropayType`
+        :var giropay: String or Number
         :var healthcareIIAS: instance of :py:class:`vantivsdk.fields.healthcareIIAS`
         :var id: String or Number
-        :var ideal: instance of :py:class:`vantivsdk.fields.idealType`
+        :var ideal: String or Number
         :var litleInternalRecurringRequest: instance of :py:class:`vantivsdk.fields.litleInternalRecurringRequestType`
         :var litleTxnId: String or Number
         :var merchantData: instance of :py:class:`vantivsdk.fields.merchantDataType`
@@ -535,39 +430,13 @@ sale
         :var recyclingRequest: instance of :py:class:`vantivsdk.fields.recyclingRequestType`
         :var reportGroup: String or Number
         :var secondaryAmount: String or Number
-        :var sepaDirectDebit: instance of :py:class:`vantivsdk.fields.sepaDirectDebitType`
+        :var sepaDirectDebit: String or Number
         :var shipToAddress: instance of :py:class:`vantivsdk.fields.shipToAddress`
-        :var sofort: instance of :py:class:`vantivsdk.fields.sofortType`
+        :var sofort: String or Number
         :var surchargeAmount: String or Number
         :var taxType: String or Number
         :var token: instance of :py:class:`vantivsdk.fields.cardTokenType`
         :var wallet: instance of :py:class:`vantivsdk.fields.wallet`
-
-submerchantCredit
------------------
-    .. py:class:: vantivsdk.fields.submerchantCredit
-
-        :var accountInfo: instance of :py:class:`vantivsdk.fields.echeckType`
-        :var amount: String or Number
-        :var customerId: String or Number
-        :var fundingSubmerchantId: String or Number
-        :var fundsTransferId: String or Number
-        :var id: String or Number
-        :var reportGroup: String or Number
-        :var submerchantName: String or Number
-
-submerchantDebit
-----------------
-    .. py:class:: vantivsdk.fields.submerchantDebit
-
-        :var accountInfo: instance of :py:class:`vantivsdk.fields.echeckType`
-        :var amount: String or Number
-        :var customerId: String or Number
-        :var fundingSubmerchantId: String or Number
-        :var fundsTransferId: String or Number
-        :var id: String or Number
-        :var reportGroup: String or Number
-        :var submerchantName: String or Number
 
 unload
 ------
@@ -625,32 +494,6 @@ updateSubscription
         :var token: instance of :py:class:`vantivsdk.fields.cardTokenType`
         :var updateAddOn: instance of :py:class:`vantivsdk.fields.updateAddOnType`
         :var updateDiscount: instance of :py:class:`vantivsdk.fields.updateDiscountType`
-
-vendorCredit
-------------
-    .. py:class:: vantivsdk.fields.vendorCredit
-
-        :var accountInfo: instance of :py:class:`vantivsdk.fields.echeckType`
-        :var amount: String or Number
-        :var customerId: String or Number
-        :var fundingSubmerchantId: String or Number
-        :var fundsTransferId: String or Number
-        :var id: String or Number
-        :var reportGroup: String or Number
-        :var vendorName: String or Number
-
-vendorDebit
------------
-    .. py:class:: vantivsdk.fields.vendorDebit
-
-        :var accountInfo: instance of :py:class:`vantivsdk.fields.echeckType`
-        :var amount: String or Number
-        :var customerId: String or Number
-        :var fundingSubmerchantId: String or Number
-        :var fundsTransferId: String or Number
-        :var id: String or Number
-        :var reportGroup: String or Number
-        :var vendorName: String or Number
 
 void
 ----

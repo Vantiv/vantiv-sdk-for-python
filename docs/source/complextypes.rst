@@ -233,16 +233,6 @@ echeckToken
         :var litleToken: String or Number
         :var routingNum: String or Number
 
-echeckType
-----------
-    .. py:class:: vantivsdk.fields.echeckType
-
-        :var accNum: String or Number
-        :var accType: String or Number
-        :var ccdPaymentInformation: String or Number
-        :var checkNum: String or Number
-        :var routingNum: String or Number
-
 enhancedData
 ------------
     .. py:class:: vantivsdk.fields.enhancedData
@@ -289,12 +279,6 @@ fraudResult
         :var avsResult: String or Number
         :var cardValidationResult: String or Number
 
-giropayType
------------
-    .. py:class:: vantivsdk.fields.giropayType
-
-        :var preferredLanguage: String or Number
-
 healthcareAmounts
 -----------------
     .. py:class:: vantivsdk.fields.healthcareAmounts
@@ -311,12 +295,6 @@ healthcareIIAS
 
         :var IIASFlag: String or Number
         :var healthcareAmounts: instance of :py:class:`vantivsdk.fields.healthcareAmounts`
-
-idealType
----------
-    .. py:class:: vantivsdk.fields.idealType
-
-        :var preferredLanguage: String or Number
 
 lineItemData
 ------------
@@ -410,18 +388,6 @@ recyclingRequestType
         :var recycleBy: String or Number
         :var recycleId: String or Number
 
-sepaDirectDebitType
--------------------
-    .. py:class:: vantivsdk.fields.sepaDirectDebitType
-
-        :var iban: String or Number
-        :var mandateProvider: String or Number
-        :var mandateReference: String or Number
-        :var mandateSignatureDate: String or Number
-        :var mandateUrl: String or Number
-        :var preferredLanguage: String or Number
-        :var sequenceType: String or Number
-
 shipToAddress
 -------------
     .. py:class:: vantivsdk.fields.shipToAddress
@@ -440,12 +406,6 @@ shipToAddress
         :var phone: String or Number
         :var state: String or Number
         :var zip: String or Number
-
-sofortType
-----------
-    .. py:class:: vantivsdk.fields.sofortType
-
-        :var preferredLanguage: String or Number
 
 token
 -----
