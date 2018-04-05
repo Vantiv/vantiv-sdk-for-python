@@ -73,26 +73,6 @@ class TestAuth(unittest.TestCase):
         response = online.request(txn_dict, conf)
         self.assertEquals('000', response['authorizationResponse']['response'])
 
-    def test_simple_auth_with_android_pay(self):
-        authorization = fields.authorization()
-        authorization.reportGroup = 'Planets'
-        authorization.orderId = '12344'
-        authorization.amount = 106
-        authorization.orderSource = 'androidpay'
-        authorization.id = 'thisisid'
-
-        card = fields.cardType()
-        card.number = '4100000000000000'
-        card.expDate = '1210'
-        card.type = 'VI'
-
-        authorization.card = card
-
-        response = online.request(authorization, conf)
-        self.assertEquals('000', response['authorizationResponse']['response'])
-        self.assertEquals('aHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1kUXc0dzlXZ1hjUQ0K',
-                          response['authorizationResponse']['androidpayResponse']['cryptogram'])
-
     def test_simple_auth_with_paypal(self):
         authorization = fields.authorization()
         authorization.reportGroup = 'Planets'
@@ -296,7 +276,7 @@ class TestAuth(unittest.TestCase):
 
         wallet = fields.wallet()
         wallet.walletSourceTypeId = '1'
-        wallet.walletSourceType = 'VisaCheckout'
+        wallet.walletSourceType = 'MasterPass'
         authorization.wallet = wallet
 
         response = online.request(authorization, conf)

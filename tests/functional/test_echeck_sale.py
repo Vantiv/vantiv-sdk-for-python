@@ -94,59 +94,5 @@ class TestEcheckSale(unittest.TestCase):
         response = online.request(transaction, conf)
         self.assertEquals('000', response['echeckSalesResponse']['response'])
 
-    def test_echeck_sale_with_secoundary_amount_and_ccd(self):
-        transaction = fields.echeckSale()
-        transaction.reportGroup = 'Planets'
-        transaction.orderId = '12344'
-        transaction.amount = 106
-        transaction.orderSource = 'ecommerce'
-        transaction.secondaryAmount = 50
-        transaction.id = 'ThisIsID'
-
-        echeck = fields.echeck()
-        echeck.accNum = '12345657890'
-        echeck.routingNum = '123456789'
-        echeck.checkNum = '123455'
-        echeck.accType = 'Checking'
-        echeck.ccdPaymentInformation = '12345678901234567890123456789012345678901234567890123456789012345678901234567890'
-        transaction.echeckOrEcheckToken = echeck
-
-        billtoaddress = fields.contact()
-        billtoaddress.firstName = 'Peter'
-        billtoaddress.lastName = 'Green'
-        billtoaddress.companyName = 'Green Co'
-        billtoaddress.phone = '999-999-9999'
-        transaction.billToAddress = billtoaddress
-
-        response = online.request(transaction, conf)
-        self.assertEquals('000', response['echeckSalesResponse']['response'])
-
-
-    def test_echeck_sale_with_secoundary_amount_and_ccd_longer_80(self):
-        transaction = fields.echeckSale()
-        transaction.reportGroup = 'Planets'
-        transaction.orderId = '12344'
-        transaction.amount = 106
-        transaction.orderSource = 'ecommerce'
-        transaction.secondaryAmount = 50
-        transaction.id = 'ThisIsID'
-
-        echeck = fields.echeck()
-        echeck.accNum = '12345657890'
-        echeck.routingNum = '123456789'
-        echeck.checkNum = '123455'
-        echeck.accType = 'Checking'
-        echeck.ccdPaymentInformation = '123456789012345678901234567890123456789012345678901234567890123456789012345678901'
-        transaction.echeckOrEcheckToken = echeck
-
-        billtoaddress = fields.contact()
-        billtoaddress.firstName = 'Peter'
-        billtoaddress.lastName = 'Green'
-        billtoaddress.companyName = 'Green Co'
-        billtoaddress.phone = '999-999-9999'
-        transaction.billToAddress = billtoaddress
-
-        self.assertRaises(Exception, online.request, transaction, conf)
-
 if __name__ == '__main__':
     unittest.main()

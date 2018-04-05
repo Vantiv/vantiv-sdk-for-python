@@ -35,16 +35,6 @@ conf = utils.Configuration()
 
 
 class TestEcheckCredit(unittest.TestCase):
-    def test_simple_echeck_credit(self):
-        transaction = fields.echeckCredit()
-        transaction.litleTxnId = 123456789101112
-        transaction.amount = 12
-        transaction.secondaryAmount = 50
-        transaction.id = 'ThisIsID'
-
-        response = online.request(transaction, conf)
-        self.assertEquals('000', response['echeckCreditResponse']['response'])
-
     def test_echeck_credit_with_echeck(self):
         transaction = fields.echeckCredit()
         transaction.reportGroup = 'Planets'

@@ -129,17 +129,5 @@ class TestCredit(unittest.TestCase):
         response = online.request(transaction, conf)
         self.assertEquals('000', response['creditResponse']['response'])
 
-
-    def test_simple_credit_with_litletxn_and_pin(self):
-        transaction = fields.credit()
-        transaction.litleTxnId = '1234'
-        transaction.amount = 106
-        transaction.secondaryAmount = 20
-        transaction.pin = '3333'
-        transaction.id = 'ThisIsID'
-
-        response = online.request(transaction, conf)
-        self.assertEquals('000', response['creditResponse']['response'])
-
 if __name__ == '__main__':
     unittest.main()

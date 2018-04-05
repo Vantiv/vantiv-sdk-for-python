@@ -44,7 +44,6 @@ class TestCapture(unittest.TestCase):
         transactions.amount = 106
         transactions.payPalNotes='Notes'
         transactions.orderSource = 'ecommerce'
-        transactions.pin = '1234'
         transactions.id = 'ThisIsID'
 
         response = online.request(transactions, conf)
