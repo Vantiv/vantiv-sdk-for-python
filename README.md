@@ -1,4 +1,4 @@
-Vantiv eCommerce Python SDK for XML v9.x
+Vantiv eCommerce Python SDK for XML v8.x
 ========================================
 #### WARNING:
 ##### All major version changes require recertification to the new version. Once certified for the use of a new version, Vantiv modifies your Merchant Profile, allowing you to submit transaction to the Production Environment using the new version. Updating your code without recertification and modification of your Merchant Profile will result in transaction declines. Please consult you Implementation Analyst for additional information about this process.
@@ -11,17 +11,17 @@ About this SDK
 --------------
 The Vantiv eCommerce Python SDK is a Python implementation of the [Vantiv eCommerce](https://developer.vantiv.com/community/ecommerce) XML API. This SDK was created to make it as easy as possible to connect to and process payments through Vantiv eCommerce. This SDK utilizes the HTTPS protocol to securely connect to Vantiv eCommerce.  Using the SDK requires coordination with the Vantiv eCommerce team to obtain credentials for accessing our systems.
 
-Each Python SDK release supports all of the functionality present in the associated Vantiv eCommerce XML version (e.g., 9.12.x supports Vantiv eCommerce XML v9.12). Please see the online copy of our XSD for Vantiv eCommerce XML to get more details on what the Vantiv eCommerce payments engine supports .
+Each Python SDK release supports all of the functionality present in the associated Vantiv eCommerce XML version (e.g., 8.31.x supports Vantiv eCommerce XML v8.31). Please see the online copy of our XSD for Vantiv eCommerce XML to get more details on what the Vantiv eCommerce payments engine supports .
 
 This SDK was implemented to support the Python2 version 2.7.9 and later, Python3 version 3.4 and later, and was created by Vantiv eCommerce. Its intended use is for online transaction processing utilizing your account on the Vantiv eCommerce payments engine.
 
 See LICENSE file for details on using this software.
 
-Source Code available from : https://github.com/Vantiv/vantiv-sdk-for-python/tree/9.x
+Source Code available from : https://github.com/Vantiv/vantiv-sdk-for-python/tree/8.x
 
-Examples can be found here https://github.com/Vantiv/vantiv-sdk-for-python/tree/9.x/samples
+Examples can be found here https://github.com/Vantiv/vantiv-sdk-for-python/tree/8.x/samples
 
-Detail documents can be found here http://vantivecommercepythonsdk.readthedocs.io/en/9.x/
+Detail documents can be found here http://vantivecommercepythonsdk.readthedocs.io/en/8.x/
 
 Please contact [Vantiv eCommerce](https://developer.vantiv.com/community/ecommerce) to receive valid merchant credentials and determine which version of the SDK is right for your business requirements or if you require assistance in any other way.  You can reach us at sdksupport@Vantiv.com
 
@@ -47,8 +47,8 @@ Without Pip
 
 >cd vantiv-sdk-for-python
 
-checkout 9.x for xml v9.x
->git checkout 9.x
+checkout 8.x for xml v8.x
+>git checkout 8.x
 
 >python setup.py install
 
