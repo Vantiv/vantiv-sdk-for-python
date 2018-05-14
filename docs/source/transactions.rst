@@ -74,6 +74,7 @@ authorization
         :var fraudFilterOverride: String or Number
         :var healthcareIIAS: instance of :py:class:`vantivsdk.fields.healthcareIIAS`
         :var id: String or Number
+        :var lodgingInfo: instance of :py:class:`vantivsdk.fields.lodgingInfo`
         :var merchantData: instance of :py:class:`vantivsdk.fields.merchantDataType`
         :var mpos: instance of :py:class:`vantivsdk.fields.mposType`
         :var orderId: String or Number
@@ -122,6 +123,7 @@ capture
         :var customerId: String or Number
         :var enhancedData: instance of :py:class:`vantivsdk.fields.enhancedData`
         :var id: String or Number
+        :var lodgingInfo: instance of :py:class:`vantivsdk.fields.lodgingInfo`
         :var partial: String or Number
         :var payPalNotes: String or Number
         :var payPalOrderComplete: String or Number
@@ -143,6 +145,7 @@ captureGivenAuth
         :var debtRepayment: String or Number
         :var enhancedData: instance of :py:class:`vantivsdk.fields.enhancedData`
         :var id: String or Number
+        :var lodgingInfo: instance of :py:class:`vantivsdk.fields.lodgingInfo`
         :var merchantData: instance of :py:class:`vantivsdk.fields.merchantDataType`
         :var mpos: instance of :py:class:`vantivsdk.fields.mposType`
         :var orderId: String or Number
@@ -187,6 +190,7 @@ credit
         :var customerId: String or Number
         :var enhancedData: instance of :py:class:`vantivsdk.fields.enhancedData`
         :var id: String or Number
+        :var lodgingInfo: instance of :py:class:`vantivsdk.fields.lodgingInfo`
         :var merchantData: instance of :py:class:`vantivsdk.fields.merchantDataType`
         :var mpos: instance of :py:class:`vantivsdk.fields.mposType`
         :var orderId: String or Number
@@ -373,6 +377,7 @@ forceCapture
         :var debtRepayment: String or Number
         :var enhancedData: instance of :py:class:`vantivsdk.fields.enhancedData`
         :var id: String or Number
+        :var lodgingInfo: instance of :py:class:`vantivsdk.fields.lodgingInfo`
         :var merchantData: instance of :py:class:`vantivsdk.fields.merchantDataType`
         :var mpos: instance of :py:class:`vantivsdk.fields.mposType`
         :var orderId: String or Number
@@ -391,10 +396,13 @@ fraudCheck
 ----------
     .. py:class:: vantivsdk.fields.fraudCheck
 
+        :var accountLogin: String or Number
+        :var accountPasshash: String or Number
         :var advancedFraudChecks: instance of :py:class:`vantivsdk.fields.advancedFraudChecksType`
         :var amount: String or Number
         :var billToAddress: instance of :py:class:`vantivsdk.fields.billToAddress`
         :var customerId: String or Number
+        :var eventType: String or Number
         :var id: String or Number
         :var reportGroup: String or Number
         :var shipToAddress: instance of :py:class:`vantivsdk.fields.shipToAddress`
@@ -532,6 +540,7 @@ queryTransaction
         :var origCnpTxnId: String or Number
         :var origId: String or Number
         :var reportGroup: String or Number
+        :var showStatusOnly: String or Number
 
 refundReversal
 --------------
@@ -610,6 +619,7 @@ sale
         :var healthcareIIAS: instance of :py:class:`vantivsdk.fields.healthcareIIAS`
         :var id: String or Number
         :var ideal: instance of :py:class:`vantivsdk.fields.idealType`
+        :var lodgingInfo: instance of :py:class:`vantivsdk.fields.lodgingInfo`
         :var merchantData: instance of :py:class:`vantivsdk.fields.merchantDataType`
         :var mpos: instance of :py:class:`vantivsdk.fields.mposType`
         :var orderId: String or Number
@@ -620,13 +630,13 @@ sale
         :var payPalOrderComplete: String or Number
         :var paypage: instance of :py:class:`vantivsdk.fields.cardPaypageType`
         :var paypal: instance of :py:class:`vantivsdk.fields.payPal`
+        :var pinlessDebitRequest: instance of :py:class:`vantivsdk.fields.pinlessDebitRequestType`
         :var pos: instance of :py:class:`vantivsdk.fields.pos`
         :var processingInstructions: instance of :py:class:`vantivsdk.fields.processingInstructions`
         :var processingType: String or Number
         :var recurringRequest: instance of :py:class:`vantivsdk.fields.recurringRequestType`
         :var recyclingRequest: instance of :py:class:`vantivsdk.fields.recyclingRequestType`
         :var reportGroup: String or Number
-        :var routingPreference: String or Number
         :var secondaryAmount: String or Number
         :var sepaDirectDebit: instance of :py:class:`vantivsdk.fields.sepaDirectDebitType`
         :var shipToAddress: instance of :py:class:`vantivsdk.fields.shipToAddress`
@@ -673,6 +683,16 @@ submerchantDebit
         :var id: String or Number
         :var reportGroup: String or Number
         :var submerchantName: String or Number
+
+translateToLowValueTokenRequest
+-------------------------------
+    .. py:class:: vantivsdk.fields.translateToLowValueTokenRequest
+
+        :var customerId: String or Number
+        :var id: String or Number
+        :var orderId: String or Number
+        :var reportGroup: String or Number
+        :var token: String or Number
 
 unload
 ------

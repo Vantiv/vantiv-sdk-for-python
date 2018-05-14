@@ -63,6 +63,7 @@ supported_transaction_types = {
     'sale': ['numSales', 'saleAmount'],
     'submerchantCredit': ['numSubmerchantCredit', 'submerchantCreditAmount'],
     'submerchantDebit': ['numSubmerchantDebit', 'submerchantDebitAmount'],
+    'translateToLowValueTokenRequest': ['numTranslateToLowValueTokenRequests', ''],
     'unload': ['numUnloads', 'unloadAmount'],
     'updateCardValidationNumOnToken': ['numUpdateCardValidationNumOnTokens', ''],
     'updatePlan': ['numUpdatePlans', ''],

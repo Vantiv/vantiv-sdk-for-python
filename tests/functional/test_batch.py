@@ -106,6 +106,25 @@ class TestBatch(unittest.TestCase):
         # Add transaction to container
         transactions.add(authorization2)
 
+        # Inital authorization with lodging info
+        authorization3 = fields.authorization()
+        authorization3.orderId = '2'
+        authorization3.amount = 0
+        authorization3.reportGroup = 'Planets'
+        authorization3.orderSource = 'ecommerce'
+        authorization3.card = card
+        authorization3.billtoaddress = billtoaddress
+        authorization3.id = 'thisisid'
+        lodging_info = fields.lodgingInfo()
+        lodging_info.roomRate = 1001
+        lodging_info.roomTax = 1
+        lodging_charge = fields.lodgingCharge()
+        lodging_charge.name = "RESTAURANT"
+        lodging_info.lodgingCharge = [lodging_charge]
+        authorization3.lodgingInfo = lodging_info
+        # Add transaction to container
+        transactions.add(authorization3)
+
         # Initial authorization
         sale = fields.sale()
         sale.orderId = '1'
@@ -115,8 +134,24 @@ class TestBatch(unittest.TestCase):
         sale.card = card
         sale.billtoaddress = billtoaddress
         sale.id = 'thisisid'
+        # Add pinless debit request
+        pinless_debit = fields.pinlessDebitRequestType()
+        preferred_network = fields.preferredDebitNetworksType()
+        preferred_network.debitNetworkName = ['Visa', 'MasterCard']
+        pinless_debit.preferredDebitNetworks = preferred_network
+        pinless_debit.routingPreference = 'regular'
+        sale.pinlessDebitRequest = pinless_debit
         # Add transaction to container
         transactions.add(sale)
+
+        # Initial translate to low value token request
+        translateToLow = fields.translateToLowValueTokenRequest()
+        translateToLow.orderId = '1'
+        translateToLow.token = 'gf5a4f564g6a'
+        translateToLow.reportGroup = 'Planets'
+        translateToLow.id = 'thisisid'
+        # Add transaction to container
+        transactions.add(translateToLow)
 
         filename = 'batch_test_%s' % datetime.datetime.now().strftime("%Y%m%d%H%M%S%f")
 
@@ -282,7 +317,7 @@ class TestBatch(unittest.TestCase):
                     'id': 'thisisid',
                     'card': {
                         'expDate': '1210',
-                        'number': '4100000000000000',
+                        'number': '4457010000000009',
                         'type': 'VI',
                     }
                 },
@@ -294,7 +329,7 @@ class TestBatch(unittest.TestCase):
                     'id': 'thisisid',
                     'card': {
                         'expDate': '1210',
-                        'number': '4100000000000000',
+                        'number': '4457010000000009',
                         'type': 'VI',
                     }
                 },
@@ -306,22 +341,63 @@ class TestBatch(unittest.TestCase):
                     'id': 'thisisid',
                     'card': {
                         'expDate': '1210',
-                        'number': '4100000000000000',
+                        'number': '4457010000000009',
                         'type': 'VI',
+                    }
+                },
+                {
+                    'reportGroup': 'Planets',
+                    'orderId': '12347',
+                    'amount': '300',
+                    'orderSource': 'ecommerce',
+                    'id': 'thisisid',
+                    'card': {
+                        'expDate': '1210',
+                        'number': '4457010000000009',
+                        'type': 'VI',
+                    },
+                    'lodgingInfo': {
+                        'roomRate': '1001',
+                        'roomTax': '1',
+                        'lodgingCharge': [{'name': 'OTHER'}],
                     }
                 }
             ],
-            'sale': {
+            'sale': [
+                {
+                    'reportGroup': 'Planets',
+                    'orderId': '12344',
+                    'amount': '106',
+                    'orderSource': 'ecommerce',
+                    'id': 'thisisid',
+                    'card': {
+                        'expDate': '1210',
+                        'number': '4457010000000009',
+                        'type': 'VI',
+                    }
+                },
+                {
+                    'reportGroup': 'Planets',
+                    'orderId': '12354',
+                    'amount': '106',
+                    'orderSource': 'ecommerce',
+                    'id': 'thisisid',
+                    'card': {
+                        'expDate': '1210',
+                        'number': '4457010000000009',
+                        'type': 'VI',
+                    },
+                    # 'pinlessDebitRequest': {
+                    #     'routingPreference': 'regular',
+                    #     'preferredDebitNetworks': {'debitNetworkName': ['visa']}
+                    # }
+                }
+            ],
+            'translateToLowValueTokenRequest': {
                 'reportGroup': 'Planets',
                 'orderId': '12344',
-                'amount': '106',
-                'orderSource': 'ecommerce',
                 'id': 'thisisid',
-                'card': {
-                    'expDate': '1210',
-                    'number': '4100000000000000',
-                    'type': 'VI',
-                }
+                'token': 'g45a684fw54f'
             }
         }
 

@@ -35,11 +35,28 @@ conf = utils.Configuration()
 
 
 class TestFraudCheck(unittest.TestCase):
-    def test_force_capture_with_card(self):
+    def test_simple_fraud_check(self):
         transaction = fields.fraudCheck()
         transaction.id = 'ThisIsID'
         advancedFraudChecks = fields.advancedFraudChecksType()
         advancedFraudChecks.threatMetrixSessionId = '123'
+        transaction.advancedFraudChecks = advancedFraudChecks
+
+        response = online.request(transaction, conf)
+        self.assertEquals('pass',
+                          response['fraudCheckResponse']['advancedFraudResults']['deviceReviewStatus'])
+        self.assertEquals('42',
+                          response['fraudCheckResponse']['advancedFraudResults']['deviceReputationScore'])
+
+    def test_web_session_id(self):
+        transaction = fields.fraudCheck()
+        transaction.id = 'ThisIsID'
+        transaction.eventType = 'payment'
+        transaction.accountLogin = 'ThisIsAccount'
+        transaction.accountPasshash = ''.join('0' for s in range(0, 56))
+        advancedFraudChecks = fields.advancedFraudChecksType()
+        advancedFraudChecks.threatMetrixSessionId = '123'
+        advancedFraudChecks.webSessionId = '6a88f46sad4f6sda4'
         transaction.advancedFraudChecks = advancedFraudChecks
 
         response = online.request(transaction, conf)

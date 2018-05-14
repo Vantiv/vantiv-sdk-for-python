@@ -75,6 +75,31 @@ class TestAuth(unittest.TestCase):
         response = online.request(txn_dict, conf)
         self.assertEquals('000', response['authorizationResponse']['response'])
 
+    def test_simple_auth_with_lodging(self):
+        authorization = fields.authorization()
+        authorization.reportGroup = 'Planets'
+        authorization.orderId = '12344'
+        authorization.amount = 106
+        authorization.orderSource = 'ecommerce'
+        authorization.id = 'thisisid'
+
+        card = fields.cardType()
+        card.number = '4100000000000000'
+        card.expDate = '1210'
+        card.type = 'VI'
+        authorization.card = card
+
+        lodging_info = fields.lodgingInfo()
+        lodging_info.roomRate = 1001
+        lodging_info.roomTax = 1
+        lodging_charge = fields.lodgingCharge()
+        lodging_charge.name = "RESTAURANT"
+        lodging_info.lodgingCharge = [lodging_charge]
+        authorization.lodgingInfo = lodging_info
+
+        response = online.request(authorization, conf)
+        self.assertEquals('000', response['authorizationResponse']['response'])
+
     def test_simple_auth_with_android_pay(self):
         authorization = fields.authorization()
         authorization.reportGroup = 'Planets'

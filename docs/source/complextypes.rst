@@ -11,6 +11,7 @@ advancedFraudChecksType
         :var customAttribute4: String or Number
         :var customAttribute5: String or Number
         :var threatMetrixSessionId: String or Number
+        :var webSessionId: String or Number
 
 advancedFraudResultsType
 ------------------------
@@ -313,6 +314,29 @@ lineItemData
         :var unitCost: String or Number
         :var unitOfMeasure: String or Number
 
+lodgingCharge
+-------------
+    .. py:class:: vantivsdk.fields.lodgingCharge
+
+        :var name: String or Number
+
+lodgingInfo
+-----------
+    .. py:class:: vantivsdk.fields.lodgingInfo
+
+        :var checkInDate: String or Number
+        :var checkOutDate: String or Number
+        :var customerServicePhone: String or Number
+        :var duration: String or Number
+        :var fireSafetyIndicator: String or Number
+        :var hotelFolioNumber: String or Number
+        :var lodgingCharge: instance of :py:class:`vantivsdk.fields.lodgingCharge`
+        :var numAdults: String or Number
+        :var programCode: String or Number
+        :var propertyLocalPhone: String or Number
+        :var roomRate: String or Number
+        :var roomTax: String or Number
+
 merchantDataType
 ----------------
     .. py:class:: vantivsdk.fields.merchantDataType
@@ -340,6 +364,13 @@ payPal
         :var token: instance of :py:class:`vantivsdk.fields.cardTokenType`
         :var transactionId: String or Number
 
+pinlessDebitRequestType
+-----------------------
+    .. py:class:: vantivsdk.fields.pinlessDebitRequestType
+
+        :var preferredDebitNetworks: instance of :py:class:`vantivsdk.fields.preferredDebitNetworksType`
+        :var routingPreference: String or Number
+
 pos
 ---
     .. py:class:: vantivsdk.fields.pos
@@ -349,6 +380,12 @@ pos
         :var catLevel: String or Number
         :var entryMode: String or Number
         :var terminalId: String or Number
+
+preferredDebitNetworksType
+--------------------------
+    .. py:class:: vantivsdk.fields.preferredDebitNetworksType
+
+        :var debitNetworkName: String or Number
 
 processingInstructions
 ----------------------
