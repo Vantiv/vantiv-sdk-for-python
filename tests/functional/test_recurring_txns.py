@@ -23,7 +23,6 @@
 # OTHER DEALINGS IN THE SOFTWARE.
 from datetime import datetime
 
-from vantivsdk import *
 import os
 import sys
 import unittest
@@ -31,7 +30,7 @@ import unittest
 package_root = os.path.dirname(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
 sys.path.insert(0, package_root)
 
-import pyxb
+from vantivsdk import *
 
 conf = utils.Configuration()
 
@@ -63,3 +62,8 @@ class TestRecurringTxns(unittest.TestCase):
 
         response = online.request(transaction, conf)
         self.assertEquals('000', response['saleResponse']['response'])
+
+
+
+if __name__ == '__main__':
+    unittest.main()
