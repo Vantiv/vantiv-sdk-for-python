@@ -1,8 +1,8 @@
 <xs:schema targetNamespace="http://www.vantivcnp.com/schema" xmlns:xp="http://www.vantivcnp.com/schema"
     xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
 
-    <xs:include schemaLocation="cnpCommon_v12.3.xsd" />
-    <xs:include schemaLocation="cnpRecurring_v12.3.xsd" />
+    <xs:include schemaLocation="cnpCommon_v12.5.xsd" />
+    <xs:include schemaLocation="cnpRecurring_v12.5.xsd" />
 
     <xs:element name="transaction" type="xp:transactionType" abstract="true" />
     <xs:complexType name="cnpTransactionInterface" abstract="true"/>
@@ -740,15 +740,20 @@
         <xs:complexContent>
             <xs:extension base="xp:transactionTypeWithReportGroup">
                 <xs:sequence>
+                    <xs:element name="encryptionKeyId" type="xp:string25Type" minOccurs="0" />
                     <xs:element name="orderId" type="xp:string25Type" minOccurs="0" />
                     <xs:choice>
                         <xs:element name="mpos" type="xp:mposType" />
                         <xs:element name="accountNumber" type="xp:ccAccountNumberType" />
+                        <xs:element name="encryptedAccountNumber" type="xp:encryptedCcAccountNumberType" />
                         <xs:element name="echeckForToken" type="xp:echeckForTokenType" />
                         <xs:element name="paypageRegistrationId" type="xp:string512Type" />
                         <xs:element name="applepay" type="xp:applepayType" />
                     </xs:choice>
-                    <xs:element name="cardValidationNum" type="xp:cvNumType" minOccurs="0" />
+                    <xs:choice>
+                        <xs:element name="cardValidationNum" type="xp:cvNumType" minOccurs="0" />
+                        <xs:element name="encryptedCardValidationNum" type="xp:encryptedCcAccountNumberType" minOccurs="0" />
+                    </xs:choice>
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>
@@ -810,6 +815,7 @@
                         <xs:element ref="xp:androidpayResponse" minOccurs="0"/>
                         <!-- For merchant initiated transactions -->
                         <xs:element name="networkTransactionId" type="xp:string30Type" minOccurs="0" />
+                        <xs:element name="paymentAccountReferenceNumber" type="xp:string50Type" minOccurs="0" />
                     </xs:all>
                 </xs:extension>
             </xs:complexContent>
@@ -1230,6 +1236,7 @@
                         <xs:element name="networkTransactionId" type="xp:string30Type" minOccurs="0" />
                         <!-- If PRIME PINless debit transaction -->
                         <xs:element ref="xp:pinlessDebitResponse" minOccurs="0"/>
+                        <xs:element name="paymentAccountReferenceNumber" type="xp:string50Type" minOccurs="0" />
                     </xs:all>
                 </xs:extension>
             </xs:complexContent>
@@ -2630,6 +2637,7 @@
                             <xs:element name="submerchantName" type="xp:string256Type"/>
                             <xs:element name="fundsTransferId" type="xp:stringExactly16AlphanumericType" />
                             <xs:element name="amount" type="xp:transactionAmountType" />
+                            <xs:element name="disbursementType" type="xp:disbursementTypeEnum" minOccurs="0"/>
                             <xs:choice>
                                 <xs:element name="card" type="xp:cardType" />
                                 <xs:element name="token" type="xp:cardTokenType" />
@@ -2721,5 +2729,32 @@
             </xs:sequence>
         </xs:complexType>
     </xs:element>
-     
+    
+    <xs:simpleType name="disbursementTypeEnum">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="VAA" />
+            <xs:enumeration value="VBB" />
+            <xs:enumeration value="VBI" />
+            <xs:enumeration value="VBP" />
+            <xs:enumeration value="VCC" />
+            <xs:enumeration value="VCI" />
+            <xs:enumeration value="VCO" />
+            <xs:enumeration value="VCP" />
+            <xs:enumeration value="VFD" />
+            <xs:enumeration value="VGD" />
+            <xs:enumeration value="VGP" />
+            <xs:enumeration value="VLO" />
+            <xs:enumeration value="VMA" />
+            <xs:enumeration value="VMD" />
+            <xs:enumeration value="VMI" />
+            <xs:enumeration value="VMP" />
+            <xs:enumeration value="VOG" />
+            <xs:enumeration value="VPD" />
+            <xs:enumeration value="VPG" />
+            <xs:enumeration value="VPP" />
+            <xs:enumeration value="VPS" />
+            <xs:enumeration value="VTU" />
+            <xs:enumeration value="VWT" />
+        </xs:restriction>
+    </xs:simpleType>
 </xs:schema>

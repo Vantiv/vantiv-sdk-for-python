@@ -157,6 +157,7 @@
 
 
 
+
     <xs:complexType name="advancedFraudChecksType">
         <xs:sequence>
             <xs:element name="threatMetrixSessionId" type="xs:token" minOccurs="0"/>
@@ -1085,15 +1086,20 @@
         <xs:complexContent>
             <xs:extension base="xp:transactionTypeWithReportGroup">
                 <xs:sequence>
+                    <xs:element name="encryptionKeyId" type="xs:string" minOccurs="0" />
                     <xs:element name="orderId" type="xs:string" minOccurs="0" />
                     <xs:choice>
                         <xs:element name="mpos" type="xp:mposType" />
                         <xs:element name="accountNumber" type="xs:string" />
+                        <xs:element name="encryptedAccountNumber" type="xs:string" />
                         <xs:element name="echeckForToken" type="xp:echeckForTokenType" />
                         <xs:element name="paypageRegistrationId" type="xs:string" />
                         <xs:element name="applepay" type="xp:applepayType" />
                     </xs:choice>
-                    <xs:element name="cardValidationNum" type="xs:string" minOccurs="0" />
+                    <xs:choice>
+                        <xs:element name="cardValidationNum" type="xs:string" minOccurs="0" />
+                        <xs:element name="encryptedCardValidationNum" type="xs:string" minOccurs="0" />
+                    </xs:choice>
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>
@@ -1155,6 +1161,7 @@
                         <xs:element ref="xp:androidpayResponse" minOccurs="0"/>
                         <!-- For merchant initiated transactions -->
                         <xs:element name="networkTransactionId" type="xs:string" minOccurs="0" />
+                        <xs:element name="paymentAccountReferenceNumber" type="xs:string" minOccurs="0" />
                     </xs:all>
                 </xs:extension>
             </xs:complexContent>
@@ -1512,6 +1519,7 @@
                         <xs:element name="networkTransactionId" type="xs:string" minOccurs="0" />
                         <!-- If PRIME PINless debit transaction -->
                         <xs:element ref="xp:pinlessDebitResponse" minOccurs="0"/>
+                        <xs:element name="paymentAccountReferenceNumber" type="xs:string" minOccurs="0" />
                     </xs:all>
                 </xs:extension>
             </xs:complexContent>
@@ -2584,6 +2592,7 @@
                             <xs:element name="submerchantName" type="xs:string"/>
                             <xs:element name="fundsTransferId" type="xs:string" />
                             <xs:element name="amount" type="xs:integer" />
+                            <xs:element name="disbursementType" type="xs:string" minOccurs="0"/>
                             <xs:choice>
                                 <xs:element name="card" type="xp:cardType" />
                                 <xs:element name="token" type="xp:cardTokenType" />
@@ -2675,7 +2684,7 @@
             </xs:sequence>
         </xs:complexType>
     </xs:element>
-     
+    
 
 <!--cnpBatch-->
 

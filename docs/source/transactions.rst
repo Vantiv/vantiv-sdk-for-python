@@ -357,6 +357,7 @@ fastAccessFunding
         :var amount: String or Number
         :var card: instance of :py:class:`vantivsdk.fields.cardType`
         :var customerId: String or Number
+        :var disbursementType: String or Number
         :var fundingSubmerchantId: String or Number
         :var fundsTransferId: String or Number
         :var id: String or Number
@@ -566,6 +567,9 @@ registerTokenRequest
         :var cardValidationNum: String or Number
         :var customerId: String or Number
         :var echeckForToken: instance of :py:class:`vantivsdk.fields.echeckForTokenType`
+        :var encryptedAccountNumber: String or Number
+        :var encryptedCardValidationNum: String or Number
+        :var encryptionKeyId: String or Number
         :var id: String or Number
         :var mpos: instance of :py:class:`vantivsdk.fields.mposType`
         :var orderId: String or Number

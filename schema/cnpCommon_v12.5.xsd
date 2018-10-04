@@ -759,6 +759,13 @@
         </xs:restriction>
     </xs:simpleType>
 
+    <xs:simpleType name="encryptedCcAccountNumberType">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+            <xs:maxLength value="1028" />
+        </xs:restriction>
+    </xs:simpleType>
+
     <xs:simpleType name="trackStatusType">
         <xs:restriction base="xs:int">
             <xs:minInclusive value="0"/>
