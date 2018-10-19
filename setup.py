@@ -19,7 +19,7 @@ setup(
     url='https://developer.vantiv.com/community/ecommerce',
     packages=['vantivsdk', 'scripts'],
     install_requires=[
-        'PyXB==1.2.5',
+        'PyXB==1.2.6',
         'paramiko>=1.14.0',
         'requests>=2.13.0',
         'six>=1.10.0',
