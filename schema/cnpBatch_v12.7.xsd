@@ -273,7 +273,7 @@
         </xs:complexType>
     </xs:element>
     
-     <xs:element name="vendorCredit" substitutionGroup="xp:transaction">
+     <xs:element name="vendorCreditCtx" substitutionGroup="xp:transaction">
         <xs:complexType>
             <xs:complexContent>
                 <xs:extension base="xp:transactionTypeWithReportGroup">
@@ -291,7 +291,7 @@
         </xs:complexType>
     </xs:element>
 
-    <xs:element name="vendorDebit" substitutionGroup="xp:transaction">
+    <xs:element name="vendorDebitCtx" substitutionGroup="xp:transaction">
         <xs:complexType>
             <xs:complexContent>
                 <xs:extension base="xp:transactionTypeWithReportGroup">
@@ -310,7 +310,7 @@
     </xs:element>
     
     
-    <xs:element name="submerchantCredit" substitutionGroup="xp:transaction">
+    <xs:element name="submerchantCreditCtx" substitutionGroup="xp:transaction">
         <xs:complexType>
             <xs:complexContent>
                 <xs:extension base="xp:transactionTypeWithReportGroup">
@@ -329,7 +329,7 @@
         </xs:complexType>
     </xs:element>
 
-    <xs:element name="submerchantDebit" substitutionGroup="xp:transaction">
+    <xs:element name="submerchantDebitCtx" substitutionGroup="xp:transaction">
         <xs:complexType>
             <xs:complexContent>
                 <xs:extension base="xp:transactionTypeWithReportGroup">

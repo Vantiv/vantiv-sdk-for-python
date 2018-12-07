@@ -28,6 +28,7 @@ import requests
 import xmltodict
 import six
 
+from vantivsdk.commManager import commManager
 from . import (fields, utils, dict2obj)
 
 
@@ -173,17 +174,27 @@ def _http_post(post_data, conf, timeout):
     Raise:
         VantivException
     """
+    REQUEST_RESULT_RESPONSE_RECEIVED = 1
+    REQUEST_RESULT_CONNECTION_FAILED = 2
+    REQUEST_RESULT_RESPONSE_TIMEOUT = 3
+
     headers = {'Content-type': 'text/xml; charset=UTF-8'}
     proxies = {'https': conf.proxy} if (conf.proxy is not None and conf.proxy != '') else None
     try:
-        response = requests.post(conf.url, data=post_data, headers=headers, proxies=proxies, timeout=timeout)
+        commManagerTemp = commManager(conf).manager
+        requTarget = commManagerTemp.findUrl()
+        response = requests.post(requTarget["targetUrl"], data=post_data, headers=headers, proxies=proxies, timeout=timeout)
+        commManagerTemp.reportResult(requTarget, REQUEST_RESULT_RESPONSE_RECEIVED, response.status_code)
     except requests.RequestException:
+        commManagerTemp.reportResult(requTarget, REQUEST_RESULT_CONNECTION_FAILED, 0)
         raise utils.VantivException("Error with Https Request, Please Check Proxy and Url configuration")
+
     if response.status_code != 200:
         raise utils.VantivException("Error with Https Response, Status code: ", response.status_code)
 
     # Check empty response
     if not response:
+        commManagerTemp.reportResult(requTarget, REQUEST_RESULT_RESPONSE_TIMEOUT, 0)
         raise utils.VantivException("The response is empty, Please call Vantiv eCommerce")
 
     if conf.print_xml:

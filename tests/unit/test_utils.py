@@ -35,11 +35,13 @@ from vantivsdk import (utils)
 class TestUtils(unittest.TestCase):
     def test_not_load_save(self):
         conf_ori = utils.Configuration()
+
         conf = utils.Configuration()
         conf.proxy = 'TestCase %d' % random.randint(0,100)
         conf.url = 'TestCase %d' % random.randint(0,100)
         conf.save()
         conf_new = utils.Configuration()
+
         conf_ori.save()
         self.assertEquals(conf.proxy, conf_new.proxy)
         self.assertEquals(conf.url, conf_new.url)

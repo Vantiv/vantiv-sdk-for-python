@@ -86,23 +86,24 @@ class TestEcheckVerification(unittest.TestCase):
         self.assertEquals('000', response['echeckVerificationResponse']['response'])
 
 
-    def test_echeck_verification_without_billing_address(self):
-        transaction = fields.echeckVerification()
-        transaction.reportGroup = 'Planets'
-        transaction.orderId = '12344'
-        transaction.amount = 106
-        transaction.orderSource = 'ecommerce'
-        transaction.secondaryAmount = 50
-        transaction.id = 'ThisIsID'
-
-        echeck = fields.echeckType()
-        echeck.accNum = '12345657890'
-        echeck.routingNum = '123456789'
-        echeck.checkNum = '123455'
-        echeck.accType = 'Checking'
-        transaction.echeck = echeck
-
-        self.assertRaises(Exception, online.request, transaction, conf)
+    # not valid for xsd version 12.7
+    # def test_echeck_verification_without_billing_address(self):
+    #     transaction = fields.echeckVerification()
+    #     transaction.reportGroup = 'Planets'
+    #     transaction.orderId = '12344'
+    #     transaction.amount = 106
+    #     transaction.orderSource = 'ecommerce'
+    #     transaction.secondaryAmount = 50
+    #     transaction.id = 'ThisIsID'
+    #
+    #     echeck = fields.echeckType()
+    #     echeck.accNum = '12345657890'
+    #     echeck.routingNum = '123456789'
+    #     echeck.checkNum = '123455'
+    #     echeck.accType = 'Checking'
+    #     transaction.echeck = echeck
+    #
+    #     self.assertRaises(Exception, online.request, transaction, conf)
 
 if __name__ == '__main__':
     unittest.main()

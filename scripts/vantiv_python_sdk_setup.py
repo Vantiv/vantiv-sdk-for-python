@@ -56,6 +56,7 @@ def ask_user():
         'useEncryption',
         'vantivPublicKeyID',
         'gpgPassphrase'
+
     ]
     attr_dict = {
         'user': '',
@@ -77,14 +78,20 @@ def ask_user():
         'deleteBatchFiles': 'y',
         'useEncryption': 'y',
         'vantivPublicKeyID': '',
-        'gpgPassphrase': ''
+        'gpgPassphrase': '',
+        'multiSiteUrl1' : '',
+        'multiSiteUrl2' : '',
+        'multiSite' : 'False',
+        'printMultiSiteDebug': 'False',
+        'multiSiteErrorThreshold' : '5',
+        'maxHoursWithoutSwitch' : '48'
     }
     attr_valid_dict = {
         'url': {
-            'sandbox': 'https://www.testvantivcnp.com/sandbox/communicator/online',
-            'prelive': 'https://payments.vantivprelive.com/vap/communicator/online',
-            'postlive': 'https://payments.vantivpostlive.com/vap/communicator/online',
-            'prod': 'https://payments.vantivcnp.com/vap/communicator/online',
+            'sandbox': ['https://www.testvantivcnp.com/sandbox/communicator/online','https://www.testvantivcnp.com/sandbox/new/sandbox/communicator/online','https://www.testvantivcnp.com/sandbox/new/sandbox/communicator/online'],
+            'prelive': ['https://payments.vantivprelive.com/vap/communicator/online', 'https://payments.east.vantivprelive.com/vap/communicator/online','https://payments.west.vantivprelive.com/vap/communicator/online'],
+            'postlive': ['https://payments.vantivpostlive.com/vap/communicator/online', 'https://payments.east.vantivpostlive.com/vap/communicator/online', 'https://payments.west.vantivpostlive.com/vap/communicator/online'],
+            'prod': ['https://payments.vantivcnp.com/vap/communicator/online', 'https://payments.east.vantivcnp.com/vap/communicator/online', 'https://payments.west.vantivcnp.com/vap/communicator/online'],
             'transactprelive': 'https://transact.vantivprelive.com/vap/communicator/online',
             'transactpostlive': 'https://transact.vantivpostlive.com/vap/communicator/online',
             'transactprod': 'https://transact.vantivcnp.com/vap/communicator/online'
@@ -140,7 +147,12 @@ accept a default value, if one is given in brackets).''')
                 else:
                     print('Invalid input for "%s" = "%s"' % (attr, x))
                     continue
-            attr_dict[attr] = x
+            if(isinstance(x,list)):
+                attr_dict[attr] = x[0]
+                attr_dict['multiSiteUrl1'] = x[1]
+                attr_dict['multiSiteUrl2'] = x[2]
+            else:
+                attr_dict[attr] = x
             break
 
     conf = utils.Configuration()
@@ -282,6 +294,11 @@ class CC:
 
     @classmethod
     def byellow(cls, _str):
+        if(isinstance(_str, list)):
+            result = ""
+            for url in _str:
+                result += cls.BYELLOW + url + cls.COLOR_OFF + "  "
+            return result
         return cls.BYELLOW + _str + cls.COLOR_OFF
 
     @classmethod

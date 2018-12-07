@@ -140,5 +140,64 @@ class TestOnline(unittest.TestCase):
         response = online.request(transaction, conf, 'object')
         self.assertEquals('0', response.response)
 
+    @mock.patch.object(online, '_http_post')
+    def test_request_relturn_format2(self, mock__http_post):
+        transaction = fields.authorization()
+        transaction.reportGroup = 'Planets'
+        transaction.orderId = '12344'
+        transaction.amount = 106
+        transaction.orderSource = 'ecommerce'
+        transaction.id = 'thisisid'
+
+        card = fields.cardType()
+        card.number = '4100000000000000'
+        card.expDate = '1210'
+        card.type = 'VI'
+
+        transaction.card = card
+
+        mock__http_post.return_value = """<cnpOnlineResponse version='11.0' response='1' message='Valid Format' xmlns='http://www.vantivcnp.com/schema'>
+</cnpOnlineResponse>
+        """
+        self.assertRaises(utils.VantivException, online.request, transaction, conf, 'dict')
+
+        mock__http_post.return_value = """<cnpOnlineResponse version='11.0' response='0' message='Valid Format' xmlns='http://www.vantivcnp.com/schema'>
+          <authorizationResponse id='thisisid' reportGroup='Planets' customerId=''>
+            <cnpTxnId>4544691351798650001</cnpTxnId>
+            <orderId>12344</orderId>
+            <response>000</response>
+            <responseTime>2017-03-13T12:14:00</responseTime>
+            <message>Approved</message>
+            <authCode>07585</authCode>
+            <accountUpdater>
+              <originalCardInfo>
+                <type>VI</type>
+                <number>4100100000000000</number>
+                <expDate>1110</expDate>
+              </originalCardInfo>
+              <newCardInfo>
+                <type>VI</type>
+                <number>4532694461984309</number>
+                <expDate>1114</expDate>
+              </newCardInfo>
+            </accountUpdater>
+            <networkTransactionId>63225578415568556365452427825</networkTransactionId>
+          </authorizationResponse>
+        </cnpOnlineResponse>
+                """
+        # return dict
+        response = online.request(transaction, conf)
+        self.assertEquals('0', response['@response'])
+        self.assertEquals('4544691351798650001', response['authorizationResponse']['cnpTxnId'])
+        self.assertIsInstance(response, dict)
+
+        # return xml string
+        response = online.request(transaction, conf, 'xml')
+        self.assertIsInstance(response, str)
+
+        # return fields object.
+        response = online.request(transaction, conf, 'object')
+        self.assertEquals('0', response.response)
+
 if __name__ == '__main__':
     unittest.main()

@@ -32,5 +32,5 @@ sys.path.insert(0, package_root)
 
 import run_test_utils
 
-tests_dir = ['certification/required', 'functional','unit']
+tests_dir = [ 'unit','functional','certification/required']
 run_test_utils.run_tests(tests_dir)

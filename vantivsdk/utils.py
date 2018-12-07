@@ -74,7 +74,13 @@ class Configuration(object):
             'gpgPassphrase':'',
             'merchantPublicKeyID':'',
             'useEncryption':'',
-            'deleteBatchFiles':''
+            'deleteBatchFiles':'',
+            'multiSiteUrl1' : '',
+            'multiSiteUrl2' : '',
+            'multiSite' : False,
+            'printMultiSiteDebug' : False,
+            'multiSiteErrorThreshold' : 0,
+            'maxHoursWithoutSwitch' : 0
         }
 
         # set default values
@@ -131,6 +137,10 @@ def obj_to_xml(obj):
         raise VantivException(e.details())
     xml = xml.replace(b'ns1:', b'')
     xml = xml.replace(b':ns1', b'')
+    xml = xml.replace(b'vendorCreditCtx', b'vendorCredit')
+    xml = xml.replace(b'vendorDebitCtx', b'vendorDebit')
+    xml = xml.replace(b'submerchantCreditCtx', b'submerchantCredit')
+    xml = xml.replace(b'submerchantDebitCtx', b'submerchantDebit')
     return xml
 
 
