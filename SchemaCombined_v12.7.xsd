@@ -2895,7 +2895,7 @@
             </xs:complexContent>
         </xs:complexType>
     </xs:element>
-
+    
      <xs:element name="vendorCreditCtx" substitutionGroup="xp:transaction">
         <xs:complexType>
             <xs:complexContent>
@@ -2931,8 +2931,8 @@
             </xs:complexContent>
         </xs:complexType>
     </xs:element>
-
-
+    
+    
     <xs:element name="submerchantCreditCtx" substitutionGroup="xp:transaction">
         <xs:complexType>
             <xs:complexContent>
@@ -3304,8 +3304,8 @@
             </xs:complexContent>
         </xs:complexType>
     </xs:element>
-
-
+    
+    
     <xs:element name="submerchantCredit" substitutionGroup="xp:transaction">
         <xs:complexType>
             <xs:complexContent>
