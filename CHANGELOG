@@ -1,5 +1,10 @@
 = Vantiv eCommerce Python SDK
 
+==Version 12.7.0 (Dec 10, 2018)
+* Feature: Full functions for XML v12.7
+* Feature: add support for new type: echeckTypeCtx
+* Feature: add 4 new types in cnpBatch: vendorCreditCtx, vendorDebitCtx, submerchantCreditCtx, submerchantDebitCtx
+
 ==Version 12.5.0 (Oct 04, 2018)
 * Feature: Full functions for XML v12.5
 * Feature: add a new type: encryptedCcAccountNumberType
