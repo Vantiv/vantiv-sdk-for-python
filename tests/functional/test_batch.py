@@ -192,112 +192,130 @@ class TestBatch(unittest.TestCase):
             self.assertEquals('%s.xml.asc' % filename, response)
 
 
-
-    def test_batch_ctx(self):
-        transactions = batch.Transactions()
-
-        # vendorCreditCtx
-        vendorCreditCtx = fields.vendorCreditCtx()
-        echeck = fields.echeckTypeCtx()
-        echeck.accNum = "accNum"
-        echeck.accType = "accType"
-        echeck.ccdPaymentInformation = "ccdPaymentInformation"
-        echeck.checkNum = "checkNum"
-        echeck.routingNum = "routingNum"
-        vendorCreditCtx.id = 'ThisIsID'
-        vendorCreditCtx.amount = 123
-        vendorCreditCtx.accountInfo = echeck
-        vendorCreditCtx.fundingSubmerchantId = "submerchantId"
-        vendorCreditCtx.vendorName = "submerchantName"
-        vendorCreditCtx.fundsTransferId = "fundsTransferId"
-        transactions.add(vendorCreditCtx)
-
-        # vendorDebitCtx
-        vendorDebitCtx = fields.vendorDebitCtx()
-        echeck = fields.echeckTypeCtx()
-        echeck.accNum = "accNum"
-        echeck.accType = "accType"
-        echeck.ccdPaymentInformation = "ccdPaymentInformation"
-        echeck.checkNum = "checkNum"
-        echeck.routingNum = "routingNum"
-        vendorDebitCtx.id = 'ThisIsID'
-        vendorDebitCtx.amount = 123
-        vendorDebitCtx.accountInfo = echeck
-        vendorDebitCtx.fundingSubmerchantId = "submerchantId"
-        vendorDebitCtx.vendorName = "submerchantName"
-        vendorDebitCtx.fundsTransferId = "fundsTransferId"
-        transactions.add(vendorDebitCtx)
-
-        # submerchantDebitCtx
-        submerchantDebitCtx = fields.submerchantDebitCtx()
-        echeck = fields.echeckTypeCtx()
-        echeck.accNum = "accNum"
-        echeck.accType = "accType"
-        echeck.ccdPaymentInformation = "ccdPaymentInformation"
-        echeck.checkNum = "checkNum"
-        echeck.routingNum = "routingNum"
-        submerchantDebitCtx.id = 'ThisIsID'
-        submerchantDebitCtx.amount = 123
-        submerchantDebitCtx.accountInfo = echeck
-        submerchantDebitCtx.fundingSubmerchantId = "submerchantId"
-        submerchantDebitCtx.submerchantName = "submerchantName"
-        submerchantDebitCtx.fundsTransferId = "fundsTransferId"
-        transactions.add(submerchantDebitCtx)
-
-        # submerchantCreditCtx
-        submerchantCreditCtx = fields.submerchantCreditCtx()
-        echeck = fields.echeckTypeCtx()
-        echeck.accNum = "accNum"
-        echeck.accType = "accType"
-        echeck.ccdPaymentInformation= "ccdPaymentInformation"
-        echeck.checkNum = "checkNum"
-        echeck.routingNum = "routingNum"
-        submerchantCreditCtx.id = 'ThisIsID'
-        submerchantCreditCtx.amount = 123
-        submerchantCreditCtx.accountInfo = echeck
-        submerchantCreditCtx.fundingSubmerchantId = "submerchantId"
-        submerchantCreditCtx.submerchantName = "submerchantName"
-        submerchantCreditCtx.fundsTransferId = "fundsTransferId"
-        transactions.add(submerchantCreditCtx)
-
-        filename = 'batch_test_%s' % datetime.datetime.now().strftime("%Y%m%d%H%M%S%f")
-
-        # stream to Vaitiv eCommerce and get object as response
-        response = batch.submit(transactions, conf, filename)
-
-        if conf.useEncryption:
-            # Using encryption.
-            retry = True
-            tried = 0
-            withEncryptionReponseFilepath = ''
-            while retry:
-                tried += 1
-                try:
-                    withEncryptionReponseFilepath = batch._get_file_from_sftp(response, conf, False, 60)
-                    retry = False
-                except:
-                    # sleep 1 minute waiting for batch get processed
-                    print("sleep 30 seconds waiting for batch get processed")
-                    time.sleep(30)
-                if tried > 20:
-                    self.fail("Timeout for retrieve batch response")
-                    break
-
-            call(["cat", withEncryptionReponseFilepath])
-            ### <<< WITH ENCRYPTION
-
-            with open(withEncryptionReponseFilepath, 'r') as xml_file:
-                obj = fields.CreateFromDocument(xml_file.read())
-                self.assertEquals("Valid Format", obj.message)
-
-        else:
-            with open(os.path.join(conf.batch_requests_path, '%s.xml' % filename), 'r') as xml_file:
-                obj = fields.CreateFromDocument(xml_file.read())
-                self.assertEquals(1, obj.numBatchRequests)
-                self.assertEquals(0, obj.batchRequest[0].authAmount)
-
-
-            self.assertEquals('%s.xml.asc' % filename, response)
+    #
+    # def test_batch_ctx(self):
+    #     transactions = batch.Transactions()
+    #
+    #     # vendorCreditCtx
+    #     vendorCreditCtx = fields.vendorCreditCtx()
+    #     echeck = fields.echeckTypeCtx()
+    #     echeck.accNum = "accNum"
+    #     echeck.accType = "accType"
+    #     echeck.ccdPaymentInformation = "ccdPaymentInformation"
+    #     echeck.checkNum = "checkNum"
+    #     echeck.routingNum = "routingNum"
+    #     vendorCreditCtx.id = 'ThisIsID'
+    #     vendorCreditCtx.amount = 123
+    #     vendorCreditCtx.accountInfo = echeck
+    #     vendorCreditCtx.fundingSubmerchantId = "submerchantId"
+    #     vendorCreditCtx.vendorName = "submerchantName"
+    #     vendorCreditCtx.fundsTransferId = "fundsTransferId"
+    #     transactions.add(vendorCreditCtx)
+    #
+    #     # vendorDebitCtx
+    #     vendorDebitCtx = fields.vendorDebitCtx()
+    #     echeck = fields.echeckTypeCtx()
+    #     echeck.accNum = "accNum"
+    #     echeck.accType = "accType"
+    #     echeck.ccdPaymentInformation = "ccdPaymentInformation"
+    #     echeck.checkNum = "checkNum"
+    #     echeck.routingNum = "routingNum"
+    #     vendorDebitCtx.id = 'ThisIsID'
+    #     vendorDebitCtx.amount = 123
+    #     vendorDebitCtx.accountInfo = echeck
+    #     vendorDebitCtx.fundingSubmerchantId = "submerchantId"
+    #     vendorDebitCtx.vendorName = "submerchantName"
+    #     vendorDebitCtx.fundsTransferId = "fundsTransferId"
+    #     transactions.add(vendorDebitCtx)
+    #
+    #     # submerchantDebitCtx
+    #     submerchantDebitCtx = fields.submerchantDebitCtx()
+    #     echeck = fields.echeckTypeCtx()
+    #     echeck.accNum = "accNum"
+    #     echeck.accType = "accType"
+    #     echeck.ccdPaymentInformation = "ccdPaymentInformation"
+    #     echeck.checkNum = "checkNum"
+    #     echeck.routingNum = "routingNum"
+    #     submerchantDebitCtx.id = 'ThisIsID'
+    #     submerchantDebitCtx.amount = 123
+    #     submerchantDebitCtx.accountInfo = echeck
+    #     submerchantDebitCtx.fundingSubmerchantId = "submerchantId"
+    #     submerchantDebitCtx.submerchantName = "submerchantName"
+    #     submerchantDebitCtx.fundsTransferId = "fundsTransferId"
+    #     transactions.add(submerchantDebitCtx)
+    #
+    #     # submerchantCreditCtx
+    #     submerchantCreditCtx = fields.submerchantCreditCtx()
+    #     echeck = fields.echeckTypeCtx()
+    #     echeck.accNum = "accNum"
+    #     echeck.accType = "accType"
+    #     echeck.ccdPaymentInformation= "ccdPaymentInformation"
+    #     echeck.checkNum = "checkNum"
+    #     echeck.routingNum = "routingNum"
+    #     submerchantCreditCtx.id = 'ThisIsID'
+    #     submerchantCreditCtx.amount = 123
+    #     submerchantCreditCtx.accountInfo = echeck
+    #     submerchantCreditCtx.fundingSubmerchantId = "submerchantId"
+    #     submerchantCreditCtx.submerchantName = "submerchantName"
+    #     submerchantCreditCtx.fundsTransferId = "fundsTransferId"
+    #     transactions.add(submerchantCreditCtx)
+    #
+    #     filename = 'batch_test_%s' % datetime.datetime.now().strftime("%Y%m%d%H%M%S%f")
+    #
+    #     # stream to Vaitiv eCommerce and get object as response
+    #     response = batch.submit(transactions, conf, filename)
+    #
+    #     if conf.useEncryption:
+    #         # Using encryption.
+    #         retry = True
+    #         tried = 0
+    #         withEncryptionReponseFilepath = ''
+    #         while retry:
+    #             tried += 1
+    #             try:
+    #                 withEncryptionReponseFilepath = batch._get_file_from_sftp(response, conf, False, 60)
+    #                 retry = False
+    #             except:
+    #                 # sleep 1 minute waiting for batch get processed
+    #                 print("sleep 30 seconds waiting for batch get processed")
+    #                 time.sleep(30)
+    #             if tried > 20:
+    #                 self.fail("Timeout for retrieve batch response")
+    #                 break
+    #
+    #         call(["cat", withEncryptionReponseFilepath])
+    #         ### <<< WITH ENCRYPTION
+    #
+    #         with open(withEncryptionReponseFilepath, 'r') as xml_file:
+    #             obj = fields.CreateFromDocument(xml_file.read())
+    #             self.assertEquals("Valid Format", obj.message)
+    #
+    #     else:
+    #         with open(os.path.join(conf.batch_requests_path, '%s.xml' % filename), 'r') as xml_file:
+    #             obj = fields.CreateFromDocument(xml_file.read())
+    #             self.assertEquals(1, obj.numBatchRequests)
+    #             self.assertEquals(0, obj.batchRequest[0].authAmount)
+    #
+    #
+    #         retry = True
+    #         tried = 0
+    #         while retry:
+    #             tried += 1
+    #             try:
+    #                 # retrieve batch request
+    #                 response_file = batch.retrieve(response, conf)
+    #                 retry = False
+    #                 self.assertIn('batchResponse', response_file)
+    #             except:
+    #                 # sleep 1 minute waiting for batch get processed
+    #                 print("sleep 30 seconds waiting for batch get processed")
+    #                 time.sleep(30)
+    #             if tried > 20:
+    #                 self.fail("Timeout for retrieve batch response")
+    #                 break
+    #
+    #
+    #         self.assertEquals('%s.xml.asc' % filename, response)
     #vvvvv
     def test_batch_rfr(self):
         # Initial Transactions container
