@@ -194,74 +194,74 @@ class TestBatch(unittest.TestCase):
 
 
     def test_batch_ctx(self):
+        conf2 = dict()
+        conf = utils.Configuration(conf2)
+        # conf2['user'] = conf.payfacUsername_v12_7
+        # conf2['password'] = conf.payfacPassword_v12_7
+        # conf2['sftp_username'] = conf.payfacSftpUsername_v12_7
+        # conf2['sftp_password'] = conf.payfacSftpPassword_v12_7
+        # conf2['merchantId'] = conf.payfacMerchantId_v12_7
+        #
+        conf.user = conf.payfacUsername_v12_7
+        conf.password = conf.payfacPassword_v12_7
+        conf.sftp_username = conf.payfacSftpUsername_v12_7
+        conf.sftp_password = conf.payfacSftpPassword_v12_7
+        conf.merchantId = conf.payfacMerchantId_v12_7
+
         transactions = batch.Transactions()
+
+        fundsTransferIdString = str(int(time.time()))
+
+        echeck = fields.echeckTypeCtx()
+        echeck.accNum = "1092969901"
+        echeck.accType = "Checking"
+        ctxPaymentInformation = fields.ctxPaymentInformationType()
+        ctxPaymentInformation.ctxPaymentDetail = ["ctx payment detail"]
+        echeck.ctxPaymentInformation = ctxPaymentInformation
+        echeck.checkNum = "123455"
+        echeck.routingNum = "011075150"
 
         # vendorCreditCtx
         vendorCreditCtx = fields.vendorCreditCtx()
-        echeck = fields.echeckTypeCtx()
-        echeck.accNum = "accNum"
-        echeck.accType = "accType"
-        echeck.ccdPaymentInformation = "ccdPaymentInformation"
-        echeck.checkNum = "checkNum"
-        echeck.routingNum = "routingNum"
         vendorCreditCtx.id = 'ThisIsID'
         vendorCreditCtx.amount = 123
         vendorCreditCtx.accountInfo = echeck
         vendorCreditCtx.fundingSubmerchantId = "submerchantId"
         vendorCreditCtx.vendorName = "submerchantName"
-        vendorCreditCtx.fundsTransferId = "fundsTransferId"
+        vendorCreditCtx.fundsTransferId = fundsTransferIdString
         transactions.add(vendorCreditCtx)
 
         # vendorDebitCtx
         vendorDebitCtx = fields.vendorDebitCtx()
-        echeck = fields.echeckTypeCtx()
-        echeck.accNum = "accNum"
-        echeck.accType = "accType"
-        echeck.ccdPaymentInformation = "ccdPaymentInformation"
-        echeck.checkNum = "checkNum"
-        echeck.routingNum = "routingNum"
         vendorDebitCtx.id = 'ThisIsID'
         vendorDebitCtx.amount = 123
         vendorDebitCtx.accountInfo = echeck
         vendorDebitCtx.fundingSubmerchantId = "submerchantId"
         vendorDebitCtx.vendorName = "submerchantName"
-        vendorDebitCtx.fundsTransferId = "fundsTransferId"
+        vendorDebitCtx.fundsTransferId = fundsTransferIdString
         transactions.add(vendorDebitCtx)
 
         # submerchantDebitCtx
         submerchantDebitCtx = fields.submerchantDebitCtx()
-        echeck = fields.echeckTypeCtx()
-        echeck.accNum = "accNum"
-        echeck.accType = "accType"
-        echeck.ccdPaymentInformation = "ccdPaymentInformation"
-        echeck.checkNum = "checkNum"
-        echeck.routingNum = "routingNum"
         submerchantDebitCtx.id = 'ThisIsID'
         submerchantDebitCtx.amount = 123
         submerchantDebitCtx.accountInfo = echeck
         submerchantDebitCtx.fundingSubmerchantId = "submerchantId"
         submerchantDebitCtx.submerchantName = "submerchantName"
-        submerchantDebitCtx.fundsTransferId = "fundsTransferId"
+        submerchantDebitCtx.fundsTransferId = fundsTransferIdString
         transactions.add(submerchantDebitCtx)
 
         # submerchantCreditCtx
         submerchantCreditCtx = fields.submerchantCreditCtx()
-        echeck = fields.echeckTypeCtx()
-        echeck.accNum = "accNum"
-        echeck.accType = "accType"
-        echeck.ccdPaymentInformation= "ccdPaymentInformation"
-        echeck.checkNum = "checkNum"
-        echeck.routingNum = "routingNum"
         submerchantCreditCtx.id = 'ThisIsID'
         submerchantCreditCtx.amount = 123
         submerchantCreditCtx.accountInfo = echeck
         submerchantCreditCtx.fundingSubmerchantId = "submerchantId"
         submerchantCreditCtx.submerchantName = "submerchantName"
-        submerchantCreditCtx.fundsTransferId = "fundsTransferId"
+        submerchantCreditCtx.fundsTransferId = fundsTransferIdString
         transactions.add(submerchantCreditCtx)
 
         filename = 'batch_test_%s' % datetime.datetime.now().strftime("%Y%m%d%H%M%S%f")
-
         # stream to Vaitiv eCommerce and get object as response
         response = batch.submit(transactions, conf, filename)
 
@@ -298,6 +298,32 @@ class TestBatch(unittest.TestCase):
 
 
             self.assertEquals('%s.xml.asc' % filename, response)
+
+        retry = True
+        tried = 0
+        while retry:
+            tried += 1
+            try:
+                # retrieve batch request
+
+                responseObj = batch.retrieve(response, conf)
+                retry = False
+
+            except Exception as ex:
+
+                if 'Cannot find file' in ex.message:
+                    # sleep 1 minute waiting for batch get processed
+                    print("sleep 30 seconds waiting for batch to get processed")
+                    time.sleep(30)
+                else:
+                    #retry = False
+                    self.fail(ex.message)
+
+            if tried > 20:
+                self.fail("Timeout for retrieving batch response")
+
+        #self.assertIn('response=0', responseObj)
+        self.assertIn(u'batchResponse', responseObj)
     #vvvvv
     def test_batch_rfr(self):
         # Initial Transactions container
@@ -412,7 +438,7 @@ class TestBatch(unittest.TestCase):
             if tried > 20:
                 self.fail("Timeout for retrieve rfr batch response")
                 break
-    
+
     def test_batch_dict(self):
         txn_dict = {
             'authorization':[

@@ -51,6 +51,15 @@ def CreateFromDocument (xml_text, default_namespace=None, location_base=None):
     objects handled by the parser.  You might pass the URI from which
     the document was obtained.
     """
+    if '<batchRequest' in xml_text:
+        xml_text = xml_text.replace(b'vendorCredit>', b'vendorCreditCtx>')
+        xml_text = xml_text.replace(b'vendorDebit>', b'vendorDebitCtx>')
+        xml_text = xml_text.replace(b'submerchantCredit>', b'submerchantCreditCtx>')
+        xml_text = xml_text.replace(b'submerchantDebit>', b'submerchantDebitCtx>')
+        xml_text = xml_text.replace(b'<vendorCredit', b'<vendorCreditCtx')
+        xml_text = xml_text.replace(b'<vendorDebit', b'<vendorDebitCtx')
+        xml_text = xml_text.replace(b'<submerchantCredit', b'<submerchantCreditCtx')
+        xml_text = xml_text.replace(b'<submerchantDebit', b'<submerchantDebitCtx')
 
     if pyxb.XMLStyle_saxer != pyxb._XMLStyle:
         dom = pyxb.utils.domutils.StringToDOM(xml_text)

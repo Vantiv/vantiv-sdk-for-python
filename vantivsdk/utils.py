@@ -54,7 +54,6 @@ class Configuration(object):
     MERCHANTSDK = 'Python;' + RELEASE
     _CONFIG_FILE_PATH = os.path.join(os.environ['VANTIV_SDK_CONFIG'], ".vantiv_python_sdk.conf") \
         if 'VANTIV_SDK_CONFIG' in os.environ else os.path.join(os.path.expanduser("~"), ".vantiv_python_sdk.conf")
-
     def __init__(self, conf_dict = dict()):
         attr_dict = {
             'user':'',
@@ -80,7 +79,12 @@ class Configuration(object):
             'multiSite' : False,
             'printMultiSiteDebug' : False,
             'multiSiteErrorThreshold' : 0,
-            'maxHoursWithoutSwitch' : 0
+            'maxHoursWithoutSwitch' : 0,
+            "payfacMerchantId_v12_7": "",
+            "payfacUsername_v12_7": "",
+            "payfacPassword_v12_7": "",
+            "payfacSftpUsername_v12_7": "",
+            "payfacSftpPassword_v12_7": ""
         }
 
         # set default values
