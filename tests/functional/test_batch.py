@@ -194,14 +194,7 @@ class TestBatch(unittest.TestCase):
 
 
     def test_batch_ctx(self):
-        conf2 = dict()
-        conf = utils.Configuration(conf2)
-        # conf2['user'] = conf.payfacUsername_v12_7
-        # conf2['password'] = conf.payfacPassword_v12_7
-        # conf2['sftp_username'] = conf.payfacSftpUsername_v12_7
-        # conf2['sftp_password'] = conf.payfacSftpPassword_v12_7
-        # conf2['merchantId'] = conf.payfacMerchantId_v12_7
-        #
+        conf = utils.Configuration()
         conf.user = conf.payfacUsername_v12_7
         conf.password = conf.payfacPassword_v12_7
         conf.sftp_username = conf.payfacSftpUsername_v12_7
@@ -321,9 +314,9 @@ class TestBatch(unittest.TestCase):
 
             if tried > 20:
                 self.fail("Timeout for retrieving batch response")
-
-        #self.assertIn('response=0', responseObj)
         self.assertIn(u'batchResponse', responseObj)
+
+
     #vvvvv
     def test_batch_rfr(self):
         # Initial Transactions container
