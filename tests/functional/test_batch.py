@@ -304,13 +304,13 @@ class TestBatch(unittest.TestCase):
 
             except Exception as ex:
 
-                if 'Cannot find file' in ex.message:
+                if 'Cannot find file' in ex.args[0]:
                     # sleep 1 minute waiting for batch get processed
                     print("sleep 30 seconds waiting for batch to get processed")
                     time.sleep(30)
                 else:
                     #retry = False
-                    self.fail(ex.message)
+                    self.fail(ex.args[0])
 
             if tried > 20:
                 self.fail("Timeout for retrieving batch response")
