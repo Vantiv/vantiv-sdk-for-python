@@ -83,6 +83,7 @@ authorization
         :var originalTransactionAmount: String or Number
         :var paypage: instance of :py:class:`vantivsdk.fields.cardPaypageType`
         :var paypal: instance of :py:class:`vantivsdk.fields.payPal`
+        :var pinlessDebitRequest: instance of :py:class:`vantivsdk.fields.pinlessDebitRequestType`
         :var pos: instance of :py:class:`vantivsdk.fields.pos`
         :var processingInstructions: instance of :py:class:`vantivsdk.fields.processingInstructions`
         :var processingType: String or Number
@@ -674,11 +675,39 @@ submerchantCredit
         :var reportGroup: String or Number
         :var submerchantName: String or Number
 
+submerchantCreditCtx
+--------------------
+    .. py:class:: vantivsdk.fields.submerchantCreditCtx
+
+        :var accountInfo: instance of :py:class:`vantivsdk.fields.echeckTypeCtx`
+        :var amount: String or Number
+        :var customIdentifier: String or Number
+        :var customerId: String or Number
+        :var fundingSubmerchantId: String or Number
+        :var fundsTransferId: String or Number
+        :var id: String or Number
+        :var reportGroup: String or Number
+        :var submerchantName: String or Number
+
 submerchantDebit
 ----------------
     .. py:class:: vantivsdk.fields.submerchantDebit
 
         :var accountInfo: instance of :py:class:`vantivsdk.fields.echeckType`
+        :var amount: String or Number
+        :var customIdentifier: String or Number
+        :var customerId: String or Number
+        :var fundingSubmerchantId: String or Number
+        :var fundsTransferId: String or Number
+        :var id: String or Number
+        :var reportGroup: String or Number
+        :var submerchantName: String or Number
+
+submerchantDebitCtx
+-------------------
+    .. py:class:: vantivsdk.fields.submerchantDebitCtx
+
+        :var accountInfo: instance of :py:class:`vantivsdk.fields.echeckTypeCtx`
         :var amount: String or Number
         :var customIdentifier: String or Number
         :var customerId: String or Number
@@ -774,11 +803,37 @@ vendorCredit
         :var reportGroup: String or Number
         :var vendorName: String or Number
 
+vendorCreditCtx
+---------------
+    .. py:class:: vantivsdk.fields.vendorCreditCtx
+
+        :var accountInfo: instance of :py:class:`vantivsdk.fields.echeckTypeCtx`
+        :var amount: String or Number
+        :var customerId: String or Number
+        :var fundingSubmerchantId: String or Number
+        :var fundsTransferId: String or Number
+        :var id: String or Number
+        :var reportGroup: String or Number
+        :var vendorName: String or Number
+
 vendorDebit
 -----------
     .. py:class:: vantivsdk.fields.vendorDebit
 
         :var accountInfo: instance of :py:class:`vantivsdk.fields.echeckType`
+        :var amount: String or Number
+        :var customerId: String or Number
+        :var fundingSubmerchantId: String or Number
+        :var fundsTransferId: String or Number
+        :var id: String or Number
+        :var reportGroup: String or Number
+        :var vendorName: String or Number
+
+vendorDebitCtx
+--------------
+    .. py:class:: vantivsdk.fields.vendorDebitCtx
+
+        :var accountInfo: instance of :py:class:`vantivsdk.fields.echeckTypeCtx`
         :var amount: String or Number
         :var customerId: String or Number
         :var fundingSubmerchantId: String or Number

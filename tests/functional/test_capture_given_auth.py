@@ -84,6 +84,28 @@ class TestCaptureGivenAuth(unittest.TestCase):
         response = online.request(transaction, conf)
         self.assertEquals('000', response['captureGivenAuthResponse']['response'])
 
+    def test_simple_capture_given_auth_with_tokenURL(self):
+        transaction = fields.captureGivenAuth()
+        transaction.orderId = '12344'
+        transaction.amount = 106
+        transaction.orderSource = 'ecommerce'
+        transaction.id = 'ThisIsID'
+    
+        # Create authInformation
+        authInformation = fields.authInformation()
+        authInformation.authDate = datetime.datetime.now().strftime("%Y-%m-%d")
+        authInformation.authCode = '543216'
+        authInformation.authAmount = 12345
+        transaction.authInformation = authInformation
+    
+        token = fields.cardTokenType()
+        token.tokenURL = "http://token.com/sales"
+        token.expDate = '1210'
+        token.type = 'VI'
+        token.CardValidationNum = '555'
+        transaction.token = token
+        response = online.request(transaction, conf)
+        self.assertEquals('000', response['captureGivenAuthResponse']['response'])
 
     def test_complex_capture_given_auth(self):
         transaction = fields.captureGivenAuth()
