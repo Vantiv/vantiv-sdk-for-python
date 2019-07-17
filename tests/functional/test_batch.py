@@ -42,7 +42,7 @@ preliveStatus = os.environ['preliveStatus']
 
 class TestBatch(unittest.TestCase):
 
-    @unittest.skipIf(preliveStatus.lower() == 'down')
+    @unittest.skipIf(preliveStatus.lower() == 'down', "prelive not available")
     def test_batch_submit(self):
         # Initial Transactions container
         transactions = batch.Transactions()
@@ -192,7 +192,7 @@ class TestBatch(unittest.TestCase):
 
             self.assertEquals('%s.xml.asc' % filename, response)
 
-    @unittest.skipIf(preliveStatus.lower() == 'down')
+    @unittest.skipIf(preliveStatus.lower() == 'down', "prelive not available")
     def test_batch_ctx(self):
         conf = utils.Configuration()
         conf.user = conf.payfacUsername_v12_7
@@ -318,7 +318,7 @@ class TestBatch(unittest.TestCase):
 
 
     #vvvvv
-    @unittest.skipIf(preliveStatus.lower() == 'down')
+    @unittest.skipIf(preliveStatus.lower() == 'down', "prelive not available")
     def test_batch_rfr(self):
         # Initial Transactions container
         transactions = batch.Transactions()
@@ -433,7 +433,7 @@ class TestBatch(unittest.TestCase):
                 self.fail("Timeout for retrieve rfr batch response")
                 break
 
-    @unittest.skipIf(preliveStatus.lower() == 'down')
+    @unittest.skipIf(preliveStatus.lower() == 'down', "prelive not available")
     def test_batch_dict(self):
         txn_dict = {
             'authorization':[
@@ -584,7 +584,7 @@ class TestBatch(unittest.TestCase):
                 self.fail("Timeout for retrieve rfr batch response")
                 break
 
-    @unittest.skipIf(preliveStatus.lower() == 'down')
+    @unittest.skipIf(preliveStatus.lower() == 'down', "prelive not available")
     def test_batch_mix_transaction_recurringtransaction(self):
         txn_dict = {
             'sameDayFunding': 0,

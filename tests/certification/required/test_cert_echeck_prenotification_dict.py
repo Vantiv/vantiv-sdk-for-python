@@ -44,7 +44,7 @@ preliveStatus = os.environ['preliveStatus']
 print('Testing agaisnt: ' + conf.url)
 
 class TestCertEcheckPrenotificationDict(unittest.TestCase):
-    @unittest.skipIf(preliveStatus.lower() == 'down')
+    @unittest.skipIf(preliveStatus.lower() == 'down', "prelive not available")
     def test_table_2_5_ECPreNoteSale(self):
         txn_dict = {
             'echeckPreNoteSale' :
@@ -88,7 +88,7 @@ class TestCertEcheckPrenotificationDict(unittest.TestCase):
                 self.fail("Timeout for retrieve batch response")
                 break
 
-    @unittest.skipIf(preliveStatus.lower() == 'down')
+    @unittest.skipIf(preliveStatus.lower() == 'down', "prelive not available")
     def test_table_2_5_ECPreNoteCredit(self):
         txn_dict = {
             'echeckPreNoteCredit' :
@@ -131,7 +131,7 @@ class TestCertEcheckPrenotificationDict(unittest.TestCase):
                 self.fail("Timeout for retrieve batch response")
                 break
 
-    @unittest.skipIf(preliveStatus.lower() == 'down')
+    @unittest.skipIf(preliveStatus.lower() == 'down', "prelive not available")
     def test_table_2_5_PreNoteSaleAccNumErr(self):
         txn_dict = {
             'echeckPreNoteSale' :
@@ -175,7 +175,7 @@ class TestCertEcheckPrenotificationDict(unittest.TestCase):
                 self.fail("Timeout for retrieve batch response")
                 break
 
-    @unittest.skipIf(preliveStatus.lower() == 'down')
+    @unittest.skipIf(preliveStatus.lower() == 'down', "prelive not available")
     def test_table_2_5_PreNoteCreditAccNumErr(self):
         txn_dict = {
             'echeckPreNoteCredit' :
@@ -218,7 +218,7 @@ class TestCertEcheckPrenotificationDict(unittest.TestCase):
                 self.fail("Timeout for retrieve batch response")
                 break
 
-    @unittest.skipIf(preliveStatus.lower() == 'down')
+    @unittest.skipIf(preliveStatus.lower() == 'down', "prelive not available")
     def test_table_2_5_PreNoteSaleRoutNumErr(self):
         txn_dict = {
             'echeckPreNoteSale' :
@@ -262,7 +262,7 @@ class TestCertEcheckPrenotificationDict(unittest.TestCase):
                 self.fail("Timeout for retrieve batch response")
                 break
 
-    @unittest.skipIf(preliveStatus.lower() == 'down')
+    @unittest.skipIf(preliveStatus.lower() == 'down', "prelive not available")
     def test_table_2_5_PreNoteCreditRoutNumErr(self):
         txn_dict = {
             'echeckPreNoteCredit' :
