@@ -35,8 +35,10 @@ import datetime
 
 conf = utils.Configuration()
 
+preliveStatus = os.environ['preliveStatus']
 
 class TestBatch(unittest.TestCase):
+    @unittest.skipIf(preliveStatus.lower() == 'down', "prelive not available")
     def test_batch_submit(self):
         # Initial Transactions container
         transactions = batch.Transactions()
@@ -125,6 +127,7 @@ class TestBatch(unittest.TestCase):
 
         self.assertEquals('%s.xml.asc' % filename, response)
 
+    @unittest.skipIf(preliveStatus.lower() == 'down', "prelive not available")
     def test_batch_stream_and_rfr(self):
         # Initial Transactions container
         transactions = batch.Transactions()
@@ -205,6 +208,7 @@ class TestBatch(unittest.TestCase):
                           response['batchResponse']['authorizationResponse'][0]['litleTxnId'])
 
 
+    @unittest.skipIf(preliveStatus.lower() == 'down', "prelive not available")
     def test_batch_stream_dict(self):
         txn_dict = {
             'authorization':[
@@ -278,6 +282,7 @@ class TestBatch(unittest.TestCase):
         self.assertEquals(response_rfr['batchResponse']['authorizationResponse'][0]['litleTxnId'],
                           response['batchResponse']['authorizationResponse'][0]['litleTxnId'])
 
+    @unittest.skipIf(preliveStatus.lower() == 'down', "prelive not available")
     def test_batch_stream_mix_transaction_recurring_transaction(self):
         txn_dict = {
             'authorization': [

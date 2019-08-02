@@ -37,7 +37,10 @@ import certification_test_conf
 
 conf = certification_test_conf.conf
 
+preliveStatus = os.environ['preliveStatus']
+
 class TestCertEcheckDict(unittest.TestCase):
+    @unittest.skipIf(preliveStatus.lower() == 'down', "prelive not available")
     def test_table_2_3_37(self):
         txn_dict = {
             'echeckVerification': {
@@ -64,6 +67,7 @@ class TestCertEcheckDict(unittest.TestCase):
         self.assertEquals('Invalid Account Number', response['echeckVerificationResponse']['message'])
 
 
+    @unittest.skipIf(preliveStatus.lower() == 'down', "prelive not available")
     def test_table_2_3_38(self):
         txn_dict = {
             'echeckVerification': {
@@ -90,6 +94,7 @@ class TestCertEcheckDict(unittest.TestCase):
         self.assertEquals('Approved', response['echeckVerificationResponse']['message'])
 
 
+    @unittest.skipIf(preliveStatus.lower() == 'down', "prelive not available")
     def test_table_2_3_39(self):
         txn_dict = {
             'echeckVerification': {
@@ -117,6 +122,7 @@ class TestCertEcheckDict(unittest.TestCase):
         self.assertEquals('Decline - Negative Information on File', response['echeckVerificationResponse']['message'])
 
 
+    @unittest.skipIf(preliveStatus.lower() == 'down', "prelive not available")
     def test_table_2_3_40(self):
         txn_dict = {
             'echeckVerification': {
@@ -145,6 +151,7 @@ class TestCertEcheckDict(unittest.TestCase):
         self.assertEquals('Absolute Decline', response['echeckVerificationResponse']['message'])
 
 
+    @unittest.skipIf(preliveStatus.lower() == 'down', "prelive not available")
     def test_table_2_5_41(self):
         txn_dict = {
             'echeckSale': {
@@ -173,6 +180,7 @@ class TestCertEcheckDict(unittest.TestCase):
         self.assertEquals('Invalid Account Number', response['echeckSalesResponse']['message'])
 
 
+    @unittest.skipIf(preliveStatus.lower() == 'down', "prelive not available")
     def test_table_2_5_42(self):
         txn_dict = {
             'echeckSale': {
@@ -211,6 +219,7 @@ class TestCertEcheckDict(unittest.TestCase):
 
 
 
+    @unittest.skipIf(preliveStatus.lower() == 'down', "prelive not available")
     def test_table_2_5_43(self):
         txn_dict = {
             'echeckSale': {
@@ -239,6 +248,7 @@ class TestCertEcheckDict(unittest.TestCase):
         #TODO no accountUpdater element.
 
 
+    @unittest.skipIf(preliveStatus.lower() == 'down', "prelive not available")
     def test_table_2_5_44(self):
         txn_dict = {
             'echeckSale': {
@@ -266,6 +276,7 @@ class TestCertEcheckDict(unittest.TestCase):
         self.assertEquals('Invalid Bank Routing Number', response['echeckSalesResponse']['message'])
 
 
+    @unittest.skipIf(preliveStatus.lower() == 'down', "prelive not available")
     def test_table_2_6_45(self):
         txn_dict = {
             'echeckCredit': {
@@ -292,6 +303,7 @@ class TestCertEcheckDict(unittest.TestCase):
         self.assertEquals('Invalid Account Number', response['echeckCreditResponse']['message'])
 
 
+    @unittest.skipIf(preliveStatus.lower() == 'down', "prelive not available")
     def test_table_2_6_46(self):
         txn_dict = {
             'echeckCredit': {
@@ -331,6 +343,7 @@ class TestCertEcheckDict(unittest.TestCase):
         self.assertEquals('Approved', response['echeckVoidResponse']['message'])
 
 
+    @unittest.skipIf(preliveStatus.lower() == 'down', "prelive not available")
     def test_table_2_6_47(self):
         txn_dict = {
             'echeckCredit': {
@@ -358,6 +371,7 @@ class TestCertEcheckDict(unittest.TestCase):
         self.assertEquals('Approved', response['echeckCreditResponse']['message'])
         # TODO no accountUpdater element.
 
+    @unittest.skipIf(preliveStatus.lower() == 'down', "prelive not available")
     def test_table_2_6_48(self):
         txn_dict = {
             'echeckSale': {
@@ -392,6 +406,7 @@ class TestCertEcheckDict(unittest.TestCase):
         self.assertEquals('Approved', response['echeckCreditResponse']['message'])
 
 
+    @unittest.skipIf(preliveStatus.lower() == 'down', "prelive not available")
     def test_table_2_6_49(self):
         # orderId *
         txn_dict = {
@@ -404,6 +419,7 @@ class TestCertEcheckDict(unittest.TestCase):
         self.assertEquals('360', response['echeckCreditResponse']['response'])
         self.assertEquals('No transaction found with specified transaction Id', response['echeckCreditResponse']['message'])
 
+    @unittest.skipIf(preliveStatus.lower() == 'down', "prelive not available")
     def test_echeck_void_2_6(self):
         txn_dict = {
             'echeckVoid': {
