@@ -180,39 +180,6 @@ class TestCaptureGivenAuth(unittest.TestCase):
         response = online.request(transaction, conf)
         self.assertEquals('000', response['captureGivenAuthResponse']['response'])
 
-    # def test_simple_capture_given_auth_with_processing_type_COF(self):
-    #     transaction = fields.captureGivenAuth()
-    #     transaction.orderId= '12344'
-    #     transaction.amount = 106
-    #     transaction.orderSource = 'ecommerce'
-    #     transaction.processingType = 'initialCOF'
-    #     transaction.id = 'ThisIsID'
-    #
-    #     # Create authInformation
-    #     authInformation = fields.authInformation()
-    #     authInformation.authDate = datetime.datetime.now().strftime("%Y-%m-%d")
-    #     authInformation.authCode = '543216'
-    #     authInformation.authAmount = 12345
-    #     transaction.authInformation = authInformation
-    #
-    #     # Create cardType object
-    #     card = fields.cardType()
-    #     card.number = '4100000000000000'
-    #     card.expDate = '1210'
-    #     card.type = 'VI'
-    #     # The type of card is cardType
-    #     transaction.card = card
-    #     response = online.request(transaction, conf)
-    #     self.assertEquals('000', response['captureGivenAuthResponse']['response'])
-    #
-    #     transaction.processingType = 'merchantInitiatedCOF'
-    #     response = online.request(transaction, conf)
-    #     self.assertEquals('000', response['captureGivenAuthResponse']['response'])
-    #
-    #     transaction.processingType = 'cardholderInitiatedCOF'
-    #     response = online.request(transaction, conf)
-    #     self.assertEquals('000', response['captureGivenAuthResponse']['response'])
-
 
     def test_simple_capture_given_auth_with_original_network_transaction_id(self):
         transaction = fields.captureGivenAuth()
