@@ -88,8 +88,6 @@ class TestCertEcheckPrenotificationDict(unittest.TestCase):
                 self.fail("Timeout for retrieve batch response")
                 break
 
-
-
     @unittest.skipIf(preliveStatus.lower() == 'down', "prelive not available")
     def test_table_2_5_ECPreNoteCredit(self):
         txn_dict = {
