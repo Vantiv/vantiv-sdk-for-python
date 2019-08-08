@@ -38,6 +38,7 @@ from vantivsdk import (batch, pgp_helper)
 import datetime
 
 conf = utils.Configuration()
+
 preliveStatus = os.environ['preliveStatus']
 
 class TestBatch(unittest.TestCase):
@@ -192,6 +193,7 @@ class TestBatch(unittest.TestCase):
 
             self.assertEquals('%s.xml.asc' % filename, response)
 
+    
     @unittest.skipIf(preliveStatus.lower() == 'down', "prelive not available")
     def test_batch_ctx(self):
         conf = utils.Configuration()
