@@ -39,7 +39,11 @@ import datetime
 
 conf = utils.Configuration()
 
-preliveStatus = os.environ['preliveStatus']
+preliveStatus = "down"
+if "preliveStatus" in os.environ:
+    preliveStatus = os.environ['preliveStatus']
+else:
+    print("preliveStatus environment variable is not defined. Defaulting to down.")
 
 class TestBatch(unittest.TestCase):
 
