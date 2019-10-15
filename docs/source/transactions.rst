@@ -208,6 +208,62 @@ credit
         :var taxType: String or Number
         :var token: instance of :py:class:`vantivsdk.fields.cardTokenType`
 
+customerCredit
+--------------
+    .. py:class:: vantivsdk.fields.customerCredit
+
+        :var accountInfo: instance of :py:class:`vantivsdk.fields.echeckType`
+        :var amount: String or Number
+        :var customIdentifier: String or Number
+        :var customerId: String or Number
+        :var customerName: String or Number
+        :var fundingCustomerId: String or Number
+        :var fundsTransferId: String or Number
+        :var id: String or Number
+        :var reportGroup: String or Number
+
+customerCreditCtx
+-----------------
+    .. py:class:: vantivsdk.fields.customerCreditCtx
+
+        :var accountInfo: instance of :py:class:`vantivsdk.fields.echeckTypeCtx`
+        :var amount: String or Number
+        :var customIdentifier: String or Number
+        :var customerId: String or Number
+        :var customerName: String or Number
+        :var fundingCustomerId: String or Number
+        :var fundsTransferId: String or Number
+        :var id: String or Number
+        :var reportGroup: String or Number
+
+customerDebit
+-------------
+    .. py:class:: vantivsdk.fields.customerDebit
+
+        :var accountInfo: instance of :py:class:`vantivsdk.fields.echeckType`
+        :var amount: String or Number
+        :var customIdentifier: String or Number
+        :var customerId: String or Number
+        :var customerName: String or Number
+        :var fundingCustomerId: String or Number
+        :var fundsTransferId: String or Number
+        :var id: String or Number
+        :var reportGroup: String or Number
+
+customerDebitCtx
+----------------
+    .. py:class:: vantivsdk.fields.customerDebitCtx
+
+        :var accountInfo: instance of :py:class:`vantivsdk.fields.echeckTypeCtx`
+        :var amount: String or Number
+        :var customIdentifier: String or Number
+        :var customerId: String or Number
+        :var customerName: String or Number
+        :var fundingCustomerId: String or Number
+        :var fundsTransferId: String or Number
+        :var id: String or Number
+        :var reportGroup: String or Number
+
 deactivate
 ----------
     .. py:class:: vantivsdk.fields.deactivate
@@ -358,7 +414,9 @@ fastAccessFunding
         :var amount: String or Number
         :var card: instance of :py:class:`vantivsdk.fields.cardType`
         :var customerId: String or Number
+        :var customerName: String or Number
         :var disbursementType: String or Number
+        :var fundingCustomerId: String or Number
         :var fundingSubmerchantId: String or Number
         :var fundsTransferId: String or Number
         :var id: String or Number
@@ -510,12 +568,35 @@ payFacDebit
         :var id: String or Number
         :var reportGroup: String or Number
 
+payoutOrgCredit
+---------------
+    .. py:class:: vantivsdk.fields.payoutOrgCredit
+
+        :var amount: String or Number
+        :var customerId: String or Number
+        :var fundingCustomerId: String or Number
+        :var fundsTransferId: String or Number
+        :var id: String or Number
+        :var reportGroup: String or Number
+
+payoutOrgDebit
+--------------
+    .. py:class:: vantivsdk.fields.payoutOrgDebit
+
+        :var amount: String or Number
+        :var customerId: String or Number
+        :var fundingCustomerId: String or Number
+        :var fundsTransferId: String or Number
+        :var id: String or Number
+        :var reportGroup: String or Number
+
 physicalCheckCredit
 -------------------
     .. py:class:: vantivsdk.fields.physicalCheckCredit
 
         :var amount: String or Number
         :var customerId: String or Number
+        :var fundingCustomerId: String or Number
         :var fundingSubmerchantId: String or Number
         :var fundsTransferId: String or Number
         :var id: String or Number
@@ -527,6 +608,7 @@ physicalCheckDebit
 
         :var amount: String or Number
         :var customerId: String or Number
+        :var fundingCustomerId: String or Number
         :var fundingSubmerchantId: String or Number
         :var fundsTransferId: String or Number
         :var id: String or Number
@@ -583,6 +665,7 @@ reserveCredit
 
         :var amount: String or Number
         :var customerId: String or Number
+        :var fundingCustomerId: String or Number
         :var fundingSubmerchantId: String or Number
         :var fundsTransferId: String or Number
         :var id: String or Number
@@ -594,6 +677,7 @@ reserveDebit
 
         :var amount: String or Number
         :var customerId: String or Number
+        :var fundingCustomerId: String or Number
         :var fundingSubmerchantId: String or Number
         :var fundsTransferId: String or Number
         :var id: String or Number
@@ -797,6 +881,7 @@ vendorCredit
         :var accountInfo: instance of :py:class:`vantivsdk.fields.echeckType`
         :var amount: String or Number
         :var customerId: String or Number
+        :var fundingCustomerId: String or Number
         :var fundingSubmerchantId: String or Number
         :var fundsTransferId: String or Number
         :var id: String or Number
@@ -810,6 +895,7 @@ vendorCreditCtx
         :var accountInfo: instance of :py:class:`vantivsdk.fields.echeckTypeCtx`
         :var amount: String or Number
         :var customerId: String or Number
+        :var fundingCustomerId: String or Number
         :var fundingSubmerchantId: String or Number
         :var fundsTransferId: String or Number
         :var id: String or Number
@@ -823,6 +909,7 @@ vendorDebit
         :var accountInfo: instance of :py:class:`vantivsdk.fields.echeckType`
         :var amount: String or Number
         :var customerId: String or Number
+        :var fundingCustomerId: String or Number
         :var fundingSubmerchantId: String or Number
         :var fundsTransferId: String or Number
         :var id: String or Number
@@ -836,6 +923,7 @@ vendorDebitCtx
         :var accountInfo: instance of :py:class:`vantivsdk.fields.echeckTypeCtx`
         :var amount: String or Number
         :var customerId: String or Number
+        :var fundingCustomerId: String or Number
         :var fundingSubmerchantId: String or Number
         :var fundsTransferId: String or Number
         :var id: String or Number
