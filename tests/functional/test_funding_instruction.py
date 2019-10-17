@@ -702,6 +702,24 @@ class TestFundingInstruction(unittest.TestCase):
         response = online.request(txn_dict, conf)
         self.assertEquals('000', response['customerDebitResponse']['response'])
 
+    def test_customerDebit_nullCustomerNameException(self):
+        txn_dict = {
+            'customerDebit': {
+                'id': 'OnlinePC2',
+                'fundingCustomerId': 'fundingCustomerId',
+                'fundsTransferId': 'fundsTransferId',
+                'amount': 900010002000,
+                'accountInfo':{
+                    'accNum':'123456789012',
+                    'routingNum':'123456789',
+                    'accType':'Checking',
+                },
+            }
+        }
+
+        with self.assertRaises(VantivException) as context:
+            online.request(txn_dict,conf)
+
     def test_customerCredit_000(self):
         txn_dict = {
             'customerCredit': {
@@ -720,6 +738,24 @@ class TestFundingInstruction(unittest.TestCase):
 
         response = online.request(txn_dict, conf)
         self.assertEquals('000', response['customerCreditResponse']['response'])
+
+    def test_customerCredit_nullCustomerNameException(self):
+        txn_dict = {
+            'customerCredit': {
+                'id': 'OnlinePC2',
+                'fundingCustomerId': 'fundingCustomerId',
+                'fundsTransferId': 'fundsTransferId',
+                'amount': 900010002000,
+                'accountInfo':{
+                    'accNum':'123456789012',
+                    'routingNum':'123456789',
+                    'accType':'Checking',
+                },
+            }
+        }
+
+        with self.assertRaises(VantivException) as context:
+            online.request(txn_dict,conf)
 
     def test_payoutOrgDebit_000(self):
         txn_dict = {
