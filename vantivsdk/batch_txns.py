@@ -63,8 +63,6 @@ supported_transaction_types = {
     'sale': ['numSales', 'saleAmount'],
     'submerchantCredit': ['numSubmerchantCredit', 'submerchantCreditAmount'],
     'submerchantDebit': ['numSubmerchantDebit', 'submerchantDebitAmount'],
-    'submerchantCreditCtx': ['numSubmerchantCredit', 'submerchantCreditAmount'],
-    'submerchantDebitCtx': ['numSubmerchantDebit', 'submerchantDebitAmount'],
     'translateToLowValueTokenRequest': ['numTranslateToLowValueTokenRequests', ''],
     'unload': ['numUnloads', 'unloadAmount'],
     'updateCardValidationNumOnToken': ['numUpdateCardValidationNumOnTokens', ''],
@@ -72,7 +70,5 @@ supported_transaction_types = {
     'updateSubscription': ['numUpdateSubscriptions', ''],
     'vendorCredit': ['numVendorCredit', 'vendorCreditAmount'],
     'vendorDebit': ['numVendorDebit', 'vendorDebitAmount'],
-    'vendorCreditCtx': ['numVendorCredit', 'vendorCreditAmount'],
-    'vendorDebitCtx': ['numVendorDebit', 'vendorDebitAmount'],
 
 }
