@@ -720,6 +720,46 @@ class TestFundingInstruction(unittest.TestCase):
         with self.assertRaises(VantivException) as context:
             online.request(txn_dict,conf)
 
+    def test_customerDebit_negativeAmountException(self):
+        self.skipTest("Sandbox does not check for negative amounts. Production does check.")
+
+        txn_dict = {
+            'customerDebit': {
+                'id': 'OnlinePC2',
+                'fundingCustomerId': 'fundingCustomerId',
+                'customerName' : 'Jon Snow',
+                'fundsTransferId': 'fundsTransferId',
+                'amount': -900010002000,
+                'accountInfo':{
+                    'accNum':'123456789012',
+                    'routingNum':'123456789',
+                    'accType':'Checking',
+                },
+            }
+        }
+
+        with self.assertRaises(VantivException) as context:
+            online.request(txn_dict,conf)
+
+    def test_customerDebit_idTooLongException(self):
+        txn_dict = {
+            'customerDebit': {
+                'id': 'OnlinePC2',
+                'fundingCustomerId': '123456789012345678901234567890123456789012345678901234567890',
+                'customerName': 'Jon Snow',
+                'fundsTransferId': 'fundsTransferId',
+                'amount': 900010002000,
+                'accountInfo': {
+                    'accNum': '123456789012',
+                    'routingNum': '123456789',
+                    'accType': 'Checking',
+                },
+            }
+        }
+
+        with self.assertRaises(VantivException) as context:
+            online.request(txn_dict, conf)
+
     def test_customerCredit_000(self):
         txn_dict = {
             'customerCredit': {
