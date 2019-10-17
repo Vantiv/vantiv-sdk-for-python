@@ -622,5 +622,69 @@ class TestFundingInstruction(unittest.TestCase):
         response = online.request(txn_dict, conf)
         self.assertEquals('362', response['fundingInstructionVoidResponse']['response'])
 
+    def test_customerDebit_000(self):
+        txn_dict = {
+            'customerDebit': {
+                'id': 'OnlinePC2',
+                'fundingCustomerId': 'fundingCustomerId',
+                'customerName' : 'Jon Snow',
+                'fundsTransferId': 'fundsTransferId',
+                'amount': 900010002000,
+                'accountInfo':{
+                    'accNum':'123456789012',
+                    'routingNum':'123456789',
+                    'accType':'Checking',
+                },
+            }
+        }
+
+        response = online.request(txn_dict, conf)
+        self.assertEquals('000', response['customerDebitResponse']['response'])
+
+    def test_customerCredit_000(self):
+        txn_dict = {
+            'customerCredit': {
+                'id': 'OnlinePC2',
+                'fundingCustomerId': 'fundingCustomerId',
+                'customerName' : 'Jon Snow',
+                'fundsTransferId': 'fundsTransferId',
+                'amount': 900010002000,
+                'accountInfo':{
+                    'accNum':'123456789012',
+                    'routingNum':'123456789',
+                    'accType':'Checking',
+                },
+            }
+        }
+
+        response = online.request(txn_dict, conf)
+        self.assertEquals('000', response['customerCreditResponse']['response'])
+
+    def test_payoutOrgDebit_000(self):
+        txn_dict = {
+            'payoutOrgDebit': {
+                'id': 'OnlinePC2',
+                'fundingCustomerId': 'fundingSubmerchantId',
+                'fundsTransferId': 'fundsTransferId',
+                'amount': 900010002000,
+            }
+        }
+
+        response = online.request(txn_dict, conf)
+        self.assertEquals('000', response['payoutOrgDebitResponse']['response'])
+
+    def test_payoutOrgCredit_000(self):
+        txn_dict = {
+            'payoutOrgCredit': {
+                'id': 'OnlinePC2',
+                'fundingCustomerId': 'fundingSubmerchantId',
+                'fundsTransferId': 'fundsTransferId',
+                'amount': 900010002000,
+            }
+        }
+
+        response = online.request(txn_dict, conf)
+        self.assertEquals('000', response['payoutOrgCreditResponse']['response'])
+
 if __name__ == '__main__':
     unittest.main()
