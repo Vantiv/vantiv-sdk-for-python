@@ -26,6 +26,8 @@ import os
 import sys
 import unittest
 
+from vantivsdk.utils import VantivException
+
 package_root = os.path.dirname(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
 sys.path.insert(0, package_root)
 
@@ -123,11 +125,49 @@ class TestFundingInstruction(unittest.TestCase):
         response = online.request(txn_dict, conf)
         self.assertEquals('000', response['vendorCreditResponse']['response'])
 
+    def test_vendorCredit_000_fundingCustomerId(self):
+        txn_dict = {
+            'vendorCredit': {
+                'id': 'OnlinePC2',
+                'fundingCustomerId': 'fundingCustomerId',
+                'vendorName' : 'Jon Snow',
+                'fundsTransferId': 'fundsTransferId',
+                'amount': 900010002000,
+                'accountInfo':{
+                    'accNum':'123456789012',
+                    'routingNum':'123456789',
+                    'accType':'Checking',
+                },
+            }
+        }
+
+        response = online.request(txn_dict, conf)
+        self.assertEquals('000', response['vendorCreditResponse']['response'])
+
     def test_vendorDebit_000(self):
         txn_dict = {
             'vendorDebit': {
                 'id': 'OnlinePC2',
                 'fundingSubmerchantId': 'fundingSubmerchantId',
+                'vendorName' : 'Jon Snow',
+                'fundsTransferId': 'fundsTransferId',
+                'amount': 900010002000,
+                'accountInfo':{
+                    'accNum':'123456789012',
+                    'routingNum':'123456789',
+                    'accType':'Checking',
+                },
+            }
+        }
+
+        response = online.request(txn_dict, conf)
+        self.assertEquals('000', response['vendorDebitResponse']['response'])
+
+    def test_vendorDebit_000_fundingCustomerId(self):
+        txn_dict = {
+            'vendorDebit': {
+                'id': 'OnlinePC2',
+                'fundingCustomerId': 'fundingCustomerId',
                 'vendorName' : 'Jon Snow',
                 'fundsTransferId': 'fundsTransferId',
                 'amount': 900010002000,
@@ -223,6 +263,27 @@ class TestFundingInstruction(unittest.TestCase):
 
         response = online.request(txn_dict, conf)
         self.assertEquals('000', response['fastAccessFundingResponse']['response'])
+
+    def test_fastAccessFunding_mixedName(self):
+        self.skipTest("Sandbox does not check for mixed names. Production does check.")
+
+        txn_dict = {
+            'fastAccessFunding': {
+                'id': 'OnlinePC2',
+                'fundingSubmerchantId': 'fundingSubmerchantId',
+                'customerName': 'submerhc',
+                'fundsTransferId': '1234567891111111',
+                'amount': 90000000,
+                'card': {
+                    'type': 'VI',
+                    'number' : '4100000000000000',
+                    'expDate' : '1210'
+                }
+            }
+        }
+
+        with self.assertRaises(VantivException) as context:
+            online.request(txn_dict,conf)
 
     def test_payFacCredit_940(self):
         txn_dict = {
