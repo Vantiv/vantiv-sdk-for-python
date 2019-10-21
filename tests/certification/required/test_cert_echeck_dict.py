@@ -382,7 +382,6 @@ class TestCertEcheckDict(unittest.TestCase):
         self.assertEquals('000', response['echeckCreditResponse']['response'])
         self.assertEquals('Approved', response['echeckCreditResponse']['message'])
 
-    def test_echeck_void_2_6(self):
         txn_dict = {
             'echeckVoid': {
                 'cnpTxnId': '2',
