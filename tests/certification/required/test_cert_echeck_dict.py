@@ -419,8 +419,6 @@ class TestCertEcheckDict(unittest.TestCase):
         self.assertEquals('360', response['echeckCreditResponse']['response'])
         self.assertEquals('No transaction found with specified transaction Id', response['echeckCreditResponse']['message'])
 
-    @unittest.skipIf(preliveStatus.lower() == 'down', "prelive not available")
-    def test_echeck_void_2_6(self):
         txn_dict = {
             'echeckVoid': {
                 'litleTxnId': '2',
