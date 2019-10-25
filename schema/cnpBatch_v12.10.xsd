@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <xs:schema targetNamespace="http://www.vantivcnp.com/schema" xmlns:xs="http://www.w3.org/2001/XMLSchema"
-           xmlns:xp="http://www.vantivcnp.com/schema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+    xmlns:xp="http://www.vantivcnp.com/schema" elementFormDefault="qualified" attributeFormDefault="unqualified">
 
-    <xs:include schemaLocation="cnpTransaction_v12.9.xsd" />
+    <xs:include schemaLocation="cnpTransaction_v12.10.xsd" />
 
     <xs:element name="cnpRequest">
         <xs:complexType>
@@ -32,7 +32,7 @@
                 <xs:element ref="xp:transaction" maxOccurs="unbounded" />
                 <xs:element ref="xp:recurringTransaction" maxOccurs="unbounded" />
             </xs:choice>
-            <xs:attribute name="merchantSdk" type="xs:string" use="optional" />
+                        <xs:attribute name="merchantSdk" type="xs:string" use="optional" />
             <xs:attribute name="id" type="xp:string25Type" use="optional" />
             <xs:attribute name="numAuths" type="xs:integer" use="optional"  default="0"/>
             <xs:attribute name="authAmount" type="xp:batchTotalAmountType" use="optional"  default="0"/>
@@ -165,6 +165,7 @@
             <xs:attribute name="id" type="xp:string25Type" />
             <xs:attribute name="cnpBatchId" type="xp:cnpIdType" use="required" />
             <xs:attribute name="merchantId" type="xp:merchantIdentificationType" use="required" />
+            <xs:attribute name="numAccountUpdates" type="xs:integer" use="optional"  default="0"/>
         </xs:complexType>
     </xs:element>
 
@@ -280,7 +281,7 @@
         </xs:complexType>
     </xs:element>
 
-    <xs:element name="vendorCreditCtx" substitutionGroup="xp:transaction">
+     <xs:element name="vendorCredit" substitutionGroup="xp:transaction">
         <xs:complexType>
             <xs:complexContent>
                 <xs:extension base="xp:transactionTypeWithReportGroup">
@@ -301,7 +302,7 @@
         </xs:complexType>
     </xs:element>
 
-    <xs:element name="vendorDebitCtx" substitutionGroup="xp:transaction">
+    <xs:element name="vendorDebit" substitutionGroup="xp:transaction">
         <xs:complexType>
             <xs:complexContent>
                 <xs:extension base="xp:transactionTypeWithReportGroup">
@@ -323,7 +324,7 @@
     </xs:element>
 
 
-    <xs:element name="submerchantCreditCtx" substitutionGroup="xp:transaction">
+    <xs:element name="submerchantCredit" substitutionGroup="xp:transaction">
         <xs:complexType>
             <xs:complexContent>
                 <xs:extension base="xp:transactionTypeWithReportGroup">
@@ -342,7 +343,7 @@
         </xs:complexType>
     </xs:element>
 
-    <xs:element name="submerchantDebitCtx" substitutionGroup="xp:transaction">
+    <xs:element name="submerchantDebit" substitutionGroup="xp:transaction">
         <xs:complexType>
             <xs:complexContent>
                 <xs:extension base="xp:transactionTypeWithReportGroup">
@@ -361,7 +362,7 @@
         </xs:complexType>
     </xs:element>
 
-    <xs:element name="customerCreditCtx" substitutionGroup="xp:transaction">
+    <xs:element name="customerCredit" substitutionGroup="xp:transaction">
         <xs:complexType>
             <xs:complexContent>
                 <xs:extension base="xp:transactionTypeWithReportGroup">
@@ -380,7 +381,7 @@
         </xs:complexType>
     </xs:element>
 
-    <xs:element name="customerDebitCtx" substitutionGroup="xp:transaction">
+    <xs:element name="customerDebit" substitutionGroup="xp:transaction">
         <xs:complexType>
             <xs:complexContent>
                 <xs:extension base="xp:transactionTypeWithReportGroup">
@@ -398,6 +399,8 @@
             </xs:complexContent>
         </xs:complexType>
     </xs:element>
+
+
 
 </xs:schema>
 
