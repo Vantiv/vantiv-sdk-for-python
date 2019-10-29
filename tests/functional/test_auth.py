@@ -262,7 +262,7 @@ class TestAuth(unittest.TestCase):
         authorization = fields.authorization()
         authorization.reportGroup = "Planets"
         authorization.orderId = '12344'
-        authorization.amount = 106L
+        authorization.amount = 106
         authorization.orderSource = 'ecommerce'
         authorization.id = "id"
 
@@ -280,7 +280,7 @@ class TestAuth(unittest.TestCase):
         authorization = fields.authorization()
         authorization.reportGroup = "Planets"
         authorization.orderId = '12344'
-        authorization.amount = 106L
+        authorization.amount = 106
         authorization.orderSource = 'ecommerce'
         authorization.id = "id"
         authorization.skipRealtimeAU = True
@@ -299,7 +299,7 @@ class TestAuth(unittest.TestCase):
         authorization = fields.authorization()
         authorization.reportGroup = "Planets"
         authorization.orderId = '12344'
-        authorization.amount = 106L
+        authorization.amount = 106
         authorization.orderSource = 'ecommerce'
         authorization.id = "id"
         authorization.skipRealtimeAU = False

@@ -205,7 +205,7 @@ class TestOnline(unittest.TestCase):
         transaction = fields.sale()
         transaction.id = '12345'
         transaction.amount = 106
-        transaction.cnpTxnId = 123456L
+        transaction.cnpTxnId = 123456
         transaction.orderId = '12344'
         transaction.orderSource = 'ecommerce'
 
@@ -234,7 +234,7 @@ class TestOnline(unittest.TestCase):
         transaction = fields.sale()
         transaction.id = '12345'
         transaction.amount = 106
-        transaction.cnpTxnId = 123456L
+        transaction.cnpTxnId = 123456
         transaction.orderId = '12344'
         transaction.orderSource = 'ecommerce'
 
