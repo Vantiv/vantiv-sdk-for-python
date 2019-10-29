@@ -39,7 +39,11 @@ import datetime
 
 conf = utils.Configuration()
 
-preliveStatus = os.environ['preliveStatus']
+preliveStatus = "down"
+if "preliveStatus" in os.environ:
+    preliveStatus = os.environ['preliveStatus']
+else:
+    print("preliveStatus environment variable is not defined. Defaulting to down.")
 
 class TestBatch(unittest.TestCase):
 
@@ -192,132 +196,6 @@ class TestBatch(unittest.TestCase):
                 self.assertEquals(11117, obj.batchRequest[0].authAmount)
 
             self.assertEquals('%s.xml.asc' % filename, response)
-
-    
-    @unittest.skipIf(preliveStatus.lower() == 'down', "prelive not available")
-    def test_batch_ctx(self):
-        conf = utils.Configuration()
-        conf.user = conf.payfacUsername_v12_7
-        conf.password = conf.payfacPassword_v12_7
-        conf.sftp_username = conf.payfacSftpUsername_v12_7
-        conf.sftp_password = conf.payfacSftpPassword_v12_7
-        conf.merchantId = conf.payfacMerchantId_v12_7
-
-        transactions = batch.Transactions()
-
-        fundsTransferIdString = str(int(time.time()))
-
-        echeck = fields.echeckTypeCtx()
-        echeck.accNum = "1092969901"
-        echeck.accType = "Checking"
-        ctxPaymentInformation = fields.ctxPaymentInformationType()
-        ctxPaymentInformation.ctxPaymentDetail = ["ctx payment detail"]
-        echeck.ctxPaymentInformation = ctxPaymentInformation
-        echeck.checkNum = "123455"
-        echeck.routingNum = "011075150"
-
-        # vendorCreditCtx
-        vendorCreditCtx = fields.vendorCreditCtx()
-        vendorCreditCtx.id = 'ThisIsID'
-        vendorCreditCtx.amount = 123
-        vendorCreditCtx.accountInfo = echeck
-        vendorCreditCtx.fundingSubmerchantId = "submerchantId"
-        vendorCreditCtx.vendorName = "submerchantName"
-        vendorCreditCtx.fundsTransferId = fundsTransferIdString
-        transactions.add(vendorCreditCtx)
-
-        # vendorDebitCtx
-        vendorDebitCtx = fields.vendorDebitCtx()
-        vendorDebitCtx.id = 'ThisIsID'
-        vendorDebitCtx.amount = 123
-        vendorDebitCtx.accountInfo = echeck
-        vendorDebitCtx.fundingSubmerchantId = "submerchantId"
-        vendorDebitCtx.vendorName = "submerchantName"
-        vendorDebitCtx.fundsTransferId = fundsTransferIdString
-        transactions.add(vendorDebitCtx)
-
-        # submerchantDebitCtx
-        submerchantDebitCtx = fields.submerchantDebitCtx()
-        submerchantDebitCtx.id = 'ThisIsID'
-        submerchantDebitCtx.amount = 123
-        submerchantDebitCtx.accountInfo = echeck
-        submerchantDebitCtx.fundingSubmerchantId = "submerchantId"
-        submerchantDebitCtx.submerchantName = "submerchantName"
-        submerchantDebitCtx.fundsTransferId = fundsTransferIdString
-        transactions.add(submerchantDebitCtx)
-
-        # submerchantCreditCtx
-        submerchantCreditCtx = fields.submerchantCreditCtx()
-        submerchantCreditCtx.id = 'ThisIsID'
-        submerchantCreditCtx.amount = 123
-        submerchantCreditCtx.accountInfo = echeck
-        submerchantCreditCtx.fundingSubmerchantId = "submerchantId"
-        submerchantCreditCtx.submerchantName = "submerchantName"
-        submerchantCreditCtx.fundsTransferId = fundsTransferIdString
-        transactions.add(submerchantCreditCtx)
-
-        filename = 'batch_test_%s' % datetime.datetime.now().strftime("%Y%m%d%H%M%S%f")
-        # stream to Vaitiv eCommerce and get object as response
-        response = batch.submit(transactions, conf, filename)
-
-        if conf.useEncryption:
-            # Using encryption.
-            retry = True
-            tried = 0
-            withEncryptionReponseFilepath = ''
-            while retry:
-                tried += 1
-                try:
-                    withEncryptionReponseFilepath = batch._get_file_from_sftp(response, conf, False, 60)
-                    retry = False
-                except:
-                    # sleep 1 minute waiting for batch get processed
-                    print("sleep 30 seconds waiting for batch get processed")
-                    time.sleep(30)
-                if tried > 20:
-                    self.fail("Timeout for retrieve batch response")
-                    break
-
-            call(["cat", withEncryptionReponseFilepath])
-            ### <<< WITH ENCRYPTION
-
-            with open(withEncryptionReponseFilepath, 'r') as xml_file:
-                obj = fields.CreateFromDocument(xml_file.read())
-                self.assertEquals("Valid Format", obj.message)
-
-        else:
-            with open(os.path.join(conf.batch_requests_path, '%s.xml' % filename), 'r') as xml_file:
-                obj = fields.CreateFromDocument(xml_file.read())
-                self.assertEquals(1, obj.numBatchRequests)
-                self.assertEquals(0, obj.batchRequest[0].authAmount)
-
-
-            self.assertEquals('%s.xml.asc' % filename, response)
-
-        retry = True
-        tried = 0
-        while retry:
-            tried += 1
-            try:
-                # retrieve batch request
-
-                responseObj = batch.retrieve(response, conf)
-                retry = False
-
-            except Exception as ex:
-
-                if 'Cannot find file' in ex.args[0]:
-                    # sleep 1 minute waiting for batch get processed
-                    print("sleep 30 seconds waiting for batch to get processed")
-                    time.sleep(30)
-                else:
-                    #retry = False
-                    self.fail(ex.args[0])
-
-            if tried > 20:
-                self.fail("Timeout for retrieving batch response")
-        self.assertIn(u'batchResponse', responseObj)
-
 
     #vvvvv
     @unittest.skipIf(preliveStatus.lower() == 'down', "prelive not available")

@@ -1,5 +1,11 @@
 = Vantiv eCommerce Python SDK
 
+==Version 12.9.0 (October 29, 2019)
+* Feature: Added support for customerCredit, customerDebit
+* Feature: Added support for payoutOrgCredit, payoutOrgDebit
+* Feature: Added fundingCustomerID support
+* Feature: Enhancements to fastAccessFunding
+
 ==Version 12.8.0 (October 29, 2019)
 * Feature: Added tokenUrl element
 
