@@ -204,7 +204,7 @@ class TestOnline(unittest.TestCase):
     def test_sale_with_Realtime_accountUpdater(self, mock__http_post):
         transaction = fields.sale()
         transaction.id = '12345'
-        transaction.amount = 106L
+        transaction.amount = 106
         transaction.cnpTxnId = 123456L
         transaction.orderId = '12344'
         transaction.orderSource = 'ecommerce'
@@ -233,7 +233,7 @@ class TestOnline(unittest.TestCase):
     def test_sale_with_nonrealtime_accountUpdater(self, mock__http_post):
         transaction = fields.sale()
         transaction.id = '12345'
-        transaction.amount = 106L
+        transaction.amount = 106
         transaction.cnpTxnId = 123456L
         transaction.orderId = '12344'
         transaction.orderSource = 'ecommerce'

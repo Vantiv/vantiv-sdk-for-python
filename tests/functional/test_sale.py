@@ -358,7 +358,7 @@ class TestSale(unittest.TestCase):
 
     def test_simple_sale_with_card_skipRealtimeAU_null(self):
         transaction = fields.sale()
-        transaction.amount = 106L
+        transaction.amount = 106
         transaction.cnpTxnId = 123456L
         transaction.orderId = '12344'
         transaction.orderSource = 'ecommerce'
@@ -375,7 +375,7 @@ class TestSale(unittest.TestCase):
 
     def test_simple_sale_with_card_skipRealtimeAU_true(self):
         transaction = fields.sale()
-        transaction.amount = 106L
+        transaction.amount = 106
         transaction.cnpTxnId = 123456L
         transaction.orderId = '12344'
         transaction.orderSource = 'ecommerce'
@@ -393,7 +393,7 @@ class TestSale(unittest.TestCase):
 
     def test_simple_sale_with_card_skipRealtimeAU_false(self):
         transaction = fields.sale()
-        transaction.amount = 106L
+        transaction.amount = 106
         transaction.cnpTxnId = 123456L
         transaction.orderId = '12344'
         transaction.orderSource = 'ecommerce'
