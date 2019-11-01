@@ -121,6 +121,36 @@ class TestBatch(unittest.TestCase):
 
         self.assertEquals('filename', batch.submit(txns, conf))
 
+    @mock.patch.object(batch, '_get_file_str_from_sftp')
+    def test_numAccountUpdates(self, mock__get_file_str_from_sftp):
+        transaction = fields.authorization()
+        transaction.reportGroup = 'Planets'
+        transaction.orderId = '12344'
+        transaction.amount = 106
+        transaction.orderSource = 'ecommerce'
+        transaction.id = 'thisisid'
+
+        card = fields.cardType()
+        card.number = '4100000000000000'
+        card.expDate = '1210'
+        card.type = 'VI'
+
+        mock__get_file_str_from_sftp.return_value = """<cnpResponse version='12.10' response='0' message='Valid Format' xmlns='http://www.vantivcnp.com/schema'>
+                        <batchResponse cnpBatchId='12344' merchantId='56789' numAccountUpdates='3' xmlns='http://www.vantivcnp.com/schema'>
+                            <saleResponse>
+                                <cnpTxnId>123</cnpTxnId>
+                                <accountUpdater>
+                                    <accountUpdateSource>N</accountUpdateSource>
+                                </accountUpdater>
+                                </saleResponse>
+                            </batchResponse>
+                       </cnpResponse>
+                       """
+
+        response = batch.retrieve('retrieve_file', conf)
+        self.assertEquals(response['batchResponse']['saleResponse']['cnpTxnId'], '123')
+        self.assertEquals(response['batchResponse']['@numAccountUpdates'], '3')
+
     def test_download(self):
         # first arg is str and len less than 4
         self.assertRaises(utils.VantivException, batch.download, 'abc', conf)

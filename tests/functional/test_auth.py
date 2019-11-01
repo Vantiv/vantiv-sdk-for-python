@@ -258,6 +258,62 @@ class TestAuth(unittest.TestCase):
         response = online.request(authorization, conf)
         self.assertEquals('000', response['authorizationResponse']['response'])
 
+    def test_simple_auth_with_card_skipRealtimeAU_null(self):
+        authorization = fields.authorization()
+        authorization.reportGroup = "Planets"
+        authorization.orderId = '12344'
+        authorization.amount = 106
+        authorization.orderSource = 'ecommerce'
+        authorization.id = "id"
+
+        card = fields.cardType()
+        card.type = 'VI'
+        card.number = '4100000000000000'
+        card.expDate = '1210'
+        authorization.card = card
+
+        response = online.request(authorization, conf)
+        self.assertEquals('000', response['authorizationResponse']['response'])
+        self.assertEquals('Approved', response['authorizationResponse']['message'])
+
+    def test_simple_auth_with_card_skipRealtimeAU_true(self):
+        authorization = fields.authorization()
+        authorization.reportGroup = "Planets"
+        authorization.orderId = '12344'
+        authorization.amount = 106
+        authorization.orderSource = 'ecommerce'
+        authorization.id = "id"
+        authorization.skipRealtimeAU = True
+
+        card = fields.cardType()
+        card.type = 'VI'
+        card.number = '4100000000000000'
+        card.expDate = '1210'
+        authorization.card = card
+
+        response = online.request(authorization, conf)
+        self.assertEquals('000', response['authorizationResponse']['response'])
+        self.assertEquals('Approved', response['authorizationResponse']['message'])
+
+    def test_simple_auth_with_card_skipRealtimeAU_false(self):
+        authorization = fields.authorization()
+        authorization.reportGroup = "Planets"
+        authorization.orderId = '12344'
+        authorization.amount = 106
+        authorization.orderSource = 'ecommerce'
+        authorization.id = "id"
+        authorization.skipRealtimeAU = False
+
+        card = fields.cardType()
+        card.type = 'VI'
+        card.number = '4100000000000000'
+        card.expDate = '1210'
+        authorization.card = card
+
+        response = online.request(authorization, conf)
+        self.assertEquals('000', response['authorizationResponse']['response'])
+        self.assertEquals('Approved', response['authorizationResponse']['message'])
+
     def test_auth_with_processing_type(self):
         authorization = fields.authorization()
         authorization.id = '12345'

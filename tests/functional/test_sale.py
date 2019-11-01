@@ -356,5 +356,58 @@ class TestSale(unittest.TestCase):
         self.assertEquals('http://redirect.url.vantiv.com',
                           response['saleResponse']['sofortResponse']['redirectUrl'])
 
+    def test_simple_sale_with_card_skipRealtimeAU_null(self):
+        transaction = fields.sale()
+        transaction.amount = 106
+        transaction.cnpTxnId = 123456
+        transaction.orderId = '12344'
+        transaction.orderSource = 'ecommerce'
+
+        card = fields.cardType()
+        card.type = 'VI'
+        card.number = '4100000000000000'
+        card.expDate = '1210'
+        transaction.card = card
+        transaction.id = 'id'
+
+        response = online.request(transaction, conf)
+        self.assertEquals('Approved', response['saleResponse']['message'])
+
+    def test_simple_sale_with_card_skipRealtimeAU_true(self):
+        transaction = fields.sale()
+        transaction.amount = 106
+        transaction.cnpTxnId = 123456
+        transaction.orderId = '12344'
+        transaction.orderSource = 'ecommerce'
+        transaction.skipRealtimeAU = True
+
+        card = fields.cardType()
+        card.type = 'VI'
+        card.number = '4100000000000000'
+        card.expDate = '1210'
+        transaction.card = card
+        transaction.id = 'id'
+
+        response = online.request(transaction, conf)
+        self.assertEquals('Approved', response['saleResponse']['message'])
+
+    def test_simple_sale_with_card_skipRealtimeAU_false(self):
+        transaction = fields.sale()
+        transaction.amount = 106
+        transaction.cnpTxnId = 123456
+        transaction.orderId = '12344'
+        transaction.orderSource = 'ecommerce'
+        transaction.skipRealtimeAU = False
+
+        card = fields.cardType()
+        card.type = 'VI'
+        card.number = '4100000000000000'
+        card.expDate = '1210'
+        transaction.card = card
+        transaction.id = 'id'
+
+        response = online.request(transaction, conf)
+        self.assertEquals('Approved', response['saleResponse']['message'])
+
 if __name__ == '__main__':
     unittest.main()

@@ -25,6 +25,7 @@
 import os
 import sys
 import unittest
+import re
 
 if sys.version_info[0:2] >= (3, 4):
     from unittest import mock
@@ -198,6 +199,64 @@ class TestOnline(unittest.TestCase):
         # return fields object.
         response = online.request(transaction, conf, 'object')
         self.assertEquals('0', response.response)
+
+    @mock.patch.object(online, '_http_post')
+    def test_sale_with_Realtime_accountUpdater(self, mock__http_post):
+        transaction = fields.sale()
+        transaction.id = '12345'
+        transaction.amount = 106
+        transaction.cnpTxnId = 123456
+        transaction.orderId = '12344'
+        transaction.orderSource = 'ecommerce'
+
+        card = fields.cardType()
+        card.type = 'VI'
+        card.number = '4100000000000000'
+        card.expDate = '1210'
+        transaction.card = card
+
+        mock__http_post.return_value = """<cnpOnlineResponse version='12.10' response='0' message='Valid Format' xmlns='http://www.vantivcnp.com/schema'>
+                <saleResponse>
+                    <cnpTxnId>123</cnpTxnId>
+                    <accountUpdater>
+                        <accountUpdateSource>R</accountUpdateSource>
+                    </accountUpdater>
+                </saleResponse>
+            </cnpOnlineResponse>
+            """
+
+        response = online.request(transaction, conf)
+        self.assertEquals('123', response['saleResponse']['cnpTxnId'])
+        self.assertEquals("R", response['saleResponse']['accountUpdater']['accountUpdateSource'])
+
+    @mock.patch.object(online, '_http_post')
+    def test_sale_with_nonrealtime_accountUpdater(self, mock__http_post):
+        transaction = fields.sale()
+        transaction.id = '12345'
+        transaction.amount = 106
+        transaction.cnpTxnId = 123456
+        transaction.orderId = '12344'
+        transaction.orderSource = 'ecommerce'
+
+        card = fields.cardType()
+        card.type = 'VI'
+        card.number = '4100000000000000'
+        card.expDate = '1210'
+        transaction.card = card
+
+        mock__http_post.return_value = """<cnpOnlineResponse version='12.10' response='0' message='Valid Format' xmlns='http://www.vantivcnp.com/schema'>
+                   <saleResponse>
+                       <cnpTxnId>123</cnpTxnId>
+                       <accountUpdater>
+                           <accountUpdateSource>N</accountUpdateSource>
+                       </accountUpdater>
+                   </saleResponse>
+               </cnpOnlineResponse>
+               """
+
+        response = online.request(transaction, conf)
+        self.assertEquals('123', response['saleResponse']['cnpTxnId'])
+        self.assertEquals("N", response['saleResponse']['accountUpdater']['accountUpdateSource'])
 
 if __name__ == '__main__':
     unittest.main()
