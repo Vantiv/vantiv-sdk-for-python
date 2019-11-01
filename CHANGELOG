@@ -4,13 +4,13 @@
 * Feature: Added skipRealtimeAU support to authorization and sale
 * Feature: Added support for accountUpdateSource and numAccountUpdates in responses
 
-==Version 12.9.0 (October 25, 2019)
+==Version 12.9.0 (October 29, 2019)
 * Feature: Added support for customerCredit, customerDebit
 * Feature: Added support for payoutOrgCredit, payoutOrgDebit
 * Feature: Added fundingCustomerID support
 * Feature: Enhancements to fastAccessFunding
 
-==Version 12.8.0 (October 25, 2019)
+==Version 12.8.0 (October 29, 2019)
 * Feature: Added tokenUrl element
 
 ==Version 12.7.0 (Jan 9, 2019)
