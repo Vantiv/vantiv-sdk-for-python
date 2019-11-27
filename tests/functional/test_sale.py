@@ -227,35 +227,6 @@ class TestSale(unittest.TestCase):
         response = online.request(transaction, conf)
         self.assertEquals('000', response['saleResponse']['response'])
 
-    def test_sale_with_processing_type_COF(self):
-        transaction = fields.sale()
-        transaction.id = '12345'
-        transaction.reportGroup = 'Default'
-        transaction.orderId = '67890'
-        transaction.amount = 10000
-        transaction.orderSource = 'ecommerce'
-        transaction.processingType = 'initialCOF'
-        transaction.originalNetworkTransactionId = '9876543210'
-        transaction.originalTransactionAmount = 53698
-        transaction.id = 'ThisIsID'
-
-        card = fields.cardType()
-        card.number = '4100000000000000'
-        card.expDate = '1210'
-        card.type = 'VI'
-        transaction.card = card
-
-        response = online.request(transaction, conf)
-        self.assertEquals('000', response['saleResponse']['response'])
-
-        transaction.processingType = 'merchantInitiatedCOF'
-        response = online.request(transaction, conf)
-        self.assertEquals('000', response['saleResponse']['response'])
-
-        transaction.processingType = 'cardholderInitiatedCOF'
-        response = online.request(transaction, conf)
-        self.assertEquals('000', response['saleResponse']['response'])
-
     def test_sale_with_sepa_direct_debit(self):
         transaction = fields.sale()
         transaction.id = '12345'

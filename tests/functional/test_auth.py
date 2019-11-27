@@ -249,34 +249,6 @@ class TestAuth(unittest.TestCase):
         response = online.request(authorization, conf)
         self.assertEquals('000', response['authorizationResponse']['response'])
 
-    def test_auth_with_processing_type_COF(self):
-        authorization = fields.authorization()
-        authorization.id = '12345'
-        authorization.reportGroup = 'Default'
-        authorization.orderId = '67890'
-        authorization.amount = 10000
-        authorization.orderSource = 'ecommerce'
-        authorization.processingType = 'initialCOF'
-        authorization.originalNetworkTransactionId = '9876543210'
-        authorization.originalTransactionAmount = 53698
-
-        card = fields.cardType()
-        card.number = '4100000000000000'
-        card.expDate = '1210'
-        card.type = 'VI'
-        authorization.card = card
-
-        response = online.request(authorization, conf)
-        self.assertEquals('000', response['authorizationResponse']['response'])
-
-        authorization.processingType = 'merchantInitiatedCOF'
-        response = online.request(authorization, conf)
-        self.assertEquals('000', response['authorizationResponse']['response'])
-
-        authorization.processingType = 'cardholderInitiatedCOF'
-        response = online.request(authorization, conf)
-        self.assertEquals('000', response['authorizationResponse']['response'])
-
     def test_auth_with_wallet(self):
         authorization = fields.authorization()
         authorization.id = '12345'
