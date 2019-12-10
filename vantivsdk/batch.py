@@ -241,6 +241,7 @@ def _get_file_from_sftp(filename, conf, delete_remote, timeout):
     if not os.path.exists(conf.batch_response_path):
         os.makedirs(conf.batch_response_path)
     local_path = os.path.join(conf.batch_response_path, filename)
+    final_path = local_path
 
     remote_path_asc = 'outbound/' + filename
 
@@ -260,7 +261,8 @@ def _get_file_from_sftp(filename, conf, delete_remote, timeout):
         # Check if the file should be decrypted.
         if conf.useEncryption:
             crypto = pgp_helper.PgpHelper()
-            crypto.decryptFile(conf.gpgPassphrase, local_path, local_path)
+            final_path += ".decrypted"
+            crypto.decryptFile(conf.gpgPassphrase, local_path, final_path)
             print('Passed decryption!')
 
     except Exception as ex:
@@ -269,8 +271,8 @@ def _get_file_from_sftp(filename, conf, delete_remote, timeout):
         except:
             pass
         print(ex)
-        raise utils.VantivException('Cannot find file "%s" on Vantiv server.' % filename)
-    return local_path
+        raise utils.VantivException('Cannot find file "%s" on Vantiv server.\n%s'.format(filename,ex.message))
+    return final_path
 
 
 def _get_file_str_from_sftp(filename, conf, delete_remote, timeout):

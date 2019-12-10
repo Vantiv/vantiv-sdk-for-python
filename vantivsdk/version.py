@@ -25,4 +25,4 @@
 # XML Version
 VERSION = u'12.10'
 # SDK release
-RELEASE = u'12.10.0'
+RELEASE = u'12.10.1'
