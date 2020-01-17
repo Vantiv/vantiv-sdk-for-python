@@ -359,7 +359,6 @@ class TestOnline(unittest.TestCase):
                           """
 
         response = online.request(transaction, conf)
-        print(response)
         self.assertEquals("000", response['authorizationResponse']['response'])
         self.assertEquals("3535", response['merchantCategoryCode'])
 
