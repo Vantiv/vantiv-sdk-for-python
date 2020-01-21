@@ -83,7 +83,6 @@ transaction.card = card
 response = online.request(transaction, conf)
 
 # Print results
-print(response)
 print('Message: %s' % response['captureGivenAuthResponse']['message'])
 print('CNPTransaction ID: %s' % response['captureGivenAuthResponse']['cnpTxnId'])
 
