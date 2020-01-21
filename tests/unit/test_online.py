@@ -307,7 +307,7 @@ class TestOnline(unittest.TestCase):
                         """
 
         response = online.request(transaction, conf)
-
+        self.assertEquals("000", response['authorizationResponse']['response'])
         self.assertEquals("3535", response['merchantCategoryCode'])
 
     @mock.patch.object(online, '_http_post')
