@@ -13,6 +13,16 @@ from vantivsdk import (pgp_helper, utils)
 # Retrieve configuration object for testing.
 config = utils.Configuration()
 
+
+
+conf = utils.Configuration()
+
+preliveStatus = "down"
+if "preliveStatus" in os.environ:
+    preliveStatus = os.environ['preliveStatus']
+else:
+    print("preliveStatus environment variable is not defined. Defaulting to down.")
+
 class TestPgpHelper(unittest.TestCase):
 
 # Test whether encrypting a file successfully.
@@ -20,6 +30,7 @@ class TestPgpHelper(unittest.TestCase):
 	# Call encryptFile() to encrypt it.
 	# Check if the file has been created.
 	# Compare it to the original file. They should be different.
+	@unittest.skipIf(preliveStatus.lower() == 'down', "prelive not available")
 	def test_encryptFile_successful(self):
 		crypto = pgp_helper.PgpHelper()
 

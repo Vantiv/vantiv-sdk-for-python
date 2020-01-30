@@ -258,5 +258,412 @@ class TestOnline(unittest.TestCase):
         self.assertEquals('123', response['saleResponse']['cnpTxnId'])
         self.assertEquals("N", response['saleResponse']['accountUpdater']['accountUpdateSource'])
 
+    @mock.patch.object(online, '_http_post')
+    def test_auth_with_mcc(self, mock__http_post):
+        transaction = fields.authorization()
+        transaction.reportGroup = 'Planets'
+        transaction.orderId = '12344'
+        transaction.amount = 106
+        transaction.orderSource = 'ecommerce'
+        transaction.merchantCategoryCode = '3535'
+        transaction.id = 'thisisid'
+
+        card = fields.cardType()
+        card.type = 'VI'
+        card.number = '4100000000000002'
+        card.expDate = '1210'
+
+        transaction.card = card
+
+        mock__http_post.return_value = """<cnpOnlineResponse version='11.0' response='1' message='Valid Format' xmlns='http://www.vantivcnp.com/schema'>
+        </cnpOnlineResponse>
+                """
+        self.assertRaises(utils.VantivException, online.request, transaction, conf, 'dict')
+
+        mock__http_post.return_value = """<cnpOnlineResponse version='11.0' response='0' message='Valid Format' xmlns='http://www.vantivcnp.com/schema'>
+                  <authorizationResponse id='thisisid' reportGroup='Planets' customerId=''>
+                    <cnpTxnId>4544691351798650001</cnpTxnId>
+                    <orderId>12344</orderId>
+                    <response>000</response>
+                    <responseTime>2017-03-13T12:14:00</responseTime>
+                    <message>Approved</message>
+                    <authCode>07585</authCode>
+                    <accountUpdater>
+                      <originalCardInfo>
+                        <type>VI</type>
+                        <number>4100000000000002</number>
+                        <expDate>1210</expDate>
+                      </originalCardInfo>
+                      <newCardInfo>
+                        <type>VI</type>
+                        <number>4532694461984309</number>
+                        <expDate>1114</expDate>
+                      </newCardInfo>
+                    </accountUpdater>
+                    <networkTransactionId>63225578415568556365452427825</networkTransactionId>
+                  </authorizationResponse>
+                  <merchantCategoryCode>3535</merchantCategoryCode>
+                </cnpOnlineResponse>
+                        """
+
+        response = online.request(transaction, conf)
+        self.assertEquals("000", response['authorizationResponse']['response'])
+        self.assertEquals("3535", response['merchantCategoryCode'])
+
+    @mock.patch.object(online, '_http_post')
+    def test_force_cap_with_mcc(self, mock__http_post):
+        transaction = fields.forceCapture()
+        transaction.reportGroup = 'Planets'
+        transaction.orderId = '12344'
+        transaction.amount = 106
+        transaction.orderSource = 'ecommerce'
+        transaction.merchantCategoryCode = '3535'
+        transaction.id = 'thisisid'
+
+        card = fields.cardType()
+        card.type = 'VI'
+        card.number = '4100000000000002'
+        card.expDate = '1210'
+
+        transaction.card = card
+
+        mock__http_post.return_value = """<cnpOnlineResponse version='11.0' response='1' message='Valid Format' xmlns='http://www.vantivcnp.com/schema'>
+          </cnpOnlineResponse>
+                  """
+        self.assertRaises(utils.VantivException, online.request, transaction, conf, 'dict')
+
+        mock__http_post.return_value = """<cnpOnlineResponse version='11.0' response='0' message='Valid Format' xmlns='http://www.vantivcnp.com/schema'>
+                    <authorizationResponse id='thisisid' reportGroup='Planets' customerId=''>
+                      <cnpTxnId>4544691351798650001</cnpTxnId>
+                      <orderId>12344</orderId>
+                      <response>000</response>
+                      <responseTime>2017-03-13T12:14:00</responseTime>
+                      <message>Approved</message>
+                      <authCode>07585</authCode>
+                      <accountUpdater>
+                        <originalCardInfo>
+                          <type>VI</type>
+                          <number>4100000000000002</number>
+                          <expDate>1210</expDate>
+                        </originalCardInfo>
+                        <newCardInfo>
+                          <type>VI</type>
+                          <number>4532694461984309</number>
+                          <expDate>1114</expDate>
+                        </newCardInfo>
+                      </accountUpdater>
+                      <networkTransactionId>63225578415568556365452427825</networkTransactionId>
+                    </authorizationResponse>
+                    <merchantCategoryCode>3535</merchantCategoryCode>
+                  </cnpOnlineResponse>
+                          """
+
+        response = online.request(transaction, conf)
+        self.assertEquals("000", response['authorizationResponse']['response'])
+        self.assertEquals("3535", response['merchantCategoryCode'])
+
+    @mock.patch.object(online, '_http_post')
+    def test_credit_with_mcc(self, mock__http_post):
+        transaction = fields.credit()
+        transaction.reportGroup = 'Planets'
+        transaction.orderId = '56789'
+        transaction.amount = 100
+        transaction.orderSource = 'ecommerce'
+        transaction.merchantCategoryCode = '7890'
+        transaction.id = 'thisisid'
+
+        card = fields.cardType()
+        card.type = 'VI'
+        card.number = '4100000000000100'
+        card.expDate = '1210'
+
+        transaction.card = card
+
+        mock__http_post.return_value = """<cnpOnlineResponse version='11.0' response='1' message='Valid Format' xmlns='http://www.vantivcnp.com/schema'>
+              </cnpOnlineResponse>
+                      """
+        self.assertRaises(utils.VantivException, online.request, transaction, conf, 'dict')
+
+        mock__http_post.return_value = """<cnpOnlineResponse version='11.0' response='0' message='Valid Format' xmlns='http://www.vantivcnp.com/schema'>
+                        <authorizationResponse id='thisisid' reportGroup='Planets' customerId=''>
+                          <cnpTxnId>4544691351798650001</cnpTxnId>
+                          <orderId>56789</orderId>
+                          <response>000</response>
+                          <responseTime>2017-03-13T12:14:00</responseTime>
+                          <message>Approved</message>
+                          <authCode>07585</authCode>
+                          <accountUpdater>
+                            <originalCardInfo>
+                              <type>VI</type>
+                              <number>4100000000000100</number>
+                              <expDate>1210</expDate>
+                            </originalCardInfo>
+                            <newCardInfo>
+                              <type>VI</type>
+                              <number>4532694461984309</number>
+                              <expDate>1114</expDate>
+                            </newCardInfo>
+                          </accountUpdater>
+                          <networkTransactionId>63225578415568556365452427825</networkTransactionId>
+                        </authorizationResponse>
+                        <merchantCategoryCode>7890</merchantCategoryCode>
+                      </cnpOnlineResponse>
+                              """
+
+        response = online.request(transaction, conf)
+        self.assertEquals("000", response['authorizationResponse']['response'])
+        self.assertEquals("7890", response['merchantCategoryCode'])
+
+    @mock.patch.object(online, '_http_post')
+    def test_echeck__credit_with_mcc(self, mock__http_post):
+
+        transaction = fields.echeckCredit()
+        transaction.reportGroup = 'Planets'
+        transaction.orderId = '12344'
+        transaction.amount = 106
+        transaction.orderSource = 'ecommerce'
+        transaction.id = 'ThisIsID'
+
+        echeck = fields.echeckType()
+        echeck.accNum = '12345657890'
+        echeck.routingNum = '123456789'
+        echeck.checkNum = '123455'
+        transaction.merchantCategoryCode = '7890'
+        echeck.accType = 'Checking'
+        transaction.echeck = echeck
+
+        billtoaddress = fields.contact()
+        billtoaddress.firstName = 'Peter'
+        billtoaddress.lastName = 'Green'
+        billtoaddress.companyName = 'Green Co'
+        billtoaddress.phone = '999-999-9999'
+        transaction.billToAddress = billtoaddress
+
+        card = fields.cardType()
+        card.type = 'VI'
+        card.number = '4100000000000100'
+        card.expDate = '1210'
+
+        transaction.card = card
+
+        mock__http_post.return_value = """<cnpOnlineResponse version='11.0' response='1' message='Valid Format' xmlns='http://www.vantivcnp.com/schema'>
+                    </cnpOnlineResponse>
+                            """
+        self.assertRaises(utils.VantivException, online.request, transaction, conf, 'dict')
+
+        mock__http_post.return_value = """<cnpOnlineResponse version='11.0' response='0' message='Valid Format' xmlns='http://www.vantivcnp.com/schema'>
+                              <authorizationResponse id='thisisid' reportGroup='Planets' customerId=''>
+                                <cnpTxnId>4544691351798650001</cnpTxnId>
+                                <orderId>56789</orderId>
+                                <response>000</response>
+                                <responseTime>2017-03-13T12:14:00</responseTime>
+                                <message>Approved</message>
+                                <authCode>07585</authCode>
+                                <accountUpdater>
+                                  <originalCardInfo>
+                                    <type>VI</type>
+                                    <number>4100000000000100</number>
+                                    <expDate>1210</expDate>
+                                  </originalCardInfo>
+                                  <newCardInfo>
+                                    <type>VI</type>
+                                    <number>4532694461984309</number>
+                                    <expDate>1114</expDate>
+                                  </newCardInfo>
+                                </accountUpdater>
+                                <networkTransactionId>63225578415568556365452427825</networkTransactionId>
+                              </authorizationResponse>
+                              <merchantCategoryCode>7890</merchantCategoryCode>
+                            </cnpOnlineResponse>
+                                    """
+
+        response = online.request(transaction, conf)
+        self.assertEquals("000", response['authorizationResponse']['response'])
+        self.assertEquals("7890", response['merchantCategoryCode'])
+
+    @mock.patch.object(online, '_http_post')
+    def test_echeck__redeposit_with_mcc(self, mock__http_post):
+        transaction = fields.echeckRedeposit()
+        transaction.reportGroup = 'Planets'
+        transaction.orderId = '12344'
+        transaction.amount = 106
+        transaction.orderSource = 'ecommerce'
+        transaction.id = 'ThisIsID'
+
+        echeck = fields.echeckType()
+        echeck.accNum = '12345657890'
+        echeck.routingNum = '123456789'
+        echeck.checkNum = '123455'
+        transaction.merchantCategoryCode = '7890'
+        echeck.accType = 'Checking'
+        transaction.echeck = echeck
+
+        billtoaddress = fields.contact()
+        billtoaddress.firstName = 'Peter'
+        billtoaddress.lastName = 'Green'
+        billtoaddress.companyName = 'Green Co'
+        billtoaddress.phone = '999-999-9999'
+        transaction.billToAddress = billtoaddress
+
+        card = fields.cardType()
+        card.type = 'VI'
+        card.number = '4100000000000100'
+        card.expDate = '1210'
+
+        transaction.card = card
+
+        mock__http_post.return_value = """<cnpOnlineResponse version='11.0' response='1' message='Valid Format' xmlns='http://www.vantivcnp.com/schema'>
+                        </cnpOnlineResponse>
+                                """
+        self.assertRaises(utils.VantivException, online.request, transaction, conf, 'dict')
+
+        mock__http_post.return_value = """<cnpOnlineResponse version='11.0' response='0' message='Valid Format' xmlns='http://www.vantivcnp.com/schema'>
+                                  <authorizationResponse id='thisisid' reportGroup='Planets' customerId=''>
+                                    <cnpTxnId>4544691351798650001</cnpTxnId>
+                                    <orderId>56789</orderId>
+                                    <response>000</response>
+                                    <responseTime>2017-03-13T12:14:00</responseTime>
+                                    <message>Approved</message>
+                                    <authCode>07585</authCode>
+                                    <accountUpdater>
+                                      <originalCardInfo>
+                                        <type>VI</type>
+                                        <number>4100000000000100</number>
+                                        <expDate>1210</expDate>
+                                      </originalCardInfo>
+                                      <newCardInfo>
+                                        <type>VI</type>
+                                        <number>4532694461984309</number>
+                                        <expDate>1114</expDate>
+                                      </newCardInfo>
+                                    </accountUpdater>
+                                    <networkTransactionId>63225578415568556365452427825</networkTransactionId>
+                                  </authorizationResponse>
+                                  <merchantCategoryCode>7890</merchantCategoryCode>
+                                </cnpOnlineResponse>
+                                        """
+
+        response = online.request(transaction, conf)
+        self.assertEquals("000", response['authorizationResponse']['response'])
+        self.assertEquals("7890", response['merchantCategoryCode'])
+
+
+    @mock.patch.object(online, '_http_post')
+    def test_echeck__Sale_with_mcc(self, mock__http_post):
+        transaction = fields.echeckRedeposit()
+        transaction.reportGroup = 'Planets'
+        transaction.orderId = '12344'
+        transaction.amount = 106
+        transaction.orderSource = 'ecommerce'
+        transaction.id = 'ThisIsID'
+
+        echeck = fields.echeckType()
+        echeck.accNum = '12345657890'
+        echeck.routingNum = '123456789'
+        echeck.checkNum = '123455'
+        transaction.merchantCategoryCode = '78901'
+        echeck.accType = 'Checking'
+        transaction.echeck = echeck
+
+        billtoaddress = fields.contact()
+        billtoaddress.firstName = 'Peter'
+        billtoaddress.lastName = 'Green'
+        billtoaddress.companyName = 'Green Co'
+        billtoaddress.phone = '999-999-9999'
+        transaction.billToAddress = billtoaddress
+
+        card = fields.cardType()
+        card.type = 'VI'
+        card.number = '4100000000000100'
+        card.expDate = '1210'
+
+        transaction.card = card
+
+        mock__http_post.return_value = """<cnpOnlineResponse version='11.0' response='1' message='Valid Format' xmlns='http://www.vantivcnp.com/schema'>
+                        </cnpOnlineResponse>
+                                """
+        self.assertRaises(utils.VantivException, online.request, transaction, conf, 'dict')
+
+        mock__http_post.return_value = """<cnpOnlineResponse version='11.0' response='0' message='Valid Format' xmlns='http://www.vantivcnp.com/schema'>
+                                  <authorizationResponse id='thisisid' reportGroup='Planets' customerId=''>
+                                    <cnpTxnId>4544691351798650001</cnpTxnId>
+                                    <orderId>56789</orderId>
+                                    <response>000</response>
+                                    <responseTime>2017-03-13T12:14:00</responseTime>
+                                    <message>Approved</message>
+                                    <authCode>07585</authCode>
+                                    <accountUpdater>
+                                      <originalCardInfo>
+                                        <type>VI</type>
+                                        <number>4100000000000100</number>
+                                        <expDate>1210</expDate>
+                                      </originalCardInfo>
+                                      <newCardInfo>
+                                        <type>VI</type>
+                                        <number>4532694461984309</number>
+                                        <expDate>1114</expDate>
+                                      </newCardInfo>
+                                    </accountUpdater>
+                                    <networkTransactionId>63225578415568556365452427825</networkTransactionId>
+                                  </authorizationResponse>
+                                  <merchantCategoryCode>7890</merchantCategoryCode>
+                                </cnpOnlineResponse>
+                                        """
+
+        response = online.request(transaction, conf)
+        self.assertEquals("000", response['authorizationResponse']['response'])
+        self.assertEquals("7890", response['merchantCategoryCode'])
+
+
+    @mock.patch.object(online, '_http_post')
+    def test_Sale_with_mcc(self, mock__http_post):
+        transaction = fields.sale()
+        transaction.reportGroup = 'Planets'
+        transaction.orderId = '12344'
+        transaction.amount = 106
+        transaction.orderSource = 'ecommerce'
+        transaction.id = 'ThisIsID'
+        card = fields.cardType()
+        card.type = 'VI'
+        card.number = '4100000000000100'
+        card.expDate = '1210'
+
+        transaction.card = card
+
+        mock__http_post.return_value = """<cnpOnlineResponse version='11.0' response='1' message='Valid Format' xmlns='http://www.vantivcnp.com/schema'>
+                        </cnpOnlineResponse>
+                                """
+        self.assertRaises(utils.VantivException, online.request, transaction, conf, 'dict')
+
+        mock__http_post.return_value = """<cnpOnlineResponse version='11.0' response='0' message='Valid Format' xmlns='http://www.vantivcnp.com/schema'>
+                                  <authorizationResponse id='thisisid' reportGroup='Planets' customerId=''>
+                                    <cnpTxnId>4544691351798650001</cnpTxnId>
+                                    <orderId>56789</orderId>
+                                    <response>000</response>
+                                    <responseTime>2017-03-13T12:14:00</responseTime>
+                                    <message>Approved</message>
+                                    <authCode>07585</authCode>
+                                    <accountUpdater>
+                                      <originalCardInfo>
+                                        <type>VI</type>
+                                        <number>4100000000000100</number>
+                                        <expDate>1210</expDate>
+                                      </originalCardInfo>
+                                      <newCardInfo>
+                                        <type>VI</type>
+                                        <number>4532694461984309</number>
+                                        <expDate>1114</expDate>
+                                      </newCardInfo>
+                                    </accountUpdater>
+                                    <networkTransactionId>63225578415568556365452427825</networkTransactionId>
+                                  </authorizationResponse>
+                                  <merchantCategoryCode>7890</merchantCategoryCode>
+                                </cnpOnlineResponse>
+                                        """
+
+        response = online.request(transaction, conf)
+        self.assertEquals("000", response['authorizationResponse']['response'])
+        self.assertEquals("7890", response['merchantCategoryCode'])
+
 if __name__ == '__main__':
     unittest.main()

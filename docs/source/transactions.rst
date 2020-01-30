@@ -75,6 +75,7 @@ authorization
         :var healthcareIIAS: instance of :py:class:`vantivsdk.fields.healthcareIIAS`
         :var id: String or Number
         :var lodgingInfo: instance of :py:class:`vantivsdk.fields.lodgingInfo`
+        :var merchantCategoryCode: String or Number
         :var merchantData: instance of :py:class:`vantivsdk.fields.merchantDataType`
         :var mpos: instance of :py:class:`vantivsdk.fields.mposType`
         :var orderId: String or Number
@@ -148,6 +149,7 @@ captureGivenAuth
         :var enhancedData: instance of :py:class:`vantivsdk.fields.enhancedData`
         :var id: String or Number
         :var lodgingInfo: instance of :py:class:`vantivsdk.fields.lodgingInfo`
+        :var merchantCategoryCode: String or Number
         :var merchantData: instance of :py:class:`vantivsdk.fields.merchantDataType`
         :var mpos: instance of :py:class:`vantivsdk.fields.mposType`
         :var orderId: String or Number
@@ -193,6 +195,7 @@ credit
         :var enhancedData: instance of :py:class:`vantivsdk.fields.enhancedData`
         :var id: String or Number
         :var lodgingInfo: instance of :py:class:`vantivsdk.fields.lodgingInfo`
+        :var merchantCategoryCode: String or Number
         :var merchantData: instance of :py:class:`vantivsdk.fields.merchantDataType`
         :var mpos: instance of :py:class:`vantivsdk.fields.mposType`
         :var orderId: String or Number
@@ -213,7 +216,7 @@ customerCredit
 --------------
     .. py:class:: vantivsdk.fields.customerCredit
 
-        :var accountInfo: instance of :py:class:`vantivsdk.fields.echeckType`
+        :var accountInfo: instance of :py:class:`vantivsdk.fields.echeckTypeCtx`
         :var amount: String or Number
         :var customIdentifier: String or Number
         :var customerId: String or Number
@@ -227,7 +230,7 @@ customerDebit
 -------------
     .. py:class:: vantivsdk.fields.customerDebit
 
-        :var accountInfo: instance of :py:class:`vantivsdk.fields.echeckType`
+        :var accountInfo: instance of :py:class:`vantivsdk.fields.echeckTypeCtx`
         :var amount: String or Number
         :var customIdentifier: String or Number
         :var customerId: String or Number
@@ -411,6 +414,7 @@ forceCapture
         :var enhancedData: instance of :py:class:`vantivsdk.fields.enhancedData`
         :var id: String or Number
         :var lodgingInfo: instance of :py:class:`vantivsdk.fields.lodgingInfo`
+        :var merchantCategoryCode: String or Number
         :var merchantData: instance of :py:class:`vantivsdk.fields.merchantDataType`
         :var mpos: instance of :py:class:`vantivsdk.fields.mposType`
         :var orderId: String or Number
@@ -682,6 +686,7 @@ sale
         :var id: String or Number
         :var ideal: instance of :py:class:`vantivsdk.fields.idealType`
         :var lodgingInfo: instance of :py:class:`vantivsdk.fields.lodgingInfo`
+        :var merchantCategoryCode: String or Number
         :var merchantData: instance of :py:class:`vantivsdk.fields.merchantDataType`
         :var mpos: instance of :py:class:`vantivsdk.fields.mposType`
         :var orderId: String or Number
@@ -723,7 +728,7 @@ submerchantCredit
 -----------------
     .. py:class:: vantivsdk.fields.submerchantCredit
 
-        :var accountInfo: instance of :py:class:`vantivsdk.fields.echeckType`
+        :var accountInfo: instance of :py:class:`vantivsdk.fields.echeckTypeCtx`
         :var amount: String or Number
         :var customIdentifier: String or Number
         :var customerId: String or Number
@@ -737,7 +742,7 @@ submerchantDebit
 ----------------
     .. py:class:: vantivsdk.fields.submerchantDebit
 
-        :var accountInfo: instance of :py:class:`vantivsdk.fields.echeckType`
+        :var accountInfo: instance of :py:class:`vantivsdk.fields.echeckTypeCtx`
         :var amount: String or Number
         :var customIdentifier: String or Number
         :var customerId: String or Number
@@ -824,7 +829,7 @@ vendorCredit
 ------------
     .. py:class:: vantivsdk.fields.vendorCredit
 
-        :var accountInfo: instance of :py:class:`vantivsdk.fields.echeckType`
+        :var accountInfo: instance of :py:class:`vantivsdk.fields.echeckTypeCtx`
         :var amount: String or Number
         :var customerId: String or Number
         :var fundingCustomerId: String or Number
@@ -838,7 +843,7 @@ vendorDebit
 -----------
     .. py:class:: vantivsdk.fields.vendorDebit
 
-        :var accountInfo: instance of :py:class:`vantivsdk.fields.echeckType`
+        :var accountInfo: instance of :py:class:`vantivsdk.fields.echeckTypeCtx`
         :var amount: String or Number
         :var customerId: String or Number
         :var fundingCustomerId: String or Number

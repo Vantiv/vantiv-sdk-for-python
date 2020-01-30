@@ -59,6 +59,7 @@ transaction.amount = 106
 transaction.orderId = '12344'
 transaction.orderSource = 'ecommerce'
 transaction.id = 'ThisIsRequiredby11'
+transaction.merchantCategoryCode= '1111'
 
 # Create cardType object
 card = fields.cardType()
@@ -73,7 +74,7 @@ transaction.card = card
 response = online.request(transaction, conf)
 
 # Print results
-print('Message: %s' % response['forceCaptureResponse']['message'])
+
 print('CNPTransaction ID: %s' % response['forceCaptureResponse']['cnpTxnId'])
 
 # Send request to server and get response as XML
