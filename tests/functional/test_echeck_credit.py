@@ -44,6 +44,7 @@ class TestEcheckCredit(unittest.TestCase):
 
         response = online.request(transaction, conf)
         self.assertEquals('000', response['echeckCreditResponse']['response'])
+        self.assertEquals('sandbox', response['echeckCreditResponse']['location'])
 
     def test_echeck_credit_with_echeck(self):
         transaction = fields.echeckCredit()
@@ -94,6 +95,7 @@ class TestEcheckCredit(unittest.TestCase):
 
         response = online.request(transaction, conf)
         self.assertEquals('000', response['echeckCreditResponse']['response'])
+        self.assertEquals('sandbox', response['echeckCreditResponse']['location'])
 
     def test_echeck_credit_with_echeck_and_secondary_amount(self):
         transaction = fields.echeckCredit()
@@ -120,6 +122,7 @@ class TestEcheckCredit(unittest.TestCase):
 
         response = online.request(transaction, conf)
         self.assertEquals('000', response['echeckCreditResponse']['response'])
+        self.assertEquals('sandbox', response['echeckCreditResponse']['location'])
 
 if __name__ == '__main__':
     unittest.main()

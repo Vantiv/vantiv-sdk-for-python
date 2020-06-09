@@ -43,6 +43,7 @@ class TestUpdateCardValidationNumOnToken(unittest.TestCase):
 
         response = online.request(transaction, conf)
         self.assertEquals('805', response['updateCardValidationNumOnTokenResponse']['response'])
+        self.assertEquals('sandbox', response['updateCardValidationNumOnTokenResponse']['location'])
 
 
 if __name__ == '__main__':

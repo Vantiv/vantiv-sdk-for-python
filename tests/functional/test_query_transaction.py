@@ -49,6 +49,7 @@ class TestQueryTransaction(unittest.TestCase):
                           response['queryTransactionResponse']['response'])
         self.assertEquals('Original transaction found',
                           response['queryTransactionResponse']['message'])
+        self.assertEquals('sandbox', response['queryTransactionResponse']['location'])
 
 
 if __name__ == '__main__':

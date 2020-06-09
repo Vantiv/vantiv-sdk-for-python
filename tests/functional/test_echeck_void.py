@@ -42,6 +42,7 @@ class TestEcheckVoid(unittest.TestCase):
 
         response = online.request(transaction, conf)
         self.assertEquals('000', response['echeckVoidResponse']['response'])
+        self.assertEquals('sandbox', response['echeckVoidResponse']['location'])
 
 if __name__ == '__main__':
     unittest.main()

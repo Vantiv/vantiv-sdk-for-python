@@ -59,6 +59,7 @@ class TestCaptureGivenAuth(unittest.TestCase):
         transaction.card = card
         response = online.request(transaction, conf)
         self.assertEquals('000', response['captureGivenAuthResponse']['response'])
+        self.assertEquals('sandbox', response['captureGivenAuthResponse']['location'])
 
 
     def test_simple_capture_given_auth_with_token(self):
@@ -83,6 +84,7 @@ class TestCaptureGivenAuth(unittest.TestCase):
         transaction.token = token
         response = online.request(transaction, conf)
         self.assertEquals('000', response['captureGivenAuthResponse']['response'])
+        self.assertEquals('sandbox', response['captureGivenAuthResponse']['location'])
 
     def test_simple_capture_given_auth_with_tokenURL(self):
         transaction = fields.captureGivenAuth()
@@ -106,6 +108,7 @@ class TestCaptureGivenAuth(unittest.TestCase):
         transaction.token = token
         response = online.request(transaction, conf)
         self.assertEquals('000', response['captureGivenAuthResponse']['response'])
+        self.assertEquals('sandbox', response['captureGivenAuthResponse']['location'])
 
     def test_complex_capture_given_auth(self):
         transaction = fields.captureGivenAuth()
@@ -146,6 +149,7 @@ class TestCaptureGivenAuth(unittest.TestCase):
         transaction.card = card
         response = online.request(transaction, conf)
         self.assertEquals('000', response['captureGivenAuthResponse']['response'])
+        self.assertEquals('sandbox', response['captureGivenAuthResponse']['location'])
 
     def test_auth_info(self):
         transaction = fields.captureGivenAuth()
@@ -177,6 +181,7 @@ class TestCaptureGivenAuth(unittest.TestCase):
 
         response = online.request(transaction, conf)
         self.assertEquals('000', response['captureGivenAuthResponse']['response'])
+        self.assertEquals('sandbox', response['captureGivenAuthResponse']['location'])
     
     def test_simple_capture_given_auth_with_processing_type(self):
         transaction = fields.captureGivenAuth()
@@ -202,6 +207,7 @@ class TestCaptureGivenAuth(unittest.TestCase):
         transaction.card = card
         response = online.request(transaction, conf)
         self.assertEquals('000', response['captureGivenAuthResponse']['response'])
+        self.assertEquals('sandbox', response['captureGivenAuthResponse']['location'])
 
     def test_simple_capture_given_auth_with_processing_type_COF(self):
         transaction = fields.captureGivenAuth()
@@ -236,6 +242,8 @@ class TestCaptureGivenAuth(unittest.TestCase):
         response = online.request(transaction, conf)
         self.assertEquals('000', response['captureGivenAuthResponse']['response'])
 
+        self.assertEquals('sandbox', response['captureGivenAuthResponse']['location'])
+
     def test_simple_capture_given_auth_with_original_network_transaction_id(self):
         transaction = fields.captureGivenAuth()
         transaction.orderId= '12344'
@@ -261,6 +269,7 @@ class TestCaptureGivenAuth(unittest.TestCase):
         transaction.card = card
         response = online.request(transaction, conf)
         self.assertEquals('000', response['captureGivenAuthResponse']['response'])
+        self.assertEquals('sandbox', response['captureGivenAuthResponse']['location'])
     
 if __name__ == '__main__':
     unittest.main()

@@ -49,6 +49,7 @@ class TestCapture(unittest.TestCase):
 
         response = online.request(transactions, conf)
         self.assertEquals('000', response['captureResponse']['response'])
+        self.assertEquals('sandbox', response['captureResponse']['location'])
 
 
     def test_simple_capture_with_partial(self):
@@ -63,6 +64,7 @@ class TestCapture(unittest.TestCase):
 
         response = online.request(transactions, conf)
         self.assertEquals('000', response['captureResponse']['response'])
+        self.assertEquals('sandbox', response['captureResponse']['location'])
 
     def test_complex_capture(self):
         transactions = fields.capture()
@@ -87,6 +89,7 @@ class TestCapture(unittest.TestCase):
 
         response = online.request(transactions, conf)
         self.assertEquals('000', response['captureResponse']['response'])
+        self.assertEquals('sandbox', response['captureResponse']['location'])
 
 
 if __name__ == '__main__':

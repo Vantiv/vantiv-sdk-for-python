@@ -60,6 +60,7 @@ class TestEcheckVerification(unittest.TestCase):
 
         response = online.request(transaction, conf)
         self.assertEquals('000', response['echeckVerificationResponse']['response'])
+        self.assertEquals('sandbox', response['echeckVerificationResponse']['location'])
 
     def test_echeck_verification_with_token(self):
         transaction = fields.echeckVerification()
@@ -84,6 +85,7 @@ class TestEcheckVerification(unittest.TestCase):
 
         response = online.request(transaction, conf)
         self.assertEquals('000', response['echeckVerificationResponse']['response'])
+        self.assertEquals('sandbox', response['echeckVerificationResponse']['location'])
 
 
     # not valid for xsd version 12.7

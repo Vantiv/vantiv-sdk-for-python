@@ -53,6 +53,7 @@ class TestSale(unittest.TestCase):
 
         response = online.request(transaction, conf)
         self.assertEquals('000', response['saleResponse']['response'])
+        self.assertEquals('sandbox', response['saleResponse']['location'])
 
     def test_simple_sale_with_paypal(self):
         transaction = fields.sale()
@@ -70,6 +71,7 @@ class TestSale(unittest.TestCase):
 
         response = online.request(transaction, conf)
         self.assertEquals('000', response['saleResponse']['response'])
+        self.assertEquals('sandbox', response['saleResponse']['location'])
 
     def test_simple_sale_with_applepay_and_secondary_amount(self):
         transaction = fields.sale()
@@ -94,6 +96,7 @@ class TestSale(unittest.TestCase):
 
         response = online.request(transaction, conf)
         self.assertEquals('000', response['saleResponse']['response'])
+        self.assertEquals('sandbox', response['saleResponse']['location'])
         # vvv
         # self.assertEquals('106', response['saleResponse']['applepayResponse']['transactionAmount'])
 
@@ -116,6 +119,7 @@ class TestSale(unittest.TestCase):
         self.assertEquals('000', response['saleResponse']['response'])
         self.assertEquals('aHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1kUXc0dzlXZ1hjUQ0K',
                           response['saleResponse']['androidpayResponse']['cryptogram'])
+        self.assertEquals('sandbox', response['saleResponse']['location'])
 
 
     def test_simple_sale_with_token(self):
@@ -136,6 +140,7 @@ class TestSale(unittest.TestCase):
 
         response = online.request(transaction, conf)
         self.assertEquals('000', response['saleResponse']['response'])
+        self.assertEquals('sandbox', response['saleResponse']['location'])
 
 
     def test_simple_sale_with_token(self):
@@ -239,6 +244,7 @@ class TestSale(unittest.TestCase):
 
         response = online.request(transaction, conf)
         self.assertEquals('000', response['saleResponse']['response'])
+        self.assertEquals('sandbox', response['saleResponse']['location'])
 
     def test_sale_with_processing_type_COF(self):
         transaction = fields.sale()
@@ -269,6 +275,8 @@ class TestSale(unittest.TestCase):
         response = online.request(transaction, conf)
         self.assertEquals('000', response['saleResponse']['response'])
 
+        self.assertEquals('sandbox', response['saleResponse']['location'])
+
 
     def test_sale_with_sepa_direct_debit(self):
         transaction = fields.sale()
@@ -292,6 +300,7 @@ class TestSale(unittest.TestCase):
         self.assertEquals('000', response['saleResponse']['response'])
         self.assertEquals('http://redirect.url.vantiv.com',
                           response['saleResponse']['sepaDirectDebitResponse']['redirectUrl'])
+        self.assertEquals('sandbox', response['saleResponse']['location'])
 
     def test_sale_with_ideal(self):
         transaction = fields.sale()
@@ -313,6 +322,7 @@ class TestSale(unittest.TestCase):
         self.assertEquals('000', response['saleResponse']['response'])
         self.assertEquals('http://redirect.url.vantiv.com',
                           response['saleResponse']['idealResponse']['redirectUrl'])
+        self.assertEquals('sandbox', response['saleResponse']['location'])
 
     def test_sale_with_giropay(self):
         transaction = fields.sale()
@@ -334,6 +344,7 @@ class TestSale(unittest.TestCase):
         self.assertEquals('000', response['saleResponse']['response'])
         self.assertEquals('http://redirect.url.vantiv.com',
                           response['saleResponse']['giropayResponse']['redirectUrl'])
+        self.assertEquals('sandbox', response['saleResponse']['location'])
 
     def test_sale_with_sofort(self):
         transaction = fields.sale()
@@ -355,6 +366,7 @@ class TestSale(unittest.TestCase):
         self.assertEquals('000', response['saleResponse']['response'])
         self.assertEquals('http://redirect.url.vantiv.com',
                           response['saleResponse']['sofortResponse']['redirectUrl'])
+        self.assertEquals('sandbox', response['saleResponse']['location'])
 
     def test_simple_sale_with_card_skipRealtimeAU_null(self):
         transaction = fields.sale()
@@ -372,6 +384,7 @@ class TestSale(unittest.TestCase):
 
         response = online.request(transaction, conf)
         self.assertEquals('Approved', response['saleResponse']['message'])
+        self.assertEquals('sandbox', response['saleResponse']['location'])
 
     def test_simple_sale_with_card_skipRealtimeAU_true(self):
         transaction = fields.sale()
@@ -390,6 +403,7 @@ class TestSale(unittest.TestCase):
 
         response = online.request(transaction, conf)
         self.assertEquals('Approved', response['saleResponse']['message'])
+        self.assertEquals('sandbox', response['saleResponse']['location'])
 
     def test_simple_sale_with_card_skipRealtimeAU_false(self):
         transaction = fields.sale()
@@ -408,6 +422,7 @@ class TestSale(unittest.TestCase):
 
         response = online.request(transaction, conf)
         self.assertEquals('Approved', response['saleResponse']['message'])
+        self.assertEquals('sandbox', response['saleResponse']['location'])
 
 if __name__ == '__main__':
     unittest.main()

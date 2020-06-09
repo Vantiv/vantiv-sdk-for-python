@@ -46,6 +46,7 @@ class TestAuthReversal(unittest.TestCase):
 
         response = online.request(transactions, conf)
         self.assertEquals('000', response['authReversalResponse']['response'])
+        self.assertEquals('sandbox', response['authReversalResponse']['location'])
 
 
 if __name__ == '__main__':
