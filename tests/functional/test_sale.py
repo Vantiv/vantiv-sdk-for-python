@@ -147,7 +147,7 @@ class TestSale(unittest.TestCase):
         txn_dict = {
             'sale': {
                 'orderId': '6',
-                'amount': 10010,
+                'amount': 10000,
                 'orderSource': 'ecommerce',
                 'id': 'thisisid',
                 'billToAddress': {
