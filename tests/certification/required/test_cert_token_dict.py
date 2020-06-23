@@ -253,8 +253,8 @@ class TestCertTokenDict(unittest.TestCase):
         }
 
         response = online.request(txn_dict, conf)
-        self.assertEquals('823', response['authorizationResponse']['response'])
-        self.assertEquals('Token was invalid', response['authorizationResponse']['message'])
+        self.assertEquals('822', response['authorizationResponse']['response'])
+        self.assertEquals('Token was not found', response['authorizationResponse']['message'])
     
     def test_table_2_8_61(self):
 

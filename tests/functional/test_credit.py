@@ -52,6 +52,7 @@ class TestCredit(unittest.TestCase):
 
         response = online.request(transaction, conf)
         self.assertEquals('000', response['creditResponse']['response'])
+        self.assertEquals('sandbox', response['creditResponse']['location'])
 
     def test_simple_credit_with_paypal(self):
         transaction = fields.credit()
@@ -67,6 +68,7 @@ class TestCredit(unittest.TestCase):
 
         response = online.request(transaction, conf)
         self.assertEquals('000', response['creditResponse']['response'])
+        self.assertEquals('sandbox', response['creditResponse']['location'])
 
     def test_simple_credit_with_card_and_secondary_amount(self):
         transaction = fields.credit()
@@ -86,6 +88,7 @@ class TestCredit(unittest.TestCase):
 
         response = online.request(transaction, conf)
         self.assertEquals('000', response['creditResponse']['response'])
+        self.assertEquals('sandbox', response['creditResponse']['location'])
 
     def test_simple_credit_paypal_notes(self):
         transaction = fields.credit()
@@ -105,6 +108,7 @@ class TestCredit(unittest.TestCase):
 
         response = online.request(transaction, conf)
         self.assertEquals('000', response['creditResponse']['response'])
+        self.assertEquals('sandbox', response['creditResponse']['location'])
 
 
     def test_processing_instruction_and_amex(self):
@@ -128,6 +132,7 @@ class TestCredit(unittest.TestCase):
 
         response = online.request(transaction, conf)
         self.assertEquals('000', response['creditResponse']['response'])
+        self.assertEquals('sandbox', response['creditResponse']['location'])
 
 
     def test_simple_credit_with_litletxn_and_pin(self):
@@ -140,6 +145,7 @@ class TestCredit(unittest.TestCase):
 
         response = online.request(transaction, conf)
         self.assertEquals('000', response['creditResponse']['response'])
+        self.assertEquals('sandbox', response['creditResponse']['location'])
 
 if __name__ == '__main__':
     unittest.main()

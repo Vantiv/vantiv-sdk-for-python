@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <!--<!DOCTYPE xs:schema SYSTEM "http://www.w3.org/2001/XMLSchema.dtd">-->
 <xs:schema targetNamespace="http://www.vantivcnp.com/schema" xmlns:xp="http://www.vantivcnp.com/schema"
-    xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+           xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
 
-    <xs:include schemaLocation="cnpTransaction_v12.11.xsd" />
+    <xs:include schemaLocation="cnpTransaction_v12.13.xsd" />
 
     <xs:complexType name="baseRequest">
         <xs:sequence>
@@ -64,6 +64,7 @@
                         <xs:element name="responseTime" type="xs:dateTime" />
                         <xs:element name="postDate" type="xs:date" />
                         <xs:element name="message" type="xp:messageType" />
+                        <xs:element name="location" type="xs:string" minOccurs="0"/>
                         <xs:element name="recyclingResponse" type="xp:voidRecyclingResponseType" minOccurs="0" />
                     </xs:all>
 
@@ -100,6 +101,7 @@
                         <xs:element name="responseTime" type="xs:dateTime" />
                         <xs:element name="postDate" type="xs:date" />
                         <xs:element name="message" type="xp:messageType" />
+                        <xs:element name="location" type="xs:string" minOccurs="0"/>
                     </xs:all>
                 </xs:extension>
             </xs:complexContent>
@@ -237,6 +239,7 @@
                         <xs:element name="response" type="xp:responseType" />
                         <xs:element name="responseTime" type="xs:dateTime" />
                         <xs:element name="message" type="xp:messageType" />
+                        <xs:element name="location" type="xs:string" minOccurs="0"/>
                         <xs:element name="matchCount" minOccurs="0">
                             <xs:simpleType>
                                 <xs:restriction base="xs:int">
@@ -265,6 +268,7 @@
                         <xs:element name="cnpTxnId" type="xp:cnpIdType" />
                         <xs:element name="response" type="xp:responseType" />
                         <xs:element name="message" type="xp:messageType" />
+                        <xs:element name="location" type="xs:string" minOccurs="0"/>
                     </xs:all>
                 </xs:extension>
             </xs:complexContent>
@@ -293,11 +297,11 @@
                         <xs:element name="response" type="xp:responseType" />
                         <xs:element name="responseTime" type="xs:dateTime" />
                         <xs:element name="message" type="xs:string"/>
+                        <xs:element name="location" type="xs:string" minOccurs="0"/>
                     </xs:all>
                 </xs:extension>
             </xs:complexContent>
         </xs:complexType>
     </xs:element>
-
 
 </xs:schema>

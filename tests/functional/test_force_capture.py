@@ -52,6 +52,7 @@ class TestForceCapture(unittest.TestCase):
 
         response = online.request(transaction, conf)
         self.assertEquals('000', response['forceCaptureResponse']['response'])
+        self.assertEquals('sandbox', response['forceCaptureResponse']['location'])
 
     def test_force_capture_with_secondary_amount(self):
         transaction = fields.forceCapture()
@@ -71,6 +72,7 @@ class TestForceCapture(unittest.TestCase):
 
         response = online.request(transaction, conf)
         self.assertEquals('000', response['forceCaptureResponse']['response'])
+        self.assertEquals('sandbox', response['forceCaptureResponse']['location'])
 
     def test_force_capture_with_token(self):
         transaction = fields.forceCapture()
@@ -91,6 +93,7 @@ class TestForceCapture(unittest.TestCase):
 
         response = online.request(transaction, conf)
         self.assertEquals('000', response['forceCaptureResponse']['response'])
+        self.assertEquals('sandbox', response['forceCaptureResponse']['location'])
 
 
 if __name__ == '__main__':

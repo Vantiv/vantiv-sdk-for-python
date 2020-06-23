@@ -48,6 +48,7 @@ class TestTranslateToLow(unittest.TestCase):
                           response['translateToLowValueTokenResponse']['response'])
         self.assertEquals('Valid Token',
                           response['translateToLowValueTokenResponse']['message'])
+        self.assertEquals('sandbox', response['translateToLowValueTokenResponse']['location'])
 
 
 if __name__ == '__main__':

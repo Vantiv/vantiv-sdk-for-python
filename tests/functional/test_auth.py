@@ -55,6 +55,7 @@ class TestAuth(unittest.TestCase):
 
         response = online.request(authorization, conf)
         self.assertEquals('000', response['authorizationResponse']['response'])
+        self.assertEquals('sandbox', response['authorizationResponse']['location'])
 
     def test_simple_auth_with_card_dict(self):
         # Transactions presented by dict
@@ -74,6 +75,7 @@ class TestAuth(unittest.TestCase):
         }
         response = online.request(txn_dict, conf)
         self.assertEquals('000', response['authorizationResponse']['response'])
+        self.assertEquals('sandbox', response['authorizationResponse']['location'])
 
     def test_simple_auth_with_lodging(self):
         authorization = fields.authorization()
@@ -99,6 +101,7 @@ class TestAuth(unittest.TestCase):
 
         response = online.request(authorization, conf)
         self.assertEquals('000', response['authorizationResponse']['response'])
+        self.assertEquals('sandbox', response['authorizationResponse']['location'])
 
     def test_simple_auth_with_android_pay(self):
         authorization = fields.authorization()
@@ -119,6 +122,7 @@ class TestAuth(unittest.TestCase):
         self.assertEquals('000', response['authorizationResponse']['response'])
         self.assertEquals('aHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1kUXc0dzlXZ1hjUQ0K',
                           response['authorizationResponse']['androidpayResponse']['cryptogram'])
+        self.assertEquals('sandbox', response['authorizationResponse']['location'])
 
     def test_simple_auth_with_paypal(self):
         authorization = fields.authorization()
@@ -136,6 +140,7 @@ class TestAuth(unittest.TestCase):
 
         response = online.request(authorization, conf)
         self.assertEquals('000', response['authorizationResponse']['response'])
+        self.assertEquals('sandbox', response['authorizationResponse']['location'])
     
     # ***
     def test_simple_auth_with_applepay_and_secondary_amount(self):
@@ -163,6 +168,7 @@ class TestAuth(unittest.TestCase):
         # vvv
         self.assertEquals('000', response['authorizationResponse']['response'])
         self.assertEquals('106', response['authorizationResponse']['applepayResponse']['transactionAmount'])
+        self.assertEquals('sandbox', response['authorizationResponse']['location'])
     
     def test_pos_without_capability_entrymod(self):
         authorization = fields.authorization()
@@ -202,6 +208,7 @@ class TestAuth(unittest.TestCase):
         self.assertEquals('000', response['authorizationResponse']['response'])
         self.assertEquals('4100100000000000',
                           response['authorizationResponse']['accountUpdater']['originalCardInfo']['number'])
+        self.assertEquals('sandbox', response['authorizationResponse']['location'])
 
     def test_track_data(self):
         authorization = fields.authorization()
@@ -227,6 +234,7 @@ class TestAuth(unittest.TestCase):
 
         response = online.request(authorization, conf)
         self.assertEquals('000', response['authorizationResponse']['response'])
+        self.assertEquals('sandbox', response['authorizationResponse']['location'])
 
     def test_list_of_tax_amount(self):
         authorization = fields.authorization()
@@ -257,6 +265,7 @@ class TestAuth(unittest.TestCase):
 
         response = online.request(authorization, conf)
         self.assertEquals('000', response['authorizationResponse']['response'])
+        self.assertEquals('sandbox', response['authorizationResponse']['location'])
 
     def test_simple_auth_with_card_skipRealtimeAU_null(self):
         authorization = fields.authorization()
@@ -275,6 +284,7 @@ class TestAuth(unittest.TestCase):
         response = online.request(authorization, conf)
         self.assertEquals('000', response['authorizationResponse']['response'])
         self.assertEquals('Approved', response['authorizationResponse']['message'])
+        self.assertEquals('sandbox', response['authorizationResponse']['location'])
 
     def test_simple_auth_with_card_skipRealtimeAU_true(self):
         authorization = fields.authorization()
@@ -294,6 +304,7 @@ class TestAuth(unittest.TestCase):
         response = online.request(authorization, conf)
         self.assertEquals('000', response['authorizationResponse']['response'])
         self.assertEquals('Approved', response['authorizationResponse']['message'])
+        self.assertEquals('sandbox', response['authorizationResponse']['location'])
 
     def test_simple_auth_with_card_skipRealtimeAU_false(self):
         authorization = fields.authorization()
@@ -313,6 +324,7 @@ class TestAuth(unittest.TestCase):
         response = online.request(authorization, conf)
         self.assertEquals('000', response['authorizationResponse']['response'])
         self.assertEquals('Approved', response['authorizationResponse']['message'])
+        self.assertEquals('sandbox', response['authorizationResponse']['location'])
 
     def test_auth_with_processing_type(self):
         authorization = fields.authorization()
@@ -333,6 +345,7 @@ class TestAuth(unittest.TestCase):
 
         response = online.request(authorization, conf)
         self.assertEquals('000', response['authorizationResponse']['response'])
+        self.assertEquals('sandbox', response['authorizationResponse']['location'])
 
     def test_auth_with_processing_type_COF(self):
         authorization = fields.authorization()
@@ -361,6 +374,8 @@ class TestAuth(unittest.TestCase):
         authorization.processingType = 'cardholderInitiatedCOF'
         response = online.request(authorization, conf)
         self.assertEquals('000', response['authorizationResponse']['response'])
+
+        self.assertEquals('sandbox', response['authorizationResponse']['location'])
 
     def test_auth_with_wallet(self):
         authorization = fields.authorization()
@@ -412,7 +427,8 @@ class TestAuth(unittest.TestCase):
         response = online.request(authorization, conf)
         self.assertEquals('000', response['authorizationResponse']['response'])
         self.assertNotIn('networkTransactionId', response['authorizationResponse'])
-    
+        self.assertEquals('sandbox', response['authorizationResponse']['location'])
+
 
 if __name__ == '__main__':
     unittest.main()

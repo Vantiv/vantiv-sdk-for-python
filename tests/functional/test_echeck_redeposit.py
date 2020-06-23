@@ -42,6 +42,7 @@ class TestEcheckRedeposit(unittest.TestCase):
 
         response = online.request(transaction, conf)
         self.assertEquals('000', response['echeckRedepositResponse']['response'])
+        self.assertEquals('sandbox', response['echeckRedepositResponse']['location'])
 
     def test_echeck_redeposit_with_echeck(self):
         transaction = fields.echeckRedeposit()
@@ -57,6 +58,7 @@ class TestEcheckRedeposit(unittest.TestCase):
 
         response = online.request(transaction, conf)
         self.assertEquals('000', response['echeckRedepositResponse']['response'])
+        self.assertEquals('sandbox', response['echeckRedepositResponse']['location'])
 
     def test_echeck_redeposit_with_token(self):
         transaction = fields.echeckRedeposit()
@@ -71,6 +73,7 @@ class TestEcheckRedeposit(unittest.TestCase):
 
         response = online.request(transaction, conf)
         self.assertEquals('000', response['echeckRedepositResponse']['response'])
+        self.assertEquals('sandbox', response['echeckRedepositResponse']['location'])
 
 if __name__ == '__main__':
     unittest.main()

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema targetNamespace="http://www.vantivcnp.com/schema" xmlns:xp="http://www.vantivcnp.com/schema"
-    xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+           xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
 
     <xs:element name="authentication">
         <xs:complexType>
@@ -35,7 +35,7 @@
 
 
 
-    
+
 
 
 
@@ -187,11 +187,11 @@
 
 
 
-    
-    
-    
-    
-    
+
+
+
+
+
     <xs:element name="lodgingCharge">
         <xs:complexType>
             <xs:sequence>
@@ -199,9 +199,10 @@
             </xs:sequence>
         </xs:complexType>
     </xs:element>
-    
 
-    
+
+
+
 <!--cnpRecurring-->
 
     
@@ -225,6 +226,7 @@
                     <xs:element name="response" type="xs:string"  minOccurs="0"/>
                     <xs:element name="message" type="xs:string"  minOccurs="0"/>
                     <xs:element name="responseTime" type="xs:dateTime"  minOccurs="0"/>
+                    <xs:element name="location" type="xs:string" minOccurs="0"/>
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>
@@ -440,20 +442,21 @@
         </xs:sequence>
     </xs:complexType>
 
+
 <!--cnpTransaction-->
 
     
     
 
     <xs:element name="transaction" type="xp:transactionType" abstract="true" />
-    
+
     <xs:complexType name="transactionType">
         <xs:complexContent>
             <xs:extension base="xp:cnpTransactionInterface">
                 <xs:attribute name="id" type="xs:string" use="required" />
                 <xs:attribute name="customerId" type="xs:string" use="optional" />
             </xs:extension>
-        </xs:complexContent>  
+        </xs:complexContent>
     </xs:complexType>
 
     <xs:complexType name="transactionTypeWithReportGroup">
@@ -523,7 +526,7 @@
             <xs:element name="authenticationTransactionId" type="xs:string" minOccurs="0" />
             <xs:element name="customerIpAddress" type="xs:string" minOccurs="0" />
             <xs:element name="authenticatedByMerchant" type="xs:boolean" minOccurs="0" />
-            <xs:element name="authenticationProtocolVersion" type="xs:integer" minOccurs="0" />            
+            <xs:element name="authenticationProtocolVersion" type="xs:integer" minOccurs="0" />
         </xs:all>
     </xs:complexType>
 
@@ -666,10 +669,10 @@
                         <xs:element name="orderSource" type="xs:string"  minOccurs="0"/>
                         <xs:element ref="xp:billToAddress" minOccurs="0" />
                         <xs:choice>
-                                <xs:element name="mpos" type="xp:mposType" />
-                                <xs:element name="card" type="xp:cardType" />
-                                <xs:element name="token" type="xp:cardTokenType" />
-                                <xs:element name="paypage" type="xp:cardPaypageType" />
+                            <xs:element name="mpos" type="xp:mposType" />
+                            <xs:element name="card" type="xp:cardType" />
+                            <xs:element name="token" type="xp:cardTokenType" />
+                            <xs:element name="paypage" type="xp:cardPaypageType" />
                         </xs:choice>
                         <xs:element ref="xp:customBilling" minOccurs="0" />
                         <xs:element name="taxType" type="xs:string" minOccurs="0" />
@@ -701,10 +704,10 @@
                         <xs:element ref="xp:billToAddress" minOccurs="0" />
                         <xs:element ref="xp:shipToAddress" minOccurs="0" />
                         <xs:choice>
-                                <xs:element name="mpos" type="xp:mposType" />
-                                <xs:element name="card" type="xp:cardType" />
-                                <xs:element name="token" type="xp:cardTokenType" />
-                                <xs:element name="paypage" type="xp:cardPaypageType" />
+                            <xs:element name="mpos" type="xp:mposType" />
+                            <xs:element name="card" type="xp:cardType" />
+                            <xs:element name="token" type="xp:cardTokenType" />
+                            <xs:element name="paypage" type="xp:cardPaypageType" />
                         </xs:choice>
                         <xs:element ref="xp:customBilling" minOccurs="0" />
                         <xs:element name="taxType" type="xs:string" minOccurs="0" />
@@ -1129,6 +1132,7 @@
                         <xs:element name="eCheckAccountSuffix" type="xs:string" minOccurs="0"/>
                         <xs:element name="response" type="xs:string"  minOccurs="0"/>
                         <xs:element name="message" type="xs:string" minOccurs="0"/>
+                        <xs:element name="location" type="xs:string" minOccurs="0"/>
                         <xs:element name="responseTime" type="xs:dateTime"  minOccurs="0"/>
                         <xs:element ref="xp:applepayResponse" minOccurs="0"/>
                         <xs:element ref="xp:androidpayResponse" minOccurs="0"/>
@@ -1155,6 +1159,7 @@
                         <!-- online only -->
                         <xs:element name="postDate" type="xs:date" minOccurs="0" />
                         <xs:element name="message" type="xs:string"  minOccurs="0"/>
+                        <xs:element name="location" type="xs:string" minOccurs="0"/>
                         <xs:element name="authCode" type="xs:string" minOccurs="0" />
                         <xs:element name="authorizationResponseSubCode" type="xs:string" minOccurs="0" />
                         <xs:element name="approvedAmount" type="xs:integer" minOccurs="0" />
@@ -1269,6 +1274,7 @@
                         <!-- postDate is online only -->
                         <xs:element name="postDate" type="xs:date" minOccurs="0" />
                         <xs:element name="message" type="xs:string"  minOccurs="0"/>
+                        <xs:element name="location" type="xs:string" minOccurs="0"/>
                     </xs:all>
                 </xs:extension>
             </xs:complexContent>
@@ -1286,6 +1292,7 @@
                         <!-- postDate is online only -->
                         <xs:element name="postDate" type="xs:date" minOccurs="0" />
                         <xs:element name="message" type="xs:string"  minOccurs="0"/>
+                        <xs:element name="location" type="xs:string" minOccurs="0"/>
                         <xs:element ref="xp:giftCardResponse"  minOccurs="0"/>
                     </xs:all>
                 </xs:extension>
@@ -1304,6 +1311,7 @@
                         <!-- postDate is online only -->
                         <xs:element name="postDate" type="xs:date" minOccurs="0" />
                         <xs:element name="message" type="xs:string"  minOccurs="0"/>
+                        <xs:element name="location" type="xs:string" minOccurs="0"/>
                         <!-- If Gift card transaction -->
                         <xs:element ref="xp:giftCardResponse"  minOccurs="0"/>
                     </xs:all>
@@ -1323,6 +1331,7 @@
                         <!-- postDate is online only -->
                         <xs:element name="postDate" type="xs:date" minOccurs="0" />
                         <xs:element name="message" type="xs:string"  minOccurs="0"/>
+                        <xs:element name="location" type="xs:string" minOccurs="0"/>
                         <!-- If Gift card transaction -->
                         <xs:element ref="xp:giftCardResponse"  minOccurs="0"/>
                     </xs:all>
@@ -1342,6 +1351,7 @@
                         <!-- postDate is online only -->
                         <xs:element name="postDate" type="xs:date" minOccurs="0" />
                         <xs:element name="message" type="xs:string"  minOccurs="0"/>
+                        <xs:element name="location" type="xs:string" minOccurs="0"/>
                         <!-- If Gift card transaction -->
                         <xs:element ref="xp:giftCardResponse"  minOccurs="0"/>
                     </xs:all>
@@ -1361,6 +1371,7 @@
                         <!-- postDate is online only -->
                         <xs:element name="postDate" type="xs:date" minOccurs="0" />
                         <xs:element name="message" type="xs:string"  minOccurs="0"/>
+                        <xs:element name="location" type="xs:string" minOccurs="0"/>
                         <!-- If Gift card transaction -->
                         <xs:element ref="xp:giftCardResponse"  minOccurs="0"/>
                     </xs:all>
@@ -1380,6 +1391,7 @@
                         <!-- postDate is online only -->
                         <xs:element name="postDate" type="xs:date" minOccurs="0" />
                         <xs:element name="message" type="xs:string"  minOccurs="0"/>
+                        <xs:element name="location" type="xs:string" minOccurs="0"/>
                         <!-- If Gift card transaction -->
                         <xs:element ref="xp:giftCardResponse"  minOccurs="0"/>
                     </xs:all>
@@ -1399,6 +1411,7 @@
                         <!-- postDate is online only -->
                         <xs:element name="postDate" type="xs:date" minOccurs="0" />
                         <xs:element name="message" type="xs:string"  minOccurs="0"/>
+                        <xs:element name="location" type="xs:string" minOccurs="0"/>
                         <!-- If Gift card transaction -->
                         <xs:element ref="xp:giftCardResponse"  minOccurs="0"/>
                     </xs:all>
@@ -1419,6 +1432,7 @@
                         <!-- postDate is online only -->
                         <xs:element name="postDate" type="xs:date" minOccurs="0" />
                         <xs:element name="message" type="xs:string"  minOccurs="0"/>
+                        <xs:element name="location" type="xs:string" minOccurs="0"/>
                         <xs:element ref="xp:accountUpdater" minOccurs="0" />
                         <!-- If Gift Card transaction -->
                         <xs:element ref="xp:fraudResult" minOccurs="0" />
@@ -1440,6 +1454,7 @@
                         <!-- postDate is online only -->
                         <xs:element name="postDate" type="xs:date" minOccurs="0" />
                         <xs:element name="message" type="xs:string"  minOccurs="0"/>
+                        <xs:element name="location" type="xs:string" minOccurs="0"/>
                         <xs:element ref="xp:fraudResult" minOccurs="0" />
                         <xs:element ref="xp:giftCardResponse"  minOccurs="0"/>
                     </xs:all>
@@ -1459,6 +1474,7 @@
                         <!-- online only -->
                         <xs:element name="postDate" type="xs:date" minOccurs="0" />
                         <xs:element name="message" type="xs:string"  minOccurs="0"/>
+                        <xs:element name="location" type="xs:string" minOccurs="0"/>
                         <!-- if tokenenized merchant -->
                         <xs:element name="tokenResponse" type="xp:tokenResponseType" minOccurs="0"/>
                         <xs:element ref="xp:accountUpdater" minOccurs="0" />
@@ -1482,6 +1498,7 @@
                         <!-- online only -->
                         <xs:element name="postDate" type="xs:date" minOccurs="0" />
                         <xs:element name="message" type="xs:string"  minOccurs="0"/>
+                        <xs:element name="location" type="xs:string" minOccurs="0"/>
                         <!-- if tokenenized merchant -->
                         <xs:element name="tokenResponse" type="xp:tokenResponseType" minOccurs="0"/>
                         <!-- If Gift Card transaction -->
@@ -1505,6 +1522,7 @@
                         <xs:element name="cardProductId" type="xs:string" minOccurs="0" />
                         <xs:element name="postDate" type="xs:date" minOccurs="0" />
                         <xs:element name="message" type="xs:string"  minOccurs="0"/>
+                        <xs:element name="location" type="xs:string" minOccurs="0"/>
                         <xs:element name="authCode" type="xs:string" minOccurs="0" />
                         <xs:element name="authorizationResponseSubCode" type="xs:string" minOccurs="0" />
                         <xs:element name="approvedAmount" type="xs:integer" minOccurs="0" />
@@ -1551,6 +1569,7 @@
                         <!-- online only -->
                         <xs:element name="postDate" type="xs:date" minOccurs="0" />
                         <xs:element name="message" type="xs:string"  minOccurs="0"/>
+                        <xs:element name="location" type="xs:string" minOccurs="0"/>
                         <!-- if tokenenized merchant -->
                         <xs:element name="tokenResponse" type="xp:tokenResponseType" minOccurs="0"/>
                         <!-- If Gift Card transaction -->
@@ -1572,6 +1591,7 @@
                         <!-- online only -->
                         <xs:element name="postDate" type="xs:date" minOccurs="0" />
                         <xs:element name="message" type="xs:string"  minOccurs="0"/>
+                        <xs:element name="location" type="xs:string" minOccurs="0"/>
                         <xs:element ref="xp:fraudResult" minOccurs="0" />
                         <xs:element ref="xp:giftCardResponse"  minOccurs="0"/>
                     </xs:all>
@@ -1604,6 +1624,7 @@
                         <!-- online only -->
                         <xs:element name="postDate" type="xs:date" minOccurs="0" />
                         <xs:element name="message" type="xs:string"  minOccurs="0"/>
+                        <xs:element name="location" type="xs:string" minOccurs="0"/>
                         <xs:element ref="xp:fraudResult" minOccurs="0" />
                         <xs:element ref="xp:giftCardResponse"  minOccurs="0"/>
                         <xs:element ref="xp:virtualGiftCardResponse" minOccurs="0"/>
@@ -1624,6 +1645,7 @@
                         <!-- online only -->
                         <xs:element name="postDate" type="xs:date" minOccurs="0" />
                         <xs:element name="message" type="xs:string"  minOccurs="0"/>
+                        <xs:element name="location" type="xs:string" minOccurs="0"/>
                         <xs:element ref="xp:fraudResult" minOccurs="0" />
                         <xs:element ref="xp:giftCardResponse"  minOccurs="0"/>
                     </xs:all>
@@ -1643,6 +1665,7 @@
                         <!-- online only -->
                         <xs:element name="postDate" type="xs:date" minOccurs="0" />
                         <xs:element name="message" type="xs:string"  minOccurs="0"/>
+                        <xs:element name="location" type="xs:string" minOccurs="0"/>
                         <xs:element ref="xp:fraudResult" minOccurs="0" />
                         <xs:element ref="xp:giftCardResponse"  minOccurs="0"/>
                     </xs:all>
@@ -1686,6 +1709,7 @@
                         <!-- online only -->
                         <xs:element name="postDate" type="xs:date" minOccurs="0" />
                         <xs:element name="message" type="xs:string"  minOccurs="0"/>
+                        <xs:element name="location" type="xs:string" minOccurs="0"/>
                         <xs:element ref="xp:fraudResult" minOccurs="0" />
                         <xs:element ref="xp:giftCardResponse"  minOccurs="0"/>
                     </xs:all>
@@ -1705,6 +1729,7 @@
                         <!-- online only -->
                         <xs:element name="postDate" type="xs:date" minOccurs="0" />
                         <xs:element name="message" type="xs:string"  minOccurs="0"/>
+                        <xs:element name="location" type="xs:string" minOccurs="0"/>
                         <xs:element ref="xp:fraudResult" minOccurs="0" />
                         <xs:element name="approvedAmount" type="xs:integer" minOccurs="0" />
                         <xs:element ref="xp:giftCardResponse"  minOccurs="0"/>
@@ -1788,7 +1813,7 @@
                         <xs:element ref="xp:billToAddress" minOccurs="0" />  <!-- must supply street, city and state as 2 digit postal state -->
                         <xs:choice><xs:element name="echeck" type="xp:echeckType" minOccurs="0"/><xs:element name="echeckToken" type="xp:echeckTokenType" minOccurs="0"/></xs:choice>
                         <xs:element name="merchantData" type="xp:merchantDataType" minOccurs="0" />
-                      </xs:sequence>
+                    </xs:sequence>
                 </xs:extension>
             </xs:complexContent>
         </xs:complexType>
@@ -1803,6 +1828,7 @@
                         <xs:element name="response" type="xs:string"  minOccurs="0"/>
                         <xs:element name="responseTime" type="xs:dateTime"  minOccurs="0"/>
                         <xs:element name="message" type="xs:string"  minOccurs="0"/>
+                        <xs:element name="location" type="xs:string" minOccurs="0"/>
                         <xs:element name="verificationCode" type="xs:string" minOccurs="0" />
                         <!-- online only -->
                         <xs:element name="postDate" type="xs:date" minOccurs="0" />
@@ -1823,6 +1849,7 @@
                         <xs:element name="response" type="xs:string"  minOccurs="0"/>
                         <xs:element name="responseTime" type="xs:dateTime"  minOccurs="0"/>
                         <xs:element name="message" type="xs:string"  minOccurs="0"/>
+                        <xs:element name="location" type="xs:string" minOccurs="0"/>
                         <!-- online only -->
                         <xs:element name="postDate" type="xs:date" minOccurs="0" />
                         <xs:element ref="xp:accountUpdater" minOccurs="0" />
@@ -1834,45 +1861,45 @@
     </xs:element>
 
     <xs:complexType name="echeckAccountInfoType">
-            <xs:all>
-                <xs:element name="accType" type="xs:string"  minOccurs="0"/>
-                <xs:element name="accNum" type="xs:string"  minOccurs="0"/>
-                <xs:element name="routingNum" type="xs:string"  minOccurs="0"/>
-            </xs:all>
+        <xs:all>
+            <xs:element name="accType" type="xs:string"  minOccurs="0"/>
+            <xs:element name="accNum" type="xs:string"  minOccurs="0"/>
+            <xs:element name="routingNum" type="xs:string"  minOccurs="0"/>
+        </xs:all>
     </xs:complexType>
 
     <xs:complexType name="echeckTokenInfoType">
-            <xs:all>
-                <xs:element name="accType" type="xs:string"  minOccurs="0"/>
-                <xs:element name="cnpToken" type="xs:string"  minOccurs="0"/>
-                <xs:element name="routingNum" type="xs:string"  minOccurs="0"/>
-            </xs:all>
+        <xs:all>
+            <xs:element name="accType" type="xs:string"  minOccurs="0"/>
+            <xs:element name="cnpToken" type="xs:string"  minOccurs="0"/>
+            <xs:element name="routingNum" type="xs:string"  minOccurs="0"/>
+        </xs:all>
     </xs:complexType>
 
 
     <xs:complexType name="cardAccountInfoType">
-            <xs:all>
-                <xs:element name="type" type="xs:string"  minOccurs="0"/>
-                <xs:element name="number" type="xs:string" minOccurs="0"/>
-                <xs:element name="expDate" type="xs:string" minOccurs="0"/>
-            </xs:all>
+        <xs:all>
+            <xs:element name="type" type="xs:string"  minOccurs="0"/>
+            <xs:element name="number" type="xs:string" minOccurs="0"/>
+            <xs:element name="expDate" type="xs:string" minOccurs="0"/>
+        </xs:all>
     </xs:complexType>
 
     <xs:complexType name="cardTokenInfoType">
-            <xs:all>
-                <xs:element name="cnpToken" type="xs:string"  minOccurs="0"/>
-                <xs:element name="type" type="xs:string"  minOccurs="0"/>
-                <xs:element name="expDate" type="xs:string"  minOccurs="0"/>
-                <xs:element name="bin" type="xs:string" minOccurs="0" />
-            </xs:all>
+        <xs:all>
+            <xs:element name="cnpToken" type="xs:string"  minOccurs="0"/>
+            <xs:element name="type" type="xs:string"  minOccurs="0"/>
+            <xs:element name="expDate" type="xs:string"  minOccurs="0"/>
+            <xs:element name="bin" type="xs:string" minOccurs="0" />
+        </xs:all>
     </xs:complexType>
 
 
     <xs:complexType name="extendedCardResponseType">
-            <xs:all>
-                <xs:element name="message" type="xs:string"  minOccurs="0"/>
-                <xs:element name="code" type="xs:string"  minOccurs="0"/>
-            </xs:all>
+        <xs:all>
+            <xs:element name="message" type="xs:string"  minOccurs="0"/>
+            <xs:element name="code" type="xs:string"  minOccurs="0"/>
+        </xs:all>
     </xs:complexType>
 
 
@@ -1921,6 +1948,7 @@
                         <xs:element name="response" type="xs:string"  minOccurs="0"/>
                         <xs:element name="responseTime" type="xs:dateTime"  minOccurs="0"/>
                         <xs:element name="message" type="xs:string"  minOccurs="0"/>
+                        <xs:element name="location" type="xs:string" minOccurs="0"/>
                         <!-- postDate is online only -->
                         <xs:element name="postDate" type="xs:date" minOccurs="0" />
                         <xs:element name="tokenResponse" type="xp:tokenResponseType" minOccurs="0"/>
@@ -1936,10 +1964,10 @@
                 <xs:extension base="xp:transactionTypeWithReportGroup">
                     <xs:sequence>
                         <xs:element name="cnpTxnId" type="xs:long"  minOccurs="0"/>
-	                        <xs:choice minOccurs="0">
-		                        <xs:element name="echeck" type="xp:echeckType"/>
-		                        <xs:element name="echeckToken" type="xp:echeckTokenType"/>
-	                        </xs:choice>
+                        <xs:choice minOccurs="0">
+                            <xs:element name="echeck" type="xp:echeckType"/>
+                            <xs:element name="echeckToken" type="xp:echeckTokenType"/>
+                        </xs:choice>
                         <xs:element name="merchantData" type="xp:merchantDataType" minOccurs="0" />
                         <xs:element name="customIdentifier" type="xs:string" minOccurs="0" />
                     </xs:sequence>
@@ -1957,6 +1985,7 @@
                         <xs:element name="response" type="xs:string"  minOccurs="0"/>
                         <xs:element name="responseTime" type="xs:dateTime"  minOccurs="0"/>
                         <xs:element name="message" type="xs:string"  minOccurs="0"/>
+                        <xs:element name="location" type="xs:string" minOccurs="0"/>
                         <!-- online only -->
                         <xs:element name="postDate" type="xs:date" minOccurs="0" />
                         <xs:element ref="xp:accountUpdater" minOccurs="0" />
@@ -1976,7 +2005,7 @@
             <xs:element name="ccdPaymentInformation" type="xs:string" minOccurs="0"/>
         </xs:all>
     </xs:complexType>
-    
+
     <xs:complexType name="echeckTypeCtx">
         <xs:all>
             <xs:element name="accType" type="xs:string"  minOccurs="0"/>
@@ -1986,11 +2015,11 @@
             <xs:element name="ccdPaymentInformation" type="xs:string" minOccurs="0"/>
             <xs:element name="ctxPaymentInformation" type="xp:ctxPaymentInformationType" minOccurs="0"/>
         </xs:all>
-     </xs:complexType>
-    
-     <xs:complexType name="ctxPaymentInformationType">    
+    </xs:complexType>
+
+    <xs:complexType name="ctxPaymentInformationType">
         <xs:sequence>
-                <xs:element name="ctxPaymentDetail" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="ctxPaymentDetail" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
     </xs:complexType>
 
@@ -2005,7 +2034,7 @@
 
     <!-- This is for secure, we need a value to indicate that CAVV was attempted but unavailable -->
 
-    
+
 
 
 
@@ -2044,6 +2073,7 @@
                         <xs:element name="cnpTxnId" type="xs:long"  minOccurs="0"/>
                         <xs:element name="response" type="xs:string"  minOccurs="0"/>
                         <xs:element name="message" type="xs:string" minOccurs="0"/>
+                        <xs:element name="location" type="xs:string" minOccurs="0"/>
                         <xs:element name="responseTime" type="xs:dateTime"  minOccurs="0"/>
                     </xs:all>
                 </xs:extension>
@@ -2053,8 +2083,8 @@
 
     <xs:complexType name="virtualGiftCardType">
         <xs:sequence>
-                    <xs:element name="accountNumberLength" type="xs:integer" minOccurs="0"/>
-                    <xs:element name="giftCardBin" type="xs:string" minOccurs="0"/>
+            <xs:element name="accountNumberLength" type="xs:integer" minOccurs="0"/>
+            <xs:element name="giftCardBin" type="xs:string" minOccurs="0"/>
         </xs:sequence>
     </xs:complexType>
 
@@ -2084,6 +2114,7 @@
                         <xs:element name="cnpTxnId" type="xs:long"  minOccurs="0"/>
                         <xs:element name="response" type="xs:string"  minOccurs="0"/>
                         <xs:element name="message" type="xs:string" minOccurs="0"/>
+                        <xs:element name="location" type="xs:string" minOccurs="0"/>
                         <xs:element name="responseTime" type="xs:dateTime"  minOccurs="0"/>
                         <xs:element name="advancedFraudResults" type="xp:advancedFraudResultsType" minOccurs="0"/>
                     </xs:all>
@@ -2186,7 +2217,7 @@
         </xs:complexType>
     </xs:element>
 
-        <xs:complexType name="giropayType">
+    <xs:complexType name="giropayType">
         <xs:all>
             <xs:element name="preferredLanguage" type="xs:string" minOccurs="0"/>
         </xs:all>
@@ -2202,7 +2233,7 @@
         </xs:complexType>
     </xs:element>
 
-        <xs:complexType name="sofortType">
+    <xs:complexType name="sofortType">
         <xs:all>
             <xs:element name="preferredLanguage" type="xs:string" minOccurs="0"/>
         </xs:all>
@@ -2233,6 +2264,7 @@
                         <!-- online only -->
                         <xs:element name="postDate" type="xs:date" minOccurs="0" />
                         <xs:element name="message" type="xs:string"  minOccurs="0"/>
+                        <xs:element name="location" type="xs:string" minOccurs="0"/>
                     </xs:all>
                     <xs:attribute name="duplicate" type="xs:boolean" use="optional" />
                 </xs:extension>
@@ -2252,6 +2284,7 @@
                         <!-- online only -->
                         <xs:element name="postDate" type="xs:date" minOccurs="0" />
                         <xs:element name="message" type="xs:string"  minOccurs="0"/>
+                        <xs:element name="location" type="xs:string" minOccurs="0"/>
                     </xs:all>
                     <xs:attribute name="duplicate" type="xs:boolean" use="optional" />
                 </xs:extension>
@@ -2303,6 +2336,7 @@
                         <!-- online only -->
                         <xs:element name="postDate" type="xs:date" minOccurs="0" />
                         <xs:element name="message" type="xs:string"  minOccurs="0"/>
+                        <xs:element name="location" type="xs:string" minOccurs="0"/>
                     </xs:all>
                     <xs:attribute name="duplicate" type="xs:boolean" use="optional" />
                 </xs:extension>
@@ -2322,6 +2356,7 @@
                         <!-- online only -->
                         <xs:element name="postDate" type="xs:date" minOccurs="0" />
                         <xs:element name="message" type="xs:string"  minOccurs="0"/>
+                        <xs:element name="location" type="xs:string" minOccurs="0"/>
                     </xs:all>
                     <xs:attribute name="duplicate" type="xs:boolean" use="optional" />
                 </xs:extension>
@@ -2379,6 +2414,7 @@
                         <!-- online only -->
                         <xs:element name="postDate" type="xs:date" minOccurs="0" />
                         <xs:element name="message" type="xs:string"  minOccurs="0"/>
+                        <xs:element name="location" type="xs:string" minOccurs="0"/>
                     </xs:all>
                     <xs:attribute name="duplicate" type="xs:boolean" use="optional" />
                 </xs:extension>
@@ -2398,6 +2434,7 @@
                         <!-- online only -->
                         <xs:element name="postDate" type="xs:date" minOccurs="0" />
                         <xs:element name="message" type="xs:string"  minOccurs="0"/>
+                        <xs:element name="location" type="xs:string" minOccurs="0"/>
                     </xs:all>
                     <xs:attribute name="duplicate" type="xs:boolean" use="optional" />
                 </xs:extension>
@@ -2436,6 +2473,7 @@
                         <!-- online only -->
                         <xs:element name="postDate" type="xs:date" minOccurs="0" />
                         <xs:element name="message" type="xs:string"  minOccurs="0"/>
+                        <xs:element name="location" type="xs:string" minOccurs="0"/>
                     </xs:all>
                     <xs:attribute name="duplicate" type="xs:boolean" use="optional" />
                 </xs:extension>
@@ -2474,6 +2512,7 @@
                         <!-- online only -->
                         <xs:element name="postDate" type="xs:date" minOccurs="0" />
                         <xs:element name="message" type="xs:string"  minOccurs="0"/>
+                        <xs:element name="location" type="xs:string" minOccurs="0"/>
                     </xs:all>
                     <xs:attribute name="duplicate" type="xs:boolean" use="optional" />
                 </xs:extension>
@@ -2481,7 +2520,7 @@
         </xs:complexType>
     </xs:element>
 
-   
+
     <xs:element name="vendorDebitResponse" substitutionGroup="xp:transactionResponse">
         <xs:complexType>
             <xs:complexContent>
@@ -2494,6 +2533,7 @@
                         <!-- online only -->
                         <xs:element name="postDate" type="xs:date" minOccurs="0" />
                         <xs:element name="message" type="xs:string"  minOccurs="0"/>
+                        <xs:element name="location" type="xs:string" minOccurs="0"/>
                     </xs:all>
                     <xs:attribute name="duplicate" type="xs:boolean" use="optional" />
                 </xs:extension>
@@ -2513,6 +2553,7 @@
                         <!-- online only -->
                         <xs:element name="postDate" type="xs:date" minOccurs="0" />
                         <xs:element name="message" type="xs:string"  minOccurs="0"/>
+                        <xs:element name="location" type="xs:string" minOccurs="0"/>
                     </xs:all>
                     <xs:attribute name="duplicate" type="xs:boolean" use="optional" />
                 </xs:extension>
@@ -2543,6 +2584,7 @@
                         <!-- online only -->
                         <xs:element name="postDate" type="xs:date" minOccurs="0" />
                         <xs:element name="message" type="xs:string"  minOccurs="0"/>
+                        <xs:element name="location" type="xs:string" minOccurs="0"/>
                     </xs:all>
                     <xs:attribute name="duplicate" type="xs:boolean" use="optional" />
                 </xs:extension>
@@ -2558,7 +2600,7 @@
         </xs:complexType>
     </xs:element>
 
-    
+
     <xs:element name="fastAccessFunding" substitutionGroup="xp:transaction">
         <xs:complexType>
             <xs:complexContent>
@@ -2599,6 +2641,7 @@
                         <xs:element name="responseTime" type="xs:dateTime"  minOccurs="0"/>
                         <xs:element name="postDate" type="xs:date" minOccurs="0" />
                         <xs:element name="message" type="xs:string"  minOccurs="0"/>
+                        <xs:element name="location" type="xs:string" minOccurs="0"/>
                         <!-- if tokenized merchant -->
                         <xs:element name="tokenResponse" type="xp:tokenResponseType" minOccurs="0"/>
                     </xs:all>
@@ -2620,6 +2663,7 @@
                         <!-- online only -->
                         <xs:element name="postDate" type="xs:date" minOccurs="0" />
                         <xs:element name="message" type="xs:string"  minOccurs="0"/>
+                        <xs:element name="location" type="xs:string" minOccurs="0"/>
                     </xs:all>
                     <xs:attribute name="duplicate" type="xs:boolean" use="optional" />
                 </xs:extension>
@@ -2639,6 +2683,7 @@
                         <!-- online only -->
                         <xs:element name="postDate" type="xs:date" minOccurs="0" />
                         <xs:element name="message" type="xs:string"  minOccurs="0"/>
+                        <xs:element name="location" type="xs:string" minOccurs="0"/>
                     </xs:all>
                     <xs:attribute name="duplicate" type="xs:boolean" use="optional" />
                 </xs:extension>
@@ -2690,6 +2735,7 @@
                         <!-- online only -->
                         <xs:element name="postDate" type="xs:date" minOccurs="0" />
                         <xs:element name="message" type="xs:string"  minOccurs="0"/>
+                        <xs:element name="location" type="xs:string" minOccurs="0"/>
                     </xs:all>
                     <xs:attribute name="duplicate" type="xs:boolean" use="optional" />
                 </xs:extension>
@@ -2709,6 +2755,7 @@
                         <!-- online only -->
                         <xs:element name="postDate" type="xs:date" minOccurs="0" />
                         <xs:element name="message" type="xs:string"  minOccurs="0"/>
+                        <xs:element name="location" type="xs:string" minOccurs="0"/>
                     </xs:all>
                     <xs:attribute name="duplicate" type="xs:boolean" use="optional" />
                 </xs:extension>
@@ -2717,48 +2764,49 @@
     </xs:element>
 
     <xs:element name="translateToLowValueTokenRequest" substitutionGroup="xp:transaction" type="xp:translateToLowValueTokenRequestType"/>
-	
-	<xs:complexType name="translateToLowValueTokenRequestType">
-	    <xs:complexContent>
-	        <xs:extension base="xp:transactionTypeWithReportGroup">
-	            <xs:sequence>
-	                <xs:element name="orderId" type="xs:string" minOccurs="0" />
-	                <xs:element name="token" type="xs:string" minOccurs="0" />
-	            </xs:sequence>
-	        </xs:extension>
-	     </xs:complexContent>
-	</xs:complexType>
-	
-	<xs:element name="translateToLowValueTokenResponse" substitutionGroup="xp:transactionResponse">
-	    <xs:complexType>
-	        <xs:complexContent>
-	            <xs:extension base="xp:transactionTypeWithReportGroup">
-	                <xs:all>
+
+    <xs:complexType name="translateToLowValueTokenRequestType">
+        <xs:complexContent>
+            <xs:extension base="xp:transactionTypeWithReportGroup">
+                <xs:sequence>
+                    <xs:element name="orderId" type="xs:string" minOccurs="0" />
+                    <xs:element name="token" type="xs:string" minOccurs="0" />
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:element name="translateToLowValueTokenResponse" substitutionGroup="xp:transactionResponse">
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="xp:transactionTypeWithReportGroup">
+                    <xs:all>
                         <xs:element name="orderId" type="xs:string" minOccurs="0" />
-	                    <xs:element name="paypageRegistrationId" type="xs:string"  minOccurs="0" />
-	                    <xs:element name="response" type="xs:string"  minOccurs="0"/>
-	                    <xs:element name="message" type="xs:string" minOccurs="0"/>
-	                    <xs:element name="responseTime" type="xs:dateTime"  minOccurs="0"/>
-	                </xs:all>
-	            </xs:extension>
-	        </xs:complexContent>
-	    </xs:complexType>
-	</xs:element>
+                        <xs:element name="paypageRegistrationId" type="xs:string"  minOccurs="0" />
+                        <xs:element name="response" type="xs:string"  minOccurs="0"/>
+                        <xs:element name="message" type="xs:string" minOccurs="0"/>
+                        <xs:element name="location" type="xs:string" minOccurs="0"/>
+                        <xs:element name="responseTime" type="xs:dateTime"  minOccurs="0"/>
+                    </xs:all>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
 
     <xs:complexType name="pinlessDebitRequestType">
         <xs:sequence>
-                <xs:element name="routingPreference" type="xs:string" minOccurs="0" />
-                <xs:element name="preferredDebitNetworks" type="xp:preferredDebitNetworksType" minOccurs="0" />
+            <xs:element name="routingPreference" type="xs:string" minOccurs="0" />
+            <xs:element name="preferredDebitNetworks" type="xp:preferredDebitNetworksType" minOccurs="0" />
         </xs:sequence>
     </xs:complexType>
 
-    <xs:complexType name="preferredDebitNetworksType">    
+    <xs:complexType name="preferredDebitNetworksType">
         <xs:sequence>
-                <xs:element name="debitNetworkName" type="xs:string" minOccurs="0" maxOccurs="12"/>
+            <xs:element name="debitNetworkName" type="xs:string" minOccurs="0" maxOccurs="12"/>
         </xs:sequence>
     </xs:complexType>
 
- <xs:element name="lodgingInfo">
+    <xs:element name="lodgingInfo">
         <xs:complexType>
             <xs:sequence>
                 <xs:element name="hotelFolioNumber" type="xs:string" minOccurs="0" />
@@ -2766,9 +2814,9 @@
                 <xs:element name="checkOutDate" type="xs:date" minOccurs="0" />
                 <xs:element name="duration" type="xs:integer" minOccurs="0" />
                 <xs:element name="customerServicePhone" type="xs:string" minOccurs="0" />
-                <xs:element name="programCode" minOccurs="0" type="xs:string" default="LODGING" />               
+                <xs:element name="programCode" minOccurs="0" type="xs:string" default="LODGING" />
                 <xs:element name="roomRate" type="xs:integer" minOccurs="0" />
-                <xs:element name="roomTax" type="xs:integer" minOccurs="0" /> 
+                <xs:element name="roomTax" type="xs:integer" minOccurs="0" />
                 <xs:element name="numAdults" type="xs:integer" minOccurs="0" />
                 <xs:element name="propertyLocalPhone" type="xs:string" minOccurs="0" />
                 <xs:element name="fireSafetyIndicator" type="xs:boolean" minOccurs="0" />
@@ -2776,7 +2824,8 @@
             </xs:sequence>
         </xs:complexType>
     </xs:element>
-    
+
+
 <!--cnpBatch-->
 
 
@@ -2810,7 +2859,7 @@
                 <xs:element ref="xp:transaction" maxOccurs="unbounded" />
                 <xs:element ref="xp:recurringTransaction" maxOccurs="unbounded" />
             </xs:choice>
-                        <xs:attribute name="merchantSdk" type="xs:string" use="optional" />
+            <xs:attribute name="merchantSdk" type="xs:string" use="optional" />
             <xs:attribute name="id" type="xs:string" use="optional" />
             <xs:attribute name="numAuths" type="xs:integer" use="optional"  default="0"/>
             <xs:attribute name="authAmount" type="xs:integer" use="optional"  default="0"/>
@@ -3048,8 +3097,8 @@
             </xs:complexContent>
         </xs:complexType>
     </xs:element>
-    
-     <xs:element name="vendorCredit" substitutionGroup="xp:transaction">
+
+    <xs:element name="vendorCredit" substitutionGroup="xp:transaction">
         <xs:complexType>
             <xs:complexContent>
                 <xs:extension base="xp:transactionTypeWithReportGroup">
@@ -3090,8 +3139,8 @@
             </xs:complexContent>
         </xs:complexType>
     </xs:element>
-    
-    
+
+
     <xs:element name="submerchantCredit" substitutionGroup="xp:transaction">
         <xs:complexType>
             <xs:complexContent>
@@ -3167,9 +3216,10 @@
             </xs:complexContent>
         </xs:complexType>
     </xs:element>
-    
-    
-    
+
+
+
+
 
 <!--cnpOnline-->
 <!--<!DOCTYPE xs:schema SYSTEM "http://www.w3.org/2001/XMLSchema.dtd">-->
@@ -3236,6 +3286,7 @@
                         <xs:element name="responseTime" type="xs:dateTime"  minOccurs="0"/>
                         <xs:element name="postDate" type="xs:date"  minOccurs="0"/>
                         <xs:element name="message" type="xs:string"  minOccurs="0"/>
+                        <xs:element name="location" type="xs:string" minOccurs="0"/>
                         <xs:element name="recyclingResponse" type="xp:voidRecyclingResponseType" minOccurs="0" />
                     </xs:all>
 
@@ -3272,6 +3323,7 @@
                         <xs:element name="responseTime" type="xs:dateTime"  minOccurs="0"/>
                         <xs:element name="postDate" type="xs:date"  minOccurs="0"/>
                         <xs:element name="message" type="xs:string"  minOccurs="0"/>
+                        <xs:element name="location" type="xs:string" minOccurs="0"/>
                     </xs:all>
                 </xs:extension>
             </xs:complexContent>
@@ -3409,6 +3461,7 @@
                         <xs:element name="response" type="xs:string"  minOccurs="0"/>
                         <xs:element name="responseTime" type="xs:dateTime"  minOccurs="0"/>
                         <xs:element name="message" type="xs:string"  minOccurs="0"/>
+                        <xs:element name="location" type="xs:string" minOccurs="0"/>
                         <xs:element name="matchCount" minOccurs="0" type="xs:int" />
                         <xs:element name="results_max10" minOccurs="0">
                             <xs:complexType>
@@ -3431,6 +3484,7 @@
                         <xs:element name="cnpTxnId" type="xs:long"  minOccurs="0"/>
                         <xs:element name="response" type="xs:string"  minOccurs="0"/>
                         <xs:element name="message" type="xs:string"  minOccurs="0"/>
+                        <xs:element name="location" type="xs:string" minOccurs="0"/>
                     </xs:all>
                 </xs:extension>
             </xs:complexContent>
@@ -3459,6 +3513,7 @@
                         <xs:element name="response" type="xs:string"  minOccurs="0"/>
                         <xs:element name="responseTime" type="xs:dateTime"  minOccurs="0"/>
                         <xs:element name="message" type="xs:string" minOccurs="0"/>
+                        <xs:element name="location" type="xs:string" minOccurs="0"/>
                     </xs:all>
                 </xs:extension>
             </xs:complexContent>

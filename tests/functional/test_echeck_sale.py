@@ -43,6 +43,7 @@ class TestEcheckSale(unittest.TestCase):
 
         response = online.request(transaction, conf)
         self.assertEquals('000', response['echeckSalesResponse']['response'])
+        self.assertEquals('sandbox', response['echeckSalesResponse']['location'])
 
     def test_echeck_sale_with_echeck(self):
         transaction = fields.echeckSale()
@@ -69,6 +70,7 @@ class TestEcheckSale(unittest.TestCase):
 
         response = online.request(transaction, conf)
         self.assertEquals('000', response['echeckSalesResponse']['response'])
+        self.assertEquals('sandbox', response['echeckSalesResponse']['location'])
 
     def test_echeck_sale_with_token(self):
         transaction = fields.echeckSale()
@@ -93,6 +95,7 @@ class TestEcheckSale(unittest.TestCase):
 
         response = online.request(transaction, conf)
         self.assertEquals('000', response['echeckSalesResponse']['response'])
+        self.assertEquals('sandbox', response['echeckSalesResponse']['location'])
 
     def test_echeck_sale_with_secoundary_amount_and_ccd(self):
         transaction = fields.echeckSale()
@@ -120,6 +123,7 @@ class TestEcheckSale(unittest.TestCase):
 
         response = online.request(transaction, conf)
         self.assertEquals('000', response['echeckSalesResponse']['response'])
+        self.assertEquals('sandbox', response['echeckSalesResponse']['location'])
 
 
     # not valid for xsd version 12.7
