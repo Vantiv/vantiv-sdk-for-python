@@ -1,6 +1,6 @@
 = Vantiv eCommerce Python SDK
 
-==Version 12.13 (May 29, 2020)
+==Version 12.13.0 (May 29, 2020)
 * Feature: Added location as optional element of all online responses
 
 ==Version 12.11.0 (January 16, 2020)
