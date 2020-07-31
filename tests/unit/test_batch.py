@@ -25,6 +25,7 @@
 import os
 import sys
 import unittest
+# import paramiko
 
 if sys.version_info[0:2] >= (3, 4):
     from unittest import mock
