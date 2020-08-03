@@ -59667,4 +59667,4 @@ queryTransactionUnavailableResponse._setSubstitutionGroup(transactionResponse)
 
 serviceStatusRequest._setSubstitutionGroup(transaction)
 
-serviceStatusResponse._setSubstitutionGroup(transactionResponse) 
+serviceStatusResponse._setSubstitutionGroup(transactionResponse)

@@ -29,7 +29,7 @@ import xmltodict
 import six
 
 from vantivsdk.commManager import commManager
-from . import (fields, utils, dict2obj)
+from . import fields, utils, dict2obj
 
 
 def request(transaction, conf, return_format='dict', timeout=30, sameDayFunding = False):
