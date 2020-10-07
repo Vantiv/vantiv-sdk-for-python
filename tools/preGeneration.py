@@ -134,9 +134,9 @@ def fix_paypal_in_credit(_path_to_edited_xsd):
                 if type_paypal_end.search(line):
                     lines[lines_index] = new_paypal
                     break
-        print('-', old_paypal)
-        print('+', new_paypal)
-        print()
+        #print('-', old_paypal)
+        #print('+', new_paypal)
+        #print()
 
         # 2. Change element of paypal in credit to complexType payPal
         lines_index = -1
@@ -168,9 +168,9 @@ def fix_paypal_in_credit(_path_to_edited_xsd):
                 if found_paypal_ct_end and paypal_elm_end.search(line):
                     lines[lines_index] = new_paypal
                     break
-        print('-', old_paypal)
-        print('+', new_paypal)
-        print()
+        #print('-', old_paypal)
+        #print('+', new_paypal)
+        #print()
 
         # TODO Not a good way, have to open the file twice.
         with open(_path_to_edited_xsd, 'w') as ori_xsd_w:
@@ -228,21 +228,21 @@ def remove_named_simple_type(_path_to_edited_xsd):
             lines_index += 1
             if elm_with_simple_type.search(line):
                 type_name = re.search(' type="(.*?)"', line).group(1)
-                print(type_name)
+                #print(type_name)
                 if type_name in type_dict.keys():
                     new_line = line.replace(type_name, type_dict[type_name])
-                    print('-', lines_index, line)
-                    print('+', lines_index, new_line)
-                    print()
+                    #print('-', lines_index, line)
+                    #print('+', lines_index, new_line)
+                    #print()
                     lines[lines_index] = new_line
             elif elm_base_simple_type.search(line):
                 type_name = re.search(' base="(.*?)"', line).group(1)
-                print(type_name)
+                #print(type_name)
                 if type_name in type_dict.keys():
                     new_line = line.replace(type_name, type_dict[type_name])
-                    print('-', lines_index, line)
-                    print('+', lines_index, new_line)
-                    print()
+                    #print('-', lines_index, line)
+                    #print('+', lines_index, new_line)
+                    #print()
                     lines[lines_index] = new_line
 
         # TODO Not a good way, have to open the file twice.
@@ -292,8 +292,8 @@ def remove_anonymous_simple_type(_path_to_edited_xsd):
                 lines[lines_index] = ''
                 if element_end.search(line):
                     found_simple_type_head = False
-                    print('-', old_content)
-                    print('+', new_content)
+                    #print('-', old_content)
+                    #print('+', new_content)
 
         # TODO Not a good way, have to open the file twice.
         with open(_path_to_edited_xsd, 'w') as xsd_file_w:
@@ -356,8 +356,8 @@ def set_min_occurs_0(_path_to_edited_xsd):
                 else:
                     new_line = line.replace('/>', ' minOccurs="0"/>')
                 lines[lines_index] = new_line
-                print('-', lines_index, line)
-                print('+', lines_index, new_line)
+                #print('-', lines_index, line)
+                #print('+', lines_index, new_line)
 
         # TODO Not a good way, have to open the file twice.
         with open(_path_to_edited_xsd, 'w') as xsd_file_w:

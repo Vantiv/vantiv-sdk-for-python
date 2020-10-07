@@ -60,9 +60,9 @@ def remove_absolute_path(_package_root):
                 abs_path = re.search("pyxb.utils.utility.Location\('(.*?)'", line).group(1).strip()
                 new_line = line.replace(abs_path, os.path.basename(abs_path))
                 lines[lines_index] = new_line
-                print('-', line)
-                print('+', new_line)
-                print()
+                #print('-', line)
+                #print('+', new_line)
+                #print()
         # TODO NoLell#1
         #  t a good way, have to open the file twice.
         with open(fields_path, 'w') as ori_xsd_w:

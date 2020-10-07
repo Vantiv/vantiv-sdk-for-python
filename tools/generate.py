@@ -33,6 +33,11 @@ from vantivsdk import utils
 version = utils.Configuration().VERSION
 xsd_name = 'SchemaCombined_v%s.xsd' % version
 
+# Since PyXB doesn't like complex paths
+if os.path.dirname(os.path.abspath(__file__)) != os.getcwd():
+    print('Please run this in the tools directory.')
+    sys.exit(0)
+
 # Run pregen
 print('Generate %s' % xsd_name)
 pre_gen_path = os.path.join(package_root, 'tools', 'preGeneration.py')
@@ -40,22 +45,26 @@ os.system('python %s' % pre_gen_path)
 
 #
 print('Generate module fields using pyxb')
-xsd_abs_path =  os.path.join(package_root, xsd_name)
-os.system('rm -f fields.py')
-os.system('pyxbgen -u %s -m fields' % xsd_abs_path)
+xsd_abs_path = os.path.join(package_root, xsd_name)
+old_fields_path = os.path.join(package_root, 'vantivsdk', 'fields.py')
+new_fields_temp = 'fields' # Ideally should be pkgroot/tools/fields but pyxb doesn't like that
+os.system('rm -f %s' % old_fields_path)
+os.system('pyxbgen -u %s -m %s' % (xsd_abs_path, new_fields_temp))
 
-print('Copy filed.py to package')
+print('Copy fields.py to package')
 gen_field_py_abs_path = os.path.join(package_root,'tools', 'fields.py')
 target_field_py_abs_path = os.path.join(package_root, 'vantivsdk', 'fields.py')
 os.system('cp %s %s' % (gen_field_py_abs_path, target_field_py_abs_path))
 
 # Run postgen
 print('delete absolute path in field.py and gen docs rst')
-pre_gen_path = os.path.join(package_root, 'tools', 'postGeneration.py')
-os.system('python %s' % pre_gen_path)
+post_gen_path = os.path.join(package_root, 'tools', 'postGeneration.py')
+os.system('python %s' % post_gen_path)
 
 docs_abs_path = os.path.join(package_root, 'docs')
 makefile_abs_path = os.path.join(package_root, 'docs', 'Makefile')
+
+os.system('rm -f %s.py' % new_fields_temp)
 
 # not work, have to go terminal
 # print('Generate html docs')
