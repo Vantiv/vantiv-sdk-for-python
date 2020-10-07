@@ -1,6 +1,6 @@
 = Vantiv eCommerce Python SDK
 
-==Version 12.14.0 (August 3, 2020)
+==Version 12.14.0 (October 7, 2020)
 * Feature: Added pinlessDebitResponse in authorizationResponse, authReversalResponse, captureResponse, saleResponse
 * Feature: Added tokenAuthenticationValue as an optional child of the cardholderAuthentication element
 
