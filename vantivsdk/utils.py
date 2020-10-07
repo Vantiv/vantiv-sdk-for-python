@@ -32,6 +32,7 @@ import pyxb
 
 from . import version
 
+
 class Configuration(object):
     """Setup Configuration variables.
 
@@ -54,32 +55,33 @@ class Configuration(object):
     MERCHANTSDK = 'Python;' + RELEASE
     _CONFIG_FILE_PATH = os.path.join(os.environ['VANTIV_SDK_CONFIG'], ".vantiv_python_sdk.conf") \
         if 'VANTIV_SDK_CONFIG' in os.environ else os.path.join(os.path.expanduser("~"), ".vantiv_python_sdk.conf")
-    def __init__(self, conf_dict = dict()):
+
+    def __init__(self, conf_dict=dict()):
         attr_dict = {
-            'user':'',
-            'password':'',
-            'merchantId':'',
-            'reportGroup':'Default Report Group',
-            'url':'https://www.testvantivcnp.com/sandbox/new/sandbox/communicator/online',
-            'proxy':'',
-            'sftp_username':'',
-            'sftp_password':'',
-            'sftp_url':'',
-            'batch_requests_path':os.path.join(tempfile.gettempdir(), 'vantiv_sdk_batch_request'),
-            'batch_response_path':os.path.join(tempfile.gettempdir(), 'vantiv_sdk_batch_response'),
-            'print_xml':False,
-            'id':'',
-            'vantivPublicKeyID':'',
-            'gpgPassphrase':'',
-            'merchantPublicKeyID':'',
-            'useEncryption':'',
-            'deleteBatchFiles':'',
-            'multiSiteUrl1' : '',
-            'multiSiteUrl2' : '',
-            'multiSite' : False,
-            'printMultiSiteDebug' : False,
-            'multiSiteErrorThreshold' : 0,
-            'maxHoursWithoutSwitch' : 0,
+            'user': '',
+            'password': '',
+            'merchantId': '',
+            'reportGroup': 'Default Report Group',
+            'url': 'https://www.testvantivcnp.com/sandbox/new/sandbox/communicator/online',
+            'proxy': '',
+            'sftp_username': '',
+            'sftp_password': '',
+            'sftp_url': '',
+            'batch_requests_path': os.path.join(tempfile.gettempdir(), 'vantiv_sdk_batch_request'),
+            'batch_response_path': os.path.join(tempfile.gettempdir(), 'vantiv_sdk_batch_response'),
+            'print_xml': False,
+            'id': '',
+            'vantivPublicKeyID': '',
+            'gpgPassphrase': '',
+            'merchantPublicKeyID': '',
+            'useEncryption': '',
+            'deleteBatchFiles': '',
+            'multiSiteUrl1': '',
+            'multiSiteUrl2': '',
+            'multiSite': False,
+            'printMultiSiteDebug': False,
+            'multiSiteErrorThreshold': 0,
+            'maxHoursWithoutSwitch': 0,
             "payfacMerchantId_v12_7": "",
             "payfacUsername_v12_7": "",
             "payfacPassword_v12_7": "",
@@ -89,7 +91,7 @@ class Configuration(object):
 
         # set default values
         for k in attr_dict:
-            setattr(self, k , attr_dict[k])
+            setattr(self, k, attr_dict[k])
 
         # override valuse by loading saved conf
         try:

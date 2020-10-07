@@ -24,7 +24,8 @@
 #
 from __future__ import unicode_literals
 
-from . import dictmap,utils,fields
+from . import dictmap, utils, fields
+
 
 def tofileds(txn_dict):
     if not isinstance(txn_dict, dict):
@@ -45,6 +46,7 @@ def tofileds(txn_dict):
     txn_obj = getattr(fields, txn_name)()
     txn_obj = _obj_map_attributes(txn_obj, txn_name, dictmap.txns_dict[txn_name], txn_attrs)
     return txn_obj
+
 
 def _obj_map_attributes(obj, obj_name, obj_attrs_type_dict, obj_attrs_values_dict):
     """recursionly map attributes

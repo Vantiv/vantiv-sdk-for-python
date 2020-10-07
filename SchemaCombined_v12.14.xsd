@@ -527,6 +527,7 @@
             <xs:element name="customerIpAddress" type="xs:string" minOccurs="0" />
             <xs:element name="authenticatedByMerchant" type="xs:boolean" minOccurs="0" />
             <xs:element name="authenticationProtocolVersion" type="xs:integer" minOccurs="0" />
+            <xs:element name="tokenAuthenticationValue" type="xs:string" minOccurs="0" />
         </xs:all>
     </xs:complexType>
 
@@ -1179,6 +1180,7 @@
                         <!-- For merchant initiated transactions -->
                         <xs:element name="networkTransactionId" type="xs:string" minOccurs="0" />
                         <xs:element name="paymentAccountReferenceNumber" type="xs:string" minOccurs="0" />
+                        <!-- If PRIME PINless debit transaction -->
                         <xs:element ref="xp:pinlessDebitResponse" minOccurs="0"/>
                     </xs:all>
                 </xs:extension>
@@ -1275,6 +1277,8 @@
                         <xs:element name="postDate" type="xs:date" minOccurs="0" />
                         <xs:element name="message" type="xs:string"  minOccurs="0"/>
                         <xs:element name="location" type="xs:string" minOccurs="0"/>
+                        <!-- If PRIME PINless debit transaction -->
+                        <xs:element ref="xp:pinlessDebitResponse" minOccurs="0"/>
                     </xs:all>
                 </xs:extension>
             </xs:complexContent>
@@ -1436,6 +1440,8 @@
                         <xs:element ref="xp:accountUpdater" minOccurs="0" />
                         <!-- If Gift Card transaction -->
                         <xs:element ref="xp:fraudResult" minOccurs="0" />
+                        <!-- If PRIME PINless debit transaction -->
+                        <xs:element ref="xp:pinlessDebitResponse" minOccurs="0"/>
                     </xs:all>
                 </xs:extension>
             </xs:complexContent>

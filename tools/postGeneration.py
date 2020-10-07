@@ -63,7 +63,8 @@ def remove_absolute_path(_package_root):
                 print('-', line)
                 print('+', new_line)
                 print()
-        # TODO Not a good way, have to open the file twice.
+        # TODO NoLell#1
+        #  t a good way, have to open the file twice.
         with open(fields_path, 'w') as ori_xsd_w:
             ori_xsd_w.writelines(lines)
 
