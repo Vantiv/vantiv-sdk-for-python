@@ -424,5 +424,26 @@ class TestSale(unittest.TestCase):
         self.assertEquals('Approved', response['saleResponse']['message'])
         self.assertEquals('sandbox', response['saleResponse']['location'])
 
+    def test_simple_sale_with_authenticated_shopper_id(self):
+        transaction = fields.sale()
+        transaction.reportGroup = 'Planets'
+        transaction.orderId = '12344'
+        transaction.amount = 106
+        transaction.orderSource = 'ecommerce'
+        transaction.id = 'ThisIsID'
+
+        token = fields.cardTokenType()
+        token.cnpToken = '1111222233334000'
+        token.expDate = '1210'
+        token.cardValidationNum = '555'
+        token.type = 'VI'
+        token.checkoutId = 'checkoutId12345678'
+        token.authenticatedShopperID = '123456'
+        transaction.token = token
+
+        response = online.request(transaction, conf)
+        self.assertEquals('000', response['saleResponse']['response'])
+        self.assertEquals('sandbox', response['saleResponse']['location'])
+
 if __name__ == '__main__':
     unittest.main()
