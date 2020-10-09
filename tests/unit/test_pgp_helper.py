@@ -25,7 +25,9 @@ else:
 
 class TestPgpHelper(unittest.TestCase):
 
-# Test whether encrypting a file successfully.
+	'''
+	# Feature is defunct
+	# Test whether encrypting a file successfully.
 	# Select an existing file.
 	# Call encryptFile() to encrypt it.
 	# Check if the file has been created.
@@ -61,6 +63,7 @@ class TestPgpHelper(unittest.TestCase):
 		# Clean up generated files.
 		os.remove(testFilename)
 		os.remove(outFilename)
+	'''
 
 # Test command line execution for encryption when it fails, catch exception.
 	# Provide a nonexistent path.
@@ -91,6 +94,8 @@ class TestPgpHelper(unittest.TestCase):
 
 		# Clean up generated file.
 		os.remove(testFilename)
+
+
 
 # Test command line execution for encryption when it fails, catch exception.
 	# Select a file.
