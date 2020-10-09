@@ -91,6 +91,7 @@ cardTokenType
 -------------
     .. py:class:: vantivsdk.fields.cardTokenType
 
+        :var authenticatedShopperID: String or Number
         :var cardValidationNum: String or Number
         :var checkoutId: String or Number
         :var cnpToken: String or Number
@@ -265,6 +266,7 @@ fraudCheckType
         :var authenticationTransactionId: String or Number
         :var authenticationValue: String or Number
         :var customerIpAddress: String or Number
+        :var tokenAuthenticationValue: String or Number
 
 fraudResult
 -----------
@@ -299,6 +301,7 @@ healthcareAmounts
 
         :var RxAmount: String or Number
         :var clinicOtherAmount: String or Number
+        :var copayAmount: String or Number
         :var dentalAmount: String or Number
         :var totalHealthcareAmount: String or Number
         :var visionAmount: String or Number
@@ -477,6 +480,7 @@ token
 -----
     .. py:class:: vantivsdk.fields.token
 
+        :var authenticatedShopperID: String or Number
         :var cardValidationNum: String or Number
         :var checkoutId: String or Number
         :var cnpToken: String or Number

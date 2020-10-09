@@ -14,6 +14,7 @@ class PgpHelper(object):
       check_output(["gpg",
       "--batch",
       "--yes",
+      "--always-trust",
       "--no-secmem-warning",
       "--armor",
       "--trust-model", "always",
