@@ -1,6 +1,6 @@
 = Vantiv eCommerce Python SDK
 
-==Version 12.15.0 (October 9, 2020)
+==Version 12.16.0 (October 12, 2020)
 * Feature: Added a new transaction type: transactionReversal
 
 ==Version 12.15.0 (October 9, 2020)
