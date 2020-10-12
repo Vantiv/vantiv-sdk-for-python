@@ -21,6 +21,13 @@
 # WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 # FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 # OTHER DEALINGS IN THE SOFTWARE.
+
+# IF YOU ARE RUNNING THIS ON THE ECOM VMS:
+# - This file needs to be run as root
+
+# MAKE SURE YOU HAVE COMMENTED OUT THE REDUNDANCIES IN cnpOnline:
+# vendorCredit, vendorDebit, submerchantCredit, submerchantDebit, customerCredit, customerDebit
+
 from __future__ import absolute_import, division, print_function
 
 import os
