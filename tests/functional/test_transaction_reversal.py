@@ -34,7 +34,7 @@ from vantivsdk import *
 conf = utils.Configuration()
 
 
-class TestAuthReversal(unittest.TestCase):
+class TestTransactionReversal(unittest.TestCase):
     def test_simple_txn_reversal(self):
         transactions = fields.transactionReversal();
         transactions.reportGroup = 'Planets'
