@@ -74,5 +74,6 @@ supported_transaction_types = {
     'updateSubscription': ['numUpdateSubscriptions', ''],
     'vendorCredit': ['numVendorCredit', 'vendorCreditAmount'],
     'vendorDebit': ['numVendorDebit', 'vendorDebitAmount'],
+    'transactionReversal': ['numTransactionReversals', 'transactionReversalAmount'],
 
 }
