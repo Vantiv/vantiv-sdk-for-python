@@ -48,6 +48,8 @@ class TestTransactionReversal(unittest.TestCase):
         response = online.request(transactions, conf)
         self.assertEquals('000', response['transactionReversalResponse']['response'])
         self.assertEquals('sandbox', response['transactionReversalResponse']['location'])
+        self.assertEquals('12345678000', response['transactionReversalResponse']['recyclingResponse']['creditCnpTxnId'])
+
 
 
 if __name__ == '__main__':
