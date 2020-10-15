@@ -216,7 +216,7 @@ customerCredit
 --------------
     .. py:class:: vantivsdk.fields.customerCredit
 
-        :var accountInfo: instance of :py:class:`vantivsdk.fields.echeckTypeCtx`
+        :var accountInfo: instance of :py:class:`vantivsdk.fields.echeckType`
         :var amount: String or Number
         :var customIdentifier: String or Number
         :var customerId: String or Number
@@ -230,7 +230,7 @@ customerDebit
 -------------
     .. py:class:: vantivsdk.fields.customerDebit
 
-        :var accountInfo: instance of :py:class:`vantivsdk.fields.echeckTypeCtx`
+        :var accountInfo: instance of :py:class:`vantivsdk.fields.echeckType`
         :var amount: String or Number
         :var customIdentifier: String or Number
         :var customerId: String or Number
@@ -742,7 +742,7 @@ submerchantDebit
 ----------------
     .. py:class:: vantivsdk.fields.submerchantDebit
 
-        :var accountInfo: instance of :py:class:`vantivsdk.fields.echeckTypeCtx`
+        :var accountInfo: instance of :py:class:`vantivsdk.fields.echeckType`
         :var amount: String or Number
         :var customIdentifier: String or Number
         :var customerId: String or Number
@@ -751,6 +751,22 @@ submerchantDebit
         :var id: String or Number
         :var reportGroup: String or Number
         :var submerchantName: String or Number
+
+transactionReversal
+-------------------
+    .. py:class:: vantivsdk.fields.transactionReversal
+
+        :var amount: String or Number
+        :var cnpTxnId: String or Number
+        :var customBilling: instance of :py:class:`vantivsdk.fields.customBilling`
+        :var customerId: String or Number
+        :var enhancedData: instance of :py:class:`vantivsdk.fields.enhancedData`
+        :var id: String or Number
+        :var lodgingInfo: instance of :py:class:`vantivsdk.fields.lodgingInfo`
+        :var pin: String or Number
+        :var processingInstructions: instance of :py:class:`vantivsdk.fields.processingInstructions`
+        :var reportGroup: String or Number
+        :var surchargeAmount: String or Number
 
 translateToLowValueTokenRequest
 -------------------------------
