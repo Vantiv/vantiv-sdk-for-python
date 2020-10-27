@@ -96,5 +96,26 @@ class TestForceCapture(unittest.TestCase):
         self.assertEquals('sandbox', response['forceCaptureResponse']['location'])
 
 
+    def test_force_capture_with_business_indicator(self):
+        transaction = fields.forceCapture()
+        transaction.reportGroup = 'Planets'
+        transaction.orderId = '12344'
+        transaction.amount = 106
+        transaction.orderSource = 'ecommerce'
+        transaction.processingType = 'accountFunding'
+        transaction.id = 'ThisIsID'
+        transaction.businessIndicator = 'consumerBillPayment'
+
+        card = fields.cardType()
+        card.number = '4100000000000001'
+        card.expDate = '1210'
+        card.type = 'VI'
+        transaction.card = card
+
+        response = online.request(transaction, conf)
+        self.assertEquals('000', response['forceCaptureResponse']['response'])
+        self.assertEquals('sandbox', response['forceCaptureResponse']['location'])
+
+
 if __name__ == '__main__':
     unittest.main()

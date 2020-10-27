@@ -1,5 +1,9 @@
 = Vantiv eCommerce Python SDK
 
+==Version 12.17.0 (October 27, 2020)
+* Feature: Added optional element, businessIndicator, in authorization, sale, credit, forceCapture, and
+captureGivenAuthTransactions
+
 ==Version 12.16.0 (October 12, 2020)
 * Feature: Added a new transaction type: transactionReversal
 

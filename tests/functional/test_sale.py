@@ -445,5 +445,25 @@ class TestSale(unittest.TestCase):
         self.assertEquals('000', response['saleResponse']['response'])
         self.assertEquals('sandbox', response['saleResponse']['location'])
 
+    def test_sale_with_business_indicator(self):
+        transaction = fields.sale()
+        transaction.reportGroup = 'Planets'
+        transaction.orderId = '12344'
+        transaction.amount = 106
+        transaction.orderSource = 'ecommerce'
+        transaction.id = 'ThisIsID'
+        transaction.businessIndicator = 'consumerBillPayment'
+
+        card = fields.cardType()
+        card.number = '4100000000000000'
+        card.expDate = '1210'
+        card.type = 'VI'
+
+        transaction.card = card
+
+        response = online.request(transaction, conf)
+        self.assertEquals('000', response['saleResponse']['response'])
+        self.assertEquals('sandbox', response['saleResponse']['location'])
+
 if __name__ == '__main__':
     unittest.main()

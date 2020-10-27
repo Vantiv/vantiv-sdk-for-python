@@ -430,5 +430,26 @@ class TestAuth(unittest.TestCase):
         self.assertEquals('sandbox', response['authorizationResponse']['location'])
 
 
+    def test_simple_auth_business_indicator(self):
+        authorization = fields.authorization()
+        authorization.reportGroup = 'Planets'
+        authorization.orderId = '12344'
+        authorization.amount = 106
+        authorization.orderSource = 'ecommerce'
+        authorization.id = 'thisisid'
+        authorization.businessIndicator = 'consumerBillPayment'
+
+        card = fields.cardType()
+        card.number = '4100000000000000'
+        card.expDate = '1210'
+        card.type = 'VI'
+
+        authorization.card = card
+
+        response = online.request(authorization, conf)
+        self.assertEquals('000', response['authorizationResponse']['response'])
+        self.assertEquals('sandbox', response['authorizationResponse']['location'])
+
+
 if __name__ == '__main__':
     unittest.main()
