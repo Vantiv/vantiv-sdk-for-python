@@ -62,6 +62,7 @@ authorization
         :var amount: String or Number
         :var applepay: instance of :py:class:`vantivsdk.fields.applepayType`
         :var billToAddress: instance of :py:class:`vantivsdk.fields.billToAddress`
+        :var businessIndicator: String or Number
         :var card: instance of :py:class:`vantivsdk.fields.cardType`
         :var cardholderAuthentication: instance of :py:class:`vantivsdk.fields.fraudCheckType`
         :var cnpTxnId: String or Number
@@ -142,6 +143,7 @@ captureGivenAuth
         :var amount: String or Number
         :var authInformation: instance of :py:class:`vantivsdk.fields.authInformation`
         :var billToAddress: instance of :py:class:`vantivsdk.fields.billToAddress`
+        :var businessIndicator: String or Number
         :var card: instance of :py:class:`vantivsdk.fields.cardType`
         :var customBilling: instance of :py:class:`vantivsdk.fields.customBilling`
         :var customerId: String or Number
@@ -188,6 +190,7 @@ credit
         :var actionReason: String or Number
         :var amount: String or Number
         :var billToAddress: instance of :py:class:`vantivsdk.fields.billToAddress`
+        :var businessIndicator: String or Number
         :var card: instance of :py:class:`vantivsdk.fields.cardType`
         :var cnpTxnId: String or Number
         :var customBilling: instance of :py:class:`vantivsdk.fields.customBilling`
@@ -216,7 +219,7 @@ customerCredit
 --------------
     .. py:class:: vantivsdk.fields.customerCredit
 
-        :var accountInfo: instance of :py:class:`vantivsdk.fields.echeckType`
+        :var accountInfo: instance of :py:class:`vantivsdk.fields.echeckTypeCtx`
         :var amount: String or Number
         :var customIdentifier: String or Number
         :var customerId: String or Number
@@ -230,7 +233,7 @@ customerDebit
 -------------
     .. py:class:: vantivsdk.fields.customerDebit
 
-        :var accountInfo: instance of :py:class:`vantivsdk.fields.echeckType`
+        :var accountInfo: instance of :py:class:`vantivsdk.fields.echeckTypeCtx`
         :var amount: String or Number
         :var customIdentifier: String or Number
         :var customerId: String or Number
@@ -407,6 +410,7 @@ forceCapture
 
         :var amount: String or Number
         :var billToAddress: instance of :py:class:`vantivsdk.fields.billToAddress`
+        :var businessIndicator: String or Number
         :var card: instance of :py:class:`vantivsdk.fields.cardType`
         :var customBilling: instance of :py:class:`vantivsdk.fields.customBilling`
         :var customerId: String or Number
@@ -669,6 +673,7 @@ sale
         :var amount: String or Number
         :var applepay: instance of :py:class:`vantivsdk.fields.applepayType`
         :var billToAddress: instance of :py:class:`vantivsdk.fields.billToAddress`
+        :var businessIndicator: String or Number
         :var card: instance of :py:class:`vantivsdk.fields.cardType`
         :var cardholderAuthentication: instance of :py:class:`vantivsdk.fields.fraudCheckType`
         :var cnpInternalRecurringRequest: instance of :py:class:`vantivsdk.fields.cnpInternalRecurringRequestType`
@@ -742,7 +747,7 @@ submerchantDebit
 ----------------
     .. py:class:: vantivsdk.fields.submerchantDebit
 
-        :var accountInfo: instance of :py:class:`vantivsdk.fields.echeckType`
+        :var accountInfo: instance of :py:class:`vantivsdk.fields.echeckTypeCtx`
         :var amount: String or Number
         :var customIdentifier: String or Number
         :var customerId: String or Number
