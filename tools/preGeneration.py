@@ -98,7 +98,7 @@ def combine_xsd(_version, _package_root):
 
             # See if duplicates exist and scrub them before adding
             for type_name in duped_types:
-                search_pattern = '(?s)\n    <xs:element name="' +type_name+'".+?(.+?\n    <\/xs:element>)'
+                search_pattern = '(?s)\n    <xs:element name="' +type_name+'".+?\n    <\/xs:element>'
                 if re.search(search_pattern, combined_xsd_str) is not None:
                     found_type = re.search(search_pattern, f_str)
                     f_str = f_str.replace(found_type.group(0), '')
