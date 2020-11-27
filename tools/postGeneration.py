@@ -148,7 +148,7 @@ def get_class_dict(_package_root):
             if k not in used_type_dict and k not in abs_class_dict:
                 used_type_dict[k] = dict()
                 obj = getattr(fields, k)()
-                if type(obj).__dict__['__module__'] == 'vantivsdk.fields':
+                if "vantivsdk" in type(obj).__dict__['__module__']:
                     attrs = dir(obj)
                     for attr_name in attrs:
                         if attr_name[0] != '_' and attr_name not in no_attr_list:
@@ -302,7 +302,7 @@ from __future__ import unicode_literals
 
 
 if __name__ == '__main__':
-    remove_absolute_path(package_root)
+    # remove_absolute_path(package_root)
     dict_list = get_class_dict(package_root)
     generate_dictmap_py(package_root, dict_list)
     generate_rst(package_root, dict_list)
