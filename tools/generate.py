@@ -23,8 +23,10 @@
 # OTHER DEALINGS IN THE SOFTWARE.
 
 # IF YOU ARE RUNNING THIS ON THE ECOM VMS:
-# BE SURE TO RUN IN YOUR VIRTUAL ENV!
+# - This file needs to be run as root
 
+# MAKE SURE YOU HAVE COMMENTED OUT THE REDUNDANCIES IN cnpOnline:
+# vendorCredit, vendorDebit, submerchantCredit, submerchantDebit, customerCredit, customerDebit
 
 from __future__ import absolute_import, division, print_function
 
@@ -38,6 +40,10 @@ from vantivsdk import utils
 version = utils.Configuration().VERSION
 xsd_name = 'SchemaCombined_v%s.xsd' % version
 
+# Since PyXB doesn't like complex paths
+if os.path.dirname(os.path.abspath(__file__)) != os.getcwd():
+    print('Please run this in the tools directory.')
+    sys.exit(0)
 
 # Run pregen
 print('Generate %s' % xsd_name)
@@ -45,37 +51,17 @@ pre_gen_path = os.path.join(package_root, 'tools', 'preGeneration.py')
 os.system('python %s' % pre_gen_path)
 
 #
-print('Generate module fields using xsdata')
+print('Generate module fields using pyxb')
 xsd_abs_path = os.path.join(package_root, xsd_name)
 old_fields_path = os.path.join(package_root, 'vantivsdk', 'fields.py')
-new_fields_temp = 'fields'
-
-os.system('xsdata generate --config %s/tools/fieldconf.xsdata.xml %s/SchemaCombined_v%s.xsd' % (package_root, package_root, version))
-os.system('xsdata generate --config %s/tools/tempconf.xsdata.xml %s/SchemaCombined_v%s.xsd' % (package_root, package_root, version))
-
-if __name__ == '__main__':
-    with open("./names/__init__.py") as trueNames:
-        trueNames.readline()
-        with open("./classes/__init__.py") as trueClasses:
-            with open("fields.py", "w") as fields:
-                fields.write(trueClasses.readline().replace('classes', 'vantivsdk'))
-                for line in trueClasses:
-                    if not line.find(',') == -1:
-                        aliased = '\t' + line.replace(',', '').strip() + ' as ' + trueNames.readline().strip(' ')
-                        fields.write(aliased)
-                    else:
-                        fields.write(line)
-                        break
-
+new_fields_temp = 'fields' # Ideally should be pkgroot/tools/fields but pyxb doesn't like that
+os.system('rm -f %s' % old_fields_path)
+os.system('pyxbgen -u %s -m %s' % (xsd_abs_path, new_fields_temp))
 
 print('Copy fields.py to package')
 gen_field_py_abs_path = os.path.join(package_root,'tools', 'fields.py')
 target_field_py_abs_path = os.path.join(package_root, 'vantivsdk', 'fields.py')
 os.system('cp %s %s' % (gen_field_py_abs_path, target_field_py_abs_path))
-
-gen_combined_abs_path = os.path.join(package_root,'tools', 'classes', 'SchemaCombined*')
-target_combined_abs_path = os.path.join(package_root, 'vantivsdk', 'SchemaCombined*')
-os.system('cp %s %s' % (gen_combined_abs_path, target_combined_abs_path))
 
 # Run postgen
 print('delete absolute path in field.py and gen docs rst')
@@ -85,12 +71,10 @@ os.system('python %s' % post_gen_path)
 docs_abs_path = os.path.join(package_root, 'docs')
 makefile_abs_path = os.path.join(package_root, 'docs', 'Makefile')
 
-print('Deleting artifacts of generation')
-os.system('rm -rf %s.py' % new_fields_temp)
-os.system('rm -rf names')
-os.system('rm -rf classes')
+os.system('rm -f %s.py' % new_fields_temp)
 
 # not work, have to go terminal
 # print('Generate html docs')
 # os.system('make -f %s -C %s clean' % (makefile_abs_path, docs_abs_path))
 # os.system('make -f %s -C %s html' % (makefile_abs_path, docs_abs_path))
+

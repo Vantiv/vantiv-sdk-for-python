@@ -27,13 +27,11 @@ from __future__ import absolute_import, print_function, unicode_literals
 import json
 import os
 import tempfile
-import re
 
-from xsdata.formats.dataclass.serializers import *
+import pyxb
 
 from . import version
 
-serializer = XmlSerializer()
 
 class Configuration(object):
     """Setup Configuration variables.
@@ -140,33 +138,11 @@ def obj_to_xml(obj):
     """
     # TODO convert object to xml without default namespace gracefully.
     try:
-        xml = serializer.render(obj)
-
-        # as of current, xsData uses xsi:type and the parent as the name of the element, so replace
-        # with the correct value
-
-        # TODO: See if it's just the <transaction> tag that needs to be fixed
-        tag_to_replace = '<ns0:transaction [^<]*xsi:type=".*?">'
-        real_type_name = 'xsi:type=".*?"'
-        parent_type_name = '<.*? '
-        for tag in re.findall(tag_to_replace, xml):
-            parent_name = re.search(parent_type_name, tag)[0].replace('<', '').replace(' ', '')
-            real_tag_with_xsi = re.search(real_type_name, tag)[0]
-            real_tag_name = real_tag_with_xsi.replace('xsi:type="', '').replace('"', '')
-
-            # replace in open and closing tag only
-            xml = xml.replace(tag, tag.replace('<' + parent_name, '<' + real_tag_name))
-            xml = xml.replace('</' + parent_name + '>', '</' + real_tag_name + '>')
-            xml = xml.replace(real_tag_with_xsi, '')
-
-        # to bytes
-        xml = bytes(xml, 'utf-8')
-    except Exception as e:
-        raise VantivException("Failed to serialize object")
+        xml = obj.toxml('utf-8')
+    except pyxb.ValidationError as e:
+        raise VantivException(e.details())
     xml = xml.replace(b'ns1:', b'')
     xml = xml.replace(b':ns1', b'')
-    xml = xml.replace(b'ns0:', b'')
-    xml = xml.replace(b':ns0', b'')
     xml = xml.replace(b'vendorCreditCtx', b'vendorCredit')
     xml = xml.replace(b'vendorDebitCtx', b'vendorDebit')
     xml = xml.replace(b'submerchantCreditCtx', b'submerchantCredit')
