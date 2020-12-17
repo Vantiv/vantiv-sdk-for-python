@@ -55,7 +55,7 @@ class TestBatch(unittest.TestCase):
         txn_dict = {
             'authorization':{
                 'reportGroup': 'Planets',
-                'orderId': '12344',
+                'orderId': 'This is an orderID whose length is exactly sixty four characters',
                 'amount': '106',
                 'orderSource': 'ecommerce',
                 'id': 'thisisid',
@@ -633,6 +633,8 @@ class TestBatch(unittest.TestCase):
                 self.assertEquals(106, obj.batchRequest[0].transactionReversalAmount)
 
             self.assertEquals('%s.xml.asc' % filename, response)
+
+
 
 if __name__ == '__main__':
     unittest.main()

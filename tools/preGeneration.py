@@ -46,6 +46,23 @@ def combine_xsd(_version, _package_root):
         'cnpBatch',
         'cnpOnline'
     ]
+
+    '''
+        Fix for duplicates
+        DISCLAIMER: Since we are at the mercy of XML, if new duplicates are added,
+        adding them to this list might NOT work.
+        (see https://stackoverflow.com/q/1732348) 
+    '''
+
+    duped_types = [
+        'vendorCredit',
+        'vendorDebit',
+        'submerchantCredit',
+        'submerchantDebit',
+        'customerCredit',
+        'customerDebit'
+    ]
+
     schema_files = dict()
     for name in schema_file_names:
         file_path = os.path.join(_package_root, 'schema', '%s_v%s.xsd' % (name, _version))
@@ -76,7 +93,16 @@ def combine_xsd(_version, _package_root):
             while found:
                 f_str = f_str.replace(found.group(0), '')
                 found = re.search('<xs:include.*?/>', f_str, flags=re.M)
+            # Find all [types] and decide if added or removed
             combined_xsd_str += '<!--%s-->' % schema_file_names[i]
+
+            # See if duplicates exist and scrub them before adding
+            for type_name in duped_types:
+                search_pattern = '(?s)\n    <xs:element name="' +type_name+'".+?\n    <\/xs:element>'
+                if re.search(search_pattern, combined_xsd_str) is not None:
+                    found_type = re.search(search_pattern, f_str)
+                    f_str = f_str.replace(found_type.group(0), '')
+
             combined_xsd_str += f_str
 
     combined_xsd_str += '</xs:schema>\n'

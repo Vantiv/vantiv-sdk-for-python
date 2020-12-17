@@ -450,6 +450,25 @@ class TestAuth(unittest.TestCase):
         self.assertEquals('000', response['authorizationResponse']['response'])
         self.assertEquals('sandbox', response['authorizationResponse']['location'])
 
+    def test_simple_auth_with_card_long_order_id(self):
+        authorization = fields.authorization()
+        authorization.reportGroup = 'Planets'
+        authorization.orderId = 'This is an orderID whose length is exactly sixty four characters'
+        authorization.amount = 106
+        authorization.orderSource = 'ecommerce'
+        authorization.id = 'thisisid'
+
+        card = fields.cardType()
+        card.number = '4100000000000000'
+        card.expDate = '1210'
+        card.type = 'VI'
+
+        authorization.card = card
+
+        response = online.request(authorization, conf)
+        self.assertEquals('000', response['authorizationResponse']['response'])
+        self.assertEquals('sandbox', response['authorizationResponse']['location'])
+
 
 if __name__ == '__main__':
     unittest.main()
