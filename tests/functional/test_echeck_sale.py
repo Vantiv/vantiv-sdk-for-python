@@ -26,8 +26,6 @@ import os
 import sys
 import unittest
 
-from vantivsdk.utils import VantivException
-
 package_root = os.path.dirname(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
 sys.path.insert(0, package_root)
 

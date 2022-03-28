@@ -276,6 +276,15 @@ class TestFundingInstruction(unittest.TestCase):
                     'type': 'VI',
                     'number': '4100000000000000',
                     'expDate': '1210'
+                },
+                'cardholderAddress': {
+                    'addressLine1': '37 Main Street',
+                    'addressLine2': '',
+                    'addressLine3': '',
+                    'city': 'Augusta',
+                    'state': 'Wisconsin',
+                    'zip': '28209',
+                    'country': 'USA'
                 }
             }
         }

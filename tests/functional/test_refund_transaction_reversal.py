@@ -35,7 +35,7 @@ conf = utils.Configuration()
 
 
 class TestRefundTransactionReversal(unittest.TestCase):
-    def test_simple_txn_reversal(self):
+    def test_simple_refund_txn_reversal(self):
         transactions = fields.refundTransactionReversal();
         transactions.reportGroup = 'Planets'
         transactions.customerId = '987654321'

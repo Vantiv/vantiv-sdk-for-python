@@ -90,18 +90,14 @@ class TestCommManagerMultiThreaded(unittest.TestCase):
             self.failedCount += 1
         return responseTime
 
-
     def test_multiThreaded_with_request(self):
         self.config.multiSite = False
         pool = ThreadPool(self.threadCount)
         id = list(range(1, self.threadCount+1))
         pool.map(self.multiThreadTests_with_request, id)
 
-
     def test_findUrl(self):
-
         target = commManager(self.config).manager
-
         doMultiSite_record = target.doMultiSite
         printDebug_record = target.printDebug
         currentMultiSiteUrlIndex_reCord = target.currentMultiSiteUrlIndex

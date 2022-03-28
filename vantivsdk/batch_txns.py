@@ -75,6 +75,6 @@ supported_transaction_types = {
     'vendorCredit': ['numVendorCredit', 'vendorCreditAmount'],
     'vendorDebit': ['numVendorDebit', 'vendorDebitAmount'],
     'depositTransactionReversal': ['numDepositTransactionReversals', 'depositTransactionReversalAmount'],
-    'refundTransactionReversal': ['numDepositTransactionReversals', 'depositTransactionReversalAmount'],
+    'refundTransactionReversal': ['numRefundTransactionReversals', 'refundTransactionReversalAmount'],
 
 }

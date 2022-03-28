@@ -637,15 +637,15 @@ class TestBatch(unittest.TestCase):
     @unittest.skipIf(preliveStatus.lower() == 'down', "prelive not available")
     def test_batch_credit_txn_reversal(self):
         txnBatch = batch.Transactions()
-        deposit_txn_rev = fields.creditTransactionReversal()
-        deposit_txn_rev.reportGroup = 'Planets'
-        deposit_txn_rev.customerId = '987654321'
-        deposit_txn_rev.cnpTxnId = '12345678000'
-        deposit_txn_rev.amount = 106
-        deposit_txn_rev.orderSource = 'ecommerce'
-        deposit_txn_rev.id = 'thisisid'
-        deposit_txn_rev.pin = '123456'
-        txnBatch.add(deposit_txn_rev)
+        refund_txn_rev = fields.refundTransactionReversal()
+        refund_txn_rev.reportGroup = 'Planets'
+        refund_txn_rev.customerId = '987654321'
+        refund_txn_rev.cnpTxnId = '12345678000'
+        refund_txn_rev.amount = 106
+        refund_txn_rev.orderSource = 'ecommerce'
+        refund_txn_rev.id = 'thisisid'
+        refund_txn_rev.pin = '123456'
+        txnBatch.add(refund_txn_rev)
 
         filename = 'batch_test_%s' % datetime.datetime.now().strftime("%Y%m%d%H%M%S%f")
 
