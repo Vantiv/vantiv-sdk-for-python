@@ -147,6 +147,19 @@ class TestCredit(unittest.TestCase):
         self.assertEquals('000', response['creditResponse']['response'])
         self.assertEquals('sandbox', response['creditResponse']['location'])
 
+    def test_simple_credit_with_pin_and_optional_order_id(self):
+        transaction = fields.credit()
+        transaction.cnpTxnId = '1234'
+        transaction.amount = 106
+        transaction.secondaryAmount = 20
+        transaction.pin = '3333'
+        transaction.id = 'ThisIsID'
+        transaction.orderId = '123OptionalOrderID'
+
+        response = online.request(transaction, conf)
+        self.assertEquals('000', response['creditResponse']['response'])
+        self.assertEquals('sandbox', response['creditResponse']['location'])
+
     def test_credit_with_business_indicator(self):
         transaction = fields.credit()
         transaction.reportGroup = 'Planets'

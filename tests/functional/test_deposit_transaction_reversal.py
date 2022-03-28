@@ -34,9 +34,9 @@ from vantivsdk import *
 conf = utils.Configuration()
 
 
-class TestTransactionReversal(unittest.TestCase):
+class TestDepositTransactionReversal(unittest.TestCase):
     def test_simple_txn_reversal(self):
-        transactions = fields.transactionReversal();
+        transactions = fields.depositTransactionReversal();
         transactions.reportGroup = 'Planets'
         transactions.customerId = '987654321'
         transactions.cnpTxnId = '12345678000'
@@ -46,9 +46,9 @@ class TestTransactionReversal(unittest.TestCase):
         transactions.pin = '123456'
 
         response = online.request(transactions, conf)
-        self.assertEquals('000', response['transactionReversalResponse']['response'])
-        self.assertEquals('sandbox', response['transactionReversalResponse']['location'])
-        self.assertEquals('12345678000', response['transactionReversalResponse']['recyclingResponse']['creditCnpTxnId'])
+        self.assertEquals('000', response['depositTransactionReversalResponse']['response'])
+        self.assertEquals('sandbox', response['depositTransactionReversalResponse']['location'])
+        self.assertEquals('12345678000', response['depositTransactionReversalResponse']['recyclingResponse']['creditCnpTxnId'])
 
 
 

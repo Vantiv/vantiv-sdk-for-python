@@ -55,6 +55,31 @@ class TestSale(unittest.TestCase):
         self.assertEquals('000', response['saleResponse']['response'])
         self.assertEquals('sandbox', response['saleResponse']['location'])
 
+    def test_simple_sale_with_fraud_check(self):
+        transaction = fields.sale()
+        transaction.reportGroup = 'Planets'
+        transaction.orderId = '12344'
+        transaction.amount = 106
+        transaction.orderSource = 'ecommerce'
+        transaction.id = 'ThisIsID'
+
+        card = fields.cardType()
+        card.number = '4100000000000000'
+        card.expDate = '1210'
+        card.type = 'VI'
+
+        cardholder_authentication = fields.fraudCheckType()
+        # base64 value for dummy number '123456789012345678901234567890123456789012345678901234567890'
+        # System should accept the request with length 60 of authenticationValueType
+        cardholder_authentication.authenticationValue = "MTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkw"
+
+        transaction.card = card
+        transaction.cardholderAuthentication = cardholder_authentication
+
+        response = online.request(transaction, conf)
+        self.assertEquals('000', response['saleResponse']['response'])
+        self.assertEquals('sandbox', response['saleResponse']['location'])
+
     def test_simple_sale_with_paypal(self):
         transaction = fields.sale()
         transaction.reportGroup = 'Planets'

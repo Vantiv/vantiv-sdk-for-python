@@ -128,6 +128,7 @@ capture
         :var enhancedData: instance of :py:class:`vantivsdk.fields.enhancedData`
         :var id: String or Number
         :var lodgingInfo: instance of :py:class:`vantivsdk.fields.lodgingInfo`
+        :var orderId: String or Number
         :var partial: String or Number
         :var payPalNotes: String or Number
         :var payPalOrderComplete: String or Number
@@ -283,6 +284,22 @@ depositReversal
         :var originalTxnTime: String or Number
         :var reportGroup: String or Number
 
+depositTransactionReversal
+--------------------------
+    .. py:class:: vantivsdk.fields.depositTransactionReversal
+
+        :var amount: String or Number
+        :var cnpTxnId: String or Number
+        :var customBilling: instance of :py:class:`vantivsdk.fields.customBilling`
+        :var customerId: String or Number
+        :var enhancedData: instance of :py:class:`vantivsdk.fields.enhancedData`
+        :var id: String or Number
+        :var lodgingInfo: instance of :py:class:`vantivsdk.fields.lodgingInfo`
+        :var pin: String or Number
+        :var processingInstructions: instance of :py:class:`vantivsdk.fields.processingInstructions`
+        :var reportGroup: String or Number
+        :var surchargeAmount: String or Number
+
 echeckCredit
 ------------
     .. py:class:: vantivsdk.fields.echeckCredit
@@ -392,6 +409,7 @@ fastAccessFunding
 
         :var amount: String or Number
         :var card: instance of :py:class:`vantivsdk.fields.cardType`
+        :var cardholderAddress: instance of :py:class:`vantivsdk.fields.address`
         :var customerId: String or Number
         :var customerName: String or Number
         :var disbursementType: String or Number
@@ -622,6 +640,22 @@ refundReversal
         :var originalTxnTime: String or Number
         :var reportGroup: String or Number
 
+refundTransactionReversal
+-------------------------
+    .. py:class:: vantivsdk.fields.refundTransactionReversal
+
+        :var amount: String or Number
+        :var cnpTxnId: String or Number
+        :var customBilling: instance of :py:class:`vantivsdk.fields.customBilling`
+        :var customerId: String or Number
+        :var enhancedData: instance of :py:class:`vantivsdk.fields.enhancedData`
+        :var id: String or Number
+        :var lodgingInfo: instance of :py:class:`vantivsdk.fields.lodgingInfo`
+        :var pin: String or Number
+        :var processingInstructions: instance of :py:class:`vantivsdk.fields.processingInstructions`
+        :var reportGroup: String or Number
+        :var surchargeAmount: String or Number
+
 registerTokenRequest
 --------------------
     .. py:class:: vantivsdk.fields.registerTokenRequest
@@ -757,22 +791,6 @@ submerchantDebit
         :var reportGroup: String or Number
         :var submerchantName: String or Number
 
-transactionReversal
--------------------
-    .. py:class:: vantivsdk.fields.transactionReversal
-
-        :var amount: String or Number
-        :var cnpTxnId: String or Number
-        :var customBilling: instance of :py:class:`vantivsdk.fields.customBilling`
-        :var customerId: String or Number
-        :var enhancedData: instance of :py:class:`vantivsdk.fields.enhancedData`
-        :var id: String or Number
-        :var lodgingInfo: instance of :py:class:`vantivsdk.fields.lodgingInfo`
-        :var pin: String or Number
-        :var processingInstructions: instance of :py:class:`vantivsdk.fields.processingInstructions`
-        :var reportGroup: String or Number
-        :var surchargeAmount: String or Number
-
 translateToLowValueTokenRequest
 -------------------------------
     .. py:class:: vantivsdk.fields.translateToLowValueTokenRequest
@@ -858,6 +876,7 @@ vendorCredit
         :var fundsTransferId: String or Number
         :var id: String or Number
         :var reportGroup: String or Number
+        :var vendorAddress: instance of :py:class:`vantivsdk.fields.address`
         :var vendorName: String or Number
 
 vendorDebit
@@ -872,6 +891,7 @@ vendorDebit
         :var fundsTransferId: String or Number
         :var id: String or Number
         :var reportGroup: String or Number
+        :var vendorAddress: instance of :py:class:`vantivsdk.fields.address`
         :var vendorName: String or Number
 
 void

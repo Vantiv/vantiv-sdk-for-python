@@ -37,6 +37,7 @@ from vantivsdk import *
 
 conf = utils.Configuration()
 
+
 class TestFundingInstruction(unittest.TestCase):
     def test_payFacCredit_000(self):
         txn_dict = {
@@ -48,9 +49,8 @@ class TestFundingInstruction(unittest.TestCase):
             }
         }
 
-        response = online.request(txn_dict, conf, sameDayFunding = True)
+        response = online.request(txn_dict, conf, sameDayFunding=True)
         self.assertEquals('000', response['payFacCreditResponse']['response'])
-
 
     def test_payFacDebit_000(self):
         txn_dict = {
@@ -70,15 +70,15 @@ class TestFundingInstruction(unittest.TestCase):
             'submerchantCredit': {
                 'id': 'OnlinePC2',
                 'fundingSubmerchantId': 'fundingSubmerchantId',
-                'submerchantName' : 'Jon Snow',
+                'submerchantName': 'Jon Snow',
                 'fundsTransferId': 'fundsTransferId',
                 'amount': 900010002000,
-                'accountInfo':{
-                    'accNum':'123456789012',
-                    'routingNum':'123456789',
-                    'accType':'Checking',
+                'accountInfo': {
+                    'accNum': '123456789012',
+                    'routingNum': '123456789',
+                    'accType': 'Checking',
                 },
-                'customIdentifier':'customIdentifie'
+                'customIdentifier': 'customIdentifie'
             }
         }
 
@@ -90,34 +90,33 @@ class TestFundingInstruction(unittest.TestCase):
             'submerchantDebit': {
                 'id': 'OnlinePC2',
                 'fundingSubmerchantId': 'fundingSubmerchantId',
-                'submerchantName' : 'Jon Snow',
+                'submerchantName': 'Jon Snow',
                 'fundsTransferId': 'fundsTransferId',
                 'amount': 900010002000,
-                'accountInfo':{
-                    'accNum':'123456789012',
-                    'routingNum':'123456789',
-                    'accType':'Checking',
+                'accountInfo': {
+                    'accNum': '123456789012',
+                    'routingNum': '123456789',
+                    'accType': 'Checking',
                 },
-                'customIdentifier':'customIdentifie'
+                'customIdentifier': 'customIdentifie'
             }
         }
 
         response = online.request(txn_dict, conf)
         self.assertEquals('000', response['submerchantDebitResponse']['response'])
 
-
     def test_vendorCredit_000(self):
         txn_dict = {
             'vendorCredit': {
                 'id': 'OnlinePC2',
                 'fundingSubmerchantId': 'fundingSubmerchantId',
-                'vendorName' : 'Jon Snow',
+                'vendorName': 'Jon Snow',
                 'fundsTransferId': 'fundsTransferId',
                 'amount': 900010002000,
-                'accountInfo':{
-                    'accNum':'123456789012',
-                    'routingNum':'123456789',
-                    'accType':'Checking',
+                'accountInfo': {
+                    'accNum': '123456789012',
+                    'routingNum': '123456789',
+                    'accType': 'Checking',
                 },
             }
         }
@@ -130,13 +129,13 @@ class TestFundingInstruction(unittest.TestCase):
             'vendorCredit': {
                 'id': 'OnlinePC2',
                 'fundingCustomerId': 'fundingCustomerId',
-                'vendorName' : 'Jon Snow',
+                'vendorName': 'Jon Snow',
                 'fundsTransferId': 'fundsTransferId',
                 'amount': 900010002000,
-                'accountInfo':{
-                    'accNum':'123456789012',
-                    'routingNum':'123456789',
-                    'accType':'Checking',
+                'accountInfo': {
+                    'accNum': '123456789012',
+                    'routingNum': '123456789',
+                    'accType': 'Checking',
                 },
             }
         }
@@ -149,13 +148,13 @@ class TestFundingInstruction(unittest.TestCase):
             'vendorDebit': {
                 'id': 'OnlinePC2',
                 'fundingSubmerchantId': 'fundingSubmerchantId',
-                'vendorName' : 'Jon Snow',
+                'vendorName': 'Jon Snow',
                 'fundsTransferId': 'fundsTransferId',
                 'amount': 900010002000,
-                'accountInfo':{
-                    'accNum':'123456789012',
-                    'routingNum':'123456789',
-                    'accType':'Checking',
+                'accountInfo': {
+                    'accNum': '123456789012',
+                    'routingNum': '123456789',
+                    'accType': 'Checking',
                 },
             }
         }
@@ -168,13 +167,13 @@ class TestFundingInstruction(unittest.TestCase):
             'vendorDebit': {
                 'id': 'OnlinePC2',
                 'fundingCustomerId': 'fundingCustomerId',
-                'vendorName' : 'Jon Snow',
+                'vendorName': 'Jon Snow',
                 'fundsTransferId': 'fundsTransferId',
                 'amount': 900010002000,
-                'accountInfo':{
-                    'accNum':'123456789012',
-                    'routingNum':'123456789',
-                    'accType':'Checking',
+                'accountInfo': {
+                    'accNum': '123456789012',
+                    'routingNum': '123456789',
+                    'accType': 'Checking',
                 },
             }
         }
@@ -255,8 +254,8 @@ class TestFundingInstruction(unittest.TestCase):
                 'amount': 90000000,
                 'card': {
                     'type': 'VI',
-                    'number' : '4100000000000000',
-                    'expDate' : '1210'
+                    'number': '4100000000000000',
+                    'expDate': '1210'
                 }
             }
         }
@@ -264,26 +263,34 @@ class TestFundingInstruction(unittest.TestCase):
         response = online.request(txn_dict, conf)
         self.assertEquals('000', response['fastAccessFundingResponse']['response'])
 
-    def test_fastAccessFunding_mixedName(self):
-        self.skipTest("Sandbox does not check for mixed names. Production does check.")
-
+    def test_fastAccessFunding_with_cardholderAddress(self):
         txn_dict = {
             'fastAccessFunding': {
                 'id': 'OnlinePC2',
                 'fundingSubmerchantId': 'fundingSubmerchantId',
-                'customerName': 'submerhc',
+                'submerchantName': 'submerhc',
                 'fundsTransferId': '1234567891111111',
                 'amount': 90000000,
+
                 'card': {
                     'type': 'VI',
-                    'number' : '4100000000000000',
-                    'expDate' : '1210'
+                    'number': '4100000000000000',
+                    'expDate': '1210'
+                },
+                'cardholderAddress': {
+                    'addressLine1': '37 Main Street',
+                    'addressLine2': '',
+                    'addressLine3': '',
+                    'city': 'Augusta',
+                    'state': 'Wisconsin',
+                    'zip': '28209',
+                    'country': 'USA'
                 }
             }
         }
 
-        with self.assertRaises(VantivException) as context:
-            online.request(txn_dict,conf)
+        response = online.request(txn_dict, conf)
+        self.assertEquals('000', response['fastAccessFundingResponse']['response'])
 
     def test_payFacCredit_940(self):
         txn_dict = {
@@ -297,7 +304,6 @@ class TestFundingInstruction(unittest.TestCase):
 
         response = online.request(txn_dict, conf)
         self.assertEquals('940', response['payFacCreditResponse']['response'])
-
 
     def test_payFacDebit_940(self):
         txn_dict = {
@@ -317,15 +323,15 @@ class TestFundingInstruction(unittest.TestCase):
             'submerchantCredit': {
                 'id': 'OnlinePC2',
                 'fundingSubmerchantId': 'fundingSubmerchantId',
-                'submerchantName' : 'Jon Snow',
+                'submerchantName': 'Jon Snow',
                 'fundsTransferId': 'fundsTransferId',
                 'amount': 900010002940,
-                'accountInfo':{
-                    'accNum':'123456789012',
-                    'routingNum':'123456789',
-                    'accType':'Checking',
+                'accountInfo': {
+                    'accNum': '123456789012',
+                    'routingNum': '123456789',
+                    'accType': 'Checking',
                 },
-                'customIdentifier':'customIdentifie'
+                'customIdentifier': 'customIdentifie'
             }
         }
 
@@ -337,34 +343,33 @@ class TestFundingInstruction(unittest.TestCase):
             'submerchantDebit': {
                 'id': 'OnlinePC2',
                 'fundingSubmerchantId': 'fundingSubmerchantId',
-                'submerchantName' : 'Jon Snow',
+                'submerchantName': 'Jon Snow',
                 'fundsTransferId': 'fundsTransferId',
                 'amount': 900010002940,
-                'accountInfo':{
-                    'accNum':'123456789012',
-                    'routingNum':'123456789',
-                    'accType':'Checking',
+                'accountInfo': {
+                    'accNum': '123456789012',
+                    'routingNum': '123456789',
+                    'accType': 'Checking',
                 },
-                'customIdentifier':'customIdentifie'
+                'customIdentifier': 'customIdentifie'
             }
         }
 
         response = online.request(txn_dict, conf)
         self.assertEquals('940', response['submerchantDebitResponse']['response'])
 
-
     def test_vendorCredit_940(self):
         txn_dict = {
             'vendorCredit': {
                 'id': 'OnlinePC2',
                 'fundingSubmerchantId': 'fundingSubmerchantId',
-                'vendorName' : 'Jon Snow',
+                'vendorName': 'Jon Snow',
                 'fundsTransferId': 'fundsTransferId',
                 'amount': 900010002940,
-                'accountInfo':{
-                    'accNum':'123456789012',
-                    'routingNum':'123456789',
-                    'accType':'Checking',
+                'accountInfo': {
+                    'accNum': '123456789012',
+                    'routingNum': '123456789',
+                    'accType': 'Checking',
                 },
             }
         }
@@ -377,13 +382,13 @@ class TestFundingInstruction(unittest.TestCase):
             'vendorDebit': {
                 'id': 'OnlinePC2',
                 'fundingSubmerchantId': 'fundingSubmerchantId',
-                'vendorName' : 'Jon Snow',
+                'vendorName': 'Jon Snow',
                 'fundsTransferId': 'fundsTransferId',
                 'amount': 900010002940,
-                'accountInfo':{
-                    'accNum':'123456789012',
-                    'routingNum':'123456789',
-                    'accType':'Checking',
+                'accountInfo': {
+                    'accNum': '123456789012',
+                    'routingNum': '123456789',
+                    'accType': 'Checking',
                 },
             }
         }
@@ -464,8 +469,8 @@ class TestFundingInstruction(unittest.TestCase):
                 'amount': 90000940,
                 'card': {
                     'type': 'VI',
-                    'number' : '4100000000000000',
-                    'expDate' : '1210'
+                    'number': '4100000000000000',
+                    'expDate': '1210'
                 }
             }
         }
@@ -486,7 +491,6 @@ class TestFundingInstruction(unittest.TestCase):
         response = online.request(txn_dict, conf)
         self.assertEquals('941', response['payFacCreditResponse']['response'])
 
-
     def test_payFacDebit_941(self):
         txn_dict = {
             'payFacDebit': {
@@ -505,15 +509,15 @@ class TestFundingInstruction(unittest.TestCase):
             'submerchantCredit': {
                 'id': 'OnlinePC2',
                 'fundingSubmerchantId': 'fundingSubmerchantId',
-                'submerchantName' : 'Jon Snow',
+                'submerchantName': 'Jon Snow',
                 'fundsTransferId': 'fundsTransferId',
                 'amount': 900010002941,
-                'accountInfo':{
-                    'accNum':'123456789012',
-                    'routingNum':'123456789',
-                    'accType':'Checking',
+                'accountInfo': {
+                    'accNum': '123456789012',
+                    'routingNum': '123456789',
+                    'accType': 'Checking',
                 },
-                'customIdentifier':'customIdentifie'
+                'customIdentifier': 'customIdentifie'
             }
         }
 
@@ -525,34 +529,33 @@ class TestFundingInstruction(unittest.TestCase):
             'submerchantDebit': {
                 'id': 'OnlinePC2',
                 'fundingSubmerchantId': 'fundingSubmerchantId',
-                'submerchantName' : 'Jon Snow',
+                'submerchantName': 'Jon Snow',
                 'fundsTransferId': 'fundsTransferId',
                 'amount': 900010002941,
-                'accountInfo':{
-                    'accNum':'123456789012',
-                    'routingNum':'123456789',
-                    'accType':'Checking',
+                'accountInfo': {
+                    'accNum': '123456789012',
+                    'routingNum': '123456789',
+                    'accType': 'Checking',
                 },
-                'customIdentifier':'customIdentifie'
+                'customIdentifier': 'customIdentifie'
             }
         }
 
         response = online.request(txn_dict, conf)
         self.assertEquals('941', response['submerchantDebitResponse']['response'])
 
-
     def test_vendorCredit_941(self):
         txn_dict = {
             'vendorCredit': {
                 'id': 'OnlinePC2',
                 'fundingSubmerchantId': 'fundingSubmerchantId',
-                'vendorName' : 'Jon Snow',
+                'vendorName': 'Jon Snow',
                 'fundsTransferId': 'fundsTransferId',
                 'amount': 900010002941,
-                'accountInfo':{
-                    'accNum':'123456789012',
-                    'routingNum':'123456789',
-                    'accType':'Checking',
+                'accountInfo': {
+                    'accNum': '123456789012',
+                    'routingNum': '123456789',
+                    'accType': 'Checking',
                 },
             }
         }
@@ -565,13 +568,13 @@ class TestFundingInstruction(unittest.TestCase):
             'vendorDebit': {
                 'id': 'OnlinePC2',
                 'fundingSubmerchantId': 'fundingSubmerchantId',
-                'vendorName' : 'Jon Snow',
+                'vendorName': 'Jon Snow',
                 'fundsTransferId': 'fundsTransferId',
                 'amount': 900010002941,
-                'accountInfo':{
-                    'accNum':'123456789012',
-                    'routingNum':'123456789',
-                    'accType':'Checking',
+                'accountInfo': {
+                    'accType': 'Checking',
+                    'accNum': '123456789012',
+                    'routingNum': '123456789'
                 },
             }
         }
@@ -652,8 +655,8 @@ class TestFundingInstruction(unittest.TestCase):
                 'amount': 90000941,
                 'card': {
                     'type': 'VI',
-                    'number' : '4100000000000000',
-                    'expDate' : '1210'
+                    'number': '4100000000000000',
+                    'expDate': '1210'
                 }
             }
         }
@@ -688,64 +691,6 @@ class TestFundingInstruction(unittest.TestCase):
             'customerDebit': {
                 'id': 'OnlinePC2',
                 'fundingCustomerId': 'fundingCustomerId',
-                'customerName' : 'Jon Snow',
-                'fundsTransferId': 'fundsTransferId',
-                'amount': 900010002000,
-                'accountInfo':{
-                    'accNum':'123456789012',
-                    'routingNum':'123456789',
-                    'accType':'Checking',
-                },
-            }
-        }
-
-        response = online.request(txn_dict, conf)
-        self.assertEquals('000', response['customerDebitResponse']['response'])
-
-    def test_customerDebit_nullCustomerNameException(self):
-        txn_dict = {
-            'customerDebit': {
-                'id': 'OnlinePC2',
-                'fundingCustomerId': 'fundingCustomerId',
-                'fundsTransferId': 'fundsTransferId',
-                'amount': 900010002000,
-                'accountInfo':{
-                    'accNum':'123456789012',
-                    'routingNum':'123456789',
-                    'accType':'Checking',
-                },
-            }
-        }
-
-        with self.assertRaises(VantivException) as context:
-            online.request(txn_dict,conf)
-
-    def test_customerDebit_negativeAmountException(self):
-        self.skipTest("Sandbox does not check for negative amounts. Production does check.")
-
-        txn_dict = {
-            'customerDebit': {
-                'id': 'OnlinePC2',
-                'fundingCustomerId': 'fundingCustomerId',
-                'customerName' : 'Jon Snow',
-                'fundsTransferId': 'fundsTransferId',
-                'amount': -900010002000,
-                'accountInfo':{
-                    'accNum':'123456789012',
-                    'routingNum':'123456789',
-                    'accType':'Checking',
-                },
-            }
-        }
-
-        with self.assertRaises(VantivException) as context:
-            online.request(txn_dict,conf)
-
-    def test_customerDebit_idTooLongException(self):
-        txn_dict = {
-            'customerDebit': {
-                'id': 'OnlinePC2',
-                'fundingCustomerId': '123456789012345678901234567890123456789012345678901234567890',
                 'customerName': 'Jon Snow',
                 'fundsTransferId': 'fundsTransferId',
                 'amount': 900010002000,
@@ -757,45 +702,27 @@ class TestFundingInstruction(unittest.TestCase):
             }
         }
 
-        with self.assertRaises(VantivException) as context:
-            online.request(txn_dict, conf)
+        response = online.request(txn_dict, conf)
+        self.assertEquals('000', response['customerDebitResponse']['response'])
 
     def test_customerCredit_000(self):
         txn_dict = {
             'customerCredit': {
                 'id': 'OnlinePC2',
                 'fundingCustomerId': 'fundingCustomerId',
-                'customerName' : 'Jon Snow',
+                'customerName': 'Jon Snow',
                 'fundsTransferId': 'fundsTransferId',
                 'amount': 900010002000,
-                'accountInfo':{
-                    'accNum':'123456789012',
-                    'routingNum':'123456789',
-                    'accType':'Checking',
+                'accountInfo': {
+                    'accNum': '123456789012',
+                    'routingNum': '123456789',
+                    'accType': 'Checking',
                 },
             }
         }
 
         response = online.request(txn_dict, conf)
         self.assertEquals('000', response['customerCreditResponse']['response'])
-
-    def test_customerCredit_nullCustomerNameException(self):
-        txn_dict = {
-            'customerCredit': {
-                'id': 'OnlinePC2',
-                'fundingCustomerId': 'fundingCustomerId',
-                'fundsTransferId': 'fundsTransferId',
-                'amount': 900010002000,
-                'accountInfo':{
-                    'accNum':'123456789012',
-                    'routingNum':'123456789',
-                    'accType':'Checking',
-                },
-            }
-        }
-
-        with self.assertRaises(VantivException) as context:
-            online.request(txn_dict,conf)
 
     def test_payoutOrgDebit_000(self):
         txn_dict = {
@@ -822,6 +749,103 @@ class TestFundingInstruction(unittest.TestCase):
 
         response = online.request(txn_dict, conf)
         self.assertEquals('000', response['payoutOrgCreditResponse']['response'])
+
+    def test_fastAccessFunding_mixedName(self):
+        self.skipTest("Sandbox does not check for mixed names. Production does check.")
+
+        txn_dict = {
+            'fastAccessFunding': {
+                'id': 'OnlinePC2',
+                'fundingSubmerchantId': 'fundingSubmerchantId',
+                'customerName': 'submerhc',
+                'fundsTransferId': '1234567891111111',
+                'amount': 90000000,
+                'card': {
+                    'type': 'VI',
+                    'number': '4100000000000000',
+                    'expDate': '1210'
+                }
+            }
+        }
+
+        with self.assertRaises(VantivException) as context:
+            online.request(txn_dict, conf)
+
+    def test_customerDebit_nullCustomerNameException(self):
+        txn_dict = {
+            'customerDebit': {
+                'id': 'OnlinePC2',
+                'fundingCustomerId': 'fundingCustomerId',
+                'fundsTransferId': 'fundsTransferId',
+                'amount': 900010002000,
+                'accountInfo': {
+                    'accNum': '123456789012',
+                    'routingNum': '123456789',
+                    'accType': 'Checking',
+                },
+            }
+        }
+
+        with self.assertRaises(VantivException) as context:
+            online.request(txn_dict, conf)
+
+    def test_customerDebit_negativeAmountException(self):
+        self.skipTest("Sandbox does not check for negative amounts. Production does check.")
+
+        txn_dict = {
+            'customerDebit': {
+                'id': 'OnlinePC2',
+                'fundingCustomerId': 'fundingCustomerId',
+                'customerName': 'Jon Snow',
+                'fundsTransferId': 'fundsTransferId',
+                'amount': -900010002000,
+                'accountInfo': {
+                    'accNum': '123456789012',
+                    'routingNum': '123456789',
+                    'accType': 'Checking',
+                },
+            }
+        }
+
+        with self.assertRaises(VantivException) as context:
+            online.request(txn_dict, conf)
+
+    def test_customerDebit_idTooLongException(self):
+        txn_dict = {
+            'customerDebit': {
+                'id': 'OnlinePC2',
+                'fundingCustomerId': '123456789012345678901234567890123456789012345678901234567890',
+                'customerName': 'Jon Snow',
+                'fundsTransferId': 'fundsTransferId',
+                'amount': 900010002000,
+                'accountInfo': {
+                    'accNum': '123456789012',
+                    'routingNum': '123456789',
+                    'accType': 'Checking',
+                },
+            }
+        }
+
+        with self.assertRaises(VantivException) as context:
+            online.request(txn_dict, conf)
+
+    def test_customerCredit_nullCustomerNameException(self):
+        txn_dict = {
+            'customerCredit': {
+                'id': 'OnlinePC2',
+                'fundingCustomerId': 'fundingCustomerId',
+                'fundsTransferId': 'fundsTransferId',
+                'amount': 900010002000,
+                'accountInfo': {
+                    'accType': 'Checking',
+                    'accNum': '123456789012',
+                    'routingNum': '123456789'
+                },
+            }
+        }
+
+        with self.assertRaises(VantivException) as context:
+            online.request(txn_dict, conf)
 
 if __name__ == '__main__':
     unittest.main()

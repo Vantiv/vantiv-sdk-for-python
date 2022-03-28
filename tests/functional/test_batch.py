@@ -584,9 +584,9 @@ class TestBatch(unittest.TestCase):
                 break
 
     @unittest.skipIf(preliveStatus.lower() == 'down', "prelive not available")
-    def test_batch_txn_reversal(self):
+    def test_batch_deposit_txn_reversal(self):
         txnBatch = batch.Transactions()
-        txnRev = fields.transactionReversal();
+        txnRev = fields.depositTransactionReversal();
         txnRev.reportGroup = 'Planets'
         txnRev.customerId = '987654321'
         txnRev.cnpTxnId = '12345678000'
@@ -595,6 +595,57 @@ class TestBatch(unittest.TestCase):
         txnRev.id = 'thisisid'
         txnRev.pin = '123456'
         txnBatch.add(txnRev)
+
+        filename = 'batch_test_%s' % datetime.datetime.now().strftime("%Y%m%d%H%M%S%f")
+
+        # stream to Vaitiv eCommerce and get object as response
+        response = batch.submit(txnBatch, conf, filename)
+
+        if conf.useEncryption:
+            # Using encryption.
+            retry = True
+            tried = 0
+            withEncryptionReponseFilepath = ''
+            while retry:
+                tried += 1
+                try:
+                    withEncryptionReponseFilepath = batch._get_file_from_sftp(response, conf, False, 60)
+                    retry = False
+                except:
+                    # sleep 1 minute waiting for batch get processed
+                    print("sleep 30 seconds waiting for batch get processed")
+                    time.sleep(30)
+                if tried > 20:
+                    self.fail("Timeout for retrieve batch response")
+                    break
+
+            call(["cat", withEncryptionReponseFilepath])
+            ### <<< WITH ENCRYPTION
+
+            with open(withEncryptionReponseFilepath, 'r') as xml_file:
+                obj = fields.CreateFromDocument(xml_file.read())
+                self.assertEquals("Valid Format", obj.message)
+
+        else:
+            with open(os.path.join(conf.batch_requests_path, '%s.xml' % filename), 'r') as xml_file:
+                obj = fields.CreateFromDocument(xml_file.read())
+                self.assertEquals(1, obj.numBatchRequests)
+                self.assertEquals(106, obj.batchRequest[0].transactionReversalAmount)
+
+            self.assertEquals('%s.xml.asc' % filename, response)
+
+    @unittest.skipIf(preliveStatus.lower() == 'down', "prelive not available")
+    def test_batch_credit_txn_reversal(self):
+        txnBatch = batch.Transactions()
+        refund_txn_rev = fields.refundTransactionReversal()
+        refund_txn_rev.reportGroup = 'Planets'
+        refund_txn_rev.customerId = '987654321'
+        refund_txn_rev.cnpTxnId = '12345678000'
+        refund_txn_rev.amount = 106
+        refund_txn_rev.orderSource = 'ecommerce'
+        refund_txn_rev.id = 'thisisid'
+        refund_txn_rev.pin = '123456'
+        txnBatch.add(refund_txn_rev)
 
         filename = 'batch_test_%s' % datetime.datetime.now().strftime("%Y%m%d%H%M%S%f")
 

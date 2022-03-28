@@ -1,6 +1,18 @@
 Complex Types
 =============
 
+address
+-------
+    .. py:class:: vantivsdk.fields.address
+
+        :var addressLine1: String or Number
+        :var addressLine2: String or Number
+        :var addressLine3: String or Number
+        :var city: String or Number
+        :var country: String or Number
+        :var state: String or Number
+        :var zip: String or Number
+
 advancedFraudChecksType
 -----------------------
     .. py:class:: vantivsdk.fields.advancedFraudChecksType

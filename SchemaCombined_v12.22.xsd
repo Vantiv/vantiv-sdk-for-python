@@ -55,6 +55,7 @@
 
 
 
+
     <xs:complexType name="contact">
         <xs:all>
             <xs:element name="name" type="xs:string" minOccurs="0" />
@@ -75,6 +76,18 @@
     </xs:complexType>
 
     <xs:element name="billToAddress" type="xp:contact" />
+
+    <xs:complexType name="address">
+        <xs:all>
+            <xs:element name="addressLine1" type="xs:string" minOccurs="0" />
+            <xs:element name="addressLine2" type="xs:string" minOccurs="0" />
+            <xs:element name="addressLine3" type="xs:string" minOccurs="0" />
+            <xs:element name="city" type="xs:string" minOccurs="0" />
+            <xs:element name="state" type="xs:string" minOccurs="0" />
+            <xs:element name="zip" type="xs:string" minOccurs="0" />
+            <xs:element name="country" type="xs:string" minOccurs="0" />
+        </xs:all>
+    </xs:complexType>
 
     <xs:complexType name="mposType">
         <xs:sequence>
@@ -632,6 +645,7 @@
                 <xs:extension base="xp:transactionTypeWithReportGroupAndPartial">
                     <xs:all>
                         <xs:element name="cnpTxnId" type="xs:long"  minOccurs="0"/>
+                        <xs:element name="orderId" type="xs:string" minOccurs="0" />
                         <xs:element name="amount" type="xs:integer" minOccurs="0" />
                         <xs:element name="surchargeAmount" type="xs:integer" minOccurs="0" />
                         <xs:element ref="xp:enhancedData" minOccurs="0" />
@@ -810,6 +824,7 @@
                         <xs:choice>
                             <xs:sequence>
                                 <xs:element name="cnpTxnId" type="xs:long" />
+                                <xs:element name="orderId" type="xs:string" minOccurs="0"/>
                                 <xs:element name="amount" type="xs:integer" minOccurs="0" />
                                 <xs:element name="secondaryAmount" type="xs:integer" minOccurs="0" />
                                 <xs:element name="surchargeAmount" type="xs:integer" minOccurs="0" />
@@ -2634,8 +2649,8 @@
                     <xs:choice>
                         <xs:sequence>
                             <xs:choice>
-                                <xs:element name="fundingCustomerId" type="xs:string" />
-                                <xs:element name="fundingSubmerchantId" type="xs:string" />
+                                <xs:element name="fundingCustomerId" type="xs:string" minOccurs="0"/>
+                                <xs:element name="fundingSubmerchantId" type="xs:string" minOccurs="0"/>
                             </xs:choice>
                             <xs:choice>
                                 <xs:element name="customerName" type="xs:string"/>
@@ -2644,6 +2659,7 @@
                             <xs:element name="fundsTransferId" type="xs:string"  minOccurs="0"/>
                             <xs:element name="amount" type="xs:integer"  minOccurs="0"/>
                             <xs:element name="disbursementType" type="xs:string" minOccurs="0"/>
+                            <xs:element name="cardholderAddress" type="xp:address"  minOccurs="0"/>
                             <xs:choice>
                                 <xs:element name="card" type="xp:cardType" />
                                 <xs:element name="token" type="xp:cardTokenType" />
@@ -2851,7 +2867,7 @@
         </xs:complexType>
     </xs:element>
 
-    <xs:element name="transactionReversal" substitutionGroup="xp:transaction">
+    <xs:element name="depositTransactionReversal" substitutionGroup="xp:transaction">
         <xs:complexType>
             <xs:complexContent>
                 <xs:extension base="xp:transactionTypeWithReportGroup">
@@ -2870,7 +2886,7 @@
         </xs:complexType>
     </xs:element>
 
-    <xs:element name="transactionReversalResponse" substitutionGroup="xp:transactionResponse">
+    <xs:element name="depositTransactionReversalResponse" substitutionGroup="xp:transactionResponse">
         <xs:complexType>
             <xs:complexContent>
                 <xs:extension base="xp:transactionTypeWithReportGroup">
@@ -2881,7 +2897,7 @@
                         <xs:element name="postDate" type="xs:date" minOccurs="0" />
                         <xs:element name="message" type="xs:string"  minOccurs="0"/>
                         <xs:element name="location" type="xs:string" minOccurs="0" />
-                        <xs:element name="recyclingResponse" type="xp:transactionReversalRecyclingResponseType" minOccurs="0" />
+                        <xs:element name="recyclingResponse" type="xp:depositTransactionReversalRecyclingResponseType" minOccurs="0" />
                     </xs:all>
 
                 </xs:extension>
@@ -2889,7 +2905,51 @@
         </xs:complexType>
     </xs:element>
 
-    <xs:complexType name="transactionReversalRecyclingResponseType">
+    <xs:complexType name="depositTransactionReversalRecyclingResponseType">
+        <xs:sequence>
+            <xs:element name="creditCnpTxnId" type="xs:long" minOccurs="0" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="refundTransactionReversal" substitutionGroup="xp:transaction">
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="xp:transactionTypeWithReportGroup">
+                    <xs:all>
+                        <xs:element name="cnpTxnId" type="xs:long"  minOccurs="0"/>
+                        <xs:element name="amount" type="xs:integer" minOccurs="0" />
+                        <xs:element name="surchargeAmount" type="xs:integer" minOccurs="0" />
+                        <xs:element ref="xp:enhancedData" minOccurs="0" />
+                        <xs:element ref="xp:processingInstructions" minOccurs="0" />
+                        <xs:element ref="xp:customBilling" minOccurs="0" />
+                        <xs:element ref="xp:lodgingInfo" minOccurs="0" />
+                        <xs:element name="pin" type="xs:string" minOccurs="0" />
+                    </xs:all>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="refundTransactionReversalResponse" substitutionGroup="xp:transactionResponse">
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="xp:transactionTypeWithReportGroup">
+                    <xs:all>
+                        <xs:element name="cnpTxnId" type="xs:long"  minOccurs="0"/>
+                        <xs:element name="response" type="xs:string"  minOccurs="0"/>
+                        <xs:element name="responseTime" type="xs:dateTime"  minOccurs="0"/>
+                        <xs:element name="postDate" type="xs:date" minOccurs="0" />
+                        <xs:element name="message" type="xs:string"  minOccurs="0"/>
+                        <xs:element name="location" type="xs:string" minOccurs="0" />
+                        <xs:element name="recyclingResponse" type="xp:refundTransactionReversalRecyclingResponseType" minOccurs="0" />
+                    </xs:all>
+
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="refundTransactionReversalRecyclingResponseType">
         <xs:sequence>
             <xs:element name="creditCnpTxnId" type="xs:long" minOccurs="0" />
         </xs:sequence>
@@ -2935,8 +2995,10 @@
             <xs:attribute name="authAmount" type="xs:integer" use="optional"  default="0"/>
             <xs:attribute name="numAuthReversals" type="xs:integer" use="optional"  default="0"/>
             <xs:attribute name="authReversalAmount" type="xs:integer" use="optional"  default="0"/>
-            <xs:attribute name="numTransactionReversals" type="xs:integer" use="optional"  default="0"/>
-            <xs:attribute name="transactionReversalAmount" type="xs:integer" use="optional"  default="0"/>
+            <xs:attribute name="numDepositTransactionReversals" type="xs:integer" use="optional"  default="0"/>
+            <xs:attribute name="depositTransactionReversalAmount" type="xs:integer" use="optional"  default="0"/>
+            <xs:attribute name="numRefundTransactionReversals" type="xs:integer" use="optional"  default="0"/>
+            <xs:attribute name="refundTransactionReversalAmount" type="xs:integer" use="optional"  default="0"/>
             <xs:attribute name="numGiftCardAuthReversals" type="xs:integer" use="optional"  default="0"/>
             <xs:attribute name="giftCardAuthReversalOriginalAmount" type="xs:integer" use="optional"  default="0"/>
             <xs:attribute name="numCaptures" type="xs:integer" use="optional"  default="0"/>
@@ -3177,13 +3239,14 @@
                     <xs:choice>
                         <xs:sequence>
                             <xs:choice>
-                                <xs:element name="fundingCustomerId" type="xs:string" />
-                                <xs:element name="fundingSubmerchantId" type="xs:string" />
+                                <xs:element name="fundingCustomerId" type="xs:string" minOccurs="0"/>
+                                <xs:element name="fundingSubmerchantId" type="xs:string" minOccurs="0"/>
                             </xs:choice>
                             <xs:element name="vendorName" type="xs:string" minOccurs="0"/>
                             <xs:element name="fundsTransferId" type="xs:string"  minOccurs="0"/>
                             <xs:element name="amount" type="xs:integer"  minOccurs="0"/>
                             <xs:element name="accountInfo" type="xp:echeckTypeCtx"  minOccurs="0"/>
+                            <xs:element name="vendorAddress" type="xp:address"  minOccurs="0"/>
                         </xs:sequence>
                     </xs:choice>
                 </xs:extension>
@@ -3198,13 +3261,14 @@
                     <xs:choice>
                         <xs:sequence>
                             <xs:choice>
-                                <xs:element name="fundingCustomerId" type="xs:string" />
-                                <xs:element name="fundingSubmerchantId" type="xs:string" />
+                                <xs:element name="fundingCustomerId" type="xs:string" minOccurs="0" />
+                                <xs:element name="fundingSubmerchantId" type="xs:string" minOccurs="0"/>
                             </xs:choice>
                             <xs:element name="vendorName" type="xs:string" minOccurs="0"/>
                             <xs:element name="fundsTransferId" type="xs:string"  minOccurs="0"/>
                             <xs:element name="amount" type="xs:integer"  minOccurs="0"/>
                             <xs:element name="accountInfo" type="xp:echeckTypeCtx"  minOccurs="0"/>
+                            <xs:element name="vendorAddress" type="xp:address"  minOccurs="0"/>
                         </xs:sequence>
                     </xs:choice>
                 </xs:extension>
@@ -3599,13 +3663,14 @@
                     <xs:choice>
                         <xs:sequence>
                             <xs:choice>
-                                <xs:element name="fundingCustomerId" type="xs:string" />
-                                <xs:element name="fundingSubmerchantId" type="xs:string" />
+                                <xs:element name="fundingCustomerId" type="xs:string" minOccurs="0" />
+                                <xs:element name="fundingSubmerchantId" type="xs:string" minOccurs="0" />
                             </xs:choice>
                             <xs:element name="vendorName" type="xs:string" minOccurs="0"/>
                             <xs:element name="fundsTransferId" type="xs:string"  minOccurs="0"/>
                             <xs:element name="amount" type="xs:integer"  minOccurs="0"/>
                             <xs:element name="accountInfo" type="xp:echeckType"  minOccurs="0"/>
+                            <xs:element name="vendorAddress" type="xp:address"  minOccurs="0"/>
                         </xs:sequence>
                     </xs:choice>
                 </xs:extension>
@@ -3620,13 +3685,14 @@
                     <xs:choice>
                         <xs:sequence>
                             <xs:choice>
-                                <xs:element name="fundingCustomerId" type="xs:string" />
-                                <xs:element name="fundingSubmerchantId" type="xs:string" />
+                                <xs:element name="fundingCustomerId" type="xs:string" minOccurs="0" />
+                                <xs:element name="fundingSubmerchantId" type="xs:string" minOccurs="0" />
                             </xs:choice>
                             <xs:element name="vendorName" type="xs:string" minOccurs="0"/>
                             <xs:element name="fundsTransferId" type="xs:string"  minOccurs="0"/>
                             <xs:element name="amount" type="xs:integer"  minOccurs="0"/>
                             <xs:element name="accountInfo" type="xp:echeckType"  minOccurs="0"/>
+                            <xs:element name="vendorAddress" type="xp:address"  minOccurs="0"/>
                         </xs:sequence>
                     </xs:choice>
                 </xs:extension>
