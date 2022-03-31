@@ -12,7 +12,7 @@ if (sys.version_info[:3] < (2, 7, 9)) or ((sys.version_info[0] == 3) and sys.ver
 
 setup(
     name='VantiveCommerceSDK',
-    version='12.22.0',
+    version='12.24.0',
     description='Vantiv eCommerce Python SDK',
     author='Vantiv eCommerce',
     author_email='SDKSupport@vantiv.com',
