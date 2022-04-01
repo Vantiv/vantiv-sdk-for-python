@@ -84,7 +84,7 @@
 
     <xs:element name="billToAddress" type="xp:contact" />
 
-    <xs:element name="retailerAddress" type="xp:contact"/>
+    <xs:element name="retailerAddress" type="xp:contact" />
 
     <xs:complexType name="address">
         <xs:all>
@@ -242,7 +242,7 @@
         </xs:all>
     </xs:complexType>
 
-    <xs:element name="additionalCOFData" type="xp:additionalCOFData" />
+    <xs:element name="additionalCOFData" type="xp:additionalCOFData"/>
 
 
 
@@ -1094,7 +1094,7 @@
         <xs:complexType>
             <xs:sequence>
                 <xs:element name="itemSequenceNumber" type="xs:integer" minOccurs="0" />
-                <xs:element name="itemDescription" type="xs:string"  minOccurs="0"/>
+                <xs:element name="itemDescription" type="xs:string" />
                 <xs:element name="productCode" type="xs:string" minOccurs="0" />
                 <xs:element name="quantity" type="xs:decimal" minOccurs="0" />
                 <xs:element name="unitOfMeasure" type="xs:string" minOccurs="0" />

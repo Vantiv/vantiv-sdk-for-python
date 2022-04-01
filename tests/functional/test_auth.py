@@ -68,6 +68,31 @@ class TestAuth(unittest.TestCase):
 
         authorization.customerInfo = customerInfo
 
+        detailTaxList = list()
+        detailTax = fields.detailTax()
+        detailTax.taxAmount = 100
+        detailTax2 = fields.detailTax()
+        detailTax2.taxAmount = 200
+        detailTaxList.append(detailTax)
+        detailTaxList.append(detailTax2)
+        lineItemDataList = list()
+        lineItemData=fields.lineItemData()
+        lineItemData.itemDescription = 'des'
+        lineItemData.itemCategory = 'Chock'
+        lineItemData.itemCategory = 'Chock'
+        lineItemData.itemSubCategory = 'pen'
+        lineItemData.productId = '001'
+        lineItemData.productName = 'prod'
+        lineItemDataList.append(lineItemData)
+        enhancedData = fields.enhancedData()
+        enhancedData.detailTax = detailTaxList
+        enhancedData.lineItemData = lineItemDataList
+        enhancedData.discountCode = '001'
+        enhancedData.discountPercent = '10'
+        enhancedData.fulfilmentMethodType = 'DELIVERY'
+
+        authorization.enhancedData = enhancedData
+
         response = online.request(authorization, conf)
         self.assertEquals('000', response['authorizationResponse']['response'])
         self.assertEquals('sandbox', response['authorizationResponse']['location'])
