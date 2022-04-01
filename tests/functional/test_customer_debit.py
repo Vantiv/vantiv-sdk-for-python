@@ -31,18 +31,20 @@ sys.path.insert(0, package_root)
 
 from vantivsdk import *
 import datetime
+
 conf = utils.Configuration()
 
+
 # vendorCredit transaction is also getting tested in 'tests/functional/test_funding_instruction.py'
-class TestVendorCredit(unittest.TestCase):
-    
-    def test_vendor_credit(self):
-        transaction = fields.vendorCredit()
+class TestCustomerDebit(unittest.TestCase):
+
+    def test_customer_debit(self):
+        transaction = fields.customerDebit()
         transaction.id = 'ThisIsID'
         transaction.reportGroup = 'Default Report Group'
-        transaction.fundingSubmerchantId = "value for fundingSubmerchantId"
+        transaction.fundingCustomerId = "customerId"
+        transaction.customerName = "temp1200"
         transaction.fundsTransferId = "value for fundsTransferId"
-        transaction.vendorName = "Vantiv"
         transaction.amount = 1512
 
         account_info = fields.echeckType()
@@ -52,39 +54,12 @@ class TestVendorCredit(unittest.TestCase):
 
         transaction.accountInfo = account_info
 
-        response = online.request(transaction, conf)
-        self.assertEquals('000', response['vendorCreditResponse']['response'])
-        self.assertEquals('sandbox', response['vendorCreditResponse']['location'])
-
-    def test_vendor_credit_with_address(self):
-        transaction = fields.vendorCredit()
-        transaction.id = 'ThisIsID'
-        transaction.reportGroup = 'Default Report Group'
-        transaction.fundingSubmerchantId = "value for fundingSubmerchantId"
-        transaction.fundsTransferId = "value for fundsTransferId"
-        transaction.vendorName = "Vantiv"
-        transaction.amount = 1512
-
-        account_info = fields.echeckType()
-        account_info.accType = 'Savings'
-        account_info.accNum = "1234"
-        account_info.routingNum = "12345678"
-
-        vendor_address = fields.address()
-        vendor_address.addressLine1 = "37 Main Street"
-        vendor_address.addressLine2 = ""
-        vendor_address.addressLine3 = ""
-        vendor_address.city = "Augusta"
-        vendor_address.state = "Wisconsin"
-        vendor_address.zip = "28209"
-        vendor_address.country = 'USA'
-
-        transaction.accountInfo = account_info
-        transaction.vendorAddress = vendor_address
+        transaction.customIdentifier = '123'
 
         response = online.request(transaction, conf)
-        self.assertEquals('000', response['vendorCreditResponse']['response'])
-        self.assertEquals('sandbox', response['vendorCreditResponse']['location'])
+        self.assertEquals('000', response['customerDebitResponse']['response'])
+        self.assertEquals('sandbox', response['customerDebitResponse']['location'])
+
 
 if __name__ == '__main__':
     unittest.main()
