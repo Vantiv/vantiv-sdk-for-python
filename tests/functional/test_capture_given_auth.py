@@ -66,6 +66,8 @@ class TestCaptureGivenAuth(unittest.TestCase):
         contact.state = 'MA'
         contact.zip = '01803-3747'
         contact.country = 'USA'
+        contact.sellerID = '123'
+        contact.url = 'http://tax.xom'
         # The type of retailerAddress is contact
         transaction.retailerAddress = contact
 
