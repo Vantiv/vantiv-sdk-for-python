@@ -30,7 +30,6 @@ package_root = os.path.dirname(os.path.dirname(os.path.abspath(os.path.dirname(_
 sys.path.insert(0, package_root)
 
 from vantivsdk import *
-import datetime
 
 conf = utils.Configuration()
 

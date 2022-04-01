@@ -76,7 +76,7 @@ class TestAuth(unittest.TestCase):
         detailTaxList.append(detailTax)
         detailTaxList.append(detailTax2)
         lineItemDataList = list()
-        lineItemData=fields.lineItemData()
+        lineItemData = fields.lineItemData()
         lineItemData.itemDescription = 'des'
         lineItemData.itemCategory = 'Chock'
         lineItemData.itemCategory = 'Chock'
