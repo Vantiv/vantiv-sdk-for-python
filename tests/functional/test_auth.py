@@ -32,6 +32,7 @@ sys.path.insert(0, package_root)
 import pyxb
 
 from vantivsdk import *
+import datetime
 
 conf = utils.Configuration()
 
@@ -52,6 +53,20 @@ class TestAuth(unittest.TestCase):
         card.type = 'VI'
 
         authorization.card = card
+
+        customerInfo = fields.customerInfo()
+
+        customerInfo.accountUserName = 'Jack'
+        customerInfo.userAccountNumber = '1234'
+        customerInfo.userAccountEmail = 'gmail@gmail.com'
+        customerInfo.membershipId = '11111'
+        customerInfo.membershipPhone = '123456'
+        customerInfo.membershipEmail = 'gmail@gmail.com'
+        customerInfo.membershipName = 'fran'
+        customerInfo.accountCreatedDate = datetime.datetime.now().strftime("%Y-%m-%d")
+        customerInfo.userAccountPhone = '000461223'
+
+        authorization.customerInfo = customerInfo
 
         response = online.request(authorization, conf)
         self.assertEquals('000', response['authorizationResponse']['response'])
