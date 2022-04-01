@@ -69,12 +69,14 @@ class TestCaptureGivenAuth(unittest.TestCase):
         # The type of retailerAddress is contact
         transaction.retailerAddress = contact
 
-        additionalCOFData=fields.additionalCOFData()
-        additionalCOFData.totalPaymentCount = '1'
-        additionalCOFData.uniqueId = '1111'
-        additionalCOFData.validationReference = '23456'
+        additionalCOFData = fields.additionalCOFData()
+        additionalCOFData.totalPaymentCount = '35'
+        additionalCOFData.paymentType = 'Fixed Amount'
+        additionalCOFData.uniqueId = '12345wereew233'
+        additionalCOFData.frequencyOfMIT = 'BiWeekly'
+        additionalCOFData.validationReference = 're3298rhriw4wrw'
+        additionalCOFData.sequenceIndicator = '2'
 
-        # The type of additionalCOFData is additionalCOFData
         transaction.additionalCOFData = additionalCOFData
 
         transaction.crypto = False
