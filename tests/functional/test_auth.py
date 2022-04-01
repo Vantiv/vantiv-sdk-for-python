@@ -469,6 +469,50 @@ class TestAuth(unittest.TestCase):
         self.assertEquals('000', response['authorizationResponse']['response'])
         self.assertEquals('sandbox', response['authorizationResponse']['location'])
 
+    def test_simple_auth_with_retaileraddress(self):
+        authorization = fields.authorization()
+        authorization.reportGroup = 'Planets'
+        authorization.orderId = '12344'
+        authorization.amount = 106
+        authorization.orderSource = 'ecommerce'
+        authorization.id = 'thisisid'
+        authorization.businessIndicator = 'consumerBillPayment'
+        authorization.crypto = False
+        authorization.checkoutId = '123tyhgr34'
+        authorization.orderChannel = 'PHONE'
+        authorization.fraudCheckStatus = 'Not Approved'
+
+        contact = fields.contact()
+        contact.name = 'john & Mary Smith'
+        contact.addressLine1 = '1st Main Street'
+        contact.city = 'Burlington'
+        contact.state = 'MA'
+        contact.zip = '01867-4456'
+        contact.country = 'USA'
+
+        authorization.retailerAddress = contact
+
+        additionalCOFData = fields.additionalCOFData()
+        additionalCOFData.totalPaymentCount = '35'
+        additionalCOFData.paymentType = 'Fixed Amount'
+        additionalCOFData.uniqueId = '12345wereew233'
+        additionalCOFData.frequencyOfMIT = 'BiWeekly'
+        additionalCOFData.validationReference = 're3298rhriw4wrw'
+        additionalCOFData.sequenceIndicator = '2'
+
+        authorization.additionalCOFData = additionalCOFData
+
+        card = fields.cardType()
+        card.number = '4100000000000000'
+        card.expDate = '1210'
+        card.type = 'VI'
+
+        authorization.card = card
+
+        response = online.request(authorization, conf)
+        self.assertEquals('000', response['authorizationResponse']['response'])
+        self.assertEquals('sandbox', response['authorizationResponse']['location'])
+
 
 if __name__ == '__main__':
     unittest.main()

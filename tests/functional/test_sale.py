@@ -490,5 +490,50 @@ class TestSale(unittest.TestCase):
         self.assertEquals('000', response['saleResponse']['response'])
         self.assertEquals('sandbox', response['saleResponse']['location'])
 
+    def test_sale_with_retaileraddress_additionalcof(self):
+        transaction = fields.sale()
+        transaction.reportGroup = 'Planets'
+        transaction.orderId = '12344'
+        transaction.amount = 106
+        transaction.orderSource = 'ecommerce'
+        transaction.id = 'ThisIsID'
+        transaction.crypto = False
+        transaction.businessIndicator = 'consumerBillPayment'
+        transaction.orderChannelEnum = 'PHONE'
+
+        transaction.fraudCheckStatus = 'not approved'
+
+        additioncof = fields.additionalCOFData()
+        additioncof.totalPaymentCount = 'dfvd'
+        additioncof.paymentType = 'Fixed Amount'
+        additioncof.uniqueId = '12345wereew233'
+        additioncof.frequencyOfMIT = 'BiWeekly'
+        additioncof.validationReference = 're3298rhriw4wrw'
+        additioncof.sequenceIndicator = '2'
+
+        transaction.additioncof = additioncof
+
+        contact = fields.contact()
+        contact.name = 'john & Mary Smith'
+        contact.addressLine1 = '1st Main Street'
+        contact.city = 'Burlington'
+        contact.state = 'MA'
+        contact.zip = '01867-4456'
+        contact.country = 'USA'
+
+        transaction.retailerAddress = contact
+
+        card = fields.cardType()
+        card.number = '4100000000000000'
+        card.expDate = '1210'
+        card.type = 'VI'
+
+        transaction.card = card
+
+        response = online.request(transaction, conf)
+        self.assertEquals('000', response['saleResponse']['response'])
+        self.assertEquals('sandbox', response['saleResponse']['location'])
+
+
 if __name__ == '__main__':
     unittest.main()
