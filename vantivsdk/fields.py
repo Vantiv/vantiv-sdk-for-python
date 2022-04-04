@@ -1,7 +1,7 @@
 # ./fields.py
 # -*- coding: utf-8 -*-
 # PyXB bindings for NM:9a28546cb3c6547e22c7f11b1830724889885c3f
-# Generated 2022-03-31 03:33:47.488319 by PyXB version 1.2.6 using Python 3.6.8.final.0
+# Generated 2022-04-04 09:11:43.452431 by PyXB version 1.2.6 using Python 3.6.8.final.0
 # Namespace http://www.vantivcnp.com/schema
 
 from __future__ import unicode_literals
@@ -14,7 +14,7 @@ import pyxb.utils.domutils
 import sys
 import pyxb.utils.six as _six
 # Unique identifier for bindings created at the same time
-_GenerationUID = pyxb.utils.utility.UniqueIdentifier('urn:uuid:e66d7e56-b0c4-11ec-bcb7-005056b449c4')
+_GenerationUID = pyxb.utils.utility.UniqueIdentifier('urn:uuid:c56d35dc-b418-11ec-8a1e-005056b449c4')
 
 # Version of PyXB used to generate the bindings
 _PyXBVersion = '1.2.6'
@@ -5683,7 +5683,7 @@ class baseRequest (pyxb.binding.basis.complexTypeDefinition):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'baseRequest')
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3321, 4)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3440, 4)
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
@@ -5711,8 +5711,8 @@ class baseRequest (pyxb.binding.basis.complexTypeDefinition):
     
     # Attribute version uses Python identifier version
     __version = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'version'), 'version', '__httpwww_vantivcnp_comschema_baseRequest_version', pyxb.binding.datatypes.string, required=True)
-    __version._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3329, 8)
-    __version._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3329, 8)
+    __version._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3448, 8)
+    __version._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3448, 8)
     
     version = property(__version.value, __version.set, None, None)
 
@@ -5735,7 +5735,7 @@ class CTD_ANON_34 (pyxb.binding.basis.complexTypeDefinition):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3346, 8)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3465, 8)
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
@@ -5756,24 +5756,24 @@ class CTD_ANON_34 (pyxb.binding.basis.complexTypeDefinition):
     
     # Attribute response uses Python identifier response
     __response = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'response'), 'response', '__httpwww_vantivcnp_comschema_CTD_ANON_34_response', pyxb.binding.datatypes.string, required=True)
-    __response._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3351, 12)
-    __response._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3351, 12)
+    __response._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3470, 12)
+    __response._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3470, 12)
     
     response = property(__response.value, __response.set, None, None)
 
     
     # Attribute message uses Python identifier message
     __message = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'message'), 'message', '__httpwww_vantivcnp_comschema_CTD_ANON_34_message', pyxb.binding.datatypes.string, required=True)
-    __message._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3352, 12)
-    __message._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3352, 12)
+    __message._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3471, 12)
+    __message._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3471, 12)
     
     message = property(__message.value, __message.set, None, None)
 
     
     # Attribute version uses Python identifier version
     __version = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'version'), 'version', '__httpwww_vantivcnp_comschema_CTD_ANON_34_version', pyxb.binding.datatypes.string, required=True)
-    __version._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3353, 12)
-    __version._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3353, 12)
+    __version._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3472, 12)
+    __version._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3472, 12)
     
     version = property(__version.value, __version.set, None, None)
 
@@ -5796,13 +5796,13 @@ class voidRecyclingResponseType (pyxb.binding.basis.complexTypeDefinition):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'voidRecyclingResponseType')
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3391, 4)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3510, 4)
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
     # Element {http://www.vantivcnp.com/schema}creditCnpTxnId uses Python identifier creditCnpTxnId
-    __creditCnpTxnId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'creditCnpTxnId'), 'creditCnpTxnId', '__httpwww_vantivcnp_comschema_voidRecyclingResponseType_httpwww_vantivcnp_comschemacreditCnpTxnId', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3393, 12), )
+    __creditCnpTxnId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'creditCnpTxnId'), 'creditCnpTxnId', '__httpwww_vantivcnp_comschema_voidRecyclingResponseType_httpwww_vantivcnp_comschemacreditCnpTxnId', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3512, 12), )
 
     
     creditCnpTxnId = property(__creditCnpTxnId.value, __creditCnpTxnId.set, None, None)
@@ -5824,7 +5824,7 @@ class CTD_ANON_35 (pyxb.binding.basis.complexTypeDefinition):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3562, 28)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3681, 28)
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
@@ -6045,7 +6045,7 @@ class CTD_ANON_36 (baseRequest):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3333, 8)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3452, 8)
     _ElementMap = baseRequest._ElementMap.copy()
     _AttributeMap = baseRequest._AttributeMap.copy()
     # Base type is baseRequest
@@ -6060,32 +6060,32 @@ class CTD_ANON_36 (baseRequest):
     
     # Attribute merchantId uses Python identifier merchantId
     __merchantId = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'merchantId'), 'merchantId', '__httpwww_vantivcnp_comschema_CTD_ANON_36_merchantId', pyxb.binding.datatypes.string, required=True)
-    __merchantId._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3336, 20)
-    __merchantId._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3336, 20)
+    __merchantId._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3455, 20)
+    __merchantId._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3455, 20)
     
     merchantId = property(__merchantId.value, __merchantId.set, None, None)
 
     
     # Attribute merchantSdk uses Python identifier merchantSdk
     __merchantSdk = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'merchantSdk'), 'merchantSdk', '__httpwww_vantivcnp_comschema_CTD_ANON_36_merchantSdk', pyxb.binding.datatypes.string)
-    __merchantSdk._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3337, 20)
-    __merchantSdk._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3337, 20)
+    __merchantSdk._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3456, 20)
+    __merchantSdk._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3456, 20)
     
     merchantSdk = property(__merchantSdk.value, __merchantSdk.set, None, None)
 
     
     # Attribute loggedInUser uses Python identifier loggedInUser
     __loggedInUser = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'loggedInUser'), 'loggedInUser', '__httpwww_vantivcnp_comschema_CTD_ANON_36_loggedInUser', pyxb.binding.datatypes.string)
-    __loggedInUser._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3338, 20)
-    __loggedInUser._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3338, 20)
+    __loggedInUser._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3457, 20)
+    __loggedInUser._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3457, 20)
     
     loggedInUser = property(__loggedInUser.value, __loggedInUser.set, None, None)
 
     
     # Attribute sameDayFunding uses Python identifier sameDayFunding
     __sameDayFunding = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'sameDayFunding'), 'sameDayFunding', '__httpwww_vantivcnp_comschema_CTD_ANON_36_sameDayFunding', pyxb.binding.datatypes.boolean)
-    __sameDayFunding._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3339, 20)
-    __sameDayFunding._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3339, 20)
+    __sameDayFunding._DeclarationLocation = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3458, 20)
+    __sameDayFunding._UseLocation = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3458, 20)
     
     sameDayFunding = property(__sameDayFunding.value, __sameDayFunding.set, None, None)
 
@@ -15103,20 +15103,474 @@ class CTD_ANON_130 (transactionTypeWithReportGroup):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3358, 8)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3311, 8)
+    _ElementMap = transactionTypeWithReportGroup._ElementMap.copy()
+    _AttributeMap = transactionTypeWithReportGroup._AttributeMap.copy()
+    # Base type is transactionTypeWithReportGroup
+    
+    # Element {http://www.vantivcnp.com/schema}fundingCustomerId uses Python identifier fundingCustomerId
+    __fundingCustomerId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'fundingCustomerId'), 'fundingCustomerId', '__httpwww_vantivcnp_comschema_CTD_ANON_130_httpwww_vantivcnp_comschemafundingCustomerId', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3317, 32), )
+
+    
+    fundingCustomerId = property(__fundingCustomerId.value, __fundingCustomerId.set, None, None)
+
+    
+    # Element {http://www.vantivcnp.com/schema}fundingSubmerchantId uses Python identifier fundingSubmerchantId
+    __fundingSubmerchantId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'fundingSubmerchantId'), 'fundingSubmerchantId', '__httpwww_vantivcnp_comschema_CTD_ANON_130_httpwww_vantivcnp_comschemafundingSubmerchantId', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3318, 32), )
+
+    
+    fundingSubmerchantId = property(__fundingSubmerchantId.value, __fundingSubmerchantId.set, None, None)
+
+    
+    # Element {http://www.vantivcnp.com/schema}vendorName uses Python identifier vendorName
+    __vendorName = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'vendorName'), 'vendorName', '__httpwww_vantivcnp_comschema_CTD_ANON_130_httpwww_vantivcnp_comschemavendorName', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3320, 28), )
+
+    
+    vendorName = property(__vendorName.value, __vendorName.set, None, None)
+
+    
+    # Element {http://www.vantivcnp.com/schema}fundsTransferId uses Python identifier fundsTransferId
+    __fundsTransferId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'fundsTransferId'), 'fundsTransferId', '__httpwww_vantivcnp_comschema_CTD_ANON_130_httpwww_vantivcnp_comschemafundsTransferId', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3321, 28), )
+
+    
+    fundsTransferId = property(__fundsTransferId.value, __fundsTransferId.set, None, None)
+
+    
+    # Element {http://www.vantivcnp.com/schema}amount uses Python identifier amount
+    __amount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'amount'), 'amount', '__httpwww_vantivcnp_comschema_CTD_ANON_130_httpwww_vantivcnp_comschemaamount', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3322, 28), )
+
+    
+    amount = property(__amount.value, __amount.set, None, None)
+
+    
+    # Element {http://www.vantivcnp.com/schema}accountInfo uses Python identifier accountInfo
+    __accountInfo = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'accountInfo'), 'accountInfo', '__httpwww_vantivcnp_comschema_CTD_ANON_130_httpwww_vantivcnp_comschemaaccountInfo', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3323, 28), )
+
+    
+    accountInfo = property(__accountInfo.value, __accountInfo.set, None, None)
+
+    
+    # Element {http://www.vantivcnp.com/schema}vendorAddress uses Python identifier vendorAddress
+    __vendorAddress = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'vendorAddress'), 'vendorAddress', '__httpwww_vantivcnp_comschema_CTD_ANON_130_httpwww_vantivcnp_comschemavendorAddress', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3324, 28), )
+
+    
+    vendorAddress = property(__vendorAddress.value, __vendorAddress.set, None, None)
+
+    
+    # Attribute id inherited from {http://www.vantivcnp.com/schema}transactionType
+    
+    # Attribute customerId inherited from {http://www.vantivcnp.com/schema}transactionType
+    
+    # Attribute reportGroup inherited from {http://www.vantivcnp.com/schema}transactionTypeWithReportGroup
+    _ElementMap.update({
+        __fundingCustomerId.name() : __fundingCustomerId,
+        __fundingSubmerchantId.name() : __fundingSubmerchantId,
+        __vendorName.name() : __vendorName,
+        __fundsTransferId.name() : __fundsTransferId,
+        __amount.name() : __amount,
+        __accountInfo.name() : __accountInfo,
+        __vendorAddress.name() : __vendorAddress
+    })
+    _AttributeMap.update({
+        
+    })
+_module_typeBindings.CTD_ANON_130 = CTD_ANON_130
+
+
+# Complex type [anonymous] with content type ELEMENT_ONLY
+class CTD_ANON_131 (transactionTypeWithReportGroup):
+    """Complex type [anonymous] with content type ELEMENT_ONLY"""
+    _TypeDefinition = None
+    _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
+    _Abstract = False
+    _ExpandedName = None
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3333, 8)
+    _ElementMap = transactionTypeWithReportGroup._ElementMap.copy()
+    _AttributeMap = transactionTypeWithReportGroup._AttributeMap.copy()
+    # Base type is transactionTypeWithReportGroup
+    
+    # Element {http://www.vantivcnp.com/schema}fundingCustomerId uses Python identifier fundingCustomerId
+    __fundingCustomerId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'fundingCustomerId'), 'fundingCustomerId', '__httpwww_vantivcnp_comschema_CTD_ANON_131_httpwww_vantivcnp_comschemafundingCustomerId', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3339, 32), )
+
+    
+    fundingCustomerId = property(__fundingCustomerId.value, __fundingCustomerId.set, None, None)
+
+    
+    # Element {http://www.vantivcnp.com/schema}fundingSubmerchantId uses Python identifier fundingSubmerchantId
+    __fundingSubmerchantId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'fundingSubmerchantId'), 'fundingSubmerchantId', '__httpwww_vantivcnp_comschema_CTD_ANON_131_httpwww_vantivcnp_comschemafundingSubmerchantId', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3340, 32), )
+
+    
+    fundingSubmerchantId = property(__fundingSubmerchantId.value, __fundingSubmerchantId.set, None, None)
+
+    
+    # Element {http://www.vantivcnp.com/schema}vendorName uses Python identifier vendorName
+    __vendorName = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'vendorName'), 'vendorName', '__httpwww_vantivcnp_comschema_CTD_ANON_131_httpwww_vantivcnp_comschemavendorName', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3342, 28), )
+
+    
+    vendorName = property(__vendorName.value, __vendorName.set, None, None)
+
+    
+    # Element {http://www.vantivcnp.com/schema}fundsTransferId uses Python identifier fundsTransferId
+    __fundsTransferId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'fundsTransferId'), 'fundsTransferId', '__httpwww_vantivcnp_comschema_CTD_ANON_131_httpwww_vantivcnp_comschemafundsTransferId', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3343, 28), )
+
+    
+    fundsTransferId = property(__fundsTransferId.value, __fundsTransferId.set, None, None)
+
+    
+    # Element {http://www.vantivcnp.com/schema}amount uses Python identifier amount
+    __amount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'amount'), 'amount', '__httpwww_vantivcnp_comschema_CTD_ANON_131_httpwww_vantivcnp_comschemaamount', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3344, 28), )
+
+    
+    amount = property(__amount.value, __amount.set, None, None)
+
+    
+    # Element {http://www.vantivcnp.com/schema}accountInfo uses Python identifier accountInfo
+    __accountInfo = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'accountInfo'), 'accountInfo', '__httpwww_vantivcnp_comschema_CTD_ANON_131_httpwww_vantivcnp_comschemaaccountInfo', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3345, 28), )
+
+    
+    accountInfo = property(__accountInfo.value, __accountInfo.set, None, None)
+
+    
+    # Element {http://www.vantivcnp.com/schema}vendorAddress uses Python identifier vendorAddress
+    __vendorAddress = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'vendorAddress'), 'vendorAddress', '__httpwww_vantivcnp_comschema_CTD_ANON_131_httpwww_vantivcnp_comschemavendorAddress', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3346, 28), )
+
+    
+    vendorAddress = property(__vendorAddress.value, __vendorAddress.set, None, None)
+
+    
+    # Attribute id inherited from {http://www.vantivcnp.com/schema}transactionType
+    
+    # Attribute customerId inherited from {http://www.vantivcnp.com/schema}transactionType
+    
+    # Attribute reportGroup inherited from {http://www.vantivcnp.com/schema}transactionTypeWithReportGroup
+    _ElementMap.update({
+        __fundingCustomerId.name() : __fundingCustomerId,
+        __fundingSubmerchantId.name() : __fundingSubmerchantId,
+        __vendorName.name() : __vendorName,
+        __fundsTransferId.name() : __fundsTransferId,
+        __amount.name() : __amount,
+        __accountInfo.name() : __accountInfo,
+        __vendorAddress.name() : __vendorAddress
+    })
+    _AttributeMap.update({
+        
+    })
+_module_typeBindings.CTD_ANON_131 = CTD_ANON_131
+
+
+# Complex type [anonymous] with content type ELEMENT_ONLY
+class CTD_ANON_132 (transactionTypeWithReportGroup):
+    """Complex type [anonymous] with content type ELEMENT_ONLY"""
+    _TypeDefinition = None
+    _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
+    _Abstract = False
+    _ExpandedName = None
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3356, 8)
+    _ElementMap = transactionTypeWithReportGroup._ElementMap.copy()
+    _AttributeMap = transactionTypeWithReportGroup._AttributeMap.copy()
+    # Base type is transactionTypeWithReportGroup
+    
+    # Element {http://www.vantivcnp.com/schema}fundingSubmerchantId uses Python identifier fundingSubmerchantId
+    __fundingSubmerchantId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'fundingSubmerchantId'), 'fundingSubmerchantId', '__httpwww_vantivcnp_comschema_CTD_ANON_132_httpwww_vantivcnp_comschemafundingSubmerchantId', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3361, 28), )
+
+    
+    fundingSubmerchantId = property(__fundingSubmerchantId.value, __fundingSubmerchantId.set, None, None)
+
+    
+    # Element {http://www.vantivcnp.com/schema}submerchantName uses Python identifier submerchantName
+    __submerchantName = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'submerchantName'), 'submerchantName', '__httpwww_vantivcnp_comschema_CTD_ANON_132_httpwww_vantivcnp_comschemasubmerchantName', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3362, 28), )
+
+    
+    submerchantName = property(__submerchantName.value, __submerchantName.set, None, None)
+
+    
+    # Element {http://www.vantivcnp.com/schema}fundsTransferId uses Python identifier fundsTransferId
+    __fundsTransferId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'fundsTransferId'), 'fundsTransferId', '__httpwww_vantivcnp_comschema_CTD_ANON_132_httpwww_vantivcnp_comschemafundsTransferId', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3363, 28), )
+
+    
+    fundsTransferId = property(__fundsTransferId.value, __fundsTransferId.set, None, None)
+
+    
+    # Element {http://www.vantivcnp.com/schema}amount uses Python identifier amount
+    __amount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'amount'), 'amount', '__httpwww_vantivcnp_comschema_CTD_ANON_132_httpwww_vantivcnp_comschemaamount', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3364, 28), )
+
+    
+    amount = property(__amount.value, __amount.set, None, None)
+
+    
+    # Element {http://www.vantivcnp.com/schema}accountInfo uses Python identifier accountInfo
+    __accountInfo = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'accountInfo'), 'accountInfo', '__httpwww_vantivcnp_comschema_CTD_ANON_132_httpwww_vantivcnp_comschemaaccountInfo', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3365, 28), )
+
+    
+    accountInfo = property(__accountInfo.value, __accountInfo.set, None, None)
+
+    
+    # Element {http://www.vantivcnp.com/schema}customIdentifier uses Python identifier customIdentifier
+    __customIdentifier = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'customIdentifier'), 'customIdentifier', '__httpwww_vantivcnp_comschema_CTD_ANON_132_httpwww_vantivcnp_comschemacustomIdentifier', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3366, 28), )
+
+    
+    customIdentifier = property(__customIdentifier.value, __customIdentifier.set, None, None)
+
+    
+    # Attribute id inherited from {http://www.vantivcnp.com/schema}transactionType
+    
+    # Attribute customerId inherited from {http://www.vantivcnp.com/schema}transactionType
+    
+    # Attribute reportGroup inherited from {http://www.vantivcnp.com/schema}transactionTypeWithReportGroup
+    _ElementMap.update({
+        __fundingSubmerchantId.name() : __fundingSubmerchantId,
+        __submerchantName.name() : __submerchantName,
+        __fundsTransferId.name() : __fundsTransferId,
+        __amount.name() : __amount,
+        __accountInfo.name() : __accountInfo,
+        __customIdentifier.name() : __customIdentifier
+    })
+    _AttributeMap.update({
+        
+    })
+_module_typeBindings.CTD_ANON_132 = CTD_ANON_132
+
+
+# Complex type [anonymous] with content type ELEMENT_ONLY
+class CTD_ANON_133 (transactionTypeWithReportGroup):
+    """Complex type [anonymous] with content type ELEMENT_ONLY"""
+    _TypeDefinition = None
+    _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
+    _Abstract = False
+    _ExpandedName = None
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3375, 8)
+    _ElementMap = transactionTypeWithReportGroup._ElementMap.copy()
+    _AttributeMap = transactionTypeWithReportGroup._AttributeMap.copy()
+    # Base type is transactionTypeWithReportGroup
+    
+    # Element {http://www.vantivcnp.com/schema}fundingSubmerchantId uses Python identifier fundingSubmerchantId
+    __fundingSubmerchantId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'fundingSubmerchantId'), 'fundingSubmerchantId', '__httpwww_vantivcnp_comschema_CTD_ANON_133_httpwww_vantivcnp_comschemafundingSubmerchantId', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3380, 28), )
+
+    
+    fundingSubmerchantId = property(__fundingSubmerchantId.value, __fundingSubmerchantId.set, None, None)
+
+    
+    # Element {http://www.vantivcnp.com/schema}submerchantName uses Python identifier submerchantName
+    __submerchantName = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'submerchantName'), 'submerchantName', '__httpwww_vantivcnp_comschema_CTD_ANON_133_httpwww_vantivcnp_comschemasubmerchantName', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3381, 28), )
+
+    
+    submerchantName = property(__submerchantName.value, __submerchantName.set, None, None)
+
+    
+    # Element {http://www.vantivcnp.com/schema}fundsTransferId uses Python identifier fundsTransferId
+    __fundsTransferId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'fundsTransferId'), 'fundsTransferId', '__httpwww_vantivcnp_comschema_CTD_ANON_133_httpwww_vantivcnp_comschemafundsTransferId', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3382, 28), )
+
+    
+    fundsTransferId = property(__fundsTransferId.value, __fundsTransferId.set, None, None)
+
+    
+    # Element {http://www.vantivcnp.com/schema}amount uses Python identifier amount
+    __amount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'amount'), 'amount', '__httpwww_vantivcnp_comschema_CTD_ANON_133_httpwww_vantivcnp_comschemaamount', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3383, 28), )
+
+    
+    amount = property(__amount.value, __amount.set, None, None)
+
+    
+    # Element {http://www.vantivcnp.com/schema}accountInfo uses Python identifier accountInfo
+    __accountInfo = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'accountInfo'), 'accountInfo', '__httpwww_vantivcnp_comschema_CTD_ANON_133_httpwww_vantivcnp_comschemaaccountInfo', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3384, 28), )
+
+    
+    accountInfo = property(__accountInfo.value, __accountInfo.set, None, None)
+
+    
+    # Element {http://www.vantivcnp.com/schema}customIdentifier uses Python identifier customIdentifier
+    __customIdentifier = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'customIdentifier'), 'customIdentifier', '__httpwww_vantivcnp_comschema_CTD_ANON_133_httpwww_vantivcnp_comschemacustomIdentifier', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3385, 28), )
+
+    
+    customIdentifier = property(__customIdentifier.value, __customIdentifier.set, None, None)
+
+    
+    # Attribute id inherited from {http://www.vantivcnp.com/schema}transactionType
+    
+    # Attribute customerId inherited from {http://www.vantivcnp.com/schema}transactionType
+    
+    # Attribute reportGroup inherited from {http://www.vantivcnp.com/schema}transactionTypeWithReportGroup
+    _ElementMap.update({
+        __fundingSubmerchantId.name() : __fundingSubmerchantId,
+        __submerchantName.name() : __submerchantName,
+        __fundsTransferId.name() : __fundsTransferId,
+        __amount.name() : __amount,
+        __accountInfo.name() : __accountInfo,
+        __customIdentifier.name() : __customIdentifier
+    })
+    _AttributeMap.update({
+        
+    })
+_module_typeBindings.CTD_ANON_133 = CTD_ANON_133
+
+
+# Complex type [anonymous] with content type ELEMENT_ONLY
+class CTD_ANON_134 (transactionTypeWithReportGroup):
+    """Complex type [anonymous] with content type ELEMENT_ONLY"""
+    _TypeDefinition = None
+    _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
+    _Abstract = False
+    _ExpandedName = None
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3394, 8)
+    _ElementMap = transactionTypeWithReportGroup._ElementMap.copy()
+    _AttributeMap = transactionTypeWithReportGroup._AttributeMap.copy()
+    # Base type is transactionTypeWithReportGroup
+    
+    # Element {http://www.vantivcnp.com/schema}fundingCustomerId uses Python identifier fundingCustomerId
+    __fundingCustomerId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'fundingCustomerId'), 'fundingCustomerId', '__httpwww_vantivcnp_comschema_CTD_ANON_134_httpwww_vantivcnp_comschemafundingCustomerId', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3399, 28), )
+
+    
+    fundingCustomerId = property(__fundingCustomerId.value, __fundingCustomerId.set, None, None)
+
+    
+    # Element {http://www.vantivcnp.com/schema}customerName uses Python identifier customerName
+    __customerName = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'customerName'), 'customerName', '__httpwww_vantivcnp_comschema_CTD_ANON_134_httpwww_vantivcnp_comschemacustomerName', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3400, 28), )
+
+    
+    customerName = property(__customerName.value, __customerName.set, None, None)
+
+    
+    # Element {http://www.vantivcnp.com/schema}fundsTransferId uses Python identifier fundsTransferId
+    __fundsTransferId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'fundsTransferId'), 'fundsTransferId', '__httpwww_vantivcnp_comschema_CTD_ANON_134_httpwww_vantivcnp_comschemafundsTransferId', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3401, 28), )
+
+    
+    fundsTransferId = property(__fundsTransferId.value, __fundsTransferId.set, None, None)
+
+    
+    # Element {http://www.vantivcnp.com/schema}amount uses Python identifier amount
+    __amount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'amount'), 'amount', '__httpwww_vantivcnp_comschema_CTD_ANON_134_httpwww_vantivcnp_comschemaamount', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3402, 28), )
+
+    
+    amount = property(__amount.value, __amount.set, None, None)
+
+    
+    # Element {http://www.vantivcnp.com/schema}accountInfo uses Python identifier accountInfo
+    __accountInfo = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'accountInfo'), 'accountInfo', '__httpwww_vantivcnp_comschema_CTD_ANON_134_httpwww_vantivcnp_comschemaaccountInfo', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3403, 28), )
+
+    
+    accountInfo = property(__accountInfo.value, __accountInfo.set, None, None)
+
+    
+    # Element {http://www.vantivcnp.com/schema}customIdentifier uses Python identifier customIdentifier
+    __customIdentifier = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'customIdentifier'), 'customIdentifier', '__httpwww_vantivcnp_comschema_CTD_ANON_134_httpwww_vantivcnp_comschemacustomIdentifier', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3404, 28), )
+
+    
+    customIdentifier = property(__customIdentifier.value, __customIdentifier.set, None, None)
+
+    
+    # Attribute id inherited from {http://www.vantivcnp.com/schema}transactionType
+    
+    # Attribute customerId inherited from {http://www.vantivcnp.com/schema}transactionType
+    
+    # Attribute reportGroup inherited from {http://www.vantivcnp.com/schema}transactionTypeWithReportGroup
+    _ElementMap.update({
+        __fundingCustomerId.name() : __fundingCustomerId,
+        __customerName.name() : __customerName,
+        __fundsTransferId.name() : __fundsTransferId,
+        __amount.name() : __amount,
+        __accountInfo.name() : __accountInfo,
+        __customIdentifier.name() : __customIdentifier
+    })
+    _AttributeMap.update({
+        
+    })
+_module_typeBindings.CTD_ANON_134 = CTD_ANON_134
+
+
+# Complex type [anonymous] with content type ELEMENT_ONLY
+class CTD_ANON_135 (transactionTypeWithReportGroup):
+    """Complex type [anonymous] with content type ELEMENT_ONLY"""
+    _TypeDefinition = None
+    _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
+    _Abstract = False
+    _ExpandedName = None
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3413, 8)
+    _ElementMap = transactionTypeWithReportGroup._ElementMap.copy()
+    _AttributeMap = transactionTypeWithReportGroup._AttributeMap.copy()
+    # Base type is transactionTypeWithReportGroup
+    
+    # Element {http://www.vantivcnp.com/schema}fundingCustomerId uses Python identifier fundingCustomerId
+    __fundingCustomerId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'fundingCustomerId'), 'fundingCustomerId', '__httpwww_vantivcnp_comschema_CTD_ANON_135_httpwww_vantivcnp_comschemafundingCustomerId', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3418, 28), )
+
+    
+    fundingCustomerId = property(__fundingCustomerId.value, __fundingCustomerId.set, None, None)
+
+    
+    # Element {http://www.vantivcnp.com/schema}customerName uses Python identifier customerName
+    __customerName = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'customerName'), 'customerName', '__httpwww_vantivcnp_comschema_CTD_ANON_135_httpwww_vantivcnp_comschemacustomerName', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3419, 28), )
+
+    
+    customerName = property(__customerName.value, __customerName.set, None, None)
+
+    
+    # Element {http://www.vantivcnp.com/schema}fundsTransferId uses Python identifier fundsTransferId
+    __fundsTransferId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'fundsTransferId'), 'fundsTransferId', '__httpwww_vantivcnp_comschema_CTD_ANON_135_httpwww_vantivcnp_comschemafundsTransferId', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3420, 28), )
+
+    
+    fundsTransferId = property(__fundsTransferId.value, __fundsTransferId.set, None, None)
+
+    
+    # Element {http://www.vantivcnp.com/schema}amount uses Python identifier amount
+    __amount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'amount'), 'amount', '__httpwww_vantivcnp_comschema_CTD_ANON_135_httpwww_vantivcnp_comschemaamount', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3421, 28), )
+
+    
+    amount = property(__amount.value, __amount.set, None, None)
+
+    
+    # Element {http://www.vantivcnp.com/schema}accountInfo uses Python identifier accountInfo
+    __accountInfo = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'accountInfo'), 'accountInfo', '__httpwww_vantivcnp_comschema_CTD_ANON_135_httpwww_vantivcnp_comschemaaccountInfo', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3422, 28), )
+
+    
+    accountInfo = property(__accountInfo.value, __accountInfo.set, None, None)
+
+    
+    # Element {http://www.vantivcnp.com/schema}customIdentifier uses Python identifier customIdentifier
+    __customIdentifier = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'customIdentifier'), 'customIdentifier', '__httpwww_vantivcnp_comschema_CTD_ANON_135_httpwww_vantivcnp_comschemacustomIdentifier', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3423, 28), )
+
+    
+    customIdentifier = property(__customIdentifier.value, __customIdentifier.set, None, None)
+
+    
+    # Attribute id inherited from {http://www.vantivcnp.com/schema}transactionType
+    
+    # Attribute customerId inherited from {http://www.vantivcnp.com/schema}transactionType
+    
+    # Attribute reportGroup inherited from {http://www.vantivcnp.com/schema}transactionTypeWithReportGroup
+    _ElementMap.update({
+        __fundingCustomerId.name() : __fundingCustomerId,
+        __customerName.name() : __customerName,
+        __fundsTransferId.name() : __fundsTransferId,
+        __amount.name() : __amount,
+        __accountInfo.name() : __accountInfo,
+        __customIdentifier.name() : __customIdentifier
+    })
+    _AttributeMap.update({
+        
+    })
+_module_typeBindings.CTD_ANON_135 = CTD_ANON_135
+
+
+# Complex type [anonymous] with content type ELEMENT_ONLY
+class CTD_ANON_136 (transactionTypeWithReportGroup):
+    """Complex type [anonymous] with content type ELEMENT_ONLY"""
+    _TypeDefinition = None
+    _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
+    _Abstract = False
+    _ExpandedName = None
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3477, 8)
     _ElementMap = transactionTypeWithReportGroup._ElementMap.copy()
     _AttributeMap = transactionTypeWithReportGroup._AttributeMap.copy()
     # Base type is transactionTypeWithReportGroup
     
     # Element {http://www.vantivcnp.com/schema}processingInstructions uses Python identifier processingInstructions
-    __processingInstructions = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'processingInstructions'), 'processingInstructions', '__httpwww_vantivcnp_comschema_CTD_ANON_130_httpwww_vantivcnp_comschemaprocessingInstructions', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 1163, 4), )
+    __processingInstructions = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'processingInstructions'), 'processingInstructions', '__httpwww_vantivcnp_comschema_CTD_ANON_136_httpwww_vantivcnp_comschemaprocessingInstructions', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 1163, 4), )
 
     
     processingInstructions = property(__processingInstructions.value, __processingInstructions.set, None, None)
 
     
     # Element {http://www.vantivcnp.com/schema}cnpTxnId uses Python identifier cnpTxnId
-    __cnpTxnId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'cnpTxnId'), 'cnpTxnId', '__httpwww_vantivcnp_comschema_CTD_ANON_130_httpwww_vantivcnp_comschemacnpTxnId', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3362, 24), )
+    __cnpTxnId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'cnpTxnId'), 'cnpTxnId', '__httpwww_vantivcnp_comschema_CTD_ANON_136_httpwww_vantivcnp_comschemacnpTxnId', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3481, 24), )
 
     
     cnpTxnId = property(__cnpTxnId.value, __cnpTxnId.set, None, None)
@@ -15134,72 +15588,72 @@ class CTD_ANON_130 (transactionTypeWithReportGroup):
     _AttributeMap.update({
         
     })
-_module_typeBindings.CTD_ANON_130 = CTD_ANON_130
+_module_typeBindings.CTD_ANON_136 = CTD_ANON_136
 
 
 # Complex type [anonymous] with content type ELEMENT_ONLY
-class CTD_ANON_131 (transactionTypeWithReportGroup):
+class CTD_ANON_137 (transactionTypeWithReportGroup):
     """Complex type [anonymous] with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3371, 8)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3490, 8)
     _ElementMap = transactionTypeWithReportGroup._ElementMap.copy()
     _AttributeMap = transactionTypeWithReportGroup._AttributeMap.copy()
     # Base type is transactionTypeWithReportGroup
     
     # Element {http://www.vantivcnp.com/schema}cnpTxnId uses Python identifier cnpTxnId
-    __cnpTxnId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'cnpTxnId'), 'cnpTxnId', '__httpwww_vantivcnp_comschema_CTD_ANON_131_httpwww_vantivcnp_comschemacnpTxnId', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3375, 24), )
+    __cnpTxnId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'cnpTxnId'), 'cnpTxnId', '__httpwww_vantivcnp_comschema_CTD_ANON_137_httpwww_vantivcnp_comschemacnpTxnId', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3494, 24), )
 
     
     cnpTxnId = property(__cnpTxnId.value, __cnpTxnId.set, None, None)
 
     
     # Element {http://www.vantivcnp.com/schema}response uses Python identifier response
-    __response = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'response'), 'response', '__httpwww_vantivcnp_comschema_CTD_ANON_131_httpwww_vantivcnp_comschemaresponse', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3376, 24), )
+    __response = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'response'), 'response', '__httpwww_vantivcnp_comschema_CTD_ANON_137_httpwww_vantivcnp_comschemaresponse', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3495, 24), )
 
     
     response = property(__response.value, __response.set, None, None)
 
     
     # Element {http://www.vantivcnp.com/schema}responseTime uses Python identifier responseTime
-    __responseTime = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'responseTime'), 'responseTime', '__httpwww_vantivcnp_comschema_CTD_ANON_131_httpwww_vantivcnp_comschemaresponseTime', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3377, 24), )
+    __responseTime = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'responseTime'), 'responseTime', '__httpwww_vantivcnp_comschema_CTD_ANON_137_httpwww_vantivcnp_comschemaresponseTime', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3496, 24), )
 
     
     responseTime = property(__responseTime.value, __responseTime.set, None, None)
 
     
     # Element {http://www.vantivcnp.com/schema}postDate uses Python identifier postDate
-    __postDate = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'postDate'), 'postDate', '__httpwww_vantivcnp_comschema_CTD_ANON_131_httpwww_vantivcnp_comschemapostDate', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3378, 24), )
+    __postDate = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'postDate'), 'postDate', '__httpwww_vantivcnp_comschema_CTD_ANON_137_httpwww_vantivcnp_comschemapostDate', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3497, 24), )
 
     
     postDate = property(__postDate.value, __postDate.set, None, None)
 
     
     # Element {http://www.vantivcnp.com/schema}message uses Python identifier message
-    __message = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'message'), 'message', '__httpwww_vantivcnp_comschema_CTD_ANON_131_httpwww_vantivcnp_comschemamessage', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3379, 24), )
+    __message = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'message'), 'message', '__httpwww_vantivcnp_comschema_CTD_ANON_137_httpwww_vantivcnp_comschemamessage', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3498, 24), )
 
     
     message = property(__message.value, __message.set, None, None)
 
     
     # Element {http://www.vantivcnp.com/schema}location uses Python identifier location
-    __location = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'location'), 'location', '__httpwww_vantivcnp_comschema_CTD_ANON_131_httpwww_vantivcnp_comschemalocation', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3380, 24), )
+    __location = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'location'), 'location', '__httpwww_vantivcnp_comschema_CTD_ANON_137_httpwww_vantivcnp_comschemalocation', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3499, 24), )
 
     
     location = property(__location.value, __location.set, None, None)
 
     
     # Element {http://www.vantivcnp.com/schema}recyclingResponse uses Python identifier recyclingResponse
-    __recyclingResponse = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'recyclingResponse'), 'recyclingResponse', '__httpwww_vantivcnp_comschema_CTD_ANON_131_httpwww_vantivcnp_comschemarecyclingResponse', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3381, 24), )
+    __recyclingResponse = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'recyclingResponse'), 'recyclingResponse', '__httpwww_vantivcnp_comschema_CTD_ANON_137_httpwww_vantivcnp_comschemarecyclingResponse', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3500, 24), )
 
     
     recyclingResponse = property(__recyclingResponse.value, __recyclingResponse.set, None, None)
 
     
     # Element {http://www.vantivcnp.com/schema}checkoutId uses Python identifier checkoutId
-    __checkoutId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'checkoutId'), 'checkoutId', '__httpwww_vantivcnp_comschema_CTD_ANON_131_httpwww_vantivcnp_comschemacheckoutId', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3383, 24), )
+    __checkoutId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'checkoutId'), 'checkoutId', '__httpwww_vantivcnp_comschema_CTD_ANON_137_httpwww_vantivcnp_comschemacheckoutId', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3502, 24), )
 
     
     checkoutId = property(__checkoutId.value, __checkoutId.set, None, None)
@@ -15223,23 +15677,23 @@ class CTD_ANON_131 (transactionTypeWithReportGroup):
     _AttributeMap.update({
         
     })
-_module_typeBindings.CTD_ANON_131 = CTD_ANON_131
+_module_typeBindings.CTD_ANON_137 = CTD_ANON_137
 
 
 # Complex type [anonymous] with content type ELEMENT_ONLY
-class CTD_ANON_132 (transactionTypeWithReportGroup):
+class CTD_ANON_138 (transactionTypeWithReportGroup):
     """Complex type [anonymous] with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3398, 8)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3517, 8)
     _ElementMap = transactionTypeWithReportGroup._ElementMap.copy()
     _AttributeMap = transactionTypeWithReportGroup._AttributeMap.copy()
     # Base type is transactionTypeWithReportGroup
     
     # Element {http://www.vantivcnp.com/schema}cnpTxnId uses Python identifier cnpTxnId
-    __cnpTxnId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'cnpTxnId'), 'cnpTxnId', '__httpwww_vantivcnp_comschema_CTD_ANON_132_httpwww_vantivcnp_comschemacnpTxnId', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3402, 24), )
+    __cnpTxnId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'cnpTxnId'), 'cnpTxnId', '__httpwww_vantivcnp_comschema_CTD_ANON_138_httpwww_vantivcnp_comschemacnpTxnId', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3521, 24), )
 
     
     cnpTxnId = property(__cnpTxnId.value, __cnpTxnId.set, None, None)
@@ -15256,65 +15710,65 @@ class CTD_ANON_132 (transactionTypeWithReportGroup):
     _AttributeMap.update({
         
     })
-_module_typeBindings.CTD_ANON_132 = CTD_ANON_132
+_module_typeBindings.CTD_ANON_138 = CTD_ANON_138
 
 
 # Complex type [anonymous] with content type ELEMENT_ONLY
-class CTD_ANON_133 (transactionTypeWithReportGroup):
+class CTD_ANON_139 (transactionTypeWithReportGroup):
     """Complex type [anonymous] with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3410, 8)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3529, 8)
     _ElementMap = transactionTypeWithReportGroup._ElementMap.copy()
     _AttributeMap = transactionTypeWithReportGroup._AttributeMap.copy()
     # Base type is transactionTypeWithReportGroup
     
     # Element {http://www.vantivcnp.com/schema}cnpTxnId uses Python identifier cnpTxnId
-    __cnpTxnId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'cnpTxnId'), 'cnpTxnId', '__httpwww_vantivcnp_comschema_CTD_ANON_133_httpwww_vantivcnp_comschemacnpTxnId', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3414, 24), )
+    __cnpTxnId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'cnpTxnId'), 'cnpTxnId', '__httpwww_vantivcnp_comschema_CTD_ANON_139_httpwww_vantivcnp_comschemacnpTxnId', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3533, 24), )
 
     
     cnpTxnId = property(__cnpTxnId.value, __cnpTxnId.set, None, None)
 
     
     # Element {http://www.vantivcnp.com/schema}response uses Python identifier response
-    __response = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'response'), 'response', '__httpwww_vantivcnp_comschema_CTD_ANON_133_httpwww_vantivcnp_comschemaresponse', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3415, 24), )
+    __response = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'response'), 'response', '__httpwww_vantivcnp_comschema_CTD_ANON_139_httpwww_vantivcnp_comschemaresponse', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3534, 24), )
 
     
     response = property(__response.value, __response.set, None, None)
 
     
     # Element {http://www.vantivcnp.com/schema}responseTime uses Python identifier responseTime
-    __responseTime = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'responseTime'), 'responseTime', '__httpwww_vantivcnp_comschema_CTD_ANON_133_httpwww_vantivcnp_comschemaresponseTime', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3416, 24), )
+    __responseTime = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'responseTime'), 'responseTime', '__httpwww_vantivcnp_comschema_CTD_ANON_139_httpwww_vantivcnp_comschemaresponseTime', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3535, 24), )
 
     
     responseTime = property(__responseTime.value, __responseTime.set, None, None)
 
     
     # Element {http://www.vantivcnp.com/schema}postDate uses Python identifier postDate
-    __postDate = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'postDate'), 'postDate', '__httpwww_vantivcnp_comschema_CTD_ANON_133_httpwww_vantivcnp_comschemapostDate', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3417, 24), )
+    __postDate = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'postDate'), 'postDate', '__httpwww_vantivcnp_comschema_CTD_ANON_139_httpwww_vantivcnp_comschemapostDate', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3536, 24), )
 
     
     postDate = property(__postDate.value, __postDate.set, None, None)
 
     
     # Element {http://www.vantivcnp.com/schema}message uses Python identifier message
-    __message = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'message'), 'message', '__httpwww_vantivcnp_comschema_CTD_ANON_133_httpwww_vantivcnp_comschemamessage', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3418, 24), )
+    __message = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'message'), 'message', '__httpwww_vantivcnp_comschema_CTD_ANON_139_httpwww_vantivcnp_comschemamessage', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3537, 24), )
 
     
     message = property(__message.value, __message.set, None, None)
 
     
     # Element {http://www.vantivcnp.com/schema}location uses Python identifier location
-    __location = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'location'), 'location', '__httpwww_vantivcnp_comschema_CTD_ANON_133_httpwww_vantivcnp_comschemalocation', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3419, 24), )
+    __location = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'location'), 'location', '__httpwww_vantivcnp_comschema_CTD_ANON_139_httpwww_vantivcnp_comschemalocation', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3538, 24), )
 
     
     location = property(__location.value, __location.set, None, None)
 
     
     # Element {http://www.vantivcnp.com/schema}checkoutId uses Python identifier checkoutId
-    __checkoutId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'checkoutId'), 'checkoutId', '__httpwww_vantivcnp_comschema_CTD_ANON_133_httpwww_vantivcnp_comschemacheckoutId', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3421, 24), )
+    __checkoutId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'checkoutId'), 'checkoutId', '__httpwww_vantivcnp_comschema_CTD_ANON_139_httpwww_vantivcnp_comschemacheckoutId', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3540, 24), )
 
     
     checkoutId = property(__checkoutId.value, __checkoutId.set, None, None)
@@ -15337,65 +15791,65 @@ class CTD_ANON_133 (transactionTypeWithReportGroup):
     _AttributeMap.update({
         
     })
-_module_typeBindings.CTD_ANON_133 = CTD_ANON_133
+_module_typeBindings.CTD_ANON_139 = CTD_ANON_139
 
 
 # Complex type [anonymous] with content type ELEMENT_ONLY
-class CTD_ANON_134 (transactionTypeWithReportGroup):
+class CTD_ANON_140 (transactionTypeWithReportGroup):
     """Complex type [anonymous] with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3429, 8)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3548, 8)
     _ElementMap = transactionTypeWithReportGroup._ElementMap.copy()
     _AttributeMap = transactionTypeWithReportGroup._AttributeMap.copy()
     # Base type is transactionTypeWithReportGroup
     
     # Element {http://www.vantivcnp.com/schema}cnpTxnId uses Python identifier cnpTxnId
-    __cnpTxnId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'cnpTxnId'), 'cnpTxnId', '__httpwww_vantivcnp_comschema_CTD_ANON_134_httpwww_vantivcnp_comschemacnpTxnId', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3433, 24), )
+    __cnpTxnId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'cnpTxnId'), 'cnpTxnId', '__httpwww_vantivcnp_comschema_CTD_ANON_140_httpwww_vantivcnp_comschemacnpTxnId', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3552, 24), )
 
     
     cnpTxnId = property(__cnpTxnId.value, __cnpTxnId.set, None, None)
 
     
     # Element {http://www.vantivcnp.com/schema}card uses Python identifier card
-    __card = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'card'), 'card', '__httpwww_vantivcnp_comschema_CTD_ANON_134_httpwww_vantivcnp_comschemacard', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3434, 24), )
+    __card = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'card'), 'card', '__httpwww_vantivcnp_comschema_CTD_ANON_140_httpwww_vantivcnp_comschemacard', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3553, 24), )
 
     
     card = property(__card.value, __card.set, None, None)
 
     
     # Element {http://www.vantivcnp.com/schema}originalRefCode uses Python identifier originalRefCode
-    __originalRefCode = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'originalRefCode'), 'originalRefCode', '__httpwww_vantivcnp_comschema_CTD_ANON_134_httpwww_vantivcnp_comschemaoriginalRefCode', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3435, 24), )
+    __originalRefCode = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'originalRefCode'), 'originalRefCode', '__httpwww_vantivcnp_comschema_CTD_ANON_140_httpwww_vantivcnp_comschemaoriginalRefCode', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3554, 24), )
 
     
     originalRefCode = property(__originalRefCode.value, __originalRefCode.set, None, None)
 
     
     # Element {http://www.vantivcnp.com/schema}originalAmount uses Python identifier originalAmount
-    __originalAmount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'originalAmount'), 'originalAmount', '__httpwww_vantivcnp_comschema_CTD_ANON_134_httpwww_vantivcnp_comschemaoriginalAmount', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3436, 24), )
+    __originalAmount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'originalAmount'), 'originalAmount', '__httpwww_vantivcnp_comschema_CTD_ANON_140_httpwww_vantivcnp_comschemaoriginalAmount', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3555, 24), )
 
     
     originalAmount = property(__originalAmount.value, __originalAmount.set, None, None)
 
     
     # Element {http://www.vantivcnp.com/schema}originalTxnTime uses Python identifier originalTxnTime
-    __originalTxnTime = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'originalTxnTime'), 'originalTxnTime', '__httpwww_vantivcnp_comschema_CTD_ANON_134_httpwww_vantivcnp_comschemaoriginalTxnTime', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3437, 24), )
+    __originalTxnTime = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'originalTxnTime'), 'originalTxnTime', '__httpwww_vantivcnp_comschema_CTD_ANON_140_httpwww_vantivcnp_comschemaoriginalTxnTime', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3556, 24), )
 
     
     originalTxnTime = property(__originalTxnTime.value, __originalTxnTime.set, None, None)
 
     
     # Element {http://www.vantivcnp.com/schema}originalSystemTraceId uses Python identifier originalSystemTraceId
-    __originalSystemTraceId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'originalSystemTraceId'), 'originalSystemTraceId', '__httpwww_vantivcnp_comschema_CTD_ANON_134_httpwww_vantivcnp_comschemaoriginalSystemTraceId', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3438, 24), )
+    __originalSystemTraceId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'originalSystemTraceId'), 'originalSystemTraceId', '__httpwww_vantivcnp_comschema_CTD_ANON_140_httpwww_vantivcnp_comschemaoriginalSystemTraceId', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3557, 24), )
 
     
     originalSystemTraceId = property(__originalSystemTraceId.value, __originalSystemTraceId.set, None, None)
 
     
     # Element {http://www.vantivcnp.com/schema}originalSequenceNumber uses Python identifier originalSequenceNumber
-    __originalSequenceNumber = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'originalSequenceNumber'), 'originalSequenceNumber', '__httpwww_vantivcnp_comschema_CTD_ANON_134_httpwww_vantivcnp_comschemaoriginalSequenceNumber', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3439, 24), )
+    __originalSequenceNumber = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'originalSequenceNumber'), 'originalSequenceNumber', '__httpwww_vantivcnp_comschema_CTD_ANON_140_httpwww_vantivcnp_comschemaoriginalSequenceNumber', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3558, 24), )
 
     
     originalSequenceNumber = property(__originalSequenceNumber.value, __originalSequenceNumber.set, None, None)
@@ -15418,65 +15872,65 @@ class CTD_ANON_134 (transactionTypeWithReportGroup):
     _AttributeMap.update({
         
     })
-_module_typeBindings.CTD_ANON_134 = CTD_ANON_134
+_module_typeBindings.CTD_ANON_140 = CTD_ANON_140
 
 
 # Complex type [anonymous] with content type ELEMENT_ONLY
-class CTD_ANON_135 (transactionTypeWithReportGroup):
+class CTD_ANON_141 (transactionTypeWithReportGroup):
     """Complex type [anonymous] with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3447, 8)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3566, 8)
     _ElementMap = transactionTypeWithReportGroup._ElementMap.copy()
     _AttributeMap = transactionTypeWithReportGroup._AttributeMap.copy()
     # Base type is transactionTypeWithReportGroup
     
     # Element {http://www.vantivcnp.com/schema}cnpTxnId uses Python identifier cnpTxnId
-    __cnpTxnId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'cnpTxnId'), 'cnpTxnId', '__httpwww_vantivcnp_comschema_CTD_ANON_135_httpwww_vantivcnp_comschemacnpTxnId', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3451, 24), )
+    __cnpTxnId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'cnpTxnId'), 'cnpTxnId', '__httpwww_vantivcnp_comschema_CTD_ANON_141_httpwww_vantivcnp_comschemacnpTxnId', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3570, 24), )
 
     
     cnpTxnId = property(__cnpTxnId.value, __cnpTxnId.set, None, None)
 
     
     # Element {http://www.vantivcnp.com/schema}card uses Python identifier card
-    __card = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'card'), 'card', '__httpwww_vantivcnp_comschema_CTD_ANON_135_httpwww_vantivcnp_comschemacard', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3452, 24), )
+    __card = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'card'), 'card', '__httpwww_vantivcnp_comschema_CTD_ANON_141_httpwww_vantivcnp_comschemacard', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3571, 24), )
 
     
     card = property(__card.value, __card.set, None, None)
 
     
     # Element {http://www.vantivcnp.com/schema}originalRefCode uses Python identifier originalRefCode
-    __originalRefCode = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'originalRefCode'), 'originalRefCode', '__httpwww_vantivcnp_comschema_CTD_ANON_135_httpwww_vantivcnp_comschemaoriginalRefCode', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3453, 24), )
+    __originalRefCode = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'originalRefCode'), 'originalRefCode', '__httpwww_vantivcnp_comschema_CTD_ANON_141_httpwww_vantivcnp_comschemaoriginalRefCode', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3572, 24), )
 
     
     originalRefCode = property(__originalRefCode.value, __originalRefCode.set, None, None)
 
     
     # Element {http://www.vantivcnp.com/schema}originalAmount uses Python identifier originalAmount
-    __originalAmount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'originalAmount'), 'originalAmount', '__httpwww_vantivcnp_comschema_CTD_ANON_135_httpwww_vantivcnp_comschemaoriginalAmount', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3454, 24), )
+    __originalAmount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'originalAmount'), 'originalAmount', '__httpwww_vantivcnp_comschema_CTD_ANON_141_httpwww_vantivcnp_comschemaoriginalAmount', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3573, 24), )
 
     
     originalAmount = property(__originalAmount.value, __originalAmount.set, None, None)
 
     
     # Element {http://www.vantivcnp.com/schema}originalTxnTime uses Python identifier originalTxnTime
-    __originalTxnTime = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'originalTxnTime'), 'originalTxnTime', '__httpwww_vantivcnp_comschema_CTD_ANON_135_httpwww_vantivcnp_comschemaoriginalTxnTime', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3455, 24), )
+    __originalTxnTime = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'originalTxnTime'), 'originalTxnTime', '__httpwww_vantivcnp_comschema_CTD_ANON_141_httpwww_vantivcnp_comschemaoriginalTxnTime', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3574, 24), )
 
     
     originalTxnTime = property(__originalTxnTime.value, __originalTxnTime.set, None, None)
 
     
     # Element {http://www.vantivcnp.com/schema}originalSystemTraceId uses Python identifier originalSystemTraceId
-    __originalSystemTraceId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'originalSystemTraceId'), 'originalSystemTraceId', '__httpwww_vantivcnp_comschema_CTD_ANON_135_httpwww_vantivcnp_comschemaoriginalSystemTraceId', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3456, 24), )
+    __originalSystemTraceId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'originalSystemTraceId'), 'originalSystemTraceId', '__httpwww_vantivcnp_comschema_CTD_ANON_141_httpwww_vantivcnp_comschemaoriginalSystemTraceId', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3575, 24), )
 
     
     originalSystemTraceId = property(__originalSystemTraceId.value, __originalSystemTraceId.set, None, None)
 
     
     # Element {http://www.vantivcnp.com/schema}originalSequenceNumber uses Python identifier originalSequenceNumber
-    __originalSequenceNumber = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'originalSequenceNumber'), 'originalSequenceNumber', '__httpwww_vantivcnp_comschema_CTD_ANON_135_httpwww_vantivcnp_comschemaoriginalSequenceNumber', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3457, 24), )
+    __originalSequenceNumber = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'originalSequenceNumber'), 'originalSequenceNumber', '__httpwww_vantivcnp_comschema_CTD_ANON_141_httpwww_vantivcnp_comschemaoriginalSequenceNumber', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3576, 24), )
 
     
     originalSequenceNumber = property(__originalSequenceNumber.value, __originalSequenceNumber.set, None, None)
@@ -15499,72 +15953,72 @@ class CTD_ANON_135 (transactionTypeWithReportGroup):
     _AttributeMap.update({
         
     })
-_module_typeBindings.CTD_ANON_135 = CTD_ANON_135
+_module_typeBindings.CTD_ANON_141 = CTD_ANON_141
 
 
 # Complex type [anonymous] with content type ELEMENT_ONLY
-class CTD_ANON_136 (transactionTypeWithReportGroup):
+class CTD_ANON_142 (transactionTypeWithReportGroup):
     """Complex type [anonymous] with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3465, 8)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3584, 8)
     _ElementMap = transactionTypeWithReportGroup._ElementMap.copy()
     _AttributeMap = transactionTypeWithReportGroup._AttributeMap.copy()
     # Base type is transactionTypeWithReportGroup
     
     # Element {http://www.vantivcnp.com/schema}cnpTxnId uses Python identifier cnpTxnId
-    __cnpTxnId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'cnpTxnId'), 'cnpTxnId', '__httpwww_vantivcnp_comschema_CTD_ANON_136_httpwww_vantivcnp_comschemacnpTxnId', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3469, 24), )
+    __cnpTxnId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'cnpTxnId'), 'cnpTxnId', '__httpwww_vantivcnp_comschema_CTD_ANON_142_httpwww_vantivcnp_comschemacnpTxnId', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3588, 24), )
 
     
     cnpTxnId = property(__cnpTxnId.value, __cnpTxnId.set, None, None)
 
     
     # Element {http://www.vantivcnp.com/schema}card uses Python identifier card
-    __card = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'card'), 'card', '__httpwww_vantivcnp_comschema_CTD_ANON_136_httpwww_vantivcnp_comschemacard', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3470, 24), )
+    __card = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'card'), 'card', '__httpwww_vantivcnp_comschema_CTD_ANON_142_httpwww_vantivcnp_comschemacard', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3589, 24), )
 
     
     card = property(__card.value, __card.set, None, None)
 
     
     # Element {http://www.vantivcnp.com/schema}virtualGiftCardBin uses Python identifier virtualGiftCardBin
-    __virtualGiftCardBin = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'virtualGiftCardBin'), 'virtualGiftCardBin', '__httpwww_vantivcnp_comschema_CTD_ANON_136_httpwww_vantivcnp_comschemavirtualGiftCardBin', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3471, 24), )
+    __virtualGiftCardBin = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'virtualGiftCardBin'), 'virtualGiftCardBin', '__httpwww_vantivcnp_comschema_CTD_ANON_142_httpwww_vantivcnp_comschemavirtualGiftCardBin', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3590, 24), )
 
     
     virtualGiftCardBin = property(__virtualGiftCardBin.value, __virtualGiftCardBin.set, None, None)
 
     
     # Element {http://www.vantivcnp.com/schema}originalRefCode uses Python identifier originalRefCode
-    __originalRefCode = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'originalRefCode'), 'originalRefCode', '__httpwww_vantivcnp_comschema_CTD_ANON_136_httpwww_vantivcnp_comschemaoriginalRefCode', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3472, 24), )
+    __originalRefCode = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'originalRefCode'), 'originalRefCode', '__httpwww_vantivcnp_comschema_CTD_ANON_142_httpwww_vantivcnp_comschemaoriginalRefCode', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3591, 24), )
 
     
     originalRefCode = property(__originalRefCode.value, __originalRefCode.set, None, None)
 
     
     # Element {http://www.vantivcnp.com/schema}originalAmount uses Python identifier originalAmount
-    __originalAmount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'originalAmount'), 'originalAmount', '__httpwww_vantivcnp_comschema_CTD_ANON_136_httpwww_vantivcnp_comschemaoriginalAmount', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3473, 24), )
+    __originalAmount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'originalAmount'), 'originalAmount', '__httpwww_vantivcnp_comschema_CTD_ANON_142_httpwww_vantivcnp_comschemaoriginalAmount', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3592, 24), )
 
     
     originalAmount = property(__originalAmount.value, __originalAmount.set, None, None)
 
     
     # Element {http://www.vantivcnp.com/schema}originalTxnTime uses Python identifier originalTxnTime
-    __originalTxnTime = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'originalTxnTime'), 'originalTxnTime', '__httpwww_vantivcnp_comschema_CTD_ANON_136_httpwww_vantivcnp_comschemaoriginalTxnTime', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3474, 24), )
+    __originalTxnTime = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'originalTxnTime'), 'originalTxnTime', '__httpwww_vantivcnp_comschema_CTD_ANON_142_httpwww_vantivcnp_comschemaoriginalTxnTime', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3593, 24), )
 
     
     originalTxnTime = property(__originalTxnTime.value, __originalTxnTime.set, None, None)
 
     
     # Element {http://www.vantivcnp.com/schema}originalSystemTraceId uses Python identifier originalSystemTraceId
-    __originalSystemTraceId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'originalSystemTraceId'), 'originalSystemTraceId', '__httpwww_vantivcnp_comschema_CTD_ANON_136_httpwww_vantivcnp_comschemaoriginalSystemTraceId', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3475, 24), )
+    __originalSystemTraceId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'originalSystemTraceId'), 'originalSystemTraceId', '__httpwww_vantivcnp_comschema_CTD_ANON_142_httpwww_vantivcnp_comschemaoriginalSystemTraceId', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3594, 24), )
 
     
     originalSystemTraceId = property(__originalSystemTraceId.value, __originalSystemTraceId.set, None, None)
 
     
     # Element {http://www.vantivcnp.com/schema}originalSequenceNumber uses Python identifier originalSequenceNumber
-    __originalSequenceNumber = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'originalSequenceNumber'), 'originalSequenceNumber', '__httpwww_vantivcnp_comschema_CTD_ANON_136_httpwww_vantivcnp_comschemaoriginalSequenceNumber', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3476, 24), )
+    __originalSequenceNumber = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'originalSequenceNumber'), 'originalSequenceNumber', '__httpwww_vantivcnp_comschema_CTD_ANON_142_httpwww_vantivcnp_comschemaoriginalSequenceNumber', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3595, 24), )
 
     
     originalSequenceNumber = property(__originalSequenceNumber.value, __originalSequenceNumber.set, None, None)
@@ -15588,58 +16042,58 @@ class CTD_ANON_136 (transactionTypeWithReportGroup):
     _AttributeMap.update({
         
     })
-_module_typeBindings.CTD_ANON_136 = CTD_ANON_136
+_module_typeBindings.CTD_ANON_142 = CTD_ANON_142
 
 
 # Complex type [anonymous] with content type ELEMENT_ONLY
-class CTD_ANON_137 (transactionTypeWithReportGroup):
+class CTD_ANON_143 (transactionTypeWithReportGroup):
     """Complex type [anonymous] with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3484, 8)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3603, 8)
     _ElementMap = transactionTypeWithReportGroup._ElementMap.copy()
     _AttributeMap = transactionTypeWithReportGroup._AttributeMap.copy()
     # Base type is transactionTypeWithReportGroup
     
     # Element {http://www.vantivcnp.com/schema}cnpTxnId uses Python identifier cnpTxnId
-    __cnpTxnId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'cnpTxnId'), 'cnpTxnId', '__httpwww_vantivcnp_comschema_CTD_ANON_137_httpwww_vantivcnp_comschemacnpTxnId', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3488, 24), )
+    __cnpTxnId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'cnpTxnId'), 'cnpTxnId', '__httpwww_vantivcnp_comschema_CTD_ANON_143_httpwww_vantivcnp_comschemacnpTxnId', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3607, 24), )
 
     
     cnpTxnId = property(__cnpTxnId.value, __cnpTxnId.set, None, None)
 
     
     # Element {http://www.vantivcnp.com/schema}card uses Python identifier card
-    __card = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'card'), 'card', '__httpwww_vantivcnp_comschema_CTD_ANON_137_httpwww_vantivcnp_comschemacard', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3489, 24), )
+    __card = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'card'), 'card', '__httpwww_vantivcnp_comschema_CTD_ANON_143_httpwww_vantivcnp_comschemacard', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3608, 24), )
 
     
     card = property(__card.value, __card.set, None, None)
 
     
     # Element {http://www.vantivcnp.com/schema}originalRefCode uses Python identifier originalRefCode
-    __originalRefCode = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'originalRefCode'), 'originalRefCode', '__httpwww_vantivcnp_comschema_CTD_ANON_137_httpwww_vantivcnp_comschemaoriginalRefCode', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3490, 24), )
+    __originalRefCode = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'originalRefCode'), 'originalRefCode', '__httpwww_vantivcnp_comschema_CTD_ANON_143_httpwww_vantivcnp_comschemaoriginalRefCode', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3609, 24), )
 
     
     originalRefCode = property(__originalRefCode.value, __originalRefCode.set, None, None)
 
     
     # Element {http://www.vantivcnp.com/schema}originalTxnTime uses Python identifier originalTxnTime
-    __originalTxnTime = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'originalTxnTime'), 'originalTxnTime', '__httpwww_vantivcnp_comschema_CTD_ANON_137_httpwww_vantivcnp_comschemaoriginalTxnTime', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3491, 24), )
+    __originalTxnTime = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'originalTxnTime'), 'originalTxnTime', '__httpwww_vantivcnp_comschema_CTD_ANON_143_httpwww_vantivcnp_comschemaoriginalTxnTime', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3610, 24), )
 
     
     originalTxnTime = property(__originalTxnTime.value, __originalTxnTime.set, None, None)
 
     
     # Element {http://www.vantivcnp.com/schema}originalSystemTraceId uses Python identifier originalSystemTraceId
-    __originalSystemTraceId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'originalSystemTraceId'), 'originalSystemTraceId', '__httpwww_vantivcnp_comschema_CTD_ANON_137_httpwww_vantivcnp_comschemaoriginalSystemTraceId', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3492, 24), )
+    __originalSystemTraceId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'originalSystemTraceId'), 'originalSystemTraceId', '__httpwww_vantivcnp_comschema_CTD_ANON_143_httpwww_vantivcnp_comschemaoriginalSystemTraceId', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3611, 24), )
 
     
     originalSystemTraceId = property(__originalSystemTraceId.value, __originalSystemTraceId.set, None, None)
 
     
     # Element {http://www.vantivcnp.com/schema}originalSequenceNumber uses Python identifier originalSequenceNumber
-    __originalSequenceNumber = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'originalSequenceNumber'), 'originalSequenceNumber', '__httpwww_vantivcnp_comschema_CTD_ANON_137_httpwww_vantivcnp_comschemaoriginalSequenceNumber', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3493, 24), )
+    __originalSequenceNumber = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'originalSequenceNumber'), 'originalSequenceNumber', '__httpwww_vantivcnp_comschema_CTD_ANON_143_httpwww_vantivcnp_comschemaoriginalSequenceNumber', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3612, 24), )
 
     
     originalSequenceNumber = property(__originalSequenceNumber.value, __originalSequenceNumber.set, None, None)
@@ -15661,65 +16115,65 @@ class CTD_ANON_137 (transactionTypeWithReportGroup):
     _AttributeMap.update({
         
     })
-_module_typeBindings.CTD_ANON_137 = CTD_ANON_137
+_module_typeBindings.CTD_ANON_143 = CTD_ANON_143
 
 
 # Complex type [anonymous] with content type ELEMENT_ONLY
-class CTD_ANON_138 (transactionTypeWithReportGroup):
+class CTD_ANON_144 (transactionTypeWithReportGroup):
     """Complex type [anonymous] with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3501, 8)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3620, 8)
     _ElementMap = transactionTypeWithReportGroup._ElementMap.copy()
     _AttributeMap = transactionTypeWithReportGroup._AttributeMap.copy()
     # Base type is transactionTypeWithReportGroup
     
     # Element {http://www.vantivcnp.com/schema}cnpTxnId uses Python identifier cnpTxnId
-    __cnpTxnId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'cnpTxnId'), 'cnpTxnId', '__httpwww_vantivcnp_comschema_CTD_ANON_138_httpwww_vantivcnp_comschemacnpTxnId', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3505, 24), )
+    __cnpTxnId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'cnpTxnId'), 'cnpTxnId', '__httpwww_vantivcnp_comschema_CTD_ANON_144_httpwww_vantivcnp_comschemacnpTxnId', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3624, 24), )
 
     
     cnpTxnId = property(__cnpTxnId.value, __cnpTxnId.set, None, None)
 
     
     # Element {http://www.vantivcnp.com/schema}card uses Python identifier card
-    __card = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'card'), 'card', '__httpwww_vantivcnp_comschema_CTD_ANON_138_httpwww_vantivcnp_comschemacard', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3506, 24), )
+    __card = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'card'), 'card', '__httpwww_vantivcnp_comschema_CTD_ANON_144_httpwww_vantivcnp_comschemacard', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3625, 24), )
 
     
     card = property(__card.value, __card.set, None, None)
 
     
     # Element {http://www.vantivcnp.com/schema}originalRefCode uses Python identifier originalRefCode
-    __originalRefCode = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'originalRefCode'), 'originalRefCode', '__httpwww_vantivcnp_comschema_CTD_ANON_138_httpwww_vantivcnp_comschemaoriginalRefCode', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3507, 24), )
+    __originalRefCode = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'originalRefCode'), 'originalRefCode', '__httpwww_vantivcnp_comschema_CTD_ANON_144_httpwww_vantivcnp_comschemaoriginalRefCode', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3626, 24), )
 
     
     originalRefCode = property(__originalRefCode.value, __originalRefCode.set, None, None)
 
     
     # Element {http://www.vantivcnp.com/schema}originalAmount uses Python identifier originalAmount
-    __originalAmount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'originalAmount'), 'originalAmount', '__httpwww_vantivcnp_comschema_CTD_ANON_138_httpwww_vantivcnp_comschemaoriginalAmount', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3508, 24), )
+    __originalAmount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'originalAmount'), 'originalAmount', '__httpwww_vantivcnp_comschema_CTD_ANON_144_httpwww_vantivcnp_comschemaoriginalAmount', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3627, 24), )
 
     
     originalAmount = property(__originalAmount.value, __originalAmount.set, None, None)
 
     
     # Element {http://www.vantivcnp.com/schema}originalTxnTime uses Python identifier originalTxnTime
-    __originalTxnTime = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'originalTxnTime'), 'originalTxnTime', '__httpwww_vantivcnp_comschema_CTD_ANON_138_httpwww_vantivcnp_comschemaoriginalTxnTime', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3509, 24), )
+    __originalTxnTime = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'originalTxnTime'), 'originalTxnTime', '__httpwww_vantivcnp_comschema_CTD_ANON_144_httpwww_vantivcnp_comschemaoriginalTxnTime', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3628, 24), )
 
     
     originalTxnTime = property(__originalTxnTime.value, __originalTxnTime.set, None, None)
 
     
     # Element {http://www.vantivcnp.com/schema}originalSystemTraceId uses Python identifier originalSystemTraceId
-    __originalSystemTraceId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'originalSystemTraceId'), 'originalSystemTraceId', '__httpwww_vantivcnp_comschema_CTD_ANON_138_httpwww_vantivcnp_comschemaoriginalSystemTraceId', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3510, 24), )
+    __originalSystemTraceId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'originalSystemTraceId'), 'originalSystemTraceId', '__httpwww_vantivcnp_comschema_CTD_ANON_144_httpwww_vantivcnp_comschemaoriginalSystemTraceId', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3629, 24), )
 
     
     originalSystemTraceId = property(__originalSystemTraceId.value, __originalSystemTraceId.set, None, None)
 
     
     # Element {http://www.vantivcnp.com/schema}originalSequenceNumber uses Python identifier originalSequenceNumber
-    __originalSequenceNumber = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'originalSequenceNumber'), 'originalSequenceNumber', '__httpwww_vantivcnp_comschema_CTD_ANON_138_httpwww_vantivcnp_comschemaoriginalSequenceNumber', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3511, 24), )
+    __originalSequenceNumber = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'originalSequenceNumber'), 'originalSequenceNumber', '__httpwww_vantivcnp_comschema_CTD_ANON_144_httpwww_vantivcnp_comschemaoriginalSequenceNumber', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3630, 24), )
 
     
     originalSequenceNumber = property(__originalSequenceNumber.value, __originalSequenceNumber.set, None, None)
@@ -15742,65 +16196,65 @@ class CTD_ANON_138 (transactionTypeWithReportGroup):
     _AttributeMap.update({
         
     })
-_module_typeBindings.CTD_ANON_138 = CTD_ANON_138
+_module_typeBindings.CTD_ANON_144 = CTD_ANON_144
 
 
 # Complex type [anonymous] with content type ELEMENT_ONLY
-class CTD_ANON_139 (transactionTypeWithReportGroup):
+class CTD_ANON_145 (transactionTypeWithReportGroup):
     """Complex type [anonymous] with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3519, 8)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3638, 8)
     _ElementMap = transactionTypeWithReportGroup._ElementMap.copy()
     _AttributeMap = transactionTypeWithReportGroup._AttributeMap.copy()
     # Base type is transactionTypeWithReportGroup
     
     # Element {http://www.vantivcnp.com/schema}cnpTxnId uses Python identifier cnpTxnId
-    __cnpTxnId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'cnpTxnId'), 'cnpTxnId', '__httpwww_vantivcnp_comschema_CTD_ANON_139_httpwww_vantivcnp_comschemacnpTxnId', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3523, 24), )
+    __cnpTxnId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'cnpTxnId'), 'cnpTxnId', '__httpwww_vantivcnp_comschema_CTD_ANON_145_httpwww_vantivcnp_comschemacnpTxnId', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3642, 24), )
 
     
     cnpTxnId = property(__cnpTxnId.value, __cnpTxnId.set, None, None)
 
     
     # Element {http://www.vantivcnp.com/schema}card uses Python identifier card
-    __card = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'card'), 'card', '__httpwww_vantivcnp_comschema_CTD_ANON_139_httpwww_vantivcnp_comschemacard', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3524, 24), )
+    __card = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'card'), 'card', '__httpwww_vantivcnp_comschema_CTD_ANON_145_httpwww_vantivcnp_comschemacard', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3643, 24), )
 
     
     card = property(__card.value, __card.set, None, None)
 
     
     # Element {http://www.vantivcnp.com/schema}originalRefCode uses Python identifier originalRefCode
-    __originalRefCode = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'originalRefCode'), 'originalRefCode', '__httpwww_vantivcnp_comschema_CTD_ANON_139_httpwww_vantivcnp_comschemaoriginalRefCode', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3525, 24), )
+    __originalRefCode = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'originalRefCode'), 'originalRefCode', '__httpwww_vantivcnp_comschema_CTD_ANON_145_httpwww_vantivcnp_comschemaoriginalRefCode', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3644, 24), )
 
     
     originalRefCode = property(__originalRefCode.value, __originalRefCode.set, None, None)
 
     
     # Element {http://www.vantivcnp.com/schema}originalAmount uses Python identifier originalAmount
-    __originalAmount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'originalAmount'), 'originalAmount', '__httpwww_vantivcnp_comschema_CTD_ANON_139_httpwww_vantivcnp_comschemaoriginalAmount', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3526, 24), )
+    __originalAmount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'originalAmount'), 'originalAmount', '__httpwww_vantivcnp_comschema_CTD_ANON_145_httpwww_vantivcnp_comschemaoriginalAmount', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3645, 24), )
 
     
     originalAmount = property(__originalAmount.value, __originalAmount.set, None, None)
 
     
     # Element {http://www.vantivcnp.com/schema}originalTxnTime uses Python identifier originalTxnTime
-    __originalTxnTime = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'originalTxnTime'), 'originalTxnTime', '__httpwww_vantivcnp_comschema_CTD_ANON_139_httpwww_vantivcnp_comschemaoriginalTxnTime', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3527, 24), )
+    __originalTxnTime = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'originalTxnTime'), 'originalTxnTime', '__httpwww_vantivcnp_comschema_CTD_ANON_145_httpwww_vantivcnp_comschemaoriginalTxnTime', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3646, 24), )
 
     
     originalTxnTime = property(__originalTxnTime.value, __originalTxnTime.set, None, None)
 
     
     # Element {http://www.vantivcnp.com/schema}originalSystemTraceId uses Python identifier originalSystemTraceId
-    __originalSystemTraceId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'originalSystemTraceId'), 'originalSystemTraceId', '__httpwww_vantivcnp_comschema_CTD_ANON_139_httpwww_vantivcnp_comschemaoriginalSystemTraceId', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3528, 24), )
+    __originalSystemTraceId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'originalSystemTraceId'), 'originalSystemTraceId', '__httpwww_vantivcnp_comschema_CTD_ANON_145_httpwww_vantivcnp_comschemaoriginalSystemTraceId', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3647, 24), )
 
     
     originalSystemTraceId = property(__originalSystemTraceId.value, __originalSystemTraceId.set, None, None)
 
     
     # Element {http://www.vantivcnp.com/schema}originalSequenceNumber uses Python identifier originalSequenceNumber
-    __originalSequenceNumber = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'originalSequenceNumber'), 'originalSequenceNumber', '__httpwww_vantivcnp_comschema_CTD_ANON_139_httpwww_vantivcnp_comschemaoriginalSequenceNumber', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3529, 24), )
+    __originalSequenceNumber = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'originalSequenceNumber'), 'originalSequenceNumber', '__httpwww_vantivcnp_comschema_CTD_ANON_145_httpwww_vantivcnp_comschemaoriginalSequenceNumber', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3648, 24), )
 
     
     originalSequenceNumber = property(__originalSequenceNumber.value, __originalSequenceNumber.set, None, None)
@@ -15823,44 +16277,44 @@ class CTD_ANON_139 (transactionTypeWithReportGroup):
     _AttributeMap.update({
         
     })
-_module_typeBindings.CTD_ANON_139 = CTD_ANON_139
+_module_typeBindings.CTD_ANON_145 = CTD_ANON_145
 
 
 # Complex type [anonymous] with content type ELEMENT_ONLY
-class CTD_ANON_140 (transactionTypeWithReportGroup):
+class CTD_ANON_146 (transactionTypeWithReportGroup):
     """Complex type [anonymous] with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3537, 8)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3656, 8)
     _ElementMap = transactionTypeWithReportGroup._ElementMap.copy()
     _AttributeMap = transactionTypeWithReportGroup._AttributeMap.copy()
     # Base type is transactionTypeWithReportGroup
     
     # Element {http://www.vantivcnp.com/schema}origId uses Python identifier origId
-    __origId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'origId'), 'origId', '__httpwww_vantivcnp_comschema_CTD_ANON_140_httpwww_vantivcnp_comschemaorigId', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3541, 24), )
+    __origId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'origId'), 'origId', '__httpwww_vantivcnp_comschema_CTD_ANON_146_httpwww_vantivcnp_comschemaorigId', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3660, 24), )
 
     
     origId = property(__origId.value, __origId.set, None, None)
 
     
     # Element {http://www.vantivcnp.com/schema}origActionType uses Python identifier origActionType
-    __origActionType = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'origActionType'), 'origActionType', '__httpwww_vantivcnp_comschema_CTD_ANON_140_httpwww_vantivcnp_comschemaorigActionType', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3542, 24), )
+    __origActionType = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'origActionType'), 'origActionType', '__httpwww_vantivcnp_comschema_CTD_ANON_146_httpwww_vantivcnp_comschemaorigActionType', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3661, 24), )
 
     
     origActionType = property(__origActionType.value, __origActionType.set, None, None)
 
     
     # Element {http://www.vantivcnp.com/schema}origCnpTxnId uses Python identifier origCnpTxnId
-    __origCnpTxnId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'origCnpTxnId'), 'origCnpTxnId', '__httpwww_vantivcnp_comschema_CTD_ANON_140_httpwww_vantivcnp_comschemaorigCnpTxnId', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3543, 24), )
+    __origCnpTxnId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'origCnpTxnId'), 'origCnpTxnId', '__httpwww_vantivcnp_comschema_CTD_ANON_146_httpwww_vantivcnp_comschemaorigCnpTxnId', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3662, 24), )
 
     
     origCnpTxnId = property(__origCnpTxnId.value, __origCnpTxnId.set, None, None)
 
     
     # Element {http://www.vantivcnp.com/schema}showStatusOnly uses Python identifier showStatusOnly
-    __showStatusOnly = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'showStatusOnly'), 'showStatusOnly', '__httpwww_vantivcnp_comschema_CTD_ANON_140_httpwww_vantivcnp_comschemashowStatusOnly', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3544, 24), )
+    __showStatusOnly = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'showStatusOnly'), 'showStatusOnly', '__httpwww_vantivcnp_comschema_CTD_ANON_146_httpwww_vantivcnp_comschemashowStatusOnly', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3663, 24), )
 
     
     showStatusOnly = property(__showStatusOnly.value, __showStatusOnly.set, None, None)
@@ -15880,58 +16334,58 @@ class CTD_ANON_140 (transactionTypeWithReportGroup):
     _AttributeMap.update({
         
     })
-_module_typeBindings.CTD_ANON_140 = CTD_ANON_140
+_module_typeBindings.CTD_ANON_146 = CTD_ANON_146
 
 
 # Complex type [anonymous] with content type ELEMENT_ONLY
-class CTD_ANON_141 (transactionTypeWithReportGroup):
+class CTD_ANON_147 (transactionTypeWithReportGroup):
     """Complex type [anonymous] with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3552, 8)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3671, 8)
     _ElementMap = transactionTypeWithReportGroup._ElementMap.copy()
     _AttributeMap = transactionTypeWithReportGroup._AttributeMap.copy()
     # Base type is transactionTypeWithReportGroup
     
     # Element {http://www.vantivcnp.com/schema}response uses Python identifier response
-    __response = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'response'), 'response', '__httpwww_vantivcnp_comschema_CTD_ANON_141_httpwww_vantivcnp_comschemaresponse', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3556, 24), )
+    __response = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'response'), 'response', '__httpwww_vantivcnp_comschema_CTD_ANON_147_httpwww_vantivcnp_comschemaresponse', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3675, 24), )
 
     
     response = property(__response.value, __response.set, None, None)
 
     
     # Element {http://www.vantivcnp.com/schema}responseTime uses Python identifier responseTime
-    __responseTime = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'responseTime'), 'responseTime', '__httpwww_vantivcnp_comschema_CTD_ANON_141_httpwww_vantivcnp_comschemaresponseTime', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3557, 24), )
+    __responseTime = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'responseTime'), 'responseTime', '__httpwww_vantivcnp_comschema_CTD_ANON_147_httpwww_vantivcnp_comschemaresponseTime', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3676, 24), )
 
     
     responseTime = property(__responseTime.value, __responseTime.set, None, None)
 
     
     # Element {http://www.vantivcnp.com/schema}message uses Python identifier message
-    __message = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'message'), 'message', '__httpwww_vantivcnp_comschema_CTD_ANON_141_httpwww_vantivcnp_comschemamessage', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3558, 24), )
+    __message = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'message'), 'message', '__httpwww_vantivcnp_comschema_CTD_ANON_147_httpwww_vantivcnp_comschemamessage', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3677, 24), )
 
     
     message = property(__message.value, __message.set, None, None)
 
     
     # Element {http://www.vantivcnp.com/schema}location uses Python identifier location
-    __location = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'location'), 'location', '__httpwww_vantivcnp_comschema_CTD_ANON_141_httpwww_vantivcnp_comschemalocation', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3559, 24), )
+    __location = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'location'), 'location', '__httpwww_vantivcnp_comschema_CTD_ANON_147_httpwww_vantivcnp_comschemalocation', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3678, 24), )
 
     
     location = property(__location.value, __location.set, None, None)
 
     
     # Element {http://www.vantivcnp.com/schema}matchCount uses Python identifier matchCount
-    __matchCount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'matchCount'), 'matchCount', '__httpwww_vantivcnp_comschema_CTD_ANON_141_httpwww_vantivcnp_comschemamatchCount', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3560, 24), )
+    __matchCount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'matchCount'), 'matchCount', '__httpwww_vantivcnp_comschema_CTD_ANON_147_httpwww_vantivcnp_comschemamatchCount', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3679, 24), )
 
     
     matchCount = property(__matchCount.value, __matchCount.set, None, None)
 
     
     # Element {http://www.vantivcnp.com/schema}results_max10 uses Python identifier results_max10
-    __results_max10 = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'results_max10'), 'results_max10', '__httpwww_vantivcnp_comschema_CTD_ANON_141_httpwww_vantivcnp_comschemaresults_max10', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3561, 24), )
+    __results_max10 = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'results_max10'), 'results_max10', '__httpwww_vantivcnp_comschema_CTD_ANON_147_httpwww_vantivcnp_comschemaresults_max10', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3680, 24), )
 
     
     results_max10 = property(__results_max10.value, __results_max10.set, None, None)
@@ -15953,44 +16407,44 @@ class CTD_ANON_141 (transactionTypeWithReportGroup):
     _AttributeMap.update({
         
     })
-_module_typeBindings.CTD_ANON_141 = CTD_ANON_141
+_module_typeBindings.CTD_ANON_147 = CTD_ANON_147
 
 
 # Complex type [anonymous] with content type ELEMENT_ONLY
-class CTD_ANON_142 (transactionTypeWithReportGroup):
+class CTD_ANON_148 (transactionTypeWithReportGroup):
     """Complex type [anonymous] with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3575, 8)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3694, 8)
     _ElementMap = transactionTypeWithReportGroup._ElementMap.copy()
     _AttributeMap = transactionTypeWithReportGroup._AttributeMap.copy()
     # Base type is transactionTypeWithReportGroup
     
     # Element {http://www.vantivcnp.com/schema}cnpTxnId uses Python identifier cnpTxnId
-    __cnpTxnId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'cnpTxnId'), 'cnpTxnId', '__httpwww_vantivcnp_comschema_CTD_ANON_142_httpwww_vantivcnp_comschemacnpTxnId', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3579, 24), )
+    __cnpTxnId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'cnpTxnId'), 'cnpTxnId', '__httpwww_vantivcnp_comschema_CTD_ANON_148_httpwww_vantivcnp_comschemacnpTxnId', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3698, 24), )
 
     
     cnpTxnId = property(__cnpTxnId.value, __cnpTxnId.set, None, None)
 
     
     # Element {http://www.vantivcnp.com/schema}response uses Python identifier response
-    __response = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'response'), 'response', '__httpwww_vantivcnp_comschema_CTD_ANON_142_httpwww_vantivcnp_comschemaresponse', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3580, 24), )
+    __response = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'response'), 'response', '__httpwww_vantivcnp_comschema_CTD_ANON_148_httpwww_vantivcnp_comschemaresponse', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3699, 24), )
 
     
     response = property(__response.value, __response.set, None, None)
 
     
     # Element {http://www.vantivcnp.com/schema}message uses Python identifier message
-    __message = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'message'), 'message', '__httpwww_vantivcnp_comschema_CTD_ANON_142_httpwww_vantivcnp_comschemamessage', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3581, 24), )
+    __message = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'message'), 'message', '__httpwww_vantivcnp_comschema_CTD_ANON_148_httpwww_vantivcnp_comschemamessage', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3700, 24), )
 
     
     message = property(__message.value, __message.set, None, None)
 
     
     # Element {http://www.vantivcnp.com/schema}location uses Python identifier location
-    __location = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'location'), 'location', '__httpwww_vantivcnp_comschema_CTD_ANON_142_httpwww_vantivcnp_comschemalocation', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3582, 24), )
+    __location = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'location'), 'location', '__httpwww_vantivcnp_comschema_CTD_ANON_148_httpwww_vantivcnp_comschemalocation', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3701, 24), )
 
     
     location = property(__location.value, __location.set, None, None)
@@ -16010,30 +16464,30 @@ class CTD_ANON_142 (transactionTypeWithReportGroup):
     _AttributeMap.update({
         
     })
-_module_typeBindings.CTD_ANON_142 = CTD_ANON_142
+_module_typeBindings.CTD_ANON_148 = CTD_ANON_148
 
 
 # Complex type [anonymous] with content type ELEMENT_ONLY
-class CTD_ANON_143 (transactionTypeWithReportGroup):
+class CTD_ANON_149 (transactionTypeWithReportGroup):
     """Complex type [anonymous] with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3590, 8)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3709, 8)
     _ElementMap = transactionTypeWithReportGroup._ElementMap.copy()
     _AttributeMap = transactionTypeWithReportGroup._AttributeMap.copy()
     # Base type is transactionTypeWithReportGroup
     
     # Element {http://www.vantivcnp.com/schema}serviceId uses Python identifier serviceId
-    __serviceId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'serviceId'), 'serviceId', '__httpwww_vantivcnp_comschema_CTD_ANON_143_httpwww_vantivcnp_comschemaserviceId', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3594, 24), )
+    __serviceId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'serviceId'), 'serviceId', '__httpwww_vantivcnp_comschema_CTD_ANON_149_httpwww_vantivcnp_comschemaserviceId', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3713, 24), )
 
     
     serviceId = property(__serviceId.value, __serviceId.set, None, None)
 
     
     # Element {http://www.vantivcnp.com/schema}pathId uses Python identifier pathId
-    __pathId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'pathId'), 'pathId', '__httpwww_vantivcnp_comschema_CTD_ANON_143_httpwww_vantivcnp_comschemapathId', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3595, 24), )
+    __pathId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'pathId'), 'pathId', '__httpwww_vantivcnp_comschema_CTD_ANON_149_httpwww_vantivcnp_comschemapathId', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3714, 24), )
 
     
     pathId = property(__pathId.value, __pathId.set, None, None)
@@ -16051,51 +16505,51 @@ class CTD_ANON_143 (transactionTypeWithReportGroup):
     _AttributeMap.update({
         
     })
-_module_typeBindings.CTD_ANON_143 = CTD_ANON_143
+_module_typeBindings.CTD_ANON_149 = CTD_ANON_149
 
 
 # Complex type [anonymous] with content type ELEMENT_ONLY
-class CTD_ANON_144 (transactionTypeWithReportGroup):
+class CTD_ANON_150 (transactionTypeWithReportGroup):
     """Complex type [anonymous] with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3603, 8)
+    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3722, 8)
     _ElementMap = transactionTypeWithReportGroup._ElementMap.copy()
     _AttributeMap = transactionTypeWithReportGroup._AttributeMap.copy()
     # Base type is transactionTypeWithReportGroup
     
     # Element {http://www.vantivcnp.com/schema}cnpTxnId uses Python identifier cnpTxnId
-    __cnpTxnId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'cnpTxnId'), 'cnpTxnId', '__httpwww_vantivcnp_comschema_CTD_ANON_144_httpwww_vantivcnp_comschemacnpTxnId', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3607, 24), )
+    __cnpTxnId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'cnpTxnId'), 'cnpTxnId', '__httpwww_vantivcnp_comschema_CTD_ANON_150_httpwww_vantivcnp_comschemacnpTxnId', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3726, 24), )
 
     
     cnpTxnId = property(__cnpTxnId.value, __cnpTxnId.set, None, None)
 
     
     # Element {http://www.vantivcnp.com/schema}response uses Python identifier response
-    __response = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'response'), 'response', '__httpwww_vantivcnp_comschema_CTD_ANON_144_httpwww_vantivcnp_comschemaresponse', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3608, 24), )
+    __response = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'response'), 'response', '__httpwww_vantivcnp_comschema_CTD_ANON_150_httpwww_vantivcnp_comschemaresponse', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3727, 24), )
 
     
     response = property(__response.value, __response.set, None, None)
 
     
     # Element {http://www.vantivcnp.com/schema}responseTime uses Python identifier responseTime
-    __responseTime = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'responseTime'), 'responseTime', '__httpwww_vantivcnp_comschema_CTD_ANON_144_httpwww_vantivcnp_comschemaresponseTime', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3609, 24), )
+    __responseTime = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'responseTime'), 'responseTime', '__httpwww_vantivcnp_comschema_CTD_ANON_150_httpwww_vantivcnp_comschemaresponseTime', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3728, 24), )
 
     
     responseTime = property(__responseTime.value, __responseTime.set, None, None)
 
     
     # Element {http://www.vantivcnp.com/schema}message uses Python identifier message
-    __message = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'message'), 'message', '__httpwww_vantivcnp_comschema_CTD_ANON_144_httpwww_vantivcnp_comschemamessage', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3610, 24), )
+    __message = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'message'), 'message', '__httpwww_vantivcnp_comschema_CTD_ANON_150_httpwww_vantivcnp_comschemamessage', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3729, 24), )
 
     
     message = property(__message.value, __message.set, None, None)
 
     
     # Element {http://www.vantivcnp.com/schema}location uses Python identifier location
-    __location = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'location'), 'location', '__httpwww_vantivcnp_comschema_CTD_ANON_144_httpwww_vantivcnp_comschemalocation', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3611, 24), )
+    __location = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'location'), 'location', '__httpwww_vantivcnp_comschema_CTD_ANON_150_httpwww_vantivcnp_comschemalocation', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3730, 24), )
 
     
     location = property(__location.value, __location.set, None, None)
@@ -16112,460 +16566,6 @@ class CTD_ANON_144 (transactionTypeWithReportGroup):
         __responseTime.name() : __responseTime,
         __message.name() : __message,
         __location.name() : __location
-    })
-    _AttributeMap.update({
-        
-    })
-_module_typeBindings.CTD_ANON_144 = CTD_ANON_144
-
-
-# Complex type [anonymous] with content type ELEMENT_ONLY
-class CTD_ANON_145 (transactionTypeWithReportGroup):
-    """Complex type [anonymous] with content type ELEMENT_ONLY"""
-    _TypeDefinition = None
-    _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
-    _Abstract = False
-    _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3619, 8)
-    _ElementMap = transactionTypeWithReportGroup._ElementMap.copy()
-    _AttributeMap = transactionTypeWithReportGroup._AttributeMap.copy()
-    # Base type is transactionTypeWithReportGroup
-    
-    # Element {http://www.vantivcnp.com/schema}fundingCustomerId uses Python identifier fundingCustomerId
-    __fundingCustomerId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'fundingCustomerId'), 'fundingCustomerId', '__httpwww_vantivcnp_comschema_CTD_ANON_145_httpwww_vantivcnp_comschemafundingCustomerId', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3625, 32), )
-
-    
-    fundingCustomerId = property(__fundingCustomerId.value, __fundingCustomerId.set, None, None)
-
-    
-    # Element {http://www.vantivcnp.com/schema}fundingSubmerchantId uses Python identifier fundingSubmerchantId
-    __fundingSubmerchantId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'fundingSubmerchantId'), 'fundingSubmerchantId', '__httpwww_vantivcnp_comschema_CTD_ANON_145_httpwww_vantivcnp_comschemafundingSubmerchantId', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3626, 32), )
-
-    
-    fundingSubmerchantId = property(__fundingSubmerchantId.value, __fundingSubmerchantId.set, None, None)
-
-    
-    # Element {http://www.vantivcnp.com/schema}vendorName uses Python identifier vendorName
-    __vendorName = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'vendorName'), 'vendorName', '__httpwww_vantivcnp_comschema_CTD_ANON_145_httpwww_vantivcnp_comschemavendorName', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3628, 28), )
-
-    
-    vendorName = property(__vendorName.value, __vendorName.set, None, None)
-
-    
-    # Element {http://www.vantivcnp.com/schema}fundsTransferId uses Python identifier fundsTransferId
-    __fundsTransferId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'fundsTransferId'), 'fundsTransferId', '__httpwww_vantivcnp_comschema_CTD_ANON_145_httpwww_vantivcnp_comschemafundsTransferId', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3629, 28), )
-
-    
-    fundsTransferId = property(__fundsTransferId.value, __fundsTransferId.set, None, None)
-
-    
-    # Element {http://www.vantivcnp.com/schema}amount uses Python identifier amount
-    __amount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'amount'), 'amount', '__httpwww_vantivcnp_comschema_CTD_ANON_145_httpwww_vantivcnp_comschemaamount', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3630, 28), )
-
-    
-    amount = property(__amount.value, __amount.set, None, None)
-
-    
-    # Element {http://www.vantivcnp.com/schema}accountInfo uses Python identifier accountInfo
-    __accountInfo = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'accountInfo'), 'accountInfo', '__httpwww_vantivcnp_comschema_CTD_ANON_145_httpwww_vantivcnp_comschemaaccountInfo', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3631, 28), )
-
-    
-    accountInfo = property(__accountInfo.value, __accountInfo.set, None, None)
-
-    
-    # Element {http://www.vantivcnp.com/schema}vendorAddress uses Python identifier vendorAddress
-    __vendorAddress = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'vendorAddress'), 'vendorAddress', '__httpwww_vantivcnp_comschema_CTD_ANON_145_httpwww_vantivcnp_comschemavendorAddress', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3632, 28), )
-
-    
-    vendorAddress = property(__vendorAddress.value, __vendorAddress.set, None, None)
-
-    
-    # Attribute id inherited from {http://www.vantivcnp.com/schema}transactionType
-    
-    # Attribute customerId inherited from {http://www.vantivcnp.com/schema}transactionType
-    
-    # Attribute reportGroup inherited from {http://www.vantivcnp.com/schema}transactionTypeWithReportGroup
-    _ElementMap.update({
-        __fundingCustomerId.name() : __fundingCustomerId,
-        __fundingSubmerchantId.name() : __fundingSubmerchantId,
-        __vendorName.name() : __vendorName,
-        __fundsTransferId.name() : __fundsTransferId,
-        __amount.name() : __amount,
-        __accountInfo.name() : __accountInfo,
-        __vendorAddress.name() : __vendorAddress
-    })
-    _AttributeMap.update({
-        
-    })
-_module_typeBindings.CTD_ANON_145 = CTD_ANON_145
-
-
-# Complex type [anonymous] with content type ELEMENT_ONLY
-class CTD_ANON_146 (transactionTypeWithReportGroup):
-    """Complex type [anonymous] with content type ELEMENT_ONLY"""
-    _TypeDefinition = None
-    _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
-    _Abstract = False
-    _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3641, 8)
-    _ElementMap = transactionTypeWithReportGroup._ElementMap.copy()
-    _AttributeMap = transactionTypeWithReportGroup._AttributeMap.copy()
-    # Base type is transactionTypeWithReportGroup
-    
-    # Element {http://www.vantivcnp.com/schema}fundingCustomerId uses Python identifier fundingCustomerId
-    __fundingCustomerId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'fundingCustomerId'), 'fundingCustomerId', '__httpwww_vantivcnp_comschema_CTD_ANON_146_httpwww_vantivcnp_comschemafundingCustomerId', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3647, 32), )
-
-    
-    fundingCustomerId = property(__fundingCustomerId.value, __fundingCustomerId.set, None, None)
-
-    
-    # Element {http://www.vantivcnp.com/schema}fundingSubmerchantId uses Python identifier fundingSubmerchantId
-    __fundingSubmerchantId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'fundingSubmerchantId'), 'fundingSubmerchantId', '__httpwww_vantivcnp_comschema_CTD_ANON_146_httpwww_vantivcnp_comschemafundingSubmerchantId', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3648, 32), )
-
-    
-    fundingSubmerchantId = property(__fundingSubmerchantId.value, __fundingSubmerchantId.set, None, None)
-
-    
-    # Element {http://www.vantivcnp.com/schema}vendorName uses Python identifier vendorName
-    __vendorName = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'vendorName'), 'vendorName', '__httpwww_vantivcnp_comschema_CTD_ANON_146_httpwww_vantivcnp_comschemavendorName', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3650, 28), )
-
-    
-    vendorName = property(__vendorName.value, __vendorName.set, None, None)
-
-    
-    # Element {http://www.vantivcnp.com/schema}fundsTransferId uses Python identifier fundsTransferId
-    __fundsTransferId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'fundsTransferId'), 'fundsTransferId', '__httpwww_vantivcnp_comschema_CTD_ANON_146_httpwww_vantivcnp_comschemafundsTransferId', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3651, 28), )
-
-    
-    fundsTransferId = property(__fundsTransferId.value, __fundsTransferId.set, None, None)
-
-    
-    # Element {http://www.vantivcnp.com/schema}amount uses Python identifier amount
-    __amount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'amount'), 'amount', '__httpwww_vantivcnp_comschema_CTD_ANON_146_httpwww_vantivcnp_comschemaamount', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3652, 28), )
-
-    
-    amount = property(__amount.value, __amount.set, None, None)
-
-    
-    # Element {http://www.vantivcnp.com/schema}accountInfo uses Python identifier accountInfo
-    __accountInfo = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'accountInfo'), 'accountInfo', '__httpwww_vantivcnp_comschema_CTD_ANON_146_httpwww_vantivcnp_comschemaaccountInfo', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3653, 28), )
-
-    
-    accountInfo = property(__accountInfo.value, __accountInfo.set, None, None)
-
-    
-    # Element {http://www.vantivcnp.com/schema}vendorAddress uses Python identifier vendorAddress
-    __vendorAddress = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'vendorAddress'), 'vendorAddress', '__httpwww_vantivcnp_comschema_CTD_ANON_146_httpwww_vantivcnp_comschemavendorAddress', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3654, 28), )
-
-    
-    vendorAddress = property(__vendorAddress.value, __vendorAddress.set, None, None)
-
-    
-    # Attribute id inherited from {http://www.vantivcnp.com/schema}transactionType
-    
-    # Attribute customerId inherited from {http://www.vantivcnp.com/schema}transactionType
-    
-    # Attribute reportGroup inherited from {http://www.vantivcnp.com/schema}transactionTypeWithReportGroup
-    _ElementMap.update({
-        __fundingCustomerId.name() : __fundingCustomerId,
-        __fundingSubmerchantId.name() : __fundingSubmerchantId,
-        __vendorName.name() : __vendorName,
-        __fundsTransferId.name() : __fundsTransferId,
-        __amount.name() : __amount,
-        __accountInfo.name() : __accountInfo,
-        __vendorAddress.name() : __vendorAddress
-    })
-    _AttributeMap.update({
-        
-    })
-_module_typeBindings.CTD_ANON_146 = CTD_ANON_146
-
-
-# Complex type [anonymous] with content type ELEMENT_ONLY
-class CTD_ANON_147 (transactionTypeWithReportGroup):
-    """Complex type [anonymous] with content type ELEMENT_ONLY"""
-    _TypeDefinition = None
-    _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
-    _Abstract = False
-    _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3664, 8)
-    _ElementMap = transactionTypeWithReportGroup._ElementMap.copy()
-    _AttributeMap = transactionTypeWithReportGroup._AttributeMap.copy()
-    # Base type is transactionTypeWithReportGroup
-    
-    # Element {http://www.vantivcnp.com/schema}fundingSubmerchantId uses Python identifier fundingSubmerchantId
-    __fundingSubmerchantId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'fundingSubmerchantId'), 'fundingSubmerchantId', '__httpwww_vantivcnp_comschema_CTD_ANON_147_httpwww_vantivcnp_comschemafundingSubmerchantId', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3669, 28), )
-
-    
-    fundingSubmerchantId = property(__fundingSubmerchantId.value, __fundingSubmerchantId.set, None, None)
-
-    
-    # Element {http://www.vantivcnp.com/schema}submerchantName uses Python identifier submerchantName
-    __submerchantName = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'submerchantName'), 'submerchantName', '__httpwww_vantivcnp_comschema_CTD_ANON_147_httpwww_vantivcnp_comschemasubmerchantName', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3670, 28), )
-
-    
-    submerchantName = property(__submerchantName.value, __submerchantName.set, None, None)
-
-    
-    # Element {http://www.vantivcnp.com/schema}fundsTransferId uses Python identifier fundsTransferId
-    __fundsTransferId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'fundsTransferId'), 'fundsTransferId', '__httpwww_vantivcnp_comschema_CTD_ANON_147_httpwww_vantivcnp_comschemafundsTransferId', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3671, 28), )
-
-    
-    fundsTransferId = property(__fundsTransferId.value, __fundsTransferId.set, None, None)
-
-    
-    # Element {http://www.vantivcnp.com/schema}amount uses Python identifier amount
-    __amount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'amount'), 'amount', '__httpwww_vantivcnp_comschema_CTD_ANON_147_httpwww_vantivcnp_comschemaamount', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3672, 28), )
-
-    
-    amount = property(__amount.value, __amount.set, None, None)
-
-    
-    # Element {http://www.vantivcnp.com/schema}accountInfo uses Python identifier accountInfo
-    __accountInfo = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'accountInfo'), 'accountInfo', '__httpwww_vantivcnp_comschema_CTD_ANON_147_httpwww_vantivcnp_comschemaaccountInfo', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3673, 28), )
-
-    
-    accountInfo = property(__accountInfo.value, __accountInfo.set, None, None)
-
-    
-    # Element {http://www.vantivcnp.com/schema}customIdentifier uses Python identifier customIdentifier
-    __customIdentifier = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'customIdentifier'), 'customIdentifier', '__httpwww_vantivcnp_comschema_CTD_ANON_147_httpwww_vantivcnp_comschemacustomIdentifier', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3674, 28), )
-
-    
-    customIdentifier = property(__customIdentifier.value, __customIdentifier.set, None, None)
-
-    
-    # Attribute id inherited from {http://www.vantivcnp.com/schema}transactionType
-    
-    # Attribute customerId inherited from {http://www.vantivcnp.com/schema}transactionType
-    
-    # Attribute reportGroup inherited from {http://www.vantivcnp.com/schema}transactionTypeWithReportGroup
-    _ElementMap.update({
-        __fundingSubmerchantId.name() : __fundingSubmerchantId,
-        __submerchantName.name() : __submerchantName,
-        __fundsTransferId.name() : __fundsTransferId,
-        __amount.name() : __amount,
-        __accountInfo.name() : __accountInfo,
-        __customIdentifier.name() : __customIdentifier
-    })
-    _AttributeMap.update({
-        
-    })
-_module_typeBindings.CTD_ANON_147 = CTD_ANON_147
-
-
-# Complex type [anonymous] with content type ELEMENT_ONLY
-class CTD_ANON_148 (transactionTypeWithReportGroup):
-    """Complex type [anonymous] with content type ELEMENT_ONLY"""
-    _TypeDefinition = None
-    _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
-    _Abstract = False
-    _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3683, 8)
-    _ElementMap = transactionTypeWithReportGroup._ElementMap.copy()
-    _AttributeMap = transactionTypeWithReportGroup._AttributeMap.copy()
-    # Base type is transactionTypeWithReportGroup
-    
-    # Element {http://www.vantivcnp.com/schema}fundingSubmerchantId uses Python identifier fundingSubmerchantId
-    __fundingSubmerchantId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'fundingSubmerchantId'), 'fundingSubmerchantId', '__httpwww_vantivcnp_comschema_CTD_ANON_148_httpwww_vantivcnp_comschemafundingSubmerchantId', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3688, 28), )
-
-    
-    fundingSubmerchantId = property(__fundingSubmerchantId.value, __fundingSubmerchantId.set, None, None)
-
-    
-    # Element {http://www.vantivcnp.com/schema}submerchantName uses Python identifier submerchantName
-    __submerchantName = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'submerchantName'), 'submerchantName', '__httpwww_vantivcnp_comschema_CTD_ANON_148_httpwww_vantivcnp_comschemasubmerchantName', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3689, 28), )
-
-    
-    submerchantName = property(__submerchantName.value, __submerchantName.set, None, None)
-
-    
-    # Element {http://www.vantivcnp.com/schema}fundsTransferId uses Python identifier fundsTransferId
-    __fundsTransferId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'fundsTransferId'), 'fundsTransferId', '__httpwww_vantivcnp_comschema_CTD_ANON_148_httpwww_vantivcnp_comschemafundsTransferId', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3690, 28), )
-
-    
-    fundsTransferId = property(__fundsTransferId.value, __fundsTransferId.set, None, None)
-
-    
-    # Element {http://www.vantivcnp.com/schema}amount uses Python identifier amount
-    __amount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'amount'), 'amount', '__httpwww_vantivcnp_comschema_CTD_ANON_148_httpwww_vantivcnp_comschemaamount', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3691, 28), )
-
-    
-    amount = property(__amount.value, __amount.set, None, None)
-
-    
-    # Element {http://www.vantivcnp.com/schema}accountInfo uses Python identifier accountInfo
-    __accountInfo = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'accountInfo'), 'accountInfo', '__httpwww_vantivcnp_comschema_CTD_ANON_148_httpwww_vantivcnp_comschemaaccountInfo', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3692, 28), )
-
-    
-    accountInfo = property(__accountInfo.value, __accountInfo.set, None, None)
-
-    
-    # Element {http://www.vantivcnp.com/schema}customIdentifier uses Python identifier customIdentifier
-    __customIdentifier = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'customIdentifier'), 'customIdentifier', '__httpwww_vantivcnp_comschema_CTD_ANON_148_httpwww_vantivcnp_comschemacustomIdentifier', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3693, 28), )
-
-    
-    customIdentifier = property(__customIdentifier.value, __customIdentifier.set, None, None)
-
-    
-    # Attribute id inherited from {http://www.vantivcnp.com/schema}transactionType
-    
-    # Attribute customerId inherited from {http://www.vantivcnp.com/schema}transactionType
-    
-    # Attribute reportGroup inherited from {http://www.vantivcnp.com/schema}transactionTypeWithReportGroup
-    _ElementMap.update({
-        __fundingSubmerchantId.name() : __fundingSubmerchantId,
-        __submerchantName.name() : __submerchantName,
-        __fundsTransferId.name() : __fundsTransferId,
-        __amount.name() : __amount,
-        __accountInfo.name() : __accountInfo,
-        __customIdentifier.name() : __customIdentifier
-    })
-    _AttributeMap.update({
-        
-    })
-_module_typeBindings.CTD_ANON_148 = CTD_ANON_148
-
-
-# Complex type [anonymous] with content type ELEMENT_ONLY
-class CTD_ANON_149 (transactionTypeWithReportGroup):
-    """Complex type [anonymous] with content type ELEMENT_ONLY"""
-    _TypeDefinition = None
-    _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
-    _Abstract = False
-    _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3702, 8)
-    _ElementMap = transactionTypeWithReportGroup._ElementMap.copy()
-    _AttributeMap = transactionTypeWithReportGroup._AttributeMap.copy()
-    # Base type is transactionTypeWithReportGroup
-    
-    # Element {http://www.vantivcnp.com/schema}fundingCustomerId uses Python identifier fundingCustomerId
-    __fundingCustomerId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'fundingCustomerId'), 'fundingCustomerId', '__httpwww_vantivcnp_comschema_CTD_ANON_149_httpwww_vantivcnp_comschemafundingCustomerId', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3707, 28), )
-
-    
-    fundingCustomerId = property(__fundingCustomerId.value, __fundingCustomerId.set, None, None)
-
-    
-    # Element {http://www.vantivcnp.com/schema}customerName uses Python identifier customerName
-    __customerName = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'customerName'), 'customerName', '__httpwww_vantivcnp_comschema_CTD_ANON_149_httpwww_vantivcnp_comschemacustomerName', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3708, 28), )
-
-    
-    customerName = property(__customerName.value, __customerName.set, None, None)
-
-    
-    # Element {http://www.vantivcnp.com/schema}fundsTransferId uses Python identifier fundsTransferId
-    __fundsTransferId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'fundsTransferId'), 'fundsTransferId', '__httpwww_vantivcnp_comschema_CTD_ANON_149_httpwww_vantivcnp_comschemafundsTransferId', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3709, 28), )
-
-    
-    fundsTransferId = property(__fundsTransferId.value, __fundsTransferId.set, None, None)
-
-    
-    # Element {http://www.vantivcnp.com/schema}amount uses Python identifier amount
-    __amount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'amount'), 'amount', '__httpwww_vantivcnp_comschema_CTD_ANON_149_httpwww_vantivcnp_comschemaamount', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3710, 28), )
-
-    
-    amount = property(__amount.value, __amount.set, None, None)
-
-    
-    # Element {http://www.vantivcnp.com/schema}accountInfo uses Python identifier accountInfo
-    __accountInfo = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'accountInfo'), 'accountInfo', '__httpwww_vantivcnp_comschema_CTD_ANON_149_httpwww_vantivcnp_comschemaaccountInfo', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3711, 28), )
-
-    
-    accountInfo = property(__accountInfo.value, __accountInfo.set, None, None)
-
-    
-    # Element {http://www.vantivcnp.com/schema}customIdentifier uses Python identifier customIdentifier
-    __customIdentifier = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'customIdentifier'), 'customIdentifier', '__httpwww_vantivcnp_comschema_CTD_ANON_149_httpwww_vantivcnp_comschemacustomIdentifier', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3712, 28), )
-
-    
-    customIdentifier = property(__customIdentifier.value, __customIdentifier.set, None, None)
-
-    
-    # Attribute id inherited from {http://www.vantivcnp.com/schema}transactionType
-    
-    # Attribute customerId inherited from {http://www.vantivcnp.com/schema}transactionType
-    
-    # Attribute reportGroup inherited from {http://www.vantivcnp.com/schema}transactionTypeWithReportGroup
-    _ElementMap.update({
-        __fundingCustomerId.name() : __fundingCustomerId,
-        __customerName.name() : __customerName,
-        __fundsTransferId.name() : __fundsTransferId,
-        __amount.name() : __amount,
-        __accountInfo.name() : __accountInfo,
-        __customIdentifier.name() : __customIdentifier
-    })
-    _AttributeMap.update({
-        
-    })
-_module_typeBindings.CTD_ANON_149 = CTD_ANON_149
-
-
-# Complex type [anonymous] with content type ELEMENT_ONLY
-class CTD_ANON_150 (transactionTypeWithReportGroup):
-    """Complex type [anonymous] with content type ELEMENT_ONLY"""
-    _TypeDefinition = None
-    _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
-    _Abstract = False
-    _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3721, 8)
-    _ElementMap = transactionTypeWithReportGroup._ElementMap.copy()
-    _AttributeMap = transactionTypeWithReportGroup._AttributeMap.copy()
-    # Base type is transactionTypeWithReportGroup
-    
-    # Element {http://www.vantivcnp.com/schema}fundingCustomerId uses Python identifier fundingCustomerId
-    __fundingCustomerId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'fundingCustomerId'), 'fundingCustomerId', '__httpwww_vantivcnp_comschema_CTD_ANON_150_httpwww_vantivcnp_comschemafundingCustomerId', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3726, 28), )
-
-    
-    fundingCustomerId = property(__fundingCustomerId.value, __fundingCustomerId.set, None, None)
-
-    
-    # Element {http://www.vantivcnp.com/schema}customerName uses Python identifier customerName
-    __customerName = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'customerName'), 'customerName', '__httpwww_vantivcnp_comschema_CTD_ANON_150_httpwww_vantivcnp_comschemacustomerName', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3727, 28), )
-
-    
-    customerName = property(__customerName.value, __customerName.set, None, None)
-
-    
-    # Element {http://www.vantivcnp.com/schema}fundsTransferId uses Python identifier fundsTransferId
-    __fundsTransferId = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'fundsTransferId'), 'fundsTransferId', '__httpwww_vantivcnp_comschema_CTD_ANON_150_httpwww_vantivcnp_comschemafundsTransferId', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3728, 28), )
-
-    
-    fundsTransferId = property(__fundsTransferId.value, __fundsTransferId.set, None, None)
-
-    
-    # Element {http://www.vantivcnp.com/schema}amount uses Python identifier amount
-    __amount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'amount'), 'amount', '__httpwww_vantivcnp_comschema_CTD_ANON_150_httpwww_vantivcnp_comschemaamount', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3729, 28), )
-
-    
-    amount = property(__amount.value, __amount.set, None, None)
-
-    
-    # Element {http://www.vantivcnp.com/schema}accountInfo uses Python identifier accountInfo
-    __accountInfo = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'accountInfo'), 'accountInfo', '__httpwww_vantivcnp_comschema_CTD_ANON_150_httpwww_vantivcnp_comschemaaccountInfo', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3730, 28), )
-
-    
-    accountInfo = property(__accountInfo.value, __accountInfo.set, None, None)
-
-    
-    # Element {http://www.vantivcnp.com/schema}customIdentifier uses Python identifier customIdentifier
-    __customIdentifier = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'customIdentifier'), 'customIdentifier', '__httpwww_vantivcnp_comschema_CTD_ANON_150_httpwww_vantivcnp_comschemacustomIdentifier', False, pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3731, 28), )
-
-    
-    customIdentifier = property(__customIdentifier.value, __customIdentifier.set, None, None)
-
-    
-    # Attribute id inherited from {http://www.vantivcnp.com/schema}transactionType
-    
-    # Attribute customerId inherited from {http://www.vantivcnp.com/schema}transactionType
-    
-    # Attribute reportGroup inherited from {http://www.vantivcnp.com/schema}transactionTypeWithReportGroup
-    _ElementMap.update({
-        __fundingCustomerId.name() : __fundingCustomerId,
-        __customerName.name() : __customerName,
-        __fundsTransferId.name() : __fundsTransferId,
-        __amount.name() : __amount,
-        __accountInfo.name() : __accountInfo,
-        __customIdentifier.name() : __customIdentifier
     })
     _AttributeMap.update({
         
@@ -16693,7 +16693,7 @@ Namespace.addCategoryObject('elementBinding', batchResponse.name().localName(), 
 accountUpdateFileRequestData = pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'accountUpdateFileRequestData'), CTD_ANON_33, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3240, 4))
 Namespace.addCategoryObject('elementBinding', accountUpdateFileRequestData.name().localName(), accountUpdateFileRequestData)
 
-cnpOnlineResponse = pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'cnpOnlineResponse'), CTD_ANON_34, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3345, 4))
+cnpOnlineResponse = pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'cnpOnlineResponse'), CTD_ANON_34, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3464, 4))
 Namespace.addCategoryObject('elementBinding', cnpOnlineResponse.name().localName(), cnpOnlineResponse)
 
 recurringTransaction = pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'recurringTransaction'), recurringTransactionType, abstract=pyxb.binding.datatypes.boolean(1), location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 256, 4))
@@ -16705,7 +16705,7 @@ Namespace.addCategoryObject('elementBinding', recurringTransactionResponse.name(
 transaction = pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'transaction'), transactionType, abstract=pyxb.binding.datatypes.boolean(1), location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 497, 4))
 Namespace.addCategoryObject('elementBinding', transaction.name().localName(), transaction)
 
-cnpOnlineRequest = pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'cnpOnlineRequest'), CTD_ANON_36, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3332, 4))
+cnpOnlineRequest = pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'cnpOnlineRequest'), CTD_ANON_36, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3451, 4))
 Namespace.addCategoryObject('elementBinding', cnpOnlineRequest.name().localName(), cnpOnlineRequest)
 
 cancelSubscription = pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'cancelSubscription'), CTD_ANON_37, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 281, 4))
@@ -16999,68 +16999,68 @@ Namespace.addCategoryObject('elementBinding', echeckPreNoteSaleResponse.name().l
 echeckPreNoteCreditResponse = pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'echeckPreNoteCreditResponse'), CTD_ANON_129, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3296, 4))
 Namespace.addCategoryObject('elementBinding', echeckPreNoteCreditResponse.name().localName(), echeckPreNoteCreditResponse)
 
-void = pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'void'), CTD_ANON_130, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3357, 4))
-Namespace.addCategoryObject('elementBinding', void.name().localName(), void)
-
-voidResponse = pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'voidResponse'), CTD_ANON_131, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3370, 4))
-Namespace.addCategoryObject('elementBinding', voidResponse.name().localName(), voidResponse)
-
-echeckVoid = pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'echeckVoid'), CTD_ANON_132, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3397, 4))
-Namespace.addCategoryObject('elementBinding', echeckVoid.name().localName(), echeckVoid)
-
-echeckVoidResponse = pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'echeckVoidResponse'), CTD_ANON_133, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3409, 4))
-Namespace.addCategoryObject('elementBinding', echeckVoidResponse.name().localName(), echeckVoidResponse)
-
-depositReversal = pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'depositReversal'), CTD_ANON_134, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3428, 4))
-Namespace.addCategoryObject('elementBinding', depositReversal.name().localName(), depositReversal)
-
-refundReversal = pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'refundReversal'), CTD_ANON_135, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3446, 4))
-Namespace.addCategoryObject('elementBinding', refundReversal.name().localName(), refundReversal)
-
-activateReversal = pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'activateReversal'), CTD_ANON_136, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3464, 4))
-Namespace.addCategoryObject('elementBinding', activateReversal.name().localName(), activateReversal)
-
-deactivateReversal = pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'deactivateReversal'), CTD_ANON_137, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3483, 4))
-Namespace.addCategoryObject('elementBinding', deactivateReversal.name().localName(), deactivateReversal)
-
-loadReversal = pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'loadReversal'), CTD_ANON_138, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3500, 4))
-Namespace.addCategoryObject('elementBinding', loadReversal.name().localName(), loadReversal)
-
-unloadReversal = pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'unloadReversal'), CTD_ANON_139, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3518, 4))
-Namespace.addCategoryObject('elementBinding', unloadReversal.name().localName(), unloadReversal)
-
-queryTransaction = pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'queryTransaction'), CTD_ANON_140, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3536, 4))
-Namespace.addCategoryObject('elementBinding', queryTransaction.name().localName(), queryTransaction)
-
-queryTransactionResponse = pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'queryTransactionResponse'), CTD_ANON_141, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3551, 4))
-Namespace.addCategoryObject('elementBinding', queryTransactionResponse.name().localName(), queryTransactionResponse)
-
-queryTransactionUnavailableResponse = pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'queryTransactionUnavailableResponse'), CTD_ANON_142, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3574, 4))
-Namespace.addCategoryObject('elementBinding', queryTransactionUnavailableResponse.name().localName(), queryTransactionUnavailableResponse)
-
-serviceStatusRequest = pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'serviceStatusRequest'), CTD_ANON_143, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3589, 4))
-Namespace.addCategoryObject('elementBinding', serviceStatusRequest.name().localName(), serviceStatusRequest)
-
-serviceStatusResponse = pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'serviceStatusResponse'), CTD_ANON_144, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3602, 4))
-Namespace.addCategoryObject('elementBinding', serviceStatusResponse.name().localName(), serviceStatusResponse)
-
-vendorCredit = pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'vendorCredit'), CTD_ANON_145, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3618, 4))
+vendorCredit = pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'vendorCredit'), CTD_ANON_130, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3310, 2))
 Namespace.addCategoryObject('elementBinding', vendorCredit.name().localName(), vendorCredit)
 
-vendorDebit = pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'vendorDebit'), CTD_ANON_146, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3640, 4))
+vendorDebit = pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'vendorDebit'), CTD_ANON_131, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3332, 4))
 Namespace.addCategoryObject('elementBinding', vendorDebit.name().localName(), vendorDebit)
 
-submerchantCredit = pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'submerchantCredit'), CTD_ANON_147, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3663, 4))
+submerchantCredit = pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'submerchantCredit'), CTD_ANON_132, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3355, 4))
 Namespace.addCategoryObject('elementBinding', submerchantCredit.name().localName(), submerchantCredit)
 
-submerchantDebit = pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'submerchantDebit'), CTD_ANON_148, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3682, 4))
+submerchantDebit = pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'submerchantDebit'), CTD_ANON_133, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3374, 4))
 Namespace.addCategoryObject('elementBinding', submerchantDebit.name().localName(), submerchantDebit)
 
-customerCredit = pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'customerCredit'), CTD_ANON_149, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3701, 4))
+customerCredit = pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'customerCredit'), CTD_ANON_134, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3393, 4))
 Namespace.addCategoryObject('elementBinding', customerCredit.name().localName(), customerCredit)
 
-customerDebit = pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'customerDebit'), CTD_ANON_150, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3720, 4))
+customerDebit = pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'customerDebit'), CTD_ANON_135, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3412, 4))
 Namespace.addCategoryObject('elementBinding', customerDebit.name().localName(), customerDebit)
+
+void = pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'void'), CTD_ANON_136, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3476, 4))
+Namespace.addCategoryObject('elementBinding', void.name().localName(), void)
+
+voidResponse = pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'voidResponse'), CTD_ANON_137, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3489, 4))
+Namespace.addCategoryObject('elementBinding', voidResponse.name().localName(), voidResponse)
+
+echeckVoid = pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'echeckVoid'), CTD_ANON_138, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3516, 4))
+Namespace.addCategoryObject('elementBinding', echeckVoid.name().localName(), echeckVoid)
+
+echeckVoidResponse = pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'echeckVoidResponse'), CTD_ANON_139, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3528, 4))
+Namespace.addCategoryObject('elementBinding', echeckVoidResponse.name().localName(), echeckVoidResponse)
+
+depositReversal = pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'depositReversal'), CTD_ANON_140, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3547, 4))
+Namespace.addCategoryObject('elementBinding', depositReversal.name().localName(), depositReversal)
+
+refundReversal = pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'refundReversal'), CTD_ANON_141, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3565, 4))
+Namespace.addCategoryObject('elementBinding', refundReversal.name().localName(), refundReversal)
+
+activateReversal = pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'activateReversal'), CTD_ANON_142, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3583, 4))
+Namespace.addCategoryObject('elementBinding', activateReversal.name().localName(), activateReversal)
+
+deactivateReversal = pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'deactivateReversal'), CTD_ANON_143, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3602, 4))
+Namespace.addCategoryObject('elementBinding', deactivateReversal.name().localName(), deactivateReversal)
+
+loadReversal = pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'loadReversal'), CTD_ANON_144, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3619, 4))
+Namespace.addCategoryObject('elementBinding', loadReversal.name().localName(), loadReversal)
+
+unloadReversal = pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'unloadReversal'), CTD_ANON_145, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3637, 4))
+Namespace.addCategoryObject('elementBinding', unloadReversal.name().localName(), unloadReversal)
+
+queryTransaction = pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'queryTransaction'), CTD_ANON_146, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3655, 4))
+Namespace.addCategoryObject('elementBinding', queryTransaction.name().localName(), queryTransaction)
+
+queryTransactionResponse = pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'queryTransactionResponse'), CTD_ANON_147, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3670, 4))
+Namespace.addCategoryObject('elementBinding', queryTransactionResponse.name().localName(), queryTransactionResponse)
+
+queryTransactionUnavailableResponse = pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'queryTransactionUnavailableResponse'), CTD_ANON_148, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3693, 4))
+Namespace.addCategoryObject('elementBinding', queryTransactionUnavailableResponse.name().localName(), queryTransactionUnavailableResponse)
+
+serviceStatusRequest = pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'serviceStatusRequest'), CTD_ANON_149, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3708, 4))
+Namespace.addCategoryObject('elementBinding', serviceStatusRequest.name().localName(), serviceStatusRequest)
+
+serviceStatusResponse = pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'serviceStatusResponse'), CTD_ANON_150, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3721, 4))
+Namespace.addCategoryObject('elementBinding', serviceStatusResponse.name().localName(), serviceStatusResponse)
 
 
 
@@ -26214,19 +26214,19 @@ def _BuildAutomaton_218 ():
     import pyxb.utils.fac as fac
 
     counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3323, 12))
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3442, 12))
     counters.add(cc_0)
     states = []
     final_update = None
-    symbol = pyxb.binding.content.ElementUse(baseRequest._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'authentication')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3323, 12))
+    symbol = pyxb.binding.content.ElementUse(baseRequest._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'authentication')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3442, 12))
     st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
     states.append(st_0)
     final_update = set()
-    symbol = pyxb.binding.content.ElementUse(baseRequest._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'transaction')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3325, 16))
+    symbol = pyxb.binding.content.ElementUse(baseRequest._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'transaction')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3444, 16))
     st_1 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
     states.append(st_1)
     final_update = set()
-    symbol = pyxb.binding.content.ElementUse(baseRequest._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'recurringTransaction')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3326, 16))
+    symbol = pyxb.binding.content.ElementUse(baseRequest._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'recurringTransaction')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3445, 16))
     st_2 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
     states.append(st_2)
     transitions = []
@@ -26258,19 +26258,19 @@ def _BuildAutomaton_219 ():
     import pyxb.utils.fac as fac
 
     counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3348, 16))
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3467, 16))
     counters.add(cc_0)
-    cc_1 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3349, 16))
+    cc_1 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3468, 16))
     counters.add(cc_1)
     states = []
     final_update = set()
     final_update.add(fac.UpdateInstruction(cc_0, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_34._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'transactionResponse')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3348, 16))
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_34._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'transactionResponse')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3467, 16))
     st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
     states.append(st_0)
     final_update = set()
     final_update.add(fac.UpdateInstruction(cc_1, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_34._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'recurringTransactionResponse')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3349, 16))
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_34._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'recurringTransactionResponse')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3468, 16))
     st_1 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
     states.append(st_1)
     transitions = []
@@ -26287,7 +26287,7 @@ CTD_ANON_34._Automaton = _BuildAutomaton_219()
 
 
 
-voidRecyclingResponseType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'creditCnpTxnId'), pyxb.binding.datatypes.long, scope=voidRecyclingResponseType, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3393, 12)))
+voidRecyclingResponseType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'creditCnpTxnId'), pyxb.binding.datatypes.long, scope=voidRecyclingResponseType, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3512, 12)))
 
 def _BuildAutomaton_220 ():
     # Remove this helper function from the namespace after it is invoked
@@ -26296,12 +26296,12 @@ def _BuildAutomaton_220 ():
     import pyxb.utils.fac as fac
 
     counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3393, 12))
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3512, 12))
     counters.add(cc_0)
     states = []
     final_update = set()
     final_update.add(fac.UpdateInstruction(cc_0, False))
-    symbol = pyxb.binding.content.ElementUse(voidRecyclingResponseType._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'creditCnpTxnId')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3393, 12))
+    symbol = pyxb.binding.content.ElementUse(voidRecyclingResponseType._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'creditCnpTxnId')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3512, 12))
     st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
     states.append(st_0)
     transitions = []
@@ -26323,12 +26323,12 @@ def _BuildAutomaton_221 ():
     import pyxb.utils.fac as fac
 
     counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=10, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3564, 36))
+    cc_0 = fac.CounterCondition(min=0, max=10, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3683, 36))
     counters.add(cc_0)
     states = []
     final_update = set()
     final_update.add(fac.UpdateInstruction(cc_0, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_35._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'transactionResponse')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3564, 36))
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_35._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'transactionResponse')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3683, 36))
     st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
     states.append(st_0)
     transitions = []
@@ -26689,19 +26689,19 @@ def _BuildAutomaton_225 ():
     import pyxb.utils.fac as fac
 
     counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3323, 12))
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3442, 12))
     counters.add(cc_0)
     states = []
     final_update = None
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_36._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'authentication')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3323, 12))
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_36._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'authentication')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3442, 12))
     st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
     states.append(st_0)
     final_update = set()
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_36._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'transaction')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3325, 16))
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_36._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'transaction')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3444, 16))
     st_1 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
     states.append(st_1)
     final_update = set()
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_36._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'recurringTransaction')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3326, 16))
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_36._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'recurringTransaction')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3445, 16))
     st_2 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
     states.append(st_2)
     transitions = []
@@ -49897,51 +49897,19 @@ CTD_ANON_129._Automaton = _BuildAutomaton_781()
 
 
 
-CTD_ANON_130._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'processingInstructions'), CTD_ANON_10, scope=CTD_ANON_130, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 1163, 4)))
+CTD_ANON_130._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'fundingCustomerId'), pyxb.binding.datatypes.string, scope=CTD_ANON_130, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3317, 32)))
 
-CTD_ANON_130._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'cnpTxnId'), pyxb.binding.datatypes.long, scope=CTD_ANON_130, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3362, 24)))
+CTD_ANON_130._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'fundingSubmerchantId'), pyxb.binding.datatypes.string, scope=CTD_ANON_130, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3318, 32)))
 
-def _BuildAutomaton_787 ():
-    # Remove this helper function from the namespace after it is invoked
-    global _BuildAutomaton_787
-    del _BuildAutomaton_787
-    import pyxb.utils.fac as fac
+CTD_ANON_130._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'vendorName'), pyxb.binding.datatypes.string, scope=CTD_ANON_130, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3320, 28)))
 
-    counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3362, 24))
-    counters.add(cc_0)
-    states = []
-    final_update = set()
-    final_update.add(fac.UpdateInstruction(cc_0, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_130._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'cnpTxnId')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3362, 24))
-    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
-    states.append(st_0)
-    transitions = []
-    transitions.append(fac.Transition(st_0, [
-        fac.UpdateInstruction(cc_0, True) ]))
-    st_0._set_transitionSet(transitions)
-    return fac.Automaton(states, counters, True, containing_state=st_0)
+CTD_ANON_130._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'fundsTransferId'), pyxb.binding.datatypes.string, scope=CTD_ANON_130, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3321, 28)))
 
-def _BuildAutomaton_788 ():
-    # Remove this helper function from the namespace after it is invoked
-    global _BuildAutomaton_788
-    del _BuildAutomaton_788
-    import pyxb.utils.fac as fac
+CTD_ANON_130._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'amount'), pyxb.binding.datatypes.integer, scope=CTD_ANON_130, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3322, 28)))
 
-    counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3363, 24))
-    counters.add(cc_0)
-    states = []
-    final_update = set()
-    final_update.add(fac.UpdateInstruction(cc_0, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_130._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'processingInstructions')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3363, 24))
-    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
-    states.append(st_0)
-    transitions = []
-    transitions.append(fac.Transition(st_0, [
-        fac.UpdateInstruction(cc_0, True) ]))
-    st_0._set_transitionSet(transitions)
-    return fac.Automaton(states, counters, True, containing_state=st_0)
+CTD_ANON_130._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'accountInfo'), echeckTypeCtx, scope=CTD_ANON_130, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3323, 28)))
+
+CTD_ANON_130._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'vendorAddress'), address, scope=CTD_ANON_130, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3324, 28)))
 
 def _BuildAutomaton_786 ():
     # Remove this helper function from the namespace after it is invoked
@@ -49950,42 +49918,440 @@ def _BuildAutomaton_786 ():
     import pyxb.utils.fac as fac
 
     counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3362, 24))
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3317, 32))
     counters.add(cc_0)
-    cc_1 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3363, 24))
+    cc_1 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3318, 32))
     counters.add(cc_1)
+    cc_2 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3320, 28))
+    counters.add(cc_2)
+    cc_3 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3321, 28))
+    counters.add(cc_3)
+    cc_4 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3322, 28))
+    counters.add(cc_4)
+    cc_5 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3323, 28))
+    counters.add(cc_5)
+    cc_6 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3324, 28))
+    counters.add(cc_6)
     states = []
-    sub_automata = []
-    sub_automata.append(_BuildAutomaton_787())
-    sub_automata.append(_BuildAutomaton_788())
     final_update = set()
-    symbol = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3361, 20)
-    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=True)
-    st_0._set_subAutomata(*sub_automata)
+    final_update.add(fac.UpdateInstruction(cc_0, False))
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_130._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'fundingCustomerId')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3317, 32))
+    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
     states.append(st_0)
+    final_update = set()
+    final_update.add(fac.UpdateInstruction(cc_1, False))
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_130._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'fundingSubmerchantId')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3318, 32))
+    st_1 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
+    states.append(st_1)
+    final_update = set()
+    final_update.add(fac.UpdateInstruction(cc_2, False))
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_130._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'vendorName')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3320, 28))
+    st_2 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
+    states.append(st_2)
+    final_update = set()
+    final_update.add(fac.UpdateInstruction(cc_3, False))
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_130._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'fundsTransferId')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3321, 28))
+    st_3 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
+    states.append(st_3)
+    final_update = set()
+    final_update.add(fac.UpdateInstruction(cc_4, False))
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_130._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'amount')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3322, 28))
+    st_4 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
+    states.append(st_4)
+    final_update = set()
+    final_update.add(fac.UpdateInstruction(cc_5, False))
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_130._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'accountInfo')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3323, 28))
+    st_5 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
+    states.append(st_5)
+    final_update = set()
+    final_update.add(fac.UpdateInstruction(cc_6, False))
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_130._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'vendorAddress')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3324, 28))
+    st_6 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
+    states.append(st_6)
     transitions = []
+    transitions.append(fac.Transition(st_0, [
+        fac.UpdateInstruction(cc_0, True) ]))
+    transitions.append(fac.Transition(st_2, [
+        fac.UpdateInstruction(cc_0, False) ]))
+    transitions.append(fac.Transition(st_3, [
+        fac.UpdateInstruction(cc_0, False) ]))
+    transitions.append(fac.Transition(st_4, [
+        fac.UpdateInstruction(cc_0, False) ]))
+    transitions.append(fac.Transition(st_5, [
+        fac.UpdateInstruction(cc_0, False) ]))
+    transitions.append(fac.Transition(st_6, [
+        fac.UpdateInstruction(cc_0, False) ]))
     st_0._set_transitionSet(transitions)
+    transitions = []
+    transitions.append(fac.Transition(st_1, [
+        fac.UpdateInstruction(cc_1, True) ]))
+    transitions.append(fac.Transition(st_2, [
+        fac.UpdateInstruction(cc_1, False) ]))
+    transitions.append(fac.Transition(st_3, [
+        fac.UpdateInstruction(cc_1, False) ]))
+    transitions.append(fac.Transition(st_4, [
+        fac.UpdateInstruction(cc_1, False) ]))
+    transitions.append(fac.Transition(st_5, [
+        fac.UpdateInstruction(cc_1, False) ]))
+    transitions.append(fac.Transition(st_6, [
+        fac.UpdateInstruction(cc_1, False) ]))
+    st_1._set_transitionSet(transitions)
+    transitions = []
+    transitions.append(fac.Transition(st_2, [
+        fac.UpdateInstruction(cc_2, True) ]))
+    transitions.append(fac.Transition(st_3, [
+        fac.UpdateInstruction(cc_2, False) ]))
+    transitions.append(fac.Transition(st_4, [
+        fac.UpdateInstruction(cc_2, False) ]))
+    transitions.append(fac.Transition(st_5, [
+        fac.UpdateInstruction(cc_2, False) ]))
+    transitions.append(fac.Transition(st_6, [
+        fac.UpdateInstruction(cc_2, False) ]))
+    st_2._set_transitionSet(transitions)
+    transitions = []
+    transitions.append(fac.Transition(st_3, [
+        fac.UpdateInstruction(cc_3, True) ]))
+    transitions.append(fac.Transition(st_4, [
+        fac.UpdateInstruction(cc_3, False) ]))
+    transitions.append(fac.Transition(st_5, [
+        fac.UpdateInstruction(cc_3, False) ]))
+    transitions.append(fac.Transition(st_6, [
+        fac.UpdateInstruction(cc_3, False) ]))
+    st_3._set_transitionSet(transitions)
+    transitions = []
+    transitions.append(fac.Transition(st_4, [
+        fac.UpdateInstruction(cc_4, True) ]))
+    transitions.append(fac.Transition(st_5, [
+        fac.UpdateInstruction(cc_4, False) ]))
+    transitions.append(fac.Transition(st_6, [
+        fac.UpdateInstruction(cc_4, False) ]))
+    st_4._set_transitionSet(transitions)
+    transitions = []
+    transitions.append(fac.Transition(st_5, [
+        fac.UpdateInstruction(cc_5, True) ]))
+    transitions.append(fac.Transition(st_6, [
+        fac.UpdateInstruction(cc_5, False) ]))
+    st_5._set_transitionSet(transitions)
+    transitions = []
+    transitions.append(fac.Transition(st_6, [
+        fac.UpdateInstruction(cc_6, True) ]))
+    st_6._set_transitionSet(transitions)
     return fac.Automaton(states, counters, True, containing_state=None)
 CTD_ANON_130._Automaton = _BuildAutomaton_786()
 
 
 
 
-CTD_ANON_131._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'cnpTxnId'), pyxb.binding.datatypes.long, scope=CTD_ANON_131, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3375, 24)))
+CTD_ANON_131._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'fundingCustomerId'), pyxb.binding.datatypes.string, scope=CTD_ANON_131, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3339, 32)))
 
-CTD_ANON_131._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'response'), pyxb.binding.datatypes.string, scope=CTD_ANON_131, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3376, 24)))
+CTD_ANON_131._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'fundingSubmerchantId'), pyxb.binding.datatypes.string, scope=CTD_ANON_131, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3340, 32)))
 
-CTD_ANON_131._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'responseTime'), pyxb.binding.datatypes.dateTime, scope=CTD_ANON_131, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3377, 24)))
+CTD_ANON_131._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'vendorName'), pyxb.binding.datatypes.string, scope=CTD_ANON_131, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3342, 28)))
 
-CTD_ANON_131._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'postDate'), pyxb.binding.datatypes.date, scope=CTD_ANON_131, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3378, 24)))
+CTD_ANON_131._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'fundsTransferId'), pyxb.binding.datatypes.string, scope=CTD_ANON_131, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3343, 28)))
 
-CTD_ANON_131._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'message'), pyxb.binding.datatypes.string, scope=CTD_ANON_131, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3379, 24)))
+CTD_ANON_131._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'amount'), pyxb.binding.datatypes.integer, scope=CTD_ANON_131, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3344, 28)))
 
-CTD_ANON_131._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'location'), pyxb.binding.datatypes.string, scope=CTD_ANON_131, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3380, 24)))
+CTD_ANON_131._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'accountInfo'), echeckTypeCtx, scope=CTD_ANON_131, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3345, 28)))
 
-CTD_ANON_131._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'recyclingResponse'), voidRecyclingResponseType, scope=CTD_ANON_131, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3381, 24)))
+CTD_ANON_131._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'vendorAddress'), address, scope=CTD_ANON_131, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3346, 28)))
 
-CTD_ANON_131._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'checkoutId'), pyxb.binding.datatypes.string, scope=CTD_ANON_131, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3383, 24)))
+def _BuildAutomaton_787 ():
+    # Remove this helper function from the namespace after it is invoked
+    global _BuildAutomaton_787
+    del _BuildAutomaton_787
+    import pyxb.utils.fac as fac
+
+    counters = set()
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3339, 32))
+    counters.add(cc_0)
+    cc_1 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3340, 32))
+    counters.add(cc_1)
+    cc_2 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3342, 28))
+    counters.add(cc_2)
+    cc_3 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3343, 28))
+    counters.add(cc_3)
+    cc_4 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3344, 28))
+    counters.add(cc_4)
+    cc_5 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3345, 28))
+    counters.add(cc_5)
+    cc_6 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3346, 28))
+    counters.add(cc_6)
+    states = []
+    final_update = set()
+    final_update.add(fac.UpdateInstruction(cc_0, False))
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_131._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'fundingCustomerId')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3339, 32))
+    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
+    states.append(st_0)
+    final_update = set()
+    final_update.add(fac.UpdateInstruction(cc_1, False))
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_131._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'fundingSubmerchantId')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3340, 32))
+    st_1 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
+    states.append(st_1)
+    final_update = set()
+    final_update.add(fac.UpdateInstruction(cc_2, False))
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_131._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'vendorName')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3342, 28))
+    st_2 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
+    states.append(st_2)
+    final_update = set()
+    final_update.add(fac.UpdateInstruction(cc_3, False))
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_131._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'fundsTransferId')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3343, 28))
+    st_3 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
+    states.append(st_3)
+    final_update = set()
+    final_update.add(fac.UpdateInstruction(cc_4, False))
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_131._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'amount')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3344, 28))
+    st_4 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
+    states.append(st_4)
+    final_update = set()
+    final_update.add(fac.UpdateInstruction(cc_5, False))
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_131._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'accountInfo')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3345, 28))
+    st_5 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
+    states.append(st_5)
+    final_update = set()
+    final_update.add(fac.UpdateInstruction(cc_6, False))
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_131._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'vendorAddress')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3346, 28))
+    st_6 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
+    states.append(st_6)
+    transitions = []
+    transitions.append(fac.Transition(st_0, [
+        fac.UpdateInstruction(cc_0, True) ]))
+    transitions.append(fac.Transition(st_2, [
+        fac.UpdateInstruction(cc_0, False) ]))
+    transitions.append(fac.Transition(st_3, [
+        fac.UpdateInstruction(cc_0, False) ]))
+    transitions.append(fac.Transition(st_4, [
+        fac.UpdateInstruction(cc_0, False) ]))
+    transitions.append(fac.Transition(st_5, [
+        fac.UpdateInstruction(cc_0, False) ]))
+    transitions.append(fac.Transition(st_6, [
+        fac.UpdateInstruction(cc_0, False) ]))
+    st_0._set_transitionSet(transitions)
+    transitions = []
+    transitions.append(fac.Transition(st_1, [
+        fac.UpdateInstruction(cc_1, True) ]))
+    transitions.append(fac.Transition(st_2, [
+        fac.UpdateInstruction(cc_1, False) ]))
+    transitions.append(fac.Transition(st_3, [
+        fac.UpdateInstruction(cc_1, False) ]))
+    transitions.append(fac.Transition(st_4, [
+        fac.UpdateInstruction(cc_1, False) ]))
+    transitions.append(fac.Transition(st_5, [
+        fac.UpdateInstruction(cc_1, False) ]))
+    transitions.append(fac.Transition(st_6, [
+        fac.UpdateInstruction(cc_1, False) ]))
+    st_1._set_transitionSet(transitions)
+    transitions = []
+    transitions.append(fac.Transition(st_2, [
+        fac.UpdateInstruction(cc_2, True) ]))
+    transitions.append(fac.Transition(st_3, [
+        fac.UpdateInstruction(cc_2, False) ]))
+    transitions.append(fac.Transition(st_4, [
+        fac.UpdateInstruction(cc_2, False) ]))
+    transitions.append(fac.Transition(st_5, [
+        fac.UpdateInstruction(cc_2, False) ]))
+    transitions.append(fac.Transition(st_6, [
+        fac.UpdateInstruction(cc_2, False) ]))
+    st_2._set_transitionSet(transitions)
+    transitions = []
+    transitions.append(fac.Transition(st_3, [
+        fac.UpdateInstruction(cc_3, True) ]))
+    transitions.append(fac.Transition(st_4, [
+        fac.UpdateInstruction(cc_3, False) ]))
+    transitions.append(fac.Transition(st_5, [
+        fac.UpdateInstruction(cc_3, False) ]))
+    transitions.append(fac.Transition(st_6, [
+        fac.UpdateInstruction(cc_3, False) ]))
+    st_3._set_transitionSet(transitions)
+    transitions = []
+    transitions.append(fac.Transition(st_4, [
+        fac.UpdateInstruction(cc_4, True) ]))
+    transitions.append(fac.Transition(st_5, [
+        fac.UpdateInstruction(cc_4, False) ]))
+    transitions.append(fac.Transition(st_6, [
+        fac.UpdateInstruction(cc_4, False) ]))
+    st_4._set_transitionSet(transitions)
+    transitions = []
+    transitions.append(fac.Transition(st_5, [
+        fac.UpdateInstruction(cc_5, True) ]))
+    transitions.append(fac.Transition(st_6, [
+        fac.UpdateInstruction(cc_5, False) ]))
+    st_5._set_transitionSet(transitions)
+    transitions = []
+    transitions.append(fac.Transition(st_6, [
+        fac.UpdateInstruction(cc_6, True) ]))
+    st_6._set_transitionSet(transitions)
+    return fac.Automaton(states, counters, True, containing_state=None)
+CTD_ANON_131._Automaton = _BuildAutomaton_787()
+
+
+
+
+CTD_ANON_132._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'fundingSubmerchantId'), pyxb.binding.datatypes.string, scope=CTD_ANON_132, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3361, 28)))
+
+CTD_ANON_132._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'submerchantName'), pyxb.binding.datatypes.string, scope=CTD_ANON_132, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3362, 28)))
+
+CTD_ANON_132._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'fundsTransferId'), pyxb.binding.datatypes.string, scope=CTD_ANON_132, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3363, 28)))
+
+CTD_ANON_132._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'amount'), pyxb.binding.datatypes.integer, scope=CTD_ANON_132, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3364, 28)))
+
+CTD_ANON_132._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'accountInfo'), echeckTypeCtx, scope=CTD_ANON_132, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3365, 28)))
+
+CTD_ANON_132._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'customIdentifier'), pyxb.binding.datatypes.string, scope=CTD_ANON_132, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3366, 28)))
+
+def _BuildAutomaton_788 ():
+    # Remove this helper function from the namespace after it is invoked
+    global _BuildAutomaton_788
+    del _BuildAutomaton_788
+    import pyxb.utils.fac as fac
+
+    counters = set()
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3366, 28))
+    counters.add(cc_0)
+    states = []
+    final_update = None
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_132._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'fundingSubmerchantId')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3361, 28))
+    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
+    states.append(st_0)
+    final_update = None
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_132._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'submerchantName')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3362, 28))
+    st_1 = fac.State(symbol, is_initial=False, final_update=final_update, is_unordered_catenation=False)
+    states.append(st_1)
+    final_update = None
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_132._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'fundsTransferId')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3363, 28))
+    st_2 = fac.State(symbol, is_initial=False, final_update=final_update, is_unordered_catenation=False)
+    states.append(st_2)
+    final_update = None
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_132._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'amount')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3364, 28))
+    st_3 = fac.State(symbol, is_initial=False, final_update=final_update, is_unordered_catenation=False)
+    states.append(st_3)
+    final_update = set()
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_132._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'accountInfo')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3365, 28))
+    st_4 = fac.State(symbol, is_initial=False, final_update=final_update, is_unordered_catenation=False)
+    states.append(st_4)
+    final_update = set()
+    final_update.add(fac.UpdateInstruction(cc_0, False))
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_132._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'customIdentifier')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3366, 28))
+    st_5 = fac.State(symbol, is_initial=False, final_update=final_update, is_unordered_catenation=False)
+    states.append(st_5)
+    transitions = []
+    transitions.append(fac.Transition(st_1, [
+         ]))
+    st_0._set_transitionSet(transitions)
+    transitions = []
+    transitions.append(fac.Transition(st_2, [
+         ]))
+    st_1._set_transitionSet(transitions)
+    transitions = []
+    transitions.append(fac.Transition(st_3, [
+         ]))
+    st_2._set_transitionSet(transitions)
+    transitions = []
+    transitions.append(fac.Transition(st_4, [
+         ]))
+    st_3._set_transitionSet(transitions)
+    transitions = []
+    transitions.append(fac.Transition(st_5, [
+         ]))
+    st_4._set_transitionSet(transitions)
+    transitions = []
+    transitions.append(fac.Transition(st_5, [
+        fac.UpdateInstruction(cc_0, True) ]))
+    st_5._set_transitionSet(transitions)
+    return fac.Automaton(states, counters, False, containing_state=None)
+CTD_ANON_132._Automaton = _BuildAutomaton_788()
+
+
+
+
+CTD_ANON_133._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'fundingSubmerchantId'), pyxb.binding.datatypes.string, scope=CTD_ANON_133, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3380, 28)))
+
+CTD_ANON_133._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'submerchantName'), pyxb.binding.datatypes.string, scope=CTD_ANON_133, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3381, 28)))
+
+CTD_ANON_133._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'fundsTransferId'), pyxb.binding.datatypes.string, scope=CTD_ANON_133, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3382, 28)))
+
+CTD_ANON_133._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'amount'), pyxb.binding.datatypes.integer, scope=CTD_ANON_133, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3383, 28)))
+
+CTD_ANON_133._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'accountInfo'), echeckTypeCtx, scope=CTD_ANON_133, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3384, 28)))
+
+CTD_ANON_133._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'customIdentifier'), pyxb.binding.datatypes.string, scope=CTD_ANON_133, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3385, 28)))
+
+def _BuildAutomaton_789 ():
+    # Remove this helper function from the namespace after it is invoked
+    global _BuildAutomaton_789
+    del _BuildAutomaton_789
+    import pyxb.utils.fac as fac
+
+    counters = set()
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3385, 28))
+    counters.add(cc_0)
+    states = []
+    final_update = None
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_133._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'fundingSubmerchantId')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3380, 28))
+    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
+    states.append(st_0)
+    final_update = None
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_133._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'submerchantName')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3381, 28))
+    st_1 = fac.State(symbol, is_initial=False, final_update=final_update, is_unordered_catenation=False)
+    states.append(st_1)
+    final_update = None
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_133._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'fundsTransferId')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3382, 28))
+    st_2 = fac.State(symbol, is_initial=False, final_update=final_update, is_unordered_catenation=False)
+    states.append(st_2)
+    final_update = None
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_133._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'amount')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3383, 28))
+    st_3 = fac.State(symbol, is_initial=False, final_update=final_update, is_unordered_catenation=False)
+    states.append(st_3)
+    final_update = set()
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_133._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'accountInfo')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3384, 28))
+    st_4 = fac.State(symbol, is_initial=False, final_update=final_update, is_unordered_catenation=False)
+    states.append(st_4)
+    final_update = set()
+    final_update.add(fac.UpdateInstruction(cc_0, False))
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_133._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'customIdentifier')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3385, 28))
+    st_5 = fac.State(symbol, is_initial=False, final_update=final_update, is_unordered_catenation=False)
+    states.append(st_5)
+    transitions = []
+    transitions.append(fac.Transition(st_1, [
+         ]))
+    st_0._set_transitionSet(transitions)
+    transitions = []
+    transitions.append(fac.Transition(st_2, [
+         ]))
+    st_1._set_transitionSet(transitions)
+    transitions = []
+    transitions.append(fac.Transition(st_3, [
+         ]))
+    st_2._set_transitionSet(transitions)
+    transitions = []
+    transitions.append(fac.Transition(st_4, [
+         ]))
+    st_3._set_transitionSet(transitions)
+    transitions = []
+    transitions.append(fac.Transition(st_5, [
+         ]))
+    st_4._set_transitionSet(transitions)
+    transitions = []
+    transitions.append(fac.Transition(st_5, [
+        fac.UpdateInstruction(cc_0, True) ]))
+    st_5._set_transitionSet(transitions)
+    return fac.Automaton(states, counters, False, containing_state=None)
+CTD_ANON_133._Automaton = _BuildAutomaton_789()
+
+
+
+
+CTD_ANON_134._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'fundingCustomerId'), pyxb.binding.datatypes.string, scope=CTD_ANON_134, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3399, 28)))
+
+CTD_ANON_134._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'customerName'), pyxb.binding.datatypes.string, scope=CTD_ANON_134, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3400, 28)))
+
+CTD_ANON_134._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'fundsTransferId'), pyxb.binding.datatypes.string, scope=CTD_ANON_134, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3401, 28)))
+
+CTD_ANON_134._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'amount'), pyxb.binding.datatypes.integer, scope=CTD_ANON_134, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3402, 28)))
+
+CTD_ANON_134._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'accountInfo'), echeckTypeCtx, scope=CTD_ANON_134, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3403, 28)))
+
+CTD_ANON_134._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'customIdentifier'), pyxb.binding.datatypes.string, scope=CTD_ANON_134, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3404, 28)))
 
 def _BuildAutomaton_790 ():
     # Remove this helper function from the namespace after it is invoked
@@ -49994,19 +50360,75 @@ def _BuildAutomaton_790 ():
     import pyxb.utils.fac as fac
 
     counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3375, 24))
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3404, 28))
     counters.add(cc_0)
     states = []
-    final_update = set()
-    final_update.add(fac.UpdateInstruction(cc_0, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_131._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'cnpTxnId')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3375, 24))
+    final_update = None
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_134._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'fundingCustomerId')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3399, 28))
     st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
     states.append(st_0)
+    final_update = None
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_134._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'customerName')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3400, 28))
+    st_1 = fac.State(symbol, is_initial=False, final_update=final_update, is_unordered_catenation=False)
+    states.append(st_1)
+    final_update = None
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_134._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'fundsTransferId')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3401, 28))
+    st_2 = fac.State(symbol, is_initial=False, final_update=final_update, is_unordered_catenation=False)
+    states.append(st_2)
+    final_update = None
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_134._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'amount')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3402, 28))
+    st_3 = fac.State(symbol, is_initial=False, final_update=final_update, is_unordered_catenation=False)
+    states.append(st_3)
+    final_update = set()
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_134._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'accountInfo')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3403, 28))
+    st_4 = fac.State(symbol, is_initial=False, final_update=final_update, is_unordered_catenation=False)
+    states.append(st_4)
+    final_update = set()
+    final_update.add(fac.UpdateInstruction(cc_0, False))
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_134._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'customIdentifier')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3404, 28))
+    st_5 = fac.State(symbol, is_initial=False, final_update=final_update, is_unordered_catenation=False)
+    states.append(st_5)
     transitions = []
-    transitions.append(fac.Transition(st_0, [
-        fac.UpdateInstruction(cc_0, True) ]))
+    transitions.append(fac.Transition(st_1, [
+         ]))
     st_0._set_transitionSet(transitions)
-    return fac.Automaton(states, counters, True, containing_state=st_0)
+    transitions = []
+    transitions.append(fac.Transition(st_2, [
+         ]))
+    st_1._set_transitionSet(transitions)
+    transitions = []
+    transitions.append(fac.Transition(st_3, [
+         ]))
+    st_2._set_transitionSet(transitions)
+    transitions = []
+    transitions.append(fac.Transition(st_4, [
+         ]))
+    st_3._set_transitionSet(transitions)
+    transitions = []
+    transitions.append(fac.Transition(st_5, [
+         ]))
+    st_4._set_transitionSet(transitions)
+    transitions = []
+    transitions.append(fac.Transition(st_5, [
+        fac.UpdateInstruction(cc_0, True) ]))
+    st_5._set_transitionSet(transitions)
+    return fac.Automaton(states, counters, False, containing_state=None)
+CTD_ANON_134._Automaton = _BuildAutomaton_790()
+
+
+
+
+CTD_ANON_135._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'fundingCustomerId'), pyxb.binding.datatypes.string, scope=CTD_ANON_135, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3418, 28)))
+
+CTD_ANON_135._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'customerName'), pyxb.binding.datatypes.string, scope=CTD_ANON_135, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3419, 28)))
+
+CTD_ANON_135._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'fundsTransferId'), pyxb.binding.datatypes.string, scope=CTD_ANON_135, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3420, 28)))
+
+CTD_ANON_135._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'amount'), pyxb.binding.datatypes.integer, scope=CTD_ANON_135, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3421, 28)))
+
+CTD_ANON_135._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'accountInfo'), echeckTypeCtx, scope=CTD_ANON_135, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3422, 28)))
+
+CTD_ANON_135._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'customIdentifier'), pyxb.binding.datatypes.string, scope=CTD_ANON_135, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3423, 28)))
 
 def _BuildAutomaton_791 ():
     # Remove this helper function from the namespace after it is invoked
@@ -50015,40 +50437,67 @@ def _BuildAutomaton_791 ():
     import pyxb.utils.fac as fac
 
     counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3376, 24))
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3423, 28))
     counters.add(cc_0)
     states = []
-    final_update = set()
-    final_update.add(fac.UpdateInstruction(cc_0, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_131._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'response')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3376, 24))
+    final_update = None
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_135._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'fundingCustomerId')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3418, 28))
     st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
     states.append(st_0)
-    transitions = []
-    transitions.append(fac.Transition(st_0, [
-        fac.UpdateInstruction(cc_0, True) ]))
-    st_0._set_transitionSet(transitions)
-    return fac.Automaton(states, counters, True, containing_state=st_0)
-
-def _BuildAutomaton_792 ():
-    # Remove this helper function from the namespace after it is invoked
-    global _BuildAutomaton_792
-    del _BuildAutomaton_792
-    import pyxb.utils.fac as fac
-
-    counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3377, 24))
-    counters.add(cc_0)
-    states = []
+    final_update = None
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_135._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'customerName')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3419, 28))
+    st_1 = fac.State(symbol, is_initial=False, final_update=final_update, is_unordered_catenation=False)
+    states.append(st_1)
+    final_update = None
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_135._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'fundsTransferId')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3420, 28))
+    st_2 = fac.State(symbol, is_initial=False, final_update=final_update, is_unordered_catenation=False)
+    states.append(st_2)
+    final_update = None
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_135._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'amount')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3421, 28))
+    st_3 = fac.State(symbol, is_initial=False, final_update=final_update, is_unordered_catenation=False)
+    states.append(st_3)
+    final_update = set()
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_135._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'accountInfo')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3422, 28))
+    st_4 = fac.State(symbol, is_initial=False, final_update=final_update, is_unordered_catenation=False)
+    states.append(st_4)
     final_update = set()
     final_update.add(fac.UpdateInstruction(cc_0, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_131._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'responseTime')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3377, 24))
-    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
-    states.append(st_0)
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_135._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'customIdentifier')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3423, 28))
+    st_5 = fac.State(symbol, is_initial=False, final_update=final_update, is_unordered_catenation=False)
+    states.append(st_5)
     transitions = []
-    transitions.append(fac.Transition(st_0, [
-        fac.UpdateInstruction(cc_0, True) ]))
+    transitions.append(fac.Transition(st_1, [
+         ]))
     st_0._set_transitionSet(transitions)
-    return fac.Automaton(states, counters, True, containing_state=st_0)
+    transitions = []
+    transitions.append(fac.Transition(st_2, [
+         ]))
+    st_1._set_transitionSet(transitions)
+    transitions = []
+    transitions.append(fac.Transition(st_3, [
+         ]))
+    st_2._set_transitionSet(transitions)
+    transitions = []
+    transitions.append(fac.Transition(st_4, [
+         ]))
+    st_3._set_transitionSet(transitions)
+    transitions = []
+    transitions.append(fac.Transition(st_5, [
+         ]))
+    st_4._set_transitionSet(transitions)
+    transitions = []
+    transitions.append(fac.Transition(st_5, [
+        fac.UpdateInstruction(cc_0, True) ]))
+    st_5._set_transitionSet(transitions)
+    return fac.Automaton(states, counters, False, containing_state=None)
+CTD_ANON_135._Automaton = _BuildAutomaton_791()
+
+
+
+
+CTD_ANON_136._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'processingInstructions'), CTD_ANON_10, scope=CTD_ANON_136, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 1163, 4)))
+
+CTD_ANON_136._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'cnpTxnId'), pyxb.binding.datatypes.long, scope=CTD_ANON_136, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3481, 24)))
 
 def _BuildAutomaton_793 ():
     # Remove this helper function from the namespace after it is invoked
@@ -50057,12 +50506,12 @@ def _BuildAutomaton_793 ():
     import pyxb.utils.fac as fac
 
     counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3378, 24))
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3481, 24))
     counters.add(cc_0)
     states = []
     final_update = set()
     final_update.add(fac.UpdateInstruction(cc_0, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_131._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'postDate')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3378, 24))
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_136._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'cnpTxnId')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3481, 24))
     st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
     states.append(st_0)
     transitions = []
@@ -50078,12 +50527,12 @@ def _BuildAutomaton_794 ():
     import pyxb.utils.fac as fac
 
     counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3379, 24))
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3482, 24))
     counters.add(cc_0)
     states = []
     final_update = set()
     final_update.add(fac.UpdateInstruction(cc_0, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_131._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'message')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3379, 24))
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_136._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'processingInstructions')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3482, 24))
     st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
     states.append(st_0)
     transitions = []
@@ -50092,26 +50541,49 @@ def _BuildAutomaton_794 ():
     st_0._set_transitionSet(transitions)
     return fac.Automaton(states, counters, True, containing_state=st_0)
 
-def _BuildAutomaton_795 ():
+def _BuildAutomaton_792 ():
     # Remove this helper function from the namespace after it is invoked
-    global _BuildAutomaton_795
-    del _BuildAutomaton_795
+    global _BuildAutomaton_792
+    del _BuildAutomaton_792
     import pyxb.utils.fac as fac
 
     counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3380, 24))
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3481, 24))
     counters.add(cc_0)
+    cc_1 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3482, 24))
+    counters.add(cc_1)
     states = []
+    sub_automata = []
+    sub_automata.append(_BuildAutomaton_793())
+    sub_automata.append(_BuildAutomaton_794())
     final_update = set()
-    final_update.add(fac.UpdateInstruction(cc_0, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_131._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'location')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3380, 24))
-    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
+    symbol = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3480, 20)
+    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=True)
+    st_0._set_subAutomata(*sub_automata)
     states.append(st_0)
     transitions = []
-    transitions.append(fac.Transition(st_0, [
-        fac.UpdateInstruction(cc_0, True) ]))
     st_0._set_transitionSet(transitions)
-    return fac.Automaton(states, counters, True, containing_state=st_0)
+    return fac.Automaton(states, counters, True, containing_state=None)
+CTD_ANON_136._Automaton = _BuildAutomaton_792()
+
+
+
+
+CTD_ANON_137._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'cnpTxnId'), pyxb.binding.datatypes.long, scope=CTD_ANON_137, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3494, 24)))
+
+CTD_ANON_137._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'response'), pyxb.binding.datatypes.string, scope=CTD_ANON_137, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3495, 24)))
+
+CTD_ANON_137._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'responseTime'), pyxb.binding.datatypes.dateTime, scope=CTD_ANON_137, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3496, 24)))
+
+CTD_ANON_137._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'postDate'), pyxb.binding.datatypes.date, scope=CTD_ANON_137, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3497, 24)))
+
+CTD_ANON_137._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'message'), pyxb.binding.datatypes.string, scope=CTD_ANON_137, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3498, 24)))
+
+CTD_ANON_137._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'location'), pyxb.binding.datatypes.string, scope=CTD_ANON_137, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3499, 24)))
+
+CTD_ANON_137._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'recyclingResponse'), voidRecyclingResponseType, scope=CTD_ANON_137, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3500, 24)))
+
+CTD_ANON_137._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'checkoutId'), pyxb.binding.datatypes.string, scope=CTD_ANON_137, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3502, 24)))
 
 def _BuildAutomaton_796 ():
     # Remove this helper function from the namespace after it is invoked
@@ -50120,12 +50592,12 @@ def _BuildAutomaton_796 ():
     import pyxb.utils.fac as fac
 
     counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3381, 24))
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3494, 24))
     counters.add(cc_0)
     states = []
     final_update = set()
     final_update.add(fac.UpdateInstruction(cc_0, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_131._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'recyclingResponse')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3381, 24))
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_137._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'cnpTxnId')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3494, 24))
     st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
     states.append(st_0)
     transitions = []
@@ -50141,12 +50613,12 @@ def _BuildAutomaton_797 ():
     import pyxb.utils.fac as fac
 
     counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3383, 24))
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3495, 24))
     counters.add(cc_0)
     states = []
     final_update = set()
     final_update.add(fac.UpdateInstruction(cc_0, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_131._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'checkoutId')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3383, 24))
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_137._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'response')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3495, 24))
     st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
     states.append(st_0)
     transitions = []
@@ -50154,54 +50626,6 @@ def _BuildAutomaton_797 ():
         fac.UpdateInstruction(cc_0, True) ]))
     st_0._set_transitionSet(transitions)
     return fac.Automaton(states, counters, True, containing_state=st_0)
-
-def _BuildAutomaton_789 ():
-    # Remove this helper function from the namespace after it is invoked
-    global _BuildAutomaton_789
-    del _BuildAutomaton_789
-    import pyxb.utils.fac as fac
-
-    counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3375, 24))
-    counters.add(cc_0)
-    cc_1 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3376, 24))
-    counters.add(cc_1)
-    cc_2 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3377, 24))
-    counters.add(cc_2)
-    cc_3 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3378, 24))
-    counters.add(cc_3)
-    cc_4 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3379, 24))
-    counters.add(cc_4)
-    cc_5 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3380, 24))
-    counters.add(cc_5)
-    cc_6 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3381, 24))
-    counters.add(cc_6)
-    cc_7 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3383, 24))
-    counters.add(cc_7)
-    states = []
-    sub_automata = []
-    sub_automata.append(_BuildAutomaton_790())
-    sub_automata.append(_BuildAutomaton_791())
-    sub_automata.append(_BuildAutomaton_792())
-    sub_automata.append(_BuildAutomaton_793())
-    sub_automata.append(_BuildAutomaton_794())
-    sub_automata.append(_BuildAutomaton_795())
-    sub_automata.append(_BuildAutomaton_796())
-    sub_automata.append(_BuildAutomaton_797())
-    final_update = set()
-    symbol = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3374, 20)
-    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=True)
-    st_0._set_subAutomata(*sub_automata)
-    states.append(st_0)
-    transitions = []
-    st_0._set_transitionSet(transitions)
-    return fac.Automaton(states, counters, True, containing_state=None)
-CTD_ANON_131._Automaton = _BuildAutomaton_789()
-
-
-
-
-CTD_ANON_132._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'cnpTxnId'), pyxb.binding.datatypes.long, scope=CTD_ANON_132, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3402, 24)))
 
 def _BuildAutomaton_798 ():
     # Remove this helper function from the namespace after it is invoked
@@ -50210,177 +50634,12 @@ def _BuildAutomaton_798 ():
     import pyxb.utils.fac as fac
 
     counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3402, 24))
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3496, 24))
     counters.add(cc_0)
     states = []
     final_update = set()
     final_update.add(fac.UpdateInstruction(cc_0, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_132._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'cnpTxnId')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3402, 24))
-    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
-    states.append(st_0)
-    transitions = []
-    transitions.append(fac.Transition(st_0, [
-        fac.UpdateInstruction(cc_0, True) ]))
-    st_0._set_transitionSet(transitions)
-    return fac.Automaton(states, counters, True, containing_state=None)
-CTD_ANON_132._Automaton = _BuildAutomaton_798()
-
-
-
-
-CTD_ANON_133._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'cnpTxnId'), pyxb.binding.datatypes.long, scope=CTD_ANON_133, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3414, 24)))
-
-CTD_ANON_133._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'response'), pyxb.binding.datatypes.string, scope=CTD_ANON_133, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3415, 24)))
-
-CTD_ANON_133._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'responseTime'), pyxb.binding.datatypes.dateTime, scope=CTD_ANON_133, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3416, 24)))
-
-CTD_ANON_133._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'postDate'), pyxb.binding.datatypes.date, scope=CTD_ANON_133, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3417, 24)))
-
-CTD_ANON_133._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'message'), pyxb.binding.datatypes.string, scope=CTD_ANON_133, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3418, 24)))
-
-CTD_ANON_133._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'location'), pyxb.binding.datatypes.string, scope=CTD_ANON_133, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3419, 24)))
-
-CTD_ANON_133._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'checkoutId'), pyxb.binding.datatypes.string, scope=CTD_ANON_133, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3421, 24)))
-
-def _BuildAutomaton_800 ():
-    # Remove this helper function from the namespace after it is invoked
-    global _BuildAutomaton_800
-    del _BuildAutomaton_800
-    import pyxb.utils.fac as fac
-
-    counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3414, 24))
-    counters.add(cc_0)
-    states = []
-    final_update = set()
-    final_update.add(fac.UpdateInstruction(cc_0, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_133._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'cnpTxnId')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3414, 24))
-    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
-    states.append(st_0)
-    transitions = []
-    transitions.append(fac.Transition(st_0, [
-        fac.UpdateInstruction(cc_0, True) ]))
-    st_0._set_transitionSet(transitions)
-    return fac.Automaton(states, counters, True, containing_state=st_0)
-
-def _BuildAutomaton_801 ():
-    # Remove this helper function from the namespace after it is invoked
-    global _BuildAutomaton_801
-    del _BuildAutomaton_801
-    import pyxb.utils.fac as fac
-
-    counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3415, 24))
-    counters.add(cc_0)
-    states = []
-    final_update = set()
-    final_update.add(fac.UpdateInstruction(cc_0, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_133._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'response')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3415, 24))
-    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
-    states.append(st_0)
-    transitions = []
-    transitions.append(fac.Transition(st_0, [
-        fac.UpdateInstruction(cc_0, True) ]))
-    st_0._set_transitionSet(transitions)
-    return fac.Automaton(states, counters, True, containing_state=st_0)
-
-def _BuildAutomaton_802 ():
-    # Remove this helper function from the namespace after it is invoked
-    global _BuildAutomaton_802
-    del _BuildAutomaton_802
-    import pyxb.utils.fac as fac
-
-    counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3416, 24))
-    counters.add(cc_0)
-    states = []
-    final_update = set()
-    final_update.add(fac.UpdateInstruction(cc_0, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_133._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'responseTime')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3416, 24))
-    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
-    states.append(st_0)
-    transitions = []
-    transitions.append(fac.Transition(st_0, [
-        fac.UpdateInstruction(cc_0, True) ]))
-    st_0._set_transitionSet(transitions)
-    return fac.Automaton(states, counters, True, containing_state=st_0)
-
-def _BuildAutomaton_803 ():
-    # Remove this helper function from the namespace after it is invoked
-    global _BuildAutomaton_803
-    del _BuildAutomaton_803
-    import pyxb.utils.fac as fac
-
-    counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3417, 24))
-    counters.add(cc_0)
-    states = []
-    final_update = set()
-    final_update.add(fac.UpdateInstruction(cc_0, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_133._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'postDate')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3417, 24))
-    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
-    states.append(st_0)
-    transitions = []
-    transitions.append(fac.Transition(st_0, [
-        fac.UpdateInstruction(cc_0, True) ]))
-    st_0._set_transitionSet(transitions)
-    return fac.Automaton(states, counters, True, containing_state=st_0)
-
-def _BuildAutomaton_804 ():
-    # Remove this helper function from the namespace after it is invoked
-    global _BuildAutomaton_804
-    del _BuildAutomaton_804
-    import pyxb.utils.fac as fac
-
-    counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3418, 24))
-    counters.add(cc_0)
-    states = []
-    final_update = set()
-    final_update.add(fac.UpdateInstruction(cc_0, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_133._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'message')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3418, 24))
-    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
-    states.append(st_0)
-    transitions = []
-    transitions.append(fac.Transition(st_0, [
-        fac.UpdateInstruction(cc_0, True) ]))
-    st_0._set_transitionSet(transitions)
-    return fac.Automaton(states, counters, True, containing_state=st_0)
-
-def _BuildAutomaton_805 ():
-    # Remove this helper function from the namespace after it is invoked
-    global _BuildAutomaton_805
-    del _BuildAutomaton_805
-    import pyxb.utils.fac as fac
-
-    counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3419, 24))
-    counters.add(cc_0)
-    states = []
-    final_update = set()
-    final_update.add(fac.UpdateInstruction(cc_0, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_133._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'location')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3419, 24))
-    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
-    states.append(st_0)
-    transitions = []
-    transitions.append(fac.Transition(st_0, [
-        fac.UpdateInstruction(cc_0, True) ]))
-    st_0._set_transitionSet(transitions)
-    return fac.Automaton(states, counters, True, containing_state=st_0)
-
-def _BuildAutomaton_806 ():
-    # Remove this helper function from the namespace after it is invoked
-    global _BuildAutomaton_806
-    del _BuildAutomaton_806
-    import pyxb.utils.fac as fac
-
-    counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3421, 24))
-    counters.add(cc_0)
-    states = []
-    final_update = set()
-    final_update.add(fac.UpdateInstruction(cc_0, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_133._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'checkoutId')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3421, 24))
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_137._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'responseTime')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3496, 24))
     st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
     states.append(st_0)
     transitions = []
@@ -50396,195 +50655,204 @@ def _BuildAutomaton_799 ():
     import pyxb.utils.fac as fac
 
     counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3414, 24))
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3497, 24))
     counters.add(cc_0)
-    cc_1 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3415, 24))
+    states = []
+    final_update = set()
+    final_update.add(fac.UpdateInstruction(cc_0, False))
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_137._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'postDate')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3497, 24))
+    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
+    states.append(st_0)
+    transitions = []
+    transitions.append(fac.Transition(st_0, [
+        fac.UpdateInstruction(cc_0, True) ]))
+    st_0._set_transitionSet(transitions)
+    return fac.Automaton(states, counters, True, containing_state=st_0)
+
+def _BuildAutomaton_800 ():
+    # Remove this helper function from the namespace after it is invoked
+    global _BuildAutomaton_800
+    del _BuildAutomaton_800
+    import pyxb.utils.fac as fac
+
+    counters = set()
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3498, 24))
+    counters.add(cc_0)
+    states = []
+    final_update = set()
+    final_update.add(fac.UpdateInstruction(cc_0, False))
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_137._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'message')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3498, 24))
+    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
+    states.append(st_0)
+    transitions = []
+    transitions.append(fac.Transition(st_0, [
+        fac.UpdateInstruction(cc_0, True) ]))
+    st_0._set_transitionSet(transitions)
+    return fac.Automaton(states, counters, True, containing_state=st_0)
+
+def _BuildAutomaton_801 ():
+    # Remove this helper function from the namespace after it is invoked
+    global _BuildAutomaton_801
+    del _BuildAutomaton_801
+    import pyxb.utils.fac as fac
+
+    counters = set()
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3499, 24))
+    counters.add(cc_0)
+    states = []
+    final_update = set()
+    final_update.add(fac.UpdateInstruction(cc_0, False))
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_137._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'location')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3499, 24))
+    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
+    states.append(st_0)
+    transitions = []
+    transitions.append(fac.Transition(st_0, [
+        fac.UpdateInstruction(cc_0, True) ]))
+    st_0._set_transitionSet(transitions)
+    return fac.Automaton(states, counters, True, containing_state=st_0)
+
+def _BuildAutomaton_802 ():
+    # Remove this helper function from the namespace after it is invoked
+    global _BuildAutomaton_802
+    del _BuildAutomaton_802
+    import pyxb.utils.fac as fac
+
+    counters = set()
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3500, 24))
+    counters.add(cc_0)
+    states = []
+    final_update = set()
+    final_update.add(fac.UpdateInstruction(cc_0, False))
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_137._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'recyclingResponse')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3500, 24))
+    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
+    states.append(st_0)
+    transitions = []
+    transitions.append(fac.Transition(st_0, [
+        fac.UpdateInstruction(cc_0, True) ]))
+    st_0._set_transitionSet(transitions)
+    return fac.Automaton(states, counters, True, containing_state=st_0)
+
+def _BuildAutomaton_803 ():
+    # Remove this helper function from the namespace after it is invoked
+    global _BuildAutomaton_803
+    del _BuildAutomaton_803
+    import pyxb.utils.fac as fac
+
+    counters = set()
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3502, 24))
+    counters.add(cc_0)
+    states = []
+    final_update = set()
+    final_update.add(fac.UpdateInstruction(cc_0, False))
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_137._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'checkoutId')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3502, 24))
+    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
+    states.append(st_0)
+    transitions = []
+    transitions.append(fac.Transition(st_0, [
+        fac.UpdateInstruction(cc_0, True) ]))
+    st_0._set_transitionSet(transitions)
+    return fac.Automaton(states, counters, True, containing_state=st_0)
+
+def _BuildAutomaton_795 ():
+    # Remove this helper function from the namespace after it is invoked
+    global _BuildAutomaton_795
+    del _BuildAutomaton_795
+    import pyxb.utils.fac as fac
+
+    counters = set()
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3494, 24))
+    counters.add(cc_0)
+    cc_1 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3495, 24))
     counters.add(cc_1)
-    cc_2 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3416, 24))
+    cc_2 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3496, 24))
     counters.add(cc_2)
-    cc_3 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3417, 24))
+    cc_3 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3497, 24))
     counters.add(cc_3)
-    cc_4 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3418, 24))
+    cc_4 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3498, 24))
     counters.add(cc_4)
-    cc_5 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3419, 24))
+    cc_5 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3499, 24))
     counters.add(cc_5)
-    cc_6 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3421, 24))
+    cc_6 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3500, 24))
     counters.add(cc_6)
+    cc_7 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3502, 24))
+    counters.add(cc_7)
     states = []
     sub_automata = []
+    sub_automata.append(_BuildAutomaton_796())
+    sub_automata.append(_BuildAutomaton_797())
+    sub_automata.append(_BuildAutomaton_798())
+    sub_automata.append(_BuildAutomaton_799())
     sub_automata.append(_BuildAutomaton_800())
     sub_automata.append(_BuildAutomaton_801())
     sub_automata.append(_BuildAutomaton_802())
     sub_automata.append(_BuildAutomaton_803())
-    sub_automata.append(_BuildAutomaton_804())
-    sub_automata.append(_BuildAutomaton_805())
-    sub_automata.append(_BuildAutomaton_806())
     final_update = set()
-    symbol = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3413, 20)
+    symbol = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3493, 20)
     st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=True)
     st_0._set_subAutomata(*sub_automata)
     states.append(st_0)
     transitions = []
     st_0._set_transitionSet(transitions)
     return fac.Automaton(states, counters, True, containing_state=None)
-CTD_ANON_133._Automaton = _BuildAutomaton_799()
+CTD_ANON_137._Automaton = _BuildAutomaton_795()
 
 
 
 
-CTD_ANON_134._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'cnpTxnId'), pyxb.binding.datatypes.long, scope=CTD_ANON_134, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3433, 24)))
+CTD_ANON_138._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'cnpTxnId'), pyxb.binding.datatypes.long, scope=CTD_ANON_138, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3521, 24)))
 
-CTD_ANON_134._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'card'), giftCardCardType, scope=CTD_ANON_134, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3434, 24)))
-
-CTD_ANON_134._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'originalRefCode'), pyxb.binding.datatypes.string, scope=CTD_ANON_134, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3435, 24)))
-
-CTD_ANON_134._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'originalAmount'), pyxb.binding.datatypes.integer, scope=CTD_ANON_134, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3436, 24)))
-
-CTD_ANON_134._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'originalTxnTime'), pyxb.binding.datatypes.dateTime, scope=CTD_ANON_134, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3437, 24)))
-
-CTD_ANON_134._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'originalSystemTraceId'), pyxb.binding.datatypes.int, scope=CTD_ANON_134, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3438, 24)))
-
-CTD_ANON_134._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'originalSequenceNumber'), pyxb.binding.datatypes.string, scope=CTD_ANON_134, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3439, 24)))
-
-def _BuildAutomaton_808 ():
+def _BuildAutomaton_804 ():
     # Remove this helper function from the namespace after it is invoked
-    global _BuildAutomaton_808
-    del _BuildAutomaton_808
+    global _BuildAutomaton_804
+    del _BuildAutomaton_804
     import pyxb.utils.fac as fac
 
     counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3433, 24))
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3521, 24))
     counters.add(cc_0)
     states = []
     final_update = set()
     final_update.add(fac.UpdateInstruction(cc_0, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_134._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'cnpTxnId')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3433, 24))
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_138._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'cnpTxnId')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3521, 24))
     st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
     states.append(st_0)
     transitions = []
     transitions.append(fac.Transition(st_0, [
         fac.UpdateInstruction(cc_0, True) ]))
     st_0._set_transitionSet(transitions)
-    return fac.Automaton(states, counters, True, containing_state=st_0)
+    return fac.Automaton(states, counters, True, containing_state=None)
+CTD_ANON_138._Automaton = _BuildAutomaton_804()
 
-def _BuildAutomaton_809 ():
+
+
+
+CTD_ANON_139._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'cnpTxnId'), pyxb.binding.datatypes.long, scope=CTD_ANON_139, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3533, 24)))
+
+CTD_ANON_139._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'response'), pyxb.binding.datatypes.string, scope=CTD_ANON_139, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3534, 24)))
+
+CTD_ANON_139._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'responseTime'), pyxb.binding.datatypes.dateTime, scope=CTD_ANON_139, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3535, 24)))
+
+CTD_ANON_139._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'postDate'), pyxb.binding.datatypes.date, scope=CTD_ANON_139, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3536, 24)))
+
+CTD_ANON_139._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'message'), pyxb.binding.datatypes.string, scope=CTD_ANON_139, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3537, 24)))
+
+CTD_ANON_139._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'location'), pyxb.binding.datatypes.string, scope=CTD_ANON_139, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3538, 24)))
+
+CTD_ANON_139._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'checkoutId'), pyxb.binding.datatypes.string, scope=CTD_ANON_139, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3540, 24)))
+
+def _BuildAutomaton_806 ():
     # Remove this helper function from the namespace after it is invoked
-    global _BuildAutomaton_809
-    del _BuildAutomaton_809
+    global _BuildAutomaton_806
+    del _BuildAutomaton_806
     import pyxb.utils.fac as fac
 
     counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3434, 24))
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3533, 24))
     counters.add(cc_0)
     states = []
     final_update = set()
     final_update.add(fac.UpdateInstruction(cc_0, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_134._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'card')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3434, 24))
-    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
-    states.append(st_0)
-    transitions = []
-    transitions.append(fac.Transition(st_0, [
-        fac.UpdateInstruction(cc_0, True) ]))
-    st_0._set_transitionSet(transitions)
-    return fac.Automaton(states, counters, True, containing_state=st_0)
-
-def _BuildAutomaton_810 ():
-    # Remove this helper function from the namespace after it is invoked
-    global _BuildAutomaton_810
-    del _BuildAutomaton_810
-    import pyxb.utils.fac as fac
-
-    counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3435, 24))
-    counters.add(cc_0)
-    states = []
-    final_update = set()
-    final_update.add(fac.UpdateInstruction(cc_0, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_134._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'originalRefCode')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3435, 24))
-    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
-    states.append(st_0)
-    transitions = []
-    transitions.append(fac.Transition(st_0, [
-        fac.UpdateInstruction(cc_0, True) ]))
-    st_0._set_transitionSet(transitions)
-    return fac.Automaton(states, counters, True, containing_state=st_0)
-
-def _BuildAutomaton_811 ():
-    # Remove this helper function from the namespace after it is invoked
-    global _BuildAutomaton_811
-    del _BuildAutomaton_811
-    import pyxb.utils.fac as fac
-
-    counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3436, 24))
-    counters.add(cc_0)
-    states = []
-    final_update = set()
-    final_update.add(fac.UpdateInstruction(cc_0, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_134._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'originalAmount')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3436, 24))
-    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
-    states.append(st_0)
-    transitions = []
-    transitions.append(fac.Transition(st_0, [
-        fac.UpdateInstruction(cc_0, True) ]))
-    st_0._set_transitionSet(transitions)
-    return fac.Automaton(states, counters, True, containing_state=st_0)
-
-def _BuildAutomaton_812 ():
-    # Remove this helper function from the namespace after it is invoked
-    global _BuildAutomaton_812
-    del _BuildAutomaton_812
-    import pyxb.utils.fac as fac
-
-    counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3437, 24))
-    counters.add(cc_0)
-    states = []
-    final_update = set()
-    final_update.add(fac.UpdateInstruction(cc_0, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_134._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'originalTxnTime')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3437, 24))
-    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
-    states.append(st_0)
-    transitions = []
-    transitions.append(fac.Transition(st_0, [
-        fac.UpdateInstruction(cc_0, True) ]))
-    st_0._set_transitionSet(transitions)
-    return fac.Automaton(states, counters, True, containing_state=st_0)
-
-def _BuildAutomaton_813 ():
-    # Remove this helper function from the namespace after it is invoked
-    global _BuildAutomaton_813
-    del _BuildAutomaton_813
-    import pyxb.utils.fac as fac
-
-    counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3438, 24))
-    counters.add(cc_0)
-    states = []
-    final_update = set()
-    final_update.add(fac.UpdateInstruction(cc_0, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_134._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'originalSystemTraceId')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3438, 24))
-    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
-    states.append(st_0)
-    transitions = []
-    transitions.append(fac.Transition(st_0, [
-        fac.UpdateInstruction(cc_0, True) ]))
-    st_0._set_transitionSet(transitions)
-    return fac.Automaton(states, counters, True, containing_state=st_0)
-
-def _BuildAutomaton_814 ():
-    # Remove this helper function from the namespace after it is invoked
-    global _BuildAutomaton_814
-    del _BuildAutomaton_814
-    import pyxb.utils.fac as fac
-
-    counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3439, 24))
-    counters.add(cc_0)
-    states = []
-    final_update = set()
-    final_update.add(fac.UpdateInstruction(cc_0, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_134._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'originalSequenceNumber')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3439, 24))
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_139._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'cnpTxnId')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3533, 24))
     st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
     states.append(st_0)
     transitions = []
@@ -50600,195 +50868,195 @@ def _BuildAutomaton_807 ():
     import pyxb.utils.fac as fac
 
     counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3433, 24))
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3534, 24))
     counters.add(cc_0)
-    cc_1 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3434, 24))
+    states = []
+    final_update = set()
+    final_update.add(fac.UpdateInstruction(cc_0, False))
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_139._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'response')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3534, 24))
+    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
+    states.append(st_0)
+    transitions = []
+    transitions.append(fac.Transition(st_0, [
+        fac.UpdateInstruction(cc_0, True) ]))
+    st_0._set_transitionSet(transitions)
+    return fac.Automaton(states, counters, True, containing_state=st_0)
+
+def _BuildAutomaton_808 ():
+    # Remove this helper function from the namespace after it is invoked
+    global _BuildAutomaton_808
+    del _BuildAutomaton_808
+    import pyxb.utils.fac as fac
+
+    counters = set()
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3535, 24))
+    counters.add(cc_0)
+    states = []
+    final_update = set()
+    final_update.add(fac.UpdateInstruction(cc_0, False))
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_139._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'responseTime')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3535, 24))
+    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
+    states.append(st_0)
+    transitions = []
+    transitions.append(fac.Transition(st_0, [
+        fac.UpdateInstruction(cc_0, True) ]))
+    st_0._set_transitionSet(transitions)
+    return fac.Automaton(states, counters, True, containing_state=st_0)
+
+def _BuildAutomaton_809 ():
+    # Remove this helper function from the namespace after it is invoked
+    global _BuildAutomaton_809
+    del _BuildAutomaton_809
+    import pyxb.utils.fac as fac
+
+    counters = set()
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3536, 24))
+    counters.add(cc_0)
+    states = []
+    final_update = set()
+    final_update.add(fac.UpdateInstruction(cc_0, False))
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_139._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'postDate')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3536, 24))
+    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
+    states.append(st_0)
+    transitions = []
+    transitions.append(fac.Transition(st_0, [
+        fac.UpdateInstruction(cc_0, True) ]))
+    st_0._set_transitionSet(transitions)
+    return fac.Automaton(states, counters, True, containing_state=st_0)
+
+def _BuildAutomaton_810 ():
+    # Remove this helper function from the namespace after it is invoked
+    global _BuildAutomaton_810
+    del _BuildAutomaton_810
+    import pyxb.utils.fac as fac
+
+    counters = set()
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3537, 24))
+    counters.add(cc_0)
+    states = []
+    final_update = set()
+    final_update.add(fac.UpdateInstruction(cc_0, False))
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_139._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'message')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3537, 24))
+    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
+    states.append(st_0)
+    transitions = []
+    transitions.append(fac.Transition(st_0, [
+        fac.UpdateInstruction(cc_0, True) ]))
+    st_0._set_transitionSet(transitions)
+    return fac.Automaton(states, counters, True, containing_state=st_0)
+
+def _BuildAutomaton_811 ():
+    # Remove this helper function from the namespace after it is invoked
+    global _BuildAutomaton_811
+    del _BuildAutomaton_811
+    import pyxb.utils.fac as fac
+
+    counters = set()
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3538, 24))
+    counters.add(cc_0)
+    states = []
+    final_update = set()
+    final_update.add(fac.UpdateInstruction(cc_0, False))
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_139._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'location')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3538, 24))
+    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
+    states.append(st_0)
+    transitions = []
+    transitions.append(fac.Transition(st_0, [
+        fac.UpdateInstruction(cc_0, True) ]))
+    st_0._set_transitionSet(transitions)
+    return fac.Automaton(states, counters, True, containing_state=st_0)
+
+def _BuildAutomaton_812 ():
+    # Remove this helper function from the namespace after it is invoked
+    global _BuildAutomaton_812
+    del _BuildAutomaton_812
+    import pyxb.utils.fac as fac
+
+    counters = set()
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3540, 24))
+    counters.add(cc_0)
+    states = []
+    final_update = set()
+    final_update.add(fac.UpdateInstruction(cc_0, False))
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_139._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'checkoutId')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3540, 24))
+    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
+    states.append(st_0)
+    transitions = []
+    transitions.append(fac.Transition(st_0, [
+        fac.UpdateInstruction(cc_0, True) ]))
+    st_0._set_transitionSet(transitions)
+    return fac.Automaton(states, counters, True, containing_state=st_0)
+
+def _BuildAutomaton_805 ():
+    # Remove this helper function from the namespace after it is invoked
+    global _BuildAutomaton_805
+    del _BuildAutomaton_805
+    import pyxb.utils.fac as fac
+
+    counters = set()
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3533, 24))
+    counters.add(cc_0)
+    cc_1 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3534, 24))
     counters.add(cc_1)
-    cc_2 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3435, 24))
+    cc_2 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3535, 24))
     counters.add(cc_2)
-    cc_3 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3436, 24))
+    cc_3 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3536, 24))
     counters.add(cc_3)
-    cc_4 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3437, 24))
+    cc_4 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3537, 24))
     counters.add(cc_4)
-    cc_5 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3438, 24))
+    cc_5 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3538, 24))
     counters.add(cc_5)
-    cc_6 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3439, 24))
+    cc_6 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3540, 24))
     counters.add(cc_6)
     states = []
     sub_automata = []
+    sub_automata.append(_BuildAutomaton_806())
+    sub_automata.append(_BuildAutomaton_807())
     sub_automata.append(_BuildAutomaton_808())
     sub_automata.append(_BuildAutomaton_809())
     sub_automata.append(_BuildAutomaton_810())
     sub_automata.append(_BuildAutomaton_811())
     sub_automata.append(_BuildAutomaton_812())
-    sub_automata.append(_BuildAutomaton_813())
-    sub_automata.append(_BuildAutomaton_814())
     final_update = set()
-    symbol = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3432, 20)
+    symbol = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3532, 20)
     st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=True)
     st_0._set_subAutomata(*sub_automata)
     states.append(st_0)
     transitions = []
     st_0._set_transitionSet(transitions)
     return fac.Automaton(states, counters, True, containing_state=None)
-CTD_ANON_134._Automaton = _BuildAutomaton_807()
+CTD_ANON_139._Automaton = _BuildAutomaton_805()
 
 
 
 
-CTD_ANON_135._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'cnpTxnId'), pyxb.binding.datatypes.long, scope=CTD_ANON_135, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3451, 24)))
+CTD_ANON_140._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'cnpTxnId'), pyxb.binding.datatypes.long, scope=CTD_ANON_140, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3552, 24)))
 
-CTD_ANON_135._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'card'), giftCardCardType, scope=CTD_ANON_135, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3452, 24)))
+CTD_ANON_140._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'card'), giftCardCardType, scope=CTD_ANON_140, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3553, 24)))
 
-CTD_ANON_135._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'originalRefCode'), pyxb.binding.datatypes.string, scope=CTD_ANON_135, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3453, 24)))
+CTD_ANON_140._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'originalRefCode'), pyxb.binding.datatypes.string, scope=CTD_ANON_140, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3554, 24)))
 
-CTD_ANON_135._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'originalAmount'), pyxb.binding.datatypes.integer, scope=CTD_ANON_135, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3454, 24)))
+CTD_ANON_140._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'originalAmount'), pyxb.binding.datatypes.integer, scope=CTD_ANON_140, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3555, 24)))
 
-CTD_ANON_135._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'originalTxnTime'), pyxb.binding.datatypes.dateTime, scope=CTD_ANON_135, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3455, 24)))
+CTD_ANON_140._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'originalTxnTime'), pyxb.binding.datatypes.dateTime, scope=CTD_ANON_140, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3556, 24)))
 
-CTD_ANON_135._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'originalSystemTraceId'), pyxb.binding.datatypes.int, scope=CTD_ANON_135, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3456, 24)))
+CTD_ANON_140._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'originalSystemTraceId'), pyxb.binding.datatypes.int, scope=CTD_ANON_140, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3557, 24)))
 
-CTD_ANON_135._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'originalSequenceNumber'), pyxb.binding.datatypes.string, scope=CTD_ANON_135, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3457, 24)))
+CTD_ANON_140._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'originalSequenceNumber'), pyxb.binding.datatypes.string, scope=CTD_ANON_140, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3558, 24)))
 
-def _BuildAutomaton_816 ():
+def _BuildAutomaton_814 ():
     # Remove this helper function from the namespace after it is invoked
-    global _BuildAutomaton_816
-    del _BuildAutomaton_816
+    global _BuildAutomaton_814
+    del _BuildAutomaton_814
     import pyxb.utils.fac as fac
 
     counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3451, 24))
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3552, 24))
     counters.add(cc_0)
     states = []
     final_update = set()
     final_update.add(fac.UpdateInstruction(cc_0, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_135._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'cnpTxnId')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3451, 24))
-    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
-    states.append(st_0)
-    transitions = []
-    transitions.append(fac.Transition(st_0, [
-        fac.UpdateInstruction(cc_0, True) ]))
-    st_0._set_transitionSet(transitions)
-    return fac.Automaton(states, counters, True, containing_state=st_0)
-
-def _BuildAutomaton_817 ():
-    # Remove this helper function from the namespace after it is invoked
-    global _BuildAutomaton_817
-    del _BuildAutomaton_817
-    import pyxb.utils.fac as fac
-
-    counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3452, 24))
-    counters.add(cc_0)
-    states = []
-    final_update = set()
-    final_update.add(fac.UpdateInstruction(cc_0, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_135._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'card')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3452, 24))
-    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
-    states.append(st_0)
-    transitions = []
-    transitions.append(fac.Transition(st_0, [
-        fac.UpdateInstruction(cc_0, True) ]))
-    st_0._set_transitionSet(transitions)
-    return fac.Automaton(states, counters, True, containing_state=st_0)
-
-def _BuildAutomaton_818 ():
-    # Remove this helper function from the namespace after it is invoked
-    global _BuildAutomaton_818
-    del _BuildAutomaton_818
-    import pyxb.utils.fac as fac
-
-    counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3453, 24))
-    counters.add(cc_0)
-    states = []
-    final_update = set()
-    final_update.add(fac.UpdateInstruction(cc_0, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_135._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'originalRefCode')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3453, 24))
-    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
-    states.append(st_0)
-    transitions = []
-    transitions.append(fac.Transition(st_0, [
-        fac.UpdateInstruction(cc_0, True) ]))
-    st_0._set_transitionSet(transitions)
-    return fac.Automaton(states, counters, True, containing_state=st_0)
-
-def _BuildAutomaton_819 ():
-    # Remove this helper function from the namespace after it is invoked
-    global _BuildAutomaton_819
-    del _BuildAutomaton_819
-    import pyxb.utils.fac as fac
-
-    counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3454, 24))
-    counters.add(cc_0)
-    states = []
-    final_update = set()
-    final_update.add(fac.UpdateInstruction(cc_0, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_135._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'originalAmount')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3454, 24))
-    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
-    states.append(st_0)
-    transitions = []
-    transitions.append(fac.Transition(st_0, [
-        fac.UpdateInstruction(cc_0, True) ]))
-    st_0._set_transitionSet(transitions)
-    return fac.Automaton(states, counters, True, containing_state=st_0)
-
-def _BuildAutomaton_820 ():
-    # Remove this helper function from the namespace after it is invoked
-    global _BuildAutomaton_820
-    del _BuildAutomaton_820
-    import pyxb.utils.fac as fac
-
-    counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3455, 24))
-    counters.add(cc_0)
-    states = []
-    final_update = set()
-    final_update.add(fac.UpdateInstruction(cc_0, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_135._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'originalTxnTime')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3455, 24))
-    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
-    states.append(st_0)
-    transitions = []
-    transitions.append(fac.Transition(st_0, [
-        fac.UpdateInstruction(cc_0, True) ]))
-    st_0._set_transitionSet(transitions)
-    return fac.Automaton(states, counters, True, containing_state=st_0)
-
-def _BuildAutomaton_821 ():
-    # Remove this helper function from the namespace after it is invoked
-    global _BuildAutomaton_821
-    del _BuildAutomaton_821
-    import pyxb.utils.fac as fac
-
-    counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3456, 24))
-    counters.add(cc_0)
-    states = []
-    final_update = set()
-    final_update.add(fac.UpdateInstruction(cc_0, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_135._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'originalSystemTraceId')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3456, 24))
-    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
-    states.append(st_0)
-    transitions = []
-    transitions.append(fac.Transition(st_0, [
-        fac.UpdateInstruction(cc_0, True) ]))
-    st_0._set_transitionSet(transitions)
-    return fac.Automaton(states, counters, True, containing_state=st_0)
-
-def _BuildAutomaton_822 ():
-    # Remove this helper function from the namespace after it is invoked
-    global _BuildAutomaton_822
-    del _BuildAutomaton_822
-    import pyxb.utils.fac as fac
-
-    counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3457, 24))
-    counters.add(cc_0)
-    states = []
-    final_update = set()
-    final_update.add(fac.UpdateInstruction(cc_0, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_135._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'originalSequenceNumber')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3457, 24))
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_140._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'cnpTxnId')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3552, 24))
     st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
     states.append(st_0)
     transitions = []
@@ -50804,218 +51072,195 @@ def _BuildAutomaton_815 ():
     import pyxb.utils.fac as fac
 
     counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3451, 24))
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3553, 24))
     counters.add(cc_0)
-    cc_1 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3452, 24))
+    states = []
+    final_update = set()
+    final_update.add(fac.UpdateInstruction(cc_0, False))
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_140._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'card')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3553, 24))
+    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
+    states.append(st_0)
+    transitions = []
+    transitions.append(fac.Transition(st_0, [
+        fac.UpdateInstruction(cc_0, True) ]))
+    st_0._set_transitionSet(transitions)
+    return fac.Automaton(states, counters, True, containing_state=st_0)
+
+def _BuildAutomaton_816 ():
+    # Remove this helper function from the namespace after it is invoked
+    global _BuildAutomaton_816
+    del _BuildAutomaton_816
+    import pyxb.utils.fac as fac
+
+    counters = set()
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3554, 24))
+    counters.add(cc_0)
+    states = []
+    final_update = set()
+    final_update.add(fac.UpdateInstruction(cc_0, False))
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_140._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'originalRefCode')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3554, 24))
+    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
+    states.append(st_0)
+    transitions = []
+    transitions.append(fac.Transition(st_0, [
+        fac.UpdateInstruction(cc_0, True) ]))
+    st_0._set_transitionSet(transitions)
+    return fac.Automaton(states, counters, True, containing_state=st_0)
+
+def _BuildAutomaton_817 ():
+    # Remove this helper function from the namespace after it is invoked
+    global _BuildAutomaton_817
+    del _BuildAutomaton_817
+    import pyxb.utils.fac as fac
+
+    counters = set()
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3555, 24))
+    counters.add(cc_0)
+    states = []
+    final_update = set()
+    final_update.add(fac.UpdateInstruction(cc_0, False))
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_140._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'originalAmount')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3555, 24))
+    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
+    states.append(st_0)
+    transitions = []
+    transitions.append(fac.Transition(st_0, [
+        fac.UpdateInstruction(cc_0, True) ]))
+    st_0._set_transitionSet(transitions)
+    return fac.Automaton(states, counters, True, containing_state=st_0)
+
+def _BuildAutomaton_818 ():
+    # Remove this helper function from the namespace after it is invoked
+    global _BuildAutomaton_818
+    del _BuildAutomaton_818
+    import pyxb.utils.fac as fac
+
+    counters = set()
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3556, 24))
+    counters.add(cc_0)
+    states = []
+    final_update = set()
+    final_update.add(fac.UpdateInstruction(cc_0, False))
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_140._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'originalTxnTime')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3556, 24))
+    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
+    states.append(st_0)
+    transitions = []
+    transitions.append(fac.Transition(st_0, [
+        fac.UpdateInstruction(cc_0, True) ]))
+    st_0._set_transitionSet(transitions)
+    return fac.Automaton(states, counters, True, containing_state=st_0)
+
+def _BuildAutomaton_819 ():
+    # Remove this helper function from the namespace after it is invoked
+    global _BuildAutomaton_819
+    del _BuildAutomaton_819
+    import pyxb.utils.fac as fac
+
+    counters = set()
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3557, 24))
+    counters.add(cc_0)
+    states = []
+    final_update = set()
+    final_update.add(fac.UpdateInstruction(cc_0, False))
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_140._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'originalSystemTraceId')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3557, 24))
+    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
+    states.append(st_0)
+    transitions = []
+    transitions.append(fac.Transition(st_0, [
+        fac.UpdateInstruction(cc_0, True) ]))
+    st_0._set_transitionSet(transitions)
+    return fac.Automaton(states, counters, True, containing_state=st_0)
+
+def _BuildAutomaton_820 ():
+    # Remove this helper function from the namespace after it is invoked
+    global _BuildAutomaton_820
+    del _BuildAutomaton_820
+    import pyxb.utils.fac as fac
+
+    counters = set()
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3558, 24))
+    counters.add(cc_0)
+    states = []
+    final_update = set()
+    final_update.add(fac.UpdateInstruction(cc_0, False))
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_140._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'originalSequenceNumber')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3558, 24))
+    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
+    states.append(st_0)
+    transitions = []
+    transitions.append(fac.Transition(st_0, [
+        fac.UpdateInstruction(cc_0, True) ]))
+    st_0._set_transitionSet(transitions)
+    return fac.Automaton(states, counters, True, containing_state=st_0)
+
+def _BuildAutomaton_813 ():
+    # Remove this helper function from the namespace after it is invoked
+    global _BuildAutomaton_813
+    del _BuildAutomaton_813
+    import pyxb.utils.fac as fac
+
+    counters = set()
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3552, 24))
+    counters.add(cc_0)
+    cc_1 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3553, 24))
     counters.add(cc_1)
-    cc_2 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3453, 24))
+    cc_2 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3554, 24))
     counters.add(cc_2)
-    cc_3 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3454, 24))
+    cc_3 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3555, 24))
     counters.add(cc_3)
-    cc_4 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3455, 24))
+    cc_4 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3556, 24))
     counters.add(cc_4)
-    cc_5 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3456, 24))
+    cc_5 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3557, 24))
     counters.add(cc_5)
-    cc_6 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3457, 24))
+    cc_6 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3558, 24))
     counters.add(cc_6)
     states = []
     sub_automata = []
+    sub_automata.append(_BuildAutomaton_814())
+    sub_automata.append(_BuildAutomaton_815())
     sub_automata.append(_BuildAutomaton_816())
     sub_automata.append(_BuildAutomaton_817())
     sub_automata.append(_BuildAutomaton_818())
     sub_automata.append(_BuildAutomaton_819())
     sub_automata.append(_BuildAutomaton_820())
-    sub_automata.append(_BuildAutomaton_821())
-    sub_automata.append(_BuildAutomaton_822())
     final_update = set()
-    symbol = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3450, 20)
+    symbol = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3551, 20)
     st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=True)
     st_0._set_subAutomata(*sub_automata)
     states.append(st_0)
     transitions = []
     st_0._set_transitionSet(transitions)
     return fac.Automaton(states, counters, True, containing_state=None)
-CTD_ANON_135._Automaton = _BuildAutomaton_815()
+CTD_ANON_140._Automaton = _BuildAutomaton_813()
 
 
 
 
-CTD_ANON_136._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'cnpTxnId'), pyxb.binding.datatypes.long, scope=CTD_ANON_136, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3469, 24)))
+CTD_ANON_141._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'cnpTxnId'), pyxb.binding.datatypes.long, scope=CTD_ANON_141, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3570, 24)))
 
-CTD_ANON_136._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'card'), giftCardCardType, scope=CTD_ANON_136, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3470, 24)))
+CTD_ANON_141._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'card'), giftCardCardType, scope=CTD_ANON_141, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3571, 24)))
 
-CTD_ANON_136._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'virtualGiftCardBin'), pyxb.binding.datatypes.string, scope=CTD_ANON_136, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3471, 24)))
+CTD_ANON_141._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'originalRefCode'), pyxb.binding.datatypes.string, scope=CTD_ANON_141, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3572, 24)))
 
-CTD_ANON_136._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'originalRefCode'), pyxb.binding.datatypes.string, scope=CTD_ANON_136, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3472, 24)))
+CTD_ANON_141._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'originalAmount'), pyxb.binding.datatypes.integer, scope=CTD_ANON_141, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3573, 24)))
 
-CTD_ANON_136._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'originalAmount'), pyxb.binding.datatypes.integer, scope=CTD_ANON_136, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3473, 24)))
+CTD_ANON_141._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'originalTxnTime'), pyxb.binding.datatypes.dateTime, scope=CTD_ANON_141, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3574, 24)))
 
-CTD_ANON_136._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'originalTxnTime'), pyxb.binding.datatypes.dateTime, scope=CTD_ANON_136, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3474, 24)))
+CTD_ANON_141._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'originalSystemTraceId'), pyxb.binding.datatypes.int, scope=CTD_ANON_141, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3575, 24)))
 
-CTD_ANON_136._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'originalSystemTraceId'), pyxb.binding.datatypes.int, scope=CTD_ANON_136, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3475, 24)))
+CTD_ANON_141._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'originalSequenceNumber'), pyxb.binding.datatypes.string, scope=CTD_ANON_141, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3576, 24)))
 
-CTD_ANON_136._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'originalSequenceNumber'), pyxb.binding.datatypes.string, scope=CTD_ANON_136, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3476, 24)))
-
-def _BuildAutomaton_824 ():
+def _BuildAutomaton_822 ():
     # Remove this helper function from the namespace after it is invoked
-    global _BuildAutomaton_824
-    del _BuildAutomaton_824
+    global _BuildAutomaton_822
+    del _BuildAutomaton_822
     import pyxb.utils.fac as fac
 
     counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3469, 24))
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3570, 24))
     counters.add(cc_0)
     states = []
     final_update = set()
     final_update.add(fac.UpdateInstruction(cc_0, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_136._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'cnpTxnId')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3469, 24))
-    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
-    states.append(st_0)
-    transitions = []
-    transitions.append(fac.Transition(st_0, [
-        fac.UpdateInstruction(cc_0, True) ]))
-    st_0._set_transitionSet(transitions)
-    return fac.Automaton(states, counters, True, containing_state=st_0)
-
-def _BuildAutomaton_825 ():
-    # Remove this helper function from the namespace after it is invoked
-    global _BuildAutomaton_825
-    del _BuildAutomaton_825
-    import pyxb.utils.fac as fac
-
-    counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3470, 24))
-    counters.add(cc_0)
-    states = []
-    final_update = set()
-    final_update.add(fac.UpdateInstruction(cc_0, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_136._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'card')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3470, 24))
-    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
-    states.append(st_0)
-    transitions = []
-    transitions.append(fac.Transition(st_0, [
-        fac.UpdateInstruction(cc_0, True) ]))
-    st_0._set_transitionSet(transitions)
-    return fac.Automaton(states, counters, True, containing_state=st_0)
-
-def _BuildAutomaton_826 ():
-    # Remove this helper function from the namespace after it is invoked
-    global _BuildAutomaton_826
-    del _BuildAutomaton_826
-    import pyxb.utils.fac as fac
-
-    counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3471, 24))
-    counters.add(cc_0)
-    states = []
-    final_update = set()
-    final_update.add(fac.UpdateInstruction(cc_0, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_136._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'virtualGiftCardBin')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3471, 24))
-    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
-    states.append(st_0)
-    transitions = []
-    transitions.append(fac.Transition(st_0, [
-        fac.UpdateInstruction(cc_0, True) ]))
-    st_0._set_transitionSet(transitions)
-    return fac.Automaton(states, counters, True, containing_state=st_0)
-
-def _BuildAutomaton_827 ():
-    # Remove this helper function from the namespace after it is invoked
-    global _BuildAutomaton_827
-    del _BuildAutomaton_827
-    import pyxb.utils.fac as fac
-
-    counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3472, 24))
-    counters.add(cc_0)
-    states = []
-    final_update = set()
-    final_update.add(fac.UpdateInstruction(cc_0, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_136._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'originalRefCode')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3472, 24))
-    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
-    states.append(st_0)
-    transitions = []
-    transitions.append(fac.Transition(st_0, [
-        fac.UpdateInstruction(cc_0, True) ]))
-    st_0._set_transitionSet(transitions)
-    return fac.Automaton(states, counters, True, containing_state=st_0)
-
-def _BuildAutomaton_828 ():
-    # Remove this helper function from the namespace after it is invoked
-    global _BuildAutomaton_828
-    del _BuildAutomaton_828
-    import pyxb.utils.fac as fac
-
-    counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3473, 24))
-    counters.add(cc_0)
-    states = []
-    final_update = set()
-    final_update.add(fac.UpdateInstruction(cc_0, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_136._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'originalAmount')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3473, 24))
-    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
-    states.append(st_0)
-    transitions = []
-    transitions.append(fac.Transition(st_0, [
-        fac.UpdateInstruction(cc_0, True) ]))
-    st_0._set_transitionSet(transitions)
-    return fac.Automaton(states, counters, True, containing_state=st_0)
-
-def _BuildAutomaton_829 ():
-    # Remove this helper function from the namespace after it is invoked
-    global _BuildAutomaton_829
-    del _BuildAutomaton_829
-    import pyxb.utils.fac as fac
-
-    counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3474, 24))
-    counters.add(cc_0)
-    states = []
-    final_update = set()
-    final_update.add(fac.UpdateInstruction(cc_0, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_136._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'originalTxnTime')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3474, 24))
-    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
-    states.append(st_0)
-    transitions = []
-    transitions.append(fac.Transition(st_0, [
-        fac.UpdateInstruction(cc_0, True) ]))
-    st_0._set_transitionSet(transitions)
-    return fac.Automaton(states, counters, True, containing_state=st_0)
-
-def _BuildAutomaton_830 ():
-    # Remove this helper function from the namespace after it is invoked
-    global _BuildAutomaton_830
-    del _BuildAutomaton_830
-    import pyxb.utils.fac as fac
-
-    counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3475, 24))
-    counters.add(cc_0)
-    states = []
-    final_update = set()
-    final_update.add(fac.UpdateInstruction(cc_0, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_136._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'originalSystemTraceId')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3475, 24))
-    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
-    states.append(st_0)
-    transitions = []
-    transitions.append(fac.Transition(st_0, [
-        fac.UpdateInstruction(cc_0, True) ]))
-    st_0._set_transitionSet(transitions)
-    return fac.Automaton(states, counters, True, containing_state=st_0)
-
-def _BuildAutomaton_831 ():
-    # Remove this helper function from the namespace after it is invoked
-    global _BuildAutomaton_831
-    del _BuildAutomaton_831
-    import pyxb.utils.fac as fac
-
-    counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3476, 24))
-    counters.add(cc_0)
-    states = []
-    final_update = set()
-    final_update.add(fac.UpdateInstruction(cc_0, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_136._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'originalSequenceNumber')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3476, 24))
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_141._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'cnpTxnId')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3570, 24))
     st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
     states.append(st_0)
     transitions = []
@@ -51031,70 +51276,197 @@ def _BuildAutomaton_823 ():
     import pyxb.utils.fac as fac
 
     counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3469, 24))
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3571, 24))
     counters.add(cc_0)
-    cc_1 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3470, 24))
+    states = []
+    final_update = set()
+    final_update.add(fac.UpdateInstruction(cc_0, False))
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_141._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'card')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3571, 24))
+    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
+    states.append(st_0)
+    transitions = []
+    transitions.append(fac.Transition(st_0, [
+        fac.UpdateInstruction(cc_0, True) ]))
+    st_0._set_transitionSet(transitions)
+    return fac.Automaton(states, counters, True, containing_state=st_0)
+
+def _BuildAutomaton_824 ():
+    # Remove this helper function from the namespace after it is invoked
+    global _BuildAutomaton_824
+    del _BuildAutomaton_824
+    import pyxb.utils.fac as fac
+
+    counters = set()
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3572, 24))
+    counters.add(cc_0)
+    states = []
+    final_update = set()
+    final_update.add(fac.UpdateInstruction(cc_0, False))
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_141._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'originalRefCode')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3572, 24))
+    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
+    states.append(st_0)
+    transitions = []
+    transitions.append(fac.Transition(st_0, [
+        fac.UpdateInstruction(cc_0, True) ]))
+    st_0._set_transitionSet(transitions)
+    return fac.Automaton(states, counters, True, containing_state=st_0)
+
+def _BuildAutomaton_825 ():
+    # Remove this helper function from the namespace after it is invoked
+    global _BuildAutomaton_825
+    del _BuildAutomaton_825
+    import pyxb.utils.fac as fac
+
+    counters = set()
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3573, 24))
+    counters.add(cc_0)
+    states = []
+    final_update = set()
+    final_update.add(fac.UpdateInstruction(cc_0, False))
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_141._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'originalAmount')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3573, 24))
+    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
+    states.append(st_0)
+    transitions = []
+    transitions.append(fac.Transition(st_0, [
+        fac.UpdateInstruction(cc_0, True) ]))
+    st_0._set_transitionSet(transitions)
+    return fac.Automaton(states, counters, True, containing_state=st_0)
+
+def _BuildAutomaton_826 ():
+    # Remove this helper function from the namespace after it is invoked
+    global _BuildAutomaton_826
+    del _BuildAutomaton_826
+    import pyxb.utils.fac as fac
+
+    counters = set()
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3574, 24))
+    counters.add(cc_0)
+    states = []
+    final_update = set()
+    final_update.add(fac.UpdateInstruction(cc_0, False))
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_141._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'originalTxnTime')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3574, 24))
+    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
+    states.append(st_0)
+    transitions = []
+    transitions.append(fac.Transition(st_0, [
+        fac.UpdateInstruction(cc_0, True) ]))
+    st_0._set_transitionSet(transitions)
+    return fac.Automaton(states, counters, True, containing_state=st_0)
+
+def _BuildAutomaton_827 ():
+    # Remove this helper function from the namespace after it is invoked
+    global _BuildAutomaton_827
+    del _BuildAutomaton_827
+    import pyxb.utils.fac as fac
+
+    counters = set()
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3575, 24))
+    counters.add(cc_0)
+    states = []
+    final_update = set()
+    final_update.add(fac.UpdateInstruction(cc_0, False))
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_141._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'originalSystemTraceId')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3575, 24))
+    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
+    states.append(st_0)
+    transitions = []
+    transitions.append(fac.Transition(st_0, [
+        fac.UpdateInstruction(cc_0, True) ]))
+    st_0._set_transitionSet(transitions)
+    return fac.Automaton(states, counters, True, containing_state=st_0)
+
+def _BuildAutomaton_828 ():
+    # Remove this helper function from the namespace after it is invoked
+    global _BuildAutomaton_828
+    del _BuildAutomaton_828
+    import pyxb.utils.fac as fac
+
+    counters = set()
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3576, 24))
+    counters.add(cc_0)
+    states = []
+    final_update = set()
+    final_update.add(fac.UpdateInstruction(cc_0, False))
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_141._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'originalSequenceNumber')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3576, 24))
+    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
+    states.append(st_0)
+    transitions = []
+    transitions.append(fac.Transition(st_0, [
+        fac.UpdateInstruction(cc_0, True) ]))
+    st_0._set_transitionSet(transitions)
+    return fac.Automaton(states, counters, True, containing_state=st_0)
+
+def _BuildAutomaton_821 ():
+    # Remove this helper function from the namespace after it is invoked
+    global _BuildAutomaton_821
+    del _BuildAutomaton_821
+    import pyxb.utils.fac as fac
+
+    counters = set()
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3570, 24))
+    counters.add(cc_0)
+    cc_1 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3571, 24))
     counters.add(cc_1)
-    cc_2 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3471, 24))
+    cc_2 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3572, 24))
     counters.add(cc_2)
-    cc_3 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3472, 24))
+    cc_3 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3573, 24))
     counters.add(cc_3)
-    cc_4 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3473, 24))
+    cc_4 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3574, 24))
     counters.add(cc_4)
-    cc_5 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3474, 24))
+    cc_5 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3575, 24))
     counters.add(cc_5)
-    cc_6 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3475, 24))
+    cc_6 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3576, 24))
     counters.add(cc_6)
-    cc_7 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3476, 24))
-    counters.add(cc_7)
     states = []
     sub_automata = []
+    sub_automata.append(_BuildAutomaton_822())
+    sub_automata.append(_BuildAutomaton_823())
     sub_automata.append(_BuildAutomaton_824())
     sub_automata.append(_BuildAutomaton_825())
     sub_automata.append(_BuildAutomaton_826())
     sub_automata.append(_BuildAutomaton_827())
     sub_automata.append(_BuildAutomaton_828())
-    sub_automata.append(_BuildAutomaton_829())
-    sub_automata.append(_BuildAutomaton_830())
-    sub_automata.append(_BuildAutomaton_831())
     final_update = set()
-    symbol = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3468, 20)
+    symbol = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3569, 20)
     st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=True)
     st_0._set_subAutomata(*sub_automata)
     states.append(st_0)
     transitions = []
     st_0._set_transitionSet(transitions)
     return fac.Automaton(states, counters, True, containing_state=None)
-CTD_ANON_136._Automaton = _BuildAutomaton_823()
+CTD_ANON_141._Automaton = _BuildAutomaton_821()
 
 
 
 
-CTD_ANON_137._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'cnpTxnId'), pyxb.binding.datatypes.long, scope=CTD_ANON_137, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3488, 24)))
+CTD_ANON_142._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'cnpTxnId'), pyxb.binding.datatypes.long, scope=CTD_ANON_142, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3588, 24)))
 
-CTD_ANON_137._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'card'), giftCardCardType, scope=CTD_ANON_137, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3489, 24)))
+CTD_ANON_142._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'card'), giftCardCardType, scope=CTD_ANON_142, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3589, 24)))
 
-CTD_ANON_137._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'originalRefCode'), pyxb.binding.datatypes.string, scope=CTD_ANON_137, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3490, 24)))
+CTD_ANON_142._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'virtualGiftCardBin'), pyxb.binding.datatypes.string, scope=CTD_ANON_142, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3590, 24)))
 
-CTD_ANON_137._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'originalTxnTime'), pyxb.binding.datatypes.dateTime, scope=CTD_ANON_137, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3491, 24)))
+CTD_ANON_142._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'originalRefCode'), pyxb.binding.datatypes.string, scope=CTD_ANON_142, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3591, 24)))
 
-CTD_ANON_137._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'originalSystemTraceId'), pyxb.binding.datatypes.int, scope=CTD_ANON_137, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3492, 24)))
+CTD_ANON_142._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'originalAmount'), pyxb.binding.datatypes.integer, scope=CTD_ANON_142, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3592, 24)))
 
-CTD_ANON_137._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'originalSequenceNumber'), pyxb.binding.datatypes.string, scope=CTD_ANON_137, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3493, 24)))
+CTD_ANON_142._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'originalTxnTime'), pyxb.binding.datatypes.dateTime, scope=CTD_ANON_142, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3593, 24)))
 
-def _BuildAutomaton_833 ():
+CTD_ANON_142._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'originalSystemTraceId'), pyxb.binding.datatypes.int, scope=CTD_ANON_142, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3594, 24)))
+
+CTD_ANON_142._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'originalSequenceNumber'), pyxb.binding.datatypes.string, scope=CTD_ANON_142, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3595, 24)))
+
+def _BuildAutomaton_830 ():
     # Remove this helper function from the namespace after it is invoked
-    global _BuildAutomaton_833
-    del _BuildAutomaton_833
+    global _BuildAutomaton_830
+    del _BuildAutomaton_830
     import pyxb.utils.fac as fac
 
     counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3488, 24))
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3588, 24))
     counters.add(cc_0)
     states = []
     final_update = set()
     final_update.add(fac.UpdateInstruction(cc_0, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_137._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'cnpTxnId')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3488, 24))
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_142._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'cnpTxnId')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3588, 24))
     st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
     states.append(st_0)
     transitions = []
@@ -51103,103 +51475,19 @@ def _BuildAutomaton_833 ():
     st_0._set_transitionSet(transitions)
     return fac.Automaton(states, counters, True, containing_state=st_0)
 
-def _BuildAutomaton_834 ():
+def _BuildAutomaton_831 ():
     # Remove this helper function from the namespace after it is invoked
-    global _BuildAutomaton_834
-    del _BuildAutomaton_834
+    global _BuildAutomaton_831
+    del _BuildAutomaton_831
     import pyxb.utils.fac as fac
 
     counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3489, 24))
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3589, 24))
     counters.add(cc_0)
     states = []
     final_update = set()
     final_update.add(fac.UpdateInstruction(cc_0, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_137._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'card')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3489, 24))
-    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
-    states.append(st_0)
-    transitions = []
-    transitions.append(fac.Transition(st_0, [
-        fac.UpdateInstruction(cc_0, True) ]))
-    st_0._set_transitionSet(transitions)
-    return fac.Automaton(states, counters, True, containing_state=st_0)
-
-def _BuildAutomaton_835 ():
-    # Remove this helper function from the namespace after it is invoked
-    global _BuildAutomaton_835
-    del _BuildAutomaton_835
-    import pyxb.utils.fac as fac
-
-    counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3490, 24))
-    counters.add(cc_0)
-    states = []
-    final_update = set()
-    final_update.add(fac.UpdateInstruction(cc_0, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_137._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'originalRefCode')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3490, 24))
-    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
-    states.append(st_0)
-    transitions = []
-    transitions.append(fac.Transition(st_0, [
-        fac.UpdateInstruction(cc_0, True) ]))
-    st_0._set_transitionSet(transitions)
-    return fac.Automaton(states, counters, True, containing_state=st_0)
-
-def _BuildAutomaton_836 ():
-    # Remove this helper function from the namespace after it is invoked
-    global _BuildAutomaton_836
-    del _BuildAutomaton_836
-    import pyxb.utils.fac as fac
-
-    counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3491, 24))
-    counters.add(cc_0)
-    states = []
-    final_update = set()
-    final_update.add(fac.UpdateInstruction(cc_0, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_137._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'originalTxnTime')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3491, 24))
-    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
-    states.append(st_0)
-    transitions = []
-    transitions.append(fac.Transition(st_0, [
-        fac.UpdateInstruction(cc_0, True) ]))
-    st_0._set_transitionSet(transitions)
-    return fac.Automaton(states, counters, True, containing_state=st_0)
-
-def _BuildAutomaton_837 ():
-    # Remove this helper function from the namespace after it is invoked
-    global _BuildAutomaton_837
-    del _BuildAutomaton_837
-    import pyxb.utils.fac as fac
-
-    counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3492, 24))
-    counters.add(cc_0)
-    states = []
-    final_update = set()
-    final_update.add(fac.UpdateInstruction(cc_0, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_137._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'originalSystemTraceId')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3492, 24))
-    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
-    states.append(st_0)
-    transitions = []
-    transitions.append(fac.Transition(st_0, [
-        fac.UpdateInstruction(cc_0, True) ]))
-    st_0._set_transitionSet(transitions)
-    return fac.Automaton(states, counters, True, containing_state=st_0)
-
-def _BuildAutomaton_838 ():
-    # Remove this helper function from the namespace after it is invoked
-    global _BuildAutomaton_838
-    del _BuildAutomaton_838
-    import pyxb.utils.fac as fac
-
-    counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3493, 24))
-    counters.add(cc_0)
-    states = []
-    final_update = set()
-    final_update.add(fac.UpdateInstruction(cc_0, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_137._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'originalSequenceNumber')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3493, 24))
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_142._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'card')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3589, 24))
     st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
     states.append(st_0)
     transitions = []
@@ -51215,52 +51503,203 @@ def _BuildAutomaton_832 ():
     import pyxb.utils.fac as fac
 
     counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3488, 24))
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3590, 24))
     counters.add(cc_0)
-    cc_1 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3489, 24))
+    states = []
+    final_update = set()
+    final_update.add(fac.UpdateInstruction(cc_0, False))
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_142._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'virtualGiftCardBin')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3590, 24))
+    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
+    states.append(st_0)
+    transitions = []
+    transitions.append(fac.Transition(st_0, [
+        fac.UpdateInstruction(cc_0, True) ]))
+    st_0._set_transitionSet(transitions)
+    return fac.Automaton(states, counters, True, containing_state=st_0)
+
+def _BuildAutomaton_833 ():
+    # Remove this helper function from the namespace after it is invoked
+    global _BuildAutomaton_833
+    del _BuildAutomaton_833
+    import pyxb.utils.fac as fac
+
+    counters = set()
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3591, 24))
+    counters.add(cc_0)
+    states = []
+    final_update = set()
+    final_update.add(fac.UpdateInstruction(cc_0, False))
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_142._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'originalRefCode')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3591, 24))
+    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
+    states.append(st_0)
+    transitions = []
+    transitions.append(fac.Transition(st_0, [
+        fac.UpdateInstruction(cc_0, True) ]))
+    st_0._set_transitionSet(transitions)
+    return fac.Automaton(states, counters, True, containing_state=st_0)
+
+def _BuildAutomaton_834 ():
+    # Remove this helper function from the namespace after it is invoked
+    global _BuildAutomaton_834
+    del _BuildAutomaton_834
+    import pyxb.utils.fac as fac
+
+    counters = set()
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3592, 24))
+    counters.add(cc_0)
+    states = []
+    final_update = set()
+    final_update.add(fac.UpdateInstruction(cc_0, False))
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_142._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'originalAmount')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3592, 24))
+    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
+    states.append(st_0)
+    transitions = []
+    transitions.append(fac.Transition(st_0, [
+        fac.UpdateInstruction(cc_0, True) ]))
+    st_0._set_transitionSet(transitions)
+    return fac.Automaton(states, counters, True, containing_state=st_0)
+
+def _BuildAutomaton_835 ():
+    # Remove this helper function from the namespace after it is invoked
+    global _BuildAutomaton_835
+    del _BuildAutomaton_835
+    import pyxb.utils.fac as fac
+
+    counters = set()
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3593, 24))
+    counters.add(cc_0)
+    states = []
+    final_update = set()
+    final_update.add(fac.UpdateInstruction(cc_0, False))
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_142._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'originalTxnTime')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3593, 24))
+    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
+    states.append(st_0)
+    transitions = []
+    transitions.append(fac.Transition(st_0, [
+        fac.UpdateInstruction(cc_0, True) ]))
+    st_0._set_transitionSet(transitions)
+    return fac.Automaton(states, counters, True, containing_state=st_0)
+
+def _BuildAutomaton_836 ():
+    # Remove this helper function from the namespace after it is invoked
+    global _BuildAutomaton_836
+    del _BuildAutomaton_836
+    import pyxb.utils.fac as fac
+
+    counters = set()
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3594, 24))
+    counters.add(cc_0)
+    states = []
+    final_update = set()
+    final_update.add(fac.UpdateInstruction(cc_0, False))
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_142._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'originalSystemTraceId')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3594, 24))
+    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
+    states.append(st_0)
+    transitions = []
+    transitions.append(fac.Transition(st_0, [
+        fac.UpdateInstruction(cc_0, True) ]))
+    st_0._set_transitionSet(transitions)
+    return fac.Automaton(states, counters, True, containing_state=st_0)
+
+def _BuildAutomaton_837 ():
+    # Remove this helper function from the namespace after it is invoked
+    global _BuildAutomaton_837
+    del _BuildAutomaton_837
+    import pyxb.utils.fac as fac
+
+    counters = set()
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3595, 24))
+    counters.add(cc_0)
+    states = []
+    final_update = set()
+    final_update.add(fac.UpdateInstruction(cc_0, False))
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_142._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'originalSequenceNumber')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3595, 24))
+    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
+    states.append(st_0)
+    transitions = []
+    transitions.append(fac.Transition(st_0, [
+        fac.UpdateInstruction(cc_0, True) ]))
+    st_0._set_transitionSet(transitions)
+    return fac.Automaton(states, counters, True, containing_state=st_0)
+
+def _BuildAutomaton_829 ():
+    # Remove this helper function from the namespace after it is invoked
+    global _BuildAutomaton_829
+    del _BuildAutomaton_829
+    import pyxb.utils.fac as fac
+
+    counters = set()
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3588, 24))
+    counters.add(cc_0)
+    cc_1 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3589, 24))
     counters.add(cc_1)
-    cc_2 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3490, 24))
+    cc_2 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3590, 24))
     counters.add(cc_2)
-    cc_3 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3491, 24))
+    cc_3 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3591, 24))
     counters.add(cc_3)
-    cc_4 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3492, 24))
+    cc_4 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3592, 24))
     counters.add(cc_4)
-    cc_5 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3493, 24))
+    cc_5 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3593, 24))
     counters.add(cc_5)
+    cc_6 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3594, 24))
+    counters.add(cc_6)
+    cc_7 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3595, 24))
+    counters.add(cc_7)
     states = []
     sub_automata = []
+    sub_automata.append(_BuildAutomaton_830())
+    sub_automata.append(_BuildAutomaton_831())
+    sub_automata.append(_BuildAutomaton_832())
     sub_automata.append(_BuildAutomaton_833())
     sub_automata.append(_BuildAutomaton_834())
     sub_automata.append(_BuildAutomaton_835())
     sub_automata.append(_BuildAutomaton_836())
     sub_automata.append(_BuildAutomaton_837())
-    sub_automata.append(_BuildAutomaton_838())
     final_update = set()
-    symbol = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3487, 20)
+    symbol = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3587, 20)
     st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=True)
     st_0._set_subAutomata(*sub_automata)
     states.append(st_0)
     transitions = []
     st_0._set_transitionSet(transitions)
     return fac.Automaton(states, counters, True, containing_state=None)
-CTD_ANON_137._Automaton = _BuildAutomaton_832()
+CTD_ANON_142._Automaton = _BuildAutomaton_829()
 
 
 
 
-CTD_ANON_138._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'cnpTxnId'), pyxb.binding.datatypes.long, scope=CTD_ANON_138, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3505, 24)))
+CTD_ANON_143._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'cnpTxnId'), pyxb.binding.datatypes.long, scope=CTD_ANON_143, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3607, 24)))
 
-CTD_ANON_138._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'card'), giftCardCardType, scope=CTD_ANON_138, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3506, 24)))
+CTD_ANON_143._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'card'), giftCardCardType, scope=CTD_ANON_143, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3608, 24)))
 
-CTD_ANON_138._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'originalRefCode'), pyxb.binding.datatypes.string, scope=CTD_ANON_138, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3507, 24)))
+CTD_ANON_143._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'originalRefCode'), pyxb.binding.datatypes.string, scope=CTD_ANON_143, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3609, 24)))
 
-CTD_ANON_138._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'originalAmount'), pyxb.binding.datatypes.integer, scope=CTD_ANON_138, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3508, 24)))
+CTD_ANON_143._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'originalTxnTime'), pyxb.binding.datatypes.dateTime, scope=CTD_ANON_143, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3610, 24)))
 
-CTD_ANON_138._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'originalTxnTime'), pyxb.binding.datatypes.dateTime, scope=CTD_ANON_138, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3509, 24)))
+CTD_ANON_143._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'originalSystemTraceId'), pyxb.binding.datatypes.int, scope=CTD_ANON_143, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3611, 24)))
 
-CTD_ANON_138._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'originalSystemTraceId'), pyxb.binding.datatypes.int, scope=CTD_ANON_138, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3510, 24)))
+CTD_ANON_143._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'originalSequenceNumber'), pyxb.binding.datatypes.string, scope=CTD_ANON_143, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3612, 24)))
 
-CTD_ANON_138._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'originalSequenceNumber'), pyxb.binding.datatypes.string, scope=CTD_ANON_138, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3511, 24)))
+def _BuildAutomaton_839 ():
+    # Remove this helper function from the namespace after it is invoked
+    global _BuildAutomaton_839
+    del _BuildAutomaton_839
+    import pyxb.utils.fac as fac
+
+    counters = set()
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3607, 24))
+    counters.add(cc_0)
+    states = []
+    final_update = set()
+    final_update.add(fac.UpdateInstruction(cc_0, False))
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_143._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'cnpTxnId')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3607, 24))
+    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
+    states.append(st_0)
+    transitions = []
+    transitions.append(fac.Transition(st_0, [
+        fac.UpdateInstruction(cc_0, True) ]))
+    st_0._set_transitionSet(transitions)
+    return fac.Automaton(states, counters, True, containing_state=st_0)
 
 def _BuildAutomaton_840 ():
     # Remove this helper function from the namespace after it is invoked
@@ -51269,12 +51708,12 @@ def _BuildAutomaton_840 ():
     import pyxb.utils.fac as fac
 
     counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3505, 24))
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3608, 24))
     counters.add(cc_0)
     states = []
     final_update = set()
     final_update.add(fac.UpdateInstruction(cc_0, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_138._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'cnpTxnId')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3505, 24))
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_143._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'card')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3608, 24))
     st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
     states.append(st_0)
     transitions = []
@@ -51290,12 +51729,12 @@ def _BuildAutomaton_841 ():
     import pyxb.utils.fac as fac
 
     counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3506, 24))
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3609, 24))
     counters.add(cc_0)
     states = []
     final_update = set()
     final_update.add(fac.UpdateInstruction(cc_0, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_138._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'card')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3506, 24))
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_143._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'originalRefCode')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3609, 24))
     st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
     states.append(st_0)
     transitions = []
@@ -51311,12 +51750,12 @@ def _BuildAutomaton_842 ():
     import pyxb.utils.fac as fac
 
     counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3507, 24))
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3610, 24))
     counters.add(cc_0)
     states = []
     final_update = set()
     final_update.add(fac.UpdateInstruction(cc_0, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_138._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'originalRefCode')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3507, 24))
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_143._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'originalTxnTime')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3610, 24))
     st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
     states.append(st_0)
     transitions = []
@@ -51332,12 +51771,12 @@ def _BuildAutomaton_843 ():
     import pyxb.utils.fac as fac
 
     counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3508, 24))
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3611, 24))
     counters.add(cc_0)
     states = []
     final_update = set()
     final_update.add(fac.UpdateInstruction(cc_0, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_138._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'originalAmount')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3508, 24))
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_143._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'originalSystemTraceId')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3611, 24))
     st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
     states.append(st_0)
     transitions = []
@@ -51353,12 +51792,12 @@ def _BuildAutomaton_844 ():
     import pyxb.utils.fac as fac
 
     counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3509, 24))
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3612, 24))
     counters.add(cc_0)
     states = []
     final_update = set()
     final_update.add(fac.UpdateInstruction(cc_0, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_138._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'originalTxnTime')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3509, 24))
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_143._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'originalSequenceNumber')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3612, 24))
     st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
     states.append(st_0)
     transitions = []
@@ -51367,26 +51806,59 @@ def _BuildAutomaton_844 ():
     st_0._set_transitionSet(transitions)
     return fac.Automaton(states, counters, True, containing_state=st_0)
 
-def _BuildAutomaton_845 ():
+def _BuildAutomaton_838 ():
     # Remove this helper function from the namespace after it is invoked
-    global _BuildAutomaton_845
-    del _BuildAutomaton_845
+    global _BuildAutomaton_838
+    del _BuildAutomaton_838
     import pyxb.utils.fac as fac
 
     counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3510, 24))
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3607, 24))
     counters.add(cc_0)
+    cc_1 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3608, 24))
+    counters.add(cc_1)
+    cc_2 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3609, 24))
+    counters.add(cc_2)
+    cc_3 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3610, 24))
+    counters.add(cc_3)
+    cc_4 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3611, 24))
+    counters.add(cc_4)
+    cc_5 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3612, 24))
+    counters.add(cc_5)
     states = []
+    sub_automata = []
+    sub_automata.append(_BuildAutomaton_839())
+    sub_automata.append(_BuildAutomaton_840())
+    sub_automata.append(_BuildAutomaton_841())
+    sub_automata.append(_BuildAutomaton_842())
+    sub_automata.append(_BuildAutomaton_843())
+    sub_automata.append(_BuildAutomaton_844())
     final_update = set()
-    final_update.add(fac.UpdateInstruction(cc_0, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_138._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'originalSystemTraceId')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3510, 24))
-    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
+    symbol = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3606, 20)
+    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=True)
+    st_0._set_subAutomata(*sub_automata)
     states.append(st_0)
     transitions = []
-    transitions.append(fac.Transition(st_0, [
-        fac.UpdateInstruction(cc_0, True) ]))
     st_0._set_transitionSet(transitions)
-    return fac.Automaton(states, counters, True, containing_state=st_0)
+    return fac.Automaton(states, counters, True, containing_state=None)
+CTD_ANON_143._Automaton = _BuildAutomaton_838()
+
+
+
+
+CTD_ANON_144._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'cnpTxnId'), pyxb.binding.datatypes.long, scope=CTD_ANON_144, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3624, 24)))
+
+CTD_ANON_144._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'card'), giftCardCardType, scope=CTD_ANON_144, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3625, 24)))
+
+CTD_ANON_144._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'originalRefCode'), pyxb.binding.datatypes.string, scope=CTD_ANON_144, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3626, 24)))
+
+CTD_ANON_144._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'originalAmount'), pyxb.binding.datatypes.integer, scope=CTD_ANON_144, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3627, 24)))
+
+CTD_ANON_144._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'originalTxnTime'), pyxb.binding.datatypes.dateTime, scope=CTD_ANON_144, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3628, 24)))
+
+CTD_ANON_144._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'originalSystemTraceId'), pyxb.binding.datatypes.int, scope=CTD_ANON_144, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3629, 24)))
+
+CTD_ANON_144._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'originalSequenceNumber'), pyxb.binding.datatypes.string, scope=CTD_ANON_144, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3630, 24)))
 
 def _BuildAutomaton_846 ():
     # Remove this helper function from the namespace after it is invoked
@@ -51395,216 +51867,12 @@ def _BuildAutomaton_846 ():
     import pyxb.utils.fac as fac
 
     counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3511, 24))
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3624, 24))
     counters.add(cc_0)
     states = []
     final_update = set()
     final_update.add(fac.UpdateInstruction(cc_0, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_138._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'originalSequenceNumber')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3511, 24))
-    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
-    states.append(st_0)
-    transitions = []
-    transitions.append(fac.Transition(st_0, [
-        fac.UpdateInstruction(cc_0, True) ]))
-    st_0._set_transitionSet(transitions)
-    return fac.Automaton(states, counters, True, containing_state=st_0)
-
-def _BuildAutomaton_839 ():
-    # Remove this helper function from the namespace after it is invoked
-    global _BuildAutomaton_839
-    del _BuildAutomaton_839
-    import pyxb.utils.fac as fac
-
-    counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3505, 24))
-    counters.add(cc_0)
-    cc_1 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3506, 24))
-    counters.add(cc_1)
-    cc_2 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3507, 24))
-    counters.add(cc_2)
-    cc_3 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3508, 24))
-    counters.add(cc_3)
-    cc_4 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3509, 24))
-    counters.add(cc_4)
-    cc_5 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3510, 24))
-    counters.add(cc_5)
-    cc_6 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3511, 24))
-    counters.add(cc_6)
-    states = []
-    sub_automata = []
-    sub_automata.append(_BuildAutomaton_840())
-    sub_automata.append(_BuildAutomaton_841())
-    sub_automata.append(_BuildAutomaton_842())
-    sub_automata.append(_BuildAutomaton_843())
-    sub_automata.append(_BuildAutomaton_844())
-    sub_automata.append(_BuildAutomaton_845())
-    sub_automata.append(_BuildAutomaton_846())
-    final_update = set()
-    symbol = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3504, 20)
-    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=True)
-    st_0._set_subAutomata(*sub_automata)
-    states.append(st_0)
-    transitions = []
-    st_0._set_transitionSet(transitions)
-    return fac.Automaton(states, counters, True, containing_state=None)
-CTD_ANON_138._Automaton = _BuildAutomaton_839()
-
-
-
-
-CTD_ANON_139._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'cnpTxnId'), pyxb.binding.datatypes.long, scope=CTD_ANON_139, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3523, 24)))
-
-CTD_ANON_139._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'card'), giftCardCardType, scope=CTD_ANON_139, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3524, 24)))
-
-CTD_ANON_139._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'originalRefCode'), pyxb.binding.datatypes.string, scope=CTD_ANON_139, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3525, 24)))
-
-CTD_ANON_139._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'originalAmount'), pyxb.binding.datatypes.integer, scope=CTD_ANON_139, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3526, 24)))
-
-CTD_ANON_139._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'originalTxnTime'), pyxb.binding.datatypes.dateTime, scope=CTD_ANON_139, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3527, 24)))
-
-CTD_ANON_139._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'originalSystemTraceId'), pyxb.binding.datatypes.int, scope=CTD_ANON_139, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3528, 24)))
-
-CTD_ANON_139._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'originalSequenceNumber'), pyxb.binding.datatypes.string, scope=CTD_ANON_139, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3529, 24)))
-
-def _BuildAutomaton_848 ():
-    # Remove this helper function from the namespace after it is invoked
-    global _BuildAutomaton_848
-    del _BuildAutomaton_848
-    import pyxb.utils.fac as fac
-
-    counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3523, 24))
-    counters.add(cc_0)
-    states = []
-    final_update = set()
-    final_update.add(fac.UpdateInstruction(cc_0, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_139._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'cnpTxnId')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3523, 24))
-    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
-    states.append(st_0)
-    transitions = []
-    transitions.append(fac.Transition(st_0, [
-        fac.UpdateInstruction(cc_0, True) ]))
-    st_0._set_transitionSet(transitions)
-    return fac.Automaton(states, counters, True, containing_state=st_0)
-
-def _BuildAutomaton_849 ():
-    # Remove this helper function from the namespace after it is invoked
-    global _BuildAutomaton_849
-    del _BuildAutomaton_849
-    import pyxb.utils.fac as fac
-
-    counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3524, 24))
-    counters.add(cc_0)
-    states = []
-    final_update = set()
-    final_update.add(fac.UpdateInstruction(cc_0, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_139._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'card')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3524, 24))
-    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
-    states.append(st_0)
-    transitions = []
-    transitions.append(fac.Transition(st_0, [
-        fac.UpdateInstruction(cc_0, True) ]))
-    st_0._set_transitionSet(transitions)
-    return fac.Automaton(states, counters, True, containing_state=st_0)
-
-def _BuildAutomaton_850 ():
-    # Remove this helper function from the namespace after it is invoked
-    global _BuildAutomaton_850
-    del _BuildAutomaton_850
-    import pyxb.utils.fac as fac
-
-    counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3525, 24))
-    counters.add(cc_0)
-    states = []
-    final_update = set()
-    final_update.add(fac.UpdateInstruction(cc_0, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_139._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'originalRefCode')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3525, 24))
-    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
-    states.append(st_0)
-    transitions = []
-    transitions.append(fac.Transition(st_0, [
-        fac.UpdateInstruction(cc_0, True) ]))
-    st_0._set_transitionSet(transitions)
-    return fac.Automaton(states, counters, True, containing_state=st_0)
-
-def _BuildAutomaton_851 ():
-    # Remove this helper function from the namespace after it is invoked
-    global _BuildAutomaton_851
-    del _BuildAutomaton_851
-    import pyxb.utils.fac as fac
-
-    counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3526, 24))
-    counters.add(cc_0)
-    states = []
-    final_update = set()
-    final_update.add(fac.UpdateInstruction(cc_0, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_139._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'originalAmount')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3526, 24))
-    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
-    states.append(st_0)
-    transitions = []
-    transitions.append(fac.Transition(st_0, [
-        fac.UpdateInstruction(cc_0, True) ]))
-    st_0._set_transitionSet(transitions)
-    return fac.Automaton(states, counters, True, containing_state=st_0)
-
-def _BuildAutomaton_852 ():
-    # Remove this helper function from the namespace after it is invoked
-    global _BuildAutomaton_852
-    del _BuildAutomaton_852
-    import pyxb.utils.fac as fac
-
-    counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3527, 24))
-    counters.add(cc_0)
-    states = []
-    final_update = set()
-    final_update.add(fac.UpdateInstruction(cc_0, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_139._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'originalTxnTime')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3527, 24))
-    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
-    states.append(st_0)
-    transitions = []
-    transitions.append(fac.Transition(st_0, [
-        fac.UpdateInstruction(cc_0, True) ]))
-    st_0._set_transitionSet(transitions)
-    return fac.Automaton(states, counters, True, containing_state=st_0)
-
-def _BuildAutomaton_853 ():
-    # Remove this helper function from the namespace after it is invoked
-    global _BuildAutomaton_853
-    del _BuildAutomaton_853
-    import pyxb.utils.fac as fac
-
-    counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3528, 24))
-    counters.add(cc_0)
-    states = []
-    final_update = set()
-    final_update.add(fac.UpdateInstruction(cc_0, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_139._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'originalSystemTraceId')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3528, 24))
-    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
-    states.append(st_0)
-    transitions = []
-    transitions.append(fac.Transition(st_0, [
-        fac.UpdateInstruction(cc_0, True) ]))
-    st_0._set_transitionSet(transitions)
-    return fac.Automaton(states, counters, True, containing_state=st_0)
-
-def _BuildAutomaton_854 ():
-    # Remove this helper function from the namespace after it is invoked
-    global _BuildAutomaton_854
-    del _BuildAutomaton_854
-    import pyxb.utils.fac as fac
-
-    counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3529, 24))
-    counters.add(cc_0)
-    states = []
-    final_update = set()
-    final_update.add(fac.UpdateInstruction(cc_0, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_139._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'originalSequenceNumber')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3529, 24))
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_144._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'cnpTxnId')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3624, 24))
     st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
     states.append(st_0)
     transitions = []
@@ -51620,49 +51888,202 @@ def _BuildAutomaton_847 ():
     import pyxb.utils.fac as fac
 
     counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3523, 24))
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3625, 24))
     counters.add(cc_0)
-    cc_1 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3524, 24))
+    states = []
+    final_update = set()
+    final_update.add(fac.UpdateInstruction(cc_0, False))
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_144._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'card')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3625, 24))
+    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
+    states.append(st_0)
+    transitions = []
+    transitions.append(fac.Transition(st_0, [
+        fac.UpdateInstruction(cc_0, True) ]))
+    st_0._set_transitionSet(transitions)
+    return fac.Automaton(states, counters, True, containing_state=st_0)
+
+def _BuildAutomaton_848 ():
+    # Remove this helper function from the namespace after it is invoked
+    global _BuildAutomaton_848
+    del _BuildAutomaton_848
+    import pyxb.utils.fac as fac
+
+    counters = set()
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3626, 24))
+    counters.add(cc_0)
+    states = []
+    final_update = set()
+    final_update.add(fac.UpdateInstruction(cc_0, False))
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_144._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'originalRefCode')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3626, 24))
+    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
+    states.append(st_0)
+    transitions = []
+    transitions.append(fac.Transition(st_0, [
+        fac.UpdateInstruction(cc_0, True) ]))
+    st_0._set_transitionSet(transitions)
+    return fac.Automaton(states, counters, True, containing_state=st_0)
+
+def _BuildAutomaton_849 ():
+    # Remove this helper function from the namespace after it is invoked
+    global _BuildAutomaton_849
+    del _BuildAutomaton_849
+    import pyxb.utils.fac as fac
+
+    counters = set()
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3627, 24))
+    counters.add(cc_0)
+    states = []
+    final_update = set()
+    final_update.add(fac.UpdateInstruction(cc_0, False))
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_144._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'originalAmount')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3627, 24))
+    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
+    states.append(st_0)
+    transitions = []
+    transitions.append(fac.Transition(st_0, [
+        fac.UpdateInstruction(cc_0, True) ]))
+    st_0._set_transitionSet(transitions)
+    return fac.Automaton(states, counters, True, containing_state=st_0)
+
+def _BuildAutomaton_850 ():
+    # Remove this helper function from the namespace after it is invoked
+    global _BuildAutomaton_850
+    del _BuildAutomaton_850
+    import pyxb.utils.fac as fac
+
+    counters = set()
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3628, 24))
+    counters.add(cc_0)
+    states = []
+    final_update = set()
+    final_update.add(fac.UpdateInstruction(cc_0, False))
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_144._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'originalTxnTime')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3628, 24))
+    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
+    states.append(st_0)
+    transitions = []
+    transitions.append(fac.Transition(st_0, [
+        fac.UpdateInstruction(cc_0, True) ]))
+    st_0._set_transitionSet(transitions)
+    return fac.Automaton(states, counters, True, containing_state=st_0)
+
+def _BuildAutomaton_851 ():
+    # Remove this helper function from the namespace after it is invoked
+    global _BuildAutomaton_851
+    del _BuildAutomaton_851
+    import pyxb.utils.fac as fac
+
+    counters = set()
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3629, 24))
+    counters.add(cc_0)
+    states = []
+    final_update = set()
+    final_update.add(fac.UpdateInstruction(cc_0, False))
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_144._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'originalSystemTraceId')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3629, 24))
+    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
+    states.append(st_0)
+    transitions = []
+    transitions.append(fac.Transition(st_0, [
+        fac.UpdateInstruction(cc_0, True) ]))
+    st_0._set_transitionSet(transitions)
+    return fac.Automaton(states, counters, True, containing_state=st_0)
+
+def _BuildAutomaton_852 ():
+    # Remove this helper function from the namespace after it is invoked
+    global _BuildAutomaton_852
+    del _BuildAutomaton_852
+    import pyxb.utils.fac as fac
+
+    counters = set()
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3630, 24))
+    counters.add(cc_0)
+    states = []
+    final_update = set()
+    final_update.add(fac.UpdateInstruction(cc_0, False))
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_144._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'originalSequenceNumber')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3630, 24))
+    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
+    states.append(st_0)
+    transitions = []
+    transitions.append(fac.Transition(st_0, [
+        fac.UpdateInstruction(cc_0, True) ]))
+    st_0._set_transitionSet(transitions)
+    return fac.Automaton(states, counters, True, containing_state=st_0)
+
+def _BuildAutomaton_845 ():
+    # Remove this helper function from the namespace after it is invoked
+    global _BuildAutomaton_845
+    del _BuildAutomaton_845
+    import pyxb.utils.fac as fac
+
+    counters = set()
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3624, 24))
+    counters.add(cc_0)
+    cc_1 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3625, 24))
     counters.add(cc_1)
-    cc_2 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3525, 24))
+    cc_2 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3626, 24))
     counters.add(cc_2)
-    cc_3 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3526, 24))
+    cc_3 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3627, 24))
     counters.add(cc_3)
-    cc_4 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3527, 24))
+    cc_4 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3628, 24))
     counters.add(cc_4)
-    cc_5 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3528, 24))
+    cc_5 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3629, 24))
     counters.add(cc_5)
-    cc_6 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3529, 24))
+    cc_6 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3630, 24))
     counters.add(cc_6)
     states = []
     sub_automata = []
+    sub_automata.append(_BuildAutomaton_846())
+    sub_automata.append(_BuildAutomaton_847())
     sub_automata.append(_BuildAutomaton_848())
     sub_automata.append(_BuildAutomaton_849())
     sub_automata.append(_BuildAutomaton_850())
     sub_automata.append(_BuildAutomaton_851())
     sub_automata.append(_BuildAutomaton_852())
-    sub_automata.append(_BuildAutomaton_853())
-    sub_automata.append(_BuildAutomaton_854())
     final_update = set()
-    symbol = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3522, 20)
+    symbol = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3623, 20)
     st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=True)
     st_0._set_subAutomata(*sub_automata)
     states.append(st_0)
     transitions = []
     st_0._set_transitionSet(transitions)
     return fac.Automaton(states, counters, True, containing_state=None)
-CTD_ANON_139._Automaton = _BuildAutomaton_847()
+CTD_ANON_144._Automaton = _BuildAutomaton_845()
 
 
 
 
-CTD_ANON_140._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'origId'), pyxb.binding.datatypes.string, scope=CTD_ANON_140, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3541, 24)))
+CTD_ANON_145._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'cnpTxnId'), pyxb.binding.datatypes.long, scope=CTD_ANON_145, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3642, 24)))
 
-CTD_ANON_140._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'origActionType'), pyxb.binding.datatypes.string, scope=CTD_ANON_140, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3542, 24)))
+CTD_ANON_145._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'card'), giftCardCardType, scope=CTD_ANON_145, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3643, 24)))
 
-CTD_ANON_140._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'origCnpTxnId'), pyxb.binding.datatypes.long, scope=CTD_ANON_140, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3543, 24)))
+CTD_ANON_145._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'originalRefCode'), pyxb.binding.datatypes.string, scope=CTD_ANON_145, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3644, 24)))
 
-CTD_ANON_140._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'showStatusOnly'), pyxb.binding.datatypes.string, scope=CTD_ANON_140, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3544, 24)))
+CTD_ANON_145._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'originalAmount'), pyxb.binding.datatypes.integer, scope=CTD_ANON_145, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3645, 24)))
+
+CTD_ANON_145._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'originalTxnTime'), pyxb.binding.datatypes.dateTime, scope=CTD_ANON_145, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3646, 24)))
+
+CTD_ANON_145._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'originalSystemTraceId'), pyxb.binding.datatypes.int, scope=CTD_ANON_145, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3647, 24)))
+
+CTD_ANON_145._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'originalSequenceNumber'), pyxb.binding.datatypes.string, scope=CTD_ANON_145, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3648, 24)))
+
+def _BuildAutomaton_854 ():
+    # Remove this helper function from the namespace after it is invoked
+    global _BuildAutomaton_854
+    del _BuildAutomaton_854
+    import pyxb.utils.fac as fac
+
+    counters = set()
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3642, 24))
+    counters.add(cc_0)
+    states = []
+    final_update = set()
+    final_update.add(fac.UpdateInstruction(cc_0, False))
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_145._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'cnpTxnId')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3642, 24))
+    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
+    states.append(st_0)
+    transitions = []
+    transitions.append(fac.Transition(st_0, [
+        fac.UpdateInstruction(cc_0, True) ]))
+    st_0._set_transitionSet(transitions)
+    return fac.Automaton(states, counters, True, containing_state=st_0)
 
 def _BuildAutomaton_855 ():
     # Remove this helper function from the namespace after it is invoked
@@ -51671,199 +52092,12 @@ def _BuildAutomaton_855 ():
     import pyxb.utils.fac as fac
 
     counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3541, 24))
-    counters.add(cc_0)
-    cc_1 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3542, 24))
-    counters.add(cc_1)
-    cc_2 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3543, 24))
-    counters.add(cc_2)
-    cc_3 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3544, 24))
-    counters.add(cc_3)
-    states = []
-    final_update = set()
-    final_update.add(fac.UpdateInstruction(cc_0, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_140._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'origId')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3541, 24))
-    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
-    states.append(st_0)
-    final_update = set()
-    final_update.add(fac.UpdateInstruction(cc_1, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_140._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'origActionType')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3542, 24))
-    st_1 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
-    states.append(st_1)
-    final_update = set()
-    final_update.add(fac.UpdateInstruction(cc_2, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_140._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'origCnpTxnId')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3543, 24))
-    st_2 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
-    states.append(st_2)
-    final_update = set()
-    final_update.add(fac.UpdateInstruction(cc_3, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_140._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'showStatusOnly')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3544, 24))
-    st_3 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
-    states.append(st_3)
-    transitions = []
-    transitions.append(fac.Transition(st_0, [
-        fac.UpdateInstruction(cc_0, True) ]))
-    transitions.append(fac.Transition(st_1, [
-        fac.UpdateInstruction(cc_0, False) ]))
-    transitions.append(fac.Transition(st_2, [
-        fac.UpdateInstruction(cc_0, False) ]))
-    transitions.append(fac.Transition(st_3, [
-        fac.UpdateInstruction(cc_0, False) ]))
-    st_0._set_transitionSet(transitions)
-    transitions = []
-    transitions.append(fac.Transition(st_1, [
-        fac.UpdateInstruction(cc_1, True) ]))
-    transitions.append(fac.Transition(st_2, [
-        fac.UpdateInstruction(cc_1, False) ]))
-    transitions.append(fac.Transition(st_3, [
-        fac.UpdateInstruction(cc_1, False) ]))
-    st_1._set_transitionSet(transitions)
-    transitions = []
-    transitions.append(fac.Transition(st_2, [
-        fac.UpdateInstruction(cc_2, True) ]))
-    transitions.append(fac.Transition(st_3, [
-        fac.UpdateInstruction(cc_2, False) ]))
-    st_2._set_transitionSet(transitions)
-    transitions = []
-    transitions.append(fac.Transition(st_3, [
-        fac.UpdateInstruction(cc_3, True) ]))
-    st_3._set_transitionSet(transitions)
-    return fac.Automaton(states, counters, True, containing_state=None)
-CTD_ANON_140._Automaton = _BuildAutomaton_855()
-
-
-
-
-CTD_ANON_141._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'response'), pyxb.binding.datatypes.string, scope=CTD_ANON_141, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3556, 24)))
-
-CTD_ANON_141._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'responseTime'), pyxb.binding.datatypes.dateTime, scope=CTD_ANON_141, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3557, 24)))
-
-CTD_ANON_141._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'message'), pyxb.binding.datatypes.string, scope=CTD_ANON_141, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3558, 24)))
-
-CTD_ANON_141._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'location'), pyxb.binding.datatypes.string, scope=CTD_ANON_141, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3559, 24)))
-
-CTD_ANON_141._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'matchCount'), pyxb.binding.datatypes.int, scope=CTD_ANON_141, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3560, 24)))
-
-CTD_ANON_141._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'results_max10'), CTD_ANON_35, scope=CTD_ANON_141, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3561, 24)))
-
-def _BuildAutomaton_857 ():
-    # Remove this helper function from the namespace after it is invoked
-    global _BuildAutomaton_857
-    del _BuildAutomaton_857
-    import pyxb.utils.fac as fac
-
-    counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3556, 24))
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3643, 24))
     counters.add(cc_0)
     states = []
     final_update = set()
     final_update.add(fac.UpdateInstruction(cc_0, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_141._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'response')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3556, 24))
-    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
-    states.append(st_0)
-    transitions = []
-    transitions.append(fac.Transition(st_0, [
-        fac.UpdateInstruction(cc_0, True) ]))
-    st_0._set_transitionSet(transitions)
-    return fac.Automaton(states, counters, True, containing_state=st_0)
-
-def _BuildAutomaton_858 ():
-    # Remove this helper function from the namespace after it is invoked
-    global _BuildAutomaton_858
-    del _BuildAutomaton_858
-    import pyxb.utils.fac as fac
-
-    counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3557, 24))
-    counters.add(cc_0)
-    states = []
-    final_update = set()
-    final_update.add(fac.UpdateInstruction(cc_0, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_141._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'responseTime')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3557, 24))
-    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
-    states.append(st_0)
-    transitions = []
-    transitions.append(fac.Transition(st_0, [
-        fac.UpdateInstruction(cc_0, True) ]))
-    st_0._set_transitionSet(transitions)
-    return fac.Automaton(states, counters, True, containing_state=st_0)
-
-def _BuildAutomaton_859 ():
-    # Remove this helper function from the namespace after it is invoked
-    global _BuildAutomaton_859
-    del _BuildAutomaton_859
-    import pyxb.utils.fac as fac
-
-    counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3558, 24))
-    counters.add(cc_0)
-    states = []
-    final_update = set()
-    final_update.add(fac.UpdateInstruction(cc_0, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_141._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'message')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3558, 24))
-    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
-    states.append(st_0)
-    transitions = []
-    transitions.append(fac.Transition(st_0, [
-        fac.UpdateInstruction(cc_0, True) ]))
-    st_0._set_transitionSet(transitions)
-    return fac.Automaton(states, counters, True, containing_state=st_0)
-
-def _BuildAutomaton_860 ():
-    # Remove this helper function from the namespace after it is invoked
-    global _BuildAutomaton_860
-    del _BuildAutomaton_860
-    import pyxb.utils.fac as fac
-
-    counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3559, 24))
-    counters.add(cc_0)
-    states = []
-    final_update = set()
-    final_update.add(fac.UpdateInstruction(cc_0, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_141._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'location')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3559, 24))
-    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
-    states.append(st_0)
-    transitions = []
-    transitions.append(fac.Transition(st_0, [
-        fac.UpdateInstruction(cc_0, True) ]))
-    st_0._set_transitionSet(transitions)
-    return fac.Automaton(states, counters, True, containing_state=st_0)
-
-def _BuildAutomaton_861 ():
-    # Remove this helper function from the namespace after it is invoked
-    global _BuildAutomaton_861
-    del _BuildAutomaton_861
-    import pyxb.utils.fac as fac
-
-    counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3560, 24))
-    counters.add(cc_0)
-    states = []
-    final_update = set()
-    final_update.add(fac.UpdateInstruction(cc_0, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_141._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'matchCount')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3560, 24))
-    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
-    states.append(st_0)
-    transitions = []
-    transitions.append(fac.Transition(st_0, [
-        fac.UpdateInstruction(cc_0, True) ]))
-    st_0._set_transitionSet(transitions)
-    return fac.Automaton(states, counters, True, containing_state=st_0)
-
-def _BuildAutomaton_862 ():
-    # Remove this helper function from the namespace after it is invoked
-    global _BuildAutomaton_862
-    del _BuildAutomaton_862
-    import pyxb.utils.fac as fac
-
-    counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3561, 24))
-    counters.add(cc_0)
-    states = []
-    final_update = set()
-    final_update.add(fac.UpdateInstruction(cc_0, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_141._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'results_max10')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3561, 24))
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_145._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'card')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3643, 24))
     st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
     states.append(st_0)
     transitions = []
@@ -51879,46 +52113,257 @@ def _BuildAutomaton_856 ():
     import pyxb.utils.fac as fac
 
     counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3556, 24))
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3644, 24))
     counters.add(cc_0)
-    cc_1 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3557, 24))
+    states = []
+    final_update = set()
+    final_update.add(fac.UpdateInstruction(cc_0, False))
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_145._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'originalRefCode')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3644, 24))
+    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
+    states.append(st_0)
+    transitions = []
+    transitions.append(fac.Transition(st_0, [
+        fac.UpdateInstruction(cc_0, True) ]))
+    st_0._set_transitionSet(transitions)
+    return fac.Automaton(states, counters, True, containing_state=st_0)
+
+def _BuildAutomaton_857 ():
+    # Remove this helper function from the namespace after it is invoked
+    global _BuildAutomaton_857
+    del _BuildAutomaton_857
+    import pyxb.utils.fac as fac
+
+    counters = set()
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3645, 24))
+    counters.add(cc_0)
+    states = []
+    final_update = set()
+    final_update.add(fac.UpdateInstruction(cc_0, False))
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_145._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'originalAmount')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3645, 24))
+    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
+    states.append(st_0)
+    transitions = []
+    transitions.append(fac.Transition(st_0, [
+        fac.UpdateInstruction(cc_0, True) ]))
+    st_0._set_transitionSet(transitions)
+    return fac.Automaton(states, counters, True, containing_state=st_0)
+
+def _BuildAutomaton_858 ():
+    # Remove this helper function from the namespace after it is invoked
+    global _BuildAutomaton_858
+    del _BuildAutomaton_858
+    import pyxb.utils.fac as fac
+
+    counters = set()
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3646, 24))
+    counters.add(cc_0)
+    states = []
+    final_update = set()
+    final_update.add(fac.UpdateInstruction(cc_0, False))
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_145._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'originalTxnTime')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3646, 24))
+    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
+    states.append(st_0)
+    transitions = []
+    transitions.append(fac.Transition(st_0, [
+        fac.UpdateInstruction(cc_0, True) ]))
+    st_0._set_transitionSet(transitions)
+    return fac.Automaton(states, counters, True, containing_state=st_0)
+
+def _BuildAutomaton_859 ():
+    # Remove this helper function from the namespace after it is invoked
+    global _BuildAutomaton_859
+    del _BuildAutomaton_859
+    import pyxb.utils.fac as fac
+
+    counters = set()
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3647, 24))
+    counters.add(cc_0)
+    states = []
+    final_update = set()
+    final_update.add(fac.UpdateInstruction(cc_0, False))
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_145._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'originalSystemTraceId')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3647, 24))
+    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
+    states.append(st_0)
+    transitions = []
+    transitions.append(fac.Transition(st_0, [
+        fac.UpdateInstruction(cc_0, True) ]))
+    st_0._set_transitionSet(transitions)
+    return fac.Automaton(states, counters, True, containing_state=st_0)
+
+def _BuildAutomaton_860 ():
+    # Remove this helper function from the namespace after it is invoked
+    global _BuildAutomaton_860
+    del _BuildAutomaton_860
+    import pyxb.utils.fac as fac
+
+    counters = set()
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3648, 24))
+    counters.add(cc_0)
+    states = []
+    final_update = set()
+    final_update.add(fac.UpdateInstruction(cc_0, False))
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_145._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'originalSequenceNumber')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3648, 24))
+    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
+    states.append(st_0)
+    transitions = []
+    transitions.append(fac.Transition(st_0, [
+        fac.UpdateInstruction(cc_0, True) ]))
+    st_0._set_transitionSet(transitions)
+    return fac.Automaton(states, counters, True, containing_state=st_0)
+
+def _BuildAutomaton_853 ():
+    # Remove this helper function from the namespace after it is invoked
+    global _BuildAutomaton_853
+    del _BuildAutomaton_853
+    import pyxb.utils.fac as fac
+
+    counters = set()
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3642, 24))
+    counters.add(cc_0)
+    cc_1 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3643, 24))
     counters.add(cc_1)
-    cc_2 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3558, 24))
+    cc_2 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3644, 24))
     counters.add(cc_2)
-    cc_3 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3559, 24))
+    cc_3 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3645, 24))
     counters.add(cc_3)
-    cc_4 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3560, 24))
+    cc_4 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3646, 24))
     counters.add(cc_4)
-    cc_5 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3561, 24))
+    cc_5 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3647, 24))
     counters.add(cc_5)
+    cc_6 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3648, 24))
+    counters.add(cc_6)
     states = []
     sub_automata = []
+    sub_automata.append(_BuildAutomaton_854())
+    sub_automata.append(_BuildAutomaton_855())
+    sub_automata.append(_BuildAutomaton_856())
     sub_automata.append(_BuildAutomaton_857())
     sub_automata.append(_BuildAutomaton_858())
     sub_automata.append(_BuildAutomaton_859())
     sub_automata.append(_BuildAutomaton_860())
-    sub_automata.append(_BuildAutomaton_861())
-    sub_automata.append(_BuildAutomaton_862())
     final_update = set()
-    symbol = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3555, 20)
+    symbol = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3641, 20)
     st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=True)
     st_0._set_subAutomata(*sub_automata)
     states.append(st_0)
     transitions = []
     st_0._set_transitionSet(transitions)
     return fac.Automaton(states, counters, True, containing_state=None)
-CTD_ANON_141._Automaton = _BuildAutomaton_856()
+CTD_ANON_145._Automaton = _BuildAutomaton_853()
 
 
 
 
-CTD_ANON_142._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'cnpTxnId'), pyxb.binding.datatypes.long, scope=CTD_ANON_142, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3579, 24)))
+CTD_ANON_146._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'origId'), pyxb.binding.datatypes.string, scope=CTD_ANON_146, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3660, 24)))
 
-CTD_ANON_142._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'response'), pyxb.binding.datatypes.string, scope=CTD_ANON_142, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3580, 24)))
+CTD_ANON_146._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'origActionType'), pyxb.binding.datatypes.string, scope=CTD_ANON_146, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3661, 24)))
 
-CTD_ANON_142._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'message'), pyxb.binding.datatypes.string, scope=CTD_ANON_142, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3581, 24)))
+CTD_ANON_146._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'origCnpTxnId'), pyxb.binding.datatypes.long, scope=CTD_ANON_146, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3662, 24)))
 
-CTD_ANON_142._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'location'), pyxb.binding.datatypes.string, scope=CTD_ANON_142, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3582, 24)))
+CTD_ANON_146._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'showStatusOnly'), pyxb.binding.datatypes.string, scope=CTD_ANON_146, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3663, 24)))
+
+def _BuildAutomaton_861 ():
+    # Remove this helper function from the namespace after it is invoked
+    global _BuildAutomaton_861
+    del _BuildAutomaton_861
+    import pyxb.utils.fac as fac
+
+    counters = set()
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3660, 24))
+    counters.add(cc_0)
+    cc_1 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3661, 24))
+    counters.add(cc_1)
+    cc_2 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3662, 24))
+    counters.add(cc_2)
+    cc_3 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3663, 24))
+    counters.add(cc_3)
+    states = []
+    final_update = set()
+    final_update.add(fac.UpdateInstruction(cc_0, False))
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_146._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'origId')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3660, 24))
+    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
+    states.append(st_0)
+    final_update = set()
+    final_update.add(fac.UpdateInstruction(cc_1, False))
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_146._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'origActionType')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3661, 24))
+    st_1 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
+    states.append(st_1)
+    final_update = set()
+    final_update.add(fac.UpdateInstruction(cc_2, False))
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_146._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'origCnpTxnId')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3662, 24))
+    st_2 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
+    states.append(st_2)
+    final_update = set()
+    final_update.add(fac.UpdateInstruction(cc_3, False))
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_146._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'showStatusOnly')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3663, 24))
+    st_3 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
+    states.append(st_3)
+    transitions = []
+    transitions.append(fac.Transition(st_0, [
+        fac.UpdateInstruction(cc_0, True) ]))
+    transitions.append(fac.Transition(st_1, [
+        fac.UpdateInstruction(cc_0, False) ]))
+    transitions.append(fac.Transition(st_2, [
+        fac.UpdateInstruction(cc_0, False) ]))
+    transitions.append(fac.Transition(st_3, [
+        fac.UpdateInstruction(cc_0, False) ]))
+    st_0._set_transitionSet(transitions)
+    transitions = []
+    transitions.append(fac.Transition(st_1, [
+        fac.UpdateInstruction(cc_1, True) ]))
+    transitions.append(fac.Transition(st_2, [
+        fac.UpdateInstruction(cc_1, False) ]))
+    transitions.append(fac.Transition(st_3, [
+        fac.UpdateInstruction(cc_1, False) ]))
+    st_1._set_transitionSet(transitions)
+    transitions = []
+    transitions.append(fac.Transition(st_2, [
+        fac.UpdateInstruction(cc_2, True) ]))
+    transitions.append(fac.Transition(st_3, [
+        fac.UpdateInstruction(cc_2, False) ]))
+    st_2._set_transitionSet(transitions)
+    transitions = []
+    transitions.append(fac.Transition(st_3, [
+        fac.UpdateInstruction(cc_3, True) ]))
+    st_3._set_transitionSet(transitions)
+    return fac.Automaton(states, counters, True, containing_state=None)
+CTD_ANON_146._Automaton = _BuildAutomaton_861()
+
+
+
+
+CTD_ANON_147._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'response'), pyxb.binding.datatypes.string, scope=CTD_ANON_147, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3675, 24)))
+
+CTD_ANON_147._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'responseTime'), pyxb.binding.datatypes.dateTime, scope=CTD_ANON_147, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3676, 24)))
+
+CTD_ANON_147._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'message'), pyxb.binding.datatypes.string, scope=CTD_ANON_147, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3677, 24)))
+
+CTD_ANON_147._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'location'), pyxb.binding.datatypes.string, scope=CTD_ANON_147, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3678, 24)))
+
+CTD_ANON_147._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'matchCount'), pyxb.binding.datatypes.int, scope=CTD_ANON_147, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3679, 24)))
+
+CTD_ANON_147._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'results_max10'), CTD_ANON_35, scope=CTD_ANON_147, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3680, 24)))
+
+def _BuildAutomaton_863 ():
+    # Remove this helper function from the namespace after it is invoked
+    global _BuildAutomaton_863
+    del _BuildAutomaton_863
+    import pyxb.utils.fac as fac
+
+    counters = set()
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3675, 24))
+    counters.add(cc_0)
+    states = []
+    final_update = set()
+    final_update.add(fac.UpdateInstruction(cc_0, False))
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_147._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'response')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3675, 24))
+    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
+    states.append(st_0)
+    transitions = []
+    transitions.append(fac.Transition(st_0, [
+        fac.UpdateInstruction(cc_0, True) ]))
+    st_0._set_transitionSet(transitions)
+    return fac.Automaton(states, counters, True, containing_state=st_0)
 
 def _BuildAutomaton_864 ():
     # Remove this helper function from the namespace after it is invoked
@@ -51927,12 +52372,12 @@ def _BuildAutomaton_864 ():
     import pyxb.utils.fac as fac
 
     counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3579, 24))
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3676, 24))
     counters.add(cc_0)
     states = []
     final_update = set()
     final_update.add(fac.UpdateInstruction(cc_0, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_142._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'cnpTxnId')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3579, 24))
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_147._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'responseTime')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3676, 24))
     st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
     states.append(st_0)
     transitions = []
@@ -51948,12 +52393,12 @@ def _BuildAutomaton_865 ():
     import pyxb.utils.fac as fac
 
     counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3580, 24))
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3677, 24))
     counters.add(cc_0)
     states = []
     final_update = set()
     final_update.add(fac.UpdateInstruction(cc_0, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_142._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'response')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3580, 24))
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_147._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'message')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3677, 24))
     st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
     states.append(st_0)
     transitions = []
@@ -51969,12 +52414,12 @@ def _BuildAutomaton_866 ():
     import pyxb.utils.fac as fac
 
     counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3581, 24))
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3678, 24))
     counters.add(cc_0)
     states = []
     final_update = set()
     final_update.add(fac.UpdateInstruction(cc_0, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_142._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'message')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3581, 24))
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_147._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'location')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3678, 24))
     st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
     states.append(st_0)
     transitions = []
@@ -51990,92 +52435,12 @@ def _BuildAutomaton_867 ():
     import pyxb.utils.fac as fac
 
     counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3582, 24))
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3679, 24))
     counters.add(cc_0)
     states = []
     final_update = set()
     final_update.add(fac.UpdateInstruction(cc_0, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_142._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'location')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3582, 24))
-    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
-    states.append(st_0)
-    transitions = []
-    transitions.append(fac.Transition(st_0, [
-        fac.UpdateInstruction(cc_0, True) ]))
-    st_0._set_transitionSet(transitions)
-    return fac.Automaton(states, counters, True, containing_state=st_0)
-
-def _BuildAutomaton_863 ():
-    # Remove this helper function from the namespace after it is invoked
-    global _BuildAutomaton_863
-    del _BuildAutomaton_863
-    import pyxb.utils.fac as fac
-
-    counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3579, 24))
-    counters.add(cc_0)
-    cc_1 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3580, 24))
-    counters.add(cc_1)
-    cc_2 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3581, 24))
-    counters.add(cc_2)
-    cc_3 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3582, 24))
-    counters.add(cc_3)
-    states = []
-    sub_automata = []
-    sub_automata.append(_BuildAutomaton_864())
-    sub_automata.append(_BuildAutomaton_865())
-    sub_automata.append(_BuildAutomaton_866())
-    sub_automata.append(_BuildAutomaton_867())
-    final_update = set()
-    symbol = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3578, 20)
-    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=True)
-    st_0._set_subAutomata(*sub_automata)
-    states.append(st_0)
-    transitions = []
-    st_0._set_transitionSet(transitions)
-    return fac.Automaton(states, counters, True, containing_state=None)
-CTD_ANON_142._Automaton = _BuildAutomaton_863()
-
-
-
-
-CTD_ANON_143._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'serviceId'), pyxb.binding.datatypes.long, scope=CTD_ANON_143, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3594, 24)))
-
-CTD_ANON_143._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'pathId'), pyxb.binding.datatypes.long, scope=CTD_ANON_143, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3595, 24)))
-
-def _BuildAutomaton_869 ():
-    # Remove this helper function from the namespace after it is invoked
-    global _BuildAutomaton_869
-    del _BuildAutomaton_869
-    import pyxb.utils.fac as fac
-
-    counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3594, 24))
-    counters.add(cc_0)
-    states = []
-    final_update = set()
-    final_update.add(fac.UpdateInstruction(cc_0, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_143._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'serviceId')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3594, 24))
-    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
-    states.append(st_0)
-    transitions = []
-    transitions.append(fac.Transition(st_0, [
-        fac.UpdateInstruction(cc_0, True) ]))
-    st_0._set_transitionSet(transitions)
-    return fac.Automaton(states, counters, True, containing_state=st_0)
-
-def _BuildAutomaton_870 ():
-    # Remove this helper function from the namespace after it is invoked
-    global _BuildAutomaton_870
-    del _BuildAutomaton_870
-    import pyxb.utils.fac as fac
-
-    counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3595, 24))
-    counters.add(cc_0)
-    states = []
-    final_update = set()
-    final_update.add(fac.UpdateInstruction(cc_0, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_143._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'pathId')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3595, 24))
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_147._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'matchCount')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3679, 24))
     st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
     states.append(st_0)
     transitions = []
@@ -52091,134 +52456,81 @@ def _BuildAutomaton_868 ():
     import pyxb.utils.fac as fac
 
     counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3594, 24))
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3680, 24))
     counters.add(cc_0)
-    cc_1 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3595, 24))
+    states = []
+    final_update = set()
+    final_update.add(fac.UpdateInstruction(cc_0, False))
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_147._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'results_max10')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3680, 24))
+    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
+    states.append(st_0)
+    transitions = []
+    transitions.append(fac.Transition(st_0, [
+        fac.UpdateInstruction(cc_0, True) ]))
+    st_0._set_transitionSet(transitions)
+    return fac.Automaton(states, counters, True, containing_state=st_0)
+
+def _BuildAutomaton_862 ():
+    # Remove this helper function from the namespace after it is invoked
+    global _BuildAutomaton_862
+    del _BuildAutomaton_862
+    import pyxb.utils.fac as fac
+
+    counters = set()
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3675, 24))
+    counters.add(cc_0)
+    cc_1 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3676, 24))
     counters.add(cc_1)
+    cc_2 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3677, 24))
+    counters.add(cc_2)
+    cc_3 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3678, 24))
+    counters.add(cc_3)
+    cc_4 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3679, 24))
+    counters.add(cc_4)
+    cc_5 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3680, 24))
+    counters.add(cc_5)
     states = []
     sub_automata = []
-    sub_automata.append(_BuildAutomaton_869())
-    sub_automata.append(_BuildAutomaton_870())
+    sub_automata.append(_BuildAutomaton_863())
+    sub_automata.append(_BuildAutomaton_864())
+    sub_automata.append(_BuildAutomaton_865())
+    sub_automata.append(_BuildAutomaton_866())
+    sub_automata.append(_BuildAutomaton_867())
+    sub_automata.append(_BuildAutomaton_868())
     final_update = set()
-    symbol = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3593, 20)
+    symbol = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3674, 20)
     st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=True)
     st_0._set_subAutomata(*sub_automata)
     states.append(st_0)
     transitions = []
     st_0._set_transitionSet(transitions)
     return fac.Automaton(states, counters, True, containing_state=None)
-CTD_ANON_143._Automaton = _BuildAutomaton_868()
+CTD_ANON_147._Automaton = _BuildAutomaton_862()
 
 
 
 
-CTD_ANON_144._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'cnpTxnId'), pyxb.binding.datatypes.long, scope=CTD_ANON_144, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3607, 24)))
+CTD_ANON_148._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'cnpTxnId'), pyxb.binding.datatypes.long, scope=CTD_ANON_148, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3698, 24)))
 
-CTD_ANON_144._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'response'), pyxb.binding.datatypes.string, scope=CTD_ANON_144, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3608, 24)))
+CTD_ANON_148._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'response'), pyxb.binding.datatypes.string, scope=CTD_ANON_148, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3699, 24)))
 
-CTD_ANON_144._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'responseTime'), pyxb.binding.datatypes.dateTime, scope=CTD_ANON_144, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3609, 24)))
+CTD_ANON_148._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'message'), pyxb.binding.datatypes.string, scope=CTD_ANON_148, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3700, 24)))
 
-CTD_ANON_144._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'message'), pyxb.binding.datatypes.string, scope=CTD_ANON_144, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3610, 24)))
+CTD_ANON_148._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'location'), pyxb.binding.datatypes.string, scope=CTD_ANON_148, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3701, 24)))
 
-CTD_ANON_144._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'location'), pyxb.binding.datatypes.string, scope=CTD_ANON_144, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3611, 24)))
-
-def _BuildAutomaton_872 ():
+def _BuildAutomaton_870 ():
     # Remove this helper function from the namespace after it is invoked
-    global _BuildAutomaton_872
-    del _BuildAutomaton_872
+    global _BuildAutomaton_870
+    del _BuildAutomaton_870
     import pyxb.utils.fac as fac
 
     counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3607, 24))
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3698, 24))
     counters.add(cc_0)
     states = []
     final_update = set()
     final_update.add(fac.UpdateInstruction(cc_0, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_144._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'cnpTxnId')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3607, 24))
-    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
-    states.append(st_0)
-    transitions = []
-    transitions.append(fac.Transition(st_0, [
-        fac.UpdateInstruction(cc_0, True) ]))
-    st_0._set_transitionSet(transitions)
-    return fac.Automaton(states, counters, True, containing_state=st_0)
-
-def _BuildAutomaton_873 ():
-    # Remove this helper function from the namespace after it is invoked
-    global _BuildAutomaton_873
-    del _BuildAutomaton_873
-    import pyxb.utils.fac as fac
-
-    counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3608, 24))
-    counters.add(cc_0)
-    states = []
-    final_update = set()
-    final_update.add(fac.UpdateInstruction(cc_0, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_144._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'response')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3608, 24))
-    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
-    states.append(st_0)
-    transitions = []
-    transitions.append(fac.Transition(st_0, [
-        fac.UpdateInstruction(cc_0, True) ]))
-    st_0._set_transitionSet(transitions)
-    return fac.Automaton(states, counters, True, containing_state=st_0)
-
-def _BuildAutomaton_874 ():
-    # Remove this helper function from the namespace after it is invoked
-    global _BuildAutomaton_874
-    del _BuildAutomaton_874
-    import pyxb.utils.fac as fac
-
-    counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3609, 24))
-    counters.add(cc_0)
-    states = []
-    final_update = set()
-    final_update.add(fac.UpdateInstruction(cc_0, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_144._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'responseTime')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3609, 24))
-    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
-    states.append(st_0)
-    transitions = []
-    transitions.append(fac.Transition(st_0, [
-        fac.UpdateInstruction(cc_0, True) ]))
-    st_0._set_transitionSet(transitions)
-    return fac.Automaton(states, counters, True, containing_state=st_0)
-
-def _BuildAutomaton_875 ():
-    # Remove this helper function from the namespace after it is invoked
-    global _BuildAutomaton_875
-    del _BuildAutomaton_875
-    import pyxb.utils.fac as fac
-
-    counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3610, 24))
-    counters.add(cc_0)
-    states = []
-    final_update = set()
-    final_update.add(fac.UpdateInstruction(cc_0, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_144._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'message')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3610, 24))
-    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
-    states.append(st_0)
-    transitions = []
-    transitions.append(fac.Transition(st_0, [
-        fac.UpdateInstruction(cc_0, True) ]))
-    st_0._set_transitionSet(transitions)
-    return fac.Automaton(states, counters, True, containing_state=st_0)
-
-def _BuildAutomaton_876 ():
-    # Remove this helper function from the namespace after it is invoked
-    global _BuildAutomaton_876
-    del _BuildAutomaton_876
-    import pyxb.utils.fac as fac
-
-    counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3611, 24))
-    counters.add(cc_0)
-    states = []
-    final_update = set()
-    final_update.add(fac.UpdateInstruction(cc_0, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_144._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'location')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3611, 24))
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_148._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'cnpTxnId')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3698, 24))
     st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
     states.append(st_0)
     transitions = []
@@ -52234,194 +52546,179 @@ def _BuildAutomaton_871 ():
     import pyxb.utils.fac as fac
 
     counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3607, 24))
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3699, 24))
     counters.add(cc_0)
-    cc_1 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3608, 24))
+    states = []
+    final_update = set()
+    final_update.add(fac.UpdateInstruction(cc_0, False))
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_148._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'response')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3699, 24))
+    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
+    states.append(st_0)
+    transitions = []
+    transitions.append(fac.Transition(st_0, [
+        fac.UpdateInstruction(cc_0, True) ]))
+    st_0._set_transitionSet(transitions)
+    return fac.Automaton(states, counters, True, containing_state=st_0)
+
+def _BuildAutomaton_872 ():
+    # Remove this helper function from the namespace after it is invoked
+    global _BuildAutomaton_872
+    del _BuildAutomaton_872
+    import pyxb.utils.fac as fac
+
+    counters = set()
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3700, 24))
+    counters.add(cc_0)
+    states = []
+    final_update = set()
+    final_update.add(fac.UpdateInstruction(cc_0, False))
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_148._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'message')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3700, 24))
+    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
+    states.append(st_0)
+    transitions = []
+    transitions.append(fac.Transition(st_0, [
+        fac.UpdateInstruction(cc_0, True) ]))
+    st_0._set_transitionSet(transitions)
+    return fac.Automaton(states, counters, True, containing_state=st_0)
+
+def _BuildAutomaton_873 ():
+    # Remove this helper function from the namespace after it is invoked
+    global _BuildAutomaton_873
+    del _BuildAutomaton_873
+    import pyxb.utils.fac as fac
+
+    counters = set()
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3701, 24))
+    counters.add(cc_0)
+    states = []
+    final_update = set()
+    final_update.add(fac.UpdateInstruction(cc_0, False))
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_148._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'location')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3701, 24))
+    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
+    states.append(st_0)
+    transitions = []
+    transitions.append(fac.Transition(st_0, [
+        fac.UpdateInstruction(cc_0, True) ]))
+    st_0._set_transitionSet(transitions)
+    return fac.Automaton(states, counters, True, containing_state=st_0)
+
+def _BuildAutomaton_869 ():
+    # Remove this helper function from the namespace after it is invoked
+    global _BuildAutomaton_869
+    del _BuildAutomaton_869
+    import pyxb.utils.fac as fac
+
+    counters = set()
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3698, 24))
+    counters.add(cc_0)
+    cc_1 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3699, 24))
     counters.add(cc_1)
-    cc_2 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3609, 24))
+    cc_2 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3700, 24))
     counters.add(cc_2)
-    cc_3 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3610, 24))
+    cc_3 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3701, 24))
     counters.add(cc_3)
-    cc_4 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3611, 24))
-    counters.add(cc_4)
     states = []
     sub_automata = []
+    sub_automata.append(_BuildAutomaton_870())
+    sub_automata.append(_BuildAutomaton_871())
     sub_automata.append(_BuildAutomaton_872())
     sub_automata.append(_BuildAutomaton_873())
-    sub_automata.append(_BuildAutomaton_874())
-    sub_automata.append(_BuildAutomaton_875())
-    sub_automata.append(_BuildAutomaton_876())
     final_update = set()
-    symbol = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3606, 20)
+    symbol = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3697, 20)
     st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=True)
     st_0._set_subAutomata(*sub_automata)
     states.append(st_0)
     transitions = []
     st_0._set_transitionSet(transitions)
     return fac.Automaton(states, counters, True, containing_state=None)
-CTD_ANON_144._Automaton = _BuildAutomaton_871()
+CTD_ANON_148._Automaton = _BuildAutomaton_869()
 
 
 
 
-CTD_ANON_145._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'fundingCustomerId'), pyxb.binding.datatypes.string, scope=CTD_ANON_145, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3625, 32)))
+CTD_ANON_149._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'serviceId'), pyxb.binding.datatypes.long, scope=CTD_ANON_149, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3713, 24)))
 
-CTD_ANON_145._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'fundingSubmerchantId'), pyxb.binding.datatypes.string, scope=CTD_ANON_145, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3626, 32)))
+CTD_ANON_149._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'pathId'), pyxb.binding.datatypes.long, scope=CTD_ANON_149, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3714, 24)))
 
-CTD_ANON_145._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'vendorName'), pyxb.binding.datatypes.string, scope=CTD_ANON_145, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3628, 28)))
-
-CTD_ANON_145._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'fundsTransferId'), pyxb.binding.datatypes.string, scope=CTD_ANON_145, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3629, 28)))
-
-CTD_ANON_145._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'amount'), pyxb.binding.datatypes.integer, scope=CTD_ANON_145, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3630, 28)))
-
-CTD_ANON_145._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'accountInfo'), echeckType, scope=CTD_ANON_145, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3631, 28)))
-
-CTD_ANON_145._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'vendorAddress'), address, scope=CTD_ANON_145, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3632, 28)))
-
-def _BuildAutomaton_877 ():
+def _BuildAutomaton_875 ():
     # Remove this helper function from the namespace after it is invoked
-    global _BuildAutomaton_877
-    del _BuildAutomaton_877
+    global _BuildAutomaton_875
+    del _BuildAutomaton_875
     import pyxb.utils.fac as fac
 
     counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3625, 32))
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3713, 24))
     counters.add(cc_0)
-    cc_1 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3626, 32))
-    counters.add(cc_1)
-    cc_2 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3628, 28))
-    counters.add(cc_2)
-    cc_3 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3629, 28))
-    counters.add(cc_3)
-    cc_4 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3630, 28))
-    counters.add(cc_4)
-    cc_5 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3631, 28))
-    counters.add(cc_5)
-    cc_6 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3632, 28))
-    counters.add(cc_6)
     states = []
     final_update = set()
     final_update.add(fac.UpdateInstruction(cc_0, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_145._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'fundingCustomerId')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3625, 32))
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_149._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'serviceId')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3713, 24))
     st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
     states.append(st_0)
-    final_update = set()
-    final_update.add(fac.UpdateInstruction(cc_1, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_145._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'fundingSubmerchantId')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3626, 32))
-    st_1 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
-    states.append(st_1)
-    final_update = set()
-    final_update.add(fac.UpdateInstruction(cc_2, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_145._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'vendorName')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3628, 28))
-    st_2 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
-    states.append(st_2)
-    final_update = set()
-    final_update.add(fac.UpdateInstruction(cc_3, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_145._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'fundsTransferId')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3629, 28))
-    st_3 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
-    states.append(st_3)
-    final_update = set()
-    final_update.add(fac.UpdateInstruction(cc_4, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_145._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'amount')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3630, 28))
-    st_4 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
-    states.append(st_4)
-    final_update = set()
-    final_update.add(fac.UpdateInstruction(cc_5, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_145._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'accountInfo')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3631, 28))
-    st_5 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
-    states.append(st_5)
-    final_update = set()
-    final_update.add(fac.UpdateInstruction(cc_6, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_145._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'vendorAddress')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3632, 28))
-    st_6 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
-    states.append(st_6)
     transitions = []
     transitions.append(fac.Transition(st_0, [
         fac.UpdateInstruction(cc_0, True) ]))
-    transitions.append(fac.Transition(st_2, [
-        fac.UpdateInstruction(cc_0, False) ]))
-    transitions.append(fac.Transition(st_3, [
-        fac.UpdateInstruction(cc_0, False) ]))
-    transitions.append(fac.Transition(st_4, [
-        fac.UpdateInstruction(cc_0, False) ]))
-    transitions.append(fac.Transition(st_5, [
-        fac.UpdateInstruction(cc_0, False) ]))
-    transitions.append(fac.Transition(st_6, [
-        fac.UpdateInstruction(cc_0, False) ]))
     st_0._set_transitionSet(transitions)
+    return fac.Automaton(states, counters, True, containing_state=st_0)
+
+def _BuildAutomaton_876 ():
+    # Remove this helper function from the namespace after it is invoked
+    global _BuildAutomaton_876
+    del _BuildAutomaton_876
+    import pyxb.utils.fac as fac
+
+    counters = set()
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3714, 24))
+    counters.add(cc_0)
+    states = []
+    final_update = set()
+    final_update.add(fac.UpdateInstruction(cc_0, False))
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_149._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'pathId')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3714, 24))
+    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
+    states.append(st_0)
     transitions = []
-    transitions.append(fac.Transition(st_1, [
-        fac.UpdateInstruction(cc_1, True) ]))
-    transitions.append(fac.Transition(st_2, [
-        fac.UpdateInstruction(cc_1, False) ]))
-    transitions.append(fac.Transition(st_3, [
-        fac.UpdateInstruction(cc_1, False) ]))
-    transitions.append(fac.Transition(st_4, [
-        fac.UpdateInstruction(cc_1, False) ]))
-    transitions.append(fac.Transition(st_5, [
-        fac.UpdateInstruction(cc_1, False) ]))
-    transitions.append(fac.Transition(st_6, [
-        fac.UpdateInstruction(cc_1, False) ]))
-    st_1._set_transitionSet(transitions)
+    transitions.append(fac.Transition(st_0, [
+        fac.UpdateInstruction(cc_0, True) ]))
+    st_0._set_transitionSet(transitions)
+    return fac.Automaton(states, counters, True, containing_state=st_0)
+
+def _BuildAutomaton_874 ():
+    # Remove this helper function from the namespace after it is invoked
+    global _BuildAutomaton_874
+    del _BuildAutomaton_874
+    import pyxb.utils.fac as fac
+
+    counters = set()
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3713, 24))
+    counters.add(cc_0)
+    cc_1 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3714, 24))
+    counters.add(cc_1)
+    states = []
+    sub_automata = []
+    sub_automata.append(_BuildAutomaton_875())
+    sub_automata.append(_BuildAutomaton_876())
+    final_update = set()
+    symbol = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3712, 20)
+    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=True)
+    st_0._set_subAutomata(*sub_automata)
+    states.append(st_0)
     transitions = []
-    transitions.append(fac.Transition(st_2, [
-        fac.UpdateInstruction(cc_2, True) ]))
-    transitions.append(fac.Transition(st_3, [
-        fac.UpdateInstruction(cc_2, False) ]))
-    transitions.append(fac.Transition(st_4, [
-        fac.UpdateInstruction(cc_2, False) ]))
-    transitions.append(fac.Transition(st_5, [
-        fac.UpdateInstruction(cc_2, False) ]))
-    transitions.append(fac.Transition(st_6, [
-        fac.UpdateInstruction(cc_2, False) ]))
-    st_2._set_transitionSet(transitions)
-    transitions = []
-    transitions.append(fac.Transition(st_3, [
-        fac.UpdateInstruction(cc_3, True) ]))
-    transitions.append(fac.Transition(st_4, [
-        fac.UpdateInstruction(cc_3, False) ]))
-    transitions.append(fac.Transition(st_5, [
-        fac.UpdateInstruction(cc_3, False) ]))
-    transitions.append(fac.Transition(st_6, [
-        fac.UpdateInstruction(cc_3, False) ]))
-    st_3._set_transitionSet(transitions)
-    transitions = []
-    transitions.append(fac.Transition(st_4, [
-        fac.UpdateInstruction(cc_4, True) ]))
-    transitions.append(fac.Transition(st_5, [
-        fac.UpdateInstruction(cc_4, False) ]))
-    transitions.append(fac.Transition(st_6, [
-        fac.UpdateInstruction(cc_4, False) ]))
-    st_4._set_transitionSet(transitions)
-    transitions = []
-    transitions.append(fac.Transition(st_5, [
-        fac.UpdateInstruction(cc_5, True) ]))
-    transitions.append(fac.Transition(st_6, [
-        fac.UpdateInstruction(cc_5, False) ]))
-    st_5._set_transitionSet(transitions)
-    transitions = []
-    transitions.append(fac.Transition(st_6, [
-        fac.UpdateInstruction(cc_6, True) ]))
-    st_6._set_transitionSet(transitions)
+    st_0._set_transitionSet(transitions)
     return fac.Automaton(states, counters, True, containing_state=None)
-CTD_ANON_145._Automaton = _BuildAutomaton_877()
+CTD_ANON_149._Automaton = _BuildAutomaton_874()
 
 
 
 
-CTD_ANON_146._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'fundingCustomerId'), pyxb.binding.datatypes.string, scope=CTD_ANON_146, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3647, 32)))
+CTD_ANON_150._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'cnpTxnId'), pyxb.binding.datatypes.long, scope=CTD_ANON_150, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3726, 24)))
 
-CTD_ANON_146._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'fundingSubmerchantId'), pyxb.binding.datatypes.string, scope=CTD_ANON_146, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3648, 32)))
+CTD_ANON_150._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'response'), pyxb.binding.datatypes.string, scope=CTD_ANON_150, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3727, 24)))
 
-CTD_ANON_146._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'vendorName'), pyxb.binding.datatypes.string, scope=CTD_ANON_146, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3650, 28)))
+CTD_ANON_150._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'responseTime'), pyxb.binding.datatypes.dateTime, scope=CTD_ANON_150, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3728, 24)))
 
-CTD_ANON_146._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'fundsTransferId'), pyxb.binding.datatypes.string, scope=CTD_ANON_146, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3651, 28)))
+CTD_ANON_150._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'message'), pyxb.binding.datatypes.string, scope=CTD_ANON_150, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3729, 24)))
 
-CTD_ANON_146._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'amount'), pyxb.binding.datatypes.integer, scope=CTD_ANON_146, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3652, 28)))
-
-CTD_ANON_146._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'accountInfo'), echeckType, scope=CTD_ANON_146, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3653, 28)))
-
-CTD_ANON_146._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'vendorAddress'), address, scope=CTD_ANON_146, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3654, 28)))
+CTD_ANON_150._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'location'), pyxb.binding.datatypes.string, scope=CTD_ANON_150, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3730, 24)))
 
 def _BuildAutomaton_878 ():
     # Remove this helper function from the namespace after it is invoked
@@ -52430,141 +52727,19 @@ def _BuildAutomaton_878 ():
     import pyxb.utils.fac as fac
 
     counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3647, 32))
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3726, 24))
     counters.add(cc_0)
-    cc_1 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3648, 32))
-    counters.add(cc_1)
-    cc_2 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3650, 28))
-    counters.add(cc_2)
-    cc_3 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3651, 28))
-    counters.add(cc_3)
-    cc_4 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3652, 28))
-    counters.add(cc_4)
-    cc_5 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3653, 28))
-    counters.add(cc_5)
-    cc_6 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3654, 28))
-    counters.add(cc_6)
     states = []
     final_update = set()
     final_update.add(fac.UpdateInstruction(cc_0, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_146._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'fundingCustomerId')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3647, 32))
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_150._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'cnpTxnId')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3726, 24))
     st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
     states.append(st_0)
-    final_update = set()
-    final_update.add(fac.UpdateInstruction(cc_1, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_146._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'fundingSubmerchantId')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3648, 32))
-    st_1 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
-    states.append(st_1)
-    final_update = set()
-    final_update.add(fac.UpdateInstruction(cc_2, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_146._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'vendorName')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3650, 28))
-    st_2 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
-    states.append(st_2)
-    final_update = set()
-    final_update.add(fac.UpdateInstruction(cc_3, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_146._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'fundsTransferId')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3651, 28))
-    st_3 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
-    states.append(st_3)
-    final_update = set()
-    final_update.add(fac.UpdateInstruction(cc_4, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_146._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'amount')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3652, 28))
-    st_4 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
-    states.append(st_4)
-    final_update = set()
-    final_update.add(fac.UpdateInstruction(cc_5, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_146._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'accountInfo')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3653, 28))
-    st_5 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
-    states.append(st_5)
-    final_update = set()
-    final_update.add(fac.UpdateInstruction(cc_6, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_146._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'vendorAddress')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3654, 28))
-    st_6 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
-    states.append(st_6)
     transitions = []
     transitions.append(fac.Transition(st_0, [
         fac.UpdateInstruction(cc_0, True) ]))
-    transitions.append(fac.Transition(st_2, [
-        fac.UpdateInstruction(cc_0, False) ]))
-    transitions.append(fac.Transition(st_3, [
-        fac.UpdateInstruction(cc_0, False) ]))
-    transitions.append(fac.Transition(st_4, [
-        fac.UpdateInstruction(cc_0, False) ]))
-    transitions.append(fac.Transition(st_5, [
-        fac.UpdateInstruction(cc_0, False) ]))
-    transitions.append(fac.Transition(st_6, [
-        fac.UpdateInstruction(cc_0, False) ]))
     st_0._set_transitionSet(transitions)
-    transitions = []
-    transitions.append(fac.Transition(st_1, [
-        fac.UpdateInstruction(cc_1, True) ]))
-    transitions.append(fac.Transition(st_2, [
-        fac.UpdateInstruction(cc_1, False) ]))
-    transitions.append(fac.Transition(st_3, [
-        fac.UpdateInstruction(cc_1, False) ]))
-    transitions.append(fac.Transition(st_4, [
-        fac.UpdateInstruction(cc_1, False) ]))
-    transitions.append(fac.Transition(st_5, [
-        fac.UpdateInstruction(cc_1, False) ]))
-    transitions.append(fac.Transition(st_6, [
-        fac.UpdateInstruction(cc_1, False) ]))
-    st_1._set_transitionSet(transitions)
-    transitions = []
-    transitions.append(fac.Transition(st_2, [
-        fac.UpdateInstruction(cc_2, True) ]))
-    transitions.append(fac.Transition(st_3, [
-        fac.UpdateInstruction(cc_2, False) ]))
-    transitions.append(fac.Transition(st_4, [
-        fac.UpdateInstruction(cc_2, False) ]))
-    transitions.append(fac.Transition(st_5, [
-        fac.UpdateInstruction(cc_2, False) ]))
-    transitions.append(fac.Transition(st_6, [
-        fac.UpdateInstruction(cc_2, False) ]))
-    st_2._set_transitionSet(transitions)
-    transitions = []
-    transitions.append(fac.Transition(st_3, [
-        fac.UpdateInstruction(cc_3, True) ]))
-    transitions.append(fac.Transition(st_4, [
-        fac.UpdateInstruction(cc_3, False) ]))
-    transitions.append(fac.Transition(st_5, [
-        fac.UpdateInstruction(cc_3, False) ]))
-    transitions.append(fac.Transition(st_6, [
-        fac.UpdateInstruction(cc_3, False) ]))
-    st_3._set_transitionSet(transitions)
-    transitions = []
-    transitions.append(fac.Transition(st_4, [
-        fac.UpdateInstruction(cc_4, True) ]))
-    transitions.append(fac.Transition(st_5, [
-        fac.UpdateInstruction(cc_4, False) ]))
-    transitions.append(fac.Transition(st_6, [
-        fac.UpdateInstruction(cc_4, False) ]))
-    st_4._set_transitionSet(transitions)
-    transitions = []
-    transitions.append(fac.Transition(st_5, [
-        fac.UpdateInstruction(cc_5, True) ]))
-    transitions.append(fac.Transition(st_6, [
-        fac.UpdateInstruction(cc_5, False) ]))
-    st_5._set_transitionSet(transitions)
-    transitions = []
-    transitions.append(fac.Transition(st_6, [
-        fac.UpdateInstruction(cc_6, True) ]))
-    st_6._set_transitionSet(transitions)
-    return fac.Automaton(states, counters, True, containing_state=None)
-CTD_ANON_146._Automaton = _BuildAutomaton_878()
-
-
-
-
-CTD_ANON_147._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'fundingSubmerchantId'), pyxb.binding.datatypes.string, scope=CTD_ANON_147, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3669, 28)))
-
-CTD_ANON_147._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'submerchantName'), pyxb.binding.datatypes.string, scope=CTD_ANON_147, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3670, 28)))
-
-CTD_ANON_147._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'fundsTransferId'), pyxb.binding.datatypes.string, scope=CTD_ANON_147, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3671, 28)))
-
-CTD_ANON_147._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'amount'), pyxb.binding.datatypes.integer, scope=CTD_ANON_147, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3672, 28)))
-
-CTD_ANON_147._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'accountInfo'), echeckType, scope=CTD_ANON_147, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3673, 28)))
-
-CTD_ANON_147._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'customIdentifier'), pyxb.binding.datatypes.string, scope=CTD_ANON_147, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3674, 28)))
+    return fac.Automaton(states, counters, True, containing_state=st_0)
 
 def _BuildAutomaton_879 ():
     # Remove this helper function from the namespace after it is invoked
@@ -52573,75 +52748,19 @@ def _BuildAutomaton_879 ():
     import pyxb.utils.fac as fac
 
     counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3674, 28))
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3727, 24))
     counters.add(cc_0)
     states = []
-    final_update = None
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_147._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'fundingSubmerchantId')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3669, 28))
-    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
-    states.append(st_0)
-    final_update = None
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_147._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'submerchantName')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3670, 28))
-    st_1 = fac.State(symbol, is_initial=False, final_update=final_update, is_unordered_catenation=False)
-    states.append(st_1)
-    final_update = None
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_147._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'fundsTransferId')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3671, 28))
-    st_2 = fac.State(symbol, is_initial=False, final_update=final_update, is_unordered_catenation=False)
-    states.append(st_2)
-    final_update = None
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_147._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'amount')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3672, 28))
-    st_3 = fac.State(symbol, is_initial=False, final_update=final_update, is_unordered_catenation=False)
-    states.append(st_3)
-    final_update = set()
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_147._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'accountInfo')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3673, 28))
-    st_4 = fac.State(symbol, is_initial=False, final_update=final_update, is_unordered_catenation=False)
-    states.append(st_4)
     final_update = set()
     final_update.add(fac.UpdateInstruction(cc_0, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_147._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'customIdentifier')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3674, 28))
-    st_5 = fac.State(symbol, is_initial=False, final_update=final_update, is_unordered_catenation=False)
-    states.append(st_5)
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_150._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'response')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3727, 24))
+    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
+    states.append(st_0)
     transitions = []
-    transitions.append(fac.Transition(st_1, [
-         ]))
-    st_0._set_transitionSet(transitions)
-    transitions = []
-    transitions.append(fac.Transition(st_2, [
-         ]))
-    st_1._set_transitionSet(transitions)
-    transitions = []
-    transitions.append(fac.Transition(st_3, [
-         ]))
-    st_2._set_transitionSet(transitions)
-    transitions = []
-    transitions.append(fac.Transition(st_4, [
-         ]))
-    st_3._set_transitionSet(transitions)
-    transitions = []
-    transitions.append(fac.Transition(st_5, [
-         ]))
-    st_4._set_transitionSet(transitions)
-    transitions = []
-    transitions.append(fac.Transition(st_5, [
+    transitions.append(fac.Transition(st_0, [
         fac.UpdateInstruction(cc_0, True) ]))
-    st_5._set_transitionSet(transitions)
-    return fac.Automaton(states, counters, False, containing_state=None)
-CTD_ANON_147._Automaton = _BuildAutomaton_879()
-
-
-
-
-CTD_ANON_148._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'fundingSubmerchantId'), pyxb.binding.datatypes.string, scope=CTD_ANON_148, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3688, 28)))
-
-CTD_ANON_148._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'submerchantName'), pyxb.binding.datatypes.string, scope=CTD_ANON_148, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3689, 28)))
-
-CTD_ANON_148._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'fundsTransferId'), pyxb.binding.datatypes.string, scope=CTD_ANON_148, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3690, 28)))
-
-CTD_ANON_148._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'amount'), pyxb.binding.datatypes.integer, scope=CTD_ANON_148, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3691, 28)))
-
-CTD_ANON_148._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'accountInfo'), echeckType, scope=CTD_ANON_148, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3692, 28)))
-
-CTD_ANON_148._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'customIdentifier'), pyxb.binding.datatypes.string, scope=CTD_ANON_148, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3693, 28)))
+    st_0._set_transitionSet(transitions)
+    return fac.Automaton(states, counters, True, containing_state=st_0)
 
 def _BuildAutomaton_880 ():
     # Remove this helper function from the namespace after it is invoked
@@ -52650,75 +52769,19 @@ def _BuildAutomaton_880 ():
     import pyxb.utils.fac as fac
 
     counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3693, 28))
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3728, 24))
     counters.add(cc_0)
     states = []
-    final_update = None
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_148._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'fundingSubmerchantId')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3688, 28))
-    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
-    states.append(st_0)
-    final_update = None
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_148._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'submerchantName')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3689, 28))
-    st_1 = fac.State(symbol, is_initial=False, final_update=final_update, is_unordered_catenation=False)
-    states.append(st_1)
-    final_update = None
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_148._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'fundsTransferId')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3690, 28))
-    st_2 = fac.State(symbol, is_initial=False, final_update=final_update, is_unordered_catenation=False)
-    states.append(st_2)
-    final_update = None
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_148._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'amount')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3691, 28))
-    st_3 = fac.State(symbol, is_initial=False, final_update=final_update, is_unordered_catenation=False)
-    states.append(st_3)
-    final_update = set()
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_148._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'accountInfo')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3692, 28))
-    st_4 = fac.State(symbol, is_initial=False, final_update=final_update, is_unordered_catenation=False)
-    states.append(st_4)
     final_update = set()
     final_update.add(fac.UpdateInstruction(cc_0, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_148._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'customIdentifier')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3693, 28))
-    st_5 = fac.State(symbol, is_initial=False, final_update=final_update, is_unordered_catenation=False)
-    states.append(st_5)
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_150._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'responseTime')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3728, 24))
+    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
+    states.append(st_0)
     transitions = []
-    transitions.append(fac.Transition(st_1, [
-         ]))
-    st_0._set_transitionSet(transitions)
-    transitions = []
-    transitions.append(fac.Transition(st_2, [
-         ]))
-    st_1._set_transitionSet(transitions)
-    transitions = []
-    transitions.append(fac.Transition(st_3, [
-         ]))
-    st_2._set_transitionSet(transitions)
-    transitions = []
-    transitions.append(fac.Transition(st_4, [
-         ]))
-    st_3._set_transitionSet(transitions)
-    transitions = []
-    transitions.append(fac.Transition(st_5, [
-         ]))
-    st_4._set_transitionSet(transitions)
-    transitions = []
-    transitions.append(fac.Transition(st_5, [
+    transitions.append(fac.Transition(st_0, [
         fac.UpdateInstruction(cc_0, True) ]))
-    st_5._set_transitionSet(transitions)
-    return fac.Automaton(states, counters, False, containing_state=None)
-CTD_ANON_148._Automaton = _BuildAutomaton_880()
-
-
-
-
-CTD_ANON_149._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'fundingCustomerId'), pyxb.binding.datatypes.string, scope=CTD_ANON_149, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3707, 28)))
-
-CTD_ANON_149._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'customerName'), pyxb.binding.datatypes.string, scope=CTD_ANON_149, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3708, 28)))
-
-CTD_ANON_149._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'fundsTransferId'), pyxb.binding.datatypes.string, scope=CTD_ANON_149, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3709, 28)))
-
-CTD_ANON_149._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'amount'), pyxb.binding.datatypes.integer, scope=CTD_ANON_149, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3710, 28)))
-
-CTD_ANON_149._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'accountInfo'), echeckType, scope=CTD_ANON_149, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3711, 28)))
-
-CTD_ANON_149._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'customIdentifier'), pyxb.binding.datatypes.string, scope=CTD_ANON_149, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3712, 28)))
+    st_0._set_transitionSet(transitions)
+    return fac.Automaton(states, counters, True, containing_state=st_0)
 
 def _BuildAutomaton_881 ():
     # Remove this helper function from the namespace after it is invoked
@@ -52727,75 +52790,19 @@ def _BuildAutomaton_881 ():
     import pyxb.utils.fac as fac
 
     counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3712, 28))
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3729, 24))
     counters.add(cc_0)
     states = []
-    final_update = None
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_149._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'fundingCustomerId')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3707, 28))
-    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
-    states.append(st_0)
-    final_update = None
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_149._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'customerName')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3708, 28))
-    st_1 = fac.State(symbol, is_initial=False, final_update=final_update, is_unordered_catenation=False)
-    states.append(st_1)
-    final_update = None
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_149._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'fundsTransferId')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3709, 28))
-    st_2 = fac.State(symbol, is_initial=False, final_update=final_update, is_unordered_catenation=False)
-    states.append(st_2)
-    final_update = None
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_149._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'amount')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3710, 28))
-    st_3 = fac.State(symbol, is_initial=False, final_update=final_update, is_unordered_catenation=False)
-    states.append(st_3)
-    final_update = set()
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_149._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'accountInfo')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3711, 28))
-    st_4 = fac.State(symbol, is_initial=False, final_update=final_update, is_unordered_catenation=False)
-    states.append(st_4)
     final_update = set()
     final_update.add(fac.UpdateInstruction(cc_0, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_149._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'customIdentifier')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3712, 28))
-    st_5 = fac.State(symbol, is_initial=False, final_update=final_update, is_unordered_catenation=False)
-    states.append(st_5)
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_150._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'message')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3729, 24))
+    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
+    states.append(st_0)
     transitions = []
-    transitions.append(fac.Transition(st_1, [
-         ]))
-    st_0._set_transitionSet(transitions)
-    transitions = []
-    transitions.append(fac.Transition(st_2, [
-         ]))
-    st_1._set_transitionSet(transitions)
-    transitions = []
-    transitions.append(fac.Transition(st_3, [
-         ]))
-    st_2._set_transitionSet(transitions)
-    transitions = []
-    transitions.append(fac.Transition(st_4, [
-         ]))
-    st_3._set_transitionSet(transitions)
-    transitions = []
-    transitions.append(fac.Transition(st_5, [
-         ]))
-    st_4._set_transitionSet(transitions)
-    transitions = []
-    transitions.append(fac.Transition(st_5, [
+    transitions.append(fac.Transition(st_0, [
         fac.UpdateInstruction(cc_0, True) ]))
-    st_5._set_transitionSet(transitions)
-    return fac.Automaton(states, counters, False, containing_state=None)
-CTD_ANON_149._Automaton = _BuildAutomaton_881()
-
-
-
-
-CTD_ANON_150._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'fundingCustomerId'), pyxb.binding.datatypes.string, scope=CTD_ANON_150, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3726, 28)))
-
-CTD_ANON_150._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'customerName'), pyxb.binding.datatypes.string, scope=CTD_ANON_150, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3727, 28)))
-
-CTD_ANON_150._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'fundsTransferId'), pyxb.binding.datatypes.string, scope=CTD_ANON_150, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3728, 28)))
-
-CTD_ANON_150._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'amount'), pyxb.binding.datatypes.integer, scope=CTD_ANON_150, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3729, 28)))
-
-CTD_ANON_150._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'accountInfo'), echeckType, scope=CTD_ANON_150, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3730, 28)))
-
-CTD_ANON_150._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'customIdentifier'), pyxb.binding.datatypes.string, scope=CTD_ANON_150, location=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3731, 28)))
+    st_0._set_transitionSet(transitions)
+    return fac.Automaton(states, counters, True, containing_state=st_0)
 
 def _BuildAutomaton_882 ():
     # Remove this helper function from the namespace after it is invoked
@@ -52804,60 +52811,53 @@ def _BuildAutomaton_882 ():
     import pyxb.utils.fac as fac
 
     counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3731, 28))
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3730, 24))
     counters.add(cc_0)
     states = []
-    final_update = None
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_150._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'fundingCustomerId')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3726, 28))
-    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
-    states.append(st_0)
-    final_update = None
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_150._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'customerName')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3727, 28))
-    st_1 = fac.State(symbol, is_initial=False, final_update=final_update, is_unordered_catenation=False)
-    states.append(st_1)
-    final_update = None
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_150._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'fundsTransferId')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3728, 28))
-    st_2 = fac.State(symbol, is_initial=False, final_update=final_update, is_unordered_catenation=False)
-    states.append(st_2)
-    final_update = None
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_150._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'amount')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3729, 28))
-    st_3 = fac.State(symbol, is_initial=False, final_update=final_update, is_unordered_catenation=False)
-    states.append(st_3)
-    final_update = set()
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_150._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'accountInfo')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3730, 28))
-    st_4 = fac.State(symbol, is_initial=False, final_update=final_update, is_unordered_catenation=False)
-    states.append(st_4)
     final_update = set()
     final_update.add(fac.UpdateInstruction(cc_0, False))
-    symbol = pyxb.binding.content.ElementUse(CTD_ANON_150._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'customIdentifier')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3731, 28))
-    st_5 = fac.State(symbol, is_initial=False, final_update=final_update, is_unordered_catenation=False)
-    states.append(st_5)
+    symbol = pyxb.binding.content.ElementUse(CTD_ANON_150._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'location')), pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3730, 24))
+    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
+    states.append(st_0)
     transitions = []
-    transitions.append(fac.Transition(st_1, [
-         ]))
-    st_0._set_transitionSet(transitions)
-    transitions = []
-    transitions.append(fac.Transition(st_2, [
-         ]))
-    st_1._set_transitionSet(transitions)
-    transitions = []
-    transitions.append(fac.Transition(st_3, [
-         ]))
-    st_2._set_transitionSet(transitions)
-    transitions = []
-    transitions.append(fac.Transition(st_4, [
-         ]))
-    st_3._set_transitionSet(transitions)
-    transitions = []
-    transitions.append(fac.Transition(st_5, [
-         ]))
-    st_4._set_transitionSet(transitions)
-    transitions = []
-    transitions.append(fac.Transition(st_5, [
+    transitions.append(fac.Transition(st_0, [
         fac.UpdateInstruction(cc_0, True) ]))
-    st_5._set_transitionSet(transitions)
-    return fac.Automaton(states, counters, False, containing_state=None)
-CTD_ANON_150._Automaton = _BuildAutomaton_882()
+    st_0._set_transitionSet(transitions)
+    return fac.Automaton(states, counters, True, containing_state=st_0)
+
+def _BuildAutomaton_877 ():
+    # Remove this helper function from the namespace after it is invoked
+    global _BuildAutomaton_877
+    del _BuildAutomaton_877
+    import pyxb.utils.fac as fac
+
+    counters = set()
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3726, 24))
+    counters.add(cc_0)
+    cc_1 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3727, 24))
+    counters.add(cc_1)
+    cc_2 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3728, 24))
+    counters.add(cc_2)
+    cc_3 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3729, 24))
+    counters.add(cc_3)
+    cc_4 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3730, 24))
+    counters.add(cc_4)
+    states = []
+    sub_automata = []
+    sub_automata.append(_BuildAutomaton_878())
+    sub_automata.append(_BuildAutomaton_879())
+    sub_automata.append(_BuildAutomaton_880())
+    sub_automata.append(_BuildAutomaton_881())
+    sub_automata.append(_BuildAutomaton_882())
+    final_update = set()
+    symbol = pyxb.utils.utility.Location('SchemaCombined_v12.24.xsd', 3725, 20)
+    st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=True)
+    st_0._set_subAutomata(*sub_automata)
+    states.append(st_0)
+    transitions = []
+    st_0._set_transitionSet(transitions)
+    return fac.Automaton(states, counters, True, containing_state=None)
+CTD_ANON_150._Automaton = _BuildAutomaton_877()
 
 
 card._setSubstitutionGroup(cardOrToken)
@@ -53056,6 +53056,18 @@ echeckPreNoteSaleResponse._setSubstitutionGroup(transactionResponse)
 
 echeckPreNoteCreditResponse._setSubstitutionGroup(transactionResponse)
 
+vendorCredit._setSubstitutionGroup(transaction)
+
+vendorDebit._setSubstitutionGroup(transaction)
+
+submerchantCredit._setSubstitutionGroup(transaction)
+
+submerchantDebit._setSubstitutionGroup(transaction)
+
+customerCredit._setSubstitutionGroup(transaction)
+
+customerDebit._setSubstitutionGroup(transaction)
+
 void._setSubstitutionGroup(transaction)
 
 voidResponse._setSubstitutionGroup(transactionResponse)
@@ -53085,15 +53097,3 @@ queryTransactionUnavailableResponse._setSubstitutionGroup(transactionResponse)
 serviceStatusRequest._setSubstitutionGroup(transaction)
 
 serviceStatusResponse._setSubstitutionGroup(transactionResponse)
-
-vendorCredit._setSubstitutionGroup(transaction)
-
-vendorDebit._setSubstitutionGroup(transaction)
-
-submerchantCredit._setSubstitutionGroup(transaction)
-
-submerchantDebit._setSubstitutionGroup(transaction)
-
-customerCredit._setSubstitutionGroup(transaction)
-
-customerDebit._setSubstitutionGroup(transaction)

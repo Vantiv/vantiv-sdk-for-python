@@ -163,6 +163,12 @@ createDiscountType
         :var name: String or Number
         :var startDate: String or Number
 
+ctxPaymentInformationType
+-------------------------
+    .. py:class:: vantivsdk.fields.ctxPaymentInformationType
+
+        :var ctxPaymentDetail: String or Number
+
 customBilling
 -------------
     .. py:class:: vantivsdk.fields.customBilling
@@ -245,6 +251,17 @@ echeckType
         :var accType: String or Number
         :var ccdPaymentInformation: String or Number
         :var checkNum: String or Number
+        :var routingNum: String or Number
+
+echeckTypeCtx
+-------------
+    .. py:class:: vantivsdk.fields.echeckTypeCtx
+
+        :var accNum: String or Number
+        :var accType: String or Number
+        :var ccdPaymentInformation: String or Number
+        :var checkNum: String or Number
+        :var ctxPaymentInformation: instance of :py:class:`vantivsdk.fields.ctxPaymentInformationType`
         :var routingNum: String or Number
 
 enhancedData
