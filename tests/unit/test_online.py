@@ -26,6 +26,7 @@ import os
 import sys
 import unittest
 import re
+import datetime
 
 if sys.version_info[0:2] >= (3, 4):
     from unittest import mock
@@ -97,6 +98,67 @@ class TestOnline(unittest.TestCase):
         card.type = 'VI'
 
         transaction.card = card
+        customerInfo = fields.customerInfo()
+
+        customerInfo.accountUserName = 'Jack'
+        customerInfo.userAccountNumber = '1234'
+        customerInfo.userAccountEmail = 'gmail@gmail.com'
+        customerInfo.membershipId = '11111'
+        customerInfo.membershipPhone = '123456'
+        customerInfo.membershipEmail = 'gmail@gmail.com'
+        customerInfo.membershipName = 'fran'
+        customerInfo.accountCreatedDate = datetime.datetime.now().strftime("%Y-%m-%d")
+        customerInfo.userAccountPhone = '000461223'
+        transaction.customerInfo = customerInfo
+        detailTaxList = list()
+        detailTax = fields.detailTax()
+        detailTax.taxAmount = 100
+        detailTax2 = fields.detailTax()
+        detailTax2.taxAmount = 200
+        detailTaxList.append(detailTax)
+        detailTaxList.append(detailTax2)
+        lineItemDataList = list()
+        lineItemData = fields.lineItemData()
+        lineItemData.itemDescription = 'des'
+        lineItemData.itemCategory = 'Chock'
+        lineItemData.itemCategory = 'Chock'
+        lineItemData.itemSubCategory = 'pen'
+        lineItemData.productId = '001'
+        lineItemData.productName = 'prod'
+        lineItemDataList.append(lineItemData)
+        enhancedData = fields.enhancedData()
+        enhancedData.detailTax = detailTaxList
+        enhancedData.lineItemData = lineItemDataList
+        enhancedData.discountCode = '001'
+        enhancedData.discountPercent = '10'
+        enhancedData.fulfilmentMethodType = 'DELIVERY'
+
+        transaction.enhancedData = enhancedData
+
+        # Create contact object
+        contact = fields.contact()
+        contact.name = 'John & Mary Smith'
+        contact.addressLine1 = '1 Main St.'
+        contact.city = 'Burlington'
+        contact.state = 'MA'
+        contact.zip = '01803-3747'
+        contact.country = 'USA'
+        contact.sellerID = '123'
+        contact.url = 'http://tax.xom'
+        # The type of retailerAddress is contact
+        transaction.retailerAddress = contact
+
+        additionalCOFData = fields.additionalCOFData()
+        additionalCOFData.totalPaymentCount = '35'
+        additionalCOFData.paymentType = 'Fixed Amount'
+        additionalCOFData.uniqueId = '12345wereew233'
+        additionalCOFData.frequencyOfMIT = 'BiWeekly'
+        additionalCOFData.validationReference = 're3298rhriw4wrw'
+        additionalCOFData.sequenceIndicator = '2'
+
+        transaction.additionalCOFData = additionalCOFData
+
+        transaction.crypto = False
 
         mock__http_post.return_value = """<cnpOnlineResponse version='11.0' response='1' message='Valid Format' xmlns='http://www.vantivcnp.com/schema'>
 </cnpOnlineResponse>
