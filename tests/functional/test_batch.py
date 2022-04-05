@@ -47,7 +47,7 @@ else:
 
 class TestBatch(unittest.TestCase):
 
-
+    @unittest.skipIf(preliveStatus.lower() == 'down', "prelive not available")
     def test_batch_submit(self):
         # Initial Transactions container
         transactions = batch.Transactions()
