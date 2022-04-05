@@ -45,7 +45,7 @@ class TestVendorCredit(unittest.TestCase):
         transaction.vendorName = "Vantiv"
         transaction.amount = 1512
 
-        account_info = fields.echeckType()
+        account_info = fields.echeckTypeCtx()
         account_info.accType = 'Savings'
         account_info.accNum = "1234"
         account_info.routingNum = "12345678"
@@ -65,7 +65,7 @@ class TestVendorCredit(unittest.TestCase):
         transaction.vendorName = "Vantiv"
         transaction.amount = 1512
 
-        account_info = fields.echeckType()
+        account_info = fields.echeckTypeCtx()
         account_info.accType = 'Savings'
         account_info.accNum = "1234"
         account_info.routingNum = "12345678"
