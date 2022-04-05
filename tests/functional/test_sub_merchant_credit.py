@@ -44,7 +44,7 @@ class TestSubmerchantCredit(unittest.TestCase):
         transaction.fundsTransferId = "value for fundsTransferId"
         transaction.amount = 1512
 
-        account_info = fields.echeckType()
+        account_info = fields.echeckTypeCtx()
         account_info.accType = 'Savings'
         account_info.accNum = "1234"
         account_info.routingNum = "12345678"
