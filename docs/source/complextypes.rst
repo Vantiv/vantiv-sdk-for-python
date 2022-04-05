@@ -1,6 +1,17 @@
 Complex Types
 =============
 
+additionalCOFData
+-----------------
+    .. py:class:: vantivsdk.fields.additionalCOFData
+
+        :var frequencyOfMIT: String or Number
+        :var paymentType: String or Number
+        :var sequenceIndicator: String or Number
+        :var totalPaymentCount: String or Number
+        :var uniqueId: String or Number
+        :var validationReference: String or Number
+
 address
 -------
     .. py:class:: vantivsdk.fields.address
@@ -76,7 +87,9 @@ billToAddress
         :var middleInitial: String or Number
         :var name: String or Number
         :var phone: String or Number
+        :var sellerId: String or Number
         :var state: String or Number
+        :var url: String or Number
         :var zip: String or Number
 
 card
@@ -169,6 +182,8 @@ customerInfo
 ------------
     .. py:class:: vantivsdk.fields.customerInfo
 
+        :var accountCreatedDate: String or Number
+        :var accountUsername: String or Number
         :var customerCheckingAccount: String or Number
         :var customerRegistrationDate: String or Number
         :var customerSavingAccount: String or Number
@@ -178,8 +193,15 @@ customerInfo
         :var employerName: String or Number
         :var incomeAmount: String or Number
         :var incomeCurrency: String or Number
+        :var membershipEmail: String or Number
+        :var membershipId: String or Number
+        :var membershipName: String or Number
+        :var membershipPhone: String or Number
         :var residenceStatus: String or Number
         :var ssn: String or Number
+        :var userAccountEmail: String or Number
+        :var userAccountNumber: String or Number
+        :var userAccountPhone: String or Number
         :var yearsAtEmployer: String or Number
         :var yearsAtResidence: String or Number
 
@@ -252,7 +274,10 @@ enhancedData
         :var destinationPostalCode: String or Number
         :var detailTax: instance of :py:class:`vantivsdk.fields.detailTax`
         :var discountAmount: String or Number
+        :var discountCode: String or Number
+        :var discountPercent: String or Number
         :var dutyAmount: String or Number
+        :var fulfilmentMethodType: String or Number
         :var invoiceReferenceNumber: String or Number
         :var lineItemData: instance of :py:class:`vantivsdk.fields.lineItemData`
         :var orderDate: String or Number
@@ -337,12 +362,16 @@ lineItemData
 
         :var commodityCode: String or Number
         :var detailTax: instance of :py:class:`vantivsdk.fields.detailTax`
+        :var itemCategory: String or Number
         :var itemDescription: String or Number
         :var itemDiscountAmount: String or Number
         :var itemSequenceNumber: String or Number
+        :var itemSubCategory: String or Number
         :var lineItemTotal: String or Number
         :var lineItemTotalWithTax: String or Number
         :var productCode: String or Number
+        :var productId: String or Number
+        :var productName: String or Number
         :var quantity: String or Number
         :var taxAmount: String or Number
         :var unitCost: String or Number
@@ -451,6 +480,27 @@ recyclingRequestType
         :var recycleBy: String or Number
         :var recycleId: String or Number
 
+retailerAddress
+---------------
+    .. py:class:: vantivsdk.fields.retailerAddress
+
+        :var addressLine1: String or Number
+        :var addressLine2: String or Number
+        :var addressLine3: String or Number
+        :var city: String or Number
+        :var companyName: String or Number
+        :var country: String or Number
+        :var email: String or Number
+        :var firstName: String or Number
+        :var lastName: String or Number
+        :var middleInitial: String or Number
+        :var name: String or Number
+        :var phone: String or Number
+        :var sellerId: String or Number
+        :var state: String or Number
+        :var url: String or Number
+        :var zip: String or Number
+
 sepaDirectDebitType
 -------------------
     .. py:class:: vantivsdk.fields.sepaDirectDebitType
@@ -479,7 +529,9 @@ shipToAddress
         :var middleInitial: String or Number
         :var name: String or Number
         :var phone: String or Number
+        :var sellerId: String or Number
         :var state: String or Number
+        :var url: String or Number
         :var zip: String or Number
 
 sofortType

@@ -32,6 +32,7 @@ sys.path.insert(0, package_root)
 import pyxb
 
 from vantivsdk import *
+import datetime
 
 conf = utils.Configuration()
 
@@ -52,6 +53,45 @@ class TestAuth(unittest.TestCase):
         card.type = 'VI'
 
         authorization.card = card
+
+        customerInfo = fields.customerInfo()
+
+        customerInfo.accountUserName = 'Jack'
+        customerInfo.userAccountNumber = '1234'
+        customerInfo.userAccountEmail = 'gmail@gmail.com'
+        customerInfo.membershipId = '11111'
+        customerInfo.membershipPhone = '123456'
+        customerInfo.membershipEmail = 'gmail@gmail.com'
+        customerInfo.membershipName = 'fran'
+        customerInfo.accountCreatedDate = datetime.datetime.now().strftime("%Y-%m-%d")
+        customerInfo.userAccountPhone = '000461223'
+
+        authorization.customerInfo = customerInfo
+
+        detailTaxList = list()
+        detailTax = fields.detailTax()
+        detailTax.taxAmount = 100
+        detailTax2 = fields.detailTax()
+        detailTax2.taxAmount = 200
+        detailTaxList.append(detailTax)
+        detailTaxList.append(detailTax2)
+        lineItemDataList = list()
+        lineItemData = fields.lineItemData()
+        lineItemData.itemDescription = 'des'
+        lineItemData.itemCategory = 'Chock'
+        lineItemData.itemCategory = 'Chock'
+        lineItemData.itemSubCategory = 'pen'
+        lineItemData.productId = '001'
+        lineItemData.productName = 'prod'
+        lineItemDataList.append(lineItemData)
+        enhancedData = fields.enhancedData()
+        enhancedData.detailTax = detailTaxList
+        enhancedData.lineItemData = lineItemDataList
+        enhancedData.discountCode = '001'
+        enhancedData.discountPercent = '10'
+        enhancedData.fulfilmentMethodType = 'DELIVERY'
+
+        authorization.enhancedData = enhancedData
 
         response = online.request(authorization, conf)
         self.assertEquals('000', response['authorizationResponse']['response'])
@@ -457,6 +497,50 @@ class TestAuth(unittest.TestCase):
         authorization.orderSource = 'ecommerce'
         authorization.id = 'thisisid'
         authorization.businessIndicator = 'consumerBillPayment'
+
+        card = fields.cardType()
+        card.number = '4100000000000000'
+        card.expDate = '1210'
+        card.type = 'VI'
+
+        authorization.card = card
+
+        response = online.request(authorization, conf)
+        self.assertEquals('000', response['authorizationResponse']['response'])
+        self.assertEquals('sandbox', response['authorizationResponse']['location'])
+
+    def test_simple_auth_with_retaileraddress(self):
+        authorization = fields.authorization()
+        authorization.reportGroup = 'Planets'
+        authorization.orderId = '12344'
+        authorization.amount = 106
+        authorization.orderSource = 'ecommerce'
+        authorization.id = 'thisisid'
+        authorization.businessIndicator = 'consumerBillPayment'
+        authorization.crypto = False
+        authorization.checkoutId = '123tyhgr34'
+        authorization.orderChannel = 'PHONE'
+        authorization.fraudCheckStatus = 'Not Approved'
+
+        contact = fields.contact()
+        contact.name = 'john & Mary Smith'
+        contact.addressLine1 = '1st Main Street'
+        contact.city = 'Burlington'
+        contact.state = 'MA'
+        contact.zip = '01867-4456'
+        contact.country = 'USA'
+
+        authorization.retailerAddress = contact
+
+        additionalCOFData = fields.additionalCOFData()
+        additionalCOFData.totalPaymentCount = '35'
+        additionalCOFData.paymentType = 'Fixed Amount'
+        additionalCOFData.uniqueId = '12345wereew233'
+        additionalCOFData.frequencyOfMIT = 'BiWeekly'
+        additionalCOFData.validationReference = 're3298rhriw4wrw'
+        additionalCOFData.sequenceIndicator = '2'
+
+        authorization.additionalCOFData = additionalCOFData
 
         card = fields.cardType()
         card.number = '4100000000000000'

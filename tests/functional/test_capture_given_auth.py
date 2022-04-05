@@ -57,6 +57,33 @@ class TestCaptureGivenAuth(unittest.TestCase):
         card.type = 'VI'
         # The type of card is cardType
         transaction.card = card
+
+        # Create contact object
+        contact = fields.contact()
+        contact.name = 'John & Mary Smith'
+        contact.addressLine1 = '1 Main St.'
+        contact.city = 'Burlington'
+        contact.state = 'MA'
+        contact.zip = '01803-3747'
+        contact.country = 'USA'
+        contact.sellerID = '123'
+        contact.url = 'http://tax.xom'
+        # The type of retailerAddress is contact
+        transaction.retailerAddress = contact
+
+        additionalCOFData = fields.additionalCOFData()
+        additionalCOFData.totalPaymentCount = '35'
+        additionalCOFData.paymentType = 'Fixed Amount'
+        additionalCOFData.uniqueId = '12345wereew233'
+        additionalCOFData.frequencyOfMIT = 'BiWeekly'
+        additionalCOFData.validationReference = 're3298rhriw4wrw'
+        additionalCOFData.sequenceIndicator = '2'
+
+        transaction.additionalCOFData = additionalCOFData
+
+        transaction.crypto = False
+
+
         response = online.request(transaction, conf)
         self.assertEquals('000', response['captureGivenAuthResponse']['response'])
         self.assertEquals('sandbox', response['captureGivenAuthResponse']['location'])
@@ -64,7 +91,7 @@ class TestCaptureGivenAuth(unittest.TestCase):
 
     def test_simple_capture_given_auth_with_token(self):
         transaction = fields.captureGivenAuth()
-        transaction.orderId= '12344'
+        transaction.orderId = '12344'
         transaction.amount = 106
         transaction.orderSource = 'ecommerce'
         transaction.id = 'ThisIsID'

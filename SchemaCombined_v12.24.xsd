@@ -56,6 +56,11 @@
 
 
 
+
+
+
+
+
     <xs:complexType name="contact">
         <xs:all>
             <xs:element name="name" type="xs:string" minOccurs="0" />
@@ -72,10 +77,14 @@
             <xs:element name="country" type="xs:string" minOccurs="0" />
             <xs:element name="email" minOccurs="0" type="xs:string" />
             <xs:element name="phone" type="xs:string" minOccurs="0" />
+            <xs:element name="sellerId" type="xs:string" minOccurs="0" />
+            <xs:element name="url" type="xs:string" minOccurs="0"/>
         </xs:all>
     </xs:complexType>
 
     <xs:element name="billToAddress" type="xp:contact" />
+
+    <xs:element name="retailerAddress" type="xp:contact"/>
 
     <xs:complexType name="address">
         <xs:all>
@@ -210,6 +219,8 @@
 
 
 
+
+
     <xs:element name="lodgingCharge">
         <xs:complexType>
             <xs:sequence>
@@ -217,6 +228,23 @@
             </xs:sequence>
         </xs:complexType>
     </xs:element>
+
+
+
+    <xs:complexType name="additionalCOFData">
+        <xs:all>
+            <xs:element name="totalPaymentCount" type="xs:string" minOccurs="0" />
+            <xs:element name="paymentType" type="xs:string" minOccurs="0" />
+            <xs:element name="uniqueId" type="xs:string" minOccurs="0" />
+            <xs:element name="frequencyOfMIT" type="xs:string" minOccurs="0" />
+            <xs:element name="validationReference" type="xs:string" minOccurs="0" />
+            <xs:element name="sequenceIndicator" type="xs:integer" minOccurs="0" />
+        </xs:all>
+    </xs:complexType>
+
+    <xs:element name="additionalCOFData" type="xp:additionalCOFData"/>
+
+
 
 
 
@@ -534,6 +562,15 @@
                 <xs:element name="residenceStatus" minOccurs="0" type="xs:string" />
                 <xs:element name="yearsAtResidence" minOccurs="0" type="xs:int" />
                 <xs:element name="yearsAtEmployer" minOccurs="0" type="xs:int" />
+                <xs:element name="accountUsername" type="xs:string" minOccurs="0" />
+                <xs:element name="userAccountNumber" type="xs:string" minOccurs="0" />
+                <xs:element name="userAccountEmail" type="xs:string" minOccurs="0" />
+                <xs:element name="membershipId" type="xs:string" minOccurs="0" />
+                <xs:element name="membershipPhone" type="xs:string" minOccurs="0" />
+                <xs:element name="membershipEmail" type="xs:string" minOccurs="0" />
+                <xs:element name="membershipName" type="xs:string" minOccurs="0" />
+                <xs:element name="accountCreatedDate" type="xs:date" minOccurs="0" />
+                <xs:element name="userAccountPhone" type="xs:string" minOccurs="0" />
             </xs:all>
         </xs:complexType>
     </xs:element>
@@ -566,6 +603,8 @@
                             <xs:element ref="xp:customerInfo" minOccurs="0" />
                             <xs:element ref="xp:billToAddress" minOccurs="0" />
                             <xs:element ref="xp:shipToAddress" minOccurs="0" />
+                            <xs:element ref="xp:retailerAddress" minOccurs="0" />
+                            <xs:element ref="xp:additionalCOFData" minOccurs="0" />
                             <xs:choice>
                                 <xs:element name="mpos" type="xp:mposType" />
                                 <xs:element name="card" type="xp:cardType" />
@@ -598,6 +637,10 @@
                             <xs:element name="skipRealtimeAU" type="xs:boolean" minOccurs="0" />
                             <xs:element name="merchantCategoryCode" type="xs:string" minOccurs="0" />
                             <xs:element name="businessIndicator" type="xs:string" minOccurs="0" />
+                            <xs:element name="orderChannel" type="xs:string" minOccurs="0">
+                            </xs:element>
+                            <xs:element name="fraudCheckStatus" type="xs:string" minOccurs="0"/>
+                            <xs:element name="crypto" type="xs:boolean" minOccurs="0" />
                         </xs:sequence>
                     </xs:choice>
                 </xs:extension>
@@ -725,6 +768,8 @@
                         <xs:element name="orderSource" type="xs:string"  minOccurs="0"/>
                         <xs:element ref="xp:billToAddress" minOccurs="0" />
                         <xs:element ref="xp:shipToAddress" minOccurs="0" />
+                        <xs:element ref="xp:retailerAddress" minOccurs="0" />
+                        <xs:element ref="xp:additionalCOFData" minOccurs="0" />
                         <xs:choice>
                             <xs:element name="mpos" type="xp:mposType" />
                             <xs:element name="card" type="xp:cardType" />
@@ -744,6 +789,7 @@
                         <xs:element name="originalTransactionAmount" type="xs:integer" minOccurs="0" />
                         <xs:element name="merchantCategoryCode" type="xs:string" minOccurs="0" />
                         <xs:element name="businessIndicator" type="xs:string" minOccurs="0" />
+                        <xs:element name="crypto" type="xs:boolean" minOccurs="0" />
                     </xs:sequence>
                 </xs:extension>
             </xs:complexContent>
@@ -765,6 +811,8 @@
                         <xs:element ref="xp:customerInfo" minOccurs="0" />
                         <xs:element ref="xp:billToAddress" minOccurs="0" />
                         <xs:element ref="xp:shipToAddress" minOccurs="0" />
+                        <xs:element ref="xp:retailerAddress" minOccurs="0" />
+                        <xs:element ref="xp:additionalCOFData" minOccurs="0" />
                         <xs:choice>
                             <xs:element name="mpos" type="xp:mposType" />
                             <xs:element name="card" type="xp:cardType" />
@@ -809,6 +857,9 @@
                         <xs:element name="skipRealtimeAU" type="xs:boolean" minOccurs="0" />
                         <xs:element name="merchantCategoryCode" type="xs:string" minOccurs="0" />
                         <xs:element name="businessIndicator" type="xs:string" minOccurs="0" />
+                        <xs:element name="orderChannel" type="xs:string" minOccurs="0" />
+                        <xs:element name="fraudCheckStatus" type="xs:string" minOccurs="0"/>
+                        <xs:element name="crypto" type="xs:boolean" minOccurs="0" />
                     </xs:sequence>
                 </xs:extension>
             </xs:complexContent>
@@ -1020,6 +1071,9 @@
                 <xs:element name="orderDate" type="xs:date" minOccurs="0" />
                 <xs:element ref="xp:detailTax" minOccurs="0" maxOccurs="6" />
                 <xs:element ref="xp:lineItemData" minOccurs="0" maxOccurs="99" />
+                <xs:element name="discountCode" type="xs:string" minOccurs="0" />
+                <xs:element name="discountPercent" type="xs:integer" minOccurs="0" />
+                <xs:element name="fulfilmentMethodType" type="xs:string" minOccurs="0" />
             </xs:sequence>
         </xs:complexType>
     </xs:element>
@@ -1053,6 +1107,10 @@
                 <xs:element name="commodityCode" type="xs:string" minOccurs="0" />
                 <xs:element name="unitCost" type="xs:decimal" minOccurs="0" />
                 <xs:element ref="xp:detailTax" minOccurs="0" maxOccurs="6" />
+                <xs:element name="itemCategory" type="xs:string" minOccurs="0" />
+                <xs:element name="itemSubCategory" type="xs:string" minOccurs="0" />
+                <xs:element name="productId" type="xs:string" minOccurs="0" />
+                <xs:element name="productName" type="xs:string" minOccurs="0"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
@@ -1208,6 +1266,8 @@
                         <xs:element name="paymentAccountReferenceNumber" type="xs:string" minOccurs="0" />
                         <!-- If PRIME PINless debit transaction -->
                         <xs:element ref="xp:pinlessDebitResponse" minOccurs="0"/>
+                        <!-- Introduced as part of Guaranteed Payments -->
+                        <xs:element name="checkoutId" type="xs:string" minOccurs="0" />
                     </xs:all>
                 </xs:extension>
             </xs:complexContent>
@@ -1309,6 +1369,8 @@
                         <xs:element name="location" type="xs:string" minOccurs="0"/>
                         <!-- If PRIME PINless debit transaction -->
                         <xs:element ref="xp:pinlessDebitResponse" minOccurs="0"/>
+                        <!-- Introduced as part of Guaranteed Payments -->
+                        <xs:element name="checkoutId" type="xs:string" minOccurs="0" />
                     </xs:all>
                 </xs:extension>
             </xs:complexContent>
@@ -1472,6 +1534,8 @@
                         <xs:element ref="xp:fraudResult" minOccurs="0" />
                         <!-- If PRIME PINless debit transaction -->
                         <xs:element ref="xp:pinlessDebitResponse" minOccurs="0"/>
+                        <!-- Introduced as part of Guaranteed Payments -->
+                        <xs:element name="checkoutId" type="xs:string" minOccurs="0" />
                     </xs:all>
                 </xs:extension>
             </xs:complexContent>
@@ -1517,6 +1581,8 @@
                         <!-- If Gift Card transaction -->
                         <xs:element ref="xp:fraudResult" minOccurs="0" />
                         <xs:element ref="xp:giftCardResponse" minOccurs="0"/>
+                        <!-- Introduced as part of Guaranteed Payments -->
+                        <xs:element name="checkoutId" type="xs:string" minOccurs="0" />
                     </xs:all>
                 </xs:extension>
             </xs:complexContent>
@@ -1540,6 +1606,8 @@
                         <!-- If Gift Card transaction -->
                         <xs:element ref="xp:fraudResult" minOccurs="0" />
                         <xs:element ref="xp:giftCardResponse" minOccurs="0"/>
+                        <!-- Introduced as part of Guaranteed Payments -->
+                        <xs:element name="checkoutId" type="xs:string" minOccurs="0" />
                     </xs:all>
                 </xs:extension>
             </xs:complexContent>
@@ -1588,6 +1656,8 @@
                         <!-- If PRIME PINless debit transaction -->
                         <xs:element ref="xp:pinlessDebitResponse" minOccurs="0"/>
                         <xs:element name="paymentAccountReferenceNumber" type="xs:string" minOccurs="0" />
+                        <!-- Introduced as part of Guaranteed Payments -->
+                        <xs:element name="checkoutId" type="xs:string" minOccurs="0" />
                     </xs:all>
                 </xs:extension>
             </xs:complexContent>
@@ -1610,6 +1680,8 @@
                         <xs:element name="tokenResponse" type="xp:tokenResponseType" minOccurs="0"/>
                         <!-- If Gift Card transaction -->
                         <xs:element ref="xp:fraudResult" minOccurs="0" />
+                        <!-- Introduced as part of Guaranteed Payments -->
+                        <xs:element name="checkoutId" type="xs:string" minOccurs="0" />
                     </xs:all>
                 </xs:extension>
             </xs:complexContent>
@@ -1870,6 +1942,8 @@
                         <xs:element name="postDate" type="xs:date" minOccurs="0" />
                         <xs:element ref="xp:accountUpdater" minOccurs="0" />
                         <xs:element name="tokenResponse" type="xp:tokenResponseType" minOccurs="0"/>
+                        <!-- Introduced as part of Guaranteed Payments -->
+                        <xs:element name="checkoutId" type="xs:string" minOccurs="0" />
                     </xs:all>
                 </xs:extension>
             </xs:complexContent>
@@ -1890,6 +1964,8 @@
                         <xs:element name="postDate" type="xs:date" minOccurs="0" />
                         <xs:element ref="xp:accountUpdater" minOccurs="0" />
                         <xs:element name="tokenResponse" type="xp:tokenResponseType" minOccurs="0"/>
+                        <!-- Introduced as part of Guaranteed Payments -->
+                        <xs:element name="checkoutId" type="xs:string" minOccurs="0" />
                     </xs:all>
                 </xs:extension>
             </xs:complexContent>
@@ -3231,8 +3307,7 @@
             </xs:complexContent>
         </xs:complexType>
     </xs:element>
-
-    <xs:element name="vendorCredit" substitutionGroup="xp:transaction">
+  <xs:element name="vendorCredit" substitutionGroup="xp:transaction">
         <xs:complexType>
             <xs:complexContent>
                 <xs:extension base="xp:transactionTypeWithReportGroup">
@@ -3356,7 +3431,6 @@
 
 
 
-
 <!--cnpOnline-->
 <!--<!DOCTYPE xs:schema SYSTEM "http://www.w3.org/2001/XMLSchema.dtd">-->
 
@@ -3424,6 +3498,8 @@
                         <xs:element name="message" type="xs:string"  minOccurs="0"/>
                         <xs:element name="location" type="xs:string" minOccurs="0"/>
                         <xs:element name="recyclingResponse" type="xp:voidRecyclingResponseType" minOccurs="0" />
+                        <!-- Introduced as part of Guaranteed Payments -->
+                        <xs:element name="checkoutId" type="xs:string" minOccurs="0" />
                     </xs:all>
 
                 </xs:extension>
@@ -3460,6 +3536,8 @@
                         <xs:element name="postDate" type="xs:date"  minOccurs="0"/>
                         <xs:element name="message" type="xs:string"  minOccurs="0"/>
                         <xs:element name="location" type="xs:string" minOccurs="0"/>
+                        <!-- Introduced as part of Guaranteed Payments -->
+                        <xs:element name="checkoutId" type="xs:string" minOccurs="0" />
                     </xs:all>
                 </xs:extension>
             </xs:complexContent>
@@ -3775,7 +3853,7 @@
                 </xs:extension>
             </xs:complexContent>
         </xs:complexType>
-    </xs:element>-->
-
+    </xs:element>
+-->
 
 </xs:schema>

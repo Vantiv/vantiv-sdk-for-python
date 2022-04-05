@@ -2,7 +2,7 @@
 <xs:schema targetNamespace="http://www.vantivcnp.com/schema" xmlns:xs="http://www.w3.org/2001/XMLSchema"
            xmlns:xp="http://www.vantivcnp.com/schema" elementFormDefault="qualified" attributeFormDefault="unqualified">
 
-    <xs:include schemaLocation="cnpTransaction_v12.22.xsd" />
+    <xs:include schemaLocation="cnpTransaction_v12.24.xsd" />
 
     <xs:element name="cnpRequest">
         <xs:complexType>
@@ -284,8 +284,7 @@
             </xs:complexContent>
         </xs:complexType>
     </xs:element>
-
-    <xs:element name="vendorCredit" substitutionGroup="xp:transaction">
+  <xs:element name="vendorCredit" substitutionGroup="xp:transaction">
         <xs:complexType>
             <xs:complexContent>
                 <xs:extension base="xp:transactionTypeWithReportGroup">
@@ -405,7 +404,6 @@
             </xs:complexContent>
         </xs:complexType>
     </xs:element>
-
 
 
 </xs:schema>

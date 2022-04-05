@@ -57,6 +57,7 @@ authorization
 -------------
     .. py:class:: vantivsdk.fields.authorization
 
+        :var additionalCOFData: instance of :py:class:`vantivsdk.fields.additionalCOFData`
         :var advancedFraudChecks: instance of :py:class:`vantivsdk.fields.advancedFraudChecksType`
         :var allowPartialAuth: String or Number
         :var amount: String or Number
@@ -66,12 +67,14 @@ authorization
         :var card: instance of :py:class:`vantivsdk.fields.cardType`
         :var cardholderAuthentication: instance of :py:class:`vantivsdk.fields.fraudCheckType`
         :var cnpTxnId: String or Number
+        :var crypto: String or Number
         :var customBilling: instance of :py:class:`vantivsdk.fields.customBilling`
         :var customerId: String or Number
         :var customerInfo: instance of :py:class:`vantivsdk.fields.customerInfo`
         :var debtRepayment: String or Number
         :var enhancedData: instance of :py:class:`vantivsdk.fields.enhancedData`
         :var filtering: instance of :py:class:`vantivsdk.fields.filteringType`
+        :var fraudCheckStatus: String or Number
         :var fraudFilterOverride: String or Number
         :var healthcareIIAS: instance of :py:class:`vantivsdk.fields.healthcareIIAS`
         :var id: String or Number
@@ -79,6 +82,7 @@ authorization
         :var merchantCategoryCode: String or Number
         :var merchantData: instance of :py:class:`vantivsdk.fields.merchantDataType`
         :var mpos: instance of :py:class:`vantivsdk.fields.mposType`
+        :var orderChannel: String or Number
         :var orderId: String or Number
         :var orderSource: String or Number
         :var originalNetworkTransactionId: String or Number
@@ -92,6 +96,7 @@ authorization
         :var recurringRequest: instance of :py:class:`vantivsdk.fields.recurringRequestType`
         :var recyclingRequest: instance of :py:class:`vantivsdk.fields.recyclingRequestType`
         :var reportGroup: String or Number
+        :var retailerAddress: instance of :py:class:`vantivsdk.fields.retailerAddress`
         :var secondaryAmount: String or Number
         :var shipToAddress: instance of :py:class:`vantivsdk.fields.shipToAddress`
         :var skipRealtimeAU: String or Number
@@ -141,11 +146,13 @@ captureGivenAuth
 ----------------
     .. py:class:: vantivsdk.fields.captureGivenAuth
 
+        :var additionalCOFData: instance of :py:class:`vantivsdk.fields.additionalCOFData`
         :var amount: String or Number
         :var authInformation: instance of :py:class:`vantivsdk.fields.authInformation`
         :var billToAddress: instance of :py:class:`vantivsdk.fields.billToAddress`
         :var businessIndicator: String or Number
         :var card: instance of :py:class:`vantivsdk.fields.cardType`
+        :var crypto: String or Number
         :var customBilling: instance of :py:class:`vantivsdk.fields.customBilling`
         :var customerId: String or Number
         :var debtRepayment: String or Number
@@ -164,6 +171,7 @@ captureGivenAuth
         :var processingInstructions: instance of :py:class:`vantivsdk.fields.processingInstructions`
         :var processingType: String or Number
         :var reportGroup: String or Number
+        :var retailerAddress: instance of :py:class:`vantivsdk.fields.retailerAddress`
         :var secondaryAmount: String or Number
         :var shipToAddress: instance of :py:class:`vantivsdk.fields.shipToAddress`
         :var surchargeAmount: String or Number
@@ -702,6 +710,7 @@ sale
 ----
     .. py:class:: vantivsdk.fields.sale
 
+        :var additionalCOFData: instance of :py:class:`vantivsdk.fields.additionalCOFData`
         :var advancedFraudChecks: instance of :py:class:`vantivsdk.fields.advancedFraudChecksType`
         :var allowPartialAuth: String or Number
         :var amount: String or Number
@@ -712,6 +721,7 @@ sale
         :var cardholderAuthentication: instance of :py:class:`vantivsdk.fields.fraudCheckType`
         :var cnpInternalRecurringRequest: instance of :py:class:`vantivsdk.fields.cnpInternalRecurringRequestType`
         :var cnpTxnId: String or Number
+        :var crypto: String or Number
         :var customBilling: instance of :py:class:`vantivsdk.fields.customBilling`
         :var customerId: String or Number
         :var customerInfo: instance of :py:class:`vantivsdk.fields.customerInfo`
@@ -719,6 +729,7 @@ sale
         :var enhancedData: instance of :py:class:`vantivsdk.fields.enhancedData`
         :var filtering: instance of :py:class:`vantivsdk.fields.filteringType`
         :var fraudCheck: instance of :py:class:`vantivsdk.fields.fraudCheckType`
+        :var fraudCheckStatus: String or Number
         :var fraudFilterOverride: String or Number
         :var giropay: instance of :py:class:`vantivsdk.fields.giropayType`
         :var healthcareIIAS: instance of :py:class:`vantivsdk.fields.healthcareIIAS`
@@ -728,6 +739,7 @@ sale
         :var merchantCategoryCode: String or Number
         :var merchantData: instance of :py:class:`vantivsdk.fields.merchantDataType`
         :var mpos: instance of :py:class:`vantivsdk.fields.mposType`
+        :var orderChannel: String or Number
         :var orderId: String or Number
         :var orderSource: String or Number
         :var originalNetworkTransactionId: String or Number
@@ -743,6 +755,7 @@ sale
         :var recurringRequest: instance of :py:class:`vantivsdk.fields.recurringRequestType`
         :var recyclingRequest: instance of :py:class:`vantivsdk.fields.recyclingRequestType`
         :var reportGroup: String or Number
+        :var retailerAddress: instance of :py:class:`vantivsdk.fields.retailerAddress`
         :var secondaryAmount: String or Number
         :var sepaDirectDebit: instance of :py:class:`vantivsdk.fields.sepaDirectDebitType`
         :var shipToAddress: instance of :py:class:`vantivsdk.fields.shipToAddress`
