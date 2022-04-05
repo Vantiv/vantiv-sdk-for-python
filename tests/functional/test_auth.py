@@ -496,7 +496,7 @@ class TestAuth(unittest.TestCase):
         authorization.amount = 106
         authorization.orderSource = 'ecommerce'
         authorization.id = 'thisisid'
-        authorization.businessIndicator = 'consumerBillPayment'
+        authorization.businessIndicator = 'buyOnlinePickUpInStore'
 
         card = fields.cardType()
         card.number = '4100000000000000'
