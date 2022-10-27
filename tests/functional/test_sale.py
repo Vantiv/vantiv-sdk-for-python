@@ -270,6 +270,23 @@ class TestSale(unittest.TestCase):
         response = online.request(transaction, conf)
         self.assertEquals('000', response['saleResponse']['response'])
         self.assertEquals('sandbox', response['saleResponse']['location'])
+    def test_sale_with_overridePolicy_fserrorcode_productEnrolled(self):
+        transaction = fields.sale()
+        transaction.id = '12345'
+        transaction.reportGroup = 'Default'
+        transaction.orderId = '67890'
+        transaction.amount = 10000
+        transaction.orderSource = 'ecommerce'
+        transaction.processingType = 'initialInstallment'
+        transaction.originalNetworkTransactionId = '9876543210'
+        transaction.originalTransactionAmount = 53698
+        transaction.id = 'ThisIsID'
+        transaction.overridePolicy = 'fispolicy'
+        transaction.fsErrorCode = 'Fiserrorcode'
+        transaction.merchantAccountStatus = 'Active'
+        transaction.productEnrolled = 'Guarpay3'
+        transaction.decisionPurpose = 'INFORMATION_ONLY'
+        transaction.fraudSwitchIndicator = "PRE"
 
     def test_sale_with_processing_type_COF(self):
         transaction = fields.sale()
@@ -348,6 +365,8 @@ class TestSale(unittest.TestCase):
         self.assertEquals('http://redirect.url.vantiv.com',
                           response['saleResponse']['idealResponse']['redirectUrl'])
         self.assertEquals('sandbox', response['saleResponse']['location'])
+
+
 
     def test_sale_with_giropay(self):
         transaction = fields.sale()
@@ -529,6 +548,48 @@ class TestSale(unittest.TestCase):
         card.type = 'VI'
 
         transaction.card = card
+
+        response = online.request(transaction, conf)
+        self.assertEquals('000', response['saleResponse']['response'])
+        self.assertEquals('sandbox', response['saleResponse']['location'])
+
+    def test_sale_with_passenger_Transport_Data(self):
+        transaction = fields.sale()
+        transaction.reportGroup = 'Planets'
+        transaction.orderId = '12344'
+        transaction.amount = 106
+        transaction.orderSource = 'ecommerce'
+        transaction.id = 'ThisIsID'
+        transaction.businessIndicator = 'consumerBillPayment'
+
+        card = fields.cardType()
+        card.number = '4100000000000000'
+        card.expDate = '1210'
+        card.type = 'VI'
+
+        transaction.card = card
+
+        transport_data = fields.passengerTransportData()
+        transport_data.passengerName = 'Post Malone123'
+        transport_data.ticketNumber = 'abc123456789'
+        transport_data.issuingCarrier = 'AMTK'
+        transport_data.carrierName = 'AMTK'
+        transport_data.restrictedTicketIndicator = '11111'
+        transport_data.numberOfAdults = '0'
+        transport_data.numberOfChildren = '99'
+        transport_data.customerCode = 'code12'
+        transport_data.arrivalDate = '2022-01-22'
+        transport_data.issueDate = '2021-02-03'
+        transport_data.travelAgencyCode = '420104'
+        transport_data.travelAgencyName = 'TravelAgency'
+        transport_data.computerizedReservationSystem = 'DERD'
+        transport_data.creditReasonIndicator = 'A'
+        transport_data.ticketChangeIndicator = 'N'
+        transport_data.ticketIssuerAddress = 'US'
+        transport_data.exchangeTicketNumber = 'Ticket010'
+        transport_data.exchangeAmount = '20210'
+        transport_data.exchangeFeeAmount = '201010'
+        transaction.transport_data = transport_data
 
         response = online.request(transaction, conf)
         self.assertEquals('000', response['saleResponse']['response'])

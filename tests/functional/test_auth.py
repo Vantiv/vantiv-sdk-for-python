@@ -153,10 +153,62 @@ class TestAuth(unittest.TestCase):
         lodging_info = fields.lodgingInfo()
         lodging_info.roomRate = 1001
         lodging_info.roomTax = 1
+        lodging_info.bookingID = 'ID12345'
+        lodging_info.passengerName = 'Post Malone'
+        lodging_info.travelPackageIndicator = "AirlineReservation"
+        lodging_info.smokingPreference = 'N'
+        lodging_info.numberOfRooms = 13
+        lodging_info.tollFreePhoneNumber = '1234567890'
+
         lodging_charge = fields.lodgingCharge()
         lodging_charge.name = "RESTAURANT"
         lodging_info.lodgingCharge = [lodging_charge]
         authorization.lodgingInfo = lodging_info
+
+
+        property_Address = fields.propertyAddress()
+        property_Address.name = 'propertyaddress1'
+        property_Address.city = 'nyc'
+        property_Address.region = 'abc'
+        property_Address.country = 'US'
+        authorization.lodgingInfo = lodging_info
+
+        response = online.request(authorization, conf)
+        self.assertEquals('000', response['authorizationResponse']['response'])
+        self.assertEquals('sandbox', response['authorizationResponse']['location'])
+
+    def test_simple_auth_with_passenger_transport_data(self):
+        authorization = fields.authorization()
+        authorization.reportGroup = 'Planets'
+        authorization.orderId = '12344'
+        authorization.amount = 106
+        authorization.orderSource = 'ecommerce'
+        authorization.id = 'thisisid'
+
+        transport_data = fields.passengerTransportData()
+        transport_data.passengerName = 'Post Malone123'
+        # transport_data.ticketNumber ='abc123456789'
+        # transport_data.issuingCarrier = 'AMTK'
+        # transport_data.carrierName = 'AMTK'
+        # transport_data.restrictedTicketIndicator = '11111'
+        # transport_data.numberOfAdults = '0'
+        # transport_data.numberOfChildren = '99'
+        # transport_data.customerCode = 'code12'
+        # transport_data.arrivalDate = '2022-01-22'
+        # transport_data.issueDate = '2021-02-03'
+        # transport_data.travelAgencyCode = '420104'
+        # transport_data.travelAgencyName = 'TravelAgency'
+        # transport_data.computerizedReservationSystem = 'DERD'
+        # transport_data.creditReasonIndicator = 'A'
+        # transport_data.ticketChangeIndicator = 'N'
+        # transport_data.ticketIssuerAddress = 'US'
+        # transport_data.exchangeTicketNumber = 'Ticket010'
+        # transport_data.exchangeAmount = '20210'
+        # transport_data.exchangeFeeAmount = '201010'
+
+        authorization.transport_data = transport_data
+
+
 
         response = online.request(authorization, conf)
         self.assertEquals('000', response['authorizationResponse']['response'])
@@ -540,6 +592,8 @@ class TestAuth(unittest.TestCase):
         additionalCOFData.validationReference = 're3298rhriw4wrw'
         additionalCOFData.sequenceIndicator = '2'
 
+
+
         authorization.additionalCOFData = additionalCOFData
 
         card = fields.cardType()
@@ -552,6 +606,35 @@ class TestAuth(unittest.TestCase):
         response = online.request(authorization, conf)
         self.assertEquals('000', response['authorizationResponse']['response'])
         self.assertEquals('sandbox', response['authorizationResponse']['location'])
+
+    def test_simple_auth_overridePolicy_fserrorcode_productEnrolled(self):
+            authorization = fields.authorization()
+            authorization.reportGroup = 'Planets'
+            authorization.orderId = '12344'
+            authorization.amount = 106
+            authorization.orderSource = 'ecommerce'
+            authorization.id = 'thisisid'
+            authorization.businessIndicator = 'buyOnlinePickUpInStore'
+            authorization.overridePolicy = 'fispolicy'
+            authorization.fsErrorCode = 'Fiserrorcode'
+            authorization.merchantAccountStatus = 'Active'
+            authorization.productEnrolled = 'Guarpay3'
+            authorization.decisionPurpose = 'INFORMATION_ONLY'
+            authorization.fraudSwitchIndicator = "PRE"
+
+            card = fields.cardType()
+            card.number = '4100000000000000'
+            card.expDate = '1210'
+            card.type = 'VI'
+
+            authorization.card = card
+
+
+
+            response = online.request(authorization, conf)
+            self.assertEquals('000', response['authorizationResponse']['response'])
+            self.assertEquals('sandbox', response['authorizationResponse']['location'])
+
 
 
 if __name__ == '__main__':

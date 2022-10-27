@@ -136,5 +136,41 @@ class TestForceCapture(unittest.TestCase):
         self.assertEquals('000', response['forceCaptureResponse']['response'])
         self.assertEquals('sandbox', response['forceCaptureResponse']['location'])
 
+    def test_force_capture_with_passenger_Transport_Data(self):
+        transaction = fields.forceCapture()
+        transaction.reportGroup = 'Planets'
+        transaction.orderId = '12344'
+        transaction.amount = 106
+        transaction.orderSource = 'ecommerce'
+        transaction.processingType = 'accountFunding'
+        transaction.id = 'ThisIsID'
+        transaction.businessIndicator = 'walletTransfer'
+
+        transport_data = fields.passengerTransportData()
+        transport_data.passengerName = 'Post Malone123'
+        transport_data.ticketNumber = 'abc123456789'
+        transport_data.issuingCarrier = 'AMTK'
+        transport_data.carrierName = 'AMTK'
+        transport_data.restrictedTicketIndicator = '11111'
+        transport_data.numberOfAdults = '0'
+        transport_data.numberOfChildren = '99'
+        transport_data.customerCode = 'code12'
+        transport_data.arrivalDate = '2022-01-22'
+        transport_data.issueDate = '2021-02-03'
+        transport_data.travelAgencyCode = '420104'
+        transport_data.travelAgencyName = 'TravelAgency'
+        transport_data.computerizedReservationSystem = 'DERD'
+        transport_data.creditReasonIndicator = 'A'
+        transport_data.ticketChangeIndicator = 'N'
+        transport_data.ticketIssuerAddress = 'US'
+        transport_data.exchangeTicketNumber = 'Ticket010'
+        transport_data.exchangeAmount = '20210'
+        transport_data.exchangeFeeAmount = '201010'
+        transaction.transport_data = transport_data
+
+        response = online.request(transaction, conf)
+        self.assertEquals('000', response['forceCaptureResponse']['response'])
+        self.assertEquals('sandbox', response['forceCaptureResponse']['location'])
+
 if __name__ == '__main__':
     unittest.main()
