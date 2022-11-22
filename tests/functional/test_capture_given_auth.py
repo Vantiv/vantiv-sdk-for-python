@@ -325,7 +325,7 @@ class TestCaptureGivenAuth(unittest.TestCase):
         self.assertEquals('000', response['captureGivenAuthResponse']['response'])
         self.assertEquals('sandbox', response['captureGivenAuthResponse']['location'])
 
-    def test_capture_given_auth_with_aditionalCOFData(self):
+    def test_simple_auth_with_passenger_Transport_Data_tripLegData(self):
         transaction = fields.captureGivenAuth()
         transaction.orderId = '12344'
         transaction.amount = 106
@@ -333,41 +333,17 @@ class TestCaptureGivenAuth(unittest.TestCase):
         transaction.id = 'ThisIsID'
         transaction.businessIndicator = 'consumerBillPayment'
 
-        additionalCOFData = fields.additionalCOFData()
-        additionalCOFData.totalPaymentCount = '35'
-        additionalCOFData.paymentType = 'Fixed Amount'
-        additionalCOFData.uniqueId = '12345wereew233'
-        additionalCOFData.frequencyOfMIT = 'BiWeekly'
-        additionalCOFData.validationReference = 're3298rhriw4wrw'
-        additionalCOFData.sequenceIndicator = '2'
+        card = fields.cardType()
+        card.number = '4100000000000001'
+        card.expDate = '1210'
+        card.type = 'VI'
+        transaction.card = card
 
-        transaction.additionalCOFData = additionalCOFData
-
-def test_capture_given_auth_with_passenger_Transport_Data(self):
-        transaction = fields.captureGivenAuth()
-        transaction.orderId= '12344'
-        transaction.amount = 106
-        transaction.orderSource = 'ecommerce'
-        transaction.id = 'ThisIsID'
-        transaction.businessIndicator = 'consumerBillPayment'
-
-        # Create authInformation
         authInformation = fields.authInformation()
         authInformation.authDate = datetime.datetime.now().strftime("%Y-%m-%d")
         authInformation.authCode = '543216'
         authInformation.authAmount = 12345
         transaction.authInformation = authInformation
-
-        # Create cardType object
-        card = fields.cardType()
-        card.number = '4100000000000000'
-        card.expDate = '1210'
-        card.type = 'VI'
-        # The type of card is cardType
-        transaction.card = card
-        response = online.request(transaction, conf)
-        self.assertEquals('000', response['captureGivenAuthResponse']['response'])
-        self.assertEquals('sandbox', response['captureGivenAuthResponse']['location'])
 
         transport_data = fields.passengerTransportData()
         transport_data.passengerName = 'Post Malone123'
@@ -390,6 +366,26 @@ def test_capture_given_auth_with_passenger_Transport_Data(self):
         transport_data.exchangeAmount = '20210'
         transport_data.exchangeFeeAmount = '201010'
         transaction.transport_data = transport_data
+
+        tripleg_data = fields.tripLegData()
+        tripleg_data.tripLegNumber = '10'
+        tripleg_data.departureCode = 'Code1'
+        tripleg_data.carrierCode = 'code2'
+        tripleg_data.serviceClass = 'First'
+        tripleg_data.stopOverCode = 'Codestop'
+        tripleg_data.destinationCode = 'DestCode2'
+        tripleg_data.fareBasisCode = 'farecode2'
+        tripleg_data.departureDate = '2022-01-01'
+        tripleg_data.originCity = 'LA'
+        tripleg_data.travelNumber = '1234'
+        tripleg_data.departureTime = '02:00'
+        tripleg_data.arrivalTime = '01:00'
+        tripleg_data.remarks = 'remarks'
+        transaction.tripleg_data = tripleg_data
+
+        response = online.request(transaction, conf)
+        self.assertEquals('000', response['captureGivenAuthResponse']['response'])
+        self.assertEquals('sandbox', response['captureGivenAuthResponse']['location'])
     
 if __name__ == '__main__':
     unittest.main()

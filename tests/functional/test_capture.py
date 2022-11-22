@@ -57,7 +57,7 @@ class TestCapture(unittest.TestCase):
         self.assertEquals('000', response['captureResponse']['response'])
         self.assertEquals('sandbox', response['captureResponse']['location'])
 
-    def test_simple_capture_with_passenger_TransportData(self):
+    def test_simple_auth_with_passenger_Transport_Data_triplegData(self):
         transaction = fields.capture()
         transaction.cnpTxnId = 123456000
         transaction.orderId = '12344'
@@ -85,6 +85,28 @@ class TestCapture(unittest.TestCase):
         transport_data.exchangeAmount = '20210'
         transport_data.exchangeFeeAmount = '201010'
         transaction.transport_data = transport_data
+
+        tripleg_data = fields.tripLegData()
+        tripleg_data.tripLegNumber = '10'
+        tripleg_data.departureCode = 'Code1'
+        tripleg_data.carrierCode = 'code2'
+        tripleg_data.serviceClass = 'First'
+        tripleg_data.stopOverCode = 'Codestop'
+        tripleg_data.destinationCode = 'DestCode2'
+        tripleg_data.fareBasisCode = 'farecode2'
+        tripleg_data.departureDate = '2022-01-01'
+        tripleg_data.originCity = 'LA'
+        tripleg_data.travelNumber = '1234'
+        tripleg_data.departureTime = '02:00'
+        tripleg_data.arrivalTime = '01:00'
+        tripleg_data.remarks = 'remarks'
+        transaction.tripleg_data = tripleg_data
+
+        card = fields.cardType()
+        card.number = '4100100000000000'
+        card.expDate = '1210'
+        card.type = 'VI'
+        transaction.card = card
 
         response = online.request(transaction, conf)
         self.assertEquals('000', response['captureResponse']['response'])

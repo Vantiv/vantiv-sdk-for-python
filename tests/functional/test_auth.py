@@ -136,7 +136,7 @@ class TestAuth(unittest.TestCase):
         self.assertEquals('000', response['authorizationResponse']['response'])
         self.assertEquals('sandbox', response['authorizationResponse']['location'])
 
-    def test_simple_auth_with_lodging(self):
+    def test_simple_auth_with_lodging_and_passangertransportdata(self):
         authorization = fields.authorization()
         authorization.reportGroup = 'Planets'
         authorization.orderId = '12344'
@@ -165,7 +165,6 @@ class TestAuth(unittest.TestCase):
         lodging_info.lodgingCharge = [lodging_charge]
         authorization.lodgingInfo = lodging_info
 
-
         property_Address = fields.propertyAddress()
         property_Address.name = 'propertyaddress1'
         property_Address.city = 'nyc'
@@ -173,46 +172,33 @@ class TestAuth(unittest.TestCase):
         property_Address.country = 'US'
         authorization.lodgingInfo = lodging_info
 
-        response = online.request(authorization, conf)
-        self.assertEquals('000', response['authorizationResponse']['response'])
-        self.assertEquals('sandbox', response['authorizationResponse']['location'])
-
-    def test_simple_auth_with_passenger_transport_data(self):
-        authorization = fields.authorization()
-        authorization.reportGroup = 'Planets'
-        authorization.orderId = '12344'
-        authorization.amount = 106
-        authorization.orderSource = 'ecommerce'
-        authorization.id = 'thisisid'
-
         transport_data = fields.passengerTransportData()
-        transport_data.passengerName = 'Post Malone123'
-        # transport_data.ticketNumber ='abc123456789'
-        # transport_data.issuingCarrier = 'AMTK'
-        # transport_data.carrierName = 'AMTK'
-        # transport_data.restrictedTicketIndicator = '11111'
-        # transport_data.numberOfAdults = '0'
-        # transport_data.numberOfChildren = '99'
-        # transport_data.customerCode = 'code12'
-        # transport_data.arrivalDate = '2022-01-22'
-        # transport_data.issueDate = '2021-02-03'
-        # transport_data.travelAgencyCode = '420104'
-        # transport_data.travelAgencyName = 'TravelAgency'
-        # transport_data.computerizedReservationSystem = 'DERD'
-        # transport_data.creditReasonIndicator = 'A'
-        # transport_data.ticketChangeIndicator = 'N'
-        # transport_data.ticketIssuerAddress = 'US'
-        # transport_data.exchangeTicketNumber = 'Ticket010'
-        # transport_data.exchangeAmount = '20210'
-        # transport_data.exchangeFeeAmount = '201010'
+        transport_data.passengerName = 'Post Ma12'
+        transport_data.ticketNumber = 'abc123456789'
+        transport_data.issuingCarrier = 'AMK'
+        transport_data.carrierName = 'AMTKTY'
+        transport_data.restrictedTicketIndicator = '11DFG111'
+        transport_data.numberOfAdults = 0
+        transport_data.numberOfChildren = 9
+        transport_data.customerCode = 'code12'
+        transport_data.arrivalDate = '2022-01-22'
+        transport_data.issueDate = '2021-02-03'
+        transport_data.travelAgencyCode = '420104'
+        transport_data.travelAgencyName = 'TravelAgency'
+        transport_data.computerizedReservationSystem = 'DATS'
+        transport_data.creditReasonIndicator = 'A'
+        transport_data.ticketChangeIndicator = 'N'
+        transport_data.ticketIssuerAddress = 'US'
+        transport_data.exchangeTicketNumber = 'Ticket010'
+        transport_data.exchangeAmount = '20210'
+        transport_data.exchangeFeeAmount = '201010'
 
         authorization.transport_data = transport_data
 
-
-
         response = online.request(authorization, conf)
         self.assertEquals('000', response['authorizationResponse']['response'])
         self.assertEquals('sandbox', response['authorizationResponse']['location'])
+
 
     def test_simple_auth_with_android_pay(self):
         authorization = fields.authorization()
@@ -540,7 +526,6 @@ class TestAuth(unittest.TestCase):
         self.assertNotIn('networkTransactionId', response['authorizationResponse'])
         self.assertEquals('sandbox', response['authorizationResponse']['location'])
 
-
     def test_simple_auth_business_indicator(self):
         authorization = fields.authorization()
         authorization.reportGroup = 'Planets'
@@ -592,8 +577,6 @@ class TestAuth(unittest.TestCase):
         additionalCOFData.validationReference = 're3298rhriw4wrw'
         additionalCOFData.sequenceIndicator = '2'
 
-
-
         authorization.additionalCOFData = additionalCOFData
 
         card = fields.cardType()
@@ -608,33 +591,152 @@ class TestAuth(unittest.TestCase):
         self.assertEquals('sandbox', response['authorizationResponse']['location'])
 
     def test_simple_auth_overridePolicy_fserrorcode_productEnrolled(self):
-            authorization = fields.authorization()
-            authorization.reportGroup = 'Planets'
-            authorization.orderId = '12344'
-            authorization.amount = 106
-            authorization.orderSource = 'ecommerce'
-            authorization.id = 'thisisid'
-            authorization.businessIndicator = 'buyOnlinePickUpInStore'
-            authorization.overridePolicy = 'fispolicy'
-            authorization.fsErrorCode = 'Fiserrorcode'
-            authorization.merchantAccountStatus = 'Active'
-            authorization.productEnrolled = 'Guarpay3'
-            authorization.decisionPurpose = 'INFORMATION_ONLY'
-            authorization.fraudSwitchIndicator = "PRE"
+        authorization = fields.authorization()
+        authorization.reportGroup = 'Planets'
+        authorization.orderId = '12344'
+        authorization.amount = 106
+        authorization.orderSource = 'ecommerce'
+        authorization.id = 'thisisid'
+        authorization.businessIndicator = 'buyOnlinePickUpInStore'
+        authorization.overridePolicy = 'fispolicy'
+        authorization.fsErrorCode = 'Fiserrorcode'
+        authorization.merchantAccountStatus = 'Active'
+        authorization.productEnrolled = 'GUARPAY2'
+        authorization.decisionPurpose = 'INFORMATION_ONLY'
+        authorization.fraudSwitchIndicator = "PRE"
 
-            card = fields.cardType()
-            card.number = '4100000000000000'
-            card.expDate = '1210'
-            card.type = 'VI'
+        card = fields.cardType()
+        card.number = '4100000000000000'
+        card.expDate = '1210'
+        card.type = 'VI'
 
-            authorization.card = card
+        authorization.card = card
 
+        response = online.request(authorization, conf)
+        self.assertEquals('000', response['authorizationResponse']['response'])
+        self.assertEquals('sandbox', response['authorizationResponse']['location'])
 
+    def test_simple_auth_with_passenger_Transport_Data_triplegData(self):
+        authorization = fields.authorization()
+        authorization.id = '12345'
+        authorization.reportGroup = 'Default'
+        authorization.orderId = '67890'
+        authorization.amount = 10000
+        authorization.orderSource = 'ecommerce'
 
-            response = online.request(authorization, conf)
-            self.assertEquals('000', response['authorizationResponse']['response'])
-            self.assertEquals('sandbox', response['authorizationResponse']['location'])
+        transport_data = fields.passengerTransportData()
+        transport_data.passengerName = 'Post Malone123'
+        transport_data.ticketNumber = 'abc123456789'
+        transport_data.issuingCarrier = 'AMTK'
+        transport_data.carrierName = 'AMTK'
+        transport_data.restrictedTicketIndicator = '11111'
+        transport_data.numberOfAdults = '0'
+        transport_data.numberOfChildren = '99'
+        transport_data.customerCode = 'code12'
+        transport_data.arrivalDate = '2022-01-22'
+        transport_data.issueDate = '2021-02-03'
+        transport_data.travelAgencyCode = '420104'
+        transport_data.travelAgencyName = 'TravelAgency'
+        transport_data.computerizedReservationSystem = 'DERD'
+        transport_data.creditReasonIndicator = 'A'
+        transport_data.ticketChangeIndicator = 'N'
+        transport_data.ticketIssuerAddress = 'US'
+        transport_data.exchangeTicketNumber = 'Ticket010'
+        transport_data.exchangeAmount = '20210'
+        transport_data.exchangeFeeAmount = '201010'
+        authorization.transport_data = transport_data
 
+        tripleg_data = fields.tripLegData()
+        tripleg_data.tripLegNumber = '10'
+        tripleg_data.departureCode = 'Code1'
+        tripleg_data.carrierCode = 'code2'
+        tripleg_data.serviceClass = 'First'
+        tripleg_data.stopOverCode = 'Codestop'
+        tripleg_data.destinationCode = 'DestCode2'
+        tripleg_data.fareBasisCode = 'farecode2'
+        tripleg_data.departureDate = '2022-01-01'
+        tripleg_data.originCity = 'LA'
+        tripleg_data.travelNumber = '1234'
+        tripleg_data.departureTime = '02:00'
+        tripleg_data.arrivalTime = '01:00'
+        tripleg_data.remarks = 'remarks'
+        authorization.tripleg_data = tripleg_data
+
+        card = fields.cardType()
+        card.number = '4100100000000000'
+        card.expDate = '1210'
+        card.type = 'VI'
+        authorization.card = card
+
+        response = online.request(authorization, conf)
+        self.assertEquals('000', response['authorizationResponse']['response'])
+        self.assertEquals('sandbox', response['authorizationResponse']['location'])
+
+    def test_simple_auth_with_auth_max_Disabled(self):
+        authorization = fields.authorization()
+        authorization.id = '1'
+        authorization.customerId = 'Cust0403'
+        authorization.reportGroup = '001550'
+        authorization.orderId = 'TC137654_1_DI_402'
+        authorization.amount = 500
+        authorization.orderSource = 'ecommerce'
+
+        card = fields.cardType()
+        card.number = '5500000050261001'
+        card.expDate = '1199'
+        card.type = 'MC'
+        authorization.card = card
+
+        response = online.request(authorization, conf)
+
+        self.assertEquals('false',response['authorizationResponse']['authMax']['authMaxApplied'])
+        self.assertEquals('001', response['authorizationResponse']['response'])
+        self.assertEquals('sandbox', response['authorizationResponse']['location'])
+
+    def test_simple_auth_with_auth_max_enabled(self):
+        authorization = fields.authorization()
+        authorization.id = '1'
+        authorization.customerId = 'Cust0403'
+        authorization.reportGroup = 'русский中文'
+        authorization.orderId = '12344401'
+        authorization.amount = 500
+        authorization.orderSource = 'ecommerce'
+
+        card = fields.cardType()
+        card.number = '4100000000000000'
+        card.expDate = '1210'
+        card.type = 'VI'
+        authorization.card = card
+
+        response = online.request(authorization, conf)
+
+        self.assertEquals('true', response['authorizationResponse']['authMax']['authMaxApplied'])
+        self.assertEquals('000', response['authorizationResponse']['response'])
+        self.assertEquals('sandbox', response['authorizationResponse']['location'])
+
+    def test_simple_auth_with_auth_max_enabled_networkToken(self):
+        authorization = fields.authorization()
+        authorization.id = '1'
+        authorization.customerId = 'Cust0403'
+        authorization.reportGroup = 'русский中文'
+        authorization.orderId = '12344401'
+        authorization.amount = 106
+        authorization.orderSource = 'ecommerce'
+
+        card = fields.cardType()
+        card.number = '4100000000000000'
+        card.expDate = '1210'
+        card.type = 'VI'
+        authorization.card = card
+
+        response = online.request(authorization, conf)
+
+        self.assertEquals('true', response['authorizationResponse']['authMax']['networkTokenApplied'])
+        self.assertEquals('1112000199940085', response['authorizationResponse']['authMax']['networkToken'])
+        self.assertEquals('Approved', response['authorizationResponse']['authMax']['authMaxResponseMessage'])
+        self.assertEquals('000', response['authorizationResponse']['authMax']['authMaxResponseCode'])
+        self.assertEquals('true', response['authorizationResponse']['authMax']['authMaxApplied'])
+        self.assertEquals('sandbox', response['authorizationResponse']['location'])
 
 
 if __name__ == '__main__':

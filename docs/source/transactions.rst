@@ -45,6 +45,7 @@ authReversal
     .. py:class:: vantivsdk.fields.authReversal
 
         :var actionReason: String or Number
+        :var additionalCOFData: instance of :py:class:`vantivsdk.fields.additionalCOFData`
         :var amount: String or Number
         :var cnpTxnId: String or Number
         :var customerId: String or Number
@@ -72,13 +73,17 @@ authorization
         :var customerId: String or Number
         :var customerInfo: instance of :py:class:`vantivsdk.fields.customerInfo`
         :var debtRepayment: String or Number
+        :var decisionPurpose: String or Number
         :var enhancedData: instance of :py:class:`vantivsdk.fields.enhancedData`
         :var filtering: instance of :py:class:`vantivsdk.fields.filteringType`
         :var fraudCheckStatus: String or Number
         :var fraudFilterOverride: String or Number
+        :var fraudSwitchIndicator: String or Number
+        :var fsErrorCode: String or Number
         :var healthcareIIAS: instance of :py:class:`vantivsdk.fields.healthcareIIAS`
         :var id: String or Number
         :var lodgingInfo: instance of :py:class:`vantivsdk.fields.lodgingInfo`
+        :var merchantAccountStatus: String or Number
         :var merchantCategoryCode: String or Number
         :var merchantData: instance of :py:class:`vantivsdk.fields.merchantDataType`
         :var mpos: instance of :py:class:`vantivsdk.fields.mposType`
@@ -87,12 +92,15 @@ authorization
         :var orderSource: String or Number
         :var originalNetworkTransactionId: String or Number
         :var originalTransactionAmount: String or Number
+        :var overridePolicy: String or Number
+        :var passengerTransportData: instance of :py:class:`vantivsdk.fields.passengerTransportData`
         :var paypage: instance of :py:class:`vantivsdk.fields.cardPaypageType`
         :var paypal: instance of :py:class:`vantivsdk.fields.payPal`
         :var pinlessDebitRequest: instance of :py:class:`vantivsdk.fields.pinlessDebitRequestType`
         :var pos: instance of :py:class:`vantivsdk.fields.pos`
         :var processingInstructions: instance of :py:class:`vantivsdk.fields.processingInstructions`
         :var processingType: String or Number
+        :var productEnrolled: String or Number
         :var recurringRequest: instance of :py:class:`vantivsdk.fields.recurringRequestType`
         :var recyclingRequest: instance of :py:class:`vantivsdk.fields.recyclingRequestType`
         :var reportGroup: String or Number
@@ -135,6 +143,7 @@ capture
         :var lodgingInfo: instance of :py:class:`vantivsdk.fields.lodgingInfo`
         :var orderId: String or Number
         :var partial: String or Number
+        :var passengerTransportData: instance of :py:class:`vantivsdk.fields.passengerTransportData`
         :var payPalNotes: String or Number
         :var payPalOrderComplete: String or Number
         :var pin: String or Number
@@ -166,6 +175,7 @@ captureGivenAuth
         :var orderSource: String or Number
         :var originalNetworkTransactionId: String or Number
         :var originalTransactionAmount: String or Number
+        :var passengerTransportData: instance of :py:class:`vantivsdk.fields.passengerTransportData`
         :var paypage: instance of :py:class:`vantivsdk.fields.cardPaypageType`
         :var pos: instance of :py:class:`vantivsdk.fields.pos`
         :var processingInstructions: instance of :py:class:`vantivsdk.fields.processingInstructions`
@@ -197,6 +207,7 @@ credit
     .. py:class:: vantivsdk.fields.credit
 
         :var actionReason: String or Number
+        :var additionalCOFData: instance of :py:class:`vantivsdk.fields.additionalCOFData`
         :var amount: String or Number
         :var billToAddress: instance of :py:class:`vantivsdk.fields.billToAddress`
         :var businessIndicator: String or Number
@@ -212,6 +223,7 @@ credit
         :var mpos: instance of :py:class:`vantivsdk.fields.mposType`
         :var orderId: String or Number
         :var orderSource: String or Number
+        :var passengerTransportData: instance of :py:class:`vantivsdk.fields.passengerTransportData`
         :var payPalNotes: String or Number
         :var paypage: instance of :py:class:`vantivsdk.fields.cardPaypageType`
         :var paypal: instance of :py:class:`vantivsdk.fields.payPal`
@@ -303,6 +315,7 @@ depositTransactionReversal
         :var enhancedData: instance of :py:class:`vantivsdk.fields.enhancedData`
         :var id: String or Number
         :var lodgingInfo: instance of :py:class:`vantivsdk.fields.lodgingInfo`
+        :var passengerTransportData: instance of :py:class:`vantivsdk.fields.passengerTransportData`
         :var pin: String or Number
         :var processingInstructions: instance of :py:class:`vantivsdk.fields.processingInstructions`
         :var reportGroup: String or Number
@@ -449,6 +462,7 @@ forceCapture
         :var mpos: instance of :py:class:`vantivsdk.fields.mposType`
         :var orderId: String or Number
         :var orderSource: String or Number
+        :var passengerTransportData: instance of :py:class:`vantivsdk.fields.passengerTransportData`
         :var paypage: instance of :py:class:`vantivsdk.fields.cardPaypageType`
         :var pos: instance of :py:class:`vantivsdk.fields.pos`
         :var processingInstructions: instance of :py:class:`vantivsdk.fields.processingInstructions`
@@ -659,6 +673,7 @@ refundTransactionReversal
         :var enhancedData: instance of :py:class:`vantivsdk.fields.enhancedData`
         :var id: String or Number
         :var lodgingInfo: instance of :py:class:`vantivsdk.fields.lodgingInfo`
+        :var passengerTransportData: instance of :py:class:`vantivsdk.fields.passengerTransportData`
         :var pin: String or Number
         :var processingInstructions: instance of :py:class:`vantivsdk.fields.processingInstructions`
         :var reportGroup: String or Number
@@ -726,16 +741,20 @@ sale
         :var customerId: String or Number
         :var customerInfo: instance of :py:class:`vantivsdk.fields.customerInfo`
         :var debtRepayment: String or Number
+        :var decisionPurpose: String or Number
         :var enhancedData: instance of :py:class:`vantivsdk.fields.enhancedData`
         :var filtering: instance of :py:class:`vantivsdk.fields.filteringType`
         :var fraudCheck: instance of :py:class:`vantivsdk.fields.fraudCheckType`
         :var fraudCheckStatus: String or Number
         :var fraudFilterOverride: String or Number
+        :var fraudSwitchIndicator: String or Number
+        :var fsErrorCode: String or Number
         :var giropay: instance of :py:class:`vantivsdk.fields.giropayType`
         :var healthcareIIAS: instance of :py:class:`vantivsdk.fields.healthcareIIAS`
         :var id: String or Number
         :var ideal: instance of :py:class:`vantivsdk.fields.idealType`
         :var lodgingInfo: instance of :py:class:`vantivsdk.fields.lodgingInfo`
+        :var merchantAccountStatus: String or Number
         :var merchantCategoryCode: String or Number
         :var merchantData: instance of :py:class:`vantivsdk.fields.merchantDataType`
         :var mpos: instance of :py:class:`vantivsdk.fields.mposType`
@@ -744,6 +763,8 @@ sale
         :var orderSource: String or Number
         :var originalNetworkTransactionId: String or Number
         :var originalTransactionAmount: String or Number
+        :var overridePolicy: String or Number
+        :var passengerTransportData: instance of :py:class:`vantivsdk.fields.passengerTransportData`
         :var payPalNotes: String or Number
         :var payPalOrderComplete: String or Number
         :var paypage: instance of :py:class:`vantivsdk.fields.cardPaypageType`
@@ -752,6 +773,7 @@ sale
         :var pos: instance of :py:class:`vantivsdk.fields.pos`
         :var processingInstructions: instance of :py:class:`vantivsdk.fields.processingInstructions`
         :var processingType: String or Number
+        :var productEnrolled: String or Number
         :var recurringRequest: instance of :py:class:`vantivsdk.fields.recurringRequestType`
         :var recyclingRequest: instance of :py:class:`vantivsdk.fields.recyclingRequestType`
         :var reportGroup: String or Number

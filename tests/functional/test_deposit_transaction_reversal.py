@@ -36,7 +36,7 @@ conf = utils.Configuration()
 
 class TestDepositTransactionReversal(unittest.TestCase):
     def test_simple_txn_reversal(self):
-        transactions = fields.depositTransactionReversal();
+        transactions = fields.depositTransactionReversal()
         transactions.reportGroup = 'Planets'
         transactions.customerId = '987654321'
         transactions.cnpTxnId = '12345678000'
@@ -50,8 +50,8 @@ class TestDepositTransactionReversal(unittest.TestCase):
         self.assertEquals('sandbox', response['depositTransactionReversalResponse']['location'])
         self.assertEquals('12345678000', response['depositTransactionReversalResponse']['recyclingResponse']['creditCnpTxnId'])
 
-    def test_simple_deposit_with_passenger_Transport_Data(self):
-        transactions = fields.depositTransactionReversal();
+    def test_simple_auth_with_passenger_Transport_Data_tripLegData(self):
+        transactions = fields.depositTransactionReversal()
         transactions.reportGroup = 'Planets'
         transactions.customerId = '987654321'
         transactions.cnpTxnId = '12345678000'
@@ -81,6 +81,22 @@ class TestDepositTransactionReversal(unittest.TestCase):
         transport_data.exchangeAmount = '20210'
         transport_data.exchangeFeeAmount = '201010'
         transactions.transport_data = transport_data
+
+        tripleg_data = fields.tripLegData()
+        tripleg_data.tripLegNumber = '10'
+        tripleg_data.departureCode = 'Code1'
+        tripleg_data.carrierCode = 'code2'
+        tripleg_data.serviceClass = 'First'
+        tripleg_data.stopOverCode = 'Codestop'
+        tripleg_data.destinationCode = 'DestCode2'
+        tripleg_data.fareBasisCode = 'farecode2'
+        tripleg_data.departureDate = '2022-01-01'
+        tripleg_data.originCity = 'LA'
+        tripleg_data.travelNumber = '1234'
+        tripleg_data.departureTime = '02:00'
+        tripleg_data.arrivalTime = '01:00'
+        tripleg_data.remarks = 'remarks'
+        transactions.tripleg_data = tripleg_data
 
         response = online.request(transactions, conf)
         self.assertEquals('000', response['depositTransactionReversalResponse']['response'])
