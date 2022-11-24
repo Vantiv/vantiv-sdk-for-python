@@ -270,7 +270,7 @@ class TestSale(unittest.TestCase):
         response = online.request(transaction, conf)
         self.assertEquals('000', response['saleResponse']['response'])
         self.assertEquals('sandbox', response['saleResponse']['location'])
-    def test_sale_with_overridePolicy_fserrorcode_productEnrolled(self):
+    def test_simple_sale_with_guaranteed_payment(self):
         transaction = fields.sale()
         transaction.id = '12345'
         transaction.reportGroup = 'Default'
@@ -284,9 +284,9 @@ class TestSale(unittest.TestCase):
         transaction.overridePolicy = 'fispolicy'
         transaction.fsErrorCode = 'Fiserrorcode'
         transaction.merchantAccountStatus = 'Active'
-        transaction.productEnrolled = 'Guarpay3'
-        transaction.decisionPurpose = 'INFORMATION_ONLY'
-        transaction.fraudSwitchIndicator = "PRE"
+        transaction.productEnrolled = 'GUARPAY1'
+        transaction.decisionPurpose = 'CONSIDER_DECISION'
+        transaction.fraudSwitchIndicator = "POST"
 
     def test_sale_with_processing_type_COF(self):
         transaction = fields.sale()
@@ -736,7 +736,7 @@ class TestSale(unittest.TestCase):
         lodging_info.roomTax = 1
         lodging_info.bookingID = 'ID12345'
         lodging_info.passengerName = 'Post Malone'
-        lodging_info.travelPackageIndicator = "AirlineReservation"
+        lodging_info.travelPackageIndicator = 'CarRentalReservation'
         lodging_info.smokingPreference = 'N'
         lodging_info.numberOfRooms = 13
         lodging_info.tollFreePhoneNumber = '1234567890'

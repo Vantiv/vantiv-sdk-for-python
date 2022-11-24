@@ -590,7 +590,7 @@ class TestAuth(unittest.TestCase):
         self.assertEquals('000', response['authorizationResponse']['response'])
         self.assertEquals('sandbox', response['authorizationResponse']['location'])
 
-    def test_simple_auth_overridePolicy_fserrorcode_productEnrolled(self):
+    def test_simple_auth_with_guaranteed_payment(self):
         authorization = fields.authorization()
         authorization.reportGroup = 'Planets'
         authorization.orderId = '12344'
@@ -710,6 +710,20 @@ class TestAuth(unittest.TestCase):
 
         response = online.request(authorization, conf)
 
+        self.assertEquals('true', response['authorizationResponse']['authMax']['authMaxApplied'])
+        self.assertEquals('000', response['authorizationResponse']['response'])
+        self.assertEquals('sandbox', response['authorizationResponse']['location'])
+
+    def test_simple_auth_with_auth_max_enabled_transactions(self):
+        authorization = fields.authorization()
+        authorization.id = '1'
+        authorization.customerId = 'Cust0403'
+        authorization.reportGroup = '001550'
+        authorization.cnpTxnId = '34659348401'
+
+        response = online.request(authorization, conf)
+        self.assertEquals('true', response['authorizationResponse']['authMax']['networkTokenApplied'])
+        self.assertEquals('1112000199940085', response['authorizationResponse']['authMax']['networkToken'])
         self.assertEquals('true', response['authorizationResponse']['authMax']['authMaxApplied'])
         self.assertEquals('000', response['authorizationResponse']['response'])
         self.assertEquals('sandbox', response['authorizationResponse']['location'])
