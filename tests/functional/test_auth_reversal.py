@@ -48,6 +48,28 @@ class TestAuthReversal(unittest.TestCase):
         self.assertEquals('000', response['authReversalResponse']['response'])
         self.assertEquals('sandbox', response['authReversalResponse']['location'])
 
+    def test_simple_auth_reversal_with_additionaCOFData(self):
+        transactions = fields.authReversal()
+        transactions.reportGroup = 'Planets'
+        transactions.cnpTxnId = '12345678000'
+        transactions.amount = 106
+        transactions.orderSource = 'ecommerce'
+        transactions.payPalNotes = 'Notes'
+        transactions.id = 'thisisid'
+        additionalCOFData = fields.additionalCOFData()
+        additionalCOFData.totalPaymentCount = '35'
+        additionalCOFData.paymentType = 'Fixed Amount'
+        additionalCOFData.uniqueId = '12345wereew233'
+        additionalCOFData.frequencyOfMIT = 'BiWeekly'
+        additionalCOFData.validationReference = 're3298rhriw4wrw'
+        additionalCOFData.sequenceIndicator = '2'
+        transactions.additionalCOFData = additionalCOFData
+
+        response = online.request(transactions, conf)
+        self.assertEquals('000', response['authReversalResponse']['response'])
+        self.assertEquals('sandbox', response['authReversalResponse']['location'])
+
+
 
 if __name__ == '__main__':
     unittest.main()

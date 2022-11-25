@@ -51,6 +51,21 @@ class TestQueryTransaction(unittest.TestCase):
                           response['queryTransactionResponse']['message'])
         self.assertEquals('sandbox', response['queryTransactionResponse']['location'])
 
+    def test_simple_query_transaction_with_orgActionType(self):
+        transaction = fields.queryTransaction()
+        transaction.orderId = '49382'
+        transaction.origId = "ABCD0"
+        transaction.id = '934820'
+        transaction.reportGroup = 'ThisIsAGroup'
+        transaction.origActionType = "FISD"
+        transaction.showStatusOnly = "Y"
+
+        response = online.request(transaction, conf)
+        self.assertEquals('151',
+                          response['queryTransactionResponse']['response'])
+        self.assertEquals('Original transaction not found',
+                          response['queryTransactionResponse']['message'])
+        self.assertEquals('sandbox', response['queryTransactionResponse']['location'])
 
 if __name__ == '__main__':
     unittest.main()

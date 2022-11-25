@@ -270,6 +270,23 @@ class TestSale(unittest.TestCase):
         response = online.request(transaction, conf)
         self.assertEquals('000', response['saleResponse']['response'])
         self.assertEquals('sandbox', response['saleResponse']['location'])
+    def test_simple_sale_with_guaranteed_payment(self):
+        transaction = fields.sale()
+        transaction.id = '12345'
+        transaction.reportGroup = 'Default'
+        transaction.orderId = '67890'
+        transaction.amount = 10000
+        transaction.orderSource = 'ecommerce'
+        transaction.processingType = 'initialInstallment'
+        transaction.originalNetworkTransactionId = '9876543210'
+        transaction.originalTransactionAmount = 53698
+        transaction.id = 'ThisIsID'
+        transaction.overridePolicy = 'fispolicy'
+        transaction.fsErrorCode = 'Fiserrorcode'
+        transaction.merchantAccountStatus = 'Active'
+        transaction.productEnrolled = 'GUARPAY1'
+        transaction.decisionPurpose = 'CONSIDER_DECISION'
+        transaction.fraudSwitchIndicator = "POST"
 
     def test_sale_with_processing_type_COF(self):
         transaction = fields.sale()
@@ -348,6 +365,8 @@ class TestSale(unittest.TestCase):
         self.assertEquals('http://redirect.url.vantiv.com',
                           response['saleResponse']['idealResponse']['redirectUrl'])
         self.assertEquals('sandbox', response['saleResponse']['location'])
+
+
 
     def test_sale_with_giropay(self):
         transaction = fields.sale()
@@ -534,6 +553,232 @@ class TestSale(unittest.TestCase):
         self.assertEquals('000', response['saleResponse']['response'])
         self.assertEquals('sandbox', response['saleResponse']['location'])
 
+    def test_sale_with_passenger_Transport_Data(self):
+        transaction = fields.sale()
+        transaction.reportGroup = 'Planets'
+        transaction.orderId = '12344'
+        transaction.amount = 106
+        transaction.orderSource = 'ecommerce'
+        transaction.id = 'ThisIsID'
+        transaction.businessIndicator = 'consumerBillPayment'
+
+        card = fields.cardType()
+        card.number = '4100000000000000'
+        card.expDate = '1210'
+        card.type = 'VI'
+
+        transaction.card = card
+
+        transport_data = fields.passengerTransportData()
+        transport_data.passengerName = 'Post Malone123'
+        transport_data.ticketNumber = 'abc123456789'
+        transport_data.issuingCarrier = 'AMTK'
+        transport_data.carrierName = 'AMTK'
+        transport_data.restrictedTicketIndicator = '11111'
+        transport_data.numberOfAdults = '0'
+        transport_data.numberOfChildren = '99'
+        transport_data.customerCode = 'code12'
+        transport_data.arrivalDate = '2022-01-22'
+        transport_data.issueDate = '2021-02-03'
+        transport_data.travelAgencyCode = '420104'
+        transport_data.travelAgencyName = 'TravelAgency'
+        transport_data.computerizedReservationSystem = 'DERD'
+        transport_data.creditReasonIndicator = 'A'
+        transport_data.ticketChangeIndicator = 'N'
+        transport_data.ticketIssuerAddress = 'US'
+        transport_data.exchangeTicketNumber = 'Ticket010'
+        transport_data.exchangeAmount = '20210'
+        transport_data.exchangeFeeAmount = '201010'
+        transaction.transport_data = transport_data
+
+        response = online.request(transaction, conf)
+        self.assertEquals('000', response['saleResponse']['response'])
+        self.assertEquals('sandbox', response['saleResponse']['location'])
+
+    def test_simple_auth_with_passenger_Transport_Data_triplegData(self):
+        transaction = fields.sale()
+        transaction.reportGroup = 'Planets'
+        transaction.orderId = '12344'
+        transaction.amount = 106
+        transaction.orderSource = 'ecommerce'
+        transaction.id = 'ThisIsID'
+        transaction.businessIndicator = 'consumerBillPayment'
+
+        transport_data = fields.passengerTransportData()
+        transport_data.passengerName = 'Post Malone123'
+        transport_data.ticketNumber = 'abc123456789'
+        transport_data.issuingCarrier = 'AMTK'
+        transport_data.carrierName = 'AMTK'
+        transport_data.restrictedTicketIndicator = '11111'
+        transport_data.numberOfAdults = '0'
+        transport_data.numberOfChildren = '99'
+        transport_data.customerCode = 'code12'
+        transport_data.arrivalDate = '2022-01-22'
+        transport_data.issueDate = '2021-02-03'
+        transport_data.travelAgencyCode = '420104'
+        transport_data.travelAgencyName = 'TravelAgency'
+        transport_data.computerizedReservationSystem = 'DERD'
+        transport_data.creditReasonIndicator = 'A'
+        transport_data.ticketChangeIndicator = 'N'
+        transport_data.ticketIssuerAddress = 'US'
+        transport_data.exchangeTicketNumber = 'Ticket010'
+        transport_data.exchangeAmount = '20210'
+        transport_data.exchangeFeeAmount = '201010'
+        transaction.transport_data = transport_data
+
+        tripleg_data = fields.tripLegData()
+        tripleg_data.tripLegNumber = '10'
+        tripleg_data.departureCode = 'Code1'
+        tripleg_data.carrierCode = 'code2'
+        tripleg_data.serviceClass = 'First'
+        tripleg_data.stopOverCode = 'Codestop'
+        tripleg_data.destinationCode = 'DestCode2'
+        tripleg_data.fareBasisCode = 'farecode2'
+        tripleg_data.departureDate = '2022-01-01'
+        tripleg_data.originCity = 'LA'
+        tripleg_data.travelNumber = '1234'
+        tripleg_data.departureTime = '02:00'
+        tripleg_data.arrivalTime = '01:00'
+        tripleg_data.remarks = 'remarks'
+        transaction.tripleg_data = tripleg_data
+
+        card = fields.cardType()
+        card.number = '4100100000000000'
+        card.expDate = '1210'
+        card.type = 'VI'
+        transaction.card = card
+
+        response = online.request(transaction, conf)
+        self.assertEquals('000', response['saleResponse']['response'])
+        self.assertEquals('sandbox', response['saleResponse']['location'])
+
+
+    def test_simple_auth_with_passenger_Transport_Data_triplegData(self):
+        transaction = fields.sale()
+        transaction.reportGroup = 'Planets'
+        transaction.orderId = '12344'
+        transaction.amount = 106
+        transaction.orderSource = 'ecommerce'
+        transaction.id = 'ThisIsID'
+        transaction.businessIndicator = 'consumerBillPayment'
+
+        card = fields.cardType()
+        card.number = '4100100000000000'
+        card.expDate = '1210'
+        card.type = 'VI'
+        transaction.card = card
+
+        response = online.request(transaction, conf)
+        self.assertEquals('000', response['saleResponse']['response'])
+        self.assertEquals('sandbox', response['saleResponse']['location'])
+
+    def test_simple_auth_with_auth_max_enabled_detailed(self):
+        transaction = fields.sale()
+        transaction.reportGroup = 'русский中文'
+        transaction.orderId = '12344401'
+        transaction.amount = 106
+        transaction.orderSource = 'ecommerce'
+        transaction.id = 'ThisIsID'
+        transaction.businessIndicator = 'consumerBillPayment'
+
+        card = fields.cardType()
+        card.number = '4100100000000000'
+        card.expDate = '1210'
+        card.type = 'VI'
+        transaction.card = card
+
+        response = online.request(transaction, conf)
+
+        self.assertEquals('true', response['saleResponse']['authMax']['networkTokenApplied'])
+        self.assertEquals('1112000199940085', response['saleResponse']['authMax']['networkToken'])
+        self.assertEquals('Approved', response['saleResponse']['authMax']['authMaxResponseMessage'])
+        self.assertEquals('000', response['saleResponse']['authMax']['authMaxResponseCode'])
+        self.assertEquals('true', response['saleResponse']['authMax']['authMaxApplied'])
+        self.assertEquals('000', response['saleResponse']['response'])
+        self.assertEquals('sandbox', response['saleResponse']['location'])
+
+    def test_simple_auth_with_auth_max_diseabled(self):
+        transaction = fields.sale()
+        transaction.reportGroup = 'русский中文'
+        transaction.orderId = '12344401'
+        transaction.amount = 106
+        transaction.orderSource = 'ecommerce'
+        transaction.id = 'ThisIsID'
+        transaction.businessIndicator = 'consumerBillPayment'
+
+        card = fields.cardType()
+        card.number = '5500000050261001'
+        card.expDate = '1199'
+        card.type = 'MC'
+        transaction.card = card
+
+        response = online.request(transaction, conf)
+        self.assertEquals('true', response['saleResponse']['authMax']['authMaxApplied'])
+        self.assertEquals('001', response['saleResponse']['response'])
+        self.assertEquals('sandbox', response['saleResponse']['location'])
+
+    def test_simple_auth_with_lodging_and_passangertransportdata(self):
+        transaction = fields.sale()
+        transaction.reportGroup = 'Planets'
+        transaction.orderId = '12344'
+        transaction.amount = 106
+        transaction.orderSource = 'ecommerce'
+        transaction.id = 'thisisid'
+
+        card = fields.cardType()
+        card.number = '4100000000000000'
+        card.expDate = '1210'
+        card.type = 'VI'
+        transaction.card = card
+
+        lodging_info = fields.lodgingInfo()
+        lodging_info.roomRate = 1001
+        lodging_info.roomTax = 1
+        lodging_info.bookingID = 'ID12345'
+        lodging_info.passengerName = 'Post Malone'
+        lodging_info.travelPackageIndicator = 'CarRentalReservation'
+        lodging_info.smokingPreference = 'N'
+        lodging_info.numberOfRooms = 13
+        lodging_info.tollFreePhoneNumber = '1234567890'
+
+        lodging_charge = fields.lodgingCharge()
+        lodging_charge.name = "RESTAURANT"
+        lodging_info.lodgingCharge = [lodging_charge]
+        transaction.lodgingInfo = lodging_info
+
+        property_Address = fields.propertyAddress()
+        property_Address.name = 'propertyaddress1'
+        property_Address.city = 'nyc'
+        property_Address.region = 'abc'
+        property_Address.country = 'US'
+        transaction.lodgingInfo = lodging_info
+
+        transport_data = fields.passengerTransportData()
+        transport_data.passengerName = 'Post Ma12'
+        transport_data.ticketNumber = 'abc123456789'
+        transport_data.issuingCarrier = 'AMK'
+        transport_data.carrierName = 'AMTKTY'
+        transport_data.restrictedTicketIndicator = '11DFG111'
+        transport_data.numberOfAdults = 0
+        transport_data.numberOfChildren = 9
+        transport_data.customerCode = 'code12'
+        transport_data.arrivalDate = '2022-01-22'
+        transport_data.issueDate = '2021-02-03'
+        transport_data.travelAgencyCode = '420104'
+        transport_data.travelAgencyName = 'TravelAgency'
+        transport_data.computerizedReservationSystem = 'DATS'
+        transport_data.creditReasonIndicator = 'A'
+        transport_data.ticketChangeIndicator = 'N'
+        transport_data.ticketIssuerAddress = 'US'
+        transport_data.exchangeTicketNumber = 'Ticket010'
+        transport_data.exchangeAmount = '20210'
+        transport_data.exchangeFeeAmount = '201010'
+
+        transaction.transport_data = transport_data
+
+        response = online.request(transaction, conf)
+        self.assertEquals('000', response['saleResponse']['response'])
+        self.assertEquals('sandbox', response['saleResponse']['location'])
 
 if __name__ == '__main__':
     unittest.main()

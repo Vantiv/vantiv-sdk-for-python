@@ -387,6 +387,7 @@ lodgingInfo
 -----------
     .. py:class:: vantivsdk.fields.lodgingInfo
 
+        :var bookingID: String or Number
         :var checkInDate: String or Number
         :var checkOutDate: String or Number
         :var customerServicePhone: String or Number
@@ -395,10 +396,16 @@ lodgingInfo
         :var hotelFolioNumber: String or Number
         :var lodgingCharge: instance of :py:class:`vantivsdk.fields.lodgingCharge`
         :var numAdults: String or Number
+        :var numberOfRooms: String or Number
+        :var passengerName: String or Number
         :var programCode: String or Number
+        :var propertyAddress: instance of :py:class:`vantivsdk.fields.propertyAddress`
         :var propertyLocalPhone: String or Number
         :var roomRate: String or Number
         :var roomTax: String or Number
+        :var smokingPreference: String or Number
+        :var tollFreePhoneNumber: String or Number
+        :var travelPackageIndicator: String or Number
 
 merchantDataType
 ----------------
@@ -417,6 +424,31 @@ mposType
         :var ksn: String or Number
         :var track1Status: String or Number
         :var track2Status: String or Number
+
+passengerTransportData
+----------------------
+    .. py:class:: vantivsdk.fields.passengerTransportData
+
+        :var arrivalDate: String or Number
+        :var carrierName: String or Number
+        :var computerizedReservationSystem: String or Number
+        :var creditReasonIndicator: String or Number
+        :var customerCode: String or Number
+        :var exchangeAmount: String or Number
+        :var exchangeFeeAmount: String or Number
+        :var exchangeTicketNumber: String or Number
+        :var issueDate: String or Number
+        :var issuingCarrier: String or Number
+        :var numberOfAdults: String or Number
+        :var numberOfChildren: String or Number
+        :var passengerName: String or Number
+        :var restrictedTicketIndicator: String or Number
+        :var ticketChangeIndicator: String or Number
+        :var ticketIssuerAddress: String or Number
+        :var ticketNumber: String or Number
+        :var travelAgencyCode: String or Number
+        :var travelAgencyName: String or Number
+        :var tripLegData: instance of :py:class:`vantivsdk.fields.tripLegData`
 
 payPal
 ------
@@ -455,6 +487,15 @@ processingInstructions
     .. py:class:: vantivsdk.fields.processingInstructions
 
         :var bypassVelocityCheck: String or Number
+
+propertyAddress
+---------------
+    .. py:class:: vantivsdk.fields.propertyAddress
+
+        :var city: String or Number
+        :var country: String or Number
+        :var name: String or Number
+        :var region: String or Number
 
 recurringRequestType
 --------------------
@@ -551,6 +592,24 @@ token
         :var expDate: String or Number
         :var tokenURL: String or Number
         :var type: String or Number
+
+tripLegData
+-----------
+    .. py:class:: vantivsdk.fields.tripLegData
+
+        :var arrivalTime: String or Number
+        :var carrierCode: String or Number
+        :var departureCode: String or Number
+        :var departureDate: String or Number
+        :var departureTime: String or Number
+        :var destinationCode: String or Number
+        :var fareBasisCode: String or Number
+        :var originCity: String or Number
+        :var remarks: String or Number
+        :var serviceClass: String or Number
+        :var stopOverCode: String or Number
+        :var travelNumber: String or Number
+        :var tripLegNumber: String or Number
 
 updateAddOnType
 ---------------

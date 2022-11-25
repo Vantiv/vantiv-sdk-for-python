@@ -204,6 +204,124 @@ class TestOnline(unittest.TestCase):
         self.assertEquals('0', response.response)
 
     @mock.patch.object(online, '_http_post')
+    def test_request_for_guaranteed_payment_with_passengerTransportData(self, mock__http_post):
+        transaction = fields.authorization()
+        transaction.id = '1'
+        transaction.customerId = 'Cust0403'
+        transaction.reportGroup = 'русский中文'
+        transaction.orderId = '12344401'
+        transaction.amount = 500
+        transaction.orderSource = 'ecommerce'
+
+        card = fields.cardType()
+        card.number = '4100000000000000'
+        card.expDate = '1210'
+        card.type = 'VI'
+        transaction.card = card
+
+        additionalCOFData = fields.additionalCOFData()
+        additionalCOFData.totalPaymentCount = '35'
+        additionalCOFData.paymentType = 'Fixed Amount'
+        additionalCOFData.uniqueId = '12345wereew233'
+        additionalCOFData.frequencyOfMIT = 'BiWeekly'
+        additionalCOFData.validationReference = 're3298rhriw4wrw'
+        additionalCOFData.sequenceIndicator = '2'
+
+        transaction.additionalCOFData = additionalCOFData
+
+        transport_data = fields.passengerTransportData()
+        transport_data.passengerName = 'Post Ma12'
+        transport_data.ticketNumber = 'abc123456789'
+        transport_data.issuingCarrier = 'AMK'
+        transport_data.carrierName = 'AMTKTY'
+        transport_data.restrictedTicketIndicator = '11DFG111'
+        transport_data.numberOfAdults = 0
+        transport_data.numberOfChildren = 9
+        transport_data.customerCode = 'code12'
+        transport_data.arrivalDate = '2022-01-22'
+        transport_data.issueDate = '2021-02-03'
+        transport_data.travelAgencyCode = '420104'
+        transport_data.travelAgencyName = 'TravelAgency'
+        transport_data.computerizedReservationSystem = 'DATS'
+        transport_data.creditReasonIndicator = 'A'
+        transport_data.ticketChangeIndicator = 'N'
+        transport_data.ticketIssuerAddress = 'US'
+        transport_data.exchangeTicketNumber = 'Ticket010'
+        transport_data.exchangeAmount = '20210'
+        transport_data.exchangeFeeAmount = '201010'
+
+        transaction.transport_data = transport_data
+
+        tripleg_data = fields.tripLegData()
+        tripleg_data.tripLegNumber = '10'
+        tripleg_data.departureCode = 'Code1'
+        tripleg_data.carrierCode = 'code2'
+        tripleg_data.serviceClass = 'First'
+        tripleg_data.stopOverCode = 'Codestop'
+        tripleg_data.destinationCode = 'DestCode2'
+        tripleg_data.fareBasisCode = 'farecode2'
+        tripleg_data.departureDate = '2022-01-01'
+        tripleg_data.originCity = 'LA'
+        tripleg_data.travelNumber = '1234'
+        tripleg_data.departureTime = '02:00'
+        tripleg_data.arrivalTime = '01:00'
+        tripleg_data.remarks = 'remarks'
+        transaction.tripleg_data = tripleg_data
+        transaction.crypto = False
+
+        mock__http_post.return_value = """<cnpOnlineResponse version='11.0' response='1' message='Valid Format' xmlns='http://www.vantivcnp.com/schema'>
+        </cnpOnlineResponse>
+            """
+        self.assertRaises(utils.VantivException, online.request, transaction, conf, 'dict')
+
+        mock__http_post.return_value = """<cnpOnlineResponse version='11.0' response='0' message='Valid Format' xmlns='http://www.vantivcnp.com/schema'>
+            <authorizationResponse id='thisisid' reportGroup='Planets' customerId=''>
+            <cnpTxnId>135967334095735957</cnpTxnId>
+            <orderId>TC137654_1_DI_402</orderId>
+            <response>000</response>
+            <responseTime>2022-11-23T10:39:23.192</responseTime>
+            <message>Approved</message>
+            <authCode>75354</authCode>
+            <accountUpdater>
+                <originalCardInfo>
+                    <type>VI</type>
+                    <number>4100100000000000</number>
+                    <expDate>1110</expDate>
+                </originalCardInfo>
+                <newCardInfo>
+                    <type>VI</type>
+                    <number>4532694461984309</number>
+                    <expDate>1114</expDate>
+                </newCardInfo>
+            </accountUpdater>
+            <networkTransactionId>63225578415568556365452427825</networkTransactionId>
+            <authMax>
+                <authMaxApplied>true</authMaxApplied>
+                <networkTokenApplied>true</networkTokenApplied>
+                <networkToken>1112000199940085</networkToken>
+                <authMaxResponseCode>000</authMaxResponseCode>
+                <authMaxResponseMessage>Approved</authMaxResponseMessage>
+            </authMax>
+            </authorizationResponse>
+            </cnpOnlineResponse>
+                    """
+
+        # return dict
+        response = online.request(transaction, conf)
+        self.assertEquals('0', response['@response'])
+        self.assertEquals('135967334095735957', response['authorizationResponse']['cnpTxnId'])
+        self.assertIsInstance(response, dict)
+
+        # return xml string
+        response = online.request(transaction, conf, 'xml')
+        self.assertIsInstance(response, str)
+
+        # return fields object.
+        response = online.request(transaction, conf, 'object')
+        self.assertEquals('0', response.response)
+
+
+    @mock.patch.object(online, '_http_post')
     def test_request_relturn_format2(self, mock__http_post):
         transaction = fields.authorization()
         transaction.reportGroup = 'Planets'

@@ -23,7 +23,7 @@ More examples can be found here https://github.com/Vantiv/vantiv-sdk-for-python/
 
 Detail documents can be found here http://vantivecommercepythonsdk.readthedocs.io/en/12.x/
 
-Please contact [Vantiv eCommerce](https://developer.vantiv.com/community/ecommerce) to receive valid merchant credentials and determine which version of the SDK is right for your business requirements or if you require assistance in any other way.  You can reach us at sdksupport@Vantiv.com
+Please contact [Vantiv eCommerce](https://developer.vantiv.com/community/ecommerce) to receive valid merchant credentials and determine which version of the SDK is right for your business requirements or if you require assistance in any other way.  You can reach us at sdksupport@fisglobal.com
 
 Dependencies
 ------------
@@ -216,4 +216,4 @@ NOTE: you may need to edit the proxy to to work for your system
     Message: Valid Format
     cnp Transaction ID: <your-numeric-cnp-txn-id>
 
-Please contact Vantiv eCommerce with any further questions. You can reach us at SDKSupport@Vantiv.com
+Please contact Vantiv eCommerce with any further questions. You can reach us at sdksupport@fisglobal.com
