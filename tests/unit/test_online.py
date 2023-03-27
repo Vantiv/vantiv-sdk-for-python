@@ -845,5 +845,214 @@ class TestOnline(unittest.TestCase):
         self.assertEquals("000", response['authorizationResponse']['response'])
         self.assertEquals("7890", response['merchantCategoryCode'])
 
+    @mock.patch.object(online, '_http_post')
+    def test_request_for_authIndicatorEnumIncremental(self, mock__http_post):
+        authorization = fields.authorization()
+        authorization.id = '1234'
+        authorization.customerId = 'Cust0404'
+        authorization.reportGroup = 'Default'
+        authorization.cnpTxnId = '34659348401'
+        authorization.amount = '106'
+        authorization.authIndicator = 'Incremental'
+
+        mock__http_post.return_value = """<cnpOnlineResponse version='12.30' response='1' message='Valid Format' xmlns='http://www.vantivcnp.com/schema'>
+          </cnpOnlineResponse>
+              """
+        self.assertRaises(utils.VantivException, online.request, authorization, conf, 'dict')
+
+        mock__http_post.return_value ="""
+        <cnpOnlineResponse xmlns="http://www.vantivcnp.com/schema" version="12.30" response="0" message="Valid Format">
+            <authorizationResponse id="PPAuthInc1" reportGroup="LitleDirectClearing">
+                <cnpTxnId>587273030852445843</cnpTxnId>
+                <orderId />
+                <response>000</response>
+                <message>Approved</message>
+                <responseTime>2023-03-24T12:17:29.664</responseTime>
+                <location>sandbox</location>
+            </authorizationResponse>
+        </cnpOnlineResponse>
+        """
+
+        # return dict
+        response = online.request(authorization, conf)
+        self.assertEquals('0', response['@response'])
+        self.assertEquals('587273030852445843', response['authorizationResponse']['cnpTxnId'])
+        self.assertIsInstance(response, dict)
+
+        # return xml string
+        response = online.request(authorization, conf, 'xml')
+        self.assertIsInstance(response, str)
+
+        # return fields object.
+        response = online.request(authorization, conf, 'object')
+        self.assertEquals('0', response.response)
+
+
+    @mock.patch.object(online, '_http_post')
+    def test_request_for_orderChannelEnumMIT_sellerInfo_authIndicatorEstimated(self, mock__http_post):
+        authorization = fields.authorization()
+        authorization.id = '1'
+        authorization.customerId = 'Cust0403'
+        authorization.reportGroup = 'Default Report Group'
+        authorization.orderId = '12344401'
+        authorization.amount = '106'
+        authorization.orderSource = 'ecommerce'
+
+        seller_info = fields.sellerInfo()
+        seller_info.accountNumber = '4485581000000005'
+        seller_info.aggregateOrderCount = '4'
+        seller_info.aggregateOrderDollars = '104'
+
+        seller_address = fields.sellerAddress()
+        seller_address.sellerStreetaddress = '15 Main Street'
+        seller_address.sellerUnit = '100 AB'
+        seller_address.sellerPostalcode = '12345'
+        seller_address.sellerCity = 'San Jose'
+        seller_address.sellerProvincecode = 'MA'
+        seller_address.sellerCountrycode = 'US'
+        seller_info.sellerAddress = seller_address
+
+        seller_info.createdDate = '2015-11-12T20:33:09'
+        seller_info.domain = 'vap'
+        seller_info.email = 'bob@example.com'
+        seller_info.lastUpdateDate = '2015-11-12T20:33:09'
+        seller_info.name = 'bob'
+        seller_info.onboardingEmail = 'bob@example.com'
+        seller_info.onboardingIpAddress = '75.100.88.78'
+        seller_info.parentEntity = 'abc'
+        seller_info.phone = '9785510040'
+        seller_info.sellerId = '123456789'
+
+        seller_tags = fields.sellerTagsType
+        seller_tags.tag = '2'
+        seller_info.seller_tags = seller_tags
+        seller_info.username = 'bob123'
+
+        authorization.seller_info = seller_info
+
+        card = fields.cardType()
+        card.number = '4100000000000000'
+        card.expDate = '1210'
+        card.type = 'VI'
+        authorization.card = card
+
+        authorization.orderChannel = 'MIT'
+        authorization.authIndicator = 'Estimated'
+
+        mock__http_post.return_value = """<cnpOnlineResponse version='12.30' response='1' message='Valid Format' xmlns='http://www.vantivcnp.com/schema'>
+               </cnpOnlineResponse>
+                   """
+        self.assertRaises(utils.VantivException, online.request, authorization, conf, 'dict')
+
+        mock__http_post.return_value = """
+            <cnpOnlineResponse xmlns="http://www.vantivcnp.com/schema" version="12.30" response="0" message="Valid Format">
+                <authorizationResponse id="auth_GP_success_MC_MerEnabled" reportGroup="DirectWFITxn">
+                    <cnpTxnId>328357670706189403</cnpTxnId>
+                    <orderId>XGR-1840823423</orderId>
+                    <response>000</response>
+                    <message>Approved</message>
+                    <responseTime>2023-03-24T12:34:09.484</responseTime>
+                    <authCode>06613</authCode>
+                    <location>sandbox</location>
+                </authorizationResponse>
+            </cnpOnlineResponse> """
+
+        # return dict
+        response = online.request(authorization, conf)
+        self.assertEquals('0', response['@response'])
+        self.assertEquals('328357670706189403', response['authorizationResponse']['cnpTxnId'])
+        self.assertIsInstance(response, dict)
+
+        # return xml string
+        response = online.request(authorization, conf, 'xml')
+        self.assertIsInstance(response, str)
+
+        # return fields object.
+        response = online.request(authorization, conf, 'object')
+        self.assertEquals('0', response.response)
+
+    @mock.patch.object(online, '_http_post')
+    def test_simple_sale_with_orderChanneEnumMIT_sellerInfo_authIndicatorEstimated(self ,mock__http_post):
+        transaction = fields.sale()
+        transaction.id = '1'
+        transaction.customerId = 'Cust0403'
+        transaction.reportGroup = 'Default Report Group'
+        transaction.orderId = '12344401'
+        transaction.amount = 106
+        transaction.orderSource = 'ecommerce'
+        seller_info = fields.sellerInfo()
+        seller_info.accountNumber = '4485581000000005'
+        seller_info.aggregateOrderCount = '4'
+        seller_info.aggregateOrderDollars = '104'
+        seller_address = fields.sellerAddress()
+        seller_address.sellerStreetaddress = '15 Main Street'
+        seller_address.sellerUnit = '100 AB'
+        seller_address.sellerPostalcode = '12345'
+        seller_address.sellerCity = 'San Jose'
+        seller_address.sellerProvincecode = 'MA'
+        seller_address.sellerCountrycode = 'US'
+        seller_info.sellerAddress = seller_address
+        seller_info.createdDate = '2015-11-12T20:33:09'
+        seller_info.domain = 'vap'
+        seller_info.email = 'bob@example.com'
+        seller_info.lastUpdateDate = '2015-11-12T20:33:09'
+        seller_info.name = 'bob'
+        seller_info.onboardingEmail = 'bob@example.com'
+        seller_info.onboardingIpAddress = '75.100.88.78'
+        seller_info.parentEntity = 'abc'
+        seller_info.phone = '9785510040'
+        seller_info.sellerId = '123456789'
+        seller_tags = fields.sellerTagsType
+        seller_tags.tag = '2'
+        seller_info.seller_tags = seller_tags
+        seller_info.username = 'bob123'
+        transaction.seller_info = seller_info
+        card = fields.cardType()
+        card.number = '4100000000000000'
+        card.expDate = '1210'
+        card.type = 'VI'
+        transaction.card = card
+        transaction.orderChannel = 'MIT'
+
+
+        mock__http_post.return_value = """<cnpOnlineResponse version='12.30' response='1' message='Valid Format' xmlns='http://www.vantivcnp.com/schema'>
+                        </cnpOnlineResponse>
+                                """
+        self.assertRaises(utils.VantivException, online.request, transaction, conf, 'dict')
+
+        mock__http_post.return_value = """<cnpOnlineResponse xmlns="http://www.vantivcnp.com/schema" version="12.30" response="0" message="Valid Format">
+                    <saleResponse id="Cust0403" reportGroup="Default Report Group">
+                        <cnpTxnId>972361514381087588</cnpTxnId>
+                        <orderId>12344401</orderId>
+                        <response>000</response>
+                        <message>Approved</message>
+                        <responseTime>2023-03-27T09:40:47.868</responseTime>
+                        <authCode>84519</authCode>
+                        <networkTransactionId>63225578415568556365452427825</networkTransactionId>
+                        <location>sandbox</location>
+                        <authMax>
+                            <authMaxApplied>true</authMaxApplied>
+                            <networkTokenApplied>true</networkTokenApplied>
+                            <networkToken>1112000199940085</networkToken>
+                            <authMaxResponseCode>000</authMaxResponseCode>
+                            <authMaxResponseMessage>Approved</authMaxResponseMessage>
+                        </authMax>
+                    </saleResponse>
+                </cnpOnlineResponse>"""
+
+
+        response = online.request(transaction, conf)
+        self.assertEquals('0', response['@response'])
+        self.assertEquals('972361514381087588', response['saleResponse']['cnpTxnId'])
+        self.assertIsInstance(response, dict)
+
+        # return xml string
+        response = online.request(transaction, conf, 'xml')
+        self.assertIsInstance(response, str)
+
+        # return fields object.
+        response = online.request(transaction, conf, 'object')
+        self.assertEquals('0', response.response)
+
 if __name__ == '__main__':
     unittest.main()
