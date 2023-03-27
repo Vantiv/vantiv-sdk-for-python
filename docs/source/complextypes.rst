@@ -135,14 +135,6 @@ cardType
         :var track: String or Number
         :var type: String or Number
 
-cnpInternalRecurringRequestType
--------------------------------
-    .. py:class:: vantivsdk.fields.cnpInternalRecurringRequestType
-
-        :var finalPayment: String or Number
-        :var recurringTxnId: String or Number
-        :var subscriptionId: String or Number
-
 createAddOnType
 ---------------
     .. py:class:: vantivsdk.fields.createAddOnType
@@ -541,6 +533,44 @@ retailerAddress
         :var state: String or Number
         :var url: String or Number
         :var zip: String or Number
+
+sellerAddress
+-------------
+    .. py:class:: vantivsdk.fields.sellerAddress
+
+        :var sellerCity: String or Number
+        :var sellerCountrycode: String or Number
+        :var sellerPostalcode: String or Number
+        :var sellerProvincecode: String or Number
+        :var sellerStreetaddress: String or Number
+        :var sellerUnit: String or Number
+
+sellerInfo
+----------
+    .. py:class:: vantivsdk.fields.sellerInfo
+
+        :var accountNumber: String or Number
+        :var aggregateOrderCount: String or Number
+        :var aggregateOrderDollars: String or Number
+        :var createdDate: String or Number
+        :var domain: String or Number
+        :var email: String or Number
+        :var lastUpdateDate: String or Number
+        :var name: String or Number
+        :var onboardingEmail: String or Number
+        :var onboardingIpAddress: String or Number
+        :var parentEntity: String or Number
+        :var phone: String or Number
+        :var sellerAddress: instance of :py:class:`vantivsdk.fields.sellerAddress`
+        :var sellerId: String or Number
+        :var sellerTags: instance of :py:class:`vantivsdk.fields.sellerTagsType`
+        :var username: String or Number
+
+sellerTagsType
+--------------
+    .. py:class:: vantivsdk.fields.sellerTagsType
+
+        :var tag: String or Number
 
 sepaDirectDebitType
 -------------------
