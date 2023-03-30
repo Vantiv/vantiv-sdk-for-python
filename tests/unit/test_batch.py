@@ -223,6 +223,106 @@ class TestBatch(unittest.TestCase):
         self.assertEquals(response['batchResponse']['saleResponse']['cnpTxnId'], '123')
         self.assertEquals(response['batchResponse']['@numAccountUpdates'], '3')
 
+    @mock.patch.object(batch, '_get_file_str_from_sftp')
+    def test_request_for_authIndicatorEnumIncremental(self, mock__get_file_str_from_sftp):
+        authorization = fields.authorization()
+        authorization.id = '1234'
+        authorization.customerId = 'Cust0404'
+        authorization.reportGroup = 'Default'
+        authorization.cnpTxnId = '34659348401'
+        authorization.amount = '106'
+        authorization.authIndicator = 'Incremental'
+
+        mock__get_file_str_from_sftp.return_value = """
+             <cnpResponse xmlns="http://www.vantivcnp.com/schema" version="12.30" response="0" message="Valid Format">
+                 <batchResponse cnpBatchId='12344' merchantId='56789' numAccountUpdates='3' xmlns='http://www.vantivcnp.com/schema'>
+                     <authorizationResponse id="auth_GP_success_MC_MerEnabled" reportGroup="DirectWFITxn">
+                         <cnpTxnId>587273030852445843</cnpTxnId>
+                         <orderId />
+                         <response>000</response>
+                         <message>Approved</message>
+                         <responseTime>2023-03-24T12:17:29.664</responseTime>
+                         <location>sandbox</location>
+                      </authorizationResponse>   
+                 </batchResponse>
+             </cnpResponse>
+             """
+
+        response = batch.retrieve('retrieve_file', conf)
+        self.assertEquals(response['batchResponse']['authorizationResponse']['cnpTxnId'], '587273030852445843')
+        self.assertEquals(response['batchResponse']['@numAccountUpdates'], '3')
+
+    @mock.patch.object(batch, '_get_file_str_from_sftp')
+    def test_request_for_orderChannelEnumMIT_sellerInfo_authIndicatorEstimated(self, mock__get_file_str_from_sftp):
+        authorization = fields.authorization()
+        authorization.id = '1'
+        authorization.customerId = 'Cust0403'
+        authorization.reportGroup = 'Default Report Group'
+        authorization.orderId = '12344401'
+        authorization.amount = '106'
+        authorization.orderSource = 'ecommerce'
+
+        seller_info = fields.sellerInfo()
+        seller_info.accountNumber = '4485581000000005'
+        seller_info.aggregateOrderCount = '4'
+        seller_info.aggregateOrderDollars = '104'
+
+        seller_address = fields.sellerAddress()
+        seller_address.sellerStreetaddress = '15 Main Street'
+        seller_address.sellerUnit = '100 AB'
+        seller_address.sellerPostalcode = '12345'
+        seller_address.sellerCity = 'San Jose'
+        seller_address.sellerProvincecode = 'MA'
+        seller_address.sellerCountrycode = 'US'
+        seller_info.sellerAddress = seller_address
+
+        seller_info.createdDate = '2015-11-12T20:33:09'
+        seller_info.domain = 'vap'
+        seller_info.email = 'bob@example.com'
+        seller_info.lastUpdateDate = '2015-11-12T20:33:09'
+        seller_info.name = 'bob'
+        seller_info.onboardingEmail = 'bob@example.com'
+        seller_info.onboardingIpAddress = '75.100.88.78'
+        seller_info.parentEntity = 'abc'
+        seller_info.phone = '9785510040'
+        seller_info.sellerId = '123456789'
+
+        seller_tags = fields.sellerTagsType
+        seller_tags.tag = '2'
+        seller_info.seller_tags = seller_tags
+        seller_info.username = 'bob123'
+
+        authorization.seller_info = seller_info
+
+        card = fields.cardType()
+        card.number = '4100000000000000'
+        card.expDate = '1210'
+        card.type = 'VI'
+        authorization.card = card
+
+        authorization.orderChannel = 'MIT'
+        authorization.authIndicator = 'Estimated'
+
+        mock__get_file_str_from_sftp.return_value = """
+                 <cnpResponse xmlns="http://www.vantivcnp.com/schema" version="12.30" response="0" message="Valid Format">
+                 <batchResponse cnpBatchId='12344' merchantId='56789' numAccountUpdates='3' xmlns='http://www.vantivcnp.com/schema'>
+                     <authorizationResponse id="auth_GP_success_MC_MerEnabled" reportGroup="DirectWFITxn">
+                         <cnpTxnId>328357670706189403</cnpTxnId>
+                         <orderId>XGR-1840823423</orderId>
+                         <response>000</response>
+                         <message>Approved</message>
+                         <responseTime>2023-03-24T12:34:09.484</responseTime>
+                         <authCode>06613</authCode>
+                         <location>sandbox</location>
+                     </authorizationResponse>
+                 </batchResponse>
+                 </cnpResponse> """
+
+         # return dict
+        response = batch.retrieve('retrieve_file', conf)
+        self.assertEquals(response['batchResponse']['authorizationResponse']['cnpTxnId'], '328357670706189403')
+        self.assertEquals(response['batchResponse']['@numAccountUpdates'], '3')
+
     def test_download(self):
         # first arg is str and len less than 4
         self.assertRaises(utils.VantivException, batch.download, 'abc', conf)
