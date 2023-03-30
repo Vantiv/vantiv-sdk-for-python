@@ -25,6 +25,7 @@
 import os
 import sys
 import unittest
+from enum import auto
 
 package_root = os.path.dirname(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
 sys.path.insert(0, package_root)
@@ -720,6 +721,8 @@ class TestAuth(unittest.TestCase):
         authorization.customerId = 'Cust0403'
         authorization.reportGroup = '001550'
         authorization.cnpTxnId = '34659348401'
+        authorization.amount = 106
+        authorization.authIndicator = "Incremental"
 
         response = online.request(authorization, conf)
         self.assertEquals('true', response['authorizationResponse']['authMax']['networkTokenApplied'])
@@ -750,6 +753,74 @@ class TestAuth(unittest.TestCase):
         self.assertEquals('Approved', response['authorizationResponse']['authMax']['authMaxResponseMessage'])
         self.assertEquals('000', response['authorizationResponse']['authMax']['authMaxResponseCode'])
         self.assertEquals('true', response['authorizationResponse']['authMax']['authMaxApplied'])
+        self.assertEquals('sandbox', response['authorizationResponse']['location'])
+
+    def test_simple_auth_with_authIndicatorEnum(self):
+        authorization = fields.authorization()
+        authorization.id = '1234'
+        authorization.customerId = 'Cust0404'
+        authorization.reportGroup = 'Default'
+        authorization.cnpTxnId = '34659348401'
+        authorization.amount = '106'
+        authorization.authIndicator = 'Incremental'
+
+        response = online.request(authorization, conf)
+
+        self.assertEquals('000', response['authorizationResponse']['response'])
+        self.assertEquals('sandbox', response['authorizationResponse']['location'])
+
+    def test_simple_auth_with_orderChanneEnumMIT_sellerInfo_authIndicatorEstimated(self):
+        authorization = fields.authorization()
+        authorization.id = '1'
+        authorization.customerId = 'Cust0403'
+        authorization.reportGroup = 'Default Report Group'
+        authorization.orderId = '12344401'
+        authorization.amount = 106
+        authorization.orderSource = 'ecommerce'
+
+        seller_info = fields.sellerInfo()
+        seller_info.accountNumber = '4485581000000005'
+        seller_info.aggregateOrderCount = '4'
+        seller_info.aggregateOrderDollars = '104'
+
+        seller_address = fields.sellerAddress()
+        seller_address.sellerStreetaddress = '15 Main Street'
+        seller_address.sellerUnit = '100 AB'
+        seller_address.sellerPostalcode = '12345'
+        seller_address.sellerCity = 'San Jose'
+        seller_address.sellerProvincecode = 'MA'
+        seller_address.sellerCountrycode = 'US'
+        seller_info.sellerAddress = seller_address
+
+        seller_info.createdDate = '2015-11-12T20:33:09'
+        seller_info.domain = 'vap'
+        seller_info.email = 'bob@example.com'
+        seller_info.lastUpdateDate = '2015-11-12T20:33:09'
+        seller_info.name = 'bob'
+        seller_info.onboardingEmail = 'bob@example.com'
+        seller_info.onboardingIpAddress = '75.100.88.78'
+        seller_info.parentEntity = 'abc'
+        seller_info.phone = '9785510040'
+        seller_info.sellerId = '123456789'
+
+        seller_tags = fields.sellerTagsType
+        seller_tags.tag = '2'
+        seller_info.seller_tags = seller_tags
+        seller_info.username = 'bob123'
+
+        authorization.seller_info = seller_info
+
+        card = fields.cardType()
+        card.number = '4100000000000000'
+        card.expDate = '1210'
+        card.type = 'VI'
+        authorization.card = card
+
+        authorization.orderChannel = 'MIT'
+        authorization.authIndicator = 'Estimated'
+
+        response = online.request(authorization, conf)
+        self.assertEquals('000', response['authorizationResponse']['response'])
         self.assertEquals('sandbox', response['authorizationResponse']['location'])
 
 

@@ -323,6 +323,67 @@ class TestBatch(unittest.TestCase):
         self.assertEquals(response['batchResponse']['authorizationResponse']['cnpTxnId'], '328357670706189403')
         self.assertEquals(response['batchResponse']['@numAccountUpdates'], '3')
 
+    @mock.patch.object(batch, '_get_file_str_from_sftp')
+    def test_oerderChannelEnumMIT_sellerInfo(self, mock__get_file_str_from_sftp):
+        transaction = fields.sale()
+        transaction.id = 'auth_GP_DI'
+        transaction.reportGroup = 'DirectWFITxn'
+        transaction.orderId = 'XGR-1840823423'
+        transaction.amount = 1100
+        transaction.orderSource = 'telephone'
+        seller_info = fields.sellerInfo()
+        seller_info.accountNumber = '6557959585426472'
+        seller_info.aggregateOrderCount = '4'
+        seller_info.aggregateOrderDollars = '100'
+        seller_address = fields.sellerAddress()
+        seller_address.sellerStreetaddress = '15 Main Street'
+        seller_address.sellerUnit = '100 AB'
+        seller_address.sellerPostalcode = '12345'
+        seller_address.sellerCity = 'San Jose'
+        seller_address.sellerProvincecode = 'MA'
+        seller_address.sellerCountrycode = 'US'
+        seller_info.sellerAddress = seller_address
+        seller_info.createdDate = '2015-11-12T20:33:09'
+        seller_info.domain = 'vap'
+        seller_info.email = 'bob@example.com'
+        seller_info.lastUpdateDate = '2015-11-12T20:33:09'
+        seller_info.name = 'bob'
+        seller_info.onboardingEmail = 'bob@example.com'
+        seller_info.onboardingIpAddress = '75.100.88.78'
+        seller_info.parentEntity = 'abc'
+        seller_info.phone = '9785510040'
+        seller_info.sellerId = '123456789'
+        seller_tags = fields.sellerTagsType
+        seller_tags.tag = '2'
+        seller_info.seller_tags = seller_tags
+        seller_info.username = 'bob123'
+        transaction.seller_info = seller_info
+        card = fields.cardType()
+        card.number = '4100000000000000'
+        card.expDate = '1210'
+        card.type = 'VI'
+        transaction.card = card
+        transaction.orderChannel = 'MIT'
+
+        mock__get_file_str_from_sftp.return_value = """
+                           <cnpResponse version='12.29' response='0' message='Valid Format' xmlns='http://www.vantivcnp.com/schema'>
+                                     <batchResponse cnpBatchId='12344' merchantId='DirectWFITxn' numAccountUpdates='3' xmlns='http://www.vantivcnp.com/schema'>
+                                            <saleResponse id="auth_GP_DI" reportGroup="DirectWFITxn">
+                                                 <cnpTxnId>427453992541199977</cnpTxnId>
+                                                 <orderId>XGR-1840823423</orderId>
+                                                 <response>000</response>
+                                                 <message>Approved</message>
+                                                 <responseTime>2023-03-27T09:27:19.759</responseTime>
+                                                 <authCode>00229</authCode>
+                                                 <networkTransactionId>63225578415568556365452427825</networkTransactionId>
+                                                 <location>sandbox</location>
+                                            </saleResponse>
+                                     </batchResponse>
+                           </cnpResponse>"""
+        response = batch.retrieve('retrieve_file', conf)
+        self.assertEquals(response['batchResponse']['saleResponse']['cnpTxnId'], '427453992541199977')
+        self.assertEquals(response['batchResponse']['@numAccountUpdates'], '3')
+
     def test_download(self):
         # first arg is str and len less than 4
         self.assertRaises(utils.VantivException, batch.download, 'abc', conf)
