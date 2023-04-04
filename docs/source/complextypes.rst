@@ -135,6 +135,13 @@ cardType
         :var track: String or Number
         :var type: String or Number
 
+cnpInternalRecurringRequestType
+-------------------------------
+    .. py:class:: vantivsdk.fields.cnpInternalRecurringRequestType
+        :var finalPayment: String or Number
+        :var recurringTxnId: String or Number
+        :var subscriptionId: String or Number
+
 createAddOnType
 ---------------
     .. py:class:: vantivsdk.fields.createAddOnType

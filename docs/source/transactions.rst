@@ -736,7 +736,7 @@ sale
         :var businessIndicator: String or Number
         :var card: instance of :py:class:`vantivsdk.fields.cardType`
         :var cardholderAuthentication: instance of :py:class:`vantivsdk.fields.fraudCheckType`
-        :var cnpInternalRecurringRequest: String or Number
+        :var cnpInternalRecurringRequest: instance of :py:class:`vantivsdk.fields.cnpInternalRecurringRequestType`
         :var cnpTxnId: String or Number
         :var crypto: String or Number
         :var customBilling: instance of :py:class:`vantivsdk.fields.customBilling`
@@ -829,6 +829,15 @@ submerchantDebit
         :var reportGroup: String or Number
         :var submerchantName: String or Number
 
+translateToLowValueTokenRequest
+-------------------------------
+    .. py:class:: vantivsdk.fields.translateToLowValueTokenRequest
+        :var customerId: String or Number
+        :var id: String or Number
+        :var orderId: String or Number
+        :var reportGroup: String or Number
+        :var token: String or Number
+
 unload
 ------
     .. py:class:: vantivsdk.fields.unload
@@ -854,6 +863,16 @@ unloadReversal
         :var originalSequenceNumber: String or Number
         :var originalSystemTraceId: String or Number
         :var originalTxnTime: String or Number
+        :var reportGroup: String or Number
+
+updateCardValidationNumOnToken
+------------------------------
+    .. py:class:: vantivsdk.fields.updateCardValidationNumOnToken
+        :var cardValidationNum: String or Number
+        :var cnpToken: String or Number
+        :var customerId: String or Number
+        :var id: String or Number
+        :var orderId: String or Number
         :var reportGroup: String or Number
 
 updatePlan
