@@ -832,6 +832,7 @@ submerchantDebit
 translateToLowValueTokenRequest
 -------------------------------
     .. py:class:: vantivsdk.fields.translateToLowValueTokenRequest
+
         :var customerId: String or Number
         :var id: String or Number
         :var orderId: String or Number
@@ -868,6 +869,7 @@ unloadReversal
 updateCardValidationNumOnToken
 ------------------------------
     .. py:class:: vantivsdk.fields.updateCardValidationNumOnToken
+
         :var cardValidationNum: String or Number
         :var cnpToken: String or Number
         :var customerId: String or Number

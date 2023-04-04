@@ -138,6 +138,7 @@ cardType
 cnpInternalRecurringRequestType
 -------------------------------
     .. py:class:: vantivsdk.fields.cnpInternalRecurringRequestType
+
         :var finalPayment: String or Number
         :var recurringTxnId: String or Number
         :var subscriptionId: String or Number
