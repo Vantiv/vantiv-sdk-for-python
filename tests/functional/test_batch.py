@@ -694,7 +694,7 @@ class TestBatch(unittest.TestCase):
             with open(os.path.join(conf.batch_requests_path, '%s.xml' % filename), 'r') as xml_file:
                 obj = fields.CreateFromDocument(xml_file.read())
                 self.assertEquals(1, obj.numBatchRequests)
-                self.assertEquals(106, obj.batchRequest[0].transactionReversalAmount)
+                self.assertEquals(106, obj.batchRequest[0].depositTransactionReversalAmount)
 
             self.assertEquals('%s.xml.asc' % filename, response)
 
@@ -745,7 +745,131 @@ class TestBatch(unittest.TestCase):
             with open(os.path.join(conf.batch_requests_path, '%s.xml' % filename), 'r') as xml_file:
                 obj = fields.CreateFromDocument(xml_file.read())
                 self.assertEquals(1, obj.numBatchRequests)
-                self.assertEquals(106, obj.batchRequest[0].transactionReversalAmount)
+                self.assertEquals(106, obj.batchRequest[0].refundTransactionReversalAmount)
+
+            self.assertEquals('%s.xml.asc' % filename, response)
+
+    @unittest.skipIf(preliveStatus.lower() == 'down', "prelive not available")
+    def test_batch_auth_sale_v12_30(self):
+        txnBatch = batch.Transactions()
+        authorization = fields.authorization()
+        authorization.id = '1'
+        authorization.customerId = 'Cust0403'
+        authorization.reportGroup = 'Default Report Group'
+        authorization.orderId = '12344401'
+        authorization.amount = 106
+        authorization.orderSource = 'ecommerce'
+
+        seller_info = fields.sellerInfo()
+        seller_info.accountNumber = '4485581000000005'
+        seller_info.aggregateOrderCount = '4'
+        seller_info.aggregateOrderDollars = '104'
+        seller_address = fields.sellerAddress()
+        seller_address.sellerStreetaddress = '15 Main Street'
+        seller_address.sellerUnit = '100 AB'
+        seller_address.sellerPostalcode = '12345'
+        seller_address.sellerCity = 'San Jose'
+        seller_address.sellerProvincecode = 'MA'
+        seller_address.sellerCountrycode = 'US'
+        seller_info.sellerAddress = seller_address
+        seller_info.createdDate = '2015-11-12T20:33:09'
+        seller_info.domain = 'vap'
+        seller_info.email = 'bob@example.com'
+        seller_info.lastUpdateDate = '2015-11-12T20:33:09'
+        seller_info.name = 'bob'
+        seller_info.onboardingEmail = 'bob@example.com'
+        seller_info.onboardingIpAddress = '75.100.88.78'
+        seller_info.parentEntity = 'abc'
+        seller_info.phone = '9785510040'
+        seller_info.sellerId = '123456789'
+        seller_tags = fields.sellerTagsType
+        seller_tags.tag = '2'
+        seller_info.seller_tags = seller_tags
+        seller_info.username = 'bob123'
+        authorization.seller_info = seller_info
+        card = fields.cardType()
+        card.number = '4100000000000000'
+        card.expDate = '1210'
+        card.type = 'VI'
+        authorization.card = card
+        authorization.orderChannel = 'MIT'
+        authorization.authIndicator = 'Estimated'
+        txnBatch.add(authorization)
+
+        filename = 'batch_test_%s' % datetime.datetime.now().strftime("%Y%m%d%H%M%S%f")
+        sale = fields.sale()
+        sale.id = 'auth_GP_DI'
+        sale.reportGroup = 'DirectWFITxn'
+        sale.orderId = 'XGR-1840823423'
+        sale.amount = 1100
+        sale.orderSource = 'telephone'
+        seller_info = fields.sellerInfo()
+        seller_info.accountNumber = '6557959585426472'
+        seller_info.aggregateOrderCount = '4'
+        seller_info.aggregateOrderDollars = '100'
+        seller_address = fields.sellerAddress()
+        seller_address.sellerStreetaddress = '15 Main Street'
+        seller_address.sellerUnit = '100 AB'
+        seller_address.sellerPostalcode = '12345'
+        seller_address.sellerCity = 'San Jose'
+        seller_address.sellerProvincecode = 'MA'
+        seller_address.sellerCountrycode = 'US'
+        seller_info.sellerAddress = seller_address
+        seller_info.createdDate = '2015-11-12T20:33:09'
+        seller_info.domain = 'vap'
+        seller_info.email = 'bob@example.com'
+        seller_info.lastUpdateDate = '2015-11-12T20:33:09'
+        seller_info.name = 'bob'
+        seller_info.onboardingEmail = 'bob@example.com'
+        seller_info.onboardingIpAddress = '75.100.88.78'
+        seller_info.parentEntity = 'abc'
+        seller_info.phone = '9785510040'
+        seller_info.sellerId = '123456789'
+        seller_tags = fields.sellerTagsType
+        seller_tags.tag = '2'
+        seller_info.seller_tags = seller_tags
+        seller_info.username = 'bob123'
+        sale.seller_info = seller_info
+        card = fields.cardType()
+        card.number = '4100000000000000'
+        card.expDate = '1210'
+        card.type = 'VI'
+        sale.card = card
+        sale.orderChannel = 'MIT'
+        txnBatch.add(sale)
+        # stream to Vaitiv eCommerce and get object as response
+        response = batch.submit(txnBatch, conf, filename)
+
+        if conf.useEncryption:
+            # Using encryption.
+            retry = True
+            tried = 0
+            withEncryptionReponseFilepath = ''
+            while retry:
+                tried += 1
+                try:
+                    withEncryptionReponseFilepath = batch._get_file_from_sftp(response, conf, False, 60)
+                    retry = False
+                except:
+                    # sleep 1 minute waiting for batch get processed
+                    print("sleep 30 seconds waiting for batch get processed")
+                    time.sleep(30)
+                if tried > 20:
+                    self.fail("Timeout for retrieve batch response")
+                    break
+
+            call(["cat", withEncryptionReponseFilepath])
+            ### <<< WITH ENCRYPTION
+
+            with open(withEncryptionReponseFilepath, 'r') as xml_file:
+                obj = fields.CreateFromDocument(xml_file.read())
+                self.assertEquals("Valid Format", obj.message)
+
+        else:
+            with open(os.path.join(conf.batch_requests_path, '%s.xml' % filename), 'r') as xml_file:
+                obj = fields.CreateFromDocument(xml_file.read())
+                self.assertEquals(1, obj.numBatchRequests)
+                self.assertEquals(106, obj.batchRequest[0].authAmount)
 
             self.assertEquals('%s.xml.asc' % filename, response)
 
