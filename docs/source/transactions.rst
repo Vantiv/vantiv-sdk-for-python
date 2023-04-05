@@ -63,6 +63,7 @@ authorization
         :var allowPartialAuth: String or Number
         :var amount: String or Number
         :var applepay: instance of :py:class:`vantivsdk.fields.applepayType`
+        :var authIndicator: String or Number
         :var billToAddress: instance of :py:class:`vantivsdk.fields.billToAddress`
         :var businessIndicator: String or Number
         :var card: instance of :py:class:`vantivsdk.fields.cardType`
@@ -106,6 +107,7 @@ authorization
         :var reportGroup: String or Number
         :var retailerAddress: instance of :py:class:`vantivsdk.fields.retailerAddress`
         :var secondaryAmount: String or Number
+        :var sellerInfo: instance of :py:class:`vantivsdk.fields.sellerInfo`
         :var shipToAddress: instance of :py:class:`vantivsdk.fields.shipToAddress`
         :var skipRealtimeAU: String or Number
         :var surchargeAmount: String or Number
@@ -779,6 +781,7 @@ sale
         :var reportGroup: String or Number
         :var retailerAddress: instance of :py:class:`vantivsdk.fields.retailerAddress`
         :var secondaryAmount: String or Number
+        :var sellerInfo: instance of :py:class:`vantivsdk.fields.sellerInfo`
         :var sepaDirectDebit: instance of :py:class:`vantivsdk.fields.sepaDirectDebitType`
         :var shipToAddress: instance of :py:class:`vantivsdk.fields.shipToAddress`
         :var skipRealtimeAU: String or Number
