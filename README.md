@@ -1,5 +1,12 @@
 Vantiv eCommerce Python SDK for XML v8.x
 ========================================
+<span style="color:red">
+
+### Important Support Note
+</span>
+
+***Worldpay provides SDK updates for releases in the latest major version stream. We do not provide SDK updates to older releases, unless mandated by the card brands. All SDKs are open source, allowing you to update older versions as needed.***
+
 #### WARNING:
 ##### All major version changes require recertification to the new version. Once certified for the use of a new version, Vantiv modifies your Merchant Profile, allowing you to submit transaction to the Production Environment using the new version. Updating your code without recertification and modification of your Merchant Profile will result in transaction declines. Please consult you Implementation Analyst for additional information about this process.
 About Vantiv eCommerce
@@ -11,7 +18,7 @@ About this SDK
 --------------
 The Vantiv eCommerce Python SDK is a Python implementation of the [Vantiv eCommerce](https://developer.vantiv.com/community/ecommerce) XML API. This SDK was created to make it as easy as possible to connect to and process payments through Vantiv eCommerce. This SDK utilizes the HTTPS protocol to securely connect to Vantiv eCommerce.  Using the SDK requires coordination with the Vantiv eCommerce team to obtain credentials for accessing our systems.
 
-Each Python SDK release supports all of the functionality present in the associated Vantiv eCommerce XML version (e.g., 8.31.x supports Vantiv eCommerce XML v8.31). Please see the online copy of our XSD for Vantiv eCommerce XML to get more details on what the Vantiv eCommerce payments engine supports .
+Each Python SDK release supports all the functionality present in the associated Vantiv eCommerce XML version (e.g., 8.31.x supports Vantiv eCommerce XML v8.31). Please see the online copy of our XSD for Vantiv eCommerce XML to get more details on what the Vantiv eCommerce payments engine supports .
 
 This SDK was implemented to support the Python2 version 2.7.9 and later, Python3 version 3.4 and later, and was created by Vantiv eCommerce. Its intended use is for online transaction processing utilizing your account on the Vantiv eCommerce payments engine.
 
@@ -23,7 +30,7 @@ Examples can be found here https://github.com/Vantiv/vantiv-sdk-for-python/tree/
 
 Detail documents can be found here http://vantivecommercepythonsdk.readthedocs.io/en/8.x/
 
-Please contact [Vantiv eCommerce](https://developer.vantiv.com/community/ecommerce) to receive valid merchant credentials and determine which version of the SDK is right for your business requirements or if you require assistance in any other way.  You can reach us at sdksupport@Vantiv.com
+Please contact [Vantiv eCommerce](https://developer.vantiv.com/community/ecommerce) to receive valid merchant credentials and determine which version of the SDK is right for your business requirements or if you require assistance in any other way.  You can reach us at sdksupport@fisglobal.com
 
 Dependencies
 ------------
@@ -216,4 +223,4 @@ NOTE: you may need to edit the proxy to to work for your system
     Message: Valid Format
     Litle Transaction ID: <your-numeric-litle-txn-id>
     
-Please contact Vantiv eCommerce with any further questions. You can reach us at SDKSupport@Vantiv.com
+Please contact Vantiv eCommerce with any further questions. You can reach us at SDKSupport@fisglobal.com
