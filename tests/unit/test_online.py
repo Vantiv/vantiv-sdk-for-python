@@ -1054,5 +1054,198 @@ class TestOnline(unittest.TestCase):
         response = online.request(transaction, conf, 'object')
         self.assertEquals('0', response.response)
 
+    @mock.patch.object(online, '_http_post')
+    def test_simple_sale_with_foreignRetailerIndicator(self ,mock__http_post):
+        sale = fields.sale()
+        sale.reportGroup = 'Default Report Group'
+        sale.orderId = '8484'
+        sale.amount = 3000
+        sale.orderSource = 'ecommerce'
+        sale.id = 'ThisIsID'
+        sale.businessIndicator = 'fundTransfer'
+
+        card = fields.cardType()
+        card.number = '4100000000000000'
+        card.expDate = '1210'
+        card.type = 'VI'
+        sale.card = card
+        sale.foreignRetailerIndicator = 'F'
+
+        mock__http_post.return_value = """<cnpOnlineResponse version='12.31' response='1' message='Valid Format' xmlns='http://www.vantivcnp.com/schema'>
+                        </cnpOnlineResponse>
+                                """
+        self.assertRaises(utils.VantivException, online.request, sale, conf, 'dict')
+
+        mock__http_post.return_value = """<cnpOnlineResponse xmlns="http://www.vantivcnp.com/schema" version="12.31" response="0" message="Valid Format">
+          <saleResponse id="ThisIsID" reportGroup="Default Report Group">
+        <cnpTxnId>632423173824164537</cnpTxnId>
+        <orderId>8484</orderId>
+        <response>000</response>
+        <message>Approved</message>
+        <responseTime>2023-07-21T10:19:56.264</responseTime>
+        <authCode>72777</authCode>
+        <networkTransactionId>63225578415568556365452427825</networkTransactionId>
+        <location>sandbox</location>
+        </saleResponse>
+                </cnpOnlineResponse>"""
+
+
+        response = online.request(sale, conf)
+        self.assertEquals('0', response['@response'])
+        self.assertEquals('632423173824164537', response['saleResponse']['cnpTxnId'])
+        self.assertIsInstance(response, dict)
+
+        # return xml string
+        response = online.request(sale, conf, 'xml')
+        self.assertIsInstance(response, str)
+
+        # return fields object.
+        response = online.request(sale, conf, 'object')
+        self.assertEquals('0', response.response)
+
+
+    @mock.patch.object(online, '_http_post')
+    def test_capture_with_foreignRetailerIndicator(self, mock__http_post):
+        transaction = fields.capture()
+        transaction.cnpTxnId = 123456000
+        transaction.orderId = '54321'
+        transaction.amount = 1109
+        transaction.id = 'NewID'
+
+        transport_data = fields.passengerTransportData()
+        transport_data.passengerName = 'Simon M'
+        transport_data.ticketNumber = 'xyz123456789'
+        transport_data.issuingCarrier = 'AMTK'
+        transport_data.carrierName = 'AMTK'
+        transport_data.restrictedTicketIndicator = '11111'
+        transport_data.numberOfAdults = '0'
+        transport_data.numberOfChildren = '99'
+        transport_data.customerCode = 'code12'
+        transport_data.arrivalDate = '2022-01-22'
+        transport_data.issueDate = '2021-02-03'
+        transport_data.travelAgencyCode = '420104'
+        transport_data.travelAgencyName = 'TravelAgency'
+        transport_data.computerizedReservationSystem = 'DERD'
+        transport_data.creditReasonIndicator = 'A'
+        transport_data.ticketChangeIndicator = 'N'
+        transport_data.ticketIssuerAddress = 'US'
+        transport_data.exchangeTicketNumber = 'Ticket010'
+        transport_data.exchangeAmount = '20210'
+        transport_data.exchangeFeeAmount = '201010'
+
+        card = fields.cardType()
+        card.number = '4100100000000000'
+        card.expDate = '1210'
+        card.type = 'VI'
+        transaction.card = card
+        transaction.foreignRetailerIndicator = 'F'
+
+        mock__http_post.return_value = """<cnpOnlineResponse version='12.31' response='1' message='Valid Format' xmlns='http://www.vantivcnp.com/schema'>
+          </cnpOnlineResponse>
+                  """
+        self.assertRaises(utils.VantivException, online.request, transaction, conf, 'dict')
+
+        mock__http_post.return_value = """<cnpOnlineResponse version='12.31' response='0' message='Valid Format' xmlns='http://www.vantivcnp.com/schema'>
+        <captureResponse id="ThisIsID" reportGroup="Default Report Group">
+            <cnpTxnId>428345917537978729</cnpTxnId>
+            <response>000</response>
+            <responseTime>2023-07-21T10:08:23.46</responseTime>
+            <message>Approved</message>
+            <location>sandbox</location>
+        </captureResponse>
+        </cnpOnlineResponse>"""
+
+        response = online.request(transaction, conf)
+        self.assertEquals("000", response['captureResponse']['response'])
+        self.assertEquals('428345917537978729', response['captureResponse']['cnpTxnId'])
+
+    @mock.patch.object(online, '_http_post')
+    def test_force_capture_with_foreign_Retailer_Indicator(self, mock__http_post):
+        transaction = fields.forceCapture()
+        transaction.reportGroup = 'Default Report Group'
+        transaction.orderId = '54321'
+        transaction.amount = 1000
+        transaction.orderSource = 'ecommerce'
+        transaction.processingType = 'accountFunding'
+        transaction.id = '1234'
+        transaction.businessIndicator = 'consumerBillPayment'
+
+        card = fields.cardType()
+        card.number = '4100000000000001'
+        card.expDate = '1210'
+        card.type = 'VI'
+        transaction.card = card
+        transaction.foreignRetailerIndicator = 'F'
+
+        mock__http_post.return_value = """<cnpOnlineResponse version='12.31' response='1' message='Valid Format' xmlns='http://www.vantivcnp.com/schema'>
+          </cnpOnlineResponse>
+                  """
+        self.assertRaises(utils.VantivException, online.request, transaction, conf, 'dict')
+
+        mock__http_post.return_value = """<cnpOnlineResponse version='12.31' response='0' message='Valid Format' xmlns='http://www.vantivcnp.com/schema'>
+        <forceCaptureResponse id="1234" reportGroup="Default Report Group">
+        <cnpTxnId>768152351901163723</cnpTxnId>
+        <response>000</response>
+        <message>Approved</message>
+        <location>sandbox</location>
+        </forceCaptureResponse>
+        </cnpOnlineResponse>"""
+
+        response = online.request(transaction, conf)
+        self.assertEquals("000", response['forceCaptureResponse']['response'])
+        self.assertEquals('768152351901163723', response['forceCaptureResponse']['cnpTxnId'])
+
+    @mock.patch.object(online, '_http_post')
+    def test_capture_given_auth_with_foreign_Retailer_Indicator(self, mock__http_post):
+        transaction = fields.captureGivenAuth()
+        transaction.orderId = '77373'
+        transaction.amount = 2000
+        transaction.orderSource = 'ecommerce'
+        transaction.id = 'NewTxnID'
+        transaction.businessIndicator = 'consumerBillPayment'
+
+            # Create authInformation
+        authInformation = fields.authInformation()
+        authInformation.authDate = datetime.datetime.now().strftime("%Y-%m-%d")
+        authInformation.authCode = '543216'
+        authInformation.authAmount = 12345
+        transaction.authInformation = authInformation
+
+        # Create cardType object
+        card = fields.cardType()
+        card.number = '4100000000000000'
+        card.expDate = '1210'
+        card.type = 'VI'
+        # The type of card is cardType
+        transaction.card = card
+        transaction.foreignRetailerIndicator = 'F'
+        mock__http_post.return_value = """<cnpOnlineResponse version='12.31' response='1' message='Valid Format' xmlns='http://www.vantivcnp.com/schema'>
+          </cnpOnlineResponse>
+                  """
+        self.assertRaises(utils.VantivException, online.request, transaction, conf, 'dict')
+
+        mock__http_post.return_value = """<cnpOnlineResponse version='12.31' response='0' message='Valid Format' xmlns='http://www.vantivcnp.com/schema'>
+           <captureGivenAuthResponse id="NewTxnID" reportGroup="Default Report Group">
+        <cnpTxnId>132956105425749971</cnpTxnId>
+        <response>000</response>
+        <message>Approved</message>
+        <responseTime>2023-07-21T10:15:52.442</responseTime>
+        <giftCardResponse>
+            <txnTime>2023-07-21T10:15:52.442</txnTime>
+            <refCode>097694</refCode>
+            <systemTraceId>0</systemTraceId>
+            <sequenceNumber>123456</sequenceNumber>
+        </giftCardResponse>
+        <location>sandbox</location>
+        </captureGivenAuthResponse>
+        </cnpOnlineResponse>"""
+
+        response = online.request(transaction, conf)
+        self.assertEquals("000", response['captureGivenAuthResponse']['response'])
+        self.assertEquals('132956105425749971', response['captureGivenAuthResponse']['cnpTxnId'])
+
+
+
+
 if __name__ == '__main__':
     unittest.main()
