@@ -141,6 +141,7 @@ capture
         :var customBilling: instance of :py:class:`vantivsdk.fields.customBilling`
         :var customerId: String or Number
         :var enhancedData: instance of :py:class:`vantivsdk.fields.enhancedData`
+        :var foreignRetailerIndicator: String or Number
         :var id: String or Number
         :var lodgingInfo: instance of :py:class:`vantivsdk.fields.lodgingInfo`
         :var orderId: String or Number
@@ -168,6 +169,7 @@ captureGivenAuth
         :var customerId: String or Number
         :var debtRepayment: String or Number
         :var enhancedData: instance of :py:class:`vantivsdk.fields.enhancedData`
+        :var foreignRetailerIndicator: String or Number
         :var id: String or Number
         :var lodgingInfo: instance of :py:class:`vantivsdk.fields.lodgingInfo`
         :var merchantCategoryCode: String or Number
@@ -457,6 +459,7 @@ forceCapture
         :var customerId: String or Number
         :var debtRepayment: String or Number
         :var enhancedData: instance of :py:class:`vantivsdk.fields.enhancedData`
+        :var foreignRetailerIndicator: String or Number
         :var id: String or Number
         :var lodgingInfo: instance of :py:class:`vantivsdk.fields.lodgingInfo`
         :var merchantCategoryCode: String or Number
@@ -746,6 +749,7 @@ sale
         :var decisionPurpose: String or Number
         :var enhancedData: instance of :py:class:`vantivsdk.fields.enhancedData`
         :var filtering: instance of :py:class:`vantivsdk.fields.filteringType`
+        :var foreignRetailerIndicator: String or Number
         :var fraudCheck: instance of :py:class:`vantivsdk.fields.fraudCheckType`
         :var fraudCheckStatus: String or Number
         :var fraudFilterOverride: String or Number
