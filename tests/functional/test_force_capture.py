@@ -194,5 +194,26 @@ class TestForceCapture(unittest.TestCase):
         self.assertEquals('000', response['forceCaptureResponse']['response'])
         self.assertEquals('sandbox', response['forceCaptureResponse']['location'])
 
+    def test_force_capture_with_foreign_Retailer_Indicator(self):
+        transaction = fields.forceCapture()
+        transaction.reportGroup = 'Default Report Group'
+        transaction.orderId = '54321'
+        transaction.amount = 1000
+        transaction.orderSource = 'ecommerce'
+        transaction.processingType = 'accountFunding'
+        transaction.id = '1234'
+        transaction.businessIndicator = 'consumerBillPayment'
+
+        card = fields.cardType()
+        card.number = '4100000000000001'
+        card.expDate = '1210'
+        card.type = 'VI'
+        transaction.card = card
+        transaction.foreignRetailerIndicator = 'F'
+
+        response = online.request(transaction, conf)
+        self.assertEquals('000', response['forceCaptureResponse']['response'])
+        self.assertEquals('sandbox', response['forceCaptureResponse']['location'])
+
 if __name__ == '__main__':
     unittest.main()
