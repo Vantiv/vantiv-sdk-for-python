@@ -384,6 +384,111 @@ class TestBatch(unittest.TestCase):
         self.assertEquals(response['batchResponse']['saleResponse']['cnpTxnId'], '427453992541199977')
         self.assertEquals(response['batchResponse']['@numAccountUpdates'], '3')
 
+    @mock.patch.object(batch, '_get_file_str_from_sftp')
+    def test_foreignRetailerIndicator(self, mock__get_file_str_from_sftp):
+        capture = fields.capture()
+        capture.cnpTxnId = 123456000
+        capture.orderId = '457754'
+        capture.amount = 6000
+        capture.id = 'ID001'
+        card = fields.cardType()
+        card.number = '4100100000000000'
+        card.expDate = '1210'
+        card.type = 'VI'
+        capture.card = card
+        capture.foreignRetailerIndicator = 'F'
+
+        forceCapture = fields.forceCapture()
+        forceCapture.reportGroup = 'Default Report Group'
+        forceCapture.orderId = '12345'
+        forceCapture.amount = 7000
+        forceCapture.orderSource = 'ecommerce'
+        forceCapture.processingType = 'accountFunding'
+        forceCapture.id = '54321'
+        forceCapture.businessIndicator = 'consumerBillPayment'
+        card = fields.cardType()
+        card.number = '4100000000000001'
+        card.expDate = '1210'
+        card.type = 'VI'
+        forceCapture.card = card
+        forceCapture.foreignRetailerIndicator = 'F'
+
+        captureGivenAuth = fields.captureGivenAuth()
+        captureGivenAuth.orderId = '77373'
+        captureGivenAuth.amount = 2000
+        captureGivenAuth.orderSource = 'ecommerce'
+        captureGivenAuth.id = 'NewTxnID'
+        captureGivenAuth.businessIndicator = 'consumerBillPayment'
+        card = fields.cardType()
+        card.number = '4100000000000000'
+        card.expDate = '1210'
+        card.type = 'VI'
+        # The type of card is cardType
+        captureGivenAuth.card = card
+        captureGivenAuth.foreignRetailerIndicator = 'F'
+
+        transaction = fields.sale()
+        transaction.id = 'auth_GP_DI'
+        transaction.reportGroup = 'DirectWFITxn'
+        transaction.orderId = 'XGR-1840823423'
+        transaction.amount = 1100
+        transaction.orderSource = 'telephone'
+        card = fields.cardType()
+        card.number = '4100000000000000'
+        card.expDate = '1210'
+        card.type = 'VI'
+        transaction.card = card
+        transaction.orderChannel = 'MIT'
+        transaction.foreignRetailerIndicator = 'F'
+
+        mock__get_file_str_from_sftp.return_value = """
+                              <cnpResponse version='12.31' response='0' message='Valid Format' xmlns='http://www.vantivcnp.com/schema'>
+                                        <batchResponse cnpBatchId='12344' merchantId='DirectWFITxn' numAccountUpdates='3' xmlns='http://www.vantivcnp.com/schema'>
+                                               <captureResponse id="ID001" reportGroup="Default Report Group">
+                                                    <cnpTxnId>470196194391774838</cnpTxnId>
+                                                    <response>000</response>
+                                                    <responseTime>2023-07-24T07:07:23.526</responseTime>
+                                                    <message>Approved</message>
+                                                    <location>sandbox</location>
+                                               </captureResponse>
+                                               <forceCaptureResponse id="54321" reportGroup="Default Report Group">
+                                                    <cnpTxnId>196571629314446150</cnpTxnId>
+                                                    <response>000</response>
+                                                    <responseTime>2023-07-24T07:19:07.817</responseTime>
+                                                    <message>Approved</message>
+                                                    <location>sandbox</location>
+                                               </forceCaptureResponse>
+                                               <captureGivenAuthResponse id="NewTxnID" reportGroup="Default Report Group">
+                                                    <cnpTxnId>135411011739311214</cnpTxnId>
+                                                    <response>000</response>
+                                                    <message>Approved</message>
+                                                    <responseTime>2023-07-24T07:20:38.2</responseTime>
+                                                    <giftCardResponse>
+                                                      <txnTime>2023-07-24T07:20:38.2</txnTime>
+                                                      <refCode>369198</refCode>
+                                                      <systemTraceId>0</systemTraceId>
+                                                      <sequenceNumber>123456</sequenceNumber>
+                                                    </giftCardResponse>
+                                                    <location>sandbox</location>
+                                               </captureGivenAuthResponse>
+                                               <saleResponse id="auth_GP_DI" reportGroup="DirectWFITxn">
+                                                    <cnpTxnId>427453992541199977</cnpTxnId>
+                                                    <orderId>XGR-1840823423</orderId>
+                                                    <response>000</response>
+                                                    <message>Approved</message>
+                                                    <responseTime>2023-03-27T09:27:19.759</responseTime>
+                                                    <authCode>00229</authCode>
+                                                    <networkTransactionId>63225578415568556365452427825</networkTransactionId>
+                                                    <location>sandbox</location>
+                                               </saleResponse>
+                                        </batchResponse>
+                              </cnpResponse>"""
+        response = batch.retrieve('retrieve_file', conf)
+        self.assertEquals(response['batchResponse']['captureResponse']['cnpTxnId'], '470196194391774838')
+        self.assertEquals(response['batchResponse']['forceCaptureResponse']['cnpTxnId'], '196571629314446150')
+        self.assertEquals(response['batchResponse']['captureGivenAuthResponse']['cnpTxnId'], '135411011739311214')
+        self.assertEquals(response['batchResponse']['saleResponse']['cnpTxnId'], '427453992541199977')
+
     def test_download(self):
         # first arg is str and len less than 4
         self.assertRaises(utils.VantivException, batch.download, 'abc', conf)
