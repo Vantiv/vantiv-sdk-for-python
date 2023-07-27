@@ -3,23 +3,22 @@ import sys
 
 from setuptools import setup
 
-# Require Python 2.7.9 or higher or Python 3.4 or higher
-if (sys.version_info[:3] < (2, 7, 9)) or ((sys.version_info[0] == 3) and sys.version_info[:2] < (3, 4)):
-    raise ValueError('''PyXB requires:
-  Python2 version 2.7.9 or later; or
-  Python3 version 3.4 or later
+# Require Python 3.8 or higher
+if sys.version_info[:2] < (3, 8):
+    raise ValueError('''PyXB-X requires:
+  Python3 version 3.8 or later
 (You have %s.)''' % (sys.version,))
 
 setup(
     name='VantiveCommerceSDK',
-    version='12.30.0',
+    version='12.31.0',
     description='Vantiv eCommerce Python SDK',
     author='Vantiv eCommerce',
     author_email='SDKSupport@vantiv.com',
     url='https://developer.vantiv.com/community/ecommerce',
     packages=['vantivsdk', 'scripts'],
     install_requires=[
-        'PyXB==1.2.6',
+        'PyXB-X==1.2.6.1',
         'paramiko>=1.14.0',
         'requests>=2.13.0',
         'six>=1.10.0',
@@ -40,6 +39,11 @@ setup(
         'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
+        'Programming Language :: Python :: 3.7',
+        'Programming Language :: Python :: 3.8',
+        'Programming Language :: Python :: 3.9',
+        'Programming Language :: Python :: 3.10',
+        'Programming Language :: Python :: 3.11',
         'Topic :: Office/Business :: Financial',
         'Topic :: Software Development :: Libraries',
         'Topic :: Software Development :: Libraries :: Python Modules'
@@ -65,7 +69,7 @@ The Vantiv eCommerce Python SDKt is a Python implementation of the `Vantiv eComm
 
 Each Python SDK release supports all of the functionality present in the associated Vantiv eCommerce XML version (e.g., 11.0.x supports Vantiv eCommerce XML v11.0). Please see the online copy of our XSD for Vantiv eCommerce XML to get more details on what the Vantiv eCommerce payments engine supports .
 
-This SDK was implemented to support the Python2 version 2.7.9 and later, Python3 version 3.4 and later, and was created by Vantiv eCommerce. Its intended use is for online transaction processing utilizing your account on the Vantiv eCommerce payments engine.
+This SDK was implemented to support the Python3 version 3.8 and later, and was created by Vantiv eCommerce. Its intended use is for online transaction processing utilizing your account on the Vantiv eCommerce payments engine.
 
 See LICENSE file for details on using this software.
 
@@ -79,7 +83,7 @@ Please contact `Vantiv eCommerce`_  to receive valid merchant credentials and de
 
 Dependencies
 ------------
-* pyxb v1.2.5 : http://pyxb.sourceforge.net/
+* pyxb-x v1.2.6.1 : https://pypi.org/project/PyXB-X/
 * paramiko v1.14.0: http://www.paramiko.org/
 * requests v2.13.0: http://docs.python-requests.org/en/master/
 * six v1.10.0: https://github.com/benjaminp/six

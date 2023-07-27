@@ -11,9 +11,9 @@ About this SDK
 --------------
 The Vantiv eCommerce Python SDK is a Python implementation of the [Vantiv eCommerce](https://developer.vantiv.com/community/ecommerce) XML API. This SDK was created to make it as easy as possible to connect to and process payments through Vantiv eCommerce. This SDK utilizes the HTTPS protocol to securely connect to Vantiv eCommerce.  Using the SDK requires coordination with the Vantiv eCommerce team to obtain credentials for accessing our systems.
 
-Each Python SDK release supports all of the functionality present in the associated Vantiv eCommerce XML version (e.g., 12.0.x supports Vantiv eCommerce XML v12.0). Please see the online copy of our XSD for Vantiv eCommerce XML to get more details on what the Vantiv eCommerce payments engine supports .
+Each Python SDK release supports all the functionality present in the associated Vantiv eCommerce XML version (e.g., 12.0.x supports Vantiv eCommerce XML v12.0). Please see the online copy of our XSD for Vantiv eCommerce XML to get more details on what the Vantiv eCommerce payments engine supports .
 
-This SDK was implemented to support the Python2 version 2.7.9 and later, Python3 version 3.4 and later, and was created by Vantiv eCommerce. Its intended use is for online transaction processing utilizing your account on the Vantiv eCommerce payments engine.
+This SDK was implemented to support the Python3 version 3.8 and later, and was created by Vantiv eCommerce. Its intended use is for online transaction processing utilizing your account on the Vantiv eCommerce payments engine.
 
 See LICENSE file for details on using this software.
 
@@ -27,7 +27,7 @@ Please contact [Vantiv eCommerce](https://developer.vantiv.com/community/ecommer
 
 Dependencies
 ------------
-* pyxb v1.2.5 : http://pyxb.sourceforge.net/
+* pyxb-x v1.2.6.1 : https://pypi.org/project/PyXB-X/
 * paramiko v1.14.0: http://www.paramiko.org/
 * requests v2.13.0: http://docs.python-requests.org/en/master/
 * six v1.10.0: https://github.com/benjaminp/six

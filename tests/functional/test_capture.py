@@ -112,6 +112,45 @@ class TestCapture(unittest.TestCase):
         self.assertEquals('000', response['captureResponse']['response'])
         self.assertEquals('sandbox', response['captureResponse']['location'])
 
+    def test_simple_capture_with_foreign_Retailer_Indicator(self):
+        transaction = fields.capture()
+        transaction.cnpTxnId = 123456000
+        transaction.orderId = '54321'
+        transaction.amount = 1109
+        transaction.id = 'NewID'
+
+        transport_data = fields.passengerTransportData()
+        transport_data.passengerName = 'Simon M'
+        transport_data.ticketNumber = 'xyz123456789'
+        transport_data.issuingCarrier = 'AMTK'
+        transport_data.carrierName = 'AMTK'
+        transport_data.restrictedTicketIndicator = '11111'
+        transport_data.numberOfAdults = '0'
+        transport_data.numberOfChildren = '99'
+        transport_data.customerCode = 'code12'
+        transport_data.arrivalDate = '2022-01-22'
+        transport_data.issueDate = '2021-02-03'
+        transport_data.travelAgencyCode = '420104'
+        transport_data.travelAgencyName = 'TravelAgency'
+        transport_data.computerizedReservationSystem = 'DERD'
+        transport_data.creditReasonIndicator = 'A'
+        transport_data.ticketChangeIndicator = 'N'
+        transport_data.ticketIssuerAddress = 'US'
+        transport_data.exchangeTicketNumber = 'Ticket010'
+        transport_data.exchangeAmount = '20210'
+        transport_data.exchangeFeeAmount = '201010'
+
+        card = fields.cardType()
+        card.number = '4100100000000000'
+        card.expDate = '1210'
+        card.type = 'VI'
+        transaction.card = card
+        transaction.foreignRetailerIndicator = 'F'
+
+        response = online.request(transaction, conf)
+        self.assertEquals('000', response['captureResponse']['response'])
+        self.assertEquals('sandbox', response['captureResponse']['location'])
+
 if __name__ == '__main__':
     unittest.main()
 

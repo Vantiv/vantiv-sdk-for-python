@@ -386,6 +386,33 @@ class TestCaptureGivenAuth(unittest.TestCase):
         response = online.request(transaction, conf)
         self.assertEquals('000', response['captureGivenAuthResponse']['response'])
         self.assertEquals('sandbox', response['captureGivenAuthResponse']['location'])
+
+    def test_capture_given_auth_with_foreign_Retailer_Indicator(self):
+        transaction = fields.captureGivenAuth()
+        transaction.orderId = '77373'
+        transaction.amount = 2000
+        transaction.orderSource = 'ecommerce'
+        transaction.id = 'NewTxnID'
+        transaction.businessIndicator = 'consumerBillPayment'
+
+        # Create authInformation
+        authInformation = fields.authInformation()
+        authInformation.authDate = datetime.datetime.now().strftime("%Y-%m-%d")
+        authInformation.authCode = '543216'
+        authInformation.authAmount = 12345
+        transaction.authInformation = authInformation
+
+        # Create cardType object
+        card = fields.cardType()
+        card.number = '4100000000000000'
+        card.expDate = '1210'
+        card.type = 'VI'
+        # The type of card is cardType
+        transaction.card = card
+        transaction.foreignRetailerIndicator = 'F'
+        response = online.request(transaction, conf)
+        self.assertEquals('000', response['captureGivenAuthResponse']['response'])
+        self.assertEquals('sandbox', response['captureGivenAuthResponse']['location'])
     
 if __name__ == '__main__':
     unittest.main()
