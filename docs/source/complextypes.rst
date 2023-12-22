@@ -373,6 +373,8 @@ lineItemData
         :var productId: String or Number
         :var productName: String or Number
         :var quantity: String or Number
+        :var shipmentId: String or Number
+        :var subscription: instance of :py:class:`vantivsdk.fields.subscription`
         :var taxAmount: String or Number
         :var unitCost: String or Number
         :var unitOfMeasure: String or Number
@@ -618,6 +620,17 @@ sofortType
     .. py:class:: vantivsdk.fields.sofortType
 
         :var preferredLanguage: String or Number
+
+subscription
+------------
+    .. py:class:: vantivsdk.fields.subscription
+
+        :var currentPeriod: String or Number
+        :var nextDeliveryDate: String or Number
+        :var numberOfPeriods: String or Number
+        :var periodUnit: String or Number
+        :var regularItemPrice: String or Number
+        :var subscriptionId: String or Number
 
 token
 -----
