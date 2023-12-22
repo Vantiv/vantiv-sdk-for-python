@@ -21,7 +21,7 @@
 # WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 # FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 # OTHER DEALINGS IN THE SOFTWARE.
-
+import datetime
 import os
 import sys
 import unittest
@@ -267,6 +267,41 @@ class TestCredit(unittest.TestCase):
         response = online.request(transaction, conf)
         self.assertEquals('000', response['creditResponse']['response'])
         self.assertEquals('sandbox', response['creditResponse']['location'])
+
+    def test_simple_credit_with_subscription_Shipment_Id(self):
+        transaction = fields.credit()
+        transaction.reportGroup = 'Planets'
+        transaction.orderId = '12344'
+        transaction.amount = 106
+        transaction.orderSource = 'ecommerce'
+        transaction.id = 'ThisIsID'
+        transaction.businessIndicator = 'consumerBillPayment'
+        card = fields.cardType()
+        card.number = '4457010000000009'
+        card.expDate = '1210'
+        card.type = 'VI'
+        transaction.card = card
+        lineItemDataList = list()
+        lineItemData = fields.lineItemData()
+        lineItemData.itemDescription = 'proc'
+        lineItemData.itemCategory = 'Inv'
+        lineItemData.shipmentId = 'prod5634'
+        sub = fields.subscription()
+        sub.subscriptionId = '567'
+        sub.nextDeliveryDate = datetime.datetime.now().strftime("%Y-%m-%d")
+        sub.periodUnit = 'MONTH'
+        sub.numberOfPeriods = '110'
+        sub.regularItemPrice = 776
+        sub.currentPeriod = '988'
+        lineItemData.subscription = sub
+        lineItemDataList.append(lineItemData)
+        enhancedData = fields.enhancedData()
+        enhancedData.lineItemData = lineItemDataList
+        transaction.enhancedData = enhancedData
+
+        response = online.request(transaction, conf)
+        self.assertEqual('000', response['creditResponse']['response'])
+        self.assertEqual('sandbox', response['creditResponse']['location'])
 
 
 if __name__ == '__main__':

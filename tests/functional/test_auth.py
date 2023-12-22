@@ -25,6 +25,7 @@
 import os
 import sys
 import unittest
+from calendar import Calendar
 from enum import auto
 
 package_root = os.path.dirname(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
@@ -823,6 +824,42 @@ class TestAuth(unittest.TestCase):
         self.assertEquals('000', response['authorizationResponse']['response'])
         self.assertEquals('sandbox', response['authorizationResponse']['location'])
 
+    def test_simple_auth_with_Subscription_Shipment_Id_StringIpAdd(self):
+        authorization = fields.authorization()
+        authorization.id = '1'
+        authorization.customerId = 'Cust0403'
+        authorization.reportGroup = 'Default Report Group'
+        authorization.orderId = '12344401'
+        authorization.amount = 106
+        authorization.orderSource = 'ecommerce'
+        lineItemDataList = list()
+        lineItemData = fields.lineItemData()
+        lineItemData.itemDescription = 'des'
+        lineItemData.itemCategory = 'Chock'
+        lineItemData.shipmentId = 'prod1234'
+        sub = fields.subscription()
+        sub.subscriptionId = '123'
+        sub.nextDeliveryDate = datetime.datetime.now().strftime("%Y-%m-%d")
+        sub.periodUnit = 'YEAR'
+        sub.numberOfPeriods = '748'
+        sub.regularItemPrice = 148
+        sub.currentPeriod = '476'
+        lineItemData.subscription = sub
+        lineItemDataList.append(lineItemData)
+        enhancedData = fields.enhancedData()
+        enhancedData.lineItemData = lineItemDataList
+        authorization.enhancedData = enhancedData
+        card = fields.cardType()
+        card.number = '4457010000000009'
+        card.expDate = '1210'
+        card.type = 'VI'
+        cardholder_authentication = fields.fraudCheckType()
+        cardholder_authentication.customerIpAddress = '127.0.0.1'
+        authorization.card = card
+        authorization.cardholderAuthentication = cardholder_authentication
+        response = online.request(authorization, conf)
+        self.assertEqual('000', response['authorizationResponse']['response'])
+        self.assertEqual('sandbox', response['authorizationResponse']['location'])
 
 if __name__ == '__main__':
     unittest.main()

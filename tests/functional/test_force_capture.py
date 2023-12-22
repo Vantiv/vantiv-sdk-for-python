@@ -21,7 +21,7 @@
 # WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 # FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 # OTHER DEALINGS IN THE SOFTWARE.
-
+import datetime
 import os
 import sys
 import unittest
@@ -214,6 +214,44 @@ class TestForceCapture(unittest.TestCase):
         response = online.request(transaction, conf)
         self.assertEquals('000', response['forceCaptureResponse']['response'])
         self.assertEquals('sandbox', response['forceCaptureResponse']['location'])
+
+    def test_force_capture_with_subscription_Shipment_Id(self):
+        transaction = fields.forceCapture()
+        transaction.reportGroup = 'Default Report Group'
+        transaction.orderId = '54321'
+        transaction.amount = 1000
+        transaction.orderSource = 'ecommerce'
+        transaction.processingType = 'accountFunding'
+        transaction.id = '1234'
+        transaction.businessIndicator = 'consumerBillPayment'
+
+        card = fields.cardType()
+        card.number = '4100000000000001'
+        card.expDate = '1210'
+        card.type = 'VI'
+        transaction.card = card
+        lineItemDataList = list()
+        lineItemData = fields.lineItemData()
+        lineItemData.itemDescription = 'des'
+        lineItemData.itemCategory = 'Chock'
+        lineItemData.shipmentId = 'prod1234'
+        sub = fields.subscription()
+        sub.subscriptionId = '567'
+        sub.nextDeliveryDate = datetime.datetime.now().strftime("%Y-%m-%d")
+        sub.periodUnit = 'MONTH'
+        sub.numberOfPeriods = '101'
+        sub.regularItemPrice = 996
+        sub.currentPeriod = '900'
+        lineItemData.subscription = sub
+        lineItemDataList.append(lineItemData)
+        enhancedData = fields.enhancedData()
+        enhancedData.lineItemData = lineItemDataList
+        transaction.enhancedData = enhancedData
+        transaction.foreignRetailerIndicator = 'F'
+
+        response = online.request(transaction, conf)
+        self.assertEqual('000', response['forceCaptureResponse']['response'])
+        self.assertEqual('sandbox', response['forceCaptureResponse']['location'])
 
 if __name__ == '__main__':
     unittest.main()

@@ -21,7 +21,7 @@
 # WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 # FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 # OTHER DEALINGS IN THE SOFTWARE.
-
+import datetime
 import os
 import sys
 import unittest
@@ -868,6 +868,47 @@ class TestSale(unittest.TestCase):
         response = online.request(transaction, conf)
         self.assertEquals('000', response['saleResponse']['response'])
         self.assertEquals('sandbox', response['saleResponse']['location'])
+
+    def test_sale_with_subscription_Shipment_Id_StringIpAdd(self):
+        transaction = fields.sale()
+        transaction.reportGroup = 'Default Report Group'
+        transaction.orderId = '8484'
+        transaction.amount = 100
+        transaction.orderSource = 'ecommerce'
+        transaction.id = 'ThisIsID'
+        transaction.businessIndicator = 'fundTransfer'
+        card = fields.cardType()
+        card.number = '4457010000000009'
+        card.expDate = '1210'
+        card.type = 'VI'
+        cardholder_authentication = fields.fraudCheckType()
+        cardholder_authentication.customerIpAddress = '127.0.0.1'
+        transaction.card = card
+        transaction.cardholderAuthentication = cardholder_authentication
+        lineItemDataList = list()
+        lineItemData = fields.lineItemData()
+        lineItemData.itemDescription = 'des'
+        lineItemData.itemCategory = 'Chock'
+        lineItemData.itemCategory = 'Chock'
+        lineItemData.itemSubCategory = 'pen'
+        lineItemData.productId = '001'
+        lineItemData.productName = 'prod'
+        lineItemData.shipmentId = 'prod1234'
+        sub = fields.subscription()
+        sub.subscriptionId = '567'
+        sub.nextDeliveryDate = datetime.datetime.now().strftime("%Y-%m-%d")
+        sub.periodUnit = 'WEEK'
+        sub.numberOfPeriods = '100'
+        sub.regularItemPrice = 176
+        sub.currentPeriod = '506'
+        lineItemData.subscription = sub
+        lineItemDataList.append(lineItemData)
+        enhancedData = fields.enhancedData()
+        enhancedData.lineItemData = lineItemDataList
+        transaction.enhancedData = enhancedData
+        response = online.request(transaction, conf)
+        self.assertEqual('000', response['saleResponse']['response'])
+        self.assertEqual('sandbox', response['saleResponse']['location'])
 
 if __name__ == '__main__':
     unittest.main()

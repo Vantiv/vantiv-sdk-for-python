@@ -3158,7 +3158,7 @@
                 <xs:element name="exchangeTicketNumber" type="xs:string" minOccurs="0"/>
                 <xs:element name="exchangeAmount" type="xs:integer" minOccurs="0"/>
                 <xs:element name="exchangeFeeAmount" type="xs:integer" minOccurs="0"/>
-                <xs:element ref="xp:tripLegData" minOccurs="0" maxOccurs="998"/>
+                <xs:element ref="xp:tripLegData" minOccurs="1" maxOccurs="998"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>

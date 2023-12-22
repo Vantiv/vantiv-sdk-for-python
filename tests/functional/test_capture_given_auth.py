@@ -413,6 +413,45 @@ class TestCaptureGivenAuth(unittest.TestCase):
         response = online.request(transaction, conf)
         self.assertEquals('000', response['captureGivenAuthResponse']['response'])
         self.assertEquals('sandbox', response['captureGivenAuthResponse']['location'])
+
+    def test_capture_given_auth_with_subscription_Shipment_Id(self):
+        transaction = fields.captureGivenAuth()
+        transaction.orderId = '77373'
+        transaction.amount = 100
+        transaction.orderSource = 'ecommerce'
+        transaction.id = 'NewTxnID'
+        transaction.businessIndicator = 'consumerBillPayment'
+        authInformation = fields.authInformation()
+        authInformation.authDate = datetime.datetime.now().strftime("%Y-%m-%d")
+        authInformation.authCode = '543216'
+        authInformation.authAmount = 12345
+        transaction.authInformation = authInformation
+        card = fields.cardType()
+        card.number = '4457010000000009'
+        card.expDate = '1210'
+        card.type = 'VI'
+        transaction.card = card
+        lineItemDataList = list()
+        lineItemData = fields.lineItemData()
+        lineItemData.itemDescription = 'new'
+        lineItemData.itemCategory = 'Ship'
+        lineItemData.shipmentId = 'prod5634'
+        sub = fields.subscription()
+        sub.subscriptionId = '567'
+        sub.nextDeliveryDate = datetime.datetime.now().strftime("%Y-%m-%d")
+        sub.periodUnit = 'YEAR'
+        sub.numberOfPeriods = '100'
+        sub.regularItemPrice = 796
+        sub.currentPeriod = '980'
+        lineItemData.subscription = sub
+        lineItemDataList.append(lineItemData)
+        enhancedData = fields.enhancedData()
+        enhancedData.lineItemData = lineItemDataList
+        transaction.enhancedData = enhancedData
+        transaction.foreignRetailerIndicator = 'F'
+        response = online.request(transaction, conf)
+        self.assertEqual('000', response['captureGivenAuthResponse']['response'])
+        self.assertEqual('sandbox', response['captureGivenAuthResponse']['location'])
     
 if __name__ == '__main__':
     unittest.main()
