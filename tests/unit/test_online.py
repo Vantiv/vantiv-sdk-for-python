@@ -1244,7 +1244,69 @@ class TestOnline(unittest.TestCase):
         self.assertEquals("000", response['captureGivenAuthResponse']['response'])
         self.assertEquals('132956105425749971', response['captureGivenAuthResponse']['cnpTxnId'])
 
+    @mock.patch.object(online, '_http_post')
+    def test_auth_with_subscription_Shipment_Id_StringIpAdd(self, mock__http_post):
+        authorization = fields.authorization()
+        authorization.id = '1'
+        authorization.customerId = 'Cust0403'
+        authorization.reportGroup = 'Default Report Group'
+        authorization.orderId = '12344401'
+        authorization.amount = 106
+        authorization.orderSource = 'ecommerce'
+        card = fields.cardType()
+        card.number = '4100000000000000'
+        card.expDate = '1210'
+        card.type = 'VI'
+        authorization.card = card
+        lineItemDataList = list()
+        lineItemData = fields.lineItemData()
+        lineItemData.itemDescription = 'des'
+        lineItemData.itemCategory = 'Chock'
+        lineItemData.itemCategory = 'Chock'
+        lineItemData.itemSubCategory = 'pen'
+        lineItemData.productId = '001'
+        lineItemData.productName = 'prod'
+        lineItemData.shipmentId = 'prod1234'
+        sub = fields.subscription()
+        sub.subscriptionId = '567'
+        sub.nextDeliveryDate = datetime.datetime.now().strftime("%Y-%m-%d")
+        sub.periodUnit = 'WEEK'
+        sub.numberOfPeriods = '100'
+        sub.regularItemPrice = 176
+        sub.currentPeriod = '506'
+        lineItemData.subscription = sub
+        lineItemDataList.append(lineItemData)
+        enhancedData = fields.enhancedData()
+        enhancedData.lineItemData = lineItemDataList
+        authorization.enhancedData = enhancedData
+        mock__http_post.return_value = """<cnpOnlineResponse version='12.33' response='1' message='Valid Format' xmlns='http://www.vantivcnp.com/schema'>
+              </cnpOnlineResponse>
+                      """
+        self.assertRaises(utils.VantivException, online.request, authorization, conf, 'dict')
 
+        mock__http_post.return_value = """<cnpOnlineResponse xmlns="http://www.vantivcnp.com/schema" version="12.33" response="0" message="Valid Format">
+                                          <authorizationResponse id="1" reportGroup="Default Report Group">
+                                            <cnpTxnId>575381357169267851</cnpTxnId>
+                                            <orderId>12344401</orderId>
+                                            <response>000</response>
+                                            <message>Approved</message>
+                                            <responseTime>2023-12-21T08:19:43.17</responseTime>
+                                            <authCode>04227</authCode>
+                                            <networkTransactionId>63225578415568556365452427825</networkTransactionId>
+                                            <location>sandbox</location>
+                                            <authMax>
+                                              <authMaxApplied>true</authMaxApplied>
+                                              <networkTokenApplied>true</networkTokenApplied>
+                                              <networkToken>1112000199940085</networkToken>
+                                              <authMaxResponseCode>000</authMaxResponseCode>
+                                              <authMaxResponseMessage>Approved</authMaxResponseMessage>
+                                            </authMax>
+                                          </authorizationResponse>
+                                        </cnpOnlineResponse>"""
+
+        response = online.request(authorization, conf)
+        self.assertEquals("000", response['authorizationResponse']['response'])
+        self.assertEquals('575381357169267851', response['authorizationResponse']['cnpTxnId'])
 
 
 if __name__ == '__main__':

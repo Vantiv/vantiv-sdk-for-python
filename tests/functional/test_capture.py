@@ -151,6 +151,43 @@ class TestCapture(unittest.TestCase):
         self.assertEquals('000', response['captureResponse']['response'])
         self.assertEquals('sandbox', response['captureResponse']['location'])
 
+    def test_simple_capture_with_subscription_Shipment_Id(self):
+        transaction = fields.capture()
+        transaction.cnpTxnId = 123456000
+        transaction.orderId = '54321'
+        transaction.amount = 1109
+        transaction.id = 'NewID'
+        card = fields.cardType()
+        card.number = '4457010000000009'
+        card.expDate = '1210'
+        card.type = 'VI'
+        transaction.card = card
+        lineItemDataList = list()
+        lineItemData = fields.lineItemData()
+        lineItemData.itemDescription = 'des'
+        lineItemData.itemCategory = 'Chock'
+        lineItemData.itemCategory = 'Chock'
+        lineItemData.itemSubCategory = 'pen'
+        lineItemData.productId = '001'
+        lineItemData.productName = 'prod'
+        lineItemData.shipmentId = 'prod1234'
+        sub = fields.subscription()
+        sub.subscriptionId = '567'
+        sub.nextDeliveryDate = datetime.datetime.now().strftime("%Y-%m-%d")
+        sub.periodUnit = 'QUARTER'
+        sub.numberOfPeriods = '111'
+        sub.regularItemPrice = 976
+        sub.currentPeriod = '996'
+        lineItemData.subscription = sub
+        lineItemDataList.append(lineItemData)
+        enhancedData = fields.enhancedData()
+        enhancedData.lineItemData = lineItemDataList
+        transaction.enhancedData = enhancedData
+        transaction.foreignRetailerIndicator = 'F'
+        response = online.request(transaction, conf)
+        self.assertEqual('000', response['captureResponse']['response'])
+        self.assertEqual('sandbox', response['captureResponse']['location'])
+
 if __name__ == '__main__':
     unittest.main()
 

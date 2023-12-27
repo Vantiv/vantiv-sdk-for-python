@@ -151,6 +151,13 @@
         </xs:restriction>
     </xs:simpleType>
 
+    <xs:simpleType name="stringipAddress">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="100" />
+            <xs:pattern value="[A-Z,a-z,0-9, ,:,.]*"/>
+        </xs:restriction>
+    </xs:simpleType>
+
     <xs:simpleType name="string150Type">
         <xs:restriction base="xs:string">
             <xs:maxLength value="150" />
@@ -979,6 +986,12 @@
         </xs:restriction>
     </xs:simpleType>
 
+    <xs:simpleType name="string10Type">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="10" />
+        </xs:restriction>
+    </xs:simpleType>
+
     <xs:simpleType name="string15Type">
         <xs:restriction base="xs:string">
             <xs:maxLength value="15" />
@@ -1026,6 +1039,12 @@
         <xs:restriction base="xs:integer">
             <xs:totalDigits value="2" />
              </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="numberOfPeriods">
+        <xs:restriction base="xs:integer">
+            <xs:totalDigits value="3" />
+        </xs:restriction>
     </xs:simpleType>
 
     <xs:simpleType name="numberOfPassengersType">

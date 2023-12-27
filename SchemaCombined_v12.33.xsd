@@ -68,6 +68,7 @@
 
 
 
+
     <xs:complexType name="contact">
         <xs:all>
             <xs:element name="name" type="xs:string" minOccurs="0" />
@@ -217,6 +218,8 @@
             <xs:element name="triggeredRule" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
     </xs:complexType>
+
+
 
 
 
@@ -1166,6 +1169,8 @@
                 <xs:element name="itemSubCategory" type="xs:string" minOccurs="0"/>
                 <xs:element name="productId" type="xs:string" minOccurs="0"/>
                 <xs:element name="productName" type="xs:string" minOccurs="0"/>
+                <xs:element name="shipmentId" type="xs:string" minOccurs="0"/>
+                <xs:element ref="xp:subscription" minOccurs="0" maxOccurs="1"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
@@ -3230,6 +3235,18 @@
             <xs:element name="tag" type="xs:string" minOccurs="0" maxOccurs="5"/>
         </xs:sequence>
     </xs:complexType>
+    <xs:element name="subscription">
+        <xs:complexType >
+            <xs:all>
+                <xs:element name="subscriptionId" type="xs:string" minOccurs="0"/>
+                <xs:element name="nextDeliveryDate" type="xs:date" minOccurs="0"/>
+                <xs:element name="periodUnit" minOccurs="0" type="xs:string" />
+                <xs:element name="numberOfPeriods" type="xs:integer" minOccurs="0"/>
+                <xs:element name="regularItemPrice" type="xs:integer" minOccurs="0"/>
+                <xs:element name="currentPeriod" type="xs:integer" minOccurs="0" />
+            </xs:all>
+        </xs:complexType>
+    </xs:element>
 
 
 
