@@ -62,6 +62,9 @@ class TestSale(unittest.TestCase):
 
         transaction.accountFundingTransactionData = accountfundingtransactiondata
 
+        transaction.typeOfDigitalCurrency = 'Rcoin'  # (v12.40 new element typeOfDigitalCurrency added in auth request)
+        transaction.conversionAffiliateId = 'DC12745'  # (v12.40 new element conversionAffiliateId added in auth request)
+
         response = online.request(transaction, conf)
         self.assertEquals('000', response['saleResponse']['response'])
         self.assertEquals('sandbox', response['saleResponse']['location'])

@@ -278,6 +278,11 @@
 
 
 
+
+
+
+
+
 <!--cnpRecurring-->
 
     
@@ -541,6 +546,15 @@
         </xs:complexContent>
     </xs:complexType>
 
+    <xs:complexType name="transactionTypeWithReportGroupAndRtp">
+        <xs:complexContent>
+            <xs:extension base="xp:transactionType">
+                <xs:attribute name="reportGroup" type="xs:string" use="required"/>
+                <xs:attribute name="rtp" type="xs:boolean" use="optional" />
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
     <xs:complexType name="merchantDataType">
         <xs:all>
             <xs:element name="campaign" type="xs:string" minOccurs="0"/>
@@ -681,6 +695,9 @@
                             <xs:element name="authIndicator" type="xs:string" minOccurs="0"/>
                             <xs:element ref="xp:accountFundingTransactionData" minOccurs="0"/>
                             <xs:element name="fraudCheckAction" type="xs:string" minOccurs="0"/>
+                            <!--    US1938960-77433-->
+                            <xs:element name="typeOfDigitalCurrency" type="xs:string" minOccurs="0"/>
+                            <xs:element name="conversionAffiliateId" type="xs:string" minOccurs="0"/>
                         </xs:sequence>
                     </xs:choice>
                 </xs:extension>
@@ -741,6 +758,7 @@
                         <xs:element name="pin" type="xs:string" minOccurs="0"/>
                         <xs:element ref="xp:passengerTransportData" minOccurs="0"/>
                         <xs:element name="foreignRetailerIndicator" type="xs:string" minOccurs="0"/>
+                        <xs:element ref="xp:partialCapture" minOccurs="0"/>
                     </xs:all>
                 </xs:extension>
             </xs:complexContent>
@@ -839,6 +857,9 @@
                         <xs:element ref="xp:passengerTransportData" minOccurs="0"/>
                         <xs:element name="foreignRetailerIndicator" type="xs:string" minOccurs="0"/>
                         <xs:element ref="xp:accountFundingTransactionData" minOccurs="0"/>
+                        <!--    US1938960-77433-->
+                        <xs:element name="typeOfDigitalCurrency" type="xs:string" minOccurs="0"/>
+                        <xs:element name="conversionAffiliateId" type="xs:string" minOccurs="0"/>
                     </xs:sequence>
                 </xs:extension>
             </xs:complexContent>
@@ -921,6 +942,9 @@
                         <xs:element name="foreignRetailerIndicator" type="xs:string" minOccurs="0"/>
                         <xs:element ref="xp:accountFundingTransactionData" minOccurs="0"/>
                         <xs:element name="fraudCheckAction" type="xs:string" minOccurs="0"/>
+                        <!--    US1938960-77433-->
+                        <xs:element name="typeOfDigitalCurrency" type="xs:string" minOccurs="0"/>
+                        <xs:element name="conversionAffiliateId" type="xs:string" minOccurs="0"/>
                     </xs:sequence>
                 </xs:extension>
             </xs:complexContent>
@@ -1339,6 +1363,7 @@
                         <xs:element name="checkoutId" type="xs:string" minOccurs="0"/>
                         <!--If AuthMax is used -->
                         <xs:element ref="xp:authMax" minOccurs="0"/>
+                        <xs:element name="fundingTransactionReferenceNumber" type="xs:string" minOccurs="0"/>
                     </xs:all>
                 </xs:extension>
             </xs:complexContent>
@@ -1730,6 +1755,7 @@
                         <xs:element name="checkoutId" type="xs:string" minOccurs="0"/>
                         <!--If AuthMax is used -->
                         <xs:element ref="xp:authMax" minOccurs="0"/>
+                        <xs:element name="fundingTransactionReferenceNumber" type="xs:string" minOccurs="0"/>
                     </xs:all>
                 </xs:extension>
             </xs:complexContent>
@@ -2520,7 +2546,7 @@
     <xs:element name="payFacCredit" substitutionGroup="xp:transaction">
         <xs:complexType>
             <xs:complexContent>
-                <xs:extension base="xp:transactionTypeWithReportGroup">
+                <xs:extension base="xp:transactionTypeWithReportGroupAndRtp">
                     <xs:choice>
                         <xs:sequence>
                             <xs:element name="fundingSubmerchantId" type="xs:string"/>
@@ -2576,7 +2602,7 @@
     <xs:element name="reserveCredit" substitutionGroup="xp:transaction">
         <xs:complexType>
             <xs:complexContent>
-                <xs:extension base="xp:transactionTypeWithReportGroup">
+                <xs:extension base="xp:transactionTypeWithReportGroupAndRtp">
                     <xs:choice>
                         <xs:sequence>
                             <xs:choice>
@@ -2924,7 +2950,7 @@
     <xs:element name="payoutOrgCredit" substitutionGroup="xp:transaction">
         <xs:complexType>
             <xs:complexContent>
-                <xs:extension base="xp:transactionTypeWithReportGroup">
+                <xs:extension base="xp:transactionTypeWithReportGroupAndRtp">
                     <xs:choice>
                         <xs:sequence>
                             <xs:element name="fundingCustomerId" type="xs:string"/>
@@ -3289,6 +3315,15 @@
         </xs:all>
     </xs:complexType>
 
+    <xs:element name="partialCapture">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="partialCaptureSequenceNumber" type="xs:integer" minOccurs="0"/>
+                <xs:element name="partialCaptureTotalCount" type="xs:integer" minOccurs="0"/>
+       </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
 <!--cnpBatch-->
 
 
@@ -3613,7 +3648,7 @@
     <xs:element name="submerchantCredit" substitutionGroup="xp:transaction">
         <xs:complexType>
             <xs:complexContent>
-                <xs:extension base="xp:transactionTypeWithReportGroup">
+                <xs:extension base="xp:transactionTypeWithReportGroupAndRtp">
                     <xs:choice>
                         <xs:sequence>
                             <xs:element name="fundingSubmerchantId" type="xs:string" />
@@ -3700,6 +3735,8 @@
             <xs:choice>
                 <xs:element ref="xp:transaction" />
                 <xs:element ref="xp:recurringTransaction" />
+                <xs:element ref="xp:encryptionKeyRequest"/>
+                <xs:element ref="xp:encryptedPayload" />
             </xs:choice>
         </xs:sequence>
         <xs:attribute name="version" type="xs:string" use="required" />
@@ -3723,6 +3760,7 @@
             <xs:choice>
                 <xs:element ref="xp:transactionResponse" minOccurs="0" />
                 <xs:element ref="xp:recurringTransactionResponse" minOccurs="0" />
+                <xs:element ref="xp:encryptionKeyResponse" minOccurs="0"/>
             </xs:choice>
             <xs:attribute name="response" type="xs:string" use="required" />
             <xs:attribute name="message" type="xs:string" use="required" />
@@ -4039,7 +4077,7 @@
     <xs:element name="submerchantCredit" substitutionGroup="xp:transaction">
         <xs:complexType>
             <xs:complexContent>
-                <xs:extension base="xp:transactionTypeWithReportGroup">
+                <xs:extension base="xp:transactionTypeWithReportGroupAndRtp">
                     <xs:choice>
                         <xs:sequence>
                             <xs:element name="fundingSubmerchantId" type="xs:string" />
@@ -4326,6 +4364,26 @@
                     </xs:all>
                 </xs:extension>
             </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="encryptionKeyRequest" type="xs:string" minOccurs="0"/>
+
+    <xs:element name="encryptionKeyResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="encryptionKeySequence" type="xs:long" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="encryptionKey" type="xs:string" minOccurs="0" maxOccurs="1"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="encryptedPayload">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="encryptionKeySequence" type="xs:long" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="payload" type="xs:string" minOccurs="0" maxOccurs="1"/>
+            </xs:sequence>
         </xs:complexType>
     </xs:element>
 

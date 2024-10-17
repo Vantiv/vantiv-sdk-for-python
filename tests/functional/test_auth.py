@@ -842,7 +842,7 @@ class TestAuth(unittest.TestCase):
         authorization.customerId = 'Cust0403'
         authorization.reportGroup = 'Default Report Group'
         authorization.orderId = '12344401'
-        authorization.amount = 106
+        authorization.amount = 999999999999
         authorization.orderSource = 'ecommerce'
         lineItemDataList = list()
         lineItemData = fields.lineItemData()
@@ -867,8 +867,12 @@ class TestAuth(unittest.TestCase):
         card.type = 'VI'
         cardholder_authentication = fields.fraudCheckType()
         cardholder_authentication.customerIpAddress = '127.0.0.1'
+        cardholder_authentication.authenticationProtocolVersion = 9  # (v12.40 new values added for authenticationProtocolVersionType enum - 3,4,5,6,7,8,9)
         authorization.card = card
         authorization.cardholderAuthentication = cardholder_authentication
+        authorization.typeOfDigitalCurrency = 'Bcoin'  # (v12.40 new element typeOfDigitalCurrency added in auth request)
+        authorization.conversionAffiliateId = 'DC12345'  # (v12.40 new element conversionAffiliateId added in auth request)
+
         response = online.request(authorization, conf)
         self.assertEqual('000', response['authorizationResponse']['response'])
         self.assertEqual('sandbox', response['authorizationResponse']['location'])

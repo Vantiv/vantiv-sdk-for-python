@@ -2,7 +2,7 @@
 <xs:schema targetNamespace="http://www.vantivcnp.com/schema" xmlns:xs="http://www.w3.org/2001/XMLSchema"
            xmlns:xp="http://www.vantivcnp.com/schema" elementFormDefault="qualified" attributeFormDefault="unqualified">
 
-    <xs:include schemaLocation="cnpTransaction_v12.37.xsd" />
+    <xs:include schemaLocation="cnpTransaction_v12.40.xsd" />
 
     <xs:element name="cnpRequest">
         <xs:complexType>
@@ -333,7 +333,7 @@
     <xs:element name="submerchantCredit" substitutionGroup="xp:transaction">
         <xs:complexType>
             <xs:complexContent>
-                <xs:extension base="xp:transactionTypeWithReportGroup">
+                <xs:extension base="xp:transactionTypeWithReportGroupAndRtp">
                     <xs:choice>
                         <xs:sequence>
                             <xs:element name="fundingSubmerchantId" type="xp:merchantIdentificationType" />

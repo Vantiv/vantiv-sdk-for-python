@@ -94,7 +94,7 @@ def get_class_dict(_package_root):
             if found_txns_head:
                 _name = found_txns_head.group(1).strip()
                 _type = found_txns_head.group(2).strip()
-                if _type == 'transaction' or _type == 'recurringTransaction':
+                if _type == 'transaction' or _type == 'recurringTransaction' or _type == 'encryptionKeyRequest':
                     txns_dict[_name] = dict()
                 elif 'Response' not in _type:
                     if _type not in abs_class_dict:

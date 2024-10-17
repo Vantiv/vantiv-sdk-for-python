@@ -274,6 +274,7 @@
             <xs:enumeration value="X" />
             <xs:enumeration value="FIFA" />
             <xs:enumeration value="FIVC" />
+            <xs:enumeration value="FIVD" />
             <xs:enumeration value="FISC" />
             <xs:enumeration value="FISD" />
             <xs:enumeration value="FIPC" />
@@ -361,6 +362,8 @@
     <xs:simpleType name="transactionAmountType">
         <xs:restriction base="xs:integer">
             <xs:totalDigits value="12" />
+            <xs:minInclusive value="-999999999999"/>
+            <xs:maxInclusive value="999999999999"/>
         </xs:restriction>
     </xs:simpleType>
 
@@ -1387,6 +1390,38 @@
     <xs:simpleType name="foreignRetailerIndicatorEnum">
         <xs:restriction base="xs:string">
             <xs:enumeration value="F" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="encryptionKeyRequestEnum">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="CURRENT"/>
+            <xs:enumeration value="PREVIOUS"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="encryptionKeySequenceType">
+        <xs:restriction base="xs:long">
+            <xs:totalDigits value="19"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="encryptionKeyType">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="15000"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="payloadType">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="15000" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="partialCaptureCount">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="1" />
+            <xs:maxInclusive value="99" />
         </xs:restriction>
     </xs:simpleType>
 

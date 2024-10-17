@@ -899,6 +899,128 @@ class TestBatch(unittest.TestCase):
         self.assertEquals(response['batchResponse']['captureGivenAuthResponse']['cnpTxnId'], '135411011739311214')
         self.assertEquals(response['batchResponse']['saleResponse']['cnpTxnId'], '427453992541199977')
 
+    @mock.patch.object(batch, '_get_file_str_from_sftp')
+    def test_batch_v12_40(self, mock__get_file_str_from_sftp):
+        txnBatch = batch.Transactions()
+        authorization = fields.authorization()
+        authorization.id = '1'
+        authorization.customerId = 'Cust0403'
+        authorization.reportGroup = 'Default Report Group'
+        authorization.orderId = '12344401'
+        authorization.amount = 999999999999
+        authorization.orderSource = 'ecommerce'
+        card = fields.cardType()
+        card.number = '4100000000000000'
+        card.expDate = '1210'
+        card.type = 'VI'
+        authorization.card = card
+        authorization.orderChannel = 'MIT'
+        authorization.authIndicator = 'Estimated'
+        authorization.businessIndicator = 'agentCashOut'
+        authorization.orderChannel = 'SMART_TV'
+        authorization.fraudCheckAction = 'APPROVED_SKIP_FRAUD_CHECK'
+        cardholder_authentication = fields.fraudCheckType()
+        cardholder_authentication.customerIpAddress = '127.0.0.1'
+        cardholder_authentication.authenticationProtocolVersion = 9  # (v12.40 new values added for authenticationProtocolVersionType enum - 3,4,5,6,7,8,9)
+        authorization.card = card
+        authorization.cardholderAuthentication = cardholder_authentication
+        authorization.typeOfDigitalCurrency = 'Bcoin'  # (v12.40 new element typeOfDigitalCurrency added in auth request)
+        authorization.conversionAffiliateId = 'DC12345'  # (v12.40 new element conversionAffiliateId added in auth request)
+        txnBatch.add(authorization)
+
+        sale = fields.sale()
+        sale.id = 'auth_GP_DI'
+        sale.reportGroup = 'DirectWFITxn'
+        sale.orderId = 'XGR-1840823423'
+        sale.amount = 1100
+        sale.orderSource = 'telephone'
+        card = fields.cardType()
+        card.number = '4100000000000000'
+        card.expDate = '1210'
+        card.type = 'VI'
+        sale.card = card
+        sale.orderChannel = 'SMART_TV'
+        sale.foreignRetailerIndicator = 'F'
+        sale.businessIndicator = 'rapidMerchantSettlement'
+        txnBatch.add(sale)
+
+        submerchantcredit = fields.submerchantCredit()
+        submerchantcredit.id = 'ThisIsID'
+        submerchantcredit.reportGroup = 'Default Report Group'
+        submerchantcredit.rtp = 'true'
+        submerchantcredit.fundingSubmerchantId = "value for fundingSubmerchantId"
+        submerchantcredit.submerchantName = "temp1200"
+        submerchantcredit.fundsTransferId = "value for fundsTransferId"
+        submerchantcredit.amount = 1512
+        account_info = fields.echeckTypeCtx()
+        account_info.accType = 'Savings'
+        account_info.accNum = "1234"
+        account_info.routingNum = "12345678"
+        submerchantcredit.accountInfo = account_info
+        submerchantcredit.customIdentifier = '127'
+        txnBatch.add(submerchantcredit)
+
+        capture = fields.capture()
+        capture.cnpTxnId = 123456000
+        capture.orderId = '457754'
+        capture.amount = 6000
+        capture.id = 'ID001'
+        card = fields.cardType()
+        card.number = '4100100000000001'
+        card.expDate = '1210'
+        card.type = 'VI'
+        capture.card = card
+        capture.foreignRetailerIndicator = 'F'
+        partialCapture = fields.partialCapture()  # (v12.40 new complexType element partialCapture)
+        partialCapture.partialCaptureSequenceNumber = 5
+        partialCapture.partialCaptureTotalCount = 5
+        capture.partialCapture = partialCapture
+        txnBatch.add(capture)
+
+        mock__get_file_str_from_sftp.return_value = """
+                                             <cnpResponse version='12.37' response='0' message='Valid Format' xmlns='http://www.vantivcnp.com/schema'>
+                                                       <batchResponse cnpBatchId='12344' merchantId='DirectWFITxn' numAccountUpdates='3' xmlns='http://www.vantivcnp.com/schema'>
+                                                              <authorizationResponse id="ID001" reportGroup="Default Report Group">
+                                                                   <cnpTxnId>470196194391774838</cnpTxnId>
+                                                                   <response>000</response>
+                                                                   <responseTime>2024-07-09T07:07:23.526</responseTime>
+                                                                   <message>Approved</message>
+                                                                   <location>sandbox</location>
+                                                              </authorizationResponse>
+                                                              <saleResponse id="auth_GP_DI" reportGroup="DirectWFITxn">
+                                                                   <cnpTxnId>427453992541199977</cnpTxnId>
+                                                                   <orderId>XGR-1840823423</orderId>
+                                                                   <response>000</response>
+                                                                   <message>Approved</message>
+                                                                   <responseTime>2024-07-09T09:27:19.759</responseTime>
+                                                                   <authCode>00229</authCode>
+                                                                   <networkTransactionId>63225578415568556365452427825</networkTransactionId>
+                                                                   <location>sandbox</location>
+                                                              </saleResponse>
+                                                              <submerchantcreditResponse id="54321" reportGroup="Default Report Group">
+                                                                   <cnpTxnId>196571629314446150</cnpTxnId>
+                                                                   <response>000</response>
+                                                                   <responseTime>2024-07-09T07:19:07.817</responseTime>
+                                                                   <message>Approved</message>
+                                                                   <location>sandbox</location>
+                                                              </submerchantcreditResponse>
+                                                              <captureResponse id="NewTxnID" reportGroup="Default Report Group">
+                                                                   <cnpTxnId>135411011739311214</cnpTxnId>
+                                                                   <response>000</response>
+                                                                   <message>Approved</message>
+                                                                   <responseTime>2024-07-09T07:20:38.2</responseTime>
+                                                                   <location>sandbox</location>
+                                                              </captureResponse>
+                                                       </batchResponse>
+                                             </cnpResponse>"""
+
+        response = batch.retrieve('retrieve_file', conf)
+        print(response['batchResponse'])
+        self.assertEquals(response['batchResponse']['authorizationResponse']['cnpTxnId'], '470196194391774838')
+        self.assertEquals(response['batchResponse']['saleResponse']['cnpTxnId'], '427453992541199977')
+        self.assertEquals(response['batchResponse']['submerchantcreditResponse']['cnpTxnId'], '196571629314446150')
+        self.assertEquals(response['batchResponse']['captureResponse']['cnpTxnId'], '135411011739311214')
+
     def test_download(self):
         # first arg is str and len less than 4
         self.assertRaises(utils.VantivException, batch.download, 'abc', conf)

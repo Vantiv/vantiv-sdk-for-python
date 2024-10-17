@@ -24,9 +24,15 @@
 #
 from __future__ import absolute_import, print_function, unicode_literals
 
+import re
+from pathlib import Path
+
 import requests
 import xmltodict
 import six
+
+import xml.etree.ElementTree as ET
+from vantivsdk import pgp_helper
 
 from vantivsdk.commManager import commManager
 from . import fields, utils, dict2obj
@@ -51,7 +57,7 @@ def request(transaction, conf, return_format='dict', timeout=30, sameDayFunding 
     if isinstance(transaction, dict):
         transaction = dict2obj.tofileds(transaction)
 
-    if not (isinstance(transaction, fields.recurringTransactionType)
+    if not (isinstance(transaction, fields.recurringTransactionType) or (transaction, fields.encryptionKeyRequest)
             or isinstance(transaction, fields.transactionType)):
         raise utils.VantivException(
             'transaction must be either cnp_xml_fields.recurringTransactionType or transactionType')
@@ -95,10 +101,67 @@ def _create_request_xml(transaction, conf, same_day_funding):
     request_obj = _create_request_obj(transaction, conf, same_day_funding)
     request_xml = utils.obj_to_xml(request_obj)
 
+    if conf.oltpEncryptionPayload:
+        request_xml = _create_encryption_request(request_xml, conf)
+
     if conf.print_xml:
-        print('Request XML:\n', request_xml.decode('utf-8'), '\n')
+        print_xml(request_xml.decode('utf-8'), conf.neuter_xml)
 
     return request_xml
+
+
+def _create_encryption_request(request_xml, conf):
+    # Parse the XML string
+    ET.register_namespace('', 'http://www.vantivcnp.com/schema')
+    root = ET.fromstring(request_xml)
+    path = conf.oltpEncryptionKeyPath
+    keyseq = conf.oltpEncryptionKeySequence
+    namespace = {'ns': 'http://www.vantivcnp.com/schema'}
+
+    # Find the second child element
+    children = root.findall('./ns:*', namespace)
+
+    if len(children) > 1:
+        # Get the second child element
+        child_element = children[1]
+        str_element = ET.tostring(child_element, encoding='unicode')
+
+        # Skip the encryption payload part for encryptionKeyRequest
+        if str_element.__contains__('encryptionKeyRequest'):
+            return ET.tostring(root)
+        else:
+            if path is None:
+                raise utils.VantivException(
+                    "Problem in reading the Encryption Key path. Provide the Encryption key path.")
+            else:
+                path = Path(path)
+                if not path.exists() or not path.is_file():
+                    raise utils.VantivException(
+                        "The provided path is not a valid file path or the file does not exist.")
+            # Send payload for encryption
+            payload = pgp_helper.encryptPayload(str_element, path)
+
+            new_element = ET.Element('payload')
+            new_element.text = payload
+            new_element0 = ET.Element('encryptionKeySequence')
+            if keyseq is None or keyseq == '':
+                raise utils.VantivException(
+                    "Problem in reading the Encryption Key Sequence ...Provide the Encryption key Sequence ")
+            else:
+                new_element0.text = keyseq
+            encrypted_element = ET.Element('encryptedPayload')
+
+            # removing the child element which needs to be encrypted.
+            root.remove(children[1])
+
+            encrypted_element.append(new_element0)
+            encrypted_element.append(new_element)
+
+            # adding new element after encryption.
+            root.append(encrypted_element)
+
+    # Convert the modified XML back to a string
+    return ET.tostring(root)
 
 
 def _create_request_obj(transaction, conf, same_day_funding):
@@ -110,6 +173,8 @@ def _create_request_obj(transaction, conf, same_day_funding):
             <xs:choice>
                 <xs:element ref="xp:transaction" />
                 <xs:element ref="xp:recurringTransaction" />
+                <xs:element ref="xp:encryptionKeyRequest"/>
+                <xs:element ref="xp:encryptedPayload" />
             </xs:choice>
         </xs:sequence>
         <xs:attribute name="version" type="xp:versionType" use="required" />
@@ -152,9 +217,13 @@ def _create_request_obj(transaction, conf, same_day_funding):
     # <xs:choice>
     #     <xs:element ref="xp:transaction" />
     #     <xs:element ref="xp:recurringTransaction" />
+    #     <xs:element ref="xp:encryptionKeyRequest"/>
     # </xs:choice>
     if isinstance(transaction, fields.recurringTransactionType):
         request_obj.recurringTransaction = transaction
+    # add elif condition for encryptionKeyRequest
+    elif hasattr(transaction, 'encryptionKeyRequest'):
+        request_obj.encryptionKeyRequest = transaction.encryptionKeyRequest
     else:
         request_obj.transaction = transaction
     return request_obj
@@ -201,3 +270,27 @@ def _http_post(post_data, conf, timeout):
         print('Response XML:\n', response.text, '\n')
 
     return response.text
+
+
+def neuter_xml(xml):
+    neuter_str = "NEUTERED"
+    if xml is None:
+        return xml
+    xml = re.sub(r"<accNum>.*?</accNum>", f"<accNum>{neuter_str}</accNum>", xml)
+    xml = re.sub(r"<user>.*?</user>", f"<user>{neuter_str}</user>", xml)
+    xml = re.sub(r"<password>.*?</password>", f"<password>{neuter_str}</password>", xml)
+    xml = re.sub(r"<track>.*?</track>", f"<track>{neuter_str}</track>", xml)
+    xml = re.sub(r"<number>.*?</number>", f"<number>{neuter_str}</number>", xml)
+    xml = re.sub(r"<cardValidationNum>.*?</cardValidationNum>", f"<cardValidationNum>{neuter_str}</cardValidationNum>",
+                 xml)
+
+    return xml
+
+
+def print_xml(xml_request, neuter_xml_flag):
+    xml_to_log = xml_request
+    if neuter_xml_flag:
+        xml_to_log = neuter_xml(xml_to_log)
+    print(f"Request XML: {xml_to_log}")
+
+    return xml_request

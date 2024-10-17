@@ -3,7 +3,7 @@
 <xs:schema targetNamespace="http://www.vantivcnp.com/schema" xmlns:xp="http://www.vantivcnp.com/schema"
            xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
 
-    <xs:include schemaLocation="cnpTransaction_v12.37.xsd" />
+    <xs:include schemaLocation="cnpTransaction_v12.40.xsd" />
 
     <xs:complexType name="baseRequest">
         <xs:sequence>
@@ -11,6 +11,8 @@
             <xs:choice>
                 <xs:element ref="xp:transaction" />
                 <xs:element ref="xp:recurringTransaction" />
+                <xs:element ref="xp:encryptionKeyRequest"/>
+                <xs:element ref="xp:encryptedPayload" />
             </xs:choice>
         </xs:sequence>
         <xs:attribute name="version" type="xp:versionType" use="required" />
@@ -34,6 +36,7 @@
             <xs:choice>
                 <xs:element ref="xp:transactionResponse" minOccurs="0" />
                 <xs:element ref="xp:recurringTransactionResponse" minOccurs="0" />
+                <xs:element ref="xp:encryptionKeyResponse" minOccurs="0"/>
             </xs:choice>
             <xs:attribute name="response" type="xp:responseType" use="required" />
             <xs:attribute name="message" type="xp:messageType" use="required" />
@@ -356,7 +359,7 @@
     <xs:element name="submerchantCredit" substitutionGroup="xp:transaction">
         <xs:complexType>
             <xs:complexContent>
-                <xs:extension base="xp:transactionTypeWithReportGroup">
+                <xs:extension base="xp:transactionTypeWithReportGroupAndRtp">
                     <xs:choice>
                         <xs:sequence>
                             <xs:element name="fundingSubmerchantId" type="xp:merchantIdentificationType" />
@@ -643,6 +646,26 @@
                     </xs:all>
                 </xs:extension>
             </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="encryptionKeyRequest" type="xp:encryptionKeyRequestEnum"/>
+
+    <xs:element name="encryptionKeyResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="encryptionKeySequence" type="xp:encryptionKeySequenceType" minOccurs="1" maxOccurs="1"/>
+                <xs:element name="encryptionKey" type="xp:encryptionKeyType" minOccurs="1" maxOccurs="1"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="encryptedPayload">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="encryptionKeySequence" type="xp:encryptionKeySequenceType" minOccurs="1" maxOccurs="1"/>
+                <xs:element name="payload" type="xp:payloadType" minOccurs="1" maxOccurs="1"/>
+            </xs:sequence>
         </xs:complexType>
     </xs:element>
 

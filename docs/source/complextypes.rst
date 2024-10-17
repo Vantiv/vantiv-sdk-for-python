@@ -441,6 +441,13 @@ mposType
         :var track1Status: String or Number
         :var track2Status: String or Number
 
+partialCapture
+--------------
+    .. py:class:: vantivsdk.fields.partialCapture
+
+        :var partialCaptureSequenceNumber: String or Number
+        :var partialCaptureTotalCount: String or Number
+
 passengerTransportData
 ----------------------
     .. py:class:: vantivsdk.fields.passengerTransportData

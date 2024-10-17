@@ -129,6 +129,7 @@ authorization
         :var card: instance of :py:class:`vantivsdk.fields.cardType`
         :var cardholderAuthentication: instance of :py:class:`vantivsdk.fields.fraudCheckType`
         :var cnpTxnId: String or Number
+        :var conversionAffiliateId: String or Number
         :var crypto: String or Number
         :var customBilling: instance of :py:class:`vantivsdk.fields.customBilling`
         :var customerId: String or Number
@@ -174,6 +175,7 @@ authorization
         :var surchargeAmount: String or Number
         :var taxType: String or Number
         :var token: instance of :py:class:`vantivsdk.fields.cardTokenType`
+        :var typeOfDigitalCurrency: String or Number
         :var wallet: instance of :py:class:`vantivsdk.fields.wallet`
 
 balanceInquiry
@@ -207,6 +209,7 @@ capture
         :var lodgingInfo: instance of :py:class:`vantivsdk.fields.lodgingInfo`
         :var orderId: String or Number
         :var partial: String or Number
+        :var partialCapture: instance of :py:class:`vantivsdk.fields.partialCapture`
         :var passengerTransportData: instance of :py:class:`vantivsdk.fields.passengerTransportData`
         :var payPalNotes: String or Number
         :var payPalOrderComplete: String or Number
@@ -226,6 +229,7 @@ captureGivenAuth
         :var billToAddress: instance of :py:class:`vantivsdk.fields.billToAddress`
         :var businessIndicator: String or Number
         :var card: instance of :py:class:`vantivsdk.fields.cardType`
+        :var conversionAffiliateId: String or Number
         :var crypto: String or Number
         :var customBilling: instance of :py:class:`vantivsdk.fields.customBilling`
         :var customerId: String or Number
@@ -253,6 +257,7 @@ captureGivenAuth
         :var surchargeAmount: String or Number
         :var taxType: String or Number
         :var token: instance of :py:class:`vantivsdk.fields.cardTokenType`
+        :var typeOfDigitalCurrency: String or Number
 
 createPlan
 ----------
@@ -667,6 +672,7 @@ payFacCredit
         :var fundsTransferId: String or Number
         :var id: String or Number
         :var reportGroup: String or Number
+        :var rtp: String or Number
 
 payFacDebit
 -----------
@@ -689,6 +695,7 @@ payoutOrgCredit
         :var fundsTransferId: String or Number
         :var id: String or Number
         :var reportGroup: String or Number
+        :var rtp: String or Number
 
 payoutOrgDebit
 --------------
@@ -798,6 +805,7 @@ reserveCredit
         :var fundsTransferId: String or Number
         :var id: String or Number
         :var reportGroup: String or Number
+        :var rtp: String or Number
 
 reserveDebit
 ------------
@@ -827,6 +835,7 @@ sale
         :var cardholderAuthentication: instance of :py:class:`vantivsdk.fields.fraudCheckType`
         :var cnpInternalRecurringRequest: instance of :py:class:`vantivsdk.fields.cnpInternalRecurringRequestType`
         :var cnpTxnId: String or Number
+        :var conversionAffiliateId: String or Number
         :var crypto: String or Number
         :var customBilling: instance of :py:class:`vantivsdk.fields.customBilling`
         :var customerId: String or Number
@@ -880,6 +889,7 @@ sale
         :var surchargeAmount: String or Number
         :var taxType: String or Number
         :var token: instance of :py:class:`vantivsdk.fields.cardTokenType`
+        :var typeOfDigitalCurrency: String or Number
         :var wallet: instance of :py:class:`vantivsdk.fields.wallet`
 
 serviceStatusRequest
@@ -904,6 +914,7 @@ submerchantCredit
         :var fundsTransferId: String or Number
         :var id: String or Number
         :var reportGroup: String or Number
+        :var rtp: String or Number
         :var submerchantName: String or Number
 
 submerchantDebit

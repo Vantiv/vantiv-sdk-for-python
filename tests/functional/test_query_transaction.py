@@ -57,7 +57,7 @@ class TestQueryTransaction(unittest.TestCase):
         transaction.origId = "ABCD0"
         transaction.id = '934820'
         transaction.reportGroup = 'ThisIsAGroup'
-        transaction.origActionType = "FISD"
+        transaction.origActionType = "FIVD"
         transaction.showStatusOnly = "Y"
 
         response = online.request(transaction, conf)

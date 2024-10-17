@@ -186,6 +186,11 @@ class TestCapture(unittest.TestCase):
 
         transaction.enhancedData = enhancedData
         transaction.foreignRetailerIndicator = 'F'
+        partialCapture = fields.partialCapture()  # (v12.40 new complexType element partialCapture)
+        partialCapture.partialCaptureSequenceNumber = 5
+        partialCapture.partialCaptureTotalCount = 5
+        transaction.partialCapture = partialCapture
+
         response = online.request(transaction, conf)
         self.assertEqual('000', response['captureResponse']['response'])
         self.assertEqual('sandbox', response['captureResponse']['location'])

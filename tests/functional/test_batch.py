@@ -1433,6 +1433,7 @@ class TestBatch(unittest.TestCase):
         submerchantcredit = fields.submerchantCredit()
         submerchantcredit.id = 'ThisIsID'
         submerchantcredit.reportGroup = 'Default Report Group'
+        submerchantcredit.rtp = 'true'
         submerchantcredit.fundingSubmerchantId = "value for fundingSubmerchantId"
         submerchantcredit.submerchantName = "temp1200"
         submerchantcredit.fundsTransferId = "value for fundsTransferId"
@@ -1516,6 +1517,123 @@ class TestBatch(unittest.TestCase):
                 self.assertEquals(2000, obj.batchRequest[0].captureGivenAuthAmount)
                 self.assertEquals(7000, obj.batchRequest[0].forceCaptureAmount)
                 self.assertEquals(1100, obj.batchRequest[0].saleAmount)
+
+            self.assertEquals('%s.xml.asc' % filename, response)
+
+    @unittest.skipIf(preliveStatus.lower() == 'down', "prelive not available")
+    def test_batch_v12_40(self):
+        txnBatch = batch.Transactions()
+        authorization = fields.authorization()
+        authorization.id = '1'
+        authorization.customerId = 'Cust0403'
+        authorization.reportGroup = 'Default Report Group'
+        authorization.orderId = '12344401'
+        authorization.amount = 999999999999
+        authorization.orderSource = 'ecommerce'
+        card = fields.cardType()
+        card.number = '4100000000000000'
+        card.expDate = '1210'
+        card.type = 'VI'
+        authorization.card = card
+        authorization.orderChannel = 'MIT'
+        authorization.authIndicator = 'Estimated'
+        authorization.businessIndicator = 'agentCashOut'
+        authorization.orderChannel = 'SMART_TV'
+        authorization.fraudCheckAction = 'APPROVED_SKIP_FRAUD_CHECK'
+        cardholder_authentication = fields.fraudCheckType()
+        cardholder_authentication.customerIpAddress = '127.0.0.1'
+        cardholder_authentication.authenticationProtocolVersion = 9  # (v12.40 new values added for authenticationProtocolVersionType enum - 3,4,5,6,7,8,9)
+        authorization.card = card
+        authorization.cardholderAuthentication = cardholder_authentication
+        authorization.typeOfDigitalCurrency = 'Bcoin'  # (v12.40 new element typeOfDigitalCurrency added in auth request)
+        authorization.conversionAffiliateId = 'DC12345'  # (v12.40 new element conversionAffiliateId added in auth request)
+        txnBatch.add(authorization)
+
+        sale = fields.sale()
+        sale.id = 'auth_GP_DI'
+        sale.reportGroup = 'DirectWFITxn'
+        sale.orderId = 'XGR-1840823423'
+        sale.amount = 1100
+        sale.orderSource = 'telephone'
+        card = fields.cardType()
+        card.number = '4100000000000000'
+        card.expDate = '1210'
+        card.type = 'VI'
+        sale.card = card
+        sale.orderChannel = 'SMART_TV'
+        sale.foreignRetailerIndicator = 'F'
+        sale.businessIndicator = 'rapidMerchantSettlement'
+        txnBatch.add(sale)
+
+        submerchantcredit = fields.submerchantCredit()
+        submerchantcredit.id = 'ThisIsID'
+        submerchantcredit.reportGroup = 'Default Report Group'
+        submerchantcredit.rtp = 'true'
+        submerchantcredit.fundingSubmerchantId = "value for fundingSubmerchantId"
+        submerchantcredit.submerchantName = "temp1200"
+        submerchantcredit.fundsTransferId = "value for fundsTransferId"
+        submerchantcredit.amount = 1512
+        account_info = fields.echeckTypeCtx()
+        account_info.accType = 'Savings'
+        account_info.accNum = "1234"
+        account_info.routingNum = "12345678"
+        submerchantcredit.accountInfo = account_info
+        submerchantcredit.customIdentifier = '127'
+        txnBatch.add(submerchantcredit)
+
+        capture = fields.capture()
+        capture.cnpTxnId = 123456000
+        capture.orderId = '457754'
+        capture.amount = 6000
+        capture.id = 'ID001'
+        card = fields.cardType()
+        card.number = '4100100000000000'
+        card.expDate = '1210'
+        card.type = 'VI'
+        capture.card = card
+        capture.foreignRetailerIndicator = 'F'
+        partialCapture = fields.partialCapture()  # (v12.40 new complexType element partialCapture)
+        partialCapture.partialCaptureSequenceNumber = 5
+        partialCapture.partialCaptureTotalCount = 5
+        capture.partialCapture = partialCapture
+        txnBatch.add(capture)
+
+        filename = 'batch_test_%s' % datetime.datetime.now().strftime("%Y%m%d%H%M%S%f")
+        # stream to Vaitiv eCommerce and get object as response
+        response = batch.submit(txnBatch, conf, filename)
+
+        if conf.useEncryption:
+            # Using encryption.
+            retry = True
+            tried = 0
+            withEncryptionReponseFilepath = ''
+            while retry:
+                tried += 1
+                try:
+                    withEncryptionReponseFilepath = batch._get_file_from_sftp(response, conf, False, 60)
+                    retry = False
+                except:
+                    # sleep 1 minute waiting for batch get processed
+                    print("sleep 30 seconds waiting for batch get processed")
+                    time.sleep(30)
+                if tried > 20:
+                    self.fail("Timeout for retrieve batch response")
+                    break
+
+            call(["cat", withEncryptionReponseFilepath])
+            ### <<< WITH ENCRYPTION
+
+            with open(withEncryptionReponseFilepath, 'r') as xml_file:
+                obj = fields.CreateFromDocument(xml_file.read())
+                self.assertEquals("Valid Format", obj.message)
+
+        else:
+            with open(os.path.join(conf.batch_requests_path, '%s.xml' % filename), 'r') as xml_file:
+                obj = fields.CreateFromDocument(xml_file.read())
+                self.assertEquals(1, obj.numBatchRequests)
+                self.assertEquals(999999999999, obj.batchRequest[0].authAmount)
+                self.assertEquals(1100, obj.batchRequest[0].saleAmount)
+                self.assertEquals(6000, obj.batchRequest[0].captureAmount)
 
             self.assertEquals('%s.xml.asc' % filename, response)
 

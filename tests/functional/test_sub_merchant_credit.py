@@ -39,6 +39,7 @@ class TestSubmerchantCredit(unittest.TestCase):
         transaction = fields.submerchantCredit()
         transaction.id = 'ThisIsID'
         transaction.reportGroup = 'Default Report Group'
+        transaction.rtp = 'true'
         transaction.fundingSubmerchantId = "value for fundingSubmerchantId"
         transaction.submerchantName = "temp1200"
         transaction.fundsTransferId = "value for fundsTransferId"

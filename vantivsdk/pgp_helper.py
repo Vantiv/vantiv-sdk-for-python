@@ -1,8 +1,9 @@
-from subprocess import call
+import subprocess
 from subprocess import check_output
 from subprocess import CalledProcessError
 
 import os
+
 from . import (utils)
 
 class PgpHelper(object):
@@ -71,3 +72,30 @@ class PgpHelper(object):
     except CalledProcessError as err:
       raise utils.VantivException("Adding Vantiv public key has failed with error code is %s.\n" % err.output)
 
+def encryptPayload(toBeEncryptedString, path):
+    byte_array = bytearray(toBeEncryptedString, 'utf-8')
+      # Convert the object to a JSON string
+    try:
+      # Call gpg command line to encrypt the string
+      process = subprocess.Popen([
+        "gpg",
+        "--batch",
+        "--yes",
+        "--always-trust",
+        "--no-secmem-warning",
+        "--armor",
+        "--trust-model", "always",
+        "--recipient-file", path,
+        "--encrypt"
+      ], stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+
+      # Pass the string to be encrypted to the gpg process
+      encrypted_string, err = process.communicate(input=byte_array)
+
+      if process.returncode != 0:
+        raise subprocess.CalledProcessError(process.returncode, process.args, output=err)
+
+      return encrypted_string.decode()
+    except subprocess.CalledProcessError as err:
+      raise utils.VantivException(
+        "Encrypting the payload has failed. Please check the Encryption key or key path, is correct!\n%s" % err.output)

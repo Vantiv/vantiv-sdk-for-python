@@ -11,7 +11,7 @@ if sys.version_info[:2] < (3, 8):
 
 setup(
     name='VantiveCommerceSDK',
-    version='12.37.1',
+    version='12.40.0',
     description='Vantiv eCommerce Python SDK',
     author='Vantiv eCommerce',
     author_email='SDKSupport@vantiv.com',

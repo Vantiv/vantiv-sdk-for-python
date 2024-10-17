@@ -1,8 +1,8 @@
 <xs:schema targetNamespace="http://www.vantivcnp.com/schema" xmlns:xp="http://www.vantivcnp.com/schema"
            xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
 
-    <xs:include schemaLocation="cnpCommon_v12.37.xsd"/>
-    <xs:include schemaLocation="cnpRecurring_v12.37.xsd"/>
+    <xs:include schemaLocation="cnpCommon_v12.40.xsd"/>
+    <xs:include schemaLocation="cnpRecurring_v12.40.xsd"/>
 
     <xs:element name="transaction" type="xp:transactionType" abstract="true"/>
 
@@ -19,6 +19,15 @@
         <xs:complexContent>
             <xs:extension base="xp:transactionType">
                 <xs:attribute name="reportGroup" type="xp:reportGroupType" use="required"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="transactionTypeWithReportGroupAndRtp">
+        <xs:complexContent>
+            <xs:extension base="xp:transactionType">
+                <xs:attribute name="reportGroup" type="xp:reportGroupType" use="required"/>
+                <xs:attribute name="rtp" type="xs:boolean" use="optional" />
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
@@ -196,6 +205,9 @@
                             <xs:element name="authIndicator" type="xp:authIndicatorEnum" minOccurs="0"/>
                             <xs:element ref="xp:accountFundingTransactionData" minOccurs="0"/>
                             <xs:element name="fraudCheckAction" type="xp:fraudCheckActionEnum" minOccurs="0"/>
+                            <!--    US1938960-77433-->
+                            <xs:element name="typeOfDigitalCurrency" type="xp:string5Type" minOccurs="0"/>
+                            <xs:element name="conversionAffiliateId" type="xp:string15Type" minOccurs="0"/>
                         </xs:sequence>
                     </xs:choice>
                 </xs:extension>
@@ -256,6 +268,7 @@
                         <xs:element name="pin" type="xp:pinType" minOccurs="0"/>
                         <xs:element ref="xp:passengerTransportData" minOccurs="0"/>
                         <xs:element name="foreignRetailerIndicator" type="xp:foreignRetailerIndicatorEnum" minOccurs="0"/>
+                        <xs:element ref="xp:partialCapture" minOccurs="0"/>
                     </xs:all>
                 </xs:extension>
             </xs:complexContent>
@@ -354,6 +367,9 @@
                         <xs:element ref="xp:passengerTransportData" minOccurs="0"/>
                         <xs:element name="foreignRetailerIndicator" type="xp:foreignRetailerIndicatorEnum" minOccurs="0"/>
                         <xs:element ref="xp:accountFundingTransactionData" minOccurs="0"/>
+                        <!--    US1938960-77433-->
+                        <xs:element name="typeOfDigitalCurrency" type="xp:string5Type" minOccurs="0"/>
+                        <xs:element name="conversionAffiliateId" type="xp:string15Type" minOccurs="0"/>
                     </xs:sequence>
                 </xs:extension>
             </xs:complexContent>
@@ -436,6 +452,9 @@
                         <xs:element name="foreignRetailerIndicator" type="xp:foreignRetailerIndicatorEnum" minOccurs="0"/>
                         <xs:element ref="xp:accountFundingTransactionData" minOccurs="0"/>
                         <xs:element name="fraudCheckAction" type="xp:fraudCheckActionEnum" minOccurs="0"/>
+                        <!--    US1938960-77433-->
+                        <xs:element name="typeOfDigitalCurrency" type="xp:string5Type" minOccurs="0"/>
+                        <xs:element name="conversionAffiliateId" type="xp:string15Type" minOccurs="0"/>
                     </xs:sequence>
                 </xs:extension>
             </xs:complexContent>
@@ -913,6 +932,7 @@
                         <xs:element name="checkoutId" type="xp:string256Type" minOccurs="0"/>
                         <!--If AuthMax is used -->
                         <xs:element ref="xp:authMax" minOccurs="0"/>
+                        <xs:element name="fundingTransactionReferenceNumber" type="xp:string19Type" minOccurs="0"/>
                     </xs:all>
                 </xs:extension>
             </xs:complexContent>
@@ -1378,6 +1398,7 @@
                         <xs:element name="checkoutId" type="xp:string256Type" minOccurs="0"/>
                         <!--If AuthMax is used -->
                         <xs:element ref="xp:authMax" minOccurs="0"/>
+                        <xs:element name="fundingTransactionReferenceNumber" type="xp:string19Type" minOccurs="0"/>
                     </xs:all>
                 </xs:extension>
             </xs:complexContent>
@@ -1951,6 +1972,13 @@
         <xs:restriction base="xs:integer">
             <xs:enumeration value="1"/>
             <xs:enumeration value="2"/>
+            <xs:enumeration value="3"/>
+            <xs:enumeration value="4"/>
+            <xs:enumeration value="5"/>
+            <xs:enumeration value="6"/>
+            <xs:enumeration value="7"/>
+            <xs:enumeration value="8"/>
+            <xs:enumeration value="9"/>
         </xs:restriction>
     </xs:simpleType>
 
@@ -2511,7 +2539,7 @@
     <xs:element name="payFacCredit" substitutionGroup="xp:transaction">
         <xs:complexType>
             <xs:complexContent>
-                <xs:extension base="xp:transactionTypeWithReportGroup">
+                <xs:extension base="xp:transactionTypeWithReportGroupAndRtp">
                     <xs:choice>
                         <xs:sequence>
                             <xs:element name="fundingSubmerchantId" type="xp:merchantIdentificationType"/>
@@ -2567,7 +2595,7 @@
     <xs:element name="reserveCredit" substitutionGroup="xp:transaction">
         <xs:complexType>
             <xs:complexContent>
-                <xs:extension base="xp:transactionTypeWithReportGroup">
+                <xs:extension base="xp:transactionTypeWithReportGroupAndRtp">
                     <xs:choice>
                         <xs:sequence>
                             <xs:choice>
@@ -2922,7 +2950,7 @@
     <xs:element name="payoutOrgCredit" substitutionGroup="xp:transaction">
         <xs:complexType>
             <xs:complexContent>
-                <xs:extension base="xp:transactionTypeWithReportGroup">
+                <xs:extension base="xp:transactionTypeWithReportGroupAndRtp">
                     <xs:choice>
                         <xs:sequence>
                             <xs:element name="fundingCustomerId" type="xp:merchantIdentificationType"/>
@@ -3340,5 +3368,14 @@
             <xs:element name="message" type="xp:messageType" minOccurs="0"/>
         </xs:all>
     </xs:complexType>
+
+    <xs:element name="partialCapture">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="partialCaptureSequenceNumber" type="xp:partialCaptureCount" minOccurs="0"/>
+                <xs:element name="partialCaptureTotalCount" type="xp:partialCaptureCount" minOccurs="0"/>
+       </xs:sequence>
+        </xs:complexType>
+    </xs:element>
 
 </xs:schema>
