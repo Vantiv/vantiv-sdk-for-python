@@ -109,6 +109,7 @@ authReversal
         :var cnpTxnId: String or Number
         :var customerId: String or Number
         :var id: String or Number
+        :var identityBundle: instance of :py:class:`vantivsdk.fields.identityBundle`
         :var payPalNotes: String or Number
         :var reportGroup: String or Number
         :var surchargeAmount: String or Number
@@ -145,6 +146,7 @@ authorization
         :var fsErrorCode: String or Number
         :var healthcareIIAS: instance of :py:class:`vantivsdk.fields.healthcareIIAS`
         :var id: String or Number
+        :var identityBundle: instance of :py:class:`vantivsdk.fields.identityBundle`
         :var lodgingInfo: instance of :py:class:`vantivsdk.fields.lodgingInfo`
         :var merchantAccountStatus: String or Number
         :var merchantCategoryCode: String or Number
@@ -154,6 +156,7 @@ authorization
         :var orderId: String or Number
         :var orderSource: String or Number
         :var originalNetworkTransactionId: String or Number
+        :var originalRetrievalReferenceNumber: String or Number
         :var originalTransactionAmount: String or Number
         :var overridePolicy: String or Number
         :var passengerTransportData: instance of :py:class:`vantivsdk.fields.passengerTransportData`
@@ -206,6 +209,7 @@ capture
         :var enhancedData: instance of :py:class:`vantivsdk.fields.enhancedData`
         :var foreignRetailerIndicator: String or Number
         :var id: String or Number
+        :var identityBundle: instance of :py:class:`vantivsdk.fields.identityBundle`
         :var lodgingInfo: instance of :py:class:`vantivsdk.fields.lodgingInfo`
         :var orderId: String or Number
         :var partial: String or Number
@@ -289,6 +293,7 @@ credit
         :var customerId: String or Number
         :var enhancedData: instance of :py:class:`vantivsdk.fields.enhancedData`
         :var id: String or Number
+        :var identityBundle: instance of :py:class:`vantivsdk.fields.identityBundle`
         :var lodgingInfo: instance of :py:class:`vantivsdk.fields.lodgingInfo`
         :var merchantCategoryCode: String or Number
         :var merchantData: instance of :py:class:`vantivsdk.fields.merchantDataType`
@@ -386,6 +391,7 @@ depositTransactionReversal
         :var customerId: String or Number
         :var enhancedData: instance of :py:class:`vantivsdk.fields.enhancedData`
         :var id: String or Number
+        :var identityBundle: instance of :py:class:`vantivsdk.fields.identityBundle`
         :var lodgingInfo: instance of :py:class:`vantivsdk.fields.lodgingInfo`
         :var passengerTransportData: instance of :py:class:`vantivsdk.fields.passengerTransportData`
         :var pin: String or Number
@@ -744,6 +750,33 @@ queryTransaction
         :var reportGroup: String or Number
         :var showStatusOnly: String or Number
 
+realtimeIncrementalAuthorization
+--------------------------------
+    .. py:class:: vantivsdk.fields.realtimeIncrementalAuthorization
+
+        :var allowPartialAuth: String or Number
+        :var amount: String or Number
+        :var applepay: instance of :py:class:`vantivsdk.fields.applepayType`
+        :var billToAddress: instance of :py:class:`vantivsdk.fields.billToAddress`
+        :var card: instance of :py:class:`vantivsdk.fields.cardType`
+        :var cardholderAuthentication: instance of :py:class:`vantivsdk.fields.fraudCheckType`
+        :var cnpTxnId: String or Number
+        :var cumulativeAmount: String or Number
+        :var customBilling: instance of :py:class:`vantivsdk.fields.customBilling`
+        :var customerId: String or Number
+        :var id: String or Number
+        :var merchantCategoryCode: String or Number
+        :var orderId: String or Number
+        :var orderSource: String or Number
+        :var originalNetworkTransactionId: String or Number
+        :var originalRetrievalReferenceNumber: String or Number
+        :var originalTransactionAmount: String or Number
+        :var paypage: instance of :py:class:`vantivsdk.fields.cardPaypageType`
+        :var reportGroup: String or Number
+        :var shipToAddress: instance of :py:class:`vantivsdk.fields.shipToAddress`
+        :var token: instance of :py:class:`vantivsdk.fields.cardTokenType`
+        :var wallet: instance of :py:class:`vantivsdk.fields.wallet`
+
 refundReversal
 --------------
     .. py:class:: vantivsdk.fields.refundReversal
@@ -769,6 +802,7 @@ refundTransactionReversal
         :var customerId: String or Number
         :var enhancedData: instance of :py:class:`vantivsdk.fields.enhancedData`
         :var id: String or Number
+        :var identityBundle: instance of :py:class:`vantivsdk.fields.identityBundle`
         :var lodgingInfo: instance of :py:class:`vantivsdk.fields.lodgingInfo`
         :var passengerTransportData: instance of :py:class:`vantivsdk.fields.passengerTransportData`
         :var pin: String or Number
@@ -833,7 +867,7 @@ sale
         :var businessIndicator: String or Number
         :var card: instance of :py:class:`vantivsdk.fields.cardType`
         :var cardholderAuthentication: instance of :py:class:`vantivsdk.fields.fraudCheckType`
-        :var cnpInternalRecurringRequest: instance of :py:class:`vantivsdk.fields.cnpInternalRecurringRequestType`
+        :var cnpInternalRecurringRequest: String or Number
         :var cnpTxnId: String or Number
         :var conversionAffiliateId: String or Number
         :var crypto: String or Number
@@ -855,6 +889,7 @@ sale
         :var healthcareIIAS: instance of :py:class:`vantivsdk.fields.healthcareIIAS`
         :var id: String or Number
         :var ideal: instance of :py:class:`vantivsdk.fields.idealType`
+        :var identityBundle: instance of :py:class:`vantivsdk.fields.identityBundle`
         :var lodgingInfo: instance of :py:class:`vantivsdk.fields.lodgingInfo`
         :var merchantAccountStatus: String or Number
         :var merchantCategoryCode: String or Number
@@ -931,16 +966,6 @@ submerchantDebit
         :var reportGroup: String or Number
         :var submerchantName: String or Number
 
-translateToLowValueTokenRequest
--------------------------------
-    .. py:class:: vantivsdk.fields.translateToLowValueTokenRequest
-
-        :var customerId: String or Number
-        :var id: String or Number
-        :var orderId: String or Number
-        :var reportGroup: String or Number
-        :var token: String or Number
-
 unload
 ------
     .. py:class:: vantivsdk.fields.unload
@@ -966,17 +991,6 @@ unloadReversal
         :var originalSequenceNumber: String or Number
         :var originalSystemTraceId: String or Number
         :var originalTxnTime: String or Number
-        :var reportGroup: String or Number
-
-updateCardValidationNumOnToken
-------------------------------
-    .. py:class:: vantivsdk.fields.updateCardValidationNumOnToken
-
-        :var cardValidationNum: String or Number
-        :var cnpToken: String or Number
-        :var customerId: String or Number
-        :var id: String or Number
-        :var orderId: String or Number
         :var reportGroup: String or Number
 
 updatePlan

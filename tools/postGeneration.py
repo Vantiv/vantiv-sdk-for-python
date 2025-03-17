@@ -53,11 +53,11 @@ def remove_absolute_path(_package_root):
         lines = ori_xsd.readlines()
 
         lines_index = -1
-        abs_location = re.compile('pyxb.utils.utility.Location\(')
+        abs_location = re.compile(r'pyxb.utils.utility.Location\(')
         for line in lines:
             lines_index += 1
             if abs_location.search(line):
-                abs_path = re.search("pyxb.utils.utility.Location\('(.*?)'", line).group(1).strip()
+                abs_path = re.search(r"pyxb.utils.utility.Location\('(.*?)'", line).group(1).strip()
                 new_line = line.replace(abs_path, os.path.basename(abs_path))
                 lines[lines_index] = new_line
                 #print('-', line)
@@ -83,10 +83,10 @@ def get_class_dict(_package_root):
         elem_ref_set = set()
         anonymous_type_dict = dict()
         lines = xsd_file.readlines()
-        txns_head = re.compile('<xs:element name=\"(\w+)\"\s*substitutionGroup=\"xp:(\w+)\".*>')
-        elem_complex = re.compile('<xs:element\s*name=\"(\w+)\"\s*type=\"xp:(\w+)\".*\/>')
-        elem_ref = re.compile('<xs:element.*ref="xp:(\w+)".*/>')
-        element_head = re.compile('<xs:element\s*name=\"(\w+)\".*>')
+        txns_head = re.compile(r'<xs:element name=\"(\w+)\"\s*substitutionGroup=\"xp:(\w+)\".*>')
+        elem_complex = re.compile(r'<xs:element\s*name=\"(\w+)\"\s*type=\"xp:(\w+)\".*\/>')
+        elem_ref = re.compile(r'<xs:element.*ref="xp:(\w+)".*/>')
+        element_head = re.compile(r'<xs:element\s*name=\"(\w+)\".*>')
         lines_index = -1
         for line in lines:
             lines_index += 1
@@ -108,7 +108,7 @@ def get_class_dict(_package_root):
             if found_elem_ref:
                 elem_ref_set.add(found_elem_ref.group(1).strip())
             found_element_head = element_head.search(line)
-            if found_element_head and re.search('<xs:complexType>', lines[lines_index + 1]):
+            if found_element_head and re.search(r'<xs:complexType>', lines[lines_index + 1]):
                 _name = found_element_head.group(1).strip()
                 try:
                     obj = getattr(fields, _name)()
@@ -174,10 +174,10 @@ def get_class_dict(_package_root):
 def _find_types(lines, root_ele_name, ele_name, complexType=False):
     result = ''
     found_root = False
-    root_ele = re.compile('<xs:element\s*name=\"%s\".*>' % root_ele_name)
+    root_ele = re.compile(r'<xs:element\s*name=\"%s\".*>' % root_ele_name)
     if complexType:
-        root_ele = re.compile('<xs:complexType\s*name=\"%s\".*>' % root_ele_name)
-    ele_head = re.compile('<xs:element\s*name=\"%s\"\s*type=\"xp:(\w+)\".*\/>' % ele_name)
+        root_ele = re.compile(r'<xs:complexType\s*name=\"%s\".*>' % root_ele_name)
+    ele_head = re.compile(r'<xs:element\s*name=\"%s\"\s*type=\"xp:(\w+)\".*\/>' % ele_name)
     for line in lines:
         if not found_root:
             if root_ele.search(line):
