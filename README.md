@@ -4,12 +4,12 @@ Vantiv eCommerce Python SDK
 ##### All major version changes require recertification to the new version. Once certified for the use of a new version, Vantiv modifies your Merchant Profile, allowing you to submit transaction to the Production Environment using the new version. Updating your code without recertification and modification of your Merchant Profile will result in transaction declines. Please consult you Implementation Analyst for additional information about this process.
 About Vantiv eCommerce
 ----------------------
-[Vantiv eCommerce](https://developer.vantiv.com/community/ecommerce) powers the payment processing engines for leading companies that sell directly to consumers through  internet retail, direct response marketing (TV, radio and telephone), and online services. Vantiv eCommerce is the leading authority in card-not-present (CNP) commerce, transaction processing and merchant services.
+[Vantiv eCommerce](http://support.worldpay.com/support/CNP-API/content/introduction.htm) powers the payment processing engines for leading companies that sell directly to consumers through  internet retail, direct response marketing (TV, radio and telephone), and online services. Vantiv eCommerce is the leading authority in card-not-present (CNP) commerce, transaction processing and merchant services.
 
 
 About this SDK
 --------------
-The Vantiv eCommerce Python SDK is a Python implementation of the [Vantiv eCommerce](https://developer.vantiv.com/community/ecommerce) XML API. This SDK was created to make it as easy as possible to connect to and process payments through Vantiv eCommerce. This SDK utilizes the HTTPS protocol to securely connect to Vantiv eCommerce.  Using the SDK requires coordination with the Vantiv eCommerce team to obtain credentials for accessing our systems.
+The Vantiv eCommerce Python SDK is a Python implementation of the [Vantiv eCommerce](http://support.worldpay.com/support/CNP-API/content/introduction.htm) XML API. This SDK was created to make it as easy as possible to connect to and process payments through Vantiv eCommerce. This SDK utilizes the HTTPS protocol to securely connect to Vantiv eCommerce.  Using the SDK requires coordination with the Vantiv eCommerce team to obtain credentials for accessing our systems.
 
 Each Python SDK release supports all the functionality present in the associated Vantiv eCommerce XML version (e.g., 12.0.x supports Vantiv eCommerce XML v12.0). Please see the online copy of our XSD for Vantiv eCommerce XML to get more details on what the Vantiv eCommerce payments engine supports .
 
@@ -23,7 +23,7 @@ More examples can be found here https://github.com/Vantiv/vantiv-sdk-for-python/
 
 Detail documents can be found here http://vantivecommercepythonsdk.readthedocs.io/en/12.x/
 
-Please contact [Vantiv eCommerce](https://developer.vantiv.com/community/ecommerce) to receive valid merchant credentials and determine which version of the SDK is right for your business requirements or if you require assistance in any other way.  You can reach us at sdksupport@fisglobal.com
+Please contact [Vantiv eCommerce](http://support.worldpay.com/support/CNP-API/content/introduction.htm) to receive valid merchant credentials and determine which version of the SDK is right for your business requirements or if you require assistance in any other way.  You can reach us at sdksupport@worldpay.com
 
 Dependencies
 ------------
@@ -216,4 +216,4 @@ NOTE: you may need to edit the proxy to to work for your system
     Message: Valid Format
     cnp Transaction ID: <your-numeric-cnp-txn-id>
 
-Please contact Vantiv eCommerce with any further questions. You can reach us at sdksupport@fisglobal.com
+Please contact Vantiv eCommerce with any further questions. You can reach us at sdksupport@worldpay.com

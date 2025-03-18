@@ -103,6 +103,12 @@
         </xs:restriction>
     </xs:simpleType>
 
+    <xs:simpleType name="string12Type">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="12" />
+        </xs:restriction>
+    </xs:simpleType>
+
     <xs:simpleType name="string14Type">
         <xs:restriction base="xs:string">
             <xs:maxLength value="14" />
@@ -155,7 +161,7 @@
     <xs:simpleType name="stringipAddress">
         <xs:restriction base="xs:string">
             <xs:maxLength value="100" />
-            <xs:pattern value="[A-Z,a-z,0-9, ,:,.]*"/>
+            <xs:pattern value="[A-Za-z0-9 :.]*"/>
         </xs:restriction>
     </xs:simpleType>
 
@@ -797,7 +803,7 @@
     <xs:simpleType name="customBillingUrlType">
         <xs:restriction base="xs:string">
             <xs:maxLength value="13" />
-            <xs:pattern value="[A-Z,a-z,0-9,/,\-,_,.]*"/>
+            <xs:pattern value="[A-Za-z0-9/\-_.]*"/>
         </xs:restriction>
     </xs:simpleType>
 
@@ -1071,7 +1077,7 @@
     </xs:simpleType>
     <xs:simpleType name="awpTokenUrlType">
         <xs:restriction base="xs:string">
-            <xs:pattern value="http.?://.*/.*"/>
+            <xs:pattern value="https?://[^/]+/.*"/>
             <xs:maxLength value="400"/>
         </xs:restriction>
     </xs:simpleType>
@@ -1146,7 +1152,7 @@
 
     <xs:simpleType name="stringExactly16AlphanumericType">
         <xs:restriction base="xs:string">
-            <xs:pattern value="[A-Z,a-z,0-9]{16,16}"/>
+            <xs:pattern value="[A-Za-z0-9]{16,16}"/>
         </xs:restriction>
     </xs:simpleType>
 

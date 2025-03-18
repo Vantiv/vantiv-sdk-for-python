@@ -10,14 +10,15 @@ if sys.version_info[:2] < (3, 8):
 (You have %s.)''' % (sys.version,))
 
 setup(
-    name='VantiveCommerceSDK',
-    version='12.40.0',
+    name='vantivecommercesdk',
+    version='12.44.0',
     description='Vantiv eCommerce Python SDK',
     author='Vantiv eCommerce',
-    author_email='SDKSupport@vantiv.com',
-    url='https://developer.vantiv.com/community/ecommerce',
+    author_email='SDKSupport@worldpay.com',
+    url='https://vantiv.github.io/python/',
     packages=['vantivsdk', 'scripts'],
     install_requires=[
+        'xmlschema',
         'PyXB-X>=1.2.6.1',
         'paramiko>=1.14.0',
         'requests>=2.13.0',
@@ -56,7 +57,7 @@ setup(
     long_description='''Vantiv eCommerce Python SDK
 =============================
 
-.. _`Vantiv eCommerce`: https://developer.vantiv.com/community/ecommerce
+.. _`Vantiv eCommerce`: http://support.worldpay.com/support/CNP-API/content/introduction.htm
 
 About Vantiv eCommerce
 ----------------------
@@ -277,4 +278,5 @@ Using object
     print('CNPTransaction ID: %s' % response['batchResponse']['authorizationResponse']['cnpTxnId'])
 
 ''',
+    long_description_content_type='text/markdown'
 )

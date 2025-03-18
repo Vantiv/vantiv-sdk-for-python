@@ -212,7 +212,6 @@ class TestAuth(unittest.TestCase):
         self.assertEquals('000', response['authorizationResponse']['response'])
         self.assertEquals('sandbox', response['authorizationResponse']['location'])
 
-
     def test_simple_auth_with_android_pay(self):
         authorization = fields.authorization()
         authorization.reportGroup = 'Planets'
@@ -703,7 +702,7 @@ class TestAuth(unittest.TestCase):
 
         response = online.request(authorization, conf)
 
-        self.assertEquals('false',response['authorizationResponse']['authMax']['authMaxApplied'])
+        self.assertEquals('false', response['authorizationResponse']['authMax']['authMaxApplied'])
         self.assertEquals('001', response['authorizationResponse']['response'])
         self.assertEquals('sandbox', response['authorizationResponse']['location'])
 
@@ -876,6 +875,58 @@ class TestAuth(unittest.TestCase):
         response = online.request(authorization, conf)
         self.assertEqual('000', response['authorizationResponse']['response'])
         self.assertEqual('sandbox', response['authorizationResponse']['location'])
+
+    def test_simple_auth_with_identity_bundle(self):
+        authorization = fields.authorization()
+        authorization.id = '1'
+        authorization.customerId = 'Cust0403'
+        authorization.reportGroup = 'Default Report Group'
+        authorization.orderId = '12344401'
+        authorization.amount = 999999999999
+        authorization.orderSource = 'ecommerce'
+        line_item_data_list = list()
+        line_item_data = fields.lineItemData()
+        line_item_data.itemDescription = 'des'
+        line_item_data.itemCategory = 'Chock'
+        line_item_data.shipmentId = 'prod1234'
+        sub = fields.subscription()
+        sub.subscriptionId = '123'
+        sub.nextDeliveryDate = datetime.datetime.now().strftime("%Y-%m-%d")
+        sub.periodUnit = 'YEAR'
+        sub.numberOfPeriods = '748'
+        sub.regularItemPrice = 148
+        sub.currentPeriod = '476'
+        line_item_data.subscription = sub
+        line_item_data_list.append(line_item_data)
+        enhanced_data = fields.enhancedData()
+        enhanced_data.lineItemData = line_item_data_list
+        authorization.enhancedData = enhanced_data
+        card = fields.cardType()
+        card.number = '4457010000000009'
+        card.expDate = '1210'
+        card.type = 'VI'
+        cardholder_authentication = fields.fraudCheckType()
+        cardholder_authentication.customerIpAddress = '127.0.0.1'
+        cardholder_authentication.authenticationProtocolVersion = 9  # (v12.40 new values added for authenticationProtocolVersionType enum - 3,4,5,6,7,8,9)
+        authorization.card = card
+        authorization.cardholderAuthentication = cardholder_authentication
+        authorization.typeOfDigitalCurrency = 'Bcoin'  # (v12.40 new element typeOfDigitalCurrency added in auth request)
+        authorization.conversionAffiliateId = 'DC12345'  # (v12.40 new element conversionAffiliateId added in auth request)
+        identity_bundle = fields.identityBundle()
+        identity_bundle.merchantId = "merchantId"
+        identity_bundle.entityId = "entityId"
+        identity_bundle.entityReference = "entityReference"
+        identity_bundle.resourceId = "resourceId"
+        identity_bundle.resourceReference = "resourceReference"
+        identity_bundle.commandId = "commandId"
+        identity_bundle.commandReference = "commandReference"
+        identity_bundle.orderReference = "orderReference"
+        authorization.identityBundle = identity_bundle
+
+        response = online.request(authorization, conf)
+        self.assertEqual('000', response['authorizationResponse']['response'])
+        self.assertEqual('sandbox', response['authorizationResponse']['location'])
+
 
 if __name__ == '__main__':
     unittest.main()

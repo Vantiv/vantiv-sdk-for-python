@@ -160,7 +160,6 @@ class TestSale(unittest.TestCase):
                           response['saleResponse']['androidpayResponse']['cryptogram'])
         self.assertEquals('sandbox', response['saleResponse']['location'])
 
-
     def test_simple_sale_with_token(self):
         transaction = fields.sale()
         transaction.reportGroup = 'Planets'
@@ -180,7 +179,6 @@ class TestSale(unittest.TestCase):
         response = online.request(transaction, conf)
         self.assertEquals('000', response['saleResponse']['response'])
         self.assertEquals('sandbox', response['saleResponse']['location'])
-
 
     def test_simple_sale_with_token(self):
         txn_dict = {
@@ -285,6 +283,7 @@ class TestSale(unittest.TestCase):
         response = online.request(transaction, conf)
         self.assertEquals('000', response['saleResponse']['response'])
         self.assertEquals('sandbox', response['saleResponse']['location'])
+
     def test_simple_sale_with_guaranteed_payment(self):
         transaction = fields.sale()
         transaction.id = '12345'
@@ -334,7 +333,6 @@ class TestSale(unittest.TestCase):
 
         self.assertEquals('sandbox', response['saleResponse']['location'])
 
-
     def test_sale_with_sepa_direct_debit(self):
         transaction = fields.sale()
         transaction.id = '12345'
@@ -380,8 +378,6 @@ class TestSale(unittest.TestCase):
         self.assertEquals('http://redirect.url.vantiv.com',
                           response['saleResponse']['idealResponse']['redirectUrl'])
         self.assertEquals('sandbox', response['saleResponse']['location'])
-
-
 
     def test_sale_with_giropay(self):
         transaction = fields.sale()
@@ -668,7 +664,6 @@ class TestSale(unittest.TestCase):
         self.assertEquals('000', response['saleResponse']['response'])
         self.assertEquals('sandbox', response['saleResponse']['location'])
 
-
     def test_simple_auth_with_passenger_Transport_Data_triplegData(self):
         transaction = fields.sale()
         transaction.reportGroup = 'Planets'
@@ -926,6 +921,60 @@ class TestSale(unittest.TestCase):
         response = online.request(transaction, conf)
         self.assertEqual('000', response['saleResponse']['response'])
         self.assertEqual('sandbox', response['saleResponse']['location'])
+
+    def test_sale_with_identity_bundle(self):
+        transaction = fields.sale()
+        transaction.reportGroup = 'Default Report Group'
+        transaction.orderId = '8484'
+        transaction.amount = 100
+        transaction.orderSource = 'ecommerce'
+        transaction.id = 'ThisIsID'
+        transaction.businessIndicator = 'businessToBusinessTransfer'
+        card = fields.cardType()
+        card.number = '4457010000000009'
+        card.expDate = '1210'
+        card.type = 'VI'
+        cardholder_authentication = fields.fraudCheckType()
+        cardholder_authentication.customerIpAddress = '127.0.0.1'
+        transaction.card = card
+        transaction.cardholderAuthentication = cardholder_authentication
+        line_item_data_list = list()
+        line_item_data = fields.lineItemData()
+        line_item_data.itemDescription = 'des'
+        line_item_data.itemCategory = 'Chock'
+        line_item_data.itemCategory = 'Chock'
+        line_item_data.itemSubCategory = 'pen'
+        line_item_data.productId = '001'
+        line_item_data.productName = 'prod'
+        line_item_data.shipmentId = 'prod1234'
+        sub = fields.subscription()
+        sub.subscriptionId = '567'
+        sub.nextDeliveryDate = datetime.datetime.now().strftime("%Y-%m-%d")
+        sub.periodUnit = 'WEEK'
+        sub.numberOfPeriods = '100'
+        sub.regularItemPrice = 176
+        sub.currentPeriod = '506'
+        line_item_data.subscription = sub
+        line_item_data_list.append(line_item_data)
+        enhanced_data = fields.enhancedData()
+        enhanced_data.lineItemData = line_item_data_list
+        enhanced_data.fulfilmentMethodType = 'STANDARD_SHIPPING'
+        transaction.enhancedData = enhanced_data
+        identity_bundle = fields.identityBundle()
+        identity_bundle.merchantId = "merchantId"
+        identity_bundle.entityId = "entityId"
+        identity_bundle.entityReference = "entityReference"
+        identity_bundle.resourceId = "resourceId"
+        identity_bundle.resourceReference = "resourceReference"
+        identity_bundle.commandId = "commandId"
+        identity_bundle.commandReference = "commandReference"
+        identity_bundle.orderReference = "orderReference"
+        transaction.identityBundle = identity_bundle
+
+        response = online.request(transaction, conf)
+        self.assertEqual('000', response['saleResponse']['response'])
+        self.assertEqual('sandbox', response['saleResponse']['location'])
+
 
 if __name__ == '__main__':
     unittest.main()

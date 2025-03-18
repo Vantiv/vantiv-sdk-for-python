@@ -62,20 +62,20 @@ def combine_xsd(_version, _package_root):
         with open(schema_files[schema_file_names[i]], 'r') as file_r:
             f_str = file_r.read().replace('</xs:schema>', '')
 
-            found = re.search('<\?xml.*?\?>', f_str, flags=re.M)
+            found = re.search(r'<\?xml.*?\?>', f_str, flags=re.M)
             while found:
                 f_str = f_str.replace(found.group(0), '')
-                found = re.search('<\?xml.*?\?>', f_str, flags=re.M)
+                found = re.search(r'<\?xml.*?\?>', f_str, flags=re.M)
 
-            found = re.search('<xs:schema.*?\n.*?>', f_str, flags=re.M)
+            found = re.search(r'<xs:schema.*?\n.*?.*?\n*.*?>', f_str, flags=re.M)
             while found:
                 f_str = f_str.replace(found.group(0), '')
-                found = re.search('<xs:schema.*?\n.*?>', f_str, flags=re.M)
+                found = re.search(r'<xs:schema.*?\n.*?.*?\n*.*?>', f_str, flags=re.M)
 
-            found = re.search('<xs:include.*?/>', f_str, flags=re.M)
+            found = re.search(r'<xs:include.*?/>', f_str, flags=re.M)
             while found:
                 f_str = f_str.replace(found.group(0), '')
-                found = re.search('<xs:include.*?/>', f_str, flags=re.M)
+                found = re.search(r'<xs:include.*?/>', f_str, flags=re.M)
             combined_xsd_str += '<!--%s-->' % schema_file_names[i]
             combined_xsd_str += f_str
 
@@ -103,8 +103,8 @@ def fix_paypal_in_credit(_path_to_edited_xsd):
         lines = ori_xsd.readlines()
 
         # Edit complexType of payPal, add option of payerEmail
-        type_paypal_head = re.compile('<xs:complexType name="payPal">')
-        type_paypal_end = re.compile('</xs:complexType>')
+        type_paypal_head = re.compile(r'<xs:complexType name="payPal">')
+        type_paypal_end = re.compile(r'</xs:complexType>')
         found_type_paypal_head = False
         # Have to set minOccurs of transactionId to 0, because when payPal is used in Credit, only payerId needed.
         old_paypal = ''
@@ -143,13 +143,13 @@ def fix_paypal_in_credit(_path_to_edited_xsd):
         old_paypal = ''
         new_paypal = '                                    ' \
                      '<xs:element name="paypal" type="xp:payPal" />\n'
-        credit_head = re.compile('<xs:element name="credit" substitutionGroup="xp:transaction">')
+        credit_head = re.compile(r'<xs:element name="credit" substitutionGroup="xp:transaction">')
         found_credit_head = False
-        paypal_elm_head = re.compile('<xs:element name="paypal">')
+        paypal_elm_head = re.compile(r'<xs:element name="paypal">')
         found_paypal_elm_head = False
-        paypal_ct_end = re.compile('</xs:complexType>')
+        paypal_ct_end = re.compile(r'</xs:complexType>')
         found_paypal_ct_end = False
-        paypal_elm_end = re.compile('</xs:element>')
+        paypal_elm_end = re.compile(r'</xs:element>')
         for line in lines:
             lines_index += 1
             if not found_credit_head:
@@ -197,9 +197,9 @@ def remove_named_simple_type(_path_to_edited_xsd):
         # build simple type to build-in type mapping dict, and delete the simple type definition.
         # {"xp:simple_type_name": "xs:build-in_type_name"}
         lines_index = -1
-        simple_type_head = re.compile('<xs:simpleType.*name')
-        simple_type_restriction = re.compile('<xs:restriction')
-        simple_type_end = re.compile('</xs:simpleType>')
+        simple_type_head = re.compile(r'<xs:simpleType.*name')
+        simple_type_restriction = re.compile(r'<xs:restriction')
+        simple_type_end = re.compile(r'</xs:simpleType>')
         found_simple_type_head = False
         old_content = ''
         for line in lines:
@@ -208,8 +208,8 @@ def remove_named_simple_type(_path_to_edited_xsd):
                 if simple_type_head.search(line) and simple_type_restriction.search(lines[lines_index + 1]):
                     found_simple_type_head = True
                     old_content += lines[lines_index]
-                    type_name = 'xp:' + re.search(' name="(.*)"', line).group(1).strip()
-                    base_type_name = re.search(' base="(.*)"', lines[lines_index + 1]).group(1).strip()
+                    type_name = 'xp:' + re.search(r' name="(.*)"', line).group(1).strip()
+                    base_type_name = re.search(r' base="(.*)"', lines[lines_index + 1]).group(1).strip()
                     if base_type_name == 'xs:base64Binary':
                         base_type_name = 'xs:string'
                     type_dict[type_name] = base_type_name
@@ -222,12 +222,12 @@ def remove_named_simple_type(_path_to_edited_xsd):
 
         # Replace the simple types that deleted before with build-in type.
         lines_index = -1
-        elm_with_simple_type = re.compile(' type="')
-        elm_base_simple_type = re.compile(' base="')
+        elm_with_simple_type = re.compile(r' type="')
+        elm_base_simple_type = re.compile(r' base="')
         for line in lines:
             lines_index += 1
             if elm_with_simple_type.search(line):
-                type_name = re.search(' type="(.*?)"', line).group(1)
+                type_name = re.search(r' type="(.*?)"', line).group(1)
                 #print(type_name)
                 if type_name in type_dict.keys():
                     new_line = line.replace(type_name, type_dict[type_name])
@@ -236,7 +236,7 @@ def remove_named_simple_type(_path_to_edited_xsd):
                     #print()
                     lines[lines_index] = new_line
             elif elm_base_simple_type.search(line):
-                type_name = re.search(' base="(.*?)"', line).group(1)
+                type_name = re.search(r' base="(.*?)"', line).group(1)
                 #print(type_name)
                 if type_name in type_dict.keys():
                     new_line = line.replace(type_name, type_dict[type_name])
@@ -266,10 +266,10 @@ def remove_anonymous_simple_type(_path_to_edited_xsd):
         lines = xsd_file.readlines()
 
         lines_index = -1
-        element_head = re.compile('<xs:element.*?(?<!/)>')
-        simple_type_head = re.compile('<xs:simpleType>')
-        simple_type_restriction = re.compile('<xs:restriction')
-        element_end = re.compile('</xs:element>')
+        element_head = re.compile(r'<xs:element.*?(?<!/)>')
+        simple_type_head = re.compile(r'<xs:simpleType>')
+        simple_type_restriction = re.compile(r'<xs:restriction')
+        element_end = re.compile(r'</xs:element>')
         found_simple_type_head = False
         old_content = ''
         new_content = ''
@@ -279,7 +279,7 @@ def remove_anonymous_simple_type(_path_to_edited_xsd):
                 if simple_type_head.search(line) and simple_type_restriction.search(lines[lines_index + 1]) \
                         and element_head.search(lines[lines_index - 1]):
                     found_simple_type_head = True
-                    base_type_name = re.search(' base="(.*)"', lines[lines_index + 1]).group(1).strip()
+                    base_type_name = re.search(r' base="(.*)"', lines[lines_index + 1]).group(1).strip()
                     if base_type_name == 'xs:base64Binary':
                         base_type_name = 'xs:string'
                     old_content += lines[lines_index - 1]
@@ -315,10 +315,10 @@ def set_min_occurs_0(_path_to_edited_xsd):
         lines = xsd_file.readlines()
 
         lines_index = -1
-        element_head = re.compile('<xs:element.*?/>')
-        min_occurs = re.compile('minOccurs="\d"')
-        choice_head = re.compile('<xs:choice')
-        choice_end = re.compile('</xs:choice>')
+        element_head = re.compile(r'<xs:element.*?/>')
+        min_occurs = re.compile(r'minOccurs="\d"')
+        choice_head = re.compile(r'<xs:choice')
+        choice_end = re.compile(r'</xs:choice>')
         ancestor_is_choice = False
 
         skip_line_char = [
