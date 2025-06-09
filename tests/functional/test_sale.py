@@ -62,7 +62,7 @@ class TestSale(unittest.TestCase):
 
         transaction.accountFundingTransactionData = accountfundingtransactiondata
 
-        transaction.typeOfDigitalCurrency = 'Rcoin'  # (v12.40 new element typeOfDigitalCurrency added in auth request)
+        transaction.typeOfDigitalCurrency = '7'  # (v12.40 new element typeOfDigitalCurrency added in auth request)
         transaction.conversionAffiliateId = 'DC12745'  # (v12.40 new element conversionAffiliateId added in auth request)
 
         response = online.request(transaction, conf)
@@ -875,7 +875,7 @@ class TestSale(unittest.TestCase):
         transport_data.exchangeFeeAmount = '201010'
         transaction.transport_data = transport_data
 
-        transaction.foreignRetailerIndicator = 'F'
+        transaction.foreignRetailerIndicator = 'A'
         response = online.request(transaction, conf)
         self.assertEquals('000', response['saleResponse']['response'])
         self.assertEquals('sandbox', response['saleResponse']['location'])

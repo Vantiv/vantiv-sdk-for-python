@@ -157,6 +157,7 @@ class TestOnline(unittest.TestCase):
         additionalCOFData.sequenceIndicator = '2'
 
         transaction.additionalCOFData = additionalCOFData
+        transaction.foreignRetailerIndicator = 'A'
 
         transaction.crypto = False
 

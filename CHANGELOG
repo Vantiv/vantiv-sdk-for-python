@@ -1,5 +1,10 @@
 = Vantiv eCommerce Python SDK
 
+==Change Log for 12.45 (June 09,2025)
+* Change: [cnpAPI v12.45] In existing enum 'foreignRetailerIndicatorEnum' new values 'A','B'.
+* Change: [cnpAPI v12.45] In existing authorization request new element 'foreignRetailerIndicator' of type 'foreignRetailerIndicatorEnum' is added in orderId sequence.
+* Change: [cnpAPI v12.45] In existing element 'typeOfDigitalCurrency' is modified to support only these value '1','2','3','4','7'.
+
 ==Change Log for 12.44 (March 18,2025)
 * Change: [cnpAPI v12.44] In orderSourceType enum, 'ecommerceDataOnly' value is added.
 

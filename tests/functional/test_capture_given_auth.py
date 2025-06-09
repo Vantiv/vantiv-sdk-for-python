@@ -93,7 +93,7 @@ class TestCaptureGivenAuth(unittest.TestCase):
         transaction.additionalCOFData = additionalCOFData
 
         transaction.crypto = False
-        transaction.typeOfDigitalCurrency = 'Dcoin'  # (v12.40 new element typeOfDigitalCurrency added in CaptureGivenAuth request)
+        transaction.typeOfDigitalCurrency = '7'  # (v12.40 new element typeOfDigitalCurrency added in CaptureGivenAuth request)
         transaction.conversionAffiliateId = 'DC12385'  # (v12.40 new element conversionAffiliateId added in CaptureGivenAuth request)
 
         response = online.request(transaction, conf)
