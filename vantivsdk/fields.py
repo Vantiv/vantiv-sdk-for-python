@@ -1,7 +1,7 @@
 # ./fields.py
 # -*- coding: utf-8 -*-
 # PyXB bindings for NM:9a28546cb3c6547e22c7f11b1830724889885c3f
-# Generated 2025-06-03 11:42:33.953589 by PyXB version 1.2.6 using Python 3.11.4.final.0
+# Generated 2025-06-11 12:49:22.383255 by PyXB version 1.2.6 using Python 3.11.4.final.0
 # Namespace http://www.vantivcnp.com/schema
 
 from __future__ import unicode_literals
@@ -14,7 +14,7 @@ import pyxb.utils.domutils
 import sys
 import pyxb.utils.six as _six
 # Unique identifier for bindings created at the same time
-_GenerationUID = pyxb.utils.utility.UniqueIdentifier('urn:uuid:99c1db93-6fed-4667-9527-e5dea751d5c7')
+_GenerationUID = pyxb.utils.utility.UniqueIdentifier('urn:uuid:84092571-3d6b-4258-8a9b-d7bd96b5d7d9')
 
 # Version of PyXB used to generate the bindings
 _PyXBVersion = '1.2.6'
