@@ -616,6 +616,7 @@ class TestAuth(unittest.TestCase):
         authorization.productEnrolled = 'GUARPAY2'
         authorization.decisionPurpose = 'INFORMATION_ONLY'
         authorization.fraudSwitchIndicator = "PRE"
+        authorization.foreignRetailerIndicator = "A"
         authorization.fraudCheckAction = 'APPROVED_SKIP_FRAUD_CHECK'
 
         card = fields.cardType()
@@ -680,6 +681,7 @@ class TestAuth(unittest.TestCase):
         card.expDate = '1210'
         card.type = 'VI'
         authorization.card = card
+        authorization.foreignRetailerIndicator = "F"
 
         response = online.request(authorization, conf)
         self.assertEquals('000', response['authorizationResponse']['response'])
@@ -869,7 +871,7 @@ class TestAuth(unittest.TestCase):
         cardholder_authentication.authenticationProtocolVersion = 9  # (v12.40 new values added for authenticationProtocolVersionType enum - 3,4,5,6,7,8,9)
         authorization.card = card
         authorization.cardholderAuthentication = cardholder_authentication
-        authorization.typeOfDigitalCurrency = 'Bcoin'  # (v12.40 new element typeOfDigitalCurrency added in auth request)
+        authorization.typeOfDigitalCurrency = '7'  # (v12.40 new element typeOfDigitalCurrency added in auth request)
         authorization.conversionAffiliateId = 'DC12345'  # (v12.40 new element conversionAffiliateId added in auth request)
 
         response = online.request(authorization, conf)
@@ -910,7 +912,7 @@ class TestAuth(unittest.TestCase):
         cardholder_authentication.authenticationProtocolVersion = 9  # (v12.40 new values added for authenticationProtocolVersionType enum - 3,4,5,6,7,8,9)
         authorization.card = card
         authorization.cardholderAuthentication = cardholder_authentication
-        authorization.typeOfDigitalCurrency = 'Bcoin'  # (v12.40 new element typeOfDigitalCurrency added in auth request)
+        authorization.typeOfDigitalCurrency = '7'  # (v12.40 new element typeOfDigitalCurrency added in auth request)
         authorization.conversionAffiliateId = 'DC12345'  # (v12.40 new element conversionAffiliateId added in auth request)
         identity_bundle = fields.identityBundle()
         identity_bundle.merchantId = "merchantId"

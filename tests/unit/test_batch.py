@@ -232,6 +232,7 @@ class TestBatch(unittest.TestCase):
         authorization.cnpTxnId = '34659348401'
         authorization.amount = '106'
         authorization.authIndicator = 'Incremental'
+        authorization.foreignRetailerIndicator = 'F'
 
         mock__get_file_str_from_sftp.return_value = """
              <cnpResponse xmlns="http://www.vantivcnp.com/schema" version="12.30" response="0" message="Valid Format">
@@ -302,6 +303,7 @@ class TestBatch(unittest.TestCase):
 
         authorization.orderChannel = 'MIT'
         authorization.authIndicator = 'Estimated'
+        authorization.foreignRetailerIndicator = 'A'
 
         mock__get_file_str_from_sftp.return_value = """
                  <cnpResponse xmlns="http://www.vantivcnp.com/schema" version="12.30" response="0" message="Valid Format">

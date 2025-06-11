@@ -284,6 +284,8 @@
 
 
 
+    <!--    US2081172-79564-->
+
 <!--cnpRecurring-->
 
     
@@ -726,6 +728,8 @@
                             <xs:element name="fraudSwitchIndicator" type="xs:string" minOccurs="0"/>
                             <xs:element ref="xp:passengerTransportData" minOccurs="0"/>
                             <xs:element name="authIndicator" type="xs:string" minOccurs="0"/>
+                            <!--    US2081172-79564-->
+                            <xs:element name="foreignRetailerIndicator" type="xs:string" minOccurs="0"/>
                             <xs:element ref="xp:accountFundingTransactionData" minOccurs="0"/>
                             <xs:element name="fraudCheckAction" type="xs:string" minOccurs="0"/>
                             <!--    US1938960-77433-->
@@ -4212,8 +4216,8 @@
                 </xs:extension>
             </xs:complexContent>
         </xs:complexType>
-    </xs:element>
--->
+    </xs:element>-->
+
     <xs:element name="BNPLAuthorizationRequest" substitutionGroup="xp:transaction">
         <xs:complexType>
             <xs:complexContent>

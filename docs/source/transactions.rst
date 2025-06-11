@@ -139,6 +139,7 @@ authorization
         :var decisionPurpose: String or Number
         :var enhancedData: instance of :py:class:`vantivsdk.fields.enhancedData`
         :var filtering: instance of :py:class:`vantivsdk.fields.filteringType`
+        :var foreignRetailerIndicator: String or Number
         :var fraudCheckAction: String or Number
         :var fraudCheckStatus: String or Number
         :var fraudFilterOverride: String or Number
