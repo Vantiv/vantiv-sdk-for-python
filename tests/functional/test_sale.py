@@ -56,7 +56,8 @@ class TestSale(unittest.TestCase):
         accountfundingtransactiondata.receiverLastName = 'Smith'
         accountfundingtransactiondata.receiverState = 'CA'
         accountfundingtransactiondata.receiverCountry = 'USA'
-        accountfundingtransactiondata.receiverAccountNumber = '12343564'
+        #accountfundingtransactiondata.receiverAccountNumber = '12343564'
+        accountfundingtransactiondata.receiverAccountNumberCnpToken = '12345678901223'
         accountfundingtransactiondata.receiverAccountNumberType = 'RTNAndBAN'
         accountfundingtransactiondata.accountFundingTransactionType = 'businessDisbursement'
 
@@ -914,6 +915,7 @@ class TestSale(unittest.TestCase):
         sub.currentPeriod = '506'
         lineItemData.subscription = sub
         lineItemDataList.append(lineItemData)
+        lineItemData.numberOfPayments = '4'
         enhancedData = fields.enhancedData()
         enhancedData.lineItemData = lineItemDataList
         enhancedData.fulfilmentMethodType = 'STANDARD_SHIPPING'

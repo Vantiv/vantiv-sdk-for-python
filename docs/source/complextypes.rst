@@ -7,6 +7,7 @@ accountFundingTransactionData
 
         :var accountFundingTransactionType: String or Number
         :var receiverAccountNumber: String or Number
+        :var receiverAccountNumberCnpToken: String or Number
         :var receiverAccountNumberType: String or Number
         :var receiverCountry: String or Number
         :var receiverFirstName: String or Number
@@ -286,6 +287,7 @@ enhancedData
         :var fulfilmentMethodType: String or Number
         :var invoiceReferenceNumber: String or Number
         :var lineItemData: instance of :py:class:`vantivsdk.fields.lineItemData`
+        :var numberOfPayments: String or Number
         :var orderDate: String or Number
         :var salesTax: String or Number
         :var shipFromPostalCode: String or Number
@@ -386,6 +388,7 @@ lineItemData
         :var itemDiscountAmount: String or Number
         :var itemSequenceNumber: String or Number
         :var itemSubCategory: String or Number
+        :var lineItemDetailIndicator: String or Number
         :var lineItemTotal: String or Number
         :var lineItemTotalWithTax: String or Number
         :var productCode: String or Number

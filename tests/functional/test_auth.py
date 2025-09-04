@@ -54,7 +54,8 @@ class TestAuth(unittest.TestCase):
         accountfundingtransactiondata.receiverLastName = 'Smith'
         accountfundingtransactiondata.receiverState = 'AZ'
         accountfundingtransactiondata.receiverCountry = 'USA'
-        accountfundingtransactiondata.receiverAccountNumber = '1234567890'
+        #accountfundingtransactiondata.receiverAccountNumber = '123456'
+        accountfundingtransactiondata.receiverAccountNumberCnpToken = '1234567890121'
         accountfundingtransactiondata.accountFundingTransactionType = 'walletTransfer'
         accountfundingtransactiondata.receiverAccountNumberType = 'cardAccount'
 
@@ -850,6 +851,7 @@ class TestAuth(unittest.TestCase):
         lineItemData.itemDescription = 'des'
         lineItemData.itemCategory = 'Chock'
         lineItemData.shipmentId = 'prod1234'
+        lineItemData.lineItemDetailIndicator = '0'
         sub = fields.subscription()
         sub.subscriptionId = '123'
         sub.nextDeliveryDate = datetime.datetime.now().strftime("%Y-%m-%d")
@@ -861,6 +863,7 @@ class TestAuth(unittest.TestCase):
         lineItemDataList.append(lineItemData)
         enhancedData = fields.enhancedData()
         enhancedData.lineItemData = lineItemDataList
+        enhancedData.numberOfPayments =  '+'
         authorization.enhancedData = enhancedData
         card = fields.cardType()
         card.number = '4457010000000009'

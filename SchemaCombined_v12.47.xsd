@@ -284,6 +284,9 @@
 
 
 
+
+
+
     <!--    US2081172-79564-->
 
 <!--cnpRecurring-->
@@ -1208,6 +1211,7 @@
                 <xs:element name="discountCode" type="xs:string" minOccurs="0"/>
                 <xs:element name="discountPercent" type="xs:integer" minOccurs="0"/>
                 <xs:element name="fulfilmentMethodType" type="xs:string" minOccurs="0"/>
+                <xs:element name="numberOfPayments" type="xs:string" minOccurs="0"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
@@ -1237,6 +1241,7 @@
                 <!-- quantity * unit cost -->
                 <xs:element name="lineItemTotalWithTax" type="xs:integer" minOccurs="0"/>
                 <!-- line item total + tax -->
+                <xs:element name="lineItemDetailIndicator" type="xs:string" minOccurs="0"/>
                 <xs:element name="itemDiscountAmount" type="xs:integer" minOccurs="0"/>
                 <xs:element name="commodityCode" type="xs:string" minOccurs="0"/>
                 <xs:element name="unitCost" type="xs:decimal" minOccurs="0"/>
@@ -1407,6 +1412,8 @@
                         <xs:element name="checkoutId" type="xs:string" minOccurs="0"/>
                         <!--If AuthMax is used -->
                         <xs:element ref="xp:authMax" minOccurs="0"/>
+                        <xs:element name="credentialType" type="xs:string" minOccurs="0"/>
+                        <xs:element name="cardDetails" type="xs:string" minOccurs="0"/>
                         <xs:element name="fundingTransactionReferenceNumber" type="xs:string" minOccurs="0"/>
                         <xs:element name="retrievalReferenceNumber" type="xs:string" minOccurs="0"/>
                         <xs:element name="orderSource" type="xs:string" minOccurs="0"/>
@@ -1801,6 +1808,8 @@
                         <xs:element name="checkoutId" type="xs:string" minOccurs="0"/>
                         <!--If AuthMax is used -->
                         <xs:element ref="xp:authMax" minOccurs="0"/>
+                        <xs:element name="credentialType" type="xs:string" minOccurs="0"/>
+                        <xs:element name="cardDetails" type="xs:string" minOccurs="0"/>
                         <xs:element name="fundingTransactionReferenceNumber" type="xs:string" minOccurs="0"/>
                         <xs:element name="retrievalReferenceNumber" type="xs:string" minOccurs="0"/>
                         <xs:element name="orderSource" type="xs:string" minOccurs="0"/>
@@ -3348,7 +3357,10 @@
                 <xs:element name="receiverState" type="xs:string" minOccurs="0"/>
                 <xs:element name="receiverCountry" type="xs:string" minOccurs="0"/>
                 <xs:element name="receiverAccountNumberType" type="xs:string" minOccurs="0"/>
-                <xs:element name="receiverAccountNumber" type="xs:string" minOccurs="0"/>
+                <xs:choice>
+                    <xs:element name="receiverAccountNumber" type="xs:string" minOccurs="0"/>
+                    <xs:element name="receiverAccountNumberCnpToken" type="xs:string" minOccurs="0"/>
+                </xs:choice>
                 <xs:element name="accountFundingTransactionType" type="xs:string" minOccurs="0"/>
             </xs:sequence>
         </xs:complexType>
@@ -4097,7 +4109,7 @@
         </xs:complexType>
     </xs:element>
 
-    <!--<xs:element name="vendorCredit" substitutionGroup="xp:transaction">
+  <!--  <xs:element name="vendorCredit" substitutionGroup="xp:transaction">
         <xs:complexType>
             <xs:complexContent>
                 <xs:extension base="xp:transactionTypeWithReportGroup">
