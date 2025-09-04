@@ -90,7 +90,9 @@ class Configuration(object):
             "payfacSftpPassword_v12_7": "",
             "oltpEncryptionKeySequence": "",
             "oltpEncryptionPayload": False,
-            "oltpEncryptionKeyPath": ""
+            "oltpEncryptionKeyPath": "",
+            "sendEcomHeader": False,
+            "ecomHeaderValue": ""
         }
 
         # set default values
