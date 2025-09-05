@@ -230,6 +230,7 @@ def _create_request_obj(transaction, conf, same_day_funding):
 
 
 def _http_post(post_data, conf, timeout):
+    ECOM_API = ''
     """Post xml to server via https using requests
 
     Args:
@@ -248,6 +249,15 @@ def _http_post(post_data, conf, timeout):
     REQUEST_RESULT_RESPONSE_TIMEOUT = 3
 
     headers = {'Content-type': 'text/xml; charset=UTF-8'}
+    if conf.sendEcomHeader:
+        headerValue = ""
+        if conf.ecomHeaderValue and conf.ecomHeaderValue.strip():
+            headerValue = conf.ecomHeaderValue
+        else:
+            headerValue = ECOM_API
+
+        headers["X-Ecom-Api"] = headerValue
+
     proxies = {'https': conf.proxy} if (conf.proxy is not None and conf.proxy != '') else None
     try:
         commManagerTemp = commManager(conf).manager

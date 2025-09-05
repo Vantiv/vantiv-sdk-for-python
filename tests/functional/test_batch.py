@@ -1112,6 +1112,7 @@ class TestBatch(unittest.TestCase):
         lineItemData.itemDescription = 'des'
         lineItemData.itemCategory = 'Chock'
         lineItemData.shipmentId = 'prod1234'
+        lineItemData.lineItemDetailIndicator = '0'
         sub = fields.subscription()
         sub.subscriptionId = '123'
         sub.nextDeliveryDate = datetime.datetime.now().strftime("%Y-%m-%d")
@@ -1123,6 +1124,7 @@ class TestBatch(unittest.TestCase):
         lineItemDataList.append(lineItemData)
         enhancedData = fields.enhancedData()
         enhancedData.lineItemData = lineItemDataList
+        enhancedData.numberOfPayments = '0'
         authorization.enhancedData = enhancedData
         txnBatch.add(authorization)
 
@@ -1317,6 +1319,7 @@ class TestBatch(unittest.TestCase):
         accountfundingtransactiondata.receiverState = 'AZ'
         accountfundingtransactiondata.receiverCountry = 'USA'
         accountfundingtransactiondata.receiverAccountNumber = '1234567890'
+        #accountfundingtransactiondata.receiverAccountNumberCnpToken = '1234567890121'
         accountfundingtransactiondata.accountFundingTransactionType = 'walletTransfer'
         accountfundingtransactiondata.receiverAccountNumberType = 'cardAccount'
         authorization.accountFundingTransactionData = accountfundingtransactiondata

@@ -125,6 +125,7 @@ class TestOnline(unittest.TestCase):
         lineItemData.itemSubCategory = 'pen'
         lineItemData.productId = '001'
         lineItemData.productName = 'prod'
+        lineItemData.lineItemDetailIndicator = '0'
         lineItemDataList.append(lineItemData)
         enhancedData = fields.enhancedData()
         enhancedData.detailTax = detailTaxList
@@ -132,7 +133,7 @@ class TestOnline(unittest.TestCase):
         enhancedData.discountCode = '001'
         enhancedData.discountPercent = '10'
         enhancedData.fulfilmentMethodType = 'DELIVERY'
-
+        enhancedData.numberOfPayments = '0'
         transaction.enhancedData = enhancedData
 
         # Create contact object
