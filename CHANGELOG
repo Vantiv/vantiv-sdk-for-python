@@ -1,5 +1,5 @@
 = Vantiv eCommerce Python SDK
-==Change Log for 12.48 (October 08,2026)
+==Change Log for 12.48 (Jan 08,2026)
 * Change: [cnpAPI v12.48] New element pazeEncryptedPayload added to both Auth and Sale transaction requests.
 * Change: [cnpAPI v12.48] New complex element TLID added in authResponse and authReversalResponse.
 * Change: [cnpAPI v12.48] New sub elements to support TLID - lifecycleTlid (type: tlidType),economicTlid (type: tlidType),tlidCustomerProvided (type: tlidType) and tlidValidationActionIndicator (type: tlidValidationActionIndicatorType)
