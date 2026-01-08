@@ -163,6 +163,7 @@ authorization
         :var passengerTransportData: instance of :py:class:`vantivsdk.fields.passengerTransportData`
         :var paypage: instance of :py:class:`vantivsdk.fields.cardPaypageType`
         :var paypal: instance of :py:class:`vantivsdk.fields.payPal`
+        :var pazeEncryptedPayload: String or Number
         :var pinlessDebitRequest: instance of :py:class:`vantivsdk.fields.pinlessDebitRequestType`
         :var pos: instance of :py:class:`vantivsdk.fields.pos`
         :var processingInstructions: instance of :py:class:`vantivsdk.fields.processingInstructions`
@@ -907,6 +908,7 @@ sale
         :var payPalOrderComplete: String or Number
         :var paypage: instance of :py:class:`vantivsdk.fields.cardPaypageType`
         :var paypal: instance of :py:class:`vantivsdk.fields.payPal`
+        :var pazeEncryptedPayload: String or Number
         :var pinlessDebitRequest: instance of :py:class:`vantivsdk.fields.pinlessDebitRequestType`
         :var pos: instance of :py:class:`vantivsdk.fields.pos`
         :var processingInstructions: instance of :py:class:`vantivsdk.fields.processingInstructions`

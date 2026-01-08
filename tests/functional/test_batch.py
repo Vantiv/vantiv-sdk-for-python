@@ -39,7 +39,7 @@ import datetime
 
 conf = utils.Configuration()
 
-preliveStatus = "down"
+preliveStatus = ""
 if "preliveStatus" in os.environ:
    preliveStatus = os.environ['preliveStatus']
 else:
@@ -210,6 +210,29 @@ class TestBatch(unittest.TestCase):
         # Add transaction to container
         transactions.add(authorization3)
 
+        # Inital authorization with PAZE load
+        authorization4 = fields.authorization()
+        authorization4.orderId = '121'
+        authorization4.amount = 1001
+        authorization4.reportGroup = 'Planets'
+        authorization4.orderSource = 'ecommerce'
+        authorization4.billtoaddress = billtoaddress
+        authorization4.id = 'thisisid'
+        authorization4.pazeEncryptedPayload = 'NTEwMDAwMDAwMDAwMDAw=='
+        # Add transaction to container
+        transactions.add(authorization4)
+
+        # Initial authorization
+        sale1 = fields.sale()
+        sale1.orderId = '121'
+        sale1.amount = 1001
+        sale1.reportGroup = 'Planets'
+        sale1.orderSource = 'ecommerce'
+        sale1.billtoaddress = billtoaddress
+        sale1.id = 'thisisid'
+        sale1.pazeEncryptedPayload = ('NTEwMDAwMDAwMDAwMDAwMA==')
+        transactions.add(sale1)
+
         # Initial authorization
         sale = fields.sale()
         sale.orderId = '1'
@@ -288,7 +311,7 @@ class TestBatch(unittest.TestCase):
             with open(os.path.join(conf.batch_requests_path, '%s.xml' % filename), 'r') as xml_file:
                 obj = fields.CreateFromDocument(xml_file.read())
                 self.assertEquals(1, obj.numBatchRequests)
-                self.assertEquals(11117, obj.batchRequest[0].authAmount)
+                self.assertEquals(12118, obj.batchRequest[0].authAmount)
 
             self.assertEquals('%s.xml.asc' % filename, response)
 
