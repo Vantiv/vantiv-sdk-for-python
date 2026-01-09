@@ -39,7 +39,7 @@ import datetime
 
 conf = utils.Configuration()
 
-preliveStatus = ""
+preliveStatus = "down"
 if "preliveStatus" in os.environ:
    preliveStatus = os.environ['preliveStatus']
 else:
