@@ -73,6 +73,8 @@
 
 
 
+
+
     <xs:complexType name="contact">
         <xs:all>
             <xs:element name="name" type="xs:string" minOccurs="0" />
@@ -695,6 +697,7 @@
                                 <xs:element name="token" type="xp:cardTokenType"/>
                                 <xs:element name="paypage" type="xp:cardPaypageType"/>
                                 <xs:element name="applepay" type="xp:applepayType"/>
+                                <xs:element name="pazeEncryptedPayload" type="xs:string"/>
                             </xs:choice>
                             <xs:element name="cardholderAuthentication" type="xp:fraudCheckType" minOccurs="0"/>
                             <xs:element ref="xp:processingInstructions" minOccurs="0"/>
@@ -940,6 +943,7 @@
                             <xs:element name="ideal" type="xp:idealType"/>
                             <xs:element name="giropay" type="xp:giropayType"/>
                             <xs:element name="sofort" type="xp:sofortType"/>
+                            <xs:element name="pazeEncryptedPayload" type="xs:string"/>
                         </xs:choice>
                         <!-- fraudCheck is not used in the mapping -->
 
@@ -1417,6 +1421,7 @@
                         <xs:element name="fundingTransactionReferenceNumber" type="xs:string" minOccurs="0"/>
                         <xs:element name="retrievalReferenceNumber" type="xs:string" minOccurs="0"/>
                         <xs:element name="orderSource" type="xs:string" minOccurs="0"/>
+                        <xs:element ref="xp:tlid" minOccurs="0"/>
                     </xs:all>
                 </xs:extension>
             </xs:complexContent>
@@ -1519,6 +1524,7 @@
                         <xs:element ref="xp:pinlessDebitResponse" minOccurs="0"/>
                         <!-- Introduced as part of Guaranteed Payments -->
                         <xs:element name="checkoutId" type="xs:string" minOccurs="0"/>
+                        <xs:element ref="xp:tlid" minOccurs="0"/>
                     </xs:all>
                 </xs:extension>
             </xs:complexContent>
@@ -2324,6 +2330,7 @@
 
 
     <!-- This is for secure, we need a value to indicate that CAVV was attempted but unavailable -->
+
 
 
 
@@ -3292,6 +3299,17 @@
                 <xs:element name="networkToken" type="xs:string" minOccurs="0"/>
                 <xs:element name="authMaxResponseCode" type="xs:string" minOccurs="0"/>
                 <xs:element name="authMaxResponseMessage" type="xs:string" minOccurs="0"/>
+            </xs:all>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="tlid">
+        <xs:complexType>
+            <xs:all>
+                <xs:element name="lifecycleTlid" type="xs:string" minOccurs="0"/>
+                <xs:element name="economicTlid" type="xs:string" minOccurs="0"/>
+                <xs:element name="tlidValidationActionIndicator" type="xs:integer" minOccurs="0"/>
+                <xs:element name="tlidCustomerProvided" type="xs:string" minOccurs="0"/>
             </xs:all>
         </xs:complexType>
     </xs:element>

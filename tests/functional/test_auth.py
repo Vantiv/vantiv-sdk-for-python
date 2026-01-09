@@ -932,6 +932,58 @@ class TestAuth(unittest.TestCase):
         self.assertEqual('000', response['authorizationResponse']['response'])
         self.assertEqual('sandbox', response['authorizationResponse']['location'])
 
+    def test_simple_auth_with_VI_approve(self):
+        authorization = fields.authorization()
+        authorization.reportGroup = 'Planets'
+        authorization.orderId = '12344'
+        authorization.amount = 106
+        authorization.orderSource = 'ecommerce'
+        authorization.id = 'thisisid'
+        authorization.pazeEncryptedPayload = 'NDEwMDAwMDAwMDAwMDAwMA=='
+
+        response = online.request(authorization, conf)
+        self.assertEquals('000', response['authorizationResponse']['response'])
+        self.assertEquals('sandbox', response['authorizationResponse']['location'])
+
+    def test_simple_auth_with_VI_Decline(self):
+        authorization = fields.authorization()
+        authorization.reportGroup = 'Planets'
+        authorization.orderId = '12344'
+        authorization.amount = 106
+        authorization.orderSource = 'ecommerce'
+        authorization.id = 'thisisid'
+        authorization.pazeEncryptedPayload = 'NDEwMDAwMDAwMDAwMDAwMQ=='
+
+        response = online.request(authorization, conf)
+        self.assertEquals('350', response['authorizationResponse']['response'])
+        self.assertEquals('sandbox', response['authorizationResponse']['location'])
+
+    def test_simple_auth_with_MC_approve(self):
+        authorization = fields.authorization()
+        authorization.reportGroup = 'Planets'
+        authorization.orderId = '12344'
+        authorization.amount = 106
+        authorization.orderSource = 'ecommerce'
+        authorization.id = 'thisisid'
+        authorization.pazeEncryptedPayload = 'NTEwMDAwMDAwMDAwMDAwMA=='
+
+        response = online.request(authorization, conf)
+        self.assertEquals('000', response['authorizationResponse']['response'])
+        self.assertEquals('sandbox', response['authorizationResponse']['location'])
+
+    def test_simple_auth_with_MC_decline(self):
+        authorization = fields.authorization()
+        authorization.reportGroup = 'Planets'
+        authorization.orderId = '12344'
+        authorization.amount = 106
+        authorization.orderSource = 'ecommerce'
+        authorization.id = 'thisisid'
+        authorization.pazeEncryptedPayload = 'NTEwMDAwMDAwMDAwMDAwMQ=='
+
+        response = online.request(authorization, conf)
+        self.assertEquals('350', response['authorizationResponse']['response'])
+        self.assertEquals('sandbox', response['authorizationResponse']['location'])
+
 
 if __name__ == '__main__':
     unittest.main()
