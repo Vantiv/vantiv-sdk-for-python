@@ -166,6 +166,7 @@ authorization
         :var pazeEncryptedPayload: String or Number
         :var pinlessDebitRequest: instance of :py:class:`vantivsdk.fields.pinlessDebitRequestType`
         :var pos: instance of :py:class:`vantivsdk.fields.pos`
+        :var preferredCustomer: String or Number
         :var processingInstructions: instance of :py:class:`vantivsdk.fields.processingInstructions`
         :var processingType: String or Number
         :var productEnrolled: String or Number
@@ -841,7 +842,6 @@ reserveCredit
         :var fundsTransferId: String or Number
         :var id: String or Number
         :var reportGroup: String or Number
-        :var rtp: String or Number
 
 reserveDebit
 ------------
@@ -911,6 +911,7 @@ sale
         :var pazeEncryptedPayload: String or Number
         :var pinlessDebitRequest: instance of :py:class:`vantivsdk.fields.pinlessDebitRequestType`
         :var pos: instance of :py:class:`vantivsdk.fields.pos`
+        :var preferredCustomer: String or Number
         :var processingInstructions: instance of :py:class:`vantivsdk.fields.processingInstructions`
         :var processingType: String or Number
         :var productEnrolled: String or Number

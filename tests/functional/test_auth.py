@@ -979,6 +979,7 @@ class TestAuth(unittest.TestCase):
         authorization.orderSource = 'ecommerce'
         authorization.id = 'thisisid'
         authorization.pazeEncryptedPayload = 'NTEwMDAwMDAwMDAwMDAwMQ=='
+        authorization.preferredCustomer = True
 
         response = online.request(authorization, conf)
         self.assertEquals('350', response['authorizationResponse']['response'])

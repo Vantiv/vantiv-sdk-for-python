@@ -175,7 +175,7 @@ class TestBatch(unittest.TestCase):
         accountfundingtransactiondata.receiverAccountNumberType = 'cardAccount'
 
         authorization.accountFundingTransactionData = accountfundingtransactiondata
-
+        authorization.prefferedCustomer = True
         # Add transaction to container
         transactions.add(authorization)
 
@@ -1573,6 +1573,7 @@ class TestBatch(unittest.TestCase):
         authorization.cardholderAuthentication = cardholder_authentication
         authorization.typeOfDigitalCurrency = 'Bcoin'  # (v12.40 new element typeOfDigitalCurrency added in auth request)
         authorization.conversionAffiliateId = 'DC12345'  # (v12.40 new element conversionAffiliateId added in auth request)
+        authorization.prefferedCustomer = False
         txnBatch.add(authorization)
 
         sale = fields.sale()
