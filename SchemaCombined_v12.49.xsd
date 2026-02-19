@@ -743,7 +743,7 @@
                             <xs:element name="conversionAffiliateId" type="xs:string" minOccurs="0"/>
                             <xs:element ref="xp:identityBundle" minOccurs="0"/>
                             <xs:element name="originalRetrievalReferenceNumber" type="xs:string" minOccurs="0"/>
-
+                            <xs:element name="preferredCustomer" type="xs:boolean" minOccurs="0"/>
                         </xs:sequence>
                     </xs:choice>
                 </xs:extension>
@@ -995,6 +995,7 @@
                         <xs:element name="typeOfDigitalCurrency" type="xs:string" minOccurs="0"/>
                         <xs:element name="conversionAffiliateId" type="xs:string" minOccurs="0"/>
                         <xs:element ref="xp:identityBundle" minOccurs="0"/>
+                        <xs:element name="preferredCustomer" type="xs:boolean" minOccurs="0"/>
                     </xs:sequence>
                 </xs:extension>
             </xs:complexContent>
@@ -1422,6 +1423,7 @@
                         <xs:element name="retrievalReferenceNumber" type="xs:string" minOccurs="0"/>
                         <xs:element name="orderSource" type="xs:string" minOccurs="0"/>
                         <xs:element ref="xp:tlid" minOccurs="0"/>
+                        <xs:element name="preferredCustomerDecision" type="xs:boolean" minOccurs="0"/>
                     </xs:all>
                 </xs:extension>
             </xs:complexContent>
@@ -1819,6 +1821,8 @@
                         <xs:element name="fundingTransactionReferenceNumber" type="xs:string" minOccurs="0"/>
                         <xs:element name="retrievalReferenceNumber" type="xs:string" minOccurs="0"/>
                         <xs:element name="orderSource" type="xs:string" minOccurs="0"/>
+                        <xs:element name="preferredCustomerDecision" type="xs:boolean" minOccurs="0"/>
+                        <xs:element ref="xp:tlid" minOccurs="0"/>
                     </xs:all>
                 </xs:extension>
             </xs:complexContent>
@@ -2666,7 +2670,7 @@
     <xs:element name="reserveCredit" substitutionGroup="xp:transaction">
         <xs:complexType>
             <xs:complexContent>
-                <xs:extension base="xp:transactionTypeWithReportGroupAndRtp">
+                <xs:extension base="xp:transactionTypeWithReportGroup">
                     <xs:choice>
                         <xs:sequence>
                             <xs:choice>
@@ -4127,7 +4131,7 @@
         </xs:complexType>
     </xs:element>
 
-  <!--  <xs:element name="vendorCredit" substitutionGroup="xp:transaction">
+   <!-- <xs:element name="vendorCredit" substitutionGroup="xp:transaction">
         <xs:complexType>
             <xs:complexContent>
                 <xs:extension base="xp:transactionTypeWithReportGroup">

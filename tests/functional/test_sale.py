@@ -972,6 +972,7 @@ class TestSale(unittest.TestCase):
         identity_bundle.commandReference = "commandReference"
         identity_bundle.orderReference = "orderReference"
         transaction.identityBundle = identity_bundle
+        transaction.preferredCustomer = False
 
         response = online.request(transaction, conf)
         self.assertEqual('000', response['saleResponse']['response'])
